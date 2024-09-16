@@ -581,7 +581,7 @@ Cosine is a monotone descending function (0 to 180), meaning it is inversely pro
 
 ==Cosine similarity==
 
-![[Media/complementi_basi_7 2.png|complementi_basi_37 2.png]]
+![[Media/complementi_basi_7.png|complementi_basi_37 2.png]]
 $q_i$﻿ → tf weight of query term
 
 $d_i$﻿ → tf weight of document term
