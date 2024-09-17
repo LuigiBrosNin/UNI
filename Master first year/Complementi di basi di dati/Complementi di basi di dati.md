@@ -1,4 +1,5 @@
-if you find any errors, message me on telegram @LuigiBrosNin or leave a comment here, thanks for the collaboration!
+
+> Notes taken by Luizo ( [@LuigiBrosNin](https://t.me/LuigiBrosNin) on Telegram)
 
 # Theory
 
