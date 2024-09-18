@@ -88,19 +88,18 @@ SQL/XML is a bridge for archiving locally these data in a relational manner
                 
     - ==XMLCONCAT== → concats a forest of elements
         
-        ![[Private media/complementi_basi_39.png]]        
+        ![[Pasted image 20240918183207.png]]        
     - ==XMLAGG== → groups tuples based on one or more attributes, with GROUP BY op
-        
-        ![[Private media/complementi_basi_38.png]]        
+        ![[Pasted image 20240918183222.png]]        
     - ==XMLGEN== → specify the XML code to insert, you can use variables between `{}`
         
-        ![[Private media/complementi_basi_36.png]]        
+		![[Pasted image 20240918183242.png]]        
         The result gets calculated considering the SQL, making a SELECT * and then building the requested attributes 1 by 1.
         
 
 ## 2.3 - XQuery | XQuery language
 
-XQuery can be used to access XML expressed data and has XSLT functions (e**X**tensible **S**tylesheet **L**anguage **T**ransformations).
+XQuery can be used to acces s XML expressed data and has XSLT functions (e**X**tensible **S**tylesheet **L**anguage **T**ransformations).
 
 XQuery operates on sequences, that can be ==atom values== (eg. “hello” string, “3” integer) or ==nodes==.
 
