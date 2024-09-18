@@ -50,7 +50,7 @@ XML Structure:
 - ==Document Body== →an element that can contain more nested elements and comments
     - each element is enclosed in a `<tag></tag>`
         
-        ![[Private media/complementi_basi_42.png]]        
+        ![[complementi_basi_42.png]]        
     - names are case sensitive
     - values of attributes must be contained in `‘’` or `“”`
     - attributes can’t have the same attribute more than once

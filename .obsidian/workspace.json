@@ -11,8 +11,12 @@
             "id": "95a25808f517ea7e",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Master first year/Complementi di basi di dati/Complementi di basi di dati.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Master first year/Complementi di basi di dati/Complementi di basi di dati.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Master first year/Complementi di basi di dati/Complementi di basi di dati.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +124,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Master first year/Complementi di basi di dati/Complementi di basi di dati.md"
+              }
             }
           },
           {
@@ -165,6 +173,7 @@
   },
   "active": "95a25808f517ea7e",
   "lastOpenFiles": [
+    "UNI.md",
     "Home/UNI2/UNI2.md",
     "Home/UNI2/Welcome.md",
     "Home/UNI/UNI.md",
@@ -210,7 +219,6 @@
     "Home/UNI-b/Master first year/Complementi di basi di dati",
     "Home/UNI-b/Master first year/Architetture software a microservizi.md",
     "Home/UNI-b/UNI.md",
-    "complementi_basi_34.md",
     "Untitled.canvas"
   ]
 }
