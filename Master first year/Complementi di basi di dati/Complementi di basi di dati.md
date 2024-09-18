@@ -1,3 +1,4 @@
+[Slides in Google Drive](https://drive.google.com/drive/folders/17KWQxgAnnMr2mFXI0n22wykwv11ChkKX)
 
 > Notes taken by Luizo ( [@LuigiBrosNin](https://t.me/LuigiBrosNin) on Telegram)
 
@@ -239,7 +240,7 @@ These operations are not transitive:
 
 XPath 2.0 adds → eq, ne, It, le, gt, ge
 
-==Expressions with quantifiers== → XQuery variables are often associated with sets of objects instead of single values (eg. `for $lib in doc books.xml/books/book` assigns <book> elements)
+==Expressions with quantifiers== → XQuery variables are often associated with sets of objects instead of single values (eg. `for $lib in doc books.xml/books/book` assigns `<book>` elements)
 
 specific operators can verify proprieties of objects eg:
 
@@ -286,12 +287,12 @@ to create a XML table, specify XML as data type in a column.
     to insert XML data, we can use XMLPARSE, we can choose to maintain the white space.
     
     ![[Media/complementi_basi_15 3.png|complementi_basi_15 3.png]]    
-    SELECT example that extracts departments and puts them in <deptName> trough ==XMLQUERY==
+    SELECT example that extracts departments and puts them in `<deptName>` trough ==XMLQUERY==
     
     ![[Media/complementi_basi_16 3.png|complementi_basi_16 3.png]]    
     ==passing== → specifies the XML fragment we’re working on, in the example what gets passed is the content of the departments as a list, so it creates a `$list` variable that we can use inside the query.
     
-    example that extracts names and salaries of all employers who gain > 50k and inserted in <empSalary> and ==ordered by== salary.
+    example that extracts names and salaries of all employers who gain > 50k and inserted in `<empSalary>` and ==ordered by== salary.
     
     ![[Home/UNI/Public media/complementi_basi_18.png]]    
     example that uses ==`let`== and ==`avg`== to see the average salary of the department in which each employee works
