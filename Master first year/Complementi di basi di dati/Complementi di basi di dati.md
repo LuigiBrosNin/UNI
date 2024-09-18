@@ -1,6 +1,22 @@
 [Slides in Google Drive](https://drive.google.com/drive/folders/17KWQxgAnnMr2mFXI0n22wykwv11ChkKX)
 
+
 > Notes taken by Luizo ( [@LuigiBrosNin](https://t.me/LuigiBrosNin) on Telegram)
+
+- [[#1 - Intro Models|1 - Intro Models]]
+- [[#2 - Intro XML|2 - Intro XML]]
+- [[#2.2 - SQL/XML | Relational Data and XML|2.2 - SQL/XML | Relational Data and XML]]
+- [[#2.3 - XQuery | XQuery language|2.3 - XQuery | XQuery language]]
+- [[#2.4 XQuery in DBMS | XQuery on DB2, Oracle and SQL Server|2.4 XQuery in DBMS | XQuery on DB2, Oracle and SQL Server]]
+- [[#2.5 NoSQL|2.5 NoSQL]]
+- [[#3.1 IR | Information Retrieval|3.1 IR | Information Retrieval]]
+- [[#3.2 Ranking|3.2 Ranking]]
+- [[#3.3 Web Information Retrieval|3.3 Web Information Retrieval]]
+- [[#3.4 IR Evaluation|3.4 IR Evaluation]]
+- [[#3.5 IR Advanced methods|3.5 IR Advanced methods]]
+- [[#4.1 Data analytics|4.1 Data analytics]]
+
+
 
 # Theory
 
@@ -293,24 +309,24 @@ to create a XML table, specify XML as data type in a column.
     
     example that extracts names and salaries of all employers who gain > 50k and inserted in `<empSalary>` and ==ordered by== salary.
     
-    ![[Home/UNI/Public media/complementi_basi_18.png]]    
+    ![[Pasted image 20240918185205.png]]    
     example that uses ==`let`== and ==`avg`== to see the average salary of the department in which each employee works
     
     ![[Pasted image 20240918185200.png]]    
     ==Union== operator example (basically an AND)
     
-    ![[Media/complementi_basi_19 3.png|complementi_basi_19 3.png]]    
+    ![[Pasted image 20240918185216.png]]    
     ==Join== equivalent example. We’re passing both employees content and departments content for it to work.
     
-    ![[Media/complementi_basi_20 3.png|complementi_basi_20 3.png]]    
+    ![[Pasted image 20240918185221.png]]    
     ==Join + let== example to get for each department, name + sum of salaries from that department
     
-    ![[Media/complementi_basi_21 3.png|complementi_basi_21 3.png]]    
+    ![[Pasted image 20240918185309.png]]    
     Mishmash of all previous examples:
     
-    for each department, we want ==the number of employees==, ==the average salary==. results must be ==sorted by the sum of the salaries== of each department, and ==filter out departments with only 1 or less employees==
+    for each department, we want the number of employees (BLUE), the average salary (GREEN). results must be sorted by the sum of the salaries (RED) of each department, and filter out departments with only 1 or less employees (PURPLE)
     
-    ![[Media/complementi_basi_22 3.png|complementi_basi_22 3.png]]    
+    ![[Pasted image 20240918185316.png]]    
 
 ==XQuery in oracle DB==
 
@@ -327,7 +343,7 @@ non-supported functions:
 
 Table creation → with XMLType keyword
 
-![[Media/complementi_basi_23 3.png|complementi_basi_23 3.png]]
+![[Pasted image 20240918185550.png]]
 XMLType can be implemented as
 
 1. LOB (Large OBject) → string
@@ -335,20 +351,20 @@ XMLType can be implemented as
 
 inserting a XML fragment in a table → ==XMLType== into an insert followed by the string in XML
 
-![[Media/complementi_basi_24 2.png|complementi_basi_24 2.png]]
+![[Pasted image 20240918185600.png]]
 - Oracle Examples
     
     XQuery example in Oracle, same example as DB2
     
-    ![[Media/complementi_basi_25 2.png|complementi_basi_25 2.png]]    
+    ![[Pasted image 20240918185608.png]]    
     ==Join== equivalent example
     
-    ![[Media/complementi_basi_26 2.png|complementi_basi_26 2.png]]    
+    ![[Pasted image 20240918185613.png]]    
     we can use `doc()` to query XML files directly without inserting data in tables
     
     a DUAL empty table is present in all default Oracle database, used as a foobar option since “FROM” is required in SQL
     
-    ![[Media/complementi_basi_27 2.png|complementi_basi_27 2.png]]    
+    ![[Pasted image 20240918185620.png]]    
 
 ==XQuery on SQL Server 2012==
 
@@ -369,13 +385,13 @@ non-supported features:
 
 Table creation → with XMLType keyword
 
-![[Media/complementi_basi_28 2.png|complementi_basi_28 2.png]]
+![[Pasted image 20240918185640.png]]
 to insert data in the table, INSERT op with a XML fragment under a string
 
-![[Media/complementi_basi_29 2.png|complementi_basi_29 2.png]]
+![[Pasted image 20240918185645.png]]
 - Query example in Oracle Berkeley DB XML
     
-    ![[Media/complementi_basi_30 2.png|complementi_basi_30 2.png]]    
+    ![[Pasted image 20240918185659.png]]    
     same query as before, but without “passing”
     
 
@@ -388,12 +404,12 @@ Create a container
 1. document-based container → document archived as delivered to the system
 2. node-based container → document gets turned into nodes and archived separately, they can be modified afterwards
 
-![[Media/complementi_basi_31 2.png|complementi_basi_31 2.png]]
+![[Pasted image 20240918185707.png]]
 containers are comparable to table in relational DBMS
 
 we can use “`putDocument <namePrefix> <string> [f|s|q]`” to insert documents
 
-![[Media/complementi_basi_32 2.png|complementi_basi_32 2.png]]
+![[Pasted image 20240918185712.png]]
 parameters
 
 f → string is a path to an XML
@@ -406,7 +422,7 @@ Indexes can be created which improve performance
 
 retrieving documents in a container can be done trough XQuery queries
 
-![[Media/complementi_basi_33 2.png|complementi_basi_33 2.png]]
+![[Pasted image 20240918185725.png]]
 ## 2.5 NoSQL
 
 means a non relational database, there are 225+ systems that are NoSQL
@@ -429,7 +445,7 @@ means a non relational database, there are 225+ systems that are NoSQL
 2. **Availability** → every request gets an answer
 3. **Partition Tolerance** → still works on data loss, a single node error doesn’t cause a system collapse
 
-![[Media/complementi_basi_34 2.png|complementi_basi_34 2.png]]
+![[Pasted image 20240918185828.png]]
 in NoSQL, there is no schema, no unused cells and data types are implicit. most considerations are executed at application level.
 
 - Aggregation → elements are gathered in an aggregate (document)
@@ -547,7 +563,7 @@ We need a pertinence-based ranking instead of an exact match, to accomodate the 
 
 Ranking mode, documents are represented by vectors or matrix based on weight of words
 
-![[Media/complementi_basi_35 2.png|complementi_basi_35 2.png]]
+![[Pasted image 20240918185922.png]]
 Docs as vecs proprieties
 
 - |Vectorial space as |V|-dimensional|
@@ -567,7 +583,7 @@ $tf_{t,d}$﻿ → term frequency of term $t$﻿ in document $d$﻿
 
 Vector space distance
 
-![[Media/complementi_basi_36 2.png|complementi_basi_36 2.png]]
+![[Pasted image 20240918185942.png]]
 D1,D2,D3 are phrases, Q is a query
 
 ==Euclidean distance== → straight line distance between the final points, doesn’t work with what we need to do
@@ -582,7 +598,7 @@ Cosine is a monotone descending function (0 to 180), meaning it is inversely pro
 
 ==Cosine similarity==
 
-![[Private media/complementi_basi_7.png|complementi_basi_32.png]]
+![[Pasted image 20240918185952.png]]
 $q_i$﻿ → tf weight of query term
 
 $d_i$﻿ → tf weight of document term
@@ -668,7 +684,7 @@ we have a latency limit to satisfy the user, and we can’t assign a complete sc
 
 takes known seed URLs, fetches and parses them and puts them on a queue called URL frontier, then fetches each URL on the frontier and repeats
 
-![[Media/complementi_basi_38 2.png|complementi_basi_38 2.png]]
+![[Pasted image 20240918190032.png]]
 a crawler requires
 
 Robustness → web scan on distributed machines
@@ -695,7 +711,7 @@ rankings are constructed combining
 
 ==Simple link analysis== → good nodes do not go into bad ones, so we mark them as good
 
-![[Media/complementi_basi_39 2.png|complementi_basi_39 2.png]]
+![[Pasted image 20240918190041.png]]
 ==Citation analysis== → popularity estimate
 
 - co-citation of articles means they’re correlated
@@ -829,10 +845,10 @@ our goal is to build a **classifier** for relevant and non-relevant docs.
 
 ==DIKW Pyramid== → how information is defined along with knowledge and wisdom
 
-![[Media/complementi_basi_40 2.png|complementi_basi_40 2.png]]
+![[Pasted image 20240918190131.png]]
 ==Data analysis== → extract information from the data
 
-![[Media/complementi_basi_41 2.png|complementi_basi_41 2.png]]
+![[Pasted image 20240918190137.png]]
 we can extract information as
 
 - summaries, as the average of a group of numbers
