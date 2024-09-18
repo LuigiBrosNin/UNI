@@ -1,0 +1,58 @@
+{
+  "collapse-filter": false,
+  "search": "",
+  "showTags": false,
+  "showAttachments": true,
+  "hideUnresolved": true,
+  "showOrphans": true,
+  "collapse-color-groups": true,
+  "colorGroups": [
+    {
+      "query": "file:Home",
+      "color": {
+        "a": 1,
+        "rgb": 6749952
+      }
+    },
+    {
+      "query": "path:Home/UNI  ",
+      "color": {
+        "a": 1,
+        "rgb": 744672
+      }
+    },
+    {
+      "query": "path:Home/TTRPGS  ",
+      "color": {
+        "a": 1,
+        "rgb": 15122698
+      }
+    },
+    {
+      "query": "path:\"Home/PERSONAL NOTES\"  ",
+      "color": {
+        "a": 1,
+        "rgb": 5572075
+      }
+    },
+    {
+      "query": "path:Home/Lavoro  ",
+      "color": {
+        "a": 1,
+        "rgb": 6513507
+      }
+    }
+  ],
+  "collapse-display": false,
+  "showArrow": true,
+  "textFadeMultiplier": -1.3,
+  "nodeSizeMultiplier": 1,
+  "lineSizeMultiplier": 1,
+  "collapse-forces": false,
+  "centerStrength": 0.45997920997921,
+  "repelStrength": 13.1081081081081,
+  "linkStrength": 1,
+  "linkDistance": 92,
+  "scale": 0.3024190529693667,
+  "close": true
+}

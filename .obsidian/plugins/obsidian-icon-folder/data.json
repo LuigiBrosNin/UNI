@@ -1,0 +1,53 @@
+{
+  "settings": {
+    "migrated": 6,
+    "iconPacksPath": ".obsidian/icons",
+    "fontSize": 16,
+    "emojiStyle": "native",
+    "iconColor": null,
+    "recentlyUsedIcons": [
+      "🖼",
+      "LiDatabase",
+      "LiHand",
+      "📽",
+      "LiWarehouse"
+    ],
+    "recentlyUsedIconsSize": 5,
+    "rules": [],
+    "extraMargin": {
+      "top": 0,
+      "right": 4,
+      "bottom": 0,
+      "left": 0
+    },
+    "iconInTabsEnabled": true,
+    "iconInTitleEnabled": true,
+    "iconInTitlePosition": "above",
+    "iconInFrontmatterEnabled": false,
+    "iconInFrontmatterFieldName": "icon",
+    "iconColorInFrontmatterFieldName": "iconColor",
+    "iconsBackgroundCheckEnabled": false,
+    "iconsInNotesEnabled": true,
+    "iconsInLinksEnabled": true,
+    "iconIdentifier": ":",
+    "lucideIconPackType": "native",
+    "debugMode": false
+  },
+  "Home": "LiHome",
+  "Home/Home.md": "LiHome",
+  "Home/PERSONAL NOTES/Hat witch game.md": "LiSparkles",
+  "Home/PERSONAL NOTES/Read List": "LiBook",
+  "Home/PERSONAL NOTES/Read List/Read List.md": "LiBook",
+  "Home/PERSONAL NOTES": "LiRabbit",
+  "Home/PERSONAL NOTES/Comic Notes": "🗨",
+  "Home/PERSONAL NOTES/Doodles Ideas": "LiPencil",
+  "Home/PERSONAL NOTES/Guitar Notes": "LiMusic4",
+  "Home/PERSONAL NOTES/Pop Os.md": "LiPopsicle",
+  "Home/TTRPGS": "LiDices",
+  "Home/TTRPGS/Adventures": "LiMountainSnow",
+  "Home/TTRPGS/Characters": "LiScanFace",
+  "Home/TTRPGS/Templates": "LiScan",
+  "Home/WORK": "LiBriefcase",
+  "Home/WORK/Cirsfid server control.md": "LiServerCog",
+  "Private media": "🖼"
+}
