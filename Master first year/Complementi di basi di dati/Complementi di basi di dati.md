@@ -99,11 +99,11 @@ SQL/XML is a bridge for archiving locally these data in a relational manner
 
 ## 2.3 - XQuery | XQuery language
 
-XQuery can be used to acces s XML expressed data and has XSLT functions (e**X**tensible **S**tylesheet **L**anguage **T**ransformations).
+XQuery <u>can be used to acces s XML</u> expressed data and has XSLT functions (e**X**tensible **S**tylesheet **L**anguage **T**ransformations).
 
 XQuery operates on sequences, that can be ==atom values== (eg. “hello” string, “3” integer) or ==nodes==.
 
-an XQuery expression can receive in input $0$﻿ or $n$﻿ sequences, and output an ordered and not-nested sequence.
+an XQuery expression can receive in input $0$﻿ or $n$﻿ sequences, and output an <u>ordered and not-nested</u> sequence.
 
 - Ordered → $(0,1)\ne (1,0)$﻿
 - Not-nested → $(0,1,2) = ((),0,(1,2))$﻿
@@ -132,14 +132,14 @@ Used to extract values and proprieties from nodes and trees.
 
 `"doc_name.xml"/child:doc/child:chapter/child:selection`
 
-![[Private media/complementi_basi_35.png]]
+![[Pasted image 20240918184858.png]]
 Each path gets evaluated in a context (a sequence of nodes with extra info, such as position) and produces a sequence.
 
 It then gets evaluated, and the context used is the sequence in the previous step, and so on.
 
 ==Stair step structure== → expression to path, 3 step procedure:
 
-![[Private media/complementi_basi_34.png]]
+![[Pasted image 20240918184906.png]]
 1. **Axe** → select the nodes relative to the position of the context node
     - self::
     - child::
@@ -163,7 +163,7 @@ It then gets evaluated, and the context used is the sequence in the previous ste
     - Both → descendant::element(person, xs:decimal) → returns person elements of type decimal
 3. **Predictate** → filters nodes on generic criteria, each step can terminate with one or more predicate, inb `[]` to filter even more, like an array
     
-    ![[Private media/complementi_basi_33.png]]    
+    ![[Pasted image 20240918184916.png]]    
     predictate is ==true== if
     
     - expression returns a single integer value
@@ -205,15 +205,15 @@ For, Let, Where, Order by, XQuery equivalent of SELECT-FROM-WHERE, but defined b
 
 - ==Join== example
     
-    ![[Private media/complementi_basi_32.png]]    
+    ![[Pasted image 20240918184950.png]]    
     tables
     
     We want to produce a screening schedule listing songs, author and birth + death dates.
     
-    ![[Private media/complementi_basi_31.png]]    
+    ![[Pasted image 20240918184957.png]]    
     query
     
-    ![[Private media/complementi_basi_30.png]]    
+    ![[Pasted image 20240918185006.png]]    
     output
     
 
@@ -262,7 +262,7 @@ Node sequence functions
 
 Aggregated functions
 
-![[Media/complementi_basi_13 5.png|complementi_basi_13 5.png]]
+![[Pasted image 20240918185029.png]]
 
 ## 2.4 XQuery in DBMS | XQuery on DB2, Oracle and SQL Server
 
@@ -282,13 +282,13 @@ to create a XML table, specify XML as data type in a column.
 
 - DB2 Examples of XMLPARSE | XMLQUERY (literally just an XPath tutorial lol)
     
-    ![[Media/complementi_basi_14 3.png|complementi_basi_14 3.png]]    
+    ![[Pasted image 20240918185126.png]]    
     to insert XML data, we can use XMLPARSE, we can choose to maintain the white space.
     
-    ![[Media/complementi_basi_15 3.png|complementi_basi_15 3.png]]    
+    ![[Pasted image 20240918185134.png]]    
     SELECT example that extracts departments and puts them in `<deptName>` trough ==XMLQUERY==
     
-    ![[Media/complementi_basi_16 3.png|complementi_basi_16 3.png]]    
+    ![[Pasted image 20240918185140.png]]    
     ==passing== → specifies the XML fragment we’re working on, in the example what gets passed is the content of the departments as a list, so it creates a `$list` variable that we can use inside the query.
     
     example that extracts names and salaries of all employers who gain > 50k and inserted in `<empSalary>` and ==ordered by== salary.
@@ -296,7 +296,7 @@ to create a XML table, specify XML as data type in a column.
     ![[Home/UNI/Public media/complementi_basi_18.png]]    
     example that uses ==`let`== and ==`avg`== to see the average salary of the department in which each employee works
     
-    ![[Media/complementi_basi_18 3.png|complementi_basi_38 3.png]]    
+    ![[Pasted image 20240918185200.png]]    
     ==Union== operator example (basically an AND)
     
     ![[Media/complementi_basi_19 3.png|complementi_basi_19 3.png]]    
