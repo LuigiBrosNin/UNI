@@ -3,6 +3,7 @@
 - **[[Complementi di basi di dati]]**
 - [[Laboratorio di realtà virtuale e realtà aumentata]]
 - [[Natural language processing]]
+- [[Social network analysis]]
 - **[[UUX]]**
 	- **[[GIMP- puzzle-based image modifier]]**
 
