@@ -25,5 +25,5 @@ A service-oriented system is a network of services. Services communicate through
 Service-Oriented Architecture (SOA) -> architecture based of the Service-oriented computing paradigm.
 
 Services in SOA offer operations, as Objects offer methods
-![[Pasted image 20240916133419.png]]
+![[Private media/Pasted image 20240916133419.png]]
 

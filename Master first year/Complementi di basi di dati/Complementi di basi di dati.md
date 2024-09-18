@@ -50,7 +50,7 @@ XML Structure:
 - ==Document Body== →an element that can contain more nested elements and comments
     - each element is enclosed in a `<tag></tag>`
         
-        ![[complementi_basi_42.png]]        
+        ![[Private media/complementi_basi_42.png]]        
     - names are case sensitive
     - values of attributes must be contained in `‘’` or `“”`
     - attributes can’t have the same attribute more than once
@@ -82,19 +82,19 @@ SQL/XML is a bridge for archiving locally these data in a relational manner
         - attributes → optional list
     - ==XMLATTRIBUTES== → params corresponding to attributes, default name as the attr name
         
-        ![[complementi_basi_41.png]]        
+        ![[Private media/complementi_basi_41.png]]        
     - XMLFOREST → produces a list of simple elements, same params as XMLATRIBUTES
         
-        ![[complementi_basi_40.png]]        
+        ![[Private media/complementi_basi_40.png]]        
     - ==XMLCONCAT== → concats a forest of elements
         
-        ![[complementi_basi_39.png]]        
+        ![[Private media/complementi_basi_39.png]]        
     - ==XMLAGG== → groups tuples based on one or more attributes, with GROUP BY op
         
-        ![[complementi_basi_38.png]]        
+        ![[Private media/complementi_basi_38.png]]        
     - ==XMLGEN== → specify the XML code to insert, you can use variables between `{}`
         
-        ![[complementi_basi_36.png]]        
+        ![[Private media/complementi_basi_36.png]]        
         The result gets calculated considering the SQL, making a SELECT * and then building the requested attributes 1 by 1.
         
 
@@ -133,14 +133,14 @@ Used to extract values and proprieties from nodes and trees.
 
 `"doc_name.xml"/child:doc/child:chapter/child:selection`
 
-![[Public media/complementi_basi_35.png]]
+![[Private media/complementi_basi_35.png]]
 Each path gets evaluated in a context (a sequence of nodes with extra info, such as position) and produces a sequence.
 
 It then gets evaluated, and the context used is the sequence in the previous step, and so on.
 
 ==Stair step structure== → expression to path, 3 step procedure:
 
-![[Public media/complementi_basi_34.png]]
+![[Private media/complementi_basi_34.png]]
 1. **Axe** → select the nodes relative to the position of the context node
     - self::
     - child::
@@ -164,7 +164,7 @@ It then gets evaluated, and the context used is the sequence in the previous ste
     - Both → descendant::element(person, xs:decimal) → returns person elements of type decimal
 3. **Predictate** → filters nodes on generic criteria, each step can terminate with one or more predicate, inb `[]` to filter even more, like an array
     
-    ![[Public media/complementi_basi_33.png]]    
+    ![[Private media/complementi_basi_33.png]]    
     predictate is ==true== if
     
     - expression returns a single integer value
@@ -206,15 +206,15 @@ For, Let, Where, Order by, XQuery equivalent of SELECT-FROM-WHERE, but defined b
 
 - ==Join== example
     
-    ![[Public media/complementi_basi_32.png]]    
+    ![[Private media/complementi_basi_32.png]]    
     tables
     
     We want to produce a screening schedule listing songs, author and birth + death dates.
     
-    ![[complementi_basi_31.png]]    
+    ![[Private media/complementi_basi_31.png]]    
     query
     
-    ![[Public media/complementi_basi_30.png]]    
+    ![[Private media/complementi_basi_30.png]]    
     output
     
 
@@ -583,7 +583,7 @@ Cosine is a monotone descending function (0 to 180), meaning it is inversely pro
 
 ==Cosine similarity==
 
-![[Media/complementi_basi_7.png|complementi_basi_32.png]]
+![[Private media/complementi_basi_7.png|complementi_basi_32.png]]
 $q_i$﻿ → tf weight of query term
 
 $d_i$﻿ → tf weight of document term
