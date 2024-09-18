@@ -7,7 +7,7 @@ Credentials to access slides:
 
 ## 1.1 Intro
 Summarization of  the general paradigm of Computational Linguistics
-![[Private media/Pasted image 20240916144501.png]]
+![[Pasted image 20240916144501.png]]
 
 Machine Learning dominates the NLP studies
 
@@ -18,7 +18,7 @@ If we embrace an empiricist view, then for analyzing a specific phenomenon X in 
 4. we will generalize our conclusions, derived from corpus analysis, to the entire variety.
 
 ==Zipf's law (1949)== -> a small portion of words in a language compose 40~% of each sentence 
-![[Private media/Pasted image 20240916150610.png]]
+![[Pasted image 20240916150610.png]]
 Linguistic levels:
 - Phonetics/Phonology -> how it sounds / shows for sign languages
 - Morphology -> the various forms words can have
