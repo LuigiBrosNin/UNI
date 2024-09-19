@@ -1,8 +1,10 @@
 %% Begin Waypoint %%
 - [[Architetture software a microservizi]]
 - **[[Complementi di basi di dati]]**
+- [[Digital Forensics]]
 - [[Laboratorio di realtà virtuale e realtà aumentata]]
 - [[Natural language processing]]
+- [[Simulazione di modelli]]
 - [[Social network analysis]]
 - **[[UUX]]**
 	- **[[GIMP- puzzle-based image modifier]]**
