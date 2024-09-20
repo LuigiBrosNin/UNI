@@ -34,6 +34,7 @@ CS doctors can do many things that can't be done normally (eg. packet sniffing w
 
 Steps in the process
 - Identification
-- Seizing or Acquisition (Seizing also makes an acquisition, aka making a copy of the)
-- 
+- Seizing or Acquisition (Seizing also makes an acquisition, aka making a copy of the files)
+- Conservation & Analysis (they can go back and forth)
+- Reporting (final report, that has to include the report of all steps)
 
