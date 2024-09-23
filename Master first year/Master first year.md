@@ -1,6 +1,7 @@
 %% Begin Waypoint %%
 - [[Architetture software a microservizi]]
 - **[[Complementi di basi di dati]]**
+- [[Decision making with constraint programming]]
 - [[Digital Forensics]]
 - [[Laboratorio di realtà virtuale e realtà aumentata]]
 - [[Natural language processing]]
