@@ -47,3 +47,22 @@ Linear systems obey the superposition principle:
 $$F(a_1x_1+...)=a_1F(x_{1})+...$$
 Superposition principle is the basis for ==reductionism==: a system can be
 understood by studying its individual parts
+
+Measures of complexity, 3 different aspects
+- **Descriptive** -> measured in bits
+- **Operational** -> measured in time, space, money, energy
+- **Organizational** -> difficulty in describing structure, amount of information
+
+==Entropy== allows us to formalize the notions of “orderly” (or “regular”) and
+“disorderly” (or “random”).
+
+Complex systems key concepts
+- **Dynamics** -> how behaviors and structures change over time
+- **Information** -> how data is represented and communicated
+- **Computation** -> how information is processed
+- **Evolution** -> how systems adapt to changes in the environment
+
+The method of complex system is the scientific one
+
+### Dynamical Systems and Non-Linear Dynamics
+
