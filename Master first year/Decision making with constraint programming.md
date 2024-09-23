@@ -48,3 +48,6 @@ What is constraint programmming?
 	Only a limited share of employees from the same work area should be scheduled for a test on the same day.
 
 A constraint ==solver== finds a solution to the model (or prove that it doesn't exist) by assigning a value to every variable via a search algorithm.
+Practically, we'll tweak the search algorithm to find the solution we want.
+
+### Overview of CP
