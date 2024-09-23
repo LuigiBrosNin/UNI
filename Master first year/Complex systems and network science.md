@@ -38,3 +38,12 @@ Common proprieties of complex systems
 - **Decentralized control** -> no distinguished “master”
 - **Nonlinear interactions** -> components act autonomously but interact with other components directly or indirectly
 - **Emergent behavior** -> the global system exhibits properties that cannot be derived or predicted from understanding behaviors of individual components
+	-  **Hierarchical structure** -> proteins to nucleic acids to cells to tissues to organs to organisms to colonies to ecosystems
+	-  **Self organization** -> people into economies, birds into flocks, ants into bridges, social networks into communities
+	-  **Adaptation** -> agents react to changes in their environment in an effort to maintain favorable outcomes, resulting in learning and evolution
+	-  **Information processing** -> while individual agents remain ignorant, the system as a whole is able to process information and even compute
+
+Linear systems obey the superposition principle:
+$$F(a_1x_1+...)=a_1F(x_{1})+...$$
+Superposition principle is the basis for ==reductionism==: a system can be
+understood by studying its individual parts
