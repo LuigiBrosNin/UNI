@@ -30,3 +30,21 @@ Techniques
 - incomplete methods (eg. Heurstic search)
 - Complete methods (eg. Integer Linear Programming, Boolean Satisfiability, SAT modulo theories, ==constraint programming==)
 
+What is constraint programmming?
+==a declarative programming paradigm== -> 
+- state our problem; 
+- formalize:
+	- decisions variables ($X_j$)
+	- domains (possible values $D(X_j)=\{v_j\}$).
+	- constraints (relations between variables $r(X_j,X_i)$)
+- employ models to process and solve the problem.
+- Example -> Covid-19 Test Scheduling
+	
+	> When and where to test each employee?
+	
+	**Availability Constraints** -> Testing room, tester, and employee availabilities.
+	**Frequency constraints** -> The spacing between tests performed on the same employee should be within given bounds.
+	**Operational constraints** -> Each employee should be tested within their working shift.
+	Only a limited share of employees from the same work area should be scheduled for a test on the same day.
+
+A constraint ==solver== finds a solution to the model (or prove that it doesn't exist) by assigning a value to every variable via a search algorithm.
