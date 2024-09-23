@@ -20,3 +20,13 @@ any solution -> meets all constraints
 optimal solution -> best solution according to an objective
 ![[Pasted image 20240923145936.png]]
 AI is a tool for decision making too
+
+Combinatorial decision making proprieties:
+- computationally difficult (NP-hard)
+- can only be solved by ==intelligent search== 
+- experimental in nature 
+- finding good/optimal solutions can save  time, money and reduce enviromental impact
+Techniques
+- incomplete methods (eg. Heurstic search)
+- Complete methods (eg. Integer Linear Programming, Boolean Satisfiability, SAT modulo theories, ==constraint programming==)
+
