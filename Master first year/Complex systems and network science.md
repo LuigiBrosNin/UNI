@@ -77,3 +77,22 @@ The method of complex system is the scientific one
 
 ==Dynamical systems theory== is a branch of mathematics for studying how systems change over time.
 It gives us a vocabulary and a set of tools for describing dynamics.
+
+#### Dynamics of iteration (example)
+- Dynamics result from some process repeating itself over and over, such as the
+population of some species
+- Consider an extremely simple model for population growth
+- At each time step, every member of the population gives birth to some constant
+number of new members
+- Parameters
+	- Initial population size
+	- Birth rate
+
+- Define the system state as the current population size
+- State variables denote the system state and change with time
+- Let nt denote the size of the population at time t
+- Consider discrete time model with t assuming the values of natural numbers
+- Initial population is n0
+- Let R denote the birth rate — number of offsprings produced by a member at each time step
+- In other words, n1=Rn0 and n2=Rn1, …
+- In general, nt+1=Rnt
