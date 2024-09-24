@@ -96,3 +96,14 @@ number of new members
 - Let $R$ denote the birth rate -> number of offsprings produced by a member at each time step
 - In other words, $n_1=Rn_0$ and $n_2=R_n1$, …
 - In general, $n_{t+1}1=Rn_t$
+
+ Assume initial population $n_0 = 1$ and birth rate $R = 2$
+ ![[Pasted image 20240925000627.png]] 
+ $n_t = R^t$
+![[Pasted image 20240925000733.png]]
+- System is **exponential** in the time series
+- System is **linear** in the state space
+- Linearity is due to the fact that there are no interactions among the population members -> each member acts in isolation
+- ==The whole is indeed the sum of its parts==
+
+#### Linear vs NonLinear
