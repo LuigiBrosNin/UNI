@@ -66,3 +66,14 @@ The method of complex system is the scientific one
 
 ### Dynamical Systems and Non-Linear Dynamics
 
+- ==Dynamics== ->Study of how systems change over time, eg:
+	- Planetary dynamics — motion of planets and other celestial bodies
+	- Fluid dynamics — motion of fluids, turbulence, air flow
+	- Crowd dynamics — behavior of groups of people, stampedes
+	- Population dynamics — how populations vary over time
+	- Climate dynamics — variations in temperature, pressure, hurricanes
+	- Financial dynamics — variations in stock prices, exchange rates
+	- Social dynamics — conflicts, cooperation
+
+==Dynamical systems theory== is a branch of mathematics for studying how systems change over time.
+It gives us a vocabulary and a set of tools for describing dynamics.
