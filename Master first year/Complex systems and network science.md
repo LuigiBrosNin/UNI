@@ -90,9 +90,9 @@ number of new members
 
 - Define the system state as the current population size
 - State variables denote the system state and change with time
-- Let nt denote the size of the population at time t
+- Let $n_t$ denote the size of the population at time $t$
 - Consider discrete time model with t assuming the values of natural numbers
-- Initial population is n0
-- Let R denote the birth rate — number of offsprings produced by a member at each time step
-- In other words, n1=Rn0 and n2=Rn1, …
-- In general, nt+1=Rnt
+- Initial population is $n_0$
+- Let $R$ denote the birth rate -> number of offsprings produced by a member at each time step
+- In other words, $n_1=Rn_0$ and $n_2=R_n1$, …
+- In general, $n_{t+1}1=Rn_t$
