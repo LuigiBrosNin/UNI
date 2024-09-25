@@ -71,3 +71,9 @@ For an efficient CP solving, we need:
 - a model with effectively propagating constraints;
 - effective search algorithm and heuristics.
 
+### MiniZinc basic excercises
+
+![[Pasted image 20240925173418.png]]
+:LiArrowBigUp: Basic syntax :LiArrowBigUp:
+
+
