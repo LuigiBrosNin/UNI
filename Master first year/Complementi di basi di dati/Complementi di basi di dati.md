@@ -876,13 +876,20 @@ Arithmetic mean → used to fill missing data, sensible to anomalies
 
 we can maintain the same mean by replacing missing data with the mean result.
 
-==Median== → effective value of the observations, immune to anomalies, but needs ordered data.
+**Median** → effective value of the observations, immune to anomalies, but needs ordered data.
 
-==Mode== → most frequent effective value, robust to anomalies, can be applied to categorical variables.
+**Mode** → most frequent effective value, robust to anomalies, can be applied to categorical variables.
 
 ==Variation==
 
-Squared Deviation →
+Squared Deviation → measures each difference between any $x_i$ and the average observation $\overline x$ ->
+$$
+dev = \sum\limits^{n}_{i=1}(x_i-\overline x)^{2}
+$$
+deviation is higher the more values are far from the average, and the more values, the higher the deviation.
+
+**Variance** -> (written as $S^{2}, \rho^{2}$ or)
+
 
 p42
 
