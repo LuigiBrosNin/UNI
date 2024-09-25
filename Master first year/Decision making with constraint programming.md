@@ -51,4 +51,16 @@ A constraint ==solver== finds a solution to the model (or prove that it doesn't 
 Practically, we'll tweak the search algorithm to find the solution we want.
 
 ### Overview of CP
-a ==Constraint solver== enumerates all possible variable-value combinations vi
+a ==Constraint solver== enumerates all possible variable-value combinations via a **systematic backtracking tree search**.
+During search, the solver removes incompatible values from the domains of the future (unexplored) variables, via **propagation**. 
+![[Pasted image 20240925162827.png]]
+:LiArrowBigUp: Example schema :LiArrowBigUp:
+
+The model:
+- Captures combinatorial structures
+- Enables solver to reduce the search space
+
+Model example on small puzzle :LiPuzzle: :
+	![[Pasted image 20240925163653.png]]![[Pasted image 20240925163718.png]]
+
+good heuristics are important but not always possible, when it's not, we can apply a stronger form of propagation during search
