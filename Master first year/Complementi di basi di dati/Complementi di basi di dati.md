@@ -882,13 +882,19 @@ we can maintain the same mean by replacing missing data with the mean result.
 
 ==Variation==
 
-Squared Deviation → measures each difference between any $x_i$ and the average observation $\overline x$ ->
+**Squared Deviation** → measures each difference between any $x_i$ and the average observation $\overline x$ ->
 $$
 dev = \sum\limits^{n}_{i=1}(x_i-\overline x)^{2}
 $$
 deviation is higher the more values are far from the average, and the more values, the higher the deviation.
 
-**Variance** -> (written as $S^{2}, \rho^{2}$ or)
+**Variance** -> (written as $S^{2}, \sigma^{2}$ or $Var$ ) normalizes the Squared deviation by the number of $n$ values:
+$$S^{2}= \frac 1n dev$$
+==Single variable indicators==
+- Min -> minimum value in observations
+- Max -> maximum value in observations
+- Range -> difference between max and min
+==Multiple variable indicators==
 
 
 p42

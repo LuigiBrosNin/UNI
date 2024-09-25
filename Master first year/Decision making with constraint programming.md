@@ -51,3 +51,4 @@ A constraint ==solver== finds a solution to the model (or prove that it doesn't 
 Practically, we'll tweak the search algorithm to find the solution we want.
 
 ### Overview of CP
+a ==Constraint solver== enumerates all possible variable-value combinations vi
