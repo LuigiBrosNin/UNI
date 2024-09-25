@@ -63,4 +63,10 @@ The model:
 Model example on small puzzle :LiPuzzle: :
 	![[Pasted image 20240925163653.png]]![[Pasted image 20240925163718.png]]
 
-good heuristics are important but not always possible, when it's not, we can apply a stronger form of propagation during search
+Good heuristics are important but not always possible, when it's not, we can apply a stronger form of propagation during search.
+Stronger propagation can be achieved with better modelling, for example
+
+For an efficient CP solving, we need:
+- effective propagation algorithms;
+- a model with effectively propagating constraints;
+- effective search algorithm and heuristics.
