@@ -194,21 +194,24 @@ for example, 0.987654321 requires roughly 9×3=27 bits to encode (because 3 bits
 
 Chaos showed that it is possible to create a behavior that is effectively random through a deterministic process.
 
+==Tent map== -> a function we can study for predicting the behavior of Logistic maps based on input numbers
 ![[Pasted image 20240926150044.png]]
 Logistic map an Tent map are *equivalent* ->  Need to find a transformation function $g(x)$ and its inverse $g{−1}(x)$ such that
 $$L(x)=g{−1}(T(g(x)))\ and\ T(x)=g(L(g{−1}(x)))$$
+in simple words, find the inverse of a function so that we can map both $L$ and $T$
+while we do not demonstrate the equivalency, we'll study the behavior 
+
 ![[Pasted image 20240926150702.png]]
 :LiArrowBigUp: tent map behavior
 - $b_1$ must be 0 because any binary number will be $\ge 1/2$ if $b_1$ is 1 compared to the maximum value it can have ( 100 -> 4, 111 -> 7 for example)
 - to compute $2x$, since we double everything and we're in a binary system, the 1 bit shift is a $\times 2$ operation, just like in decimal shifting a number is a $\times 10$ operation.
 
 ![[Pasted image 20240926150933.png]]
+:LiArrowBigUp: one iteration always "consumes" 1 bit, and knowing this we can study the long term behavior of different numbers through cases:
+1. finite rational number ( 0.1000100001 ) -> logistic map at **fixed point**
+2. infinite rational number ( 0.101110111011... ) -> logistic map at **periodic**
+3. irrational number ( 0.0101000011011... ) -> logistic map **chaotic**
 
-![[Pasted image 20240926151611.png]]
-
-- Case 1 ⟹ “fixed point”
-- Case 2 ⟹ “periodic”
-- Case 3 ⟹ “chaotic”
-
-The Logistic Map at chaos can be turned into a “random bit generator"
+> [!Note] Fun fact
+> The Logistic Map at chaos can be turned into a “random bit generator"
 $$ x_{i}\le 0.5 \implies 0 \qquad x_{i}> 0.5 \implies 1$$
