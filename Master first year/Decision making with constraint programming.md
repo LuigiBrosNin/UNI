@@ -74,6 +74,10 @@ For an efficient CP solving, we need:
 ### MiniZinc basic excercises
 
 ![[Pasted image 20240925173418.png]]
-:LiArrowBigUp: Basic syntax :LiArrowBigUp:
+:LiArrowBigUp: Basic syntax, coloring problem :LiArrowBigUp:
+
+Knapsack problem -> Given items, each with a weight and a value, determine which item and how many of it to pack in your knapsack without exceeding its capacity while maximizing your profit?
+
+![[Pasted image 20240925175625.png]]
 
 
