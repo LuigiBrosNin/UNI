@@ -62,5 +62,5 @@ an **Informatic Document** (in CAD) can be have
 - Simple electronic signature (FES "Firma Elettronica Semplice")
 - Advanced electronic signature (FEA "Firma Elettronica Avanzata") -> signature done with an authentication method
 - Qualified signature (FQ "Firma qualificata / digitale") -> criptografy RSA
-$$\Bigg ( FES \bigg ( FEA \Big ( FQ \Big ) \bigg )  \Bigg)$$
+$$Documents\Bigg ( FES \bigg ( FEA \Big ( FQ \Big ) \bigg )  \Bigg)$$
 they're all nested sets
