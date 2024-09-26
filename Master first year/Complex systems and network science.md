@@ -196,5 +196,20 @@ Chaos showed that it is possible to create a behavior that is effectively random
 ![[Pasted image 20240926150044.png]]
 Logistic map an Tent map are *equivalent* ->  Need to find a transformation function $g(x)$ and its inverse $g{−1}(x)$ such that
 $$L(x)=g{−1}(T(g(x)))\ and\ T(x)=g(L(g{−1}(x)))$$
+![[Pasted image 20240926150702.png]]
+:LiArrowBigUp: tent map behavior
+$b_1$ must be 0 because any binary number will be $\ge 1/2$ if $b_1$ is 1 compared to the maximum value it can have ( 100 -> 4, 111 -> 7 for example)
+to compute $2x$, since we double everything and we need to recognize the
 
 
+![[Pasted image 20240926150933.png]]
+
+I didn't understand this part
+
+![[Pasted image 20240926151611.png]]
+
+- Case 1 ⟹ “fixed point”
+- Case 2 ⟹ “periodic”
+- Case 3 ⟹ “chaotic”
+The Logistic Map at chaos can be turned into a “random bit generator"
+$$ x_{i}\le 0.5 \implies 0 \qquad x_{i}> \implies 1$$
