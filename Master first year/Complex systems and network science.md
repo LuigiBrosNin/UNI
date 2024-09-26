@@ -207,7 +207,8 @@ while we do not demonstrate the equivalency, we'll study the behavior
 - to compute $2x$, since we double everything and we're in a binary system, the 1 bit shift is a $\times 2$ operation, just like in decimal shifting a number is a $\times 10$ operation.
 
 ![[Pasted image 20240926150933.png]]
-:LiArrowBigUp: one iteration always "consumes" 1 bit, and knowing this we can study the long term behavior of different numbers through cases:
+:LiArrowBigUp: tent map behavior part 2
+one iteration always "consumes" 1 bit, and knowing this we can study the long term behavior of different numbers through cases:
 1. finite rational number ( 0.1000100001 ) -> logistic map at **fixed point**
 2. infinite rational number ( 0.101110111011... ) -> logistic map at **periodic**
 3. irrational number ( 0.0101000011011... ) -> logistic map **chaotic**
@@ -215,3 +216,6 @@ while we do not demonstrate the equivalency, we'll study the behavior
 > [!Note] Fun fact
 > The Logistic Map at chaos can be turned into a “random bit generator"
 $$ x_{i}\le 0.5 \implies 0 \qquad x_{i}> 0.5 \implies 1$$
+
+### Models and Cellular automata
+
