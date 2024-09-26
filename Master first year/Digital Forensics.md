@@ -40,9 +40,17 @@ Steps in the process
 
 ### Civil case
 
-**Compensation** -> the end result of a civil case towards 1 end to the other.
+**Compensation** -> the end result of a civil case towards 1 end to the other
 
 ==Structure of a civil case==
-Actor -> who threw the case
-Concerned -> against who the actor threw the case
-Judge ->
+**Actor** -> who threw the case
+**Concerned/Convicted** -> against who the actor threw the case
+**Judge** -> who decides who won
+
+Each part has a Technical Consultant who examines the evidence, that write a report on the matter, on behalf of their respective client (the judge has an Office TC who helps him verify the validity of the reports). Lawyers are involved as middle men trough reports, but we don't care much about them for now lol.
+
+The Actor has to obligatory produce something to prove their case, based on evidence
+
+**Subscriptions** -> Signatures synonym
+
+**Private writing** -> a writing that has at least a subscription and a date. It's necessary for sustaining a case, we're talking 1942
