@@ -111,7 +111,7 @@ linearity leads to unbounded population growth (positive feedback)
 
 We introduce nonlinearity by adding negative feedback resulting from interactions
 among members (some die for $xyz$ reasons).
-the new model becomes $n_{t+1} = R(n_t−d)$ where $d$ is the death rate
+The new model becomes $n_{t+1} = R(n_t−d)$ where $d$ is the death rate
 Assume $d = \frac {n_t^2}k$ where $k$ is the maximum “carrying capacity”
 $$
 \frac {n_{t+1}}k = R(\frac {n_{t}}k − \frac {n_t^{2}}{k^{2}}) \qquad 
@@ -120,9 +120,34 @@ $$
 the equation is no longer linear and Consists of a “**positive feedback**” term ($Rx_t$) and a “**negative feedback**” term ($−Rx_t^2$)
 
 Resulting equation is known as the “==Logistic Map==”.
+##### Logistic map graphs to make u understand
 ![[Pasted image 20240926134348.png]]
 
 Note that $x_t$ denotes the “**normalized**” population thus $0 ≤ x_t ≤ 1$
 
 ![[Pasted image 20240926134440.png]]
+Imagine the values as the next generation $t+1$ in a simulation, to study its behavior
 
+![[Pasted image 20240926134540.png]]
+Increasing R makes the slope higher
+![[Pasted image 20240926134725.png]]
+![[Pasted image 20240926134814.png]]
+Fixed point dynamics :LiArrowBigUp:
+
+![[Pasted image 20240926135120.png]]
+Periodic points dynamics :LiArrowBigUp:
+
+![[Pasted image 20240926135244.png]]
+Period doubling :LiArrowBigUp:
+
+![[Pasted image 20240926135457.png]]
+Oneset of chaos -> infinite-period limit cycle :LiArrowBigUp:
+
+![[Pasted image 20240926135929.png]]
+In order of colour, left -> right
+Fixed point -> Periodic dynamics with 2 points -> Periodic dynamics with 4 points -> periodic dynamics with 8 points -> chaos
+
+Bifurcation occur at shorter and shorter ranges, at a constant rate called ==Feigenbaum's constant== -> $4.6692016...$
+![[Pasted image 20240926140441.png]]
+
+\
