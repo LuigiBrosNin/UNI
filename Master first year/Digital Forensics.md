@@ -53,4 +53,9 @@ The Actor has to obligatory produce something to prove their case, based on evid
 
 **Subscriptions** -> Signatures synonym
 
-**Private writing** -> a writing that has at least a subscription and a date. It's necessary for sustaining a case, we're talking 1942
+**Private writing** -> a writing that has at least a subscription and a date. It's necessary for sustaining a case, we're talking 1942, its relation with files and non-existent files is kinda meh
+
+an **Informatic Document** (in CAD) can be have
+- no signature
+- Simple signature
+
