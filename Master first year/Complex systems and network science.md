@@ -184,6 +184,7 @@ for example, 0.987654321 requires roughly 9×3=27 bits to encode (because 3 bits
 	**Ergodic property** implies that a continuous time system with fewer than 3 state
 	variables cannot be chaotic (the Logistic map is one-dimensional and chaotic
 	but it is a discrete time system)
+	![[Pasted image 20240926153355.png]]
 	For contradiction, suppose that a continuous time system with only 2 state
 	variables is chaotic
 	-  State space (of 2 variables) can be seen as a plane
@@ -198,18 +199,16 @@ Logistic map an Tent map are *equivalent* ->  Need to find a transformation func
 $$L(x)=g{−1}(T(g(x)))\ and\ T(x)=g(L(g{−1}(x)))$$
 ![[Pasted image 20240926150702.png]]
 :LiArrowBigUp: tent map behavior
-$b_1$ must be 0 because any binary number will be $\ge 1/2$ if $b_1$ is 1 compared to the maximum value it can have ( 100 -> 4, 111 -> 7 for example)
-to compute $2x$, since we double everything and we need to recognize the
-
+- $b_1$ must be 0 because any binary number will be $\ge 1/2$ if $b_1$ is 1 compared to the maximum value it can have ( 100 -> 4, 111 -> 7 for example)
+- to compute $2x$, since we double everything and we're in a binary system, the 1 bit shift is a $\times 2$ operation, just like in decimal shifting a number is a $\times 10$ operation.
 
 ![[Pasted image 20240926150933.png]]
-
-I didn't understand this part
 
 ![[Pasted image 20240926151611.png]]
 
 - Case 1 ⟹ “fixed point”
 - Case 2 ⟹ “periodic”
 - Case 3 ⟹ “chaotic”
+
 The Logistic Map at chaos can be turned into a “random bit generator"
-$$ x_{i}\le 0.5 \implies 0 \qquad x_{i}> \implies 1$$
+$$ x_{i}\le 0.5 \implies 0 \qquad x_{i}> 0.5 \implies 1$$
