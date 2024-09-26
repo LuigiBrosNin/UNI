@@ -38,3 +38,11 @@ Steps in the process
 - Conservation & Analysis (they can go back and forth)
 - Reporting (final report, that has to include the report of all steps)
 
+### Civil case
+
+**Compensation** -> the end result of a civil case towards 1 end to the other.
+
+==Structure of a civil case==
+Actor -> who threw the case
+Concerned -> against who the actor threw the case
+Judge ->
