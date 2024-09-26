@@ -153,7 +153,7 @@ Bifurcation occur at shorter and shorter ranges, at a constant rate called ==Fei
 Feigenbaum proved that the result applies to any dynamical system that is
 characterized through a “one-humped” map
 
-#### Chaos vs Randomness, Diversion
+#### Chaos vs Randomness, Diversion, Tent map
 >even if we have a simple model in which all the parameters are determined exactly, long-term prediction is nevertheless impossible
 
 -> this is because of stuff like arbitrarily close initial conditions, that can vary the result drastically
@@ -172,11 +172,29 @@ in $f^1$, the 1 doesn't mean the power of the function, it's just notation.
 $f^m$ will have $2^{m−1}$ humps
 $f^m$ will have $2\times 2 ^{m-1} +1 = 2^{m}+1$
 To predict $f^m$ we need to distinguish which of the $2^m+1$ regions the initial value falls into
-This requires that the initial value be encoded with at least $m+1$ bits of accuracy
+This requires that the initial value be encoded with at least ==$m+1$ bits of accuracy==
 Fewer bits -> the prediction can be no better than a random guess
-Each time step into the future “consumes” one bit of information
-■ 0.987654321 requires roughly 9×3=27 bits to encode
-■ This explains why the two trajectories diverged after 27 steps 
+for example, 0.987654321 requires roughly 9×3=27 bits to encode (because 3 bits can represent 7 out of 10 numbers, approximated)
 
+- ==Chaos system proprieties==
+	- **Deterministic** -> given its history, the future of a chaotic system is not random but completely determined
+	 - **Sensitive** -> chaotic systems are extremely sensitive to initial conditions (butterfly effect)
+	- **Ergodic** -> the state space trajectory of a chaotic system will always return to the local region of previous point on the trajectory
+	==These properties are necessary but not sufficient==
+	**Ergodic property** implies that a continuous time system with fewer than 3 state
+	variables cannot be chaotic (the Logistic map is one-dimensional and chaotic
+	but it is a discrete time system)
+	For contradiction, suppose that a continuous time system with only 2 state
+	variables is chaotic
+	-  State space (of 2 variables) can be seen as a plane
+	- Ergodicity requires that each point in this plane be reached, with no point ever being revisited
+	- Equivalent to covering the entire plane with ink without ever crossing a line or lifting the pen -> impossible
+	- To not cross an existing line, must jump over it -> 3rd dimension
+
+Chaos showed that it is possible to create a behavior that is effectively random through a deterministic process.
+
+![[Pasted image 20240926150044.png]]
+Logistic map an Tent map are *equivalent* ->  Need to find a transformation function $g(x)$ and its inverse $g{−1}(x)$ such that
+$$L(x)=g{−1}(T(g(x)))\ and\ T(x)=g(L(g{−1}(x)))$$
 
 
