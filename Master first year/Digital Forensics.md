@@ -55,7 +55,12 @@ The Actor has to obligatory produce something to prove their case, based on evid
 
 **Private writing** -> a writing that has at least a subscription and a date. It's necessary for sustaining a case, we're talking 1942, its relation with files and non-existent files is kinda meh
 
+**Electronic signature** -> data associated with other data
+
 an **Informatic Document** (in CAD) can be have
 - no signature
-- Simple signature
-
+- Simple electronic signature (FES "Firma Elettronica Semplice")
+- Advanced electronic signature (FEA "Firma Elettronica Avanzata") -> signature done with an authentication method
+- Qualified signature (FQ "Firma qualificata / digitale") -> criptografy RSA
+$$\Bigg ( FES \bigg ( FEA \Big ( FQ \Big ) \bigg )  \Bigg)$$
+they're all nested sets
