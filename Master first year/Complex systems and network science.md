@@ -120,7 +120,7 @@ $$
 the equation is no longer linear and Consists of a “**positive feedback**” term ($Rx_t$) and a “**negative feedback**” term ($−Rx_t^2$)
 
 Resulting equation is known as the “==Logistic Map==”.
-##### Logistic map graphs to make u understand
+#### Logistic map graphs to make u understand
 ![[Pasted image 20240926134348.png]]
 
 Note that $x_t$ denotes the “**normalized**” population thus $0 ≤ x_t ≤ 1$
@@ -148,6 +148,24 @@ In order of colour, left -> right
 Fixed point -> Periodic dynamics with 2 points -> Periodic dynamics with 4 points -> periodic dynamics with 8 points -> chaos
 
 Bifurcation occur at shorter and shorter ranges, at a constant rate called ==Feigenbaum's constant== -> $4.6692016...$
+(pronunced with italian spelling "Faigunbaum")
 ![[Pasted image 20240926140441.png]]
+Feigenbaum proved that the result applies to any dynamical system that is
+characterized through a “one-humped” map
 
-\
+#### Chaos vs Randomness
+>even if we have a simple model in which all the parameters are determined exactly, long-term prediction is nevertheless impossible
+
+-> this is because of stuff like arbitrarily close initial conditions, that can vary the result drastically
+
+**Chaos** is characterized not so much by randomness but by extreme sensitivity to
+initial conditions.
+
+in logistic maps, we define "==diverge significantly==" as a Yes/No function
+$$
+x_{t}\le 0.5 \implies No \qquad x_{t}> 0.5 \implies Yes
+$$
+![[Pasted image 20240926142346.png]]
+
+
+
