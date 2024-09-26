@@ -107,3 +107,22 @@ number of new members
 - ==The whole is indeed the sum of its parts==
 
 #### Linear vs NonLinear
+linearity leads to unbounded population growth (positive feedback)
+
+We introduce nonlinearity by adding negative feedback resulting from interactions
+among members (some die for $xyz$ reasons).
+the new model becomes $n_{t+1} = R(n_t−d)$ where $d$ is the death rate
+Assume $d = \frac {n_t^2}k$ where $k$ is the maximum “carrying capacity”
+$$
+\frac {n_{t+1}}k = R(\frac {n_{t}}k − \frac {n_t^{2}}{k^{2}}) \qquad 
+x_{t+1} = R(x_t−x_t^2)
+$$
+the equation is no longer linear and Consists of a “**positive feedback**” term ($Rx_t$) and a “**negative feedback**” term ($−Rx_t^2$)
+
+Resulting equation is known as the “==Logistic Map==”.
+![[Pasted image 20240926134348.png]]
+
+Note that $x_t$ denotes the “**normalized**” population thus $0 ≤ x_t ≤ 1$
+
+![[Pasted image 20240926134440.png]]
+
