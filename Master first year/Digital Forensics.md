@@ -76,5 +76,7 @@ the most basic positions are:
 - **the investigator** -> will respond to the scene after request from the responder, they'll coordinate and share information.
 - **crime scene technician** -> specialized training in the collection of evidence, preserving evidence and starting the chain of custody.
 
+Email is one of the easiest ways to share information trough files between two or more people.
+the email address does not automatically point to a specific user
 
 
