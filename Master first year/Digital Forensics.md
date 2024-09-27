@@ -38,6 +38,15 @@ Steps in the process
 - Conservation & Analysis (they can go back and forth)
 - Reporting (final report, that has to include the report of all steps)
 
+**Digital forensic examiner** -> to be one, you need to have a desire to ask questions, have specialized equipment and have the required training.
+
+Digital forensics -> not finding the manufact, as they're just the breadcrumbs leading to the identity of the person conducting the illegal activity, but they do not identify the user.
+
+Cybercrime -> wrongdoing that touches the digital world.
+
+
+
+
 ### Civil case
 
 **Compensation** -> the end result of a civil case towards 1 end to the other
