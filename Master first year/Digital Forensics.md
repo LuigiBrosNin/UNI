@@ -44,9 +44,6 @@ Digital forensics -> not finding the manufact, as they're just the breadcrumbs l
 
 Cybercrime -> wrongdoing that touches the digital world.
 
-
-
-
 ### Civil case
 
 **Compensation** -> the end result of a civil case towards 1 end to the other
@@ -73,4 +70,11 @@ an **Informatic Document** (in CAD) can be have
 - Qualified signature (FQ "Firma qualificata / digitale") -> criptografy RSA
 $$Documents\Bigg ( FES \bigg ( FEA \Big ( FQ \Big ) \bigg )  \Bigg)$$
 they're all nested sets
-### ?
+### Criminal investigations
+the most basic positions are:
+- **the first responder** -> they secure what may be a chaotic scene, understand what happened, trying to identify victims, witnesses, suspects.
+- **the investigator** -> will respond to the scene after request from the responder, they'll coordinate and share information.
+- **crime scene technician** -> specialized training in the collection of evidence, preserving evidence and starting the chain of custody.
+
+
+
