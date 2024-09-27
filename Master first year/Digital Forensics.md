@@ -64,3 +64,4 @@ an **Informatic Document** (in CAD) can be have
 - Qualified signature (FQ "Firma qualificata / digitale") -> criptografy RSA
 $$Documents\Bigg ( FES \bigg ( FEA \Big ( FQ \Big ) \bigg )  \Bigg)$$
 they're all nested sets
+### ?
