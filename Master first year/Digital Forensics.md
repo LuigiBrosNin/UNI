@@ -79,4 +79,6 @@ the most basic positions are:
 Email is one of the easiest ways to share information trough files between two or more people.
 the email address does not automatically point to a specific user
 
+(Here there are some examples of crimes, but they don't seem important to the study of the course, just informative,, so i skipped them)
+
 
