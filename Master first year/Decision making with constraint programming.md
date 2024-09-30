@@ -116,3 +116,13 @@ $<X,D,C,f>$ -> **$f$ is the formalization** of the optimization criterion, to mi
 	- Non-directional -> A constraint between X and Y can be used to infer domain information on Y given domain information on X and vice versa
 	- Rarely independent
 
+==Modeling tips for excercises==
+	apply in order:
+	- choose variables
+	- enforce constraints
+	- check if you can exploit global constraints
+	- check for the need of any auxiliary variables
+	- check for redundant constraints
+	- check for implied constraints
+	- check to eliminate any symmetry
+	- 
