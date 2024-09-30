@@ -226,8 +226,34 @@ A model has to be *compact and simple* while maintaining *fidelity*
 
 ==Cellular automata== -> abstract model for simple individual behaviors and simple interactions leading to complex aggregate behaviors
 
-==1-Dimensional Cellular Automata==
+#### 1-Dimensional Cellular Automata
 ![[Pasted image 20240930183651.png]]
-An infinite array of cells, each having a value from a $k$
+An infinite array of cells, each having a value from a $k$-ary state
+Each cell has a position $i$ and has $r$ left and right neighbors
 
+The state of a cell at time $t+1$ is a function of cell's state and its neighbors' state at time $t$
 
+- Example
+	assume $k = 2, r = 1$ (binary state and neighborhood size 2 ($2r$))
+	![[Pasted image 20240930184808.png]]
+	![[Pasted image 20240930184927.png]]
+	there are $2^{3^{3}}= 256$ possible CAs (Wolfram canonical enumeration)
+	reading the final state column of the lookout table as a binary number gives each possible CA identified trough an integer 0-255
+	![[Pasted image 20240930185342.png]]
+
+- Wolfram's classification (Classes 1->4):
+	1. Nearly all initial patterns evolve quickly into a stable, homogeneous state (**fixed point**)
+	   ![[Pasted image 20240930185736.png]]
+	2. Nearly all initial patterns evolve quickly into stable or oscillating structures (**periodic**)
+	   ![[Pasted image 20240930185753.png]]
+	3. Nearly all initial patterns evolve in a pseudo-random or chaotic manner (**chaotic**)
+	   ![[Pasted image 20240930185805.png]]
+	4. Nearly all initial patterns evolve into structures that interact in complex and interesting ways (**complex** — capable of universal computation)![[Pasted image 20240930185822.png]]
+
+#### CAs as dynamical systems
+- CAs are discrete-time (non continuous), deterministic dynamical systems that exhibit fixed-point, periodic and chaotic behavior.
+- Similar to logistic maps (except continuity)
+- control parameter $R$ equivalent -> $\lambda$ ==Landon's metric==
+
+Langdon's $\lambda$ metric seeks a compact characterization of the CA behavior class
+this number corresponds to the number of "ones" in the look up table final state column
