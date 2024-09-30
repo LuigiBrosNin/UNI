@@ -102,3 +102,17 @@ A ==solution== to a CSP is an assignment of values to the variables which satisf
 CSP enhanced with ==optimization criterion== (eg. minimum cost, shortest distance, etc.)
 $<X,D,C,f>$ -> **$f$ is the formalization** of the optimization criterion, to minimize or maximize ( $-f$ )
 
+==Variables & Domains==
+- binary, integer, continuous
+- take a value from any finite set
+- special structured variable types
+	- set variables -> set of elements as value
+	- activities/internal values (scheduling apps)
+
+==Constraints==
+- any kind of constraint can be expressed as **listing of allowed combinations** (**extensional** representation, called ==table== constraints), but it's inconvenient and inefficient with large domains
+- declarative relations (eg. $X > Y$) (**Intensional** representation, called ==element== constraints)
+	- Order of imposition does not matter
+	- Non-directional -> A constraint between X and Y can be used to infer domain information on Y given domain information on X and vice versa
+	- Rarely independent
+
