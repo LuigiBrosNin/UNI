@@ -224,3 +224,10 @@ Models are abstractions of reality that serve two purposes
 Anything can be modeled, and they're the basis for understanding and turn data into knowledge.
 A model has to be *compact and simple* while maintaining *fidelity*
 
+==Cellular automata== -> abstract model for simple individual behaviors and simple interactions leading to complex aggregate behaviors
+
+==1-Dimensional Cellular Automata==
+![[Pasted image 20240930183651.png]]
+An infinite array of cells, each having a value from a $k$
+
+
