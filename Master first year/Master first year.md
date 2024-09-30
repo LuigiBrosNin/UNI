@@ -4,6 +4,7 @@
 - [[Complex systems and network science]]
 - [[Decision making with constraint programming]]
 - [[Digital Forensics]]
+- [[Intelligenza artificiale]]
 - [[Laboratorio di realtà virtuale e realtà aumentata]]
 - [[Natural language processing]]
 - [[Simulazione di modelli]]
