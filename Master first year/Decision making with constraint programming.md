@@ -132,6 +132,9 @@ an **implied constraint** is a semantically redundant constraint that give us a 
 
 a **symmetry** in CSPs means any equivalent search states -> a state leading to a solution/failure will have many symmetrically equivalent states.
 - **Permutation** is a form of symmetry (when re-arranging a set of elements that are all the same solution)
-- **Variable symmetry**, intuitively permuting values
+- **Variable symmetry**, intuitively permuting values, depending on the problem we can have combinations or order reversal (Golomb Ruler)
+*To understand better, look at the example with Golomb Ruler in the slides*
 
+A common technique is to **impose an ordering** to avoid permutations
+==⚠ At least one solution from each set of symmetrically equivalent solutions must remain==
 
