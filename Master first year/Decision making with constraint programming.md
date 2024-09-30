@@ -80,4 +80,25 @@ Knapsack problem -> Given items, each with a weight and a value, determine which
 
 ![[Pasted image 20240925175625.png]]
 
+### Modeling in CP
+User models a decision problem by formalizing:
+- **the unknowns** of the decision → ==decision variables== $(X_i)$.
+- **possible values** for unknowns → ==domains== $(D(X_i) = \{v_j\})$.
+- **relations** between the unknowns → ==constraints== $(r(X_i, X_i’))$.
+
+> [!note] CSP
+Formalizing a ==Constraint Satisfaction Problem== (CSP)
+a CSP is a triple $<X,D,C>$
+> - ==X== -> set of decision variables $(X_1,...,X_n)$
+> - ==D== -> set of domains $\{D_1,...,D_n\}$ for $X$:
+> 	- $D_i$ is a set of possible values for $X_i$;
+> 	 - usually non-binary and assume finite domain;
+>- ==C== -> set of constraints ${C_1,…,C_m}$:
+> 	- $C_i$ is a relation over $X_j,...,X_k$, denoted as $C_i(X_j, …, X_k)$;
+> 	 - $C_i$ the set of combination of allowed values $C_i \subseteq D(X_j) x ...x D(X_k)$.
+
+A ==solution== to a CSP is an assignment of values to the variables which satisfies (that is feasible for) all **constraints** simultaneously.
+
+CSP enhanced with ==optimization criterion== (eg. minimum cost, shortest distance, etc.)
+$<X,D,C,f>$ -> **$f$ is the formalization** of the optimization criterion, to minimize or maximize ( $-f$ )
 
