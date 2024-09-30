@@ -221,6 +221,6 @@ $$ x_{i}\le 0.5 \implies 0 \qquad x_{i}> 0.5 \implies 1$$
 Models are abstractions of reality that serve two purposes
 - Explain past behaviors
 - Predict future/unobservable behaviors
-Anything can be modeled, and they're the basis for understanding and turn data into knowledge
+Anything can be modeled, and they're the basis for understanding and turn data into knowledge.
 A model has to be *compact and simple* while maintaining *fidelity*
 
