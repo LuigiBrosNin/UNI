@@ -125,4 +125,13 @@ $<X,D,C,f>$ -> **$f$ is the formalization** of the optimization criterion, to mi
 	- check for redundant constraints
 	- check for implied constraints
 	- check to eliminate any symmetry
-	- 
+	- check for dual viewpoints
+	- are there alternative methods that are preferred?
+
+an **implied constraint** is a semantically redundant constraint that give us a computational advantage (because the solver reduces search space) since for us an implicit constraint can be obvious, it's not for the solver
+
+a **symmetry** in CSPs means any equivalent search states -> a state leading to a solution/failure will have many symmetrically equivalent states.
+- **Permutation** is a form of symmetry (when re-arranging a set of elements that are all the same solution)
+- **Variable symmetry**, intuitively permuting values
+
+
