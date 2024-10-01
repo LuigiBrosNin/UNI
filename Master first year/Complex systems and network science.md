@@ -257,3 +257,37 @@ The state of a cell at time $t+1$ is a function of cell's state and its neighbor
 
 Langdon's $\lambda$ metric seeks a compact characterization of the CA behavior class
 this number corresponds to the number of "ones" in the look up table final state column
+![[Pasted image 20240930190617.png]]![[Pasted image 20240930190654.png]]
+![[Pasted image 20240930190733.png]]
+:LiArrowBigUp: Wolfram's classifiation and normalized Langdon's $\lambda$ metric
+
+#### Conway's "Game of Life"
+- 2-Dimensional Cellular Automata
+- Developed by British mathematician John Conway
+
+![[Pasted image 20240930191037.png]]
+- Each cell (on an infinite plane) has eight neighbors
+- Each cell can be “alive” or “dead”
+- Cells come alive, die or survive according to simple rules
+
+- Rules:
+	- a live cell with 2 or 3 live neighbors survives (survival)
+	- a live cell with fewer than 2 live neighbors dies (death from loneliness)
+	- a live cell with more than 3 live neighbors dies (death from over crowding)
+	- a dead cell with exactly 3 live neighbors come alive (birth)
+Example Glider $t=0$ -> $t=4$
+![[Pasted image 20240930191226.png]]
+
+#### CAs as computers
+- CAs can perform "computation" (as "processing of information", aka storing, representing and inputing, transferring, transforming, oputputting info)
+- "Universal computation" -> ability to compute anything that is computable
+- "Programmable computers" are capable of universal computation
+
+Conway's game of life and CA rule 110 **are capable of universal computation** (equivalent to a Turing Machine, basic logical operators can be constructed using them)
+
+CAs as “universal computers” are not practical
+Yet, CAs have been used to perform special-purpose, practical parallel
+computations such as image processing
+
+
+### Agent-Based Models
