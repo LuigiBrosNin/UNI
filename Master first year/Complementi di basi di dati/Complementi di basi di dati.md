@@ -918,9 +918,19 @@ Useful to visualize the values, see if there's an association
 **Data Warehouses** -> operative database, supports software apps and has big repos that consolidate data from different sources.
 - Is updated offline
 - Follows the multidimensional data model
-	- Needs complex queries to analyse and export data (computationally costly)
+- Needs complex queries to analyse and export data (computationally costly)
+- Implemented using the **star or snowflake scheme** to efficiently support OLAP queries.
 
-p43
+==Decision process based on data==
+Companies may use data to take **informed decisions**
+Decision makers need to know the techniques of the data models
+
+- **Data Warehouse** proprieties:
+	- **Oriented at subject** -> targets one or several subjects of analysis
+
+
+
+p44
 
   
 
