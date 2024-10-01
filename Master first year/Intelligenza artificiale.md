@@ -9,3 +9,6 @@
 
 # Teoria
 ## Info
+> [!note] Artificial Intelligence Definition
+> 
+
