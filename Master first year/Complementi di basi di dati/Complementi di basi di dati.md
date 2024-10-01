@@ -951,10 +951,16 @@ relational paradigm is not appropriate for data warehouses, as they're aimed at 
 	- **Aggregation** -> measure are aggregated after a hierarchy passage (eg. a month passes, aggregate months sales)
 
 **Redundancy** -> every dimension has a univocal table
+**No redundancy** -> there are more normalized tables
+
+==populating a DW==
+**ETL** -> Estraction, Trasformation, Loading
 
 
 
-p45
+
+
+p46
 
   
 
