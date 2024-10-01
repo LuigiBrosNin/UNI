@@ -939,10 +939,22 @@ Design of databases
 The final result is a relational database
 
 ==Design of data Warehouse==
-relational paradigm is not appropriate for data warehouses, as they're aimed at specific end users, need to 
+relational paradigm is not appropriate for data warehouses, as they're aimed at specific end users, need to be comprehensible and have good performances.
+
+**multidimensional modeling paradigm** -> data constructed by facts connected as dimensions.
+- **Fact** -> the object of interest (eg. sales if we're sellers)
+- **Measures** -> numeral values that quantify the facts
+- **dimensions**
+	- **Temporal** -> changes trough time
+	- **Positional** -> facts trough geographical distribution
+	- **Hierarchy** -> different levels of detail for exporting
+	- **Aggregation** -> measure are aggregated after a hierarchy passage (eg. a month passes, aggregate months sales)
+
+**Redundancy** -> every dimension has a univocal table
 
 
-p44
+
+p45
 
   
 
