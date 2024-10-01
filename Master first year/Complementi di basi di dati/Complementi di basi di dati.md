@@ -895,7 +895,11 @@ $$S^{2}= \frac 1n dev$$
 - Max -> maximum value in observations
 - Range -> difference between max and min
 ==Multiple variable indicators==
-
+in descriptive statistic, they describe **the relation between variables**, aka how and if they're linked (eg. houses price to squared meters).
+- Covariance
+- Correlation
+==Association measures==
+- Covariance -> strength of relation
 
 p42
 
