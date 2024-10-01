@@ -15,7 +15,7 @@
 - [[#3.5 IR Advanced methods|3.5 IR Advanced methods]]
 - [[#4.1 Data analytics|4.1 Data analytics]]
 
-
+![[Pasted image 20241001104947.png]]
 
 # Theory
 
@@ -907,7 +907,18 @@ in descriptive statistic, they describe **the relation between variables**, aka 
 	Variance is subject to change value based on measurement units, big values give big results, which is not a problem in correlation
 - **Correlation** -> divides covariance by the product of the standard deviations, limiting values between -1 and 1.
 	$$Corr(X,Y)=\frac{Cov(X,Y)}{Stdev(X)\times Stdev(Y)}$$
-	- **tends to -1** -> opposite variation, inversely propo
+	- **tends to -1** -> opposite variation, inversely proportional
+	- **tends to 1** -> same variation, directly proportional
+	- **tends to 0** -> independent variation, linear relation
+==Dispersion and regression graph==
+![[Pasted image 20241001104949.png]]
+Useful to visualize the values, see if there's an association
+
+##  4.2 Data Warehouse
+**Data Warehouses** -> operative database, supports software apps and has big repos that consolidate data from different sources.
+- Is updated offline
+- Follows the multidimensional data model
+	- Needs complex queries to analyse and export data (computationally costly)
 
 p43
 
