@@ -926,8 +926,20 @@ Companies may use data to take **informed decisions**
 Decision makers need to know the techniques of the data models
 
 - **Data Warehouse** proprieties:
-	- **Oriented at subject** -> targets one or several subjects of analysis
+	- **Oriented at subject** -> targets one or several subjects of analysis, according to requirements
+	- **Integrated** -> the contents result from the integration of data from various operational and external systems
+	- **Nonvolatile** -> accumulates data from operational systems for a long period of time, modification and removal are not allowed, except purging of obsolete data
+	- **Time-varying** -> keeps track of how the data evolved over time
 
+Design of databases
+- Requirement specification
+- Conceptual design
+- Logical design
+- Physical design
+The final result is a relational database
+
+==Design of data Warehouse==
+relational paradigm is not appropriate for data warehouses, as they're aimed at specific end users, need to 
 
 
 p44
