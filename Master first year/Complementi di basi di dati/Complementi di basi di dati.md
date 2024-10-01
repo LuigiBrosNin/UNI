@@ -899,9 +899,17 @@ in descriptive statistic, they describe **the relation between variables**, aka 
 - Covariance
 - Correlation
 ==Association measures==
-- Covariance -> strength of relation
+- **Covariance** -> strength of relation between 2 variables
+	$$ cov(X,Y)= \frac{\sum\limits^n_{i=1}(X_i-\overline X)\times(Y_i-\overline Y)}{n}$$
+	if the covariance is high (many $X_i$ and $Y_i$ diverge at the same time) there's a relation
+	**Positive covariance** -> directly proportional, X and Y diverge in the same direction
+	**Negative covariance** -> inversely proportional, X and Y diverge in opposite directions
+	Variance is subject to change value based on measurement units, big values give big results, which is not a problem in correlation
+- **Correlation** -> divides covariance by the product of the standard deviations, limiting values between -1 and 1.
+	$$Corr(X,Y)=\frac{Cov(X,Y)}{Stdev(X)\times Stdev(Y)}$$
+	- **tends to -1** -> opposite variation, inversely propo
 
-p42
+p43
 
   
 
