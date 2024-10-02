@@ -954,8 +954,10 @@ relational paradigm is not appropriate for data warehouses, as they're aimed at 
 **No redundancy** -> there are more normalized tables
 
 ==populating a DW==
-**ETL** -> Estraction, Trasformation, Loading
-
+**ETL** -> Extraction, Trasformation, Loading
+- Estraction -> relevant data gets selected and estracted
+	- static extraction -> 1st population, makes an "instant" of operative data
+	- incremental extraction -> update to the DW, captures the changes from the last extraction (based on timestamp and DBMS register)
 
 
 
