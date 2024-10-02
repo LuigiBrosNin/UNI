@@ -1003,6 +1003,9 @@ a ==Frontend== has
 	- **Data mining tools** -> allow users to analyze data to acquire knowledge on models and tendencies, used to make predictions
 
 ==Multidimensional model (MultiDim)==
+MultiDim visualizes data in a $n$-dimensional space, a cube composed by **dimensions** (**prospectives** of data analysis) and **facts**
+- Example
+	Dimension
 
 
 p48
