@@ -22,4 +22,8 @@ In Training phase each neuron has a simple function $f(x)=\alpha x$ where is is 
 Comparing the $output\ net - desired \ output$ will make sure that the error will be lower.
 There are different measures to attest the efficiency of the model, one of them is *accuracy*, but there are many others that have to be used case per case. as accuracy is not always a good metric.
 
+3 types of AI
+- Symbolic AI -> Rule based systems
+- ..
+- ..
 
