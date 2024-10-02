@@ -954,12 +954,32 @@ relational paradigm is not appropriate for data warehouses, as they're aimed at 
 **No redundancy** -> there are more normalized tables
 
 ==populating a DW==
-**ETL** -> Extraction, Trasformation, Loading
-- Estraction -> relevant data gets selected and estracted
-	- static extraction -> 1st population, makes an "instant" of operative data
-	- incremental extraction -> update to the DW, captures the changes from the last extraction (based on timestamp and DBMS register)
+**ETL** -> Extraction, Transformation, Loading
+- **Extraction** -> relevant data gets selected and extracted
+	- **Static extraction** -> 1st population, makes an "instant" of operative data
+	- **Incremental extraction** -> update to the DW, captures the changes from the last extraction (based on timestamp and DBMS register)
+- **Transformation** -> converts data from operative to the standardized of the DW.
+	1. **Cleaning** -> removes errors and incongruities, converts to standardized format
+	2. **Integration** -> reconciles data from different sources, schema and data
+	3. **Aggregation** -> summarizes data based on granularity
+- **Loading** -> feeds the DW with the transformed data, including the updates (updates propagation)
 
+==OLTP Systems== -> Operative databases (elaboration of online transactions)
+OLTP are traditional databases optimized to support daily operations:
+- Rapid access to data
+- Elaborating transaction
+- Comparison given updated coherent online data
+Proprieties of OLTP
+- Detailed data
+- No historical data
+- Highly normalized
+- Bad performances on complex queries
 
+Data analysis requires a new paradigm, ==OLAP==
+- Focuses on analytic queries, where data reconstructions
+- Support for loads of heavy queries
+- Indexing aimed to access few records
+- 
 
 
 p46
