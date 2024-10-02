@@ -997,7 +997,12 @@ at ==OLAP level== we have -> a server that provides a multidimensional view of d
 a ==Frontend== has 
 - visualization of data
 - client tools to use the contents of the DW
-	- **OLAP tools** -> 
+	- **OLAP tools** -> provide interactive exploration and manipulation of data, and the formulation of complex queries ad hoc
+	- **Reporting tools** -> reports management and production, they use predefined queries used regularly
+	- **Static tools** -> analysis and visualization of data cubes trough static methods
+	- **Data mining tools** -> allow users to analyze data to acquire knowledge on models and tendencies, used to make predictions
+
+==Multidimensional model (MultiDim)==
 
 
 p48
