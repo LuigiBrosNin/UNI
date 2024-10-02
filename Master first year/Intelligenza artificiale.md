@@ -17,3 +17,4 @@
 
 **Artificial General Intelligence** (AGI) -> AGI is envisioned as having the capability to perform any intellectual task that a human being can do
 
+To solve problems with AI, there's not a defined algorithm, but
