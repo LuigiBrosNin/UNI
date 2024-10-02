@@ -994,10 +994,13 @@ at ==DW level== we have
 	- **Technical metadata** -> describe data storing and apps and processing acting on data ( ETL operations ). They describe the structure of DW and Data mart, at a conceptual/logical level, and physical level
 	- **Repository** -> memorizes info on DW and its contents
 at ==OLAP level== we have -> a server that provides a multidimensional view of data
-a **frontend** has ->
+a ==Frontend== has 
+- visualization of data
+- client tools to use the contents of the DW
+	- **OLAP tools** -> 
 
 
-p47
+p48
 
   
 
