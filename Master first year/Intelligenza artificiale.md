@@ -8,7 +8,12 @@
 	discussion is about the project mainly, and important theory stuff, but not much in depth
 
 # Teoria
-## Info
-> [!note] Artificial Intelligence Definition
-> 
+## Intro
+> [!note] Artificial Intelligence Definitions (informal)
+> 1. Turing's imitation game test
+> 2. "Knowing what to do when you don't know what to do"
+> 3. Models that are designed to generate new content, such as images, text, audio, or even video (Generative AI)
+> 4. Thinking/Acting humanly, Thinking/Acting rationally
+
+**Artificial General Intelligence** (AGI) -> AGI is envisioned as having the capability to perform any intellectual task that a human being can do
 
