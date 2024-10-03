@@ -383,13 +383,25 @@ Minor adjustments locally lead to global synchrony that emerges in a decentraliz
 	![[Pasted image 20241003144732.png]]
 	:LiArrowBigUp: Convergence of periods
 	![[Pasted image 20241003144815.png]]
-	:LiArrowBigUp: Chaos to coherent emissions
+	:LiArrowBigUp: Chaos to coherent emissions (they're accurate with a margin of error)
 
 ==Formation creation==
-- Dynamic collection of agents that can move in physical space in any direction
-- Each agent has a unique ID and can determine the relative position of other
-agents
-- Agents are interconnected through a sparse network that can be used to
-provide random samples from the entire population
-- Devise a protocol such that mobile agents self organize into pre-specified global
-formations in a totally decentralized manner
+Is a Dynamic collection of agents that can move in physical space in any direction
+- Each agent has a unique ID and can determine the relative position of other agents
+- Agents are interconnected through a sparse network that can be used to provide random samples from the entire population
+- Devise a protocol such that mobile agents self organize into pre-specified global formations in a totally decentralized manner
+
+Examples -> Drones flying in formation, Satellites in orbit
+
+- ==Formation creation Gossip framework instantiation==
+	- Style of interaction: pull
+	- Local state $S$: Current physical position and motion vector
+	- Method `SelectPeer()`: $k$ random samples from population
+	- Method `Update()`: Compute motion vector based on positions of most and least preferred neighbor (defined in a manner similar to the ranking function of overlay topology creation inspired by differential cell adhesion)
+	![[Pasted image 20241003150851.png]]
+	:LiArrowBigUp: starting formation of Ring formation
+	![[Pasted image 20241003150921.png]]
+	:LiArrowBigUp: ending formation of Ring formation
+
+
+
