@@ -89,6 +89,17 @@ Social media is a source of digital evidence for showing conspiracy. There could
 
 ### Corporate (Civil) investigations
 
-Private accords -> used by one part to get access from the devices
+Private accords (privacy policies) -> used by one part to get access from the devices
 in other words: "i'll give you the company's PC, Phone etc. and i retain the right to access the devices and check for whatever i need"
+
+**Policy** -> statement from the organization addressing a specific issue
+**Procedure** -> the specific instructions regarding how to accomplish the goals of the policy
+
+Policies should be simple to understand.
+Procedures should specify all the steps needed to implement the task outlined in the policy.
+
+Policies and procedures are below the law
+
+The organization must enforce the policies, and there must be documentation that employee knew and understood the policies.
+
 
