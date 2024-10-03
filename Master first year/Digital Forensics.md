@@ -87,3 +87,8 @@ The **Internet of Things** -> anything that has an app (Alexa, smartwatches, Sir
 
 Social media is a source of digital evidence for showing conspiracy. There could be a Facebook page with photo of an evidence (ofc it happened)
 
+### Corporate (Civil) investigations
+
+Private accords -> used by one part to get access from the devices
+in other words: "i'll give you the company's PC, Phone etc. and i retain the right to access the devices and check for whatever i need"
+
