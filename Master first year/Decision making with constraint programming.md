@@ -138,3 +138,8 @@ a **symmetry** in CSPs means any equivalent search states -> a state leading to 
 A common technique is to **impose an ordering** to avoid permutations
 ==⚠ At least one solution from each set of symmetrically equivalent solutions must remain==
 
+Symmetry breaking constraints enable **constraint simplification** -> they can make some constraints redundant
+![[Pasted image 20241003214950.png]]
+
+==Dual Viewpoint==
+viewing a problem $P$
