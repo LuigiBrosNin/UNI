@@ -403,5 +403,15 @@ Examples -> Drones flying in formation, Satellites in orbit
 	![[Pasted image 20241003150921.png]]
 	:LiArrowBigUp: ending formation of Ring formation
 
+### Game theory
 
+- Agents need to choose among several options
+- The outcome of agent decisions (actions) depends on the choices made by other agents they are interacting with
+	- pricing a new product in a competitive market
+	- biding in an auction
+	- choosing a route in a data network
+	- choosing a stance in international relations
+	- deciding to resort to doping or not
+Want to study notions like “cooperation” in a world where agents are in perpetual
+competition
 
