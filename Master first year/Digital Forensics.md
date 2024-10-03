@@ -81,4 +81,9 @@ the email address does not automatically point to a specific user
 
 (Here there are some examples of crimes, but they don't seem important to the study of the course, just informative,, so i skipped them)
 
+**Criminal Conspiracy** -> when two or more people agree to commit a illegal act
+
+The **Internet of Things** -> anything that has an app (Alexa, smartwatches, Siri, whatever connects to internet) might contain evidence and show the criminals' intent to commit the crime. Missing the digital devices can result in significant damage in investigations.
+
+Social media is a source of digital evidence for showing conspiracy. There could be a Facebook page with photo of an evidence (ofc it happened)
 
