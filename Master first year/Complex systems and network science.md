@@ -292,7 +292,7 @@ computations such as image processing
 
 ### Agent-Based Models
 
-MISSING TIL 9
+MISSING 1 -> 9
 
 ==Termites==
 Wood “chips” distributed over a 2-Dimensional space
@@ -308,5 +308,26 @@ $x$ termites -> Chips will get collected in a single location as a result of the
 **Schelling's Segregation module** -> creating of segregated areas (eg. neighborhood)
 **Peer effects** -> individuals adopt the behavior of their peers
 **Self organization** -> macro outcomes are a result of this propriety of individuals (eg. flocking and schooling)
-![[Pasted image 20241003134352.png]]
+
+- Flock rules example
+	![[Pasted image 20241003134352.png]]
+
+==Gossip-style interactions==
+effective for constructing decentralized solutions to problems in large networks, since interactions are limited to *peers*
+System is fully symmetric
+Gossip can be
+- Timing -> Reactive, Proactive (independently)
+- Direction ->Push, pull, push-pull (subject asks for or is told gossip)
+A set of peers that a node knows is called a **view** and they define **overlay networks**
+
+- Network example
+	![[Pasted image 20241003140417.png]]
+	to define a framework we need to define
+	- How peers are selected through method `SelectPeer()`
+	- Style of interaction (push, pull etc)
+	- How local state is updated trough `Update()`
+
+==Heartbeat synchronization==
+Synchrony in nature of independent agents
+
 
