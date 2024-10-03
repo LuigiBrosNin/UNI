@@ -105,9 +105,11 @@ Passepartouts of any kind are always insecure, since a leak will sooner or later
 
 ### Pre-Investigation consideration
 
-**Pre-Investigation consideration** -> Phase where you determine the capabilities and equipment specifications to conduct a forensic exam, regardless of whether it is in the field or a lab environment
+**Pre-Investigation consideration** -> Phase where you determine the <u>capabilities and equipment</u> specifications to conduct a forensic exam, regardless of whether it is in the field or a lab environment
 
 Tech changes, methods of hiding data or conducting criminal activities, we need to adjust.
+
+**Drive blocker** -> blocks modifications on devices (so we can make the acquisition without modifying anything)
 
 
 
