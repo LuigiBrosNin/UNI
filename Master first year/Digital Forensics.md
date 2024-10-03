@@ -97,9 +97,17 @@ in other words: "i'll give you the company's PC, Phone etc. and i retain the rig
 
 Policies should be simple to understand.
 Procedures should specify all the steps needed to implement the task outlined in the policy.
-
 Policies and procedures are below the law
 
 The organization must enforce the policies, and there must be documentation that employee knew and understood the policies.
+
+Passepartouts of any kind are always insecure, since a leak will sooner or later occur
+
+### Pre-Investigation consideration
+
+**Pre-Investigation consideration** -> Phase where you determine the capabilities and equipment specifications to conduct a forensic exam, regardless of whether it is in the field or a lab environment
+
+Tech changes, methods of hiding data or conducting criminal activities, we need to adjust.
+
 
 
