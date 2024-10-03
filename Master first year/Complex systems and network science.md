@@ -292,6 +292,19 @@ computations such as image processing
 
 ### Agent-Based Models
 
+Agent-based models allow us to consider richer environments with greater fidelity than equation-based models and explore a larger set of questions
+Characteristics:
+- **Individuals (agents)** -> objects of the model
+- **Behaviors** -> simple or rational rules that guide agents (motives)
+- **Outcomes** -> results of the behavior
+- *Micro-motives* vs *Macro-outcomes*
+Macro outcomes can be observed as proprieties of the environment or as proprieties of the individuals
+
+==Langton's Ants==
+
+
+
+
 MISSING 1 -> 9
 
 ==Termites==
@@ -328,6 +341,17 @@ A set of peers that a node knows is called a **view** and they define **overlay 
 	- How local state is updated trough `Update()`
 
 ==Heartbeat synchronization==
-Synchrony in nature of independent agents
+Synchrony in nature of independent agents is common
+- Chirping crickets
+- Flashing of fireflies
+- Menstrual cycles of women living together
+- Heart pacemaker cells
+
+Agents belong to the same organism or are parts of different organisms
+
+Coupled oscillators  is a form of self-synchronization
+they need to be coupled trough something in the environment, otherwise independent agents will never synchronize
+
+Minor adjustments locally lead to global synchrony that emerges in a decentralized matter
 
 
