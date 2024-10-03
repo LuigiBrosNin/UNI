@@ -291,3 +291,22 @@ computations such as image processing
 
 
 ### Agent-Based Models
+
+MISSING TIL 9
+
+==Termites==
+Wood “chips” distributed over a 2-Dimensional space
+Termites can move, pick up or drop wood chips
+- Rules:
+	- Wander randomly
+	- If bump into a wood chip and “free”, pick the chip up, and continue to wander randomly
+	- If bump into a wood chip and “full”, find a nearby empty space and put the wood chip down, continue to wander randomly
+$x$ termites -> Chips will get collected in a single location as a result of the rules, they'll conform in bigger chunks in $x$ speed
+
+==Sorting and peer effects==
+**Sorting (Homophily)** -> individuals seek similar individuals (eg. in society, friend groups)
+**Schelling's Segregation module** -> creating of segregated areas (eg. neighborhood)
+**Peer effects** -> individuals adopt the behavior of their peers
+**Self organization** -> macro outcomes are a result of this propriety of individuals (eg. flocking and schooling)
+![[Pasted image 20241003134352.png]]
+
