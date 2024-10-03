@@ -300,21 +300,35 @@ Characteristics:
 - *Micro-motives* vs *Macro-outcomes*
 Macro outcomes can be observed as proprieties of the environment or as proprieties of the individuals
 
-==Langton's Ants==
+- ==Langton's Ants==
+	We have:
+	- 2-Dimensional “grid”
+	- Each square can be “black” or “white”
+	- Ants have a direction and can turn right or left, move one square in the current direction, flip color of square they are on
+	- Rules:
+	- If current square “white”, turn 90° right, flip the color of square, move forward one unit
+	- If current square “black”, turn 90° left, flip the color of square, move forward one unit
+	- Think of “black” and “white” as the presence or absence of “pheromones” deposited by ants to their environment
+	![[Pasted image 20241003143631.png]]
+	![[Pasted image 20241003143755.png]]
+	The system is not linear, and thus the sum of the ant's paths is not the sum of the individual behaviors
 
+- ==Foraging ants==
+	In nature, ants are known to “forage” (scout ants go looking for food far away from their nest while leaving pheromone trails for other ants to follow)
+	Real ant pheromone trails diffuse and evaporate
+	
+	The existence and strength of pheromone trails encode the ant colony’s collective information about food in their environment
+	![[Pasted image 20241003144023.png]]
+	:LiArrowBigUp: ants movement
 
-
-
-MISSING 1 -> 9
-
-==Termites==
-Wood “chips” distributed over a 2-Dimensional space
-Termites can move, pick up or drop wood chips
-- Rules:
-	- Wander randomly
-	- If bump into a wood chip and “free”, pick the chip up, and continue to wander randomly
-	- If bump into a wood chip and “full”, find a nearby empty space and put the wood chip down, continue to wander randomly
-$x$ termites -> Chips will get collected in a single location as a result of the rules, they'll conform in bigger chunks in $x$ speed
+- ==Termites==
+	Wood “chips” distributed over a 2-Dimensional space
+	Termites can move, pick up or drop wood chips
+	- Rules:
+		- Wander randomly
+		- If bump into a wood chip and “free”, pick the chip up, and continue to wander randomly
+		- If bump into a wood chip and “full”, find a nearby empty space and put the wood chip down, continue to wander randomly
+	$x$ termites -> Chips will get collected in a single location as a result of the rules, they'll conform in bigger chunks in $x$ speed
 
 ==Sorting and peer effects==
 **Sorting (Homophily)** -> individuals seek similar individuals (eg. in society, friend groups)
@@ -349,9 +363,33 @@ Synchrony in nature of independent agents is common
 
 Agents belong to the same organism or are parts of different organisms
 
-Coupled oscillators  is a form of self-synchronization
+<u>Coupled oscillators</u>  is a form of self-synchronization
 they need to be coupled trough something in the environment, otherwise independent agents will never synchronize
 
 Minor adjustments locally lead to global synchrony that emerges in a decentralized matter
 
+- ==Firefly Gossip framework instantiation==
+	Certain species of (male) fireflies (e.g., luciola pupilla) are known to synchronize their flashes despite
+	- Sparse connectivity network (each firefly has a small number of “neighbors”)
+	- Communication not instantaneous
+	- Independent local “oscillators” with random initial periods
+	
+	- Style of interaction: push
+	- Local state `S`: Current phase of local oscillator $ϕ$, period $Δ$
+	- Method `SelectPeer()`: (small) set of random neighbors
+	- Method `Update()`: Function to reset the local oscillator based on the phase of arriving flash
+	![[Pasted image 20241003144556.png]]
+	:LiArrowBigUp: sync algorythm
+	![[Pasted image 20241003144732.png]]
+	:LiArrowBigUp: Convergence of periods
+	![[Pasted image 20241003144815.png]]
+	:LiArrowBigUp: Chaos to coherent emissions
 
+==Formation creation==
+- Dynamic collection of agents that can move in physical space in any direction
+- Each agent has a unique ID and can determine the relative position of other
+agents
+- Agents are interconnected through a sparse network that can be used to
+provide random samples from the entire population
+- Devise a protocol such that mobile agents self organize into pre-specified global
+formations in a totally decentralized manner
