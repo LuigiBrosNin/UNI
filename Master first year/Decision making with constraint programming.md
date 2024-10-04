@@ -148,7 +148,15 @@ viewing a problem $P$ from different prospective may result in different models 
 Maximize the number of queens in a board so that they cannot eat each other
 ![[Pasted image 20241004205551.png]]
 Variables
-- $[X_1,...,X_n]$ rows
+- $[X_1,...,X_n]$ rows -> <u>no row attack</u>
 - $\{1,...,n\}$ columns
-- $X_i=j$ -> queen in row $i$ is in column $j$
+ $X_i=j$ -> queen in row $i$ is in column $j$
 Constraints
+- alldifferent($[X_1,...,X_n]$) -> <u>no column attack</u>
+-  $\forall \ i<j\quad |X_i-X_j| \ne |i-j|$ -> <u>no diagonal attack</u>
+equivalent writings of the non-diagonal atk constraint
+$$\forall\  i<j\quad |Xi – Xj| ≠ |i – j|$$
+$$≡ \forall\ i<j\quad X_i – X_j ≠ i – j \land X_i – X_j ≠ j – i \land Xj – Xi ≠ i – j \land X_j – X_i ≠ j – i$$
+$$≡ \forall\ i<j\quad X_i – i ≠ X_j – j \land X_i + i ≠ X_j + j$$
+≡ alldifferent($[X_1 – 1, …, X_n – n]$)
+≡ alldifferent($[X_1 + 1, …, X_n + n]$)
