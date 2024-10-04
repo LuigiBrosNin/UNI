@@ -142,4 +142,13 @@ Symmetry breaking constraints enable **constraint simplification** -> they can m
 ![[Pasted image 20241003214950.png]]
 
 ==Dual Viewpoint==
-viewing a problem $P$
+viewing a problem $P$ from different prospective may result in different models of $P$. Each model has the same set of solutions, but has different variables, domains and constraints and different <u>search space size</u>.
+
+==N-Queen problem case study==
+Maximize the number of queens in a board so that they cannot eat each other
+![[Pasted image 20241004205551.png]]
+Variables
+- $[X_1,...,X_n]$ rows
+- $\{1,...,n\}$ columns
+- $X_i=j$ -> queen in row $i$ is in column $j$
+Constraints
