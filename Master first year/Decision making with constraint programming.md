@@ -160,3 +160,20 @@ $$≡ \forall\ i<j\quad X_i – X_j ≠ i – j \land X_i – X_j ≠ j – i \l
 $$≡ \forall\ i<j\quad X_i – i ≠ X_j – j \land X_i + i ≠ X_j + j$$
 ≡ alldifferent($[X_1 – 1, …, X_n – n]$)
 ≡ alldifferent($[X_1 + 1, …, X_n + n]$)
+
+We are studying this case because it presents an interesting form of symmetry
+![[Pasted image 20241006205116.png]]
+we'll define an equivalent model and then <u>combine</u> the two models to create something better than both B)
+
+Variables and Domains
+- we represent the board with $n x n$ Boolean variables $B_{ij} ∊ [0..1]$.
+Attacking Constraints
+- $\sum\limits 𝐵_{ij}= 1$ on all rows and columns, $\sum\limits 𝐵_{𝑖𝑗} ≤ 1$ on all diagonals.
+Symmetry Breaking Constraints
+- Flatten the 2-d matrix to a single sequence of variables.
+	E.g., append every row to the end of the first row.
++ Every symmetric configuration corresponds to a variable permutation of the original solution, which is easy to define.
+- Impose an order between the original solution and all the solutions obtained by the 7 permutations:
+	$lex≤(B, π(B))\ \forall\ π.$
+
+Lex -> **Lexicographic Ordering Constraint**
