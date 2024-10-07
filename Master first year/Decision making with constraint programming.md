@@ -183,4 +183,15 @@ Lex -> **Lexicographic Ordering Constraint**
 
 
 
-### MinZinc Basics
+### MiniZinc Error: Registry: Constraint fzn_all_different_int not found
+if you're on Linux (like me) and this error pops up, instead of spending 2 hours fixing it, here's what you have to do
+
+MiniZinc menu -> Preferences -> Solvers
+
+Create a new solver and save it as such
+![[Pasted image 20241007155806.png]]
+
+make sure it's saved (i dunno how it saves stuff )
+
+
+[Solution Source](https://github.com/MiniZinc/MiniZincIDE/issues/51)
