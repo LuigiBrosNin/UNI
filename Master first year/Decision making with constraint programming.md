@@ -80,6 +80,8 @@ Knapsack problem -> Given items, each with a weight and a value, determine which
 
 ![[Pasted image 20240925175625.png]]
 
+MinZinc comes with a cheat sheet under the "help" tab that looks really helpful :)
+
 ### Modeling in CP
 User models a decision problem by formalizing:
 - **the unknowns** of the decision → ==decision variables== $(X_i)$.
@@ -177,3 +179,8 @@ Symmetry Breaking Constraints
 	$lex≤(B, π(B))\ \forall\ π.$
 
 Lex -> **Lexicographic Ordering Constraint**
+
+
+
+
+### MinZinc Basics
