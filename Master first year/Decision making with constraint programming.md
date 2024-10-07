@@ -183,15 +183,24 @@ Lex -> **Lexicographic Ordering Constraint**
 
 
 
-### MiniZinc Error: Registry: Constraint fzn_all_different_int not found
+### MiniZinc Setup ⚠ IMPORTANT
+Setup is quick and easy: all you need to do is modify a few parameters from the configuration editor (the solver)
+Set up like this to get the info needed to fill the assignments
+![[Pasted image 20241007160142.png]]
+
+
+> [!Warning] Error: Registry: Constraint fzn_all_different_int not found
 if you're on Linux (like me) and this error pops up, instead of spending 2 hours fixing it, here's what you have to do
-
 MiniZinc menu -> Preferences -> Solvers
-
+> 
 Create a new solver and save it as such
 ![[Pasted image 20241007155806.png]]
+> 
+> make sure it's saved (clicking ok seems to not do it, idk)
+>then select it as the solver.
+> 
+> I had this issue from the AppImage and Snap installation
+> 
+> [Solution Source](https://github.com/MiniZinc/MiniZincIDE/issues/51)
 
-make sure it's saved (i dunno how it saves stuff )
-
-
-[Solution Source](https://github.com/MiniZinc/MiniZincIDE/issues/51)
+### Assignment 1 -> NQueens - Puzzle
