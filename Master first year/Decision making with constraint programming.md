@@ -47,7 +47,7 @@ What is constraint programmming?
 	**Operational constraints** -> Each employee should be tested within their working shift.
 	Only a limited share of employees from the same work area should be scheduled for a test on the same day.
 
-A constraint ==solver== finds a solution to the model (or prove that it doesn't eX_ist) by assigning a value to every variable via a search algorithm.
+A constraint ==solver== finds a solution to the model (or prove that it doesn't exist) by assigning a value to every variable via a search algorithm.
 Practically, we'll tweak the search algorithm to find the solution we want.
 
 ### Overview of CP
@@ -71,12 +71,12 @@ For an efficient CP solving, we need:
 - a model with effectively propagating constraints;
 - effective search algorithm and heuristics.
 
-### MiniZinc basic excercises
+### MiniZinc basic syntax
 
 ![[Pasted image 20240925173418.png]]
 :LiArrowBigUp: Basic syntax, coloring problem :LiArrowBigUp:
 
-Knapsack problem -> Given items, each with a weight and a value, determine which item and how many of it to pack in your knapsack without exceeding its capacity while maX_imizing your profit?
+Knapsack problem -> Given items, each with a weight and a value, determine which item and how many of it to pack in your knapsack without exceeding its capacity while maximizing your profit?
 
 ![[Pasted image 20240925175625.png]]
 
@@ -102,7 +102,7 @@ a CSP is a triple $<X,D,C>$
 A ==solution== to a CSP is an assignment of values to the variables which satisfies (that is feasible for) all **constraints** simultaneously.
 
 CSP enhanced with ==optimization criterion== (eg. minimum cost, shortest distance, etc.)
-$<X,D,C,f>$ -> **$f$ is the formalization** of the optimization criterion, to minimize or maX_imize ( $-f$ )
+$<X,D,C,f>$ -> **$f$ is the formalization** of the optimization criterion, to minimize or maximize ( $-f$ )
 
 ==Variables & Domains==
 - binary, integer, continuous
@@ -123,7 +123,7 @@ $<X,D,C,f>$ -> **$f$ is the formalization** of the optimization criterion, to mi
 	- choose variables
 	- enforce constraints
 	- check if you can exploit global constraints
-	- check for the need of any auX_iliary variables
+	- check for the need of any auxiliary variables
 	- check for redundant constraints
 	- check for implied constraints
 	- check to eliminate any symmetry
@@ -147,7 +147,7 @@ Symmetry breaking constraints enable **constraint simplification** -> they can m
 viewing a problem $P$ from different prospective may result in different models of $P$. Each model has the same set of solutions, but has different variables, domains and constraints and different <u>search space size</u>.
 
 ==N-Queen problem case study==
-MaX_imize the number of queens in a board so that they cannot eat each other
+Maximize the number of queens in a board so that they cannot eat each other
 ![[Pasted image 20241004205551.png]]
 **Alldifferent model**
 Variables
@@ -180,9 +180,9 @@ Symmetry Breaking Constraints
 - Impose an order between the original solution and all the solutions obtained by the 7 permutations:
 	$lex≤(B, π(B))\ \forall\ π.$ (pi being the permutations)
 
-==Lex== -> **LeX_icographic Ordering Constraint**
-Function that requires a sequence of variables to be leX_icographically less or equal to another sequence
-eg. $A = \{1,2,3\}, B = \{1,2,4\} \to A[1] = B[1] = 1 \to ... \to A[3] < B[3]$ , so we say $A$ is **leX_icographically smaller** than $B$.
+==Lex== -> **Lexicographic Ordering Constraint**
+Function that requires a sequence of variables to be lexicographically less or equal to another sequence
+eg. $A = \{1,2,3\}, B = \{1,2,4\} \to A[1] = B[1] = 1 \to ... \to A[3] < B[3]$ , so we say $A$ is **lexicographically smaller** than $B$.
 ![[Pasted image 20241007212145.png]]
 we use the lex function to break symmetry in N-Queens
 now we combine the *alldifferent* model and the *lex* model, to get the best of both words (since both have some drawbacks and strong points)
@@ -203,16 +203,25 @@ another dual model we can study is the original one... and a "flipped" variant
 the difference is visual and self explanatory
 
 we can get a *combined model*
-Variables
-– $[X_1, X_2, …, X_n], [Y_1, Y_2, …, Y_n] ∊ [1..n]$
-Constraints
-– alldifferent($[X_1, X_2, …, X_n]$)
-– alldifferent($[Y_1, Y_2, …, Y_n]$)
-– $\forall i<j\ |X_i - X_j| ≠ |i - j|$
-– $\forall i<j\ |Y_i - Y_j| ≠ |i - j|$
-Channeling Constraints
-– $\forall i,j\ X_i = j Y_j = i$
 
+Variables
+- $[X_1, X_2, …, X_n], [Y_1, Y_2, …, Y_n] ∊ [1..n]$
+Constraints
+- alldifferent($[X_1, X_2, …, X_n]$)
+- alldifferent($[Y_1, Y_2, …, Y_n]$)
+- $\forall i<j\ |X_i - X_j| ≠ |i - j|$
+- $\forall i<j\ |Y_i - Y_j| ≠ |i - j|$
+Channeling Constraints
+- $\forall i,j\ X_i = j Y_j = i$
+
+*we can omit 3/4 constraints*, the first 2 and either of the other 2, which leaves us with only 1 constraints
+
+Variables
+- $[X_1, X_2, …, X_n], [Y_1, Y_2, …, Y_n] ∊ [1..n]$
+Constraints
+- $\forall i<j\ |X_i - X_j| ≠ |i - j|$
+Channeling Constraints
+- $\forall i,j\ X_i = j Y_j = i$
 
 ### MiniZinc Setup ⚠ IMPORTANT
 Setup is quick and easy: all you need to do is modify a few parameters from the configuration editor (the solver)
