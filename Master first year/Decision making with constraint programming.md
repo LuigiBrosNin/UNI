@@ -243,4 +243,4 @@ Create a new solver and save it as such
 > 
 > [Solution Source](https://github.com/MiniZinc/MiniZincIDE/issues/51)
 
-### Assignment 1 -> NQueens - Puzzle
+### Assignment 1 -> N-Queens - Sequence Puzzle
