@@ -149,6 +149,7 @@ viewing a problem $P$ from different prospective may result in different models 
 ==N-Queen problem case study==
 Maximize the number of queens in a board so that they cannot eat each other
 ![[Pasted image 20241004205551.png]]
+**Alldifferent model**
 Variables
 - $[X_1,...,X_n]$ rows -> <u>no row attack</u>
 - $\{1,...,n\}$ columns
@@ -167,8 +168,9 @@ We are studying this case because it presents an interesting form of symmetry
 ![[Pasted image 20241006205116.png]]
 we'll define an equivalent model and then <u>combine</u> the two models to create something better than both B)
 
+**Lex model**
 Variables and Domains
-- we represent the board with $n x n$ Boolean variables $B_{ij} ∊ [0..1]$.
+- ❕ we represent the board with $n x n$ Boolean variables $B_{ij} ∊ [0..1]$.
 Attacking Constraints
 - $\sum\limits 𝐵_{ij}= 1$ on all rows and columns, $\sum\limits 𝐵_{𝑖𝑗} ≤ 1$ on all diagonals.
 Symmetry Breaking Constraints
@@ -180,7 +182,15 @@ Symmetry Breaking Constraints
 
 ==Lex== -> **Lexicographic Ordering Constraint**
 Function that requires a sequence of variables to be lexicographically less or equal to another sequence
-eg. $A = \{1,2,3\}, B = \{1,2,4\} \to A[1] = B[1] = 1 -> ... -> A[3] < B[3]$ , so we say $A$ is lexicographically smaller than $B$.
+eg. $A = \{1,2,3\}, B = \{1,2,4\} \to A[1] = B[1] = 1 \to ... \to A[3] < B[3]$ , so we say $A$ is **lexicographically smaller** than $B$.
+![[Pasted image 20241007212145.png]]
+we use the lex function to break symmetry in N-Queens
+now we combine the *alldifferent* model and the *lex* model, to get the best of both words (since both have some drawbacks and strong points)
+
+**Combined model**
+Variables
+$$\forall i,\ X_{i}\in [1..n],\forall i,j\ B_{ij}\in [0..1]$$
+Constraints
 
 
 
