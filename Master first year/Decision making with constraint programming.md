@@ -176,10 +176,11 @@ Symmetry Breaking Constraints
 	E.g., append every row to the end of the first row.
 + Every symmetric configuration corresponds to a variable permutation of the original solution, which is easy to define.
 - Impose an order between the original solution and all the solutions obtained by the 7 permutations:
-	$lex≤(B, π(B))\ \forall\ π.$
+	$lex≤(B, π(B))\ \forall\ π.$ (pi being the permutations)
 
-Lex -> **Lexicographic Ordering Constraint**
-Function that requires
+==Lex== -> **Lexicographic Ordering Constraint**
+Function that requires a sequence of variables to be lexicographically less or equal to another sequence
+eg. $A = \{1,2,3\}, B = \{1,2,4\} \to A[1] = B[1] = 1 -> ... -> A[3] < B[3]$ , so we say $A$ is lexicographically smaller than $B$.
 
 
 
