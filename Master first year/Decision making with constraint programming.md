@@ -179,7 +179,7 @@ Symmetry Breaking Constraints
 	$lex≤(B, π(B))\ \forall\ π.$
 
 Lex -> **Lexicographic Ordering Constraint**
-
+Function that requires
 
 
 
