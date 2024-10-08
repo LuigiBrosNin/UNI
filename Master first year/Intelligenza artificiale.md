@@ -26,4 +26,8 @@ There are different measures to attest the efficiency of the model, one of them 
 - Symbolic AI -> Rule based systems
 - ..
 - ..
+## Neural Networks
+
+## 
+i'm following the lessons without notes, as there are some notes on CSUnibo i could study into, i might still do summaries and exam resources. as usual i recommend Cortigiano's notes (italian notes).
 
