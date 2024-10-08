@@ -1007,7 +1007,10 @@ MultiDim visualizes data in a $n$-dimensional space, a cube composed by **dimens
 - Example
 	**Dimensions** -> Client, Time, Product. Dimensions are described by attributes.
 	**Facts** -> Sales. every cell of the cube is the no. of units sold per category, time unit and a client's city
-	Measures -> Quantities. 
+	Measures -> Quantities
+
+**Members** -> instances of a dimension
+
 
 
 p48
