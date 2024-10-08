@@ -14,8 +14,8 @@
 - [[#3.4 IR Evaluation|3.4 IR Evaluation]]
 - [[#3.5 IR Advanced methods|3.5 IR Advanced methods]]
 - [[#4.1 Data analytics|4.1 Data analytics]]
-
-![[Pasted image 20241001104947.png]]
+- [[#4.2 Data Warehouse|4.2 Data Warehouse]]
+- [[#4.3 Data Mining|4.3 Data Mining]]
 
 # Theory
 
@@ -26,7 +26,7 @@ i studied here anyway (Italian notes)
 
 # Summaries
 
-## 1 - Intro Models
+## 1 Intro Models
 
 Relational → structured (basically)
 
@@ -53,7 +53,7 @@ Queries can’t manipulate data, but can retrieve them ordered by relevance
 - XML is the primary format
 - many query can’t be written in SQL without compromises (recursion, slowness)
 
-## 2 - Intro XML
+## 2 Intro XML
 
 ==eXtensible Markup Language==, comes from ==SGML== (Standard Generalized Markup Language)
 
@@ -71,7 +71,7 @@ XML Structure:
     - attributes can’t have the same attribute more than once
     - data must be within the enclosed tag
 
-## 2.2 - SQL/XML | Relational Data and XML
+## 2.2 SQL/XML | Relational Data and XML
 
 XML is used to exchange data between apps and represent structured data.
 
@@ -112,7 +112,7 @@ SQL/XML is a bridge for archiving locally these data in a relational manner
         The result gets calculated considering the SQL, making a SELECT * and then building the requested attributes 1 by 1.
         
 
-## 2.3 - XQuery | XQuery language
+## 2.3 XQuery | XQuery language
 
 XQuery <u>can be used to acces s XML</u> expressed data and has XSLT functions (e**X**tensible **S**tylesheet **L**anguage **T**ransformations).
 
@@ -1021,23 +1021,46 @@ MultiDim visualizes data in a $n$-dimensional space, a cube composed by **dimens
 
 	**Hierarchies** -> can visualize data at different granularity levels. we can define mappings for the granularity levels, as well as a schema of a dimension 
 
-==OLAP Queries for cubes==
-**Roll-up** -> going to a higher level (specific to general)
-**Drill-down** -> going to more specific levels (general to specific)
-In SQL, you access levels like so:
-```SQL
-SELECT SUM(F.vendite)
-FROM Time T JOIN Fatto F
-GROUP BY T.year <----
-WHERE T.year = 2018
-```
-**Pivot** -> rotation of the cube, basically changing the group by
-![[Pasted image 20241008232407.png]]
-**Slice** -> just a WHERE statement
-![[Pasted image 20241008232522.png]]
-![[Pasted image 20241008232533.png]]
+- ==OLAP Queries for cubes (kinda useless)==
+	**Roll-up** -> going to a higher level (specific to general)
+	**Drill-down** -> going to more specific levels (general to specific)
+	In SQL, you access levels like so:
+	```SQL
+	SELECT SUM(F.vendite)
+	FROM Time T JOIN Fatto F
+	GROUP BY T.year <----
+	WHERE T.year = 2018
+	```
+	**Pivot** -> rotation of the cube, basically changing the group by
+	![[Pasted image 20241008232407.png|500]]
+	**Slice** -> just a WHERE statement
+	![[Pasted image 20241008232522.png|450]]
+	![[Pasted image 20241008232533.png|450]]
+	**Dice** -> selecting more than 1 slice, literally an AND/OR in the WHERE
+	![[Pasted image 20241008232726.png|450]]
+	
+## 4.3 Data Mining
+**Data mining** -> computing process of discovering patterns in large data sets involving methods at the intersection of machine learning, statistics and db systems 
+![[Pasted image 20241008233225.png|400]]
+**Patterns** -> regularities, patterns (eg. house prices are roughly 2500€ per $m^2$, buying cereals and buying milk)
+**Knowledge** -> understanding the logic behind the patterns. to get knowledge we need big data and different observations on homogeneous data
+- Data extraction steps
+	- Problem definition
+	- Identify required data
+	- Pre-elaboration -> clean the data so that can be input to a ML algorythm
+	- Hypothesis modulation
+	- Training and testing
+	- Verify and distribute
 
-p50
+==Machine Learning==
+- Does the abstraction from data to patterns.
+- Non linear interactions are hard to spot
+- Manual codification of some algorithms can be hard
+- (almost) never 100% accurate
+**Supervisioned techniques** -> 
+
+
+p53
 
   
 
