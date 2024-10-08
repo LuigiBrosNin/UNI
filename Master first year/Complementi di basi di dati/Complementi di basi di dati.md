@@ -1005,7 +1005,9 @@ a ==Frontend== has
 ==Multidimensional model (MultiDim)==
 MultiDim visualizes data in a $n$-dimensional space, a cube composed by **dimensions** (**perspectives** of data analysis) and **facts**
 - Example
-	Dimensions -> Client, Time, Product
+	**Dimensions** -> Client, Time, Product. Dimensions are described by attributes.
+	**Facts** -> Sales. every cell of the cube is the no. of units sold per category, time unit and a client's city
+	Measures -> Quantities. 
 
 
 p48

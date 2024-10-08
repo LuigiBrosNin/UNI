@@ -1,4 +1,4 @@
-[Virtuale]()
+[Virtuale](https://virtuale.unibo.it/course/view.php?id=66347)
 
 > Notes taken by Luizo ( [@LuigiBrosNin](https://t.me/LuigiBrosNin) on Telegram)
 
@@ -29,5 +29,5 @@ There are different measures to attest the efficiency of the model, one of them 
 ## Neural Networks
 
 ## 
-i'm following the lessons without notes, as there are some notes on CSUnibo i could study into, i might still do summaries and exam resources. as usual i recommend Cortigiano's notes (italian notes).
+i'm following the lessons without notes from now on, as there are some notes on CSUnibo i could study into, i might still do summaries and exam resources. as usual i recommend Cortigiano's notes (italian notes).
 
