@@ -1008,18 +1008,36 @@ MultiDim visualizes data in a $n$-dimensional space, a cube composed by **dimens
 	**Dimensions** -> Client, Time, Product. Dimensions are described by attributes.
 	**Facts** -> Sales. every cell of the cube is the no. of units sold per category, time unit and a client's city
 	**Measures** -> Quantities
-
+	- Additive -> summary trough addition (the most common one)
+	- Semi-additive -> summary trough addition of some dimensions (not all)
+	- Non-additive
+	- Distributive -> defined by an aggregation function that can be calculated in a distributive way
+	- Algebraic -> defined by an aggregation function that can be expressed as a scalar function way
+	- Holistic -> cannot be calculated by under aggregated data.
 	**Members** -> instances of a dimension
 	each cube of data contains different measures, a cube can be **sparse** or **dense** (since not all data could be present, eg. when there's no data at all)
 
 	**Data granularity** -> level of detail of measurements for each cube dimension (eg. Time: All - Year - Semester)
 
 	**Hierarchies** -> can visualize data at different granularity levels. we can define mappings for the granularity levels, as well as a schema of a dimension 
-	
 
+==OLAP Queries for cubes==
+**Roll-up** -> going to a higher level (specific to general)
+**Drill-down** -> going to more specific levels (general to specific)
+In SQL, you access levels like so:
+```SQL
+SELECT SUM(F.vendite)
+FROM Time T JOIN Fatto F
+GROUP BY T.year <----
+WHERE T.year = 2018
+```
+**Pivot** -> rotation of the cube, basically changing the group by
+![[Pasted image 20241008232407.png]]
+**Slice** -> just a WHERE statement
+![[Pasted image 20241008232522.png]]
+![[Pasted image 20241008232533.png]]
 
-
-p48
+p50
 
   
 
