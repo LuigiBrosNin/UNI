@@ -1010,6 +1010,11 @@ MultiDim visualizes data in a $n$-dimensional space, a cube composed by **dimens
 	Measures -> Quantities
 
 **Members** -> instances of a dimension
+each cube of data contains different measures, a cube can be **sparse** or **dense** (since not all data could be present, eg. when there's no data at all)
+
+**Data granularity** -> level of detail of measurements for each cube dimension
+
+**Hierarchies** -> can visualize data at different granularity levels
 
 
 
