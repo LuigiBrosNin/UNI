@@ -244,3 +244,4 @@ Create a new solver and save it as such
 > [Solution Source](https://github.com/MiniZinc/MiniZincIDE/issues/51)
 
 ### Assignment 1 -> N-Queens - Sequence Puzzle
+Dunno if i should publish everything... or what to publish
