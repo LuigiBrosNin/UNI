@@ -1007,14 +1007,15 @@ MultiDim visualizes data in a $n$-dimensional space, a cube composed by **dimens
 - Example
 	**Dimensions** -> Client, Time, Product. Dimensions are described by attributes.
 	**Facts** -> Sales. every cell of the cube is the no. of units sold per category, time unit and a client's city
-	Measures -> Quantities
+	**Measures** -> Quantities
 
-**Members** -> instances of a dimension
-each cube of data contains different measures, a cube can be **sparse** or **dense** (since not all data could be present, eg. when there's no data at all)
+	**Members** -> instances of a dimension
+	each cube of data contains different measures, a cube can be **sparse** or **dense** (since not all data could be present, eg. when there's no data at all)
 
-**Data granularity** -> level of detail of measurements for each cube dimension
+	**Data granularity** -> level of detail of measurements for each cube dimension (eg. Time: All - Year - Semester)
 
-**Hierarchies** -> can visualize data at different granularity levels
+	**Hierarchies** -> can visualize data at different granularity levels. we can define mappings for the granularity levels, as well as a schema of a dimension 
+	
 
 
 
