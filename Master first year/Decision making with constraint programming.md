@@ -229,7 +229,8 @@ Channeling Constraints
 	![[Pasted image 20241009162910.png|450]]
 	![[Pasted image 20241009163021.png|450]]
 
-==Local Consistency== -> a form of inference which <u>detects inconsistent partial assignments</u>, local because we examine individual constraints
+==Local Consistency==
+-> a form of inference which <u>detects inconsistent partial assignments</u>, local because we examine individual constraints
 
 Popular local consistencies are domain-based
 - **Generalized Arc Consistency** (GAC, Hyper-arc or domain consistency)
@@ -275,9 +276,40 @@ Level of consistency depends on C
 Properties of Propagation Algorithms
 - may not be enough to remove inconsistent values from domains once
 - the algorithm must wake up again when necessary
-==Complexity of propagation algorithms==
-Assume $|D(X_i)|=d$
-loca
+
+Complexity of propagation algorithms
+- Assume $|D(X_i)|=d$
+- local consistency property -> $C(X_1,X_2)$ takes $O(d^2)$ time
+- (we can do better)
+- Examples
+	- C: $X_1 = X_2$
+		- $D(X_1) = D(X_2) = D(X_1) ∩ D(X_2)$
+		- Complexity: the cost of the set intersection operation
+	- C: $X1 ≠ X2$
+		- When $D(X_i) = \{v\}$, remove v from $D(X_j)$.
+		- Complexity: $O(1)$
+	- C: $X_1 ≤ X_2$
+		- $max(X_1) ≤ max(X_2), min(X_1) ≤ min(X_2)$
+		- Complexity: $O(1)$
+
+==Specialized Propagation==
+-> Propagation specific to a given constraint
+- ✅ exploits the constraint semantics
+- ✅ potentially much more efficient than a general propagation approach
+- ❌ Limited use
+- ❌ Not always easy to develop one, worth for recurring constraints tho.
+
+- Example
+	![[Pasted image 20241009174147.png]]
+
+==Global Constraints==
+-> captures common <u>complex</u>, <u>non-binary</u> and <u>recurring combinatorial substructures</u>
+embed specialized propagation which exploits the substructure B)
+
+Basically common and known constraints have been cataloged to already have specialized propagation for our needs B)))
+
+
+
 
 
 ##
