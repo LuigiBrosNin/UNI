@@ -473,6 +473,16 @@ Thus we must have $1−2q = 2q−1,$ or $q = 1/2$ for the game to be in a nash e
 ==Penality kick game==
 Goalie and Kicker player, they have to decide whenever to Dive/Kick respectively Left/Right
 ![[Pasted image 20241009145700.png]]
+This game is asymmetric
+To make the kicker **indifferent**, the goalie must pick $p$ such that <u>payoff from kicking left = payoff from kicking right</u>
+$$(0.58)( p) + (0.95)(1−p) = (0.93)( p) + (0.7)(1−p)$$
+resulting in $p=0.417$
+
+
+
+## Adaptation, Evolution, Genetic algorithms
+
+
 
 
 
