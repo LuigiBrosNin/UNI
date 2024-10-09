@@ -379,7 +379,7 @@ Minor adjustments locally lead to global synchrony that emerges in a decentraliz
 	- Method `SelectPeer()`: (small) set of random neighbors
 	- Method `Update()`: Function to reset the local oscillator based on the phase of arriving flash
 	![[Pasted image 20241003144556.png]]
-	:LiArrowBigUp: sync algorythm
+	:LiArrowBigUp: sync algorithm
 	![[Pasted image 20241003144732.png]]
 	:LiArrowBigUp: Convergence of periods
 	![[Pasted image 20241003144815.png]]

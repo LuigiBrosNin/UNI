@@ -262,6 +262,22 @@ $$C(X_1,X_2,X_3) = \{(0,2,2), (1,1,2), (1,2,3)\}$$
 
 ==Constraint Propagation==
 **Propagation algorithm** -> achieves a certain level of consistency on a constraint C by removing the inconsistent values from the domains of the variables in C.
+Level of consistency depends on C
+
+- **constraint propagation** process ->
+	When there are multiple constraints:
+	- propagation algorithms interact;
+	- a propagation algorithm can wake up an already propagated constraint to be propagated again
+	- in the end, propagation reaches a fixed-point and all constraints reach a level of consistency
+- Example
+	![[Pasted image 20241009172641.png]]
+
+Properties of Propagation Algorithms
+- may not be enough to remove inconsistent values from domains once
+- the algorithm must wake up again when necessary
+==Complexity of propagation algorithms==
+Assume $|D(X_i)|=d$
+loca
 
 
 ##
@@ -289,7 +305,8 @@ Create a new solver and save it as such
 
 ## Assignment 1 -> N-Queens - Sequence Puzzle
 Dunno if i should publish everything... or what to publish
-Slide 8 of Class Exercises 1-2 is outdated
+
+⚠ Slide 8 of Class Exercises 1-2 is outdated
 [MinZinc 2.7.6](https://docs.minizinc.dev/en/stable/efficient.html#symmetry) is the updated chapter to look at
 alternatively, use the `var_sqr_sym(B)`, which does exactly the permutation we need
 
