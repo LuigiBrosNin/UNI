@@ -451,7 +451,23 @@ expect players to use strategies that are best responses to each other, no playe
 Players have an incentive to adopt the same behavior (eg. units of measure, metric vs imperial 💩)
 **Balanced game** -> equal payoffs $a=b$
 **Unbalanced game** -> $a \ne b$
-Multiple equilibria
+**Multiple equilibria** ->
+	![[Pasted image 20241009142548.png]]
+
+==Mixed strategy games==
+No Nash equilibria when restricted to pure strategy (eg. randomness)
+- Strategy becomes choosing a probability with which to play H
+- Strategy $p$ for Player 1: play H with probability $p$, play T with probability $(1−p)$
+- Strategy $q$ for Player 2: play H with probability $q$, play T with probability $(1−q)$
+Payoffs for these mixed strategy games become random quantities
+- Suppose Player 1 chooses pure strategy H while Player 2 chooses probability $q$ for playing H
+- Expected payoff to Player 1 is $(−1)q+(1)(1−q)=1−2q$
+- Suppose Player 1 chooses pure strategy T while Player 2 chooses probability $q$ for playing H
+- Expected payoff to Player 1 is $(1)q+(−1)(1−q)=2q−1$
+
+==Equilibrium with mixed strategies==
+**Nash equilibrium** for a mixed strategy game -> pair of strategies (now probabilities) such that each is a best response to the other
+
 
 ##
 ##
