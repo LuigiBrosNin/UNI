@@ -229,10 +229,25 @@ Channeling Constraints
 	![[Pasted image 20241009162910.png|450]]
 	![[Pasted image 20241009163021.png|450]]
 
-==Local Consistency==
+==Local Consistency== -> a form of inference which <u>detects inconsistent partial assignments</u>, local because we examine individual constraints
 
-- Generalized Arc Consistency (GAC)
+Popular local consistencies are domain-based
+- Generalized Arc Consistency (GAC, Hyper-arc or domain consistency)
 - Bounds Consistency (BC)
+	They detect inconsistent partial assignments of the form $X_{i}=j$ , so $j$ can be removed from $D(X_i)$ via propagation
+
+==GAC==
+A constraint $C$ defined on $k$ variables $C(X_1,…, X_k)$ gives the set of allowed combinations of values (i.e. allowed tuples).
+- $C \subseteq D(X_1) x … x D(X_k)$
+- E.g., $D(X_1) = \{0,1\},\ D(X_2) = \{1,2\},\ D(X_3) = \{2,3\}\ C_1: X_1 + X_2 = X_3$
+$$C(X_1,X_2,X_3) = \{(0,2,2), (1,1,2), (1,2,3)\}$$
+:LiArrowBigUp: This constraint basically defines all possible combinations that don't break the $C_1$ constraint
+Each allowed tuple $(d_1,…,d_k) ∈ C$ where $d_i ∈ X_i$ is a **support** for $C$
+
+
+**C is GAC** $\iff \forall X_{i} \in \{X_1,...X_k\},\forall v\in D(X_{i})$ , $v$ belongs to a support for C 
+**CSP is GAC** $\iff$ all C are GAC
+
 
 ##
 ---
