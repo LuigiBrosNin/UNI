@@ -2,9 +2,9 @@
 
 > Notes taken by Luizo ( [@LuigiBrosNin](https://t.me/LuigiBrosNin) on Telegram)
 
-## Theory
+# Theory
 
-### Intro
+## Intro
 
 Weaver's 3 classes of problems:
 - Problems of simplicity -> few variables with well known relations (eg. $F=ma$)
@@ -64,7 +64,7 @@ Complex systems key concepts
 
 The method of complex system is the scientific one
 
-### Dynamical Systems and Non-Linear Dynamics
+## Dynamical Systems and Non-Linear Dynamics
 
 - ==Dynamics== ->Study of how systems change over time, eg:
 	- Planetary dynamics — motion of planets and other celestial bodies
@@ -217,7 +217,7 @@ one iteration always "consumes" 1 bit, and knowing this we can study the long te
 > The Logistic Map at chaos can be turned into a “random bit generator"
 $$ x_{i}\le 0.5 \implies 0 \qquad x_{i}> 0.5 \implies 1$$
 
-### Models and Cellular automata
+## Models and Cellular automata
 Models are abstractions of reality that serve two purposes
 - Explain past behaviors
 - Predict future/unobservable behaviors
@@ -290,7 +290,7 @@ Yet, CAs have been used to perform special-purpose, practical parallel
 computations such as image processing
 
 
-### Agent-Based Models
+## Agent-Based Models
 
 Agent-based models allow us to consider richer environments with greater fidelity than equation-based models and explore a larger set of questions
 Characteristics:
@@ -403,7 +403,7 @@ Examples -> Drones flying in formation, Satellites in orbit
 	![[Pasted image 20241003150921.png]]
 	:LiArrowBigUp: ending formation of Ring formation
 
-### Game theory
+## Game theory / Cooperation and Competition
 
 - Agents need to choose among several options
 - The outcome of agent decisions (actions) depends on the choices made by other agents they are interacting with
@@ -412,6 +412,11 @@ Examples -> Drones flying in formation, Satellites in orbit
 	- choosing a route in a data network
 	- choosing a stance in international relations
 	- deciding to resort to doping or not
-Want to study notions like “cooperation” in a world where agents are in perpetual
-competition
-
+- Want to study notions like “**cooperation**” in a world where agents are in perpetual competition
+==Game ingredients==
+- Players -> set of participants
+- Strategies -> set of options for behavior
+- Payoff -> results for each choice of strategies
+- Payoff matrix -> summarization of payoffs
+##
+##

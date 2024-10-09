@@ -7,7 +7,7 @@
 	group of 1->4 people, ideally 3, but they're flexible
 	discussion is about the project mainly, and important theory stuff, but not much in depth
 
-# Teoria
+# Theory
 ## Intro
 > [!note] Artificial Intelligence Definitions (informal)
 > 1. Turing's imitation game test
@@ -92,12 +92,15 @@ Node -> data structure constituting part of a search tree
 - Depth-first search
 - Depth-limited search
 - Iterative deepening search
-![[Pasted image 20241009111202.png]]
-Completeness -> finds solution if one exists
-Time complexity -> number of nodes generated/expanded
-Space complexity -> max number of nodes in memory
-Optimality -> always least-cost solution?
+![[Pasted image 20241009111202.png|600]]
+**Completeness** -> finds solution if one exists
+**Time complexity** -> number of nodes generated/expanded
+**Space complexity** -> max number of nodes in memory
+**Optimality** -> always least-cost solution?
+$b$ -> max branching factor
+$d$ -> depth of the least-cost solution
+$m$ -> max depth of state space (can be $\infty$)
+⚠ Failure to detect **repeated states** can turn a linear problem into an exponential one
 
-
-
+##
 ##
