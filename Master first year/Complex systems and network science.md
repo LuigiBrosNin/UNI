@@ -417,6 +417,20 @@ Examples -> Drones flying in formation, Satellites in orbit
 - Players -> set of participants
 - Strategies -> set of options for behavior
 - Payoff -> results for each choice of strategies
-- Payoff matrix -> summarization of payoffs
+- Payoff matrix -> summarized payoffs
+	![[Pasted image 20241009113516.png]]
+	studying for project or exam
+
+**Rational players** -> maximize their own payoff given her beliefs about the strategies used by other players
+**Strictly Dominant Strategy** -> strategy that is the best choice regardless what the other player does
+![[Pasted image 20241009113908.png]]
+Generic two-player dilemma game
+- **R** -> **reward** for mutual cooperation
+- **S** -> **sucker’s payoff**
+- **T** -> **temptation** to defect 
+- **P** -> **punishment** for mutual defection
+**Dilemma** -> Each player wants the other to cooperate but both are tempted to defect
+
+
 ##
 ##
