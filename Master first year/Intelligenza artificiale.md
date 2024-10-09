@@ -61,8 +61,9 @@ $$f : P^∗ → A$$
 - Learning agents (feedback -> changes -> knowledge -> learning goals)
 	![[Pasted image 20241009100821.png|450]]
 ## Problem solving and search
-![[Pasted image 20241009101635.png]]
-:LiArrowBigUp: General formalization of an agent
+- General formalization of an agent
+	![[Pasted image 20241009101635.png]]
+
 ==Problem types==
 - Deterministic, fully observable ⇒ **single-state problem**
 - Non-observable ⇒ **conformant problem**
@@ -73,6 +74,30 @@ $$f : P^∗ → A$$
 - Successor function
 - Goal test
 - Path cost
+==State space== 
+Abstract state -> set of real states
+Abstract action -> complex combination of real actions
+Abstract solution -> set of real paths that are solutions irl
+
+==Tree-search algorythms== -> offline, simulated exploration of state space by generating successors of already-explored states
+	![[Pasted image 20241009110733.png]]
+
+==States v Nodes==
+State -> representation of a physical configuration
+Node -> data structure constituting part of a search tree
+
+==Uninformed search strategies== -> use only the information available in the problem definition
+- Breadth-first search
+- Uniform-cost search
+- Depth-first search
+- Depth-limited search
+- Iterative deepening search
+![[Pasted image 20241009111202.png]]
+Completeness -> finds solution if one exists
+Time complexity -> number of nodes generated/expanded
+Space complexity -> max number of nodes in memory
+Optimality -> always least-cost solution?
+
 
 
 ##
