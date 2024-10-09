@@ -481,9 +481,33 @@ resulting in $p=0.417$
 
 
 ## Adaptation, Evolution, Genetic algorithms
+Concept
+```
+Repeat
+	Generate a random feasible solution
+	Test the solution to evaluate its "goodness"
+Until (solution is good enough
+```
+usable if
+- only few possible solutions
+- enough time is given
 
+Better concept (GA)
+```
+Generate a set of random solutions
+Repeat
+	Test each solution in the set and rank them
+	Remove some bad solutions from set
+	Duplicate some good solutions
+	Make small changes to some of them
+Until (“best” solution is good enough)
+```
+GA's often encode solutions as fixed length "bit strings", each bit represents some aspect of the proposed solution
 
+We need to be able to "test" any string and get a "score" indicating how "good" a solution is
 
+==Fitness function, search space==
+**Fitness function** -> function that can generate a score for each solution based on a function that measures “how good” it is 
 
 
 ##
