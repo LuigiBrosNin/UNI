@@ -308,8 +308,20 @@ embed specialized propagation which exploits the substructure B)
 
 Basically common and known constraints have been cataloged to already have specialized propagation for our needs B)))
 
+Modelling benefits
+- Reduce the gap between the problem statement and the model.
+- Expression of constraints that are otherwise not possible to state using primitive constraints (<u>semantic</u>).
+Solving benefits
+- Strong inference in propagation (<u>operational</u>).
+- Efficient propagation (<u>algorithmic</u>).
+
+> It's a beautiful thing, the destruction of words
+> *G. Orwell, in 1984*
 
 
+
+
+## 
 
 
 ##
@@ -336,7 +348,7 @@ Create a new solver and save it as such
 > [Solution Source](https://github.com/MiniZinc/MiniZincIDE/issues/51)
 
 ## Assignment 1 -> N-Queens - Sequence Puzzle
-Dunno if i should publish everything... or what to publish
+Dunno if i should publish everything... or publishing anything at all
 
 ⚠ Slide 8 of Class Exercises 1-2 is outdated
 [MinZinc 2.7.6](https://docs.minizinc.dev/en/stable/efficient.html#symmetry) is the updated chapter to look at
