@@ -18,12 +18,10 @@
 
 POSSIBLE ONES 3/4
 
-nota: quelle che iniziano con B non sono ancora disponibili tra gli insegnamenti, li dovro’ vedere in futuro
-
 - [x] COMPLEX SYSTEMS **81943** (gestire sistemi complessi)
-- [x] LABORATORIO DI REALTA' VIRTUALE E REALTA' AUMENTATA 91721
-- [ ] DECISION MAKING WITH CONSTRAINT PROGRAMMING (AI e come applicarla)
-- [ ] **81676 - DIGITAL FORENSICS** (acquisizione dati, potrebbe essere interessante, ma non credo di farci qualcosa al di fuori di didattica personale)
+- [ ] LABORATORIO DI REALTA' VIRTUALE E REALTA' AUMENTATA 91721
+- [x] DECISION MAKING WITH CONSTRAINT PROGRAMMING (AI e come applicarla)
+- [x] **81676 - DIGITAL FORENSICS** (acquisizione dati, potrebbe essere interessante, ma non credo di farci qualcosa al di fuori di didattica personale)
 
 ---
 
@@ -35,7 +33,8 @@ nota: quelle che iniziano con B non sono ancora disponibili tra gli insegnamenti
 
   
 
-MATH 1/2
+MATH 2/2
 
 - [x] **70090 - COMPUTER GRAPHICS (TAKING IT, 3D MODELING <3<3<3)**
+- [x] Matematica probabilistica
 - [ ] COMPUTATIONAL IMAGING (appena lo mettono vedere com’e’

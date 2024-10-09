@@ -31,3 +31,42 @@ There are different measures to attest the efficiency of the model, one of them 
 ## 
 i'm following the lessons without notes from now on, as there are some notes on CSUnibo i could study into, i might still do summaries and exam resources. as usual i recommend Cortigiano's notes (italian notes).
 
+
+# Summaries
+
+## Intelligent agents
+**Agents function** (History -> Action)
+$$f : P^∗ → A$$
+**Rationality** -> choosing whichever action maximizes the expected value of the performance - <u>exploration, learning, autonomy</u> (not being successful) 
+**PEAS** -> Task environment
+- Performance measure 
+- Environment
+	- Observable
+	- Deterministic
+	- Episodic
+	- Static
+	- Discrete
+	- Single-Agent
+- Actuators -> possible low level actions
+- Sensors
+==Agent types==
+- Simple reflex agents (Condition -> Action)
+	![[Pasted image 20241009094201.png|450]]
+- Reflex agents with states (State -> condition -> action)
+	![[Pasted image 20241009094419.png|450]]
+- Goal-based agents (State -> prediction -> action)
+	![[Pasted image 20241009094552.png|450]]
+- Utility-based agents (State -> prediction -> maximize utility -> action)
+	![[Pasted image 20241009095530.png|450]]
+- Learning agents (feedback -> changes -> knowledge -> learning goals)
+	![[Pasted image 20241009100821.png|450]]
+## Problem solving and search
+![[Pasted image 20241009101635.png]]
+:LiArrowBigUp: General formalization of an agent
+==Problem types==
+- Deterministic, fully observable ⇒ **single-state problem**
+- Non-observable ⇒ **conformant problem**
+- Nondeterministic and/or partially observable ⇒ **contingency problem**
+- Unknown state space ⇒ **exploration problem (“online”)**
+
+##
