@@ -2,13 +2,20 @@
 
 > Notes taken by Luizo ( [@LuigiBrosNin](https://t.me/LuigiBrosNin) on Telegram)
 
-- [[#1 - Intro Models|1 - Intro Models]]
-- [[#2 - Intro XML|2 - Intro XML]]
-- [[#2.2 - SQL/XML | Relational Data and XML|2.2 - SQL/XML | Relational Data and XML]]
-- [[#2.3 - XQuery | XQuery language|2.3 - XQuery | XQuery language]]
-- [[#2.4 XQuery in DBMS | XQuery on DB2, Oracle and SQL Server|2.4 XQuery in DBMS | XQuery on DB2, Oracle and SQL Server]]
+
+
+# Theory
+
+[Appunti Francesco Cortigiano](https://risorse.students.cs.unibo.it/complementi-di-basi-di-dati/appunti/appunti-2022-francesco-corigliano.pdf?from=informatica-magistrale)
+i studied here anyway (Italian notes)
+
+- [[#1 Intro Models|1 Intro Models]]
+- [[#2 Intro XML|2 Intro XML]]
+- [[#2.2 SQL/XML - Relational Data and XML|2.2 SQL/XML - Relational Data and XML]]
+- [[#2.3 XQuery - XQuery language|2.3 XQuery - XQuery language]]
+- [[#2.4 XQuery in DBMS - XQuery on DB2, Oracle and SQL Server|2.4 XQuery in DBMS - XQuery on DB2, Oracle and SQL Server]]
 - [[#2.5 NoSQL|2.5 NoSQL]]
-- [[#3.1 IR | Information Retrieval|3.1 IR | Information Retrieval]]
+- [[#3.1 IR - Information Retrieval|3.1 IR - Information Retrieval]]
 - [[#3.2 Ranking|3.2 Ranking]]
 - [[#3.3 Web Information Retrieval|3.3 Web Information Retrieval]]
 - [[#3.4 IR Evaluation|3.4 IR Evaluation]]
@@ -16,16 +23,6 @@
 - [[#4.1 Data analytics|4.1 Data analytics]]
 - [[#4.2 Data Warehouse|4.2 Data Warehouse]]
 - [[#4.3 Data Mining|4.3 Data Mining]]
-
-# Theory
-
-(dunno if i will)
-
-[Appunti Francesco Cortigiano](https://risorse.students.cs.unibo.it/complementi-di-basi-di-dati/appunti/appunti-2022-francesco-corigliano.pdf?from=informatica-magistrale)
-i studied here anyway (Italian notes)
-
-# Summaries
-
 ## 1 Intro Models
 
 Relational → structured (basically)
@@ -71,7 +68,7 @@ XML Structure:
     - attributes can’t have the same attribute more than once
     - data must be within the enclosed tag
 
-## 2.2 SQL/XML | Relational Data and XML
+## 2.2 SQL/XML - Relational Data and XML
 
 XML is used to exchange data between apps and represent structured data.
 
@@ -112,7 +109,7 @@ SQL/XML is a bridge for archiving locally these data in a relational manner
         The result gets calculated considering the SQL, making a SELECT * and then building the requested attributes 1 by 1.
         
 
-## 2.3 XQuery | XQuery language
+## 2.3 XQuery - XQuery language
 
 XQuery <u>can be used to acces s XML</u> expressed data and has XSLT functions (e**X**tensible **S**tylesheet **L**anguage **T**ransformations).
 
@@ -279,7 +276,7 @@ Aggregated functions
 
 ![[Pasted image 20240918185029.png]]
 
-## 2.4 XQuery in DBMS | XQuery on DB2, Oracle and SQL Server
+## 2.4 XQuery in DBMS - XQuery on DB2, Oracle and SQL Server
 
 ==DB2==
 
@@ -486,7 +483,7 @@ pros:
 - transaction
 - ACID
 
-## 3.1 IR | Information Retrieval
+## 3.1 IR - Information Retrieval
 
 Means finding non structured material that satisfies an information need, usually about web search, social media, local laptop usage.
 
@@ -1063,6 +1060,7 @@ MultiDim visualizes data in a $n$-dimensional space, a cube composed by **dimens
 p53
 
   
+# Summaries
 
-  
 
+# Exam
