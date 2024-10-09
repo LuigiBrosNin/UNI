@@ -68,5 +68,11 @@ $$f : P^∗ → A$$
 - Non-observable ⇒ **conformant problem**
 - Nondeterministic and/or partially observable ⇒ **contingency problem**
 - Unknown state space ⇒ **exploration problem (“online”)**
+==Problem formulation==
+- Initial state
+- Successor function
+- Goal test
+- Path cost
+
 
 ##
