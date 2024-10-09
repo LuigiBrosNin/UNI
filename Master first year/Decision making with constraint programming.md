@@ -245,3 +245,6 @@ Create a new solver and save it as such
 
 ### Assignment 1 -> N-Queens - Sequence Puzzle
 Dunno if i should publish everything... or what to publish
+Slide 8 of Class Exercises 1-2 is outdated
+[MinZinc 2.7.6](https://docs.minizinc.dev/en/stable/efficient.html#symmetry) is the updated chapter to look at
+alternatively, use the all_sym_

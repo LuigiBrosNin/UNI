@@ -506,9 +506,19 @@ GA's often encode solutions as fixed length "bit strings", each bit represents s
 
 We need to be able to "test" any string and get a "score" indicating how "good" a solution is
 
-==Fitness function, search space==
+==Fitness function==
 **Fitness function** -> function that can generate a score for each solution based on a function that measures “how good” it is 
+- simple fitness function are one-dimensional $f(x)$
+- many dimensions can be searched, eg. 2 -> $f(x,y)$
+- point in space -> possible genotype
+- GA tries to move the points to higher fitness
+	![[Pasted image 20241009155443.png]]
+==Search space==
+- its nature dictates the performance of GA
+- GA can be stuck in local maxima
+- "smooth" spaces (small movements get closer to global optimum) are good
 
+==Adding Sex - Crossover 😏==
 
 ##
 ##
