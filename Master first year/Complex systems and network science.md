@@ -431,6 +431,27 @@ Generic two-player dilemma game
 - **P** -> **punishment** for mutual defection
 **Dilemma** -> Each player wants the other to cooperate but both are tempted to defect
 
+- ==Prisoner's dilemma example==
+	- Two robbery suspects apprehended by police, being interrogated in separate rooms
+	- There isn't enough evidence to convict either one, but each can be charged with a lesser crime (resisting arrest)
+	- Each suspect needs to decide unilaterally (no talking, collusion) whether to “Confess” (C) or “Deny” (D)
+	![[Pasted image 20241009140444.png]]
+	- Confession leads to higher individual payoff — selfishness
+	- Denial leads to higher global payoff — cooperation
+	
+	“Dilemma” because both prisoners would have been better off if both had chosen “Deny”
+	Captures the conflict between individual rationality (selfishness) and common good (cooperation)
+
+expect players to use strategies that are best responses to each other, no player will have an incentive to deviate to an alternative strategy
+:LiArrowBigDown:
+**Nash equilibrium** -> Pair of strategies $(S,T ), S$ for Player 1 and $T$ for Player 2, is a **Nash equilibrium** if $S$ is a best response to $T$ and $T$ is a best response to $S$
+
+==Coordination games==
+![[Pasted image 20241009141900.png]]
+Players have an incentive to adopt the same behavior (eg. units of measure, metric vs imperial 💩)
+**Balanced game** -> equal payoffs $a=b$
+**Unbalanced game** -> $a \ne b$
+Multiple equilibria
 
 ##
 ##
