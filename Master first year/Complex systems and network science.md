@@ -467,6 +467,13 @@ Payoffs for these mixed strategy games become random quantities
 
 ==Equilibrium with mixed strategies==
 **Nash equilibrium** for a mixed strategy game -> pair of strategies (now probabilities) such that each is a best response to the other
+Pure strategies cannot be part of any nash equilibrium, same with probabilities that make expectations unequal
+Thus we must have $1−2q = 2q−1,$ or $q = 1/2$ for the game to be in a nash equilibrium
+
+==Penality kick game==
+Goalie and Kicker player, they have to decide whenever to Dive/Kick respectively Left/Right
+![[Pasted image 20241009145700.png]]
+
 
 
 ##
