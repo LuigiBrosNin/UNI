@@ -519,6 +519,10 @@ We need to be able to "test" any string and get a "score" indicating how "good" 
 - "smooth" spaces (small movements get closer to global optimum) are good
 
 ==Adding Sex - Crossover 😏==
+previous GA concept had Asexual reproduction, but we can do better
+**Sexual reproduction** -> selecting 2 parents during reproduction and combining their genes to produce offspring, each offspring may then be changed randomly (mutation)
+
+slide 15
 
 ##
 ##

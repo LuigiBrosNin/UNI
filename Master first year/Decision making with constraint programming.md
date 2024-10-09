@@ -10,11 +10,11 @@ Exam notes
 	exercises uses MiniZinc
 
 
-## Theory
+# Theory
 
 This course reminds me a lot about Combinatorial Optimization, if you liked that, you'll like this. The prof seems really human and the exams seems chill.
 
-### Intro
+## Intro
 restrictions = constraints
 any solution -> meets all constraints
 optimal solution -> best solution according to an objective
@@ -50,7 +50,7 @@ What is constraint programmming?
 A constraint ==solver== finds a solution to the model (or prove that it doesn't exist) by assigning a value to every variable via a search algorithm.
 Practically, we'll tweak the search algorithm to find the solution we want.
 
-### Overview of CP
+## Overview of CP
 a ==Constraint solver== enumerates all possible variable-value combinations via a **systematic backtracking tree search**.
 During search, the solver removes incompatible values from the domains of the future (unexplored) variables, via **propagation**. 
 ![[Pasted image 20240925162827.png]]
@@ -71,7 +71,7 @@ For an efficient CP solving, we need:
 - a model with effectively propagating constraints;
 - effective search algorithm and heuristics.
 
-### MiniZinc basic syntax
+## MiniZinc basic syntax
 
 ![[Pasted image 20240925173418.png]]
 :LiArrowBigUp: Basic syntax, coloring problem :LiArrowBigUp:
@@ -82,7 +82,7 @@ Knapsack problem -> Given items, each with a weight and a value, determine which
 
 MinZinc comes with a cheat sheet under the "help" tab that looks really helpful :)
 
-### Modeling in CP
+## Modeling in CP
 User models a decision problem by formalizing:
 - **the unknowns** of the decision → ==decision variables== $(X_i)$.
 - **possible values** for unknowns → ==domains== $(D(X_i) = \{v_j\})$.
@@ -223,7 +223,21 @@ Constraints
 Channeling Constraints
 - $\forall i,j\ X_i = j Y_j = i$
 
-### MiniZinc Setup ⚠ IMPORTANT
+## Constraint Propagation & Global Constraints
+- Search decisions and propagation are interleaved, example:
+	![[Pasted image 20241009162811.png|450]]
+	![[Pasted image 20241009162910.png|450]]
+	![[Pasted image 20241009163021.png|450]]
+
+==Local Consistency==
+
+- Generalized Arc Consistency (GAC)
+- Bounds Consistency (BC)
+
+##
+---
+# Exercises
+## MiniZinc Setup ⚠ IMPORTANT
 Setup is quick and easy: all you need to do is modify a few parameters from the configuration editor (the solver)
 Set up like this to get the info needed to fill the assignments
 ![[Pasted image 20241007160142.png]]
@@ -243,8 +257,11 @@ Create a new solver and save it as such
 > 
 > [Solution Source](https://github.com/MiniZinc/MiniZincIDE/issues/51)
 
-### Assignment 1 -> N-Queens - Sequence Puzzle
+## Assignment 1 -> N-Queens - Sequence Puzzle
 Dunno if i should publish everything... or what to publish
 Slide 8 of Class Exercises 1-2 is outdated
 [MinZinc 2.7.6](https://docs.minizinc.dev/en/stable/efficient.html#symmetry) is the updated chapter to look at
-alternatively, use the all_sym_
+alternatively, use the `var_sqr_sym(B)`, which does exactly the permutation we need
+
+
+##
