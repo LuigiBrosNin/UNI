@@ -1073,12 +1073,21 @@ Supervised learning has to
 A pre-treatment is common since real world data is **incomplete, noisy and incoherent**
 Pre-elaboration phases
 - Cleaning
-	- Deduction of missing data
+	1. Deduction of missing data
+	2. Identify wrong data, level noise data
+	3. Correlate incoherent data
+	4. Solve redundancy
 - Integration
 - Transformation
 
+==Denoising data==
+**Binning** -> populating bins of similar data and leveling each bin locally (averaging out values for each bin so they're the same)
+**Linear regression** -> searching the best line that can adapt attributes to favor previsions.
+![[Pasted image 20241010172142.png]]
+**Clustering** -> similar values are grouped together, values outside of clusters are anomalies and get scrapped.
 
-p54
+
+p56
 
   
 # Summaries
