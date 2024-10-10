@@ -1064,6 +1064,19 @@ Supervised learning has to
 
 **Non-supervised techniques** -> no output value or no output, but there are fixed objectives to reach
 - **Clustering** -> divides examples in clusters, similar examples in same cluster
+- **Association rules** -> variable relations (eg. {onion, potato} -> {hamburger})
+- **Spotting anomalies** -> sus data gets sussed out
+- **Generative models** -> from examples they generate an instance with similar characteristics
+- **Characteristics extraction** -> reduces variables by generating new characterstics
+
+==Data pre-treatment==
+A pre-treatment is common since real world data is **incomplete, noisy and incoherent**
+Pre-elaboration phases
+- Cleaning
+	- Deduction of missing data
+- Integration
+- Transformation
+
 
 p54
 
