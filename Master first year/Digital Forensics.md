@@ -108,11 +108,23 @@ Tech changes, methods of hiding data or conducting criminal activities, we need 
 
 ==forensic workstation hardware==
 - RAM -> Them more the merrier
-- SSD drives -> size and number both matter
+- SSD drives -> size and number both matter, 5 disks for
+	- Operating system drive
+	- Evidence/data storage
+	- Database storage
+	- Processing drive storage
 - Processor -> i9 is the least
 - OS -> Windows, our only option B,)
 They're not cheap, software is expensive too
 
+**Response kit** -> equipment that contains everything you need to collect digital evidence
+- Digital camera, capable of still and video recording, removable card
+- Latex gloves
+- Notepads (digital / pen & paper)
+- Organizational paperwork (checklists)
+- Paper storage bags/antistatic bags
+- Storage media
+- Write blocking devices -> 
 
 ##
 
