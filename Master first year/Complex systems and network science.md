@@ -522,16 +522,16 @@ We need to be able to "test" any string and get a "score" indicating how "good" 
 previous GA concept had Asexual reproduction, but we can do better
 **Sexual reproduction** -> selecting 2 parents during reproduction and combining their genes to produce offspring, each offspring may then be changed randomly (mutation)
 - "Roulette Wheel" selection is often used
-	![[Pasted image 20241010142524.png|400]]
+	![[Pasted image 20241010142524.png]]
 	![[Pasted image 20241010142725.png]]
 	- width of each edge is proportional to the score of the chromosome 
-	![[Pasted image 20241010142822.png|350]]
+	![[Pasted image 20241010142822.png]]
 	![[Pasted image 20241010142948.png|250]]
 	Parent 1 -> chromosome 6
 	Parent 2 -> chromosome 2
 	With some small probability called the mutation rate (typical values between 0.1 and 0.001) flip some bit in the offspring
-	![[Pasted image 20241010143144.png|450]]
-	![[Pasted image 20241010143206.png|450]]
+	![[Pasted image 20241010143144.png]]
+	![[Pasted image 20241010143206.png]]
 
 ```
 Generate a population of random chromosomes
@@ -544,20 +544,32 @@ Repeat (generation)
 Until (best solution is good enough)
 ```
 
-==GA Algorithm variants==
-Different selections
-- Tournament
-- Elitism
-- etc
-Different recombination
-* Multi point crossover
-* 3 way crossover
+- ==GA Algorithm variants==
+	Different selections
+	- Tournament
+	- Elitism
+	- etc
+	Different recombination
+	* Multi point crossover
+	* 3 way crossover
+	* etc
+	Different encodings
+	- integer values
+	- ordered set of symbols
+	Different mutations
+
+- ==GA parameters==
+	- $N$ -> population size
+	- $m$ -> mutation rate
+	- $c$ -> crossover rate
+	need to be tuned
+	Some common values: $N = 50,\ m = 0.05,\ c = 0.9$
 
 > [!Warning] slide 24 - 40 missing
 
 ==Evolutionary game theory==
 2 beetles competing for food
-![[Pasted image 20241010140304.png|300]]
+![[Pasted image 20241010140304.png]]
 Beetles do not choose a size (=strategy), they're hard-wired to choose one strategy (the one they're born with)
 
 Nash Equilibrium -> replaced by  **evolutionary stable strategy**, a genetically-determined strategy that tends to persist once it becomes prevalent.

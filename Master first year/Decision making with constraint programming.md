@@ -225,9 +225,9 @@ Channeling Constraints
 
 ## Constraint Propagation & Global Constraints
 - Search decisions and propagation are interleaved, example:
-	![[Pasted image 20241009162811.png|450]]
-	![[Pasted image 20241009162910.png|450]]
-	![[Pasted image 20241009163021.png|450]]
+	![[Pasted image 20241009162811.png]]
+	![[Pasted image 20241009162910.png]]
+	![[Pasted image 20241009163021.png]]
 
 ==Local Consistency==
 -> a form of inference which <u>detects inconsistent partial assignments</u>, local because we examine individual constraints
@@ -256,10 +256,10 @@ $$C(X_1,X_2,X_3) = \{(0,2,2), (1,1,2), (1,2,3)\}$$
 
 - Examples
 	- GAC = BC
-		![[Pasted image 20241009165722.png|500]]
+		![[Pasted image 20241009165722.png]]
 	- GAC > BC
-		![[Pasted image 20241009165822.png|500]]
-		![[Pasted image 20241009170000.png|500]]
+		![[Pasted image 20241009165822.png]]
+		![[Pasted image 20241009170000.png]]
 
 ==Constraint Propagation==
 **Propagation algorithm** -> achieves a certain level of consistency on a constraint C by removing the inconsistent values from the domains of the variables in C.
