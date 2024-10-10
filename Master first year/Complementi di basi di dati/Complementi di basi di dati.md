@@ -1054,10 +1054,18 @@ MultiDim visualizes data in a $n$-dimensional space, a cube composed by **dimens
 - Non linear interactions are hard to spot
 - Manual codification of some algorithms can be hard
 - (almost) never 100% accurate
-**Supervisioned techniques** -> 
+**Supervised techniques** -> we use a "training set" of data with a variable that is the "solution", acting as output examples
 
+Supervised learning has to
+- **Regression** (if output is a numerical value) -> easy to calculate accuracy or error
+- **Classification** (if output is a class) ->
+	- Binary classification (cat / not cat)
+	+ Multi class classification -> classes are a finite set of outputs
 
-p53
+**Non-supervised techniques** -> no output value or no output, but there are fixed objectives to reach
+- **Clustering** -> divides examples in clusters, similar examples in same cluster
+
+p54
 
   
 # Summaries

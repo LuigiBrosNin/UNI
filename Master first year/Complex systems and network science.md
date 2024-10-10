@@ -565,11 +565,13 @@ Until (best solution is good enough)
 	need to be tuned
 	Some common values: $N = 50,\ m = 0.05,\ c = 0.9$
 
-
-
-> [!Warning] slide 28 - 40 missing
+(i skipped the iterated prisoner's dilemma part, you can watch [this](https://www.youtube.com/watch?v=emyi4z-O0ls) to get the jist)
 
 ==Evolutionary game theory==
+Basic idea of evolutionary game theory is that the fitness of an individual cannot be measured in isolation but has to be evaluated in the context of the full population in which it lives.
+An organism’s characteristics and behaviors (determined by its genes) are like its strategy in a game.
+Its fitness is its payoff and this payoff depends on the strategies (characteristics, behaviors) of the organisms with which it interacts.
+
 2 beetles competing for food
 ![[Pasted image 20241010140304.png]]
 Beetles do not choose a size (=strategy), they're hard-wired to choose one strategy (the one they're born with)
@@ -606,6 +608,10 @@ Natural selection increases the fitness of individual organisms in a *fixed* env
 - Dynamics -> how the "shape" changes over time
 
 **Network** -> Abstract mathematical construct representing relations that exist between pairs of objects 
+Networks can represent any binary relationship over objects, both can be physical or virtual
+A network is defined by the list of objects and the relations that exist over
+objects, not by its visualization
+
 
 ##
 ##
