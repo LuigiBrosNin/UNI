@@ -6,7 +6,7 @@
 
 # Theory
 
-[Appunti Francesco Cortigiano](https://risorse.students.cs.unibo.it/complementi-di-basi-di-dati/appunti/appunti-2022-francesco-corigliano.pdf?from=informatica-magistrale)
+[Appunti Francesco Corigliano](https://risorse.students.cs.unibo.it/complementi-di-basi-di-dati/appunti/appunti-2022-francesco-corigliano.pdf?from=informatica-magistrale)
 i studied here anyway (Italian notes)
 
 - [[#1 Intro Models|1 Intro Models]]

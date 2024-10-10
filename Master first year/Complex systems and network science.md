@@ -533,8 +533,27 @@ previous GA concept had Asexual reproduction, but we can do better
 	![[Pasted image 20241010143144.png|450]]
 	![[Pasted image 20241010143206.png|450]]
 
+```
+Generate a population of random chromosomes
+Repeat (generation)
+	Calculate fitness of each chromosome
+	Repeat
+		Select pairs of parents with roulette selection
+		Generate offsprings with crossover and mutation
+	Until (a new population has been produced)
+Until (best solution is good enough)
+```
 
-> [!Warning] slide 19 - 40 missing
+==GA Algorithm variants==
+Different selections
+- Tournament
+- Elitism
+- etc
+Different recombination
+* Multi point crossover
+* 3 way crossover
+
+> [!Warning] slide 24 - 40 missing
 
 ==Evolutionary game theory==
 2 beetles competing for food
