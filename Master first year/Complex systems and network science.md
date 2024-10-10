@@ -521,6 +521,19 @@ We need to be able to "test" any string and get a "score" indicating how "good" 
 ==Adding Sex - Crossover 😏==
 previous GA concept had Asexual reproduction, but we can do better
 **Sexual reproduction** -> selecting 2 parents during reproduction and combining their genes to produce offspring, each offspring may then be changed randomly (mutation)
+- "Roulette Wheel" selection is often used
+	![[Pasted image 20241010142524.png|400]]
+	![[Pasted image 20241010142725.png]]
+	- width of each edge is proportional to the score of the chromosome 
+	![[Pasted image 20241010142822.png|350]]
+	![[Pasted image 20241010142948.png|250]]
+	Parent 1 -> chromosome 6
+	Parent 2 -> chromosome 2
+	With some small probability called the mutation rate (typical values between 0.1
+and 0.001) flip some bit in the offspring
+
+
+
 
 > [!Warning] slide 15 - 40 missing
 
@@ -533,7 +546,12 @@ Beetles do not choose a size (=strategy), they're hard-wired to choose one strat
 Nash Equilibrium -> replaced by  **evolutionary stable strategy**, a genetically-determined strategy that tends to persist once it becomes prevalent.
 **Fitness of an organism in a population** -> payoff it receives from an interaction with a random number
 
-strategy $T$ **invades** strategy $S$ at level $x$ (for some small positive number $x$) ->
+Strategy $T$ **invades** strategy $S$ at level $x$ (for some small positive number $x$) $\implies$ a fraction of $x$ of the underlying population uses $T$ and a fraction $1-x$ of the underlying population uses $S$
+
+Strategy $S$ is **evolutinarily stable** $\implies$ there's a small positive number $y$ such that when any other strategy $T$ invades $S$ at any level $x<y$, the fitness of an organism playing $S$ is strictly greater than the fitness of an organism playing $T$ (simple words: $S$ is the generally optimal "choice" in the sphere of that system i suppose)
+
+$\Phi(X)$ -> payoff of strategy $X$
+
 
 ##
 ##
