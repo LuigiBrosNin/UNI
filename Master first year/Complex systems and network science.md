@@ -522,7 +522,18 @@ We need to be able to "test" any string and get a "score" indicating how "good" 
 previous GA concept had Asexual reproduction, but we can do better
 **Sexual reproduction** -> selecting 2 parents during reproduction and combining their genes to produce offspring, each offspring may then be changed randomly (mutation)
 
-slide 15
+> [!Warning] slide 15 - 40 missing
+
+==Evolutionary game theory==
+
+2 beetles competing for food
+![[Pasted image 20241010140304.png|300]]
+Beetles do not choose a size (=strategy), they're hard-wired to choose one strategy (the one they're born with)
+
+Nash Equilibrium -> replaced by  **evolutionary stable strategy**, a genetically-determined strategy that tends to persist once it becomes prevalent.
+**Fitness of an organism in a population** -> payoff it receives from an interaction with a random number
+
+strategy $T$ **invades** strategy $S$ at level $x$ (for some small positive number $x$) ->
 
 ##
 ##
