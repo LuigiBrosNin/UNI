@@ -529,16 +529,17 @@ previous GA concept had Asexual reproduction, but we can do better
 	![[Pasted image 20241010142948.png|250]]
 	Parent 1 -> chromosome 6
 	Parent 2 -> chromosome 2
-	With some small probability called the mutation rate (typical values between 0.1
-and 0.001) flip some bit in the offspring
+	With some small probability called the mutation rate (typical values between 0.1 and 0.001) flip some bit in the offspring
+	![[Pasted image 20241010143144.png|450]]
+	![[Pasted image 20241010143206.png|450]]
+	
 
 
 
 
-> [!Warning] slide 15 - 40 missing
+> [!Warning] slide 19 - 40 missing
 
 ==Evolutionary game theory==
-
 2 beetles competing for food
 ![[Pasted image 20241010140304.png|300]]
 Beetles do not choose a size (=strategy), they're hard-wired to choose one strategy (the one they're born with)
@@ -551,6 +552,28 @@ Strategy $T$ **invades** strategy $S$ at level $x$ (for some small positive numb
 Strategy $S$ is **evolutinarily stable** $\implies$ there's a small positive number $y$ such that when any other strategy $T$ invades $S$ at any level $x<y$, the fitness of an organism playing $S$ is strictly greater than the fitness of an organism playing $T$ (simple words: $S$ is the generally optimal "choice" in the sphere of that system i suppose)
 
 $\Phi(X)$ -> payoff of strategy $X$
+
+- Beetle fight for food example
+	Large invades Small
+	payoff for Small
+	$$\Phi(S) = 5(1−x) + 1⋅x = 5−4x$$
+	payoff for large
+	$$\Phi(L) = 8(1−x) + 3⋅x = 8−5x$$
+	$$(\Phi(L)>\Phi(S))$$
+	$S$ in not evolutionary stable
+
+Natural selection increases the fitness of individual organisms in a *fixed* environment, when the environment changes to become more hostile to organisms, their fitness could decrease (we see it happen in nature obv)
+
+## Network Science Introduction
+**Network science** -> study of networks, interdisciplinary study based on mathematics blending ideas from many other fields (Physics, CS, Sociology, etc.)
+
+2 perspectives
+- Theoretical
+- Experimental -> available with data availability
+
+2 aspects
+- Structure -> "shape" of a network (connections)
+- Dynamics -> how the "shape" changes over time
 
 
 ##
