@@ -532,9 +532,6 @@ previous GA concept had Asexual reproduction, but we can do better
 	With some small probability called the mutation rate (typical values between 0.1 and 0.001) flip some bit in the offspring
 	![[Pasted image 20241010143144.png|450]]
 	![[Pasted image 20241010143206.png|450]]
-	
-
-
 
 
 > [!Warning] slide 19 - 40 missing
@@ -549,7 +546,7 @@ Nash Equilibrium -> replaced by  **evolutionary stable strategy**, a genetically
 
 Strategy $T$ **invades** strategy $S$ at level $x$ (for some small positive number $x$) $\implies$ a fraction of $x$ of the underlying population uses $T$ and a fraction $1-x$ of the underlying population uses $S$
 
-Strategy $S$ is **evolutinarily stable** $\implies$ there's a small positive number $y$ such that when any other strategy $T$ invades $S$ at any level $x<y$, the fitness of an organism playing $S$ is strictly greater than the fitness of an organism playing $T$ (simple words: $S$ is the generally optimal "choice" in the sphere of that system i suppose)
+Strategy $S$ is **evolutionary stable** $\implies$ there's a small positive number $y$ such that when any other strategy $T$ invades $S$ at any level $x<y$, the fitness of an organism playing $S$ is strictly greater than the fitness of an organism playing $T$ (simple words: $S$ is the generally optimal "choice" in the sphere of that system i suppose)
 
 $\Phi(X)$ -> payoff of strategy $X$
 
@@ -572,9 +569,10 @@ Natural selection increases the fitness of individual organisms in a *fixed* env
 - Experimental -> available with data availability
 
 2 aspects
-- Structure -> "shape" of a network (connections)
+- Structure -> "shape" of a network (relations)
 - Dynamics -> how the "shape" changes over time
 
+**Network** -> Abstract mathematical construct representing relations that exist between pairs of objects 
 
 ##
 ##
