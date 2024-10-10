@@ -124,7 +124,21 @@ They're not cheap, software is expensive too
 - Organizational paperwork (checklists)
 - Paper storage bags/antistatic bags
 - Storage media
-- Write blocking devices -> 
+- Write blocking devices -> blocks all writing ops from drives, eg Tableau TK8u USB 3.0 frensic bridge, the one we have and will use
+- frequency shielding material
+- toolkit (screwdrivers, piches etc)
+- miscellaneous items
+- forensic laptop
+- hardware and software duplicator
+- encryption
+- software security keys (dongles)
+- pelican case (the type of hard case, pelican is just a reference mark)
+
+==Forensic software==
+Open source tools are a choice and are a good one.
+Tho it has some problems that fully licensed software doesn't have, so we use FOSS when we can, but sometimes it's not possible mainly for stability reasons.
+
+
 
 ##
 
