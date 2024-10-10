@@ -1,11 +1,6 @@
 > Notes taken by Luizo ( [@LuigiBrosNin](https://t.me/LuigiBrosNin) on Telegram)
 
-
-- [[#Info Esame|Info Esame]]
-- [[#Teoria|Teoria]]
-	- [[#Teoria#Introduction|Introduction]]
-
-## Info Esame
+#### Info Esame
 Simulazione di un caso giuridico
 t1 e t2 lavorano per azienza x, cambiano azienda / c'e' un caso di accordi che compromettono la proprieta' di dati.
 gruppo da 3 ruoli di 3 persone (9 persone totale): consulente del dipendente, consulente dell'azienda, consulente del giudice
@@ -23,9 +18,9 @@ medie alte dei voti (lol)
 
 le informazioni nei dati sono condivisibili con altri gruppi liberamente (la collaborazione e' giusta)
 
-## Teoria
+# Teoria
 
-### Introduction
+## Introduction
 ==Digital forensics== -> division of forensics involving the recovery and analysis of data that has been recovered from digital devices.
 
 CS doctors can do many things that can't be done normally (eg. packet sniffing with wireshark, which is a criminal offence)
@@ -44,7 +39,7 @@ Digital forensics -> not finding the manufact, as they're just the breadcrumbs l
 
 Cybercrime -> wrongdoing that touches the digital world.
 
-### Civil case
+## Civil case
 
 **Compensation** -> the end result of a civil case towards 1 end to the other
 
@@ -70,7 +65,7 @@ an **Informatic Document** (in CAD) can be have
 - Qualified signature (FQ "Firma qualificata / digitale") -> criptografy RSA
 $$Documents\Bigg ( FES \bigg ( FEA \Big ( FQ \Big ) \bigg )  \Bigg)$$
 they're all nested sets
-### Criminal investigations
+## Criminal investigations
 the most basic positions are:
 - **the first responder** -> they secure what may be a chaotic scene, understand what happened, trying to identify victims, witnesses, suspects.
 - **the investigator** -> will respond to the scene after request from the responder, they'll coordinate and share information.
@@ -87,7 +82,7 @@ The **Internet of Things** -> anything that has an app (Alexa, smartwatches, Sir
 
 Social media is a source of digital evidence for showing conspiracy. There could be a Facebook page with photo of an evidence (ofc it happened)
 
-### Corporate (Civil) investigations
+## Corporate (Civil) investigations
 
 Private accords (privacy policies) -> used by one part to get access from the devices
 in other words: "i'll give you the company's PC, Phone etc. and i retain the right to access the devices and check for whatever i need"
@@ -103,7 +98,7 @@ The organization must enforce the policies, and there must be documentation that
 
 Passepartouts of any kind are always insecure, since a leak will sooner or later occur
 
-### Pre-Investigation consideration
+## Pre-Investigation consideration
 
 **Pre-Investigation consideration** -> Phase where you determine the <u>capabilities and equipment</u> specifications to conduct a forensic exam, regardless of whether it is in the field or a lab environment
 
@@ -111,5 +106,13 @@ Tech changes, methods of hiding data or conducting criminal activities, we need 
 
 **Drive blocker** -> blocks modifications on devices (so we can make the acquisition without modifying anything)
 
+==forensic workstation hardware==
+- RAM -> Them more the merrier
+- SSD drives -> size and number both matter
+- Processor -> i9 is the least
+- OS -> Windows, our only option B,)
+They're not cheap, software is expensive too
 
+
+##
 
