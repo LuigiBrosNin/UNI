@@ -565,7 +565,9 @@ Until (best solution is good enough)
 	need to be tuned
 	Some common values: $N = 50,\ m = 0.05,\ c = 0.9$
 
-> [!Warning] slide 24 - 40 missing
+
+
+> [!Warning] slide 28 - 40 missing
 
 ==Evolutionary game theory==
 2 beetles competing for food
