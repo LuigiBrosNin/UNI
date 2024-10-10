@@ -137,6 +137,24 @@ They're not cheap, software is expensive too
 ==Forensic software==
 Open source tools are a choice and are a good one.
 Tho it has some problems that fully licensed software doesn't have, so we use FOSS when we can, but sometimes it's not possible mainly for stability reasons.
+- FOSS used for educational, profit, testing purposes
+- ✅ Available at no cost in most situations
+- ❌ Little or no technical support if something goes wrong
+Commercial tool
+- ✅ Better customer support
+- ✅ Documentation
+- ✅ Timely updates
+- ❌ you have to pay lol
+
+The important thing is to **validate** the results provided by any tool.
+We need to **explain in the administrative/juridical process** whether the tool we used produces reliable results and is accepted within the forensics community.
+
+Requirements (by the US court)
+- theory or technique **can be or has been tested**
+- it has been subjected to **peer review and publication**
+- known or potential **error rate**
+- existence and maintenance of **standards**
+- acceptance within the **scientific community**
 
 
 
