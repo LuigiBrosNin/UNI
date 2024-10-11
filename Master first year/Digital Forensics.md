@@ -159,7 +159,15 @@ Requirements (by the US court)
 ## Understanding case information and legal issues
 As a government and corporate digital forensic investigator, *i have had limits* on what i can search for or view on digital devices many times
 
+There will be times when you have been presented the digital evidence *after someone else collected it*
+You must ask questions and the source of your answers may only come from <u>investigative reports</u>
 
+**Temporal mark** -> guarantees *when* the document was signed
+
+==Understanding data acquisition==
+multiple scenarios when someone calls you to acquire data
+- potential evidence in <u>volatile memory</u>
+- 
 
 ##
 
