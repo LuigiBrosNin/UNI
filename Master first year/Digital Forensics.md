@@ -166,8 +166,13 @@ You must ask questions and the source of your answers may only come from <u>inve
 
 ==Understanding data acquisition==
 multiple scenarios when someone calls you to acquire data
-- potential evidence in <u>volatile memory</u>
-- 
+- Potential evidence in <u>volatile memory</u>, but it's not always possible to collect volatile data
+- During a destructive process running on the machine, you may not want to take the time to collect the RAM as evidence it's being manipulated (as some devices can have such processes triggering when some conditions meet)
+**Chain of custody** -> documents all access to the evidence, who accessed it, when it was accessed and what purpose it was accessed
+- *Maintaining the chain of custody* is an integral part of preserving and authenticating physical and digital evidence for an administrative of judicial proceeding.
+- Check that your given devices are exactly like it's claimed they are in the papers
+
+
 
 ##
 
