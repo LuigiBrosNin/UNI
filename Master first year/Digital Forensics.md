@@ -171,6 +171,14 @@ multiple scenarios when someone calls you to acquire data
 **Chain of custody** -> documents all access to the evidence, who accessed it, when it was accessed and what purpose it was accessed
 - *Maintaining the chain of custody* is an integral part of preserving and authenticating physical and digital evidence for an administrative of judicial proceeding.
 - Check that your given devices are exactly like it's claimed they are in the papers
+- **Evidence chain of custody tracking form** -> form to track all the info regarding the acquired evidence (self explanatory)
+	- Evidence has to have an id, usually something like `HDD001` for example
+	- Id has to be written with a permanent marker on the evidence
+Evidence must be analised "post mortem" (we can't boot it since it will be altered)
+Three choices for making a working copy
+- **forensic copy** -> bit-for-bit copy of the source to the destination (not common)
+- **forensic image** -> bit-for-bit copy of the source device, stored in a forensic image format
+- **logical forensic image** -> selected folders/files in a forensic image
 
 
 
