@@ -1,5 +1,6 @@
 > Notes taken by Luizo ( [@LuigiBrosNin](https://t.me/LuigiBrosNin) on Telegram)
 
+TODO - Download Autopsy software - FTK (only windows :^)
 #### Info Esame
 Simulazione di un caso giuridico
 t1 e t2 lavorano per azienza x, cambiano azienda / c'e' un caso di accordi che compromettono la proprieta' di dati.
@@ -155,8 +156,8 @@ Requirements (by the US court)
 - known or potential **error rate**
 - existence and maintenance of **standards**
 - acceptance within the **scientific community**
-
-TODO - Download Autopsy software
+## Understanding case information and legal issues
+As a government and corporate digital forensic investigator, *i have had limits* on what i can search for or view on digital devices many times
 
 
 
