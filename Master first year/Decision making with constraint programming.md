@@ -318,16 +318,16 @@ Solving benefits
 > It's a beautiful thing, the destruction of words
 > *G. Orwell, in 1984*
 
-==Groups of global constraints==
-- Counting
-- Sequencing
-- Scheduling
-- Ordering
-- Balancing
-- Distance
-- Packing
-- Graph-based
-- etc.
+> [!note] ==Groups of global constraints==
+>- Counting
+>- Sequencing
+>- Scheduling
+>- Ordering
+>- Balancing
+>- Distance
+>- Packing
+>- Graph-based
+>- etc.
 
 ==Counting== -> restrict the number of variables satisfying a condition or the number of times values are taken
 - **alldifferent**
@@ -345,8 +345,26 @@ Solving benefits
 
 ==Sequencing Constraints== -> ensure a sequence of variables obey certain patterns
 - **Sequence/AmongSeq**
-	- Constrains the number of values taken from a given set in any subsequence of $q$ variables (given a (sub)sequence, the array has to have it contained).
+	- Constrains the number of values taken from a given set in any subsequence of $q$ variables (given a condition, the array has to have it respected on every subsequence (eg. number 1 on every 2 numbers)).
 	- 
+
+==Scheduling Constraints== -> Help schedule tasks with respective release
+times, duration, and deadlines, using limited resources in a time interval
+- **Disjunctive Resource Constraint/noOverlap**
+	- requires that tasks do not overlap in time
+	- 
+- **Cumulative Resource Constraint**
+	- Constraints the usage of a shared resource
+		- tasks $t_1,...,t_k$ associated with a start time $S_j$, duration $D_i$, resource requirement $R_i$ and a resource with capacity $C$
+		- cumulative$([S_1,...,S_{k}],[D_1,...,D_{k}],[R_1,...,R_{k}],C) \Longleftrightarrow \sum\limits_{i|S_{i}\le u <S_{i}+D_{i}}R_{i}\le C \ \forall u \in D$
+		- 
+		![[Pasted image 20241014145958.png]]
+
+==Ordering Constraints== -> Enforce an ordering between the variables or the values
+- **Lexicographic Ordering Constraint**
+	- Requires a sequence of variables to be lexicographically less than or equal to another sequence of variables.
+	- 
+
 
 
 ## 
