@@ -361,8 +361,15 @@ Solving benefits
 
 - ==Sequencing Constraints== -> ensure a sequence of variables obey certain patterns
 	- **Sequence/AmongSeq**
-		- Constrains the number of values taken from a given set in any subsequence of $q$ variables (given a condition, the array has to have it respected on every subsequence (eg. number 1 on every 2 numbers)).
-		- 
+		- Constrains the number of values taken from a given set in any subsequence of $q$ variables (given a "condition", the array has to have it respected on every subsequence (eg. at least one number 1 in every 3 numbers)).
+		- sequence$(l, u, q, [X_1, …, X_k], s)$
+			- $l$ -> lower bound,
+			- $u$ -> upper bound of number of elements that can be in the array,
+			- $q$ -> subsequence length to respect
+			- input array,
+			- $s$ -> set of possible values that have to be in
+		- sequence$(1,2,3,[1,0,2,0,3],\{0,1\})$ -> every 3 numbers must have a 0 and a 1
+
 
 - ==Scheduling Constraints== -> Help schedule tasks with respective release times, duration, and deadlines, using limited resources in a time interval
 	- **Disjunctive Resource Constraint/noOverlap**
