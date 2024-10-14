@@ -337,11 +337,15 @@ Solving benefits
 	- Nvalue$([X_1,...,X_k],N)\Longleftrightarrow N = |\{X_{j} |1\le i \le k\}|$ 
 	- eg. Nvalue$([1, 2, 2, 1, 3], 3)$ -> at least 3 distinct values, repetition is allowed ofc
 - **gcc**
-	- Global cardinality constraint (alldifferent but each number can be repeated how many times we want, and we can decide individually)
-	- 
-- among
+	- Global cardinality constraint -> alldifferent but each number can be repeated how many times we want, and we can decide individually
+	- gcc$([X_1, X_2, …, X_k], [v_1, …, v_m], [O_1, …, O_m])$
+	- input array, map of possible numbers, map of limits for each number with the same index $m$
+	- gcc$([1, 1, 3, 2, 3], [1, 2, 3, 4], [2, 1, 2, 0])$ -> 1 can be repeated 2 times, 2 can be repeated 1 time, 3 can be repeated 2 times, 4 can be repeated 0 times
+- **among**
 	- Among constraint, constraints the number of variables taken from a given set of values
-	- 
+	- among$([X_1, X_2, …, X_k], s, N)$
+	- input array, set of possible values, max repetitions
+	- among$([1, 5, 3, 2, 5, 4], \{1,2,3,4\}, 3, 4)$ -> 
 
 ==Sequencing Constraints== -> ensure a sequence of variables obey certain patterns
 - **Sequence/AmongSeq**
@@ -364,7 +368,8 @@ times, duration, and deadlines, using limited resources in a time interval
 - **Lexicographic Ordering Constraint**
 	- Requires a sequence of variables to be lexicographically less than or equal to another sequence of variables.
 	- 
-
+- **Value Precedence Constraint**
+	- 
 
 
 ## 
