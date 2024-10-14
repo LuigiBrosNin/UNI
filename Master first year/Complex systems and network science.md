@@ -612,6 +612,9 @@ Networks can represent any binary relationship over objects, both can be physica
 A network is defined by the list of objects and the relations that exist over
 objects, not by its visualization
 
+- **Edges thickness** in visualization means a strong relationship
+- **Node size** in visualization means how important it is (usually based on the number of edges)
+
 
 ##
 ##
