@@ -4,7 +4,16 @@
 
 - Exam info
 	https://www.cs.unibo.it/~babaoglu/courses/csns/papers/index.html
-	paper presentation -> send an email of the picked paper link, then there are presentations
+	paper presentation -> send an email of the picked paper link, then there are presentations in class
+	1. Relevance of the topic to the course,
+	2. Quality of the contents,
+	3. Quality of the delivery,
+	4. Quality of the slides,
+	5. Adherence to the time limit (30 minutes)
+	
+	final project -> individual, using PeerSim or NetLogo modeling environment
+	
+	Final grade for the course will be based on three factors: (i) the research paper presentation (40%), (ii) the project written report (50%) and (iii) the project discussion (10%).
 
 # Theory
 
@@ -630,6 +639,17 @@ We need a way to represent networks and capture their properties succinctly and 
 ## Graph Theory
 
 **Graph Theory** -> Branch of mathematics for the study of discrete structures called graphs for modeling pairwise relations between objects
+
+Graph -> pair $G= (N,E)$ where
+- $N$ -> Set of nodes (vertices)
+- $E$ -> set of edges (links, arcs)
+Notation
+- $n$ -> number of nodes
+- $m$ -> number of edges
+Letters to label nodes, node pairs to label edges
+![[Pasted image 20241014110935.png]]
+graph visualization for the graph
+$$G = (\{A, B, C, D\}, \{(A, B), (A, C), (A, D), (B, D)\})$$
 
 
 
