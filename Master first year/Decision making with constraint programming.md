@@ -386,8 +386,10 @@ approaches to develop specialized propagation for global constraints
 	May not always provide an effective propagation
 	- alldifferent Decomposition
 		- conjunction of difference constraints
-		- $C_{ij}: X_{i}\ne X_{j} \ for\ i<j \in \{1,..k\}$
-		- 
+		- $C_{ij}: X_{i}\ne X_{j} \ for\ i<j \in \{1,..k\}$ (weaker, since it does not compare all domains, just 2 variables at a time)
+	- sequence decomposition
+		- conjunction of among constraints
+		- $C_i:$ among$([X_i, X_i+1, …, X_i+q-1], s, l, u)\  for 1 ≤ i ≤ k-q+1$ (weaker)
 - ==dedicated ad-hoc algorithm== ->
 
 
