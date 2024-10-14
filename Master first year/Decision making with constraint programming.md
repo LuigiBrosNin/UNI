@@ -223,7 +223,7 @@ Constraints
 Channeling Constraints
 - $\forall i,j\ X_i = j Y_j = i$
 
-## Constraint Propagation & Global Constraints
+## Constraint Propagation
 - Search decisions and propagation are interleaved, example:
 	![[Pasted image 20241009162811.png]]
 	![[Pasted image 20241009162910.png]]
@@ -302,9 +302,10 @@ Complexity of propagation algorithms
 - Example
 	![[Pasted image 20241009174147.png]]
 
-==Global Constraints==
--> captures common <u>complex</u>, <u>non-binary</u> and <u>recurring combinatorial substructures</u>
-embed specialized propagation which exploits the substructure B)
+## Global Constraints
+==Global Constraints== -> captures common <u>complex</u>, <u>non-binary</u> and <u>recurring combinatorial substructures</u>
+
+Embed specialized propagation which exploits the substructure B)
 
 Basically common and known constraints have been cataloged to already have specialized propagation for our needs B)))
 
@@ -336,18 +337,25 @@ Solving benefits
 		- Means <u>at least</u> all different up to the $N$th value
 		- Nvalue$([X_1,...,X_k],N)\Longleftrightarrow N = |\{X_{j} |1\le i \le k\}|$ 
 		- eg. Nvalue$([1, 2, 2, 1, 3], 3)$ -> at least 3 distinct values, repetition is allowed ofc
-	- **gcc**
+	- **Gcc**
 		- Global cardinality constraint -> alldifferent but each number can be repeated how many times we want, and we can decide individually
 		- gcc$([X_1, X_2, …, X_k], [v_1, …, v_m], [O_1, …, O_m])$
-		- input array, map of possible numbers, map of limits for each number with the same index $m$
+			- input array
+			- $v_1,..,v_m$ -> map of possible numbers
+			- $O_1,..,O_m$ -> map of limits for each number with the same index $m$
 		- gcc$([1, 1, 3, 2, 3], [1, 2, 3, 4], [2, 1, 2, 0])$ -> 1 can be repeated 2 times, 2 can be repeated 1 time, 3 can be repeated 2 times, 4 can be repeated 0 times
-	- **among**
+	- **Among**
 		- Among constraint, constraints the number of variables taken from a given set of values
 		- among$([X_1, X_2, …, X_k], s, N)$
-		- input array, set of possible values, number of elements that have to be in the array
+			- input array, 
+			- $s$ -> set of possible values, 
+			- $N$ -> number of elements that have to be in the array
 		- among$([X_1, X_2, …, X_k], s, l,u)$
-		- input array, set of possible values, lower bound, upper bound of number of elements that can be in the array
-		- among$([1, 5, 3, 2, 5, 4], \{1,2,3,4\}, 3, 4)$ -> $[1,3,2,4]$ would be accepted
+			- input array,
+			- $s$ -> set of possible values,
+			- $l$ -> lower bound, 
+			- $u$ -> upper bound of number of elements that can be in the array
+		- among$([1, 5, 3, 2, 5, 4], \{1,2,3,4\}, 3, 4)$ -> $[1,3,2,4]$ 
 
 - ==Sequencing Constraints== -> ensure a sequence of variables obey certain patterns
 	- **Sequence/AmongSeq**
@@ -393,9 +401,8 @@ approaches to develop specialized propagation for global constraints
 - ==dedicated ad-hoc algorithm== -> 
 
 
+
 ## 
-
-
 ##
 ---
 # Exercises
