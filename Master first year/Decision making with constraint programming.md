@@ -390,7 +390,7 @@ approaches to develop specialized propagation for global constraints
 	- sequence decomposition
 		- conjunction of among constraints
 		- $C_i:$ among$([X_i, X_i+1, …, X_i+q-1], s, l, u)\  for 1 ≤ i ≤ k-q+1$ (weaker)
-- ==dedicated ad-hoc algorithm== ->
+- ==dedicated ad-hoc algorithm== -> 
 
 
 ## 
