@@ -398,11 +398,12 @@ Solving benefits
 - ==Ordering Constraints== -> Enforce an ordering between the variables or the values
 	- **Lexicographic Ordering Constraint**
 		- Requires a sequence of variables to be lexicographically less than or equal to another sequence of variables.
-		- Lex$\le ([X_1,..,X_k])$
-		- eg. $A = \{1,2,3\}, B = \{1,2,4\} \to A[1] = B[1] = 1 \to ... \to A[3] < B[3]$ 
+		- Lex$\le ([X_1,..,X_k],[Y_1,..,Y_k])$
+		![[Pasted image 20241014234555.png]]
+		- eg. $A = \{1,2,3\}, B = \{1,2,4\} \to A[1] = B[1] = 1 \to ... \to A[3] < B[3]$  Lex(A,B) -> true
 	- **Value Precedence Constraint**
 		- Requires a value to precede another value in a sequence of variables
-		- 
+		- value_precede$(v_{j1}, v_{j2}, [X_1, X_2, …, X_k])$
 
 ==Specialized Propagation for Global Constraints==
 approaches to develop specialized propagation for global constraints
