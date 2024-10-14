@@ -615,6 +615,12 @@ objects, not by its visualization
 - **Edges thickness** in visualization means a strong relationship
 - **Node size** in visualization means how important it is (usually based on the number of edges)
 
+Network challenges
+- Size -> current  networks might have billions of nodes, and thus several hundred billion friendship relations
+- Complexity -> 24 nodes, $(24\times23)/2$ symmetric relations, $2^{(24\times23)/2}$ possible networks
+We need a way to represent networks and capture their properties succinctly and abstractly without having to “catalogue” them
+
+
 
 ##
 ##
