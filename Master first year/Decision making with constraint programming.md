@@ -330,7 +330,23 @@ Solving benefits
 - etc.
 
 ==Counting== -> restrict the number of variables satisfying a condition or the number of times values are taken
+- **alldifferent**
+	- alldifferent$([X_1,...,X_k])\Longleftrightarrow X_{i}\ne X_{j}\ \forall i<j \in \{1,..,k\}$ 
+- **Nvalue**
+	- Means <u>at least</u> all different up to the $N$th value
+	- Nvalue$([X_1,...,X_k],N)\Longleftrightarrow N = |\{X_{j} |1\le i \le k\}|$ 
+	- eg. Nvalue$([1, 2, 2, 1, 3], 3)$ -> at least 3 distinct values, repetition is allowed ofc
+- **gcc**
+	- Global cardinality constraint (alldifferent but each number can be repeated how many times we want, and we can decide individually)
+	- 
+- among
+	- Among constraint, constraints the number of variables taken from a given set of values
+	- 
 
+==Sequencing Constraints== -> ensure a sequence of variables obey certain patterns
+- **Sequence/AmongSeq**
+	- Constrains the number of values taken from a given set in any subsequence of $q$ variables (given a (sub)sequence, the array has to have it contained).
+	- 
 
 
 ## 
