@@ -336,6 +336,8 @@ Solving benefits
 	- **Nvalue**
 		- Means <u>at least</u> all different up to the $N$th value
 		- Nvalue$([X_1,...,X_k],N)\Longleftrightarrow N = |\{X_{j} |1\le i \le k\}|$ 
+			- input array,
+			- $N$ -> input array has to contain at least $N$ distinct values
 		- eg. Nvalue$([1, 2, 2, 1, 3], 3)$ -> at least 3 distinct values, repetition is allowed ofc
 	- **Gcc**
 		- Global cardinality constraint -> alldifferent but each number can be repeated how many times we want, and we can decide individually
@@ -355,7 +357,7 @@ Solving benefits
 			- $s$ -> set of possible values,
 			- $l$ -> lower bound, 
 			- $u$ -> upper bound of number of elements that can be in the array
-		- among$([1, 5, 3, 2, 5, 4], \{1,2,3,4\}, 3, 4)$ -> $[1,3,2,4]$ 
+		- among$([1, 5, 3, 2, 5, 4], \{1,2,3,4\}, 3, 4)$ -> $[1,3,2,4]$ , deletes the values not present in the $s$ set
 
 - ==Sequencing Constraints== -> ensure a sequence of variables obey certain patterns
 	- **Sequence/AmongSeq**
