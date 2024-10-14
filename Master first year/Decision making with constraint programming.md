@@ -118,7 +118,7 @@ $<X,D,C,f>$ -> **$f$ is the formalization** of the optimization criterion, to mi
 	- Non-directional -> A constraint between X and Y can be used to infer domain information on Y given domain information on X and vice versa
 	- Rarely independent
 
-==Modeling tips for excercises==
+- ==Modeling tips for excercises==
 	apply in order:
 	- choose variables
 	- enforce constraints
@@ -318,6 +318,18 @@ Solving benefits
 > It's a beautiful thing, the destruction of words
 > *G. Orwell, in 1984*
 
+==Groups of global constraints==
+- Counting
+- Sequencing
+- Scheduling
+- Ordering
+- Balancing
+- Distance
+- Packing
+- Graph-based
+- etc.
+
+==Counting== -> restrict the number of variables satisfying a condition or the number of times values are taken
 
 
 

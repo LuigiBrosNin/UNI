@@ -651,6 +651,11 @@ Letters to label nodes, node pairs to label edges
 graph visualization for the graph
 $$G = (\{A, B, C, D\}, \{(A, B), (A, C), (A, D), (B, D)\})$$
 
+**Binary relations** -> Nodes are the objects, the presence of an edge indicates that some relation $R$ holds between the nodes, the absence indicates that relation $R$ does not hold. not very expressive beyond connecting 2 nodes (eg. paper written by 3 authors)
+![[Pasted image 20241014111658.png]]
+
+**Directed graphs** -> An asymmetric binary relation holds in one direction only and is represented by a directed edge
+![[Pasted image 20241014111851.png]]
 
 
 
