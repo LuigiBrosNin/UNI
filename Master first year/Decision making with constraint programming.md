@@ -368,24 +368,38 @@ Solving benefits
 			- $q$ -> subsequence length to respect
 			- input array,
 			- $s$ -> set of possible values that have to be in
-		- sequence$(1,2,3,[1,0,2,0,3],\{0,1\})$ -> every 3 numbers must have a 0 and a 1
+		- sequence$(1,2,3,[1,0,2,0,3],\{0,1\})$ -> every 3 numbers must have a 0 and a 1, for every consequent subsequence, eg:
+			$$ [1,2,3,4,5]$$
+			:LiArrowBigDown: Subsequences checked for the array above :LiArrowBigUp:
+			$$[\{1,2,3\},\{2,3,4\},\{3,4,5\}]$$
+
 
 
 - ==Scheduling Constraints== -> Help schedule tasks with respective release times, duration, and deadlines, using limited resources in a time interval
 	- **Disjunctive Resource Constraint/noOverlap**
-		- requires that tasks do not overlap in time
-		- 
+		- Requires that tasks do not overlap in time
+		- disjunctive$([S_1, …, S_k],[D_1, …, D_k])$
+			- $t_1,..,t_k$ -> tasks
+			- $S_1,..,S_k$ -> start time $S_i$ for task $t_i$
+			- $D_1,..,D_k$ -> duration $D_i$ for task $t_i$
+			![[Pasted image 20241014232753.png]]
+		- Useful when a resource can execute at most one task at a time
 	- **Cumulative Resource Constraint**
 		- Constraints the usage of a shared resource
-			- tasks $t_1,...,t_k$ associated with a start time $S_j$, duration $D_i$, resource requirement $R_i$ and a resource with capacity $C$
-			- cumulative$([S_1,...,S_{k}],[D_1,...,D_{k}],[R_1,...,R_{k}],C) \Longleftrightarrow \sum\limits_{i|S_{i}\le u <S_{i}+D_{i}}R_{i}\le C \ \forall u \in D$
-			- 
+		- tasks $t_1,...,t_k$ associated with a start time $S_j$, duration $D_i$, resource requirement $R_i$ and a resource with capacity $C$
+		- cumulative$([S_1,...,S_{k}],[D_1,...,D_{k}],[R_1,...,R_{k}],C) \Longleftrightarrow \sum\limits_{i|S_{i}\le u <S_{i}+D_{i}}R_{i}\le C \ \forall u \in D$
+			- $S$ -> start time
+			- $D$ -> Duration
+			- $R$ -> Resource requirements
+			- $C$ -> Capacity (resources limit)
 			![[Pasted image 20241014145958.png]]
+			- Useful when a resource with a capacity can execute multiple tasks at a time.
 
 - ==Ordering Constraints== -> Enforce an ordering between the variables or the values
 	- **Lexicographic Ordering Constraint**
 		- Requires a sequence of variables to be lexicographically less than or equal to another sequence of variables.
-		- 
+		- Lex$\le ([X_1,..,X_k])$
+		- eg. $A = \{1,2,3\}, B = \{1,2,4\} \to A[1] = B[1] = 1 \to ... \to A[3] < B[3]$ 
 	- **Value Precedence Constraint**
 		- Requires a value to precede another value in a sequence of variables
 		- 
