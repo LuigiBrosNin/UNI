@@ -319,57 +319,76 @@ Solving benefits
 > *G. Orwell, in 1984*
 
 > [!note] ==Groups of global constraints==
->- Counting
->- Sequencing
->- Scheduling
->- Ordering
+>- **Counting**
+>- **Sequencing**
+>- **Scheduling**
+>- **Ordering**
 >- Balancing
 >- Distance
 >- Packing
 >- Graph-based
 >- etc.
 
-==Counting== -> restrict the number of variables satisfying a condition or the number of times values are taken
-- **alldifferent**
-	- alldifferent$([X_1,...,X_k])\Longleftrightarrow X_{i}\ne X_{j}\ \forall i<j \in \{1,..,k\}$ 
-- **Nvalue**
-	- Means <u>at least</u> all different up to the $N$th value
-	- Nvalue$([X_1,...,X_k],N)\Longleftrightarrow N = |\{X_{j} |1\le i \le k\}|$ 
-	- eg. Nvalue$([1, 2, 2, 1, 3], 3)$ -> at least 3 distinct values, repetition is allowed ofc
-- **gcc**
-	- Global cardinality constraint -> alldifferent but each number can be repeated how many times we want, and we can decide individually
-	- gcc$([X_1, X_2, …, X_k], [v_1, …, v_m], [O_1, …, O_m])$
-	- input array, map of possible numbers, map of limits for each number with the same index $m$
-	- gcc$([1, 1, 3, 2, 3], [1, 2, 3, 4], [2, 1, 2, 0])$ -> 1 can be repeated 2 times, 2 can be repeated 1 time, 3 can be repeated 2 times, 4 can be repeated 0 times
-- **among**
-	- Among constraint, constraints the number of variables taken from a given set of values
-	- among$([X_1, X_2, …, X_k], s, N)$
-	- input array, set of possible values, max repetitions
-	- among$([1, 5, 3, 2, 5, 4], \{1,2,3,4\}, 3, 4)$ -> 
+- ==Counting== -> restrict the number of variables satisfying a condition or the number of times values are taken
+	- **alldifferent**
+		- alldifferent$([X_1,...,X_k])\Longleftrightarrow X_{i}\ne X_{j}\ \forall i<j \in \{1,..,k\}$ 
+	- **Nvalue**
+		- Means <u>at least</u> all different up to the $N$th value
+		- Nvalue$([X_1,...,X_k],N)\Longleftrightarrow N = |\{X_{j} |1\le i \le k\}|$ 
+		- eg. Nvalue$([1, 2, 2, 1, 3], 3)$ -> at least 3 distinct values, repetition is allowed ofc
+	- **gcc**
+		- Global cardinality constraint -> alldifferent but each number can be repeated how many times we want, and we can decide individually
+		- gcc$([X_1, X_2, …, X_k], [v_1, …, v_m], [O_1, …, O_m])$
+		- input array, map of possible numbers, map of limits for each number with the same index $m$
+		- gcc$([1, 1, 3, 2, 3], [1, 2, 3, 4], [2, 1, 2, 0])$ -> 1 can be repeated 2 times, 2 can be repeated 1 time, 3 can be repeated 2 times, 4 can be repeated 0 times
+	- **among**
+		- Among constraint, constraints the number of variables taken from a given set of values
+		- among$([X_1, X_2, …, X_k], s, N)$
+		- input array, set of possible values, number of elements that have to be in the array
+		- among$([X_1, X_2, …, X_k], s, l,u)$
+		- input array, set of possible values, lower bound, upper bound of number of elements that can be in the array
+		- among$([1, 5, 3, 2, 5, 4], \{1,2,3,4\}, 3, 4)$ -> $[1,3,2,4]$ would be accepted
 
-==Sequencing Constraints== -> ensure a sequence of variables obey certain patterns
-- **Sequence/AmongSeq**
-	- Constrains the number of values taken from a given set in any subsequence of $q$ variables (given a condition, the array has to have it respected on every subsequence (eg. number 1 on every 2 numbers)).
-	- 
-
-==Scheduling Constraints== -> Help schedule tasks with respective release
-times, duration, and deadlines, using limited resources in a time interval
-- **Disjunctive Resource Constraint/noOverlap**
-	- requires that tasks do not overlap in time
-	- 
-- **Cumulative Resource Constraint**
-	- Constraints the usage of a shared resource
-		- tasks $t_1,...,t_k$ associated with a start time $S_j$, duration $D_i$, resource requirement $R_i$ and a resource with capacity $C$
-		- cumulative$([S_1,...,S_{k}],[D_1,...,D_{k}],[R_1,...,R_{k}],C) \Longleftrightarrow \sum\limits_{i|S_{i}\le u <S_{i}+D_{i}}R_{i}\le C \ \forall u \in D$
+- ==Sequencing Constraints== -> ensure a sequence of variables obey certain patterns
+	- **Sequence/AmongSeq**
+		- Constrains the number of values taken from a given set in any subsequence of $q$ variables (given a condition, the array has to have it respected on every subsequence (eg. number 1 on every 2 numbers)).
 		- 
-		![[Pasted image 20241014145958.png]]
 
-==Ordering Constraints== -> Enforce an ordering between the variables or the values
-- **Lexicographic Ordering Constraint**
-	- Requires a sequence of variables to be lexicographically less than or equal to another sequence of variables.
-	- 
-- **Value Precedence Constraint**
-	- 
+- ==Scheduling Constraints== -> Help schedule tasks with respective release times, duration, and deadlines, using limited resources in a time interval
+	- **Disjunctive Resource Constraint/noOverlap**
+		- requires that tasks do not overlap in time
+		- 
+	- **Cumulative Resource Constraint**
+		- Constraints the usage of a shared resource
+			- tasks $t_1,...,t_k$ associated with a start time $S_j$, duration $D_i$, resource requirement $R_i$ and a resource with capacity $C$
+			- cumulative$([S_1,...,S_{k}],[D_1,...,D_{k}],[R_1,...,R_{k}],C) \Longleftrightarrow \sum\limits_{i|S_{i}\le u <S_{i}+D_{i}}R_{i}\le C \ \forall u \in D$
+			- 
+			![[Pasted image 20241014145958.png]]
+
+- ==Ordering Constraints== -> Enforce an ordering between the variables or the values
+	- **Lexicographic Ordering Constraint**
+		- Requires a sequence of variables to be lexicographically less than or equal to another sequence of variables.
+		- 
+	- **Value Precedence Constraint**
+		- Requires a value to precede another value in a sequence of variables
+		- 
+
+==Specialized Propagation for Global Constraints==
+approaches to develop specialized propagation for global constraints
+- ==constraint decomposition== -> A global constraint is decomposed into smaller and simpler constraints, each of which has a known propagation algorithm.
+	- among Decomposition
+	- Lex Decomposition
+		- conjunction of disjunctions
+		- $B_i$ with $D(B_i) =\{0,1\}$ for $1\le i \le k+1$ to indicate the vectors have been ordered by position $i-1$
+		- $B_1=0$
+		- $C_i: (B_i = B_i+1 = 0\ \land \ X_i = Y_i ) \lor (B_i = 0 \land B_i+1 = 1 \land X_i < Y_i ) \lor (B_i = B_i+1 = 1)\ for\ 1 ≤ i ≤ k$
+		- GAC$(C_i)\forall i$ ensures GAC on $lex\le$ 
+	May not always provide an effective propagation
+	- alldifferent Decomposition
+		- conjunction of difference constraints
+		- $C_{ij}: X_{i}\ne X_{j} \ for\ i<j \in \{1,..k\}$
+		- 
+- ==dedicated ad-hoc algorithm== ->
 
 
 ## 
