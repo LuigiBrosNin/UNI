@@ -2,6 +2,10 @@
 
 > Notes taken by Luizo ( [@LuigiBrosNin](https://t.me/LuigiBrosNin) on Telegram)
 
+- Exam info
+	https://www.cs.unibo.it/~babaoglu/courses/csns/papers/index.html
+	paper presentation -> send an email of the picked paper link, then there are presentations
+
 # Theory
 
 ## Intro
@@ -619,6 +623,14 @@ Network challenges
 - Size -> current  networks might have billions of nodes, and thus several hundred billion friendship relations
 - Complexity -> 24 nodes, $(24\times23)/2$ symmetric relations, $2^{(24\times23)/2}$ possible networks
 We need a way to represent networks and capture their properties succinctly and abstractly without having to “catalogue” them
+
+**Erdős numbers** -> shortest "distance" between a given mathematical and the hungarian mathematician Paul Erdős (a mathematician)
+![[Pasted image 20241014104217.png]]
+
+## Graph Theory
+
+**Graph Theory** -> Branch of mathematics for the study of discrete structures called graphs for modeling pairwise relations between objects
+
 
 
 
