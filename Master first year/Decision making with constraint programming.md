@@ -404,11 +404,16 @@ Solving benefits
 	- **Value Precedence Constraint**
 		- Requires a value to precede another value in a sequence of variables
 		- value_precede$(v_{j1}, v_{j2}, [X_1, X_2, …, X_k])$
+			- $v_{j1}$ -> value to be preceded,
+			- $v_{j2}$ -> value to check,
+			- input array
+		- value_precede$(5, 4, [2, 5, 3, 5, 4])$ -> 4 cannot appear unless there a 5 before it basically
 
 ==Specialized Propagation for Global Constraints==
 approaches to develop specialized propagation for global constraints
 - ==constraint decomposition== -> A global constraint is decomposed into smaller and simpler constraints, each of which has a known propagation algorithm.
 	- among Decomposition
+		- 
 	- Lex Decomposition
 		- conjunction of disjunctions
 		- $B_i$ with $D(B_i) =\{0,1\}$ for $1\le i \le k+1$ to indicate the vectors have been ordered by position $i-1$
