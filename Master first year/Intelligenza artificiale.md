@@ -102,5 +102,9 @@ $d$ -> depth of the least-cost solution
 $m$ -> max depth of state space (can be $\infty$)
 ⚠ Failure to detect **repeated states** can turn a linear problem into an exponential one
 
-##
+
+## Informed search algorithms
+MISSING FOR NOW
+
+## 
 ##
