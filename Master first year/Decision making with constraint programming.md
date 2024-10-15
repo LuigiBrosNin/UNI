@@ -413,17 +413,23 @@ Solving benefits
 approaches to develop specialized propagation for global constraints
 - ==constraint decomposition== -> A global constraint is decomposed into smaller and simpler constraints, each of which has a known propagation algorithm.
 	- among Decomposition
-		- 
+		- conjunction of disjunctions
+		- $B_i$ with $D(B_i) = {0, 1} for 1 ≤ i ≤ k$
+		- $C+i: B_i = 1 ↔ X_i ∈ s for 1 ≤ i ≤ k$
+		- $Ck+1: \sum\limits_{i} B_i = N$ 
+		- $AC(C_i)$ for all $i$ and $BC( \sum\limits_{i} B_i = N  )$ensures GAC on among.
 	- Lex Decomposition
 		- conjunction of disjunctions
 		- $B_i$ with $D(B_i) =\{0,1\}$ for $1\le i \le k+1$ to indicate the vectors have been ordered by position $i-1$
 		- $B_1=0$
 		- $C_i: (B_i = B_i+1 = 0\ \land \ X_i = Y_i ) \lor (B_i = 0 \land B_i+1 = 1 \land X_i < Y_i ) \lor (B_i = B_i+1 = 1)\ for\ 1 ≤ i ≤ k$
 		- GAC$(C_i)\forall i$ ensures GAC on $lex\le$ 
-	May not always provide an effective propagation
+	
+	⚠ Decompositions may not always provide an effective propagation
 	- alldifferent Decomposition
 		- conjunction of difference constraints
-		- $C_{ij}: X_{i}\ne X_{j} \ for\ i<j \in \{1,..k\}$ (weaker, since it does not compare all domains, just 2 variables at a time)
+		- $C_{ij}: X_{i}\ne X_{j} \ for\ i<j \in \{1,..k\}$ 
+		- weaker, since it does not compare all domains, just 2 variables at a time. decomposition does not prune anything
 	- sequence decomposition
 		- conjunction of among constraints
 		- $C_i:$ among$([X_i, X_i+1, …, X_i+q-1], s, l, u)\  for 1 ≤ i ≤ k-q+1$ (weaker)
