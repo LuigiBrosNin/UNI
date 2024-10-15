@@ -106,5 +106,7 @@ $m$ -> max depth of state space (can be $\infty$)
 ## Informed search algorithms
 MISSING FOR NOW
 
-## 
+## Local search
+
+
 ##
