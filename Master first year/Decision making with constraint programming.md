@@ -451,8 +451,6 @@ approaches to develop specialized propagation for global constraints
 		- $max(N) ≤ max\$(N) – (old(max(X_i)) - max(X_i))$ -> $O(1)$
 		Complexity went to $O(n)\to O(1)$ 🤯
 
-==Dedicated propagation algorithms==
-
 - example
 	![[Pasted image 20241016164012.png]]
 	**bipartite graph** -> vertices are divided into 2 disjoint sets such that every edge connects a vertex to one to the other set
@@ -470,8 +468,14 @@ approaches to develop specialized propagation for global constraints
 	- edge maching in some but not all maximal matchings ->
 		- keep the edge
 	![[Pasted image 20241016165119.png]]
-	
-	
+
+==Alternating path and cycle==
+technique used to find edges that are in other solut
+- **Alternating path** -> simple path with edges alternating free and matching
+- **Alternating cycle** -> cycle with edges alternating free and matching
+- **Even path/cycle** -> path/cycle of even length
+
+
 ## 
 ##
 ---
