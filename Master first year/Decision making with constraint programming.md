@@ -436,7 +436,7 @@ approaches to develop specialized propagation for global constraints
 		- propagation algs are called multiple times, we don't want to re compute everything each time
 		- cache results at first call
 		- exploit cached data on next invoke
-	- Dedicated BC Alg for <u>Sum</u>, Operations
+	- Dedicated BC Alg for <u>Sum</u>, Operations needed for checking
 		C: where $X_i$ and $N$ are integer variables.
 		- $min(N) ≥ \sum\limits_{i}min(X_i)$
 		- $max(N) ≤ \sum\limits_{i}max(X_i)$
@@ -444,13 +444,29 @@ approaches to develop specialized propagation for global constraints
 		- $max(X_i) ≤ max(N) - \sum\limits_{i}min(X_i)\ for\ 1 ≤ i ≤ n$
 		![[Pasted image 20241016162513.png]]
 		:LiArrowBigUp: operations needed for the 1st check
-	- Incremental computation
+	- Incremental computation in action
 		$max(N) ≤ \sum\limits_{i}max(X_i)$
 		- cache $max(N)$ as $max\$(N)$
 		- whenever the bounds of a variable $X_i$ is pruned:
-		- – max(N) ≤ max$(N) – (old(max(Xi)) - max(Xi)) -> O(1)
-		
+		- $max(N) ≤ max\$(N) – (old(max(X_i)) - max(X_i))$ -> $O(1)$
+		Complexity went to $O(n)\to O(1)$ 🤯
 
+==Dedicated propagation algorithms==
+
+- example
+	![[Pasted image 20241016164012.png]]
+	**bipartite graph** -> vertices are divided into 2 disjoint sets such that every edge connects a vertex to one to the other set
+	**matching** -> subset of edges such that no two edges have a node in common
+	![[Pasted image 20241016164327.png|]]
+	**Maximal matching** -> largest possible matching
+
+	Algorithm for max matching finding
+	- compute all max matchings
+	- no max matching exists -> failure
+	- edge free in all maximal matchings ->
+		- remove the edge
+		- 
+	
 ## 
 ##
 ---
