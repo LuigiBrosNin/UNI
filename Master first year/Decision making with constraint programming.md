@@ -373,8 +373,6 @@ Solving benefits
 			:LiArrowBigDown: Subsequences checked for the array above :LiArrowBigUp:
 			$$[\{1,2,3\},\{2,3,4\},\{3,4,5\}]$$
 
-
-
 - ==Scheduling Constraints== -> Help schedule tasks with respective release times, duration, and deadlines, using limited resources in a time interval
 	- **Disjunctive Resource Constraint/noOverlap**
 		- Requires that tasks do not overlap in time
@@ -433,9 +431,25 @@ approaches to develop specialized propagation for global constraints
 	- sequence decomposition
 		- conjunction of among constraints
 		- $C_i:$ among$([X_i, X_i+1, …, X_i+q-1], s, l, u)\  for 1 ≤ i ≤ k-q+1$ (weaker)
-- ==dedicated ad-hoc algorithm== -> 
-
-
+- ==dedicated ad-hoc algorithm== -> Decomposition may not always provide an efficient propagation (eg. many checks to do)
+	- Incremental computation can improve efficiency
+		- propagation algs are called multiple times, we don't want to re compute everything each time
+		- cache results at first call
+		- exploit cached data on next invoke
+	- Dedicated BC Alg for <u>Sum</u>, Operations
+		C: where $X_i$ and $N$ are integer variables.
+		- $min(N) ≥ \sum\limits_{i}min(X_i)$
+		- $max(N) ≤ \sum\limits_{i}max(X_i)$
+		- $min(X_i) ≥ min(N) - \sum\limits_{i}max(X_i)\ for\ 1 ≤ i ≤ n$
+		- $max(X_i) ≤ max(N) - \sum\limits_{i}min(X_i)\ for\ 1 ≤ i ≤ n$
+		![[Pasted image 20241016162513.png]]
+		:LiArrowBigUp: operations needed for the 1st check
+	- Incremental computation
+		$max(N) ≤ \sum\limits_{i}max(X_i)$
+		- cache $max(N)$ as $max\$(N)$
+		- whenever the bounds of a variable $X_i$ is pruned:
+		- – max(N) ≤ max$(N) – (old(max(Xi)) - max(Xi)) -> O(1)
+		
 
 ## 
 ##
