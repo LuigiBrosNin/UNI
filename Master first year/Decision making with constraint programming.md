@@ -470,10 +470,20 @@ approaches to develop specialized propagation for global constraints
 	![[Pasted image 20241016165119.png]]
 
 ==Alternating path and cycle==
-technique used to find edges that are in other solut
+Technique used to find edges that are in other solutions using logic proprieties. We find out that some edges are part of *a solution* and that's about all we need.
 - **Alternating path** -> simple path with edges alternating free and matching
 - **Alternating cycle** -> cycle with edges alternating free and matching
 - **Even path/cycle** -> path/cycle of even length
+( :LiArrowBigUp: this part is confusing at first, look at the slides slowly to understand)
+
+==Global constraints for generic purposes==
+
+**Table (Extensional) Constraint** -> we basically list all possible touples in the domain as a constraint, efficient and effective
+$$C(X_1, X_2) = {(0,0), (0,2), (1,3), (2,1)}$$
+
+**==Product configuration problem==** -> compatibility constraints on product components, only certain combination of components work together
+for each product $P_i$, we post a **table**($[X_{i1},..,X_{i5}],$ Products)
+
 
 
 ## 
