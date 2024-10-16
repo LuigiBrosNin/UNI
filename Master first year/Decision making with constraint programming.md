@@ -461,11 +461,16 @@ approaches to develop specialized propagation for global constraints
 	**Maximal matching** -> largest possible matching
 
 	Algorithm for max matching finding
-	- compute all max matchings
+	- compute all max matching (we asssume we do)
 	- no max matching exists -> failure
-	- edge free in all maximal matchings ->
-		- remove the edge
-		- 
+	- <u>edge free</u> in all maximal matchings (always black) ->
+		- remove the edge (remove value from domain in the corresponding variable)
+	- <u>vital</u> edge (always red)->
+		- keep the edge (assign value to corresponding variable)
+	- edge maching in some but not all maximal matchings ->
+		- keep the edge
+	![[Pasted image 20241016165119.png]]
+	
 	
 ## 
 ##
