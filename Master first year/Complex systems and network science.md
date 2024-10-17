@@ -657,6 +657,35 @@ $$G = (\{A, B, C, D\}, \{(A, B), (A, C), (A, D), (B, D)\})$$
 **Directed graphs** -> An asymmetric binary relation holds in one direction only and is represented by a directed edge
 ![[Pasted image 20241014111851.png]]
 
+**Weighted graphs** -> Both directed and undirected graphs can have a weight associated with edges to represent the strength of the relation
+
+
+11 - 33 MISSING
+
+
+**Edge density** -> the actual number of edges in proportion to the maximum possible number of edges in a graph
+$$p = \frac m {n(n-1)/2}=\frac {2m} {n(n-1)} $$
+
+$p \in$ 0 to 1
+![[Pasted image 20241017140655.png]]
+
+We will compare the **clustering coefficient** $CC$ of a graph to its edge density $p$
+**Highly clustered graph** -> $CC >> p$
+
+![[Pasted image 20241017140824.png]]
+
+==Centrality metrics==
+given nodes in a graph, **centrality metrics** try to formalize notions such as “important”, “influential” or “popular”
+![[Pasted image 20241017143419.png]]
+eg. Medici is an important family
+
+Different notions of centrality
+- Degree - well connectedness
+- Betweenness — criticality for connectedness
+- Closeness — short distances to the rest of the graph
+- Eigenvector — importance
+
+
 
 
 ##
