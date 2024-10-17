@@ -407,6 +407,7 @@ Solving benefits
 			- input array
 		- value_precede$(5, 4, [2, 5, 3, 5, 4])$ -> 4 cannot appear unless there a 5 before it basically
 
+---
 ==Specialized Propagation for Global Constraints==
 approaches to develop specialized propagation for global constraints
 - ==constraint decomposition== -> A global constraint is decomposed into smaller and simpler constraints, each of which has a known propagation algorithm.
@@ -432,7 +433,7 @@ approaches to develop specialized propagation for global constraints
 		- conjunction of among constraints
 		- $C_i:$ among$([X_i, X_i+1, …, X_i+q-1], s, l, u)\  for 1 ≤ i ≤ k-q+1$ (weaker)
 - ==dedicated ad-hoc algorithm== -> Decomposition may not always provide an efficient propagation (eg. many checks to do)
-	- Incremental computation can improve efficiency
+	- Incremental computation can improve efficiency:
 		- propagation algs are called multiple times, we don't want to re compute everything each time
 		- cache results at first call
 		- exploit cached data on next invoke
@@ -484,6 +485,13 @@ $$C(X_1, X_2) = {(0,0), (0,2), (1,3), (2,1)}$$
 **==Product configuration problem==** -> compatibility constraints on product components, only certain combination of components work together
 for each product $P_i$, we post a **table**($[X_{i1},..,X_{i5}],$ Products)
 
+**==Formal Language-based Constraints==** -> table constraint requires precomputing all solutions
+- We can use a deterministic fine-state machine automaton to define the solutions when it's not possible to precompute.
+Useful when assignments need to obey certain patterns
+
+==**Rostering Problems**== -> (have pattern within x range, we saw this before)
+![[Pasted image 20241016175843.png]]
+we can use a DFSA (Deterministic finite state automaton) to describe the constraint
 
 
 ## 
