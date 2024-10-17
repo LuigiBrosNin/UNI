@@ -194,12 +194,19 @@ file extensions can be changed as they're not part of the digital signature. Sof
 Antiviruses can change the metadata of all the files in the disk.
 Use a different boot than the acquired one in the disk as it prevents dynamic operations that the antivirus on the original boot could do.
 
-the acquired drive might have a virus and thus the place where we 
+The acquired drive might have a virus and thus the place where we access the drive must be protected by an antivirus too.
 
 "A virus did it" -> verify whether that is a valid claim
 
-
-
+==Reporting your findings==
+- Explain to a non-technical person our findings
+- Say what you find precisely, do not assume anything
+	example: you see a black sheep while passing by in a train
+	- ❌ all sheeps are black
+	- ❌ at least 1 sheep is black
+	- ✅ at least that side of the sheep is black
+- Notes add details to explain technical stuff *(eg. what an Hash is)*
+- 
 
 
 ##
