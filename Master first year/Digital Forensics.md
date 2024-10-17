@@ -174,11 +174,16 @@ multiple scenarios when someone calls you to acquire data
 - **Evidence chain of custody tracking form** -> form to track all the info regarding the acquired evidence (self explanatory)
 	- Evidence has to have an id, usually something like `HDD001` for example
 	- Id has to be written with a permanent marker on the evidence
-Evidence must be analised "post mortem" (we can't boot it since it will be altered)
+Evidence must be analized "post mortem" (we can't boot it since it will be altered)
 Three choices for making a working copy
 - **forensic copy** -> bit-for-bit copy of the source to the destination (not common)
 - **forensic image** -> bit-for-bit copy of the source device, stored in a forensic image format
 - **logical forensic image** -> selected folders/files in a forensic image
+
+==Dates and time zones== -> setting the forensic machine and tools to use universal time (UTC) is a standard frame of reference, since the suspect may have changed the time zone settings on their device
+
+**Hash analysis** -> analysis of the digital fingerprint for a file or piece of digital media (generated using a one-way cryptographic algorithm)
+
 
 
 
