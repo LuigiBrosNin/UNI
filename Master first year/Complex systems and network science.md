@@ -659,6 +659,7 @@ $$G = (\{A, B, C, D\}, \{(A, B), (A, C), (A, D), (B, D)\})$$
 
 **Weighted graphs** -> Both directed and undirected graphs can have a weight associated with edges to represent the strength of the relation
 
+$n$ nodes, $2^{m(n-1)2}$ combinations 
 
 11 - 33 MISSING
 
