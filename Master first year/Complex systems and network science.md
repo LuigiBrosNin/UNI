@@ -640,6 +640,8 @@ We need a way to represent networks and capture their properties succinctly and 
 
 **Graph Theory** -> Branch of mathematics for the study of discrete structures called graphs for modeling pairwise relations between objects
 
+==Graph base definitions==
+
 Graph -> pair $G= (N,E)$ where
 - $N$ -> Set of nodes (vertices)
 - $E$ -> set of edges (links, arcs)
@@ -659,7 +661,24 @@ $$G = (\{A, B, C, D\}, \{(A, B), (A, C), (A, D), (B, D)\})$$
 
 **Weighted graphs** -> Both directed and undirected graphs can have a weight associated with edges to represent the strength of the relation
 
-$n$ nodes, $2^{m(n-1)2}$ combinations 
+$n$ nodes, $2^{n(n-1)/2}$ possible combinations 
+
+**Degree** of a node -> number of edges incident on it
+in-degree / out-degree distinction in direct graphs
+![[Pasted image 20241017160827.png]]
+
+**Path** -> alternating sequence of nodes and edges of the graph, can be a **Cycle** where first and last nodes are the same, but otherwise all nodes are distinct
+![[Pasted image 20241017161200.png]]
+- $CABD$ -> simple path
+- $ADBAC$ -> path
+- $BDAB$-> cycle
+
+**Length** -> number of steps in a path, the number of edges
+**Distance** -> between two nodes in a graph is the *length* of the shortest path between them
+**Diameter** -> longest distance between all pairs of nodes (*longest shortest path*)
+**Connected subgraph** -> a subgraph where there is a path between every pair of nodes
+**Component** of a graph -> maximal connected subgraph (directed paths)
+
 
 11 - 33 MISSING
 
