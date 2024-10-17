@@ -705,6 +705,14 @@ Degree-based centrality is not able to capture the notion of **brokerage** -> ab
 	![[Pasted image 20241017145234.png]]
 	:LiArrowBigUp: closeness examples
 
+- ==Eigenvector centrality== -> importance of a node determined by the <u>importance of its neighbors</u> (recursive definition)
+	Informally, an important node in a directed graph is pointed to by lots of other important nodes
+	![[Pasted image 20241017150706.png]]
+	$$R(t+1,B)=\sum\limits_{\forall A:(A,B)\in E} \frac {R(t,A)}{out(A)}$$
+	Formally, the solution is equivalent to solving for the *eigenvector* of a matrix (describing the connectivity of the graph)
+	We can approximate the result algorithmically by iterating
+	![[Pasted image 20241017151142.png]]
+	Example
 
 
 
