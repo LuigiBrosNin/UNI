@@ -1102,8 +1102,14 @@ attribute metadata:
 - Value interval -> both have the same interval of values
 impossible to be 100% accurate
 
-Data transformation -> data into vector
+Data transformation -> data into vectors
 
+**Recall** -> hypothesis function modeled by AI
+![[Pasted image 20241017170336.png]]
+
+**Codification problem** -> not all data is numerical
+
+**Scale problem** -> 
 
 p56
 
