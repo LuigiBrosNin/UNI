@@ -1086,6 +1086,24 @@ Pre-elaboration phases
 ![[Pasted image 20241010172142.png]]
 **Clustering** -> similar values are grouped together, values outside of clusters are anomalies and get scrapped.
 
+**Data Warehousing** -> uploading phase
+**Data mining** -> machine learning phase
+
+**Data integration** -> combines entities and attributes from different sources
+
+==Entity identification==
+table A and B
+`A.customer_id` <-> `B.customer_number`
+how do be disambiguate for sure?
+
+attribute metadata:
+- Attribute name -> string distance between names
+- Attribute type -> both string type
+- Value interval -> both have the same interval of values
+impossible to be 100% accurate
+
+Data transformation -> data into vector
+
 
 p56
 
