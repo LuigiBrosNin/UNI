@@ -206,8 +206,17 @@ The acquired drive might have a virus and thus the place where we access the dri
 	- ❌ at least 1 sheep is black
 	- ✅ at least that side of the sheep is black
 - Notes add details to explain technical stuff *(eg. what an Hash is)*
-- 
+
+> [!notes] ==Details to include in your report==
+> - Communication between primary investigator and prosecutor
+> - Condition of the evidence containers
+> - Specifics of the storage device (make, model, serial, condition)
+> - Personal identifiers of suspect, victim, witness
+> - Forensic hardware/software used
+> - What you examined
+> - What you found
 
 
+## 
 ##
 
