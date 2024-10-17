@@ -184,6 +184,21 @@ Three choices for making a working copy
 
 **Hash analysis** -> analysis of the digital fingerprint for a file or piece of digital media (generated using a one-way cryptographic algorithm)
 
+if the OG file hash is the same as the acquisition, we don't need the original anymore
+
+**File signature** -> get identified in the file system trough an unique signature
+
+file extensions can be changed as they're not part of the digital signature. Software have methods to find the original file extension in case it does not correspond to the actual type of the file. There's also [filesignatures.net] as a DB we can consult to get the original file extension
+
+==Antivirus==
+Antiviruses can change the metadata of all the files in the disk.
+Use a different boot than the acquired one in the disk as it prevents dynamic operations that the antivirus on the original boot could do.
+
+the acquired drive might have a virus and thus the place where we 
+
+"A virus did it" -> verify whether that is a valid claim
+
+
 
 
 
