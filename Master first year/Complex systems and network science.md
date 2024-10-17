@@ -80,13 +80,13 @@ The method of complex system is the scientific one
 ## Dynamical Systems and Non-Linear Dynamics
 
 - ==Dynamics== ->Study of how systems change over time, eg:
-	- Planetary dynamics — motion of planets and other celestial bodies
-	- Fluid dynamics — motion of fluids, turbulence, air flow
-	- Crowd dynamics — behavior of groups of people, stampedes
-	- Population dynamics — how populations vary over time
-	- Climate dynamics — variations in temperature, pressure, hurricanes
-	- Financial dynamics — variations in stock prices, exchange rates
-	- Social dynamics — conflicts, cooperation
+	- Planetary dynamics -> motion of planets and other celestial bodies
+	- Fluid dynamics -> motion of fluids, turbulence, air flow
+	- Crowd dynamics -> behavior of groups of people, stampedes
+	- Population dynamics -> how populations vary over time
+	- Climate dynamics -> variations in temperature, pressure, hurricanes
+	- Financial dynamics -> variations in stock prices, exchange rates
+	- Social dynamics -> conflicts, cooperation
 
 ==Dynamical systems theory== is a branch of mathematics for studying how systems change over time.
 It gives us a vocabulary and a set of tools for describing dynamics.
@@ -261,7 +261,7 @@ The state of a cell at time $t+1$ is a function of cell's state and its neighbor
 	   ![[Pasted image 20240930185753.png]]
 	3. Nearly all initial patterns evolve in a pseudo-random or chaotic manner (**chaotic**)
 	   ![[Pasted image 20240930185805.png]]
-	4. Nearly all initial patterns evolve into structures that interact in complex and interesting ways (**complex** — capable of universal computation)![[Pasted image 20240930185822.png]]
+	4. Nearly all initial patterns evolve into structures that interact in complex and interesting ways (**complex** -> capable of universal computation)![[Pasted image 20240930185822.png]]
 
 #### CAs as dynamical systems
 - CAs are discrete-time (non continuous), deterministic dynamical systems that exhibit fixed-point, periodic and chaotic behavior.
@@ -449,8 +449,8 @@ Generic two-player dilemma game
 	- There isn't enough evidence to convict either one, but each can be charged with a lesser crime (resisting arrest)
 	- Each suspect needs to decide unilaterally (no talking, collusion) whether to “Confess” (C) or “Deny” (D)
 	![[Pasted image 20241009140444.png]]
-	- Confession leads to higher individual payoff — selfishness
-	- Denial leads to higher global payoff — cooperation
+	- Confession leads to higher individual payoff -> selfishness
+	- Denial leads to higher global payoff -> cooperation
 	
 	“Dilemma” because both prisoners would have been better off if both had chosen “Deny”
 	Captures the conflict between individual rationality (selfishness) and common good (cooperation)
@@ -680,10 +680,31 @@ given nodes in a graph, **centrality metrics** try to formalize notions such as 
 eg. Medici is an important family
 
 Different notions of centrality
-- Degree - well connectedness
-- Betweenness — criticality for connectedness
-- Closeness — short distances to the rest of the graph
-- Eigenvector — importance
+- Degree -> well connected-ness
+- Between-ness -> criticality for connected-ness
+- Closeness -> short distances to the rest of the graph
+- Eigenvector -> importance
+Centrality is a property of a node but in context of the entire graph
+
+**Centralization** -> define a global notion of centrality that applies to the entire graph
+
+**Degree centrality** -> the greater the degree of a node, the more "important"
+
+Degree-based centrality is not able to capture the notion of **brokerage** -> ability of a node in a graph to act as a bridge between different components
+
+- **==Between-ness==** -> of a given node $u$  is the fraction of all pairwise shortest paths that go trough $u$
+	$$B(u) = \sum\limits_{all\ pairs\ i,j} \frac {g_{ij}(u)} {g_{ij}}$$
+	$g_{ij}$ -> number of shortest paths between $i,j$
+	$g_{ij}(u)$ -> number of shortest paths between $i,j$ that go trough $u$
+	![[Pasted image 20241017145430.png]]
+	:LiArrowBigUp: examples
+
+- **==Closeness==** -> closeness to the "central" position, close to the rest of the graph, closeness of a given node $u$ :
+	$$C(u)=\frac {n-1}{\sum\limits_{i}d(u,i)}$$
+	$d(u,i)$ -> length of shortest path between nodes $u$ and $i$
+	![[Pasted image 20241017145234.png]]
+	:LiArrowBigUp: closeness examples
+
 
 
 
