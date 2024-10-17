@@ -677,11 +677,26 @@ in-degree / out-degree distinction in direct graphs
 **Distance** -> between two nodes in a graph is the *length* of the shortest path between them
 **Diameter** -> longest distance between all pairs of nodes (*longest shortest path*)
 **Connected subgraph** -> a subgraph where there is a path between every pair of nodes
-**Component** of a graph -> maximal connected subgraph (directed paths)
+**Component** of a graph -> maximal connected subgraph (directed paths can be strongly connected)
+**Giant Component** -> largest component of a graph that contains a significant proportion of all nodes
+**Bridge** -> edge that if deleted increases the number of components of the graph
+	![[Pasted image 20241017162648.png]]
 
+==Clustering==
+**Clustering** -> measure of how "bunched up" (unevenly distributed) the edges are
+**Clustering coefficient of node** $A$ -> probability that two randomly selected friends of $A$ are friends themselves
+$CC$ is between 0 and 1
+![[Pasted image 20241017163316.png]]
+$A$ has 4 friends
+6 possible friendships among them ($4\times 3/2$)
+only 4 are present
+$CC=\frac{4}{6}= 0.\overline 6$
 
-11 - 33 MISSING
-
+**Clustering coefficient of graph** $G$ -> average of $CC$s of all nodes in $G$
+![[Pasted image 20241017163207.png]]
+Clustering quantifies the likelihood that nodes that share a common neighbor are neighbors themselves
+<u>Alternative definition</u> of **clustering coefficient of a graph** -> Proportion of all possible triangles that are actually closed
+![[Pasted image 20241017163836.png]]
 
 **Edge density** -> the actual number of edges in proportion to the maximum possible number of edges in a graph
 $$p = \frac m {n(n-1)/2}=\frac {2m} {n(n-1)} $$
