@@ -1109,9 +1109,14 @@ Data transformation -> data into vectors
 
 **Codification problem** -> not all data is numerical
 
-**Scale problem** -> 
+**Scale problem** -> big numbers are not good in ML, since they work well on normalized values
 
-p56
+==Text codification==
+to solve the codification problem, we just code the strings into vectors (Vectorization)
+
+**Bag-Of-Words** (BOW) -> 
+
+p57
 
   
 # Summaries
