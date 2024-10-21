@@ -518,12 +518,20 @@ Create a new solver and save it as such
 > 
 > [Solution Source](https://github.com/MiniZinc/MiniZincIDE/issues/51)
 
-## Assignment 1 -> N-Queens - Sequence Puzzle
+## Assignment 1 Notes -> N-Queens - Sequence Puzzle
 Dunno if i should publish everything... or publishing anything at all
 
 ⚠ Slide 8 of Class Exercises 1-2 is outdated
 [MinZinc 2.7.6](https://docs.minizinc.dev/en/stable/efficient.html#symmetry) is the updated chapter to look at
 alternatively, use the `var_sqr_sym(B)`, which does exactly the permutation we need
 
+
+## Assignment 2 Notes ->
+not adding `::domain_propagation` does not use GAC
+adding `::domain_propagation` uses it
+
+BC -> **Bounds Consistency** (BC) They detect inconsistent partial assignments of the form $X_{i}=j$ , so $j$ can be removed from $D(X_i)$ via propagation
+
+GAC -> **Generalized Arc Consistency** (GAC, Hyper-arc or domain consistency) basically defines all possible combinations that satisfy the $any$ constraint
 
 ##
