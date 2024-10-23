@@ -5,6 +5,9 @@
 - Exam info
 	Presentation like in the thesis of a paper in the drive "StudentCBD" folder
 	Free choice, no overlap in [here](https://docs.google.com/spreadsheets/d/1I6Xh7wFj9ozuUzDAtw-zrQxuRfPVNgecjnh66mFq3P0/edit?gid=1690026125#gid=1690026125) (you need to compile the [form](https://docs.google.com/forms/d/e/1FAIpQLSduUzBrGG8hvDghXlcx9u4DR4pRu9NUEl9nH9nt1YVwWx4CjQ/viewform) to get in) (links for 2024/25)
+	CHANGE THE REFERENCES FROM THE TEMPLATE PLS
+	You'll get the slides in google slides through mail after compiling the form
+	Presentation in 30m time, "expand the scopes of the paper"
 
 # Theory
 
@@ -1116,7 +1119,7 @@ Data transformation -> data into vectors
 ==Text codification==
 to solve the codification problem, we just code the strings into vectors (Vectorization)
 
-**Bag-Of-Words** (BOW) -> 
+**Bag-Of-Words** (BOW) -> every variable of a vector is a specific word with boolean values, `true` if 
 
 p57
 
