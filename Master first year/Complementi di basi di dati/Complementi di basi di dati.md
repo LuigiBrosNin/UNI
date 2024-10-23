@@ -1119,11 +1119,15 @@ Data transformation -> data into vectors
 ==Text codification==
 to solve the codification problem, we just code the strings into vectors (Vectorization)
 
-**Bag-Of-Words** (BOW) -> every variable of a vector is a specific word with boolean values, `true` if 
+**Bag-Of-Words** (BOW) -> every variable of a vector is a specific word with boolean values, `true` if the word appears in the text. 
 
-p57
+==Category codification==
+**Hot codification** -> same as BOW, but every variable is a category, and only 1 can be true
 
-  
+**Resizing (Normalization)** -> better performance and precision in ML, usually obtained trough linear resizing.
+
+
+
 # Summaries
 
 
