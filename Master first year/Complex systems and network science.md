@@ -752,5 +752,16 @@ Degree-based centrality is not able to capture the notion of **brokerage** -> ab
 
 
 
+## Real Networks and Universal Properties
+SLIDE 1 -> 7 missing
+
+![[Pasted image 20241024133355.png]]
+
+
+
+
 ##
 ##
+
+# Paper presentation
+==TODO Select a paper==
