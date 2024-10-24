@@ -753,10 +753,30 @@ Degree-based centrality is not able to capture the notion of **brokerage** -> ab
 
 
 ## Real Networks and Universal Properties
-SLIDE 1 -> 7 missing
+Networks are typically very different at the microscopic level
+==Universal structural properties==:
+- **Heavy-tailed degree distributions** -> “hubs”, “connectors”
+- **Small diameter** -> “six degrees of separation”
+- **Highly clustered** -> “friends of a friend are friends”
+- **Well connected** -> only one giant component
+Need to make precise the notions “heavy”, “small”, “highly” and “well”
+
+- Heavy-tailed distributions
+	![[Pasted image 20241024134450.png]]
+	- Nodes with **small degree** are most frequent
+	- Fraction of high-degree nodes decreases but much more slowly than what is predicted by the random models with Poisson or Normal degree distributions which decay exponentially
+	- Typical of networks that have a few hub or connector nodes with very high degree and many nodes with small degree
+	- What are the signatures of heavy-tailed distributions?
+
+SLIDE 5 -> 7 missing
 
 ![[Pasted image 20241024133355.png]]
-
+==Plotting degree distributions==
+A straight line on a **log-log scale** becomes the signature of power-law
+distributions
+$$f(x) = cx−α$$$$\log( f(x)) = \log(cx^{−α} )$$$$\log( f(x)) = \log(c) + \log(x^{−α})$$$$\log( f(x)) = \log(c) − α\log(x)$$
+Power-law distributions in the wild Math Reviews co-authorship
+![[Pasted image 20241024134118.png]]
 
 
 
