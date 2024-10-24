@@ -778,6 +778,15 @@ $$f(x) = cx−α$$$$\log( f(x)) = \log(cx^{−α} )$$$$\log( f(x)) = \log(c) + \
 Power-law distributions in the wild Math Reviews co-authorship
 ![[Pasted image 20241024134118.png]]
 
+SLIDE ? -> 22 MISSING
+
+==**Scale-free networks**== ->Networks with degree distributions that are described by power-laws
+
+$f(x)$ is called scale free if $f(bx)=C(b)\cdot f(x)$
+$C(b)$ -> some constant that depends only on $b$
+aka, the overall form of the function does not change when considering values for $x$ that are a factor $b$ larger
+related to mathematics **fractals**
+![[Pasted image 20241024143222.png]]
 
 
 ##
