@@ -274,6 +274,14 @@ Write blocker: garantisce integrita' del device che sto leggendo
 **DD** image -> UNIX command, oldest imaging tool available that has migrated to other platforms
 **dcfldd** -> add-on for forensic imgs, supports hash which is important for us
 
+==SSD==
+SSD device *firmware* uses **Wear leveling** -> feature that ensures the storage blocks on a device *are used at a similar rate* (since writes for each sector is limited)
+Plugging in the solid-state device can cause the firmware to mode data around, thus not making the hashes of the copy correspond.
+Also, more time passes, the harder it is to restore trashed data because of this.
+
+
+
+
 
 
 
