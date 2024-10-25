@@ -218,7 +218,7 @@ The acquired drive might have a virus and thus the place where we access the dri
 
 
 
-## Appunti da sistemare
+## TODO Appunti da sistemare
 FTK Imager domanda su formattazione:
 - distinguiamo tra formattazione "veloce" ad alto livello e "approfondita" a basso livello
 
@@ -264,6 +264,18 @@ CREATING STERILE MEDIA
 Understanding write blocker
 Write blocker: garantisce integrita' del device che sto leggendo
 - HW o SW
+
+## Defining forensic imaging
+**Forsensic copy** -> bit-for-bit copy of the source to the destination
+(not common, ensure destination device has no old data from previous investigations)
+
+**Forensic image** format -> DD image, E01 image, AFF image, wraps the source data in a protective wrapper
+
+**DD** image -> UNIX command, oldest imaging tool available that has migrated to other platforms
+
+
+
+
 
 ##
 
