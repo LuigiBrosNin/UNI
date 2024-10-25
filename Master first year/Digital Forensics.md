@@ -219,28 +219,22 @@ The acquired drive might have a virus and thus the place where we access the dri
 
 
 ## FTK Imager and formatting
-Formatting
+==Formatting==
 - Low level
 	- militar method -> 7 consequential formattings
 	- bitlocker + formatting
 - High level
 
+==software and validation affidability==
+- de facto standard -> software used by the majority
+- benchmark with other tools
+- coherency -> same measures on same input
 
------
-Modi per certificare l'affidaibilita' dei software di validazione usati:
-- Standard de Facto: se e' il software usato per la maggiore
-- Confronto con altri strumenti (benchmark)
-- Strumento coerente: il sw deve sempre restituire la stessa misurazione su stesso imput (necessario ma non sufficiente)
-
-
-Mitigare attacchi agli strumenti o ai processi:
-- prendere nota durante l'esame (log file "a mano")
-- capire come funziona lo strumento
-	- lettura di manuali
-- certificarsi per l'uso di uno strumento
-	- rilasciato da aziende
-	- molto costoso
-- usare struementi certificati
+==Mitigating attacks at tools and processes==
+- take notes during exams
+- understand the tool (read manual)
+- certification for tool usage (costly)
+- using certified tools
 
 Autopsy
 - name
@@ -250,19 +244,14 @@ Autopsy
 - MAC (modified, accessed, created) in ISO yyyy-mm-dd e hh:mm:ss
 - hash
 
+==CREATING STERILE MEDIA==
+File destination of image must be
+- clean (new or formatted)
+- physically integral
+Data can be preserved only "a norma di legge"
 
-/*---------------------------------------------------------------------------*/
-CREATING STERILE MEDIA
-
-- Il disco di destinazione della immagine deve essere:
-	- pulito: nuovo o formattato
-	- integro fisicamente
-- I dati possono essere conservati solo a norma di legge
-
-
-Understanding write blocker
-Write blocker: garantisce integrita' del device che sto leggendo
-- HW o SW
+==Understanding write blocker==
+Write blocker -> ensures integrity of reading device (hardware/software)
 
 ## Defining forensic imaging
 **Forsensic copy** -> bit-for-bit copy of the source to the destination
