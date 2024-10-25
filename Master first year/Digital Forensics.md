@@ -218,6 +218,52 @@ The acquired drive might have a virus and thus the place where we access the dri
 
 
 
-## 
+## Appunti da sistemare
+FTK Imager domanda su formattazione:
+- distinguiamo tra formattazione "veloce" ad alto livello e "approfondita" a basso livello
+
+Due metodi per buona formattazione basso livello
+- metodo militare: 7 formattazioni consecutive
+- bitlocker + formattazione
+
+
+-----
+Modi per certificare l'affidaibilita' dei software di validazione usati:
+- Standard de Facto: se e' il software usato per la maggiore
+- Confronto con altri strumenti (benchmark)
+- Strumento coerente: il sw deve sempre restituire la stessa misurazione su stesso imput (necessario ma non sufficiente)
+
+
+Mitigare attacchi agli strumenti o ai processi:
+- prendere nota durante l'esame (log file "a mano")
+- capire come funziona lo strumento
+	- lettura di manuali
+- certificarsi per l'uso di uno strumento
+	- rilasciato da aziende
+	- molto costoso
+- usare struementi certificati
+
+Autopsy
+- name
+- type
+- mime type
+- size
+- MAC (modified, accessed, created) in ISO yyyy-mm-dd e hh:mm:ss
+- hash
+
+
+/*---------------------------------------------------------------------------*/
+CREATING STERILE MEDIA
+
+- Il disco di destinazione della immagine deve essere:
+	- pulito: nuovo o formattato
+	- integro fisicamente
+- I dati possono essere conservati solo a norma di legge
+
+
+Understanding write blocker
+Write blocker: garantisce integrita' del device che sto leggendo
+- HW o SW
+
 ##
 
