@@ -218,13 +218,12 @@ The acquired drive might have a virus and thus the place where we access the dri
 
 
 
-## TODO Appunti da sistemare
-FTK Imager domanda su formattazione:
-- distinguiamo tra formattazione "veloce" ad alto livello e "approfondita" a basso livello
-
-Due metodi per buona formattazione basso livello
-- metodo militare: 7 formattazioni consecutive
-- bitlocker + formattazione
+## FTK Imager and formatting
+Formatting
+- Low level
+	- militar method -> 7 consequential formattings
+	- bitlocker + formatting
+- High level
 
 
 -----
