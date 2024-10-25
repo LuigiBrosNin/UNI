@@ -272,6 +272,9 @@ Write blocker: garantisce integrita' del device che sto leggendo
 **Forensic image** format -> DD image, E01 image, AFF image, wraps the source data in a protective wrapper
 
 **DD** image -> UNIX command, oldest imaging tool available that has migrated to other platforms
+**dcfldd** -> add-on for forensic imgs, supports hash which is important for us
+
+
 
 
 
