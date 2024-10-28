@@ -807,7 +807,24 @@ related to mathematics **fractals**
 Smallest Diameter -> $1$
 Largest Diameter -> $n-1$ (grows linearly)
 
-A network exhibits small diameter if it is not constant but grows sublinearly with network size -> log n, loglog n, etc
+A network exhibits small diameter if it is not constant but grows <u>sublinearly</u> with network size -> $\log n, \log \log n$, etc
+
+diameters and path lengths behave similarly, thus under weak assumptions we can show they're roughly proportional
+![[Pasted image 20241028232707.png]]
+
+==**Clustering coefficient**== -> probability that two randomly selected
+friends of it are friends themselves (*closed triangle*)
+**Edge density** -> number of edges in proportion to the maximum possible number of edges
+**High clustering** -> when the clustering coefficient is significantly greater than the edge density
+
+> [!Notes] Universal properties summary
+> - Heavy-tailed degree distribution
+> - Small diameter and average path length
+> - Highly clustered
+> - Very few (typically just one) connected components
+
+## Erdős-Rényi Model for Network Formation
+TODO
 
 ##
 ##
