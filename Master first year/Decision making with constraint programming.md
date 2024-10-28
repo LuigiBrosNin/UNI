@@ -170,7 +170,7 @@ we'll define an equivalent model and then <u>combine</u> the two models to creat
 
 **Lex model**
 Variables and Domains
-- ❕ we represent the board with $n x n$ Boolean variables $B_{ij} ∊ [0..1]$.
+- ❕ we represent the board with $n x n$ Boolean variables $B_{ij} \in [0..1]$.
 Attacking Constraints
 - $\sum\limits 𝐵_{ij}= 1$ on all rows and columns, $\sum\limits 𝐵_{𝑖𝑗} ≤ 1$ on all diagonals.
 Symmetry Breaking Constraints
@@ -205,7 +205,7 @@ the difference is visual and self explanatory
 we can get a *combined model*
 
 Variables
-- $[X_1, X_2, …, X_n], [Y_1, Y_2, …, Y_n] ∊ [1..n]$
+- $[X_1, X_2, …, X_n], [Y_1, Y_2, …, Y_n] \in [1..n]$
 Constraints
 - alldifferent($[X_1, X_2, …, X_n]$)
 - alldifferent($[Y_1, Y_2, …, Y_n]$)
@@ -217,7 +217,7 @@ Channeling Constraints
 *we can omit 3/4 constraints*, the first 2 and either of the other 2, which leaves us with only 1 constraints
 
 Variables
-- $[X_1, X_2, …, X_n], [Y_1, Y_2, …, Y_n] ∊ [1..n]$
+- $[X_1, X_2, …, X_n], [Y_1, Y_2, …, Y_n] \in [1..n]$
 Constraints
 - $\forall i<j\ |X_i - X_j| ≠ |i - j|$
 Channeling Constraints
