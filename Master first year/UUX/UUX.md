@@ -1,8 +1,6 @@
 
 > Notes taken by Luizo ( [@LuigiBrosNin](https://t.me/LuigiBrosNin) on Telegram)
 
-
-![[Media/Untitled 61.png|Untitled 61.png]]
 # Riassunti di Teoria
 
 ## 02 - Introduction to UUX
