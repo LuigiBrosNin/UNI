@@ -825,6 +825,7 @@ friends of it are friends themselves (*closed triangle*)
 
 ## Erdős-Rényi Model for Network Formation
 TODO
+test
 
 ##
 ##
