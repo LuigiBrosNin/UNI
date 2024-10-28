@@ -763,20 +763,33 @@ Need to make precise the notions “heavy”, “small”, “highly” and “w
 
 - Heavy-tailed distributions
 	![[Pasted image 20241024134450.png]]
-	- Nodes with **small degree** are most frequent
+	- Nodes with **small degree** (eg. number of connection per node) are most frequent
 	- Fraction of high-degree nodes decreases but much more slowly than what is predicted by the random models with Poisson or Normal degree distributions which decay exponentially
 	- Typical of networks that have a few hub or connector nodes with very high degree and many nodes with small degree
-	- What are the signatures of heavy-tailed distributions?
+	What are the <u>signatures</u> of heavy-tailed distributions? -> Plotting degree distribution
 
-SLIDE 5 -> 7 missing
+- Plotting degree distributions
+	two forms for the distribution function
+	- Exponential $f(x)=c^{-x}$
+	- Power-law $f(x)=cx^{-a}$
+	![[Pasted image 20241024133355.png]]
+	A straight line on a **log-log scale** becomes the signature of power-law distributions
+	$$f(x) = cx−α$$$$\log( f(x)) = \log(cx^{−α} )$$$$\log( f(x)) = \log(c) + \log(x^{−α})$$$$\log( f(x)) = \log(c) − α\log(x)$$
+	Power-law distributions in the wild Math Reviews co-authorship
+	![[Pasted image 20241024134118.png]]
+	![[Pasted image 20241028225715.png]]
 
-![[Pasted image 20241024133355.png]]
-==Plotting degree distributions==
-A straight line on a **log-log scale** becomes the signature of power-law
-distributions
-$$f(x) = cx−α$$$$\log( f(x)) = \log(cx^{−α} )$$$$\log( f(x)) = \log(c) + \log(x^{−α})$$$$\log( f(x)) = \log(c) − α\log(x)$$
-Power-law distributions in the wild Math Reviews co-authorship
-![[Pasted image 20241024134118.png]]
+==Power-laws and popularity==
+
+> *A power law is a functional relationship between two quantities, where a relative change in one quantity results in a relative change in the other quantity*
+
+Popularity is a phenomenon characterized by extreme imbalances due to
+network effects, it is a result of positive feedback or reinforcement due to correlated decisions in a population.
+The “rich-get-richer” phenomenon
+
+We measure popularity with the number of in-edges
+
+
 
 SLIDE ? -> 22 MISSING
 
