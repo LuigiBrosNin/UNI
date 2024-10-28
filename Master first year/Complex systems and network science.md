@@ -787,13 +787,14 @@ Popularity is a phenomenon characterized by extreme imbalances due to
 network effects, it is a result of positive feedback or reinforcement due to correlated decisions in a population.
 The “rich-get-richer” phenomenon
 
-We measure popularity with the number of in-edges
+We measure **popularity** with the *number of in-edges*, and from web data (contrary from what we would expect from the central limit theorem) the fraction of pages that have $k$ in-edges follows a power-law and is approximately proportional to $k^{−c}$
 
+iPhone app popularity
+![[Pasted image 20241028230740.png]]
 
+Small changes in early history can change the ranking
 
-SLIDE ? -> 22 MISSING
-
-==**Scale-free networks**== ->Networks with degree distributions that are described by power-laws
+==**Scale-free networks**== -> Networks with degree distributions that are described by power-laws (adhere to that distribution)
 
 $f(x)$ is called scale free if $f(bx)=C(b)\cdot f(x)$
 $C(b)$ -> some constant that depends only on $b$
@@ -801,6 +802,12 @@ aka, the overall form of the function does not change when considering values fo
 related to mathematics **fractals**
 ![[Pasted image 20241024143222.png]]
 
+==Path lengths==
+**Diameter** -> longest shortest path
+Smallest Diameter -> $1$
+Largest Diameter -> $n-1$ (grows linearly)
+
+A network exhibits small diameter if it is not constant but grows sublinearly with network size -> log n, loglog n, etc
 
 ##
 ##
