@@ -1,15 +1,20 @@
-# Luizo's uni obsidian notes
+---
+title: Luizo's uni obsidian notes
+---
+
 Sup!
 
-this is my repo for my public notes regarding my master degree at the university of Bologna in computer science.
+these are my github pages for my public notes regarding my master degree at the university of Bologna in computer science.
+
+You can find the public repository here:
+> https://github.com/LuigiBrosNin/UNI
 
 ## Reading my notes
 Feel free to [clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) or download my repository and [import it on obsidian](https://help.obsidian.md/Files+and+folders/Manage+vaults) for offline ease of reading.
 
-Alternatively, you can find my notes hosted with Quartz here:
-> https://luigibrosnin.github.io/Luizo-s-notes/UNI
+Alternatively, you can read everything here!
 
-If you find any issues or errors about the notes or Obsidian imports, feel free to open an Issue in this repo.
+If you find any issues or errors about the notes or Obsidian imports, feel free to open an Issue in [this](https://github.com/LuigiBrosNin/UNI) repo.
 Notes will be taken in the same language as the courses' materials language.
 
 ## Other links
