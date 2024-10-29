@@ -7,7 +7,7 @@ this is my repo for my public notes regarding my master degree at the university
 Feel free to [clone](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) or download my repository and [import it on obsidian](https://help.obsidian.md/Files+and+folders/Manage+vaults) for offline ease of reading.
 
 Alternatively, you can find my notes hosted with Quartz here:
-> https://luigibrosnin.github.io/Luizo-s-notes/UNI
+> https://luigibrosnin.github.io/Luizo-s-notes
 
 If you find any issues or errors about the notes or Obsidian imports, feel free to open an Issue in this repo.
 Notes will be taken in the same language as the courses' materials language.
