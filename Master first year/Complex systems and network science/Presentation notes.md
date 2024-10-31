@@ -25,3 +25,19 @@ Under the conditions that allow for a stable cooperative-communicative state, ag
 # 2 Background
 4.
 called **norm** when the strategy encodes a set of rules that is followed by the large majority of a social group.
+**image-scoring**, which says that ‘cooperate with cooperators, defect with defectors’
+**standing** (defined recursively: some-
+one is in good standing if they cooperated, or if they defected against someone in bad standing),
+**Stern judging**, similar to standing, additionally puts those who cooperate with those in bad standing into bad standing 
+
+all create an incentive to heed an opponent's reputation when choosing how to act
+
+5.
+truth comms relies on pressure, (stable -> both benefit from truth, receiver and signaler or or when direct observation and partner-choice supplement the signals themselves)
+basic form -> no pressure on signalers, we need to discourage lying/signal-withholding
+
+# 3 Model 1 -> A first pass
+6.
+Effective communication definition
+
+
