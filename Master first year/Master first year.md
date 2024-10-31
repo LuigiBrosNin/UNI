@@ -1,7 +1,8 @@
 %% Begin Waypoint %%
 - [[Architetture software a microservizi]]
 - **[[Complementi di basi di dati]]**
-- [[Complex systems and network science]]
+- **[[Complex systems and network science]]**
+	- [[Presentation notes]]
 - [[Decision making with constraint programming]]
 - [[Digital Forensics]]
 - [[Intelligenza artificiale]]
