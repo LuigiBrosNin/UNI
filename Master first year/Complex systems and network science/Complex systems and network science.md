@@ -831,4 +831,7 @@ TODO
 
 # Paper presentation
 
+%% Begin Waypoint %%
+- [[Presentation notes]]
 
+%% End Waypoint %%
