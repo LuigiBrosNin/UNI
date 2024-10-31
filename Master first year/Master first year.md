@@ -10,7 +10,6 @@
 - [[Simulazione di modelli]]
 - [[Social network analysis]]
 - **[[UUX]]**
-	- **[[GIMP- puzzle-based image modifier]]**
 
 %% End Waypoint %%
 

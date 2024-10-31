@@ -199,4 +199,10 @@ eg. a menu divided by courses
 
 Free software is the way (Ironic since you’re reading this in Notion), but at the time of writing this, GIMP’s out of touch UI is something that gets the whole program discredited, and many use this argument against free software. I do not agree.
 
-![[Media/Untitled 4 7.png|Untitled 4 7.png]]
+
+##
+
+%% Begin Waypoint %%
+- [[GIMP- puzzle-based image modifier]]
+
+%% End Waypoint %%
