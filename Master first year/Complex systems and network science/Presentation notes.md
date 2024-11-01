@@ -56,6 +56,14 @@ Signal
 Focal discriminators
 12.
 Analysis
-
-
-p9
+check
+1. cooperative (at most e-fraction agents deflect)
+2. effectively comunicate
+3. stable
+13.
+problems
+unpunished language
+unexpressed traits
+# 4 Model 2: Next!
+14
+changes to address instability
