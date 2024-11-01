@@ -1,6 +1,7 @@
 
 [Tit for tattling: Cooperation, communication, and how each could stabilize the other](https://arxiv.org/pdf/2201.06792)
 
+warning: very drafty, many things get repeated and the order is kinda messed up
 # 1 Introduction
 1.
 Notion of indirect reciprocity
@@ -37,6 +38,7 @@ truth comms relies on pressure, (stable -> both benefit from truth, receiver and
 basic form -> no pressure on signalers, we need to discourage lying/signal-withholding
 
 # 3 Model 1 -> A first pass
+(
 6.
 Effective communication definition
 Stable definition
@@ -44,4 +46,16 @@ Stable definition
 cooperation definition, correspondence to prisoner's dilemma
 8.
 model description
+strategy / focal strategy
+) ?
+9.
+Action
+10.
+Signal
+11.
+Focal discriminators
+12.
+Analysis
 
+
+p9
