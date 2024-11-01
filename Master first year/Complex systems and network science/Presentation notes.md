@@ -39,5 +39,9 @@ basic form -> no pressure on signalers, we need to discourage lying/signal-withh
 # 3 Model 1 -> A first pass
 6.
 Effective communication definition
-
+Stable definition
+7.
+cooperation definition, correspondence to prisoner's dilemma
+8.
+model description
 
