@@ -67,3 +67,4 @@ unexpressed traits
 # 4 Model 2: Next!
 14
 changes to address instability
+model description
