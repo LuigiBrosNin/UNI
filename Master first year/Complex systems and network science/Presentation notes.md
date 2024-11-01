@@ -11,10 +11,9 @@ its first-order cost, making it potentially evolutionarily viable.
 
 communication is required to disseminate reputation.
 
-2.
 > Under what conditions does the interaction between signaling and cooperation stabilize both high levels of (altruistic) cooperation and truthful, informative, and forthcoming (i.e. effective) communication?
 
-3.
+2.
 Model:
 agents evolve over act in a prisoner's dilemma and communicate about the actions of others
 
