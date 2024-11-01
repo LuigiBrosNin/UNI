@@ -67,4 +67,11 @@ unexpressed traits
 # 4 Model 2: Next!
 14
 changes to address instability
+observers info
+15
 model description
+error numbers 1-e 1-delta
+16
+focal strategy
+analysis
+
