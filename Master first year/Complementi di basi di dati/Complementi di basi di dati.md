@@ -93,7 +93,7 @@ SQL/XML is a bridge for archiving locally these data in a relational manner
 - ==Operators==
     - ==XMLELEMENT== → creates an XML element with args
         
-        ![[Home/UNI/Public media/complementi_basi_42.png]]        
+        ![[complementi_basi_42.png]]        
         - Name → given explicitly trough a constant
         - Content → you can specify any objects, elements or strings ( concat op → || )
         - attributes → optional list

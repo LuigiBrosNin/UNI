@@ -1,5 +1,6 @@
 %% Begin Waypoint %%
 - [[Architetture software a microservizi]]
+- **[[attachments]]**
 - **[[Complementi di basi di dati]]**
 - **[[Complex systems and network science]]**
 - [[Decision making with constraint programming]]

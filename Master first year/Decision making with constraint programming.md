@@ -507,6 +507,19 @@ enumerates all possible variable-value combinations via **systematic backtrackin
 Complexity $O(d^{n})$, exponential
 ![[Pasted image 20241104142957.png]]
 :LiArrowBigUp: simple example about how search iterates, notice the difference with propagation on the domains
+![[Pasted image 20241104143515.png]]
+![[Pasted image 20241104143525.png]]
+![[Pasted image 20241104144140.png]]
+(Arc consistent propagation, also checks for feasibility of possibile spaces after FC propagation)
+
+==Depth-first Search (DFS)==
+Usually consists of posting a unary constraint on a chosen variable $X_i$.
+
+**Enumeration (or labelling)** with single values from $D(X_i)$
+![[Pasted image 20241104144651.png]]
+
+**Domain partitioning** of $D(X_i)$
+![[Pasted image 20241104145258.png]]
 
 
 
