@@ -571,7 +571,18 @@ Choose the variable $X_i$ with minimum $dom(X_i) / w(X_i)$.
 
 ==Heavy tail behavior==
 ![[Pasted image 20241104155454.png]]
-- instance + solver paramete
+- Instance + solver parameters combination causes the trap into an exponential subtree
+- A mistake early during search we get stuck in trashing
+- Such mistakes are seemingly *random*
+
+We can use the power of *Randomization* to our favor (eg. picking randomized parameters in search).
+We can *restart* the search after a certain amount of resources are consumed, and in subsequent runs, search differently.
+This makes us learn from the accumulated experiences of previous runs 🧠
+
+==Restart strategies==
+- **Constant** restart
+- **Geometric** restart
+- **Luby** restart
 
 
 
