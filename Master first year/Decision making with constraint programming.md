@@ -543,6 +543,26 @@ How do we know if a CSP is feasible or not?
 	- choose next the value that is most likely to be part of a solution (least constrained value)
 - Variable Ordering Heuristics (VOHs)
 
+==Minimum domain (dom)== 
+Generic Dynamic VOHs based on FF
+- Choose next the variable with minimum domain size.
+- Idea: minimize the search tree size.
+![[Pasted image 20241104152727.png]]
+![[Pasted image 20241104152811.png]]
+![[Pasted image 20241104152837.png]]
+![[Pasted image 20241104152852.png]]
+
+==Most constrained (deg)==
+- Choose next the variable involved in most number of constraints.
+- Idea: maximize constraint propagation.
+
+Why not use both lol
+- **Minimize** $\frac {dom}  {deg}$ -> smallest domain and biggest constraints number
+
+Map colouring example on slides, am not reporting it here but helps understand the search tree size with various methods
+
+
+
 
 ##
 ##
