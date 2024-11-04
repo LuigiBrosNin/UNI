@@ -512,7 +512,9 @@ Complexity $O(d^{n})$, exponential
 ![[Pasted image 20241104144140.png]]
 (Arc consistent propagation, also checks for feasibility of possibile spaces after FC propagation)
 
-==Depth-first Search (DFS)==
+### Depth-first Search (DFS)
+
+#### Branching decisions
 Usually consists of posting a unary constraint on a chosen variable $X_i$.
 
 **Enumeration (or labelling)** with single values from $D(X_i)$
@@ -520,9 +522,26 @@ Usually consists of posting a unary constraint on a chosen variable $X_i$.
 
 **Domain partitioning** of $D(X_i)$
 ![[Pasted image 20241104145258.png]]
+$S$ represents an arbitrary *Subset* of $D(X_i)$
 
+Branching/Search Heuristics
+- guide the search (eg deciding how to branch), known also as **Variable and value ordering** (vvo) heuristics
+- Static vs dynamic heuristics
+	- Static -> each lvl is associated with a variable
+	![[Pasted image 20241104150245.png]]
+	- Dynamic -> any node, any variable and branch can be considered
+	![[Pasted image 20241104150332.png]]
 
+- Problem specific vs generic heuristics
 
+Search Heuristics can go into an *Infeasible sub-problems*, we need to explore the whole sub-tree before backtracking, so we want to do that as fast as possible
+
+**Fail-first (FF) principle** -> try first where you are most likely to fail (we want to probe that a sub tree has no feasible solutions)
+How do we know if a CSP is feasible or not?
+- Trade-off
+	- choose next the variable that is most likely to cause failure
+	- choose next the value that is most likely to be part of a solution (least constrained value)
+- Variable Ordering Heuristics (VOHs)
 
 
 ##
