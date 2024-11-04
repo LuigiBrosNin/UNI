@@ -561,6 +561,17 @@ Why not use both lol
 
 Map colouring example on slides, am not reporting it here but helps understand the search tree size with various methods
 
+==Weighted degree heuristic==
+Constraints are weightet, starting at 1 and incremented by 1 if the constraint fails.
+$$w(X_i)=\sum\limits_{c.s.t\ X_{i}\in X(c)} w(c)$$
+Domain over weighted degree heuristic (**domWdeg**) -> 
+Choose the variable $X_i$ with minimum $dom(X_i) / w(X_i)$.
+
+⚠ Minizinc heuristics calls the fail-first method "minimum weight" (?)
+
+==Heavy tail behavior==
+![[Pasted image 20241104155454.png]]
+- instance + solver paramete
 
 
 
