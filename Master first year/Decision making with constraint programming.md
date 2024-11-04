@@ -494,7 +494,25 @@ Useful when assignments need to obey certain patterns
 we can use a DFSA (Deterministic finite state automaton) to describe the constraint
 
 
-## 
+## Search
+So far we tried to get a smaller search space trough propagation, but we ignored search
+
+==Backtracking Tree Search (BTS)==
+![[Pasted image 20241104142042.png]]
+By default, variables are instantiated sequentially and search is Depth-first traversal.
+![[Pasted image 20241104142158.png]]
+
+==BTS without Propagation==
+enumerates all possible variable-value combinations via **systematic backtracking tree search**
+Complexity $O(d^{n})$, exponential
+![[Pasted image 20241104142957.png]]
+:LiArrowBigUp: simple example about how search iterates, notice the difference with propagation on the domains
+
+
+
+
+
+##
 ##
 ---
 # Exercises
