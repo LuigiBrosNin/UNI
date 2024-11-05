@@ -112,5 +112,10 @@ TODO
 ## Game Playing
 TODO
 
+## Minizinc
+- Declarative language -> describe the problem -> solve the problem
+
+
+
 ##
 ##
