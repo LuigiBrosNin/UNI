@@ -609,7 +609,19 @@ LDS potentially corrects *mistakes made near root*
 
 ==Depth-bounded Discrepancy Search (DDS)==
 
-Biases search to discrepancies high in the tree via an iteratively increasing 
+Biases search to discrepancies high in the tree via an iteratively increasing depth bound (aka, discrepancies below depth $i$ are forbidden)
+![[Pasted image 20241106165422.png]]
+solves LDS problems focusing on the top of the tree
+
+### Constraint Optimization Problems (COPs)
+-> Enhanced CSP with an optimization criterion (eg. min cost, shortest distance, etc)
+$<X,D,C,f>$, where $f$ is the formalization of the optimization criterion as an objective function/variable (minimize $f$, maximize $-f$.
+
+==Solving COPs==
+- Enumeration -> generate all solutions, pick the best (scales badly with many solutions)
+Search over $D(f)$
+
+
 
 
 ##
