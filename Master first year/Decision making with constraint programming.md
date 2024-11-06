@@ -618,8 +618,28 @@ solves LDS problems focusing on the top of the tree
 $<X,D,C,f>$, where $f$ is the formalization of the optimization criterion as an objective function/variable (minimize $f$, maximize $-f$.
 
 ==Solving COPs==
-- Enumeration -> generate all solutions, pick the best (scales badly with many solutions)
-Search over $D(f)$
+- Enumeration -> 
+	- generate all solutions
+	- pick the best
+	- scales badly with many solutions
+- Search over $D(f)$
+	- ==Destructive lower bound==
+		- iterate $v \in D(f)$, starting from $\min(D(f))$
+		- at each iteration, constraint $f\le v$ and solve the CSP
+		- first feasible solution is optimal
+		- intermediate computation results are discarded (**distructive**)
+	- ==Destructive upper bound==
+		- iterate $v \in D(f)$, starting from $\max(D(f))$
+		- at each iteration, constraint $f\le v$ and solve the CSP
+		- problem infeasible, solution from last iteration will be optimal
+	- ==Pro & Cons==
+		![[Pasted image 20241106172341.png]]
+		anytime alg -> can be stopped at anytime and still have a feasible solution on its hands
+	- ==Binary search== (combination of upper/lower)
+		![[Pasted image 20241106173058.png]]
+		
+- Branch & bound
+
 
 
 
