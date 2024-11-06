@@ -639,12 +639,16 @@ $<X,D,C,f>$, where $f$ is the formalization of the optimization criterion as an 
 		![[Pasted image 20241106173058.png]]
 		
 - Branch & bound
+	- Solves a sequence of CSPs via a single search tree and incorporates bounding in the search
+	- Each time a feasible solution is found, posts a new bounding constraint which ensures that a future solution must be better than it.
+	- Backtracks and looks for a new solution with the additional bounding constraint, using the same search tree
+	- Repeats until infeasible -> last solution found is optimal
+	![[Pasted image 20241106174059.png]]
 
 
 
 
-
-##
+## 
 ##
 ---
 # Exercises
