@@ -89,8 +89,7 @@ User models a decision problem by formalizing:
 - **relations** between the unknowns → ==constraints== $(r(X_i, X_i’))$.
 
 > [!note] CSP
-Formalizing a ==Constraint Satisfaction Problem== (CSP)
-a CSP is a triple $<X,D,C>$
+> Formalizing a ==Constraint Satisfaction Problem== (CSP) a CSP is a triple $<X,D,C>$
 > - ==X== -> set of decision variables $(X_1,...,X_n)$
 > - ==D== -> set of domains $\{D_1,...,D_n\}$ for $X$:
 > 	- $D_i$ is a set of possible values for $X_i$;
@@ -581,10 +580,21 @@ This makes us learn from the accumulated experiences of previous runs 🧠
 
 ==Restart strategies==
 - **Constant** restart
+	Restart after using L resources
 - **Geometric** restart
+	Restart after L resources, with limit $\alpha*L$ ($\alpha L, \alpha^{2}L,..$)
 - **Luby** restart
+	Restart after $s[i]L$ following the Luby sequence:
+	$$[1,1,2,1,1,2,4,1,1,2,1,1,2,4,8,...]$$
+	repeats two copies of the sequence ending in $2^i$ before adding the number $2^{i+1}$
 
+==domWdeg & Restarts==
+- it's an heuristic, collects fail counts
+- can be really effective
 
+DFS puts tremendous burden on the heuristics early in the search, and light burden in deep search, so mistakes made near the root are costly
+
+BFS explores first promising nodes according to heuristic evaluatio
 
 ##
 ##
