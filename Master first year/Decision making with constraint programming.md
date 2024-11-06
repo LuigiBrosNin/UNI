@@ -513,7 +513,7 @@ Complexity $O(d^{n})$, exponential
 
 ### Depth-first Search (DFS)
 
-#### Branching decisions
+==Branching decisions==
 Usually consists of posting a unary constraint on a chosen variable $X_i$.
 
 **Enumeration (or labelling)** with single values from $D(X_i)$
@@ -592,9 +592,25 @@ This makes us learn from the accumulated experiences of previous runs 🧠
 - it's an heuristic, collects fail counts
 - can be really effective
 
+### Best-first Search (BFS)
 DFS puts tremendous burden on the heuristics early in the search, and light burden in deep search, so mistakes made near the root are costly
 
-BFS explores first promising nodes according to heuristic evaluatio
+BFS (Best-firsts search) explores first promising nodes according to heuristic evaluation
+
+==Limited Discrepancy Search (LDS)==
+
+**Discrepancy** -> any decision in a search tree that does not follow the heuristic (any right branch out of a node)
+
+LDS ->
+- trusts heuristics and gives priority to left branches
+- iteratively searches the tree by increasing number of discrepancies ($i$ discrepancies)
+![[Pasted image 20241106164805.png]]
+LDS potentially corrects *mistakes made near root*
+
+==Depth-bounded Discrepancy Search (DDS)==
+
+Biases search to discrepancies high in the tree via an iteratively increasing 
+
 
 ##
 ##
