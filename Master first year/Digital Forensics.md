@@ -277,9 +277,13 @@ Also, more time passes, the harder it is to restore trashed data because of this
 
 
 ## Digital documents
-Many documents are PDFe
-In Italy the limit for digital file depositation is 32 gb, all files are digital (for deploying more than 32gb, need permission from the judge)
 
+- Many documents are PDFe
+- In Italy the limit for digital file depositation is 32 gb, all files are digital (for deploying more than 32gb, need permission from the judge)
+- Only some format are accepted, as the formats have to be always readable even in a 15 yo span for example (so (eg) .CAD files are not ok, PDFs and PNGs are okay)
+- Dynamic documents
+	- documents containing macro
+	- documents containing links
 
 
 
