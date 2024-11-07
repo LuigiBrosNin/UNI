@@ -285,6 +285,10 @@ Also, more time passes, the harder it is to restore trashed data because of this
 	- documents containing macro
 	- documents containing links
 
+Copies/Duplicates
+- Informatic copy of analogical document
+- Copy as image on informatic support (a scan lol)
+- Informatic copy of a informatic document (.doc, a folder/zipped folder, different bit sequence)
 
 
 
