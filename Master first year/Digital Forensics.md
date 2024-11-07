@@ -284,12 +284,19 @@ Also, more time passes, the harder it is to restore trashed data because of this
 - Dynamic documents
 	- documents containing macro
 	- documents containing links
+Cannot be signed safely since the output changes
 
-Copies/Duplicates
+**Computer-aided design (CAD)** -> the use of computers to aid in the creation, modification, analysis, or optimization of a design.
+
+==Copies/Duplicates==
 - Informatic copy of analogical document
 - Copy as image on informatic support (a scan lol)
-- Informatic copy of a informatic document (.doc, a folder/zipped folder, different bit sequence)
+- Informatic copy of a informatic document (.doc, a folder/zipped folder, different bit sequence/codification)
+Each type of copy needs certification (from a notary)
 
+
+
+## 
 
 
 
