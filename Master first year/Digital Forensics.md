@@ -276,5 +276,13 @@ Also, more time passes, the harder it is to restore trashed data because of this
 
 
 
+## Digital documents
+Many documents are PDFe
+In Italy the limit for digital file depositation is 32 gb, all files are digital (for deploying more than 32gb, need permission from the judge)
+
+
+
+
+
 ##
 
