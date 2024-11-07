@@ -74,3 +74,5 @@ error numbers 1-e 1-delta
 focal strategy
 analysis
 Thus, no matter the kind of decision, prior deviations cannot produce more beneficial future scenarios
+
+# Meta-signaling
