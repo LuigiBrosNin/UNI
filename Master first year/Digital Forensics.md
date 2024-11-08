@@ -313,6 +313,12 @@ We need to boot our own OS (usually we load *Linux* trough usb)
 - Use a distro compatible with the architecture (x64, ARM, A1, etc.)
 - If encrypted, acquisition is still done as the forensic software is at sequential access, we'll still have an encrypted acquisition but we nonetheless have an acquisition 
 
+WinFE (Windows Forensic Environment) -> windows--based bootable environment
+
+What about mobile phones?
+- Same structure as a pc from abstract level
+- Whole different thing at actual level
+- Everything is encrypted
 
 
 ##
