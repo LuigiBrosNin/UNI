@@ -296,7 +296,10 @@ Each type of copy needs certification (from a notary)
 
 
 
-## 
+## Digital systems
+
+==Boot process==
+
 
 
 
