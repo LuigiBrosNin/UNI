@@ -297,11 +297,19 @@ Each type of copy needs certification (from a notary)
 
 
 ## Digital systems
+Acquisition:
+- live from runtime (sucks, data changes for antivirus etc. uncontrolled environment)
+- physically getting the disk out the pc (not always possible, macbooks have SSDs welded in)
+- live, from another OS (might tamper with the boot process)
 
 ==Boot process==
+BIOS -> Basic Input Output System
 
+Find a way to enter the bios -> search for the combination to interrupt the boot process before trying anything, booting the system is not a good thing
 
-
+we need to boot our own OS (usually we load Linux trough usb)
+- Use a distro compatible with the architecture (x64, ARM, A1, etc.)
+- 
 
 ##
 
