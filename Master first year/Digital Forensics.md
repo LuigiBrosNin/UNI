@@ -302,14 +302,19 @@ Acquisition:
 - physically getting the disk out the pc (not always possible, macbooks have SSDs welded in)
 - live, from another OS (might tamper with the boot process)
 
+It's possible to not be able to acquire the device (BIOS have passwords)
+
 ==Boot process==
 BIOS -> Basic Input Output System
 
 Find a way to enter the bios -> search for the combination to interrupt the boot process before trying anything, booting the system is not a good thing
 
-we need to boot our own OS (usually we load Linux trough usb)
+We need to boot our own OS (usually we load *Linux* trough usb)
 - Use a distro compatible with the architecture (x64, ARM, A1, etc.)
-- 
+- If encrypted, acquisition is still done as the forensic software is at sequential access, we'll still have an encrypted acquisition but we nonetheless have an acquisition 
+
+
 
 ##
 
+##
