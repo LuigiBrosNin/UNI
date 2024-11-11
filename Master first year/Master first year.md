@@ -2,6 +2,7 @@
 - [[Architetture software a microservizi]]
 - **[[attachments]]**
 - **[[Complementi di basi di dati]]**
+	- [[Marketplaces for Data Notes]]
 - **[[Complex systems and network science]]**
 - [[Decision making with constraint programming]]
 - [[Digital Forensics]]
