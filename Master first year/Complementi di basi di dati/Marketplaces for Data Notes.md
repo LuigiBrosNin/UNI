@@ -74,9 +74,9 @@ captures the temporal context of the data.
 two categories:
 - Static/Factual: Data is valid and relevant for
 a long period of time and does not change
-abruptly, i.e., population numbers, geographi-
-cal coordinates, etc.
+abruptly, i.e., population numbers, geographical coordinates, etc.
 - Up To Date: Data is important shortly after
 its creation and loses its relevance quickly, 1. ¢.,
 current stock prices, weather data, or social
 media entries.
+
