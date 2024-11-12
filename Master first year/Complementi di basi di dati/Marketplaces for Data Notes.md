@@ -22,5 +22,26 @@ researching the market and its developments
 
 # methodology and approach
 
-focused on online web services, trading data, raw data or data enrichment tool
+## Definitions
+focused on online web services
+- trading data, 
+- raw data
+- data enrichment tools
 
+data marketplace -> platform on
+which anybody can upload and maintain
+data sets. 
+data vendor -> someone who has data and offers it to others,
+either for a given fee or free of charge. 
+data enrichment services -> that
+take input from the user and enhance it in some
+way, e.g., by analyzing or tagging it.
+
+## Approach
+initial set based on [14], expanded to 12 boolean dimensions of categorized vendors
+
+The facts about the data vendors were gathered by means of a Web search. 
+
+INSERT TABLE OF DIMENSIONS
+
+## Limitations
