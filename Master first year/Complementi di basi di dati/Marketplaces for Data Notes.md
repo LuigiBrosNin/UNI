@@ -63,13 +63,13 @@ without the use of intermediaries.
 # Findings
 objective - subjective dimensions
 
-## Type
+## 1 Type
 used to classify vendors
 based on what their core product is.
 
 brief description of each with TABLE
 
-## Time frame
+## 2 Time frame
 captures the temporal context of the data. 
 two categories:
 - Static/Factual: Data is valid and relevant for
@@ -80,3 +80,24 @@ its creation and loses its relevance quickly, 1. ¢.,
 current stock prices, weather data, or social
 media entries.
 
+TABLE, 20% serves both, many specialize
+
+## 3 Domain
+
+what the actual data is about.
+
+any -> vendors are not restricted and can incorporate arbitrary domains
+
+many any -> data
+market places, search engines, and customizable
+crawlers do indeed serve any domain, depending
+on what customers choose to upload or search for.
+
+TABLE
+
+## 4 Data Origin
+where it comes from.
+describe briefly 6 types
+mainly internet
+
+TABLE
