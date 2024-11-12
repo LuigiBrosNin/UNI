@@ -61,4 +61,22 @@ within a certain ecosystem (such as social networks)
 without the use of intermediaries. 
 
 # Findings
+objective - subjective dimensions
 
+## Type
+used to classify vendors
+based on what their core product is.
+
+brief description of each with TABLE
+
+## Time frame
+captures the temporal context of the data. 
+two categories:
+- Static/Factual: Data is valid and relevant for
+a long period of time and does not change
+abruptly, i.e., population numbers, geographi-
+cal coordinates, etc.
+- Up To Date: Data is important shortly after
+its creation and loses its relevance quickly, 1. ¢.,
+current stock prices, weather data, or social
+media entries.
