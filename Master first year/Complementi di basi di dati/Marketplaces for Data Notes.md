@@ -45,3 +45,20 @@ The facts about the data vendors were gathered by means of a Web search.
 INSERT TABLE OF DIMENSIONS
 
 ## Limitations
+The information we used was taken directly from
+the website of each vendor. 
+
+The market of data vendors and data market
+places is highly active, i.e., new actors emerge and
+others disappear, and the market as such is growing
+rapidly. Therefore, it cannot be guaranteed that this
+study is fully exhaustive with regard to the number
+of vendors in the market. 
+
+we are aware of the fact that a certain amount of data
+is traded directly between (large) corporations or
+within a certain ecosystem (such as social networks)
+without the use of intermediaries. 
+
+# Findings
+
