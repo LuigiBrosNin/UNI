@@ -99,5 +99,71 @@ TABLE
 where it comes from.
 describe briefly 6 types
 mainly internet
+authoritative sources
+
 
 TABLE
+
+## 5 Pricing model
+
+business models basically, 4 main models
+describe briefly
+some overlap having combined models
+
+TABLE
+
+## 6 data access
+which means end-users receive their data from vendors.
+4 categories, describe briefly
+API flexible, less than 30% of API services have only API
+
+TABLE
+
+## 7 Data output
+
+format of data
+reasonable set composed of , list, not described necessary i suppose? maybe very briefly 
+
+TABLE
+
+## 8 Language
+English dominant, website and data distinction in tables
+
+TABLE
+
+## 9 Target Audience
+B2B fashion is the most
+logical application area of data vending.
+
+The more
+general vendors target their offer at all audiences. 
+
+TABLE
+
+---
+subjective dimensions
+
+## 10 Trustworthiness
+depending on the origin of the data as well as on how it is processed. 
+
+types for each category, explained with examples
+
+TABLE
+overlap because of multiple sources
+
+## 11 Size of vendor
+
+division startup -> global player
+low startups, market not easy to enter
+
+TABLE
+
+## 12 Maturity
+
+When there are already established
+vendors with mature projects, the space for new
+companies to enter the market is relatively small.
+
+TABLE
+
+# Related work
