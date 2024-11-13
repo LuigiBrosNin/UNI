@@ -168,4 +168,11 @@ TABLE
 
 # Related work
 
-Expand with differences -> https://www.econstor.eu/bitstream/10419/94187/1/779859502.pdf
+Expand with differences -> https://www.econstor.eu/bitstream/10419/94187/1/779859502.pdf 
+
+mi sa che espando con le differenze del 2014
+
+[3] for trends (idk, meglio le differenze i suppose)
+
+
+
