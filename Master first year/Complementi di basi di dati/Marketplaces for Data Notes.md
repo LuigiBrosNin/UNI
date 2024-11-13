@@ -167,3 +167,5 @@ companies to enter the market is relatively small.
 TABLE
 
 # Related work
+
+Expand with differences -> https://www.econstor.eu/bitstream/10419/94187/1/779859502.pdf

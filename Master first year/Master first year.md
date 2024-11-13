@@ -25,7 +25,7 @@ POSSIBLE ONES 3/4
 
 ---
 
-- [ ] INTRODUCTION TO QUANTUM COMPUTING (da vedere)
+- [x] INTRODUCTION TO QUANTUM COMPUTING (da vedere)
 - [ ] ==**91269**== **- MULTIMEDIA DATA MANAGEMENT** (sembra interessante ed all purpose, ci daro’ un’occhiata piu’ avanti)
 
 
