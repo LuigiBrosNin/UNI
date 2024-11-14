@@ -912,7 +912,7 @@ Structured networks use a routing algorithm that implements key-based routing (K
 - $objectId$ is tracked by the root of key $objectId$
 ![[Pasted image 20241114144001.png]]
 
-(this was confusing, i didn't get the examples)
+(this was confusing, but we're basically just mapping in a way that lets us find stuff in log n time lol)
 
 
 ## Decentralized Network Formation
@@ -950,6 +950,19 @@ attacks -> removing nodes that have the largest degree and links that are bridge
 
 Robustness in how much removal of nodes/links affects connectivity and average path length
 ![[Pasted image 20241114153403.png]]
+
+![[Pasted image 20241114154316.png]]
+
+![[Pasted image 20241114154343.png]]
+
+==Cyclon==
+modified Newscast to generate networks with small diameter and small clustering coefficients
+- instead of picking a random node it picks $Q$ = Oldest node
+![[Pasted image 20241114154600.png]]
+![[Pasted image 20241114154625.png]]
+
+- ==Cyclon Plots==
+	![[Pasted image 20241114154709.png]]
 
 
 
