@@ -912,8 +912,15 @@ Structured networks use a routing algorithm that implements key-based routing (K
 - $objectId$ is tracked by the root of key $objectId$
 ![[Pasted image 20241114144001.png]]
 
+(this was confusing, i didn't get the examples)
 
 
+## Decentralized Network Formation
+The set of all nodes is known and static
+in practical settings it's unrealistic, as the set of nodes is not known, huge and dynamic
+
+##
+##
 
 # Paper presentation
 [[Presentation notes]]
