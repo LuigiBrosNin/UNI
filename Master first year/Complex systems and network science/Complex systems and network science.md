@@ -836,6 +836,30 @@ Definition -> Distributed systems where all nodes are peers without distinction 
 
 Each node can be both a server and a client (provide and consume services)
 
+- Napster functionality example
+	![[Pasted image 20241114132205.png]]
+
+![[Pasted image 20241114132331.png]]
+
+- Example Client/server vs peer to peer
+	![[Pasted image 20241114132550.png]]
+	![[Pasted image 20241114132606.png]]
+
+
+| Client-server                                                        | Peer-to-peer                                                        |
+| -------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| ==Asymmetric==: client and servers carry out different tasks         | ==Symmetric==: No distinction between nodes; they are peers         |
+| ==Global knowledge==: servers have a global view of the network      | ==Local knowledge==: nodes only know a small set of other nodes<br> |
+| ==Centralization==: communications and management are centralized    | ==Decentralization==: no global knowledge, only local interactions  |
+| ==Single point of failure==: a server failure brings down the system | ==Robustness==: several nodes may fail with little or no impact     |
+| ==Limited scalability==: servers easily overloaded                   | ==High scalability==: high aggregate capacity, load distribution    |
+| ==Expensive==: server storage and bandwidth capacity is not cheap    | ==Low-cost==: storage and bandwidth are contributed by users        |
+
+Peer-to-Peer systems are usually structured as “overlays” -> Logical structures built on top of a physical routed communication infrastructure (IP) that creates the allusion of a completely-connected graph
+
+Links are based on logical “knows” relationships rather than physical connectivity
+
+**Churn** -> Nodes may disconnect temporarily, nodes are continuously joining and leaving the system
 
 # Paper presentation
 [[Presentation notes]]
@@ -843,6 +867,8 @@ Each node can be both a server and a client (provide and consume services)
 ##
 
 %% Begin Waypoint %%
+- **[[attachments]]**
+
 - [[Presentation notes]]
 
 %% End Waypoint %%
