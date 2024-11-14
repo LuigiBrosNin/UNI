@@ -893,16 +893,54 @@ Topologies
 Common topologies
 - Flat unstructured
 	![[Pasted image 20241114140010.png]]
+	- Easy to disseminate data
+	- Hard to search for it (*Flooding*, aka request propagates to all nodes until found, high traffic for each request, even with search horizon)
 - Two-level unstructured
 	![[Pasted image 20241114140033.png]]
+	- SuperPeer nodes
+	- Small overlay
 - Flat structured
 	![[Pasted image 20241114140050.png]]
+	- efficient data location
+	- long join and leave procedures
+
+
+
 
 
 
 
 # Paper presentation
 [[Presentation notes]]
+
+You can find the presentation source file in my repo :)
+# NetLogo Notes
+
+**NetLogo** -> Programmable modeling environment, used to model complex system development, FOSS :)
+
+- ==Environment==
+	![[Pasted image 20241114141640.png]]
+	The whole world is a **discrete grid**, each basic region is called a **patch**
+- ==Agents==
+	![[Pasted image 20241114141753.png]]
+	Agents are called **turtles**, they can move independently
+	Each turtle has a
+	- position
+	- heading (expressed in degrees, 0 -> north)
+	- size
+	- color
+	- shape
+	![[Pasted image 20241114141944.png]]
+	Agent action are performed in discrete time, every **tick**
+	
+	Each agent has a set of properties
+	- who
+	- heading
+	- xcor and ycor
+	- shape,size,color
+	- hidden?
+- ==Observer==
+	modifies the environment and the agents
 
 ##
 
