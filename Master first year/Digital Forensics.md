@@ -321,6 +321,12 @@ What about mobile phones?
 - Everything is encrypted
 
 
+## Armi Meeting 14/11/24
+Not relevant to the exam, i just listened B)
+
+I exited quite confused B)
+
+
 ##
 
 ##

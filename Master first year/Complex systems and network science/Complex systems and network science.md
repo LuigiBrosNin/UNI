@@ -826,8 +826,16 @@ friends of it are friends themselves (*closed triangle*)
 ## Erdős-Rényi Model for Network Formation
 TODO
 
-##
-##
+## 11 TODO
+## 12 TODO
+
+## 13 TODO
+
+## Peer-to-Peer Systems
+Definition -> Distributed systems where all nodes are peers without distinction between servers and clients
+
+Each node can be both a server and a client (provide and consume services)
+
 
 # Paper presentation
 [[Presentation notes]]
