@@ -932,8 +932,24 @@ in the algorithm, always keep the most recent entries when exchanging views
 ![[Pasted image 20241114151325.png]]
 ![[Pasted image 20241114151340.png]]
 
-Path length by network size
-![[Pasted image 20241114152008.png]]
+- Newcast Plots
+	Path length by network size
+	
+	![[Pasted image 20241114152008.png]]
+	
+	Path length by round
+	![[Pasted image 20241114152425.png]]
+	
+	Churn affecting the path length between 20 and 40
+	![[Pasted image 20241114152444.png]]
+
+==Robustness of networks==
+some components can be attacked to cause maximum harm
+failures -> removing nodes/links selected at random, included in churn
+attacks -> removing nodes that have the largest degree and links that are bridges
+
+Robustness in how much removal of nodes/links affects connectivity and average path length
+![[Pasted image 20241114153403.png]]
 
 
 
