@@ -916,8 +916,27 @@ Structured networks use a routing algorithm that implements key-based routing (K
 
 
 ## Decentralized Network Formation
-The set of all nodes is known and static
+The set of all nodes is known and static in normal network formation models
 in practical settings it's unrealistic, as the set of nodes is not known, huge and dynamic
+
+We can relax the model to achieve something similiar to Erdos-Renyi network
+
+==Newscast==
+Decentralized protocol, creates and maintains a random overlay
+- Resilient to churn
+- Simple design based on info **gossip**
+	- each node knows its immediate neighbors (its **view**)
+	- each node picks periodically a random node from its view, and exchange their views and updating them 🧠
+$entry =\{node\ adress,\ timestamp\}$
+in the algorithm, always keep the most recent entries when exchanging views
+![[Pasted image 20241114151325.png]]
+![[Pasted image 20241114151340.png]]
+
+Path length by network size
+![[Pasted image 20241114152008.png]]
+
+
+
 
 ##
 ##
