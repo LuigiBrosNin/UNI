@@ -861,6 +861,46 @@ Links are based on logical “knows” relationships rather than physical connec
 
 **Churn** -> Nodes may disconnect temporarily, nodes are continuously joining and leaving the system
 
+Malicious users may try to bring down the system, or run hacked clients in order to avoid contributing resources
+
+P2P enables environments that
+- Highly available
+- Fault-tolerant
+- Self organizing
+- Scalable
+- Difficult or impossible to shut down
+"grassroots" approach and a "democratization" of the internet
+
+Problems
+- Overlay construction and maintenance
+- Data location -> locate data over large number of nodes
+- Data dissemination -> propagate in a robust way
+- Global reasoning with local information -> maintain local views
+- Tolerance to churn -> system invariants despite node arrivals and departures
+
+Applications
+- Sharing content
+- Sharing storage
+- Sharing CPU time
+
+Topologies
+- Unstructured
+- Structured
+	- Centralized
+	- Hierarchical
+- Hybrid
+
+Common topologies
+- Flat unstructured
+	![[Pasted image 20241114140010.png]]
+- Two-level unstructured
+	![[Pasted image 20241114140033.png]]
+- Flat structured
+	![[Pasted image 20241114140050.png]]
+
+
+
+
 # Paper presentation
 [[Presentation notes]]
 
