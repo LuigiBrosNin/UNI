@@ -904,8 +904,13 @@ Common topologies
 	- efficient data location
 	- long join and leave procedures
 
-
-
+==Key-Based Routing==
+Structured networks use a routing algorithm that implements key-based routing (KBR)
+- Nodes are assigned an id (randomly)
+- given key $k$, look for the smallest $id \ge k$ , will be the ==k root==
+- $O(\log n)$ to route the message to the root of $k$
+- $objectId$ is tracked by the root of key $objectId$
+![[Pasted image 20241114144001.png]]
 
 
 
@@ -941,6 +946,8 @@ You can find the presentation source file in my repo :)
 	- hidden?
 - ==Observer==
 	modifies the environment and the agents
+
+slide 10
 
 ##
 
