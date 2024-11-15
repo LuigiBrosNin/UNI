@@ -329,7 +329,13 @@ traditional sectors are 512 bytes, newer ones are 4,096 bytes
 ==MBR (Master Boot Record) partitions==
 Partition table will show us which partition is the active partition, once the starting sector of the active partition is located, the boot process will continue
 
+==Filesystem chronology==
+- FAT12
+- FAT16
+- VFAT
+- FAT32 -> 28 bits to address available clusters
 
+Hard Drives on the "deletion" of a file, only changes the indexing to signal that the blocks are free and can be overwritten, but we're not deleting the file
 
 ## Armi Meeting 14/11/24
 Not relevant to the exam, i just listened B)
