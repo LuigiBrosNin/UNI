@@ -348,8 +348,14 @@ I exited quite confused B)
 
 ## Computer investigation process
 
-==Timeline analysis==
-Chronology basically
+==Timeline analysis== -> Chronology basically
+- Reads last accesses and edits
+- Reads registries
+	- contains browser history
+	- contains devices connected
+	- contains all server connections
+	- contains store locations and configs of drivers
+
 
 
 
