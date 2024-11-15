@@ -320,6 +320,16 @@ What about mobile phones?
 - Whole different thing at actual level
 - Everything is encrypted
 
+Hard disks are delicate
+
+an Hard Drive can have different interfaces, connection cables are easy to find
+
+traditional sectors are 512 bytes, newer ones are 4,096 bytes
+
+==MBR (Master Boot Record) partitions==
+Partition table will show us which partition is the active partition, once the starting sector of the active partition is located, the boot process will continue
+
+
 
 ## Armi Meeting 14/11/24
 Not relevant to the exam, i just listened B)
