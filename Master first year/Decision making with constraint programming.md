@@ -657,8 +657,17 @@ MISSING 1 -> 11
 **Cumulative/Parallel Resource** -> can execute multiple activities in paralel (activities can overlap over time, eg. a multi-core CPU)
 
 ![[Pasted image 20241118144610.png]]
-$r_k$ resource associated with capacity $c_k$
-each $a_i$
+- $r_k$ resource associated with capacity $c_k$
+- Each task $A_i$ requires $rq_{ik}\ge 0$ of each resource $r_k$ during its execution
+- total usage shouldn't exceed $c_k$ 
+- $d_i$ is duration
+Always related by a **cumulative constraint**
+$\forall r_{k}\in R$ with capacity $c_{k}$ -> 
+$$\text{cumulative}([S_1,...,S_n],[d_1,...,d_n],[rq_{1k},...,S_{nk}],c_{k}) 
+\iff \sum\limits_{i|S_{i}\le u < S_{i}d_{i}}rq_{ik}\le c_{k}\ \forall u \in D $$
+RCPSP resources are cumulative
+
+
 
 ##
 ---
