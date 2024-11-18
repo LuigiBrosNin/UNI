@@ -1008,7 +1008,24 @@ Method `Update()` -> defined according to the desired global aggregate
 $S_p$ local variable, current estimate of the aggregate
 `Update`$(S_p,S_{q})=\frac{S_p+S_q}{2}$ (average)
 
-##
+In gossip-based averaging, if the selected peer is a globally random sample, then the expected variance among the estimates decreases exponentially
+![[Pasted image 20241118100757.png]]
+
+==Network size estimation==
+- Base the size estimate on the aggregate value that can be computed trough a decentralized algorithm
+- Compute the arithmetic mean starting from zeroes at all nodes except one that holds 1
+- Mean value is $1/n$ and network size $n$ is obtained by inverting the mean
+
+Vulnerable to failures, especially early on
+We fix it with redundant execution and average all result instances :)
+
+- Robustness plots
+	![[Pasted image 20241118101656.png]]
+	![[Pasted image 20241118101716.png]]
+	![[Pasted image 20241118101726.png]]
+	![[Pasted image 20241118101742.png]]
+
+## 
 ##
 
 # Paper presentation
