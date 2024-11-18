@@ -675,7 +675,13 @@ decide:
 - $S_i$ -> Start Time
 	- $EST_i$ -> $\min(S_i)$ earliest start time (release date)
 	- $LST_i$ -> $\max(S_i)$ latest start time
-- 
+- $d_i$ -> Duration
+- $E_i$ -> End Time
+	- $LET_i$ -> $\max(E_i)$ latest end time (deadline)
+	- $EET_i$ -> $\min(E_i)$ earliest end time
+
+**Preemptive activity** -> can be interrupted at any time
+we'll focus on non-preemptive activities
 
 **Resources** -> asset available to execute operations (eg. capacity, number of seats in a classroom, num of available workers)
 
@@ -717,6 +723,8 @@ $\max_{a_{i\in A}}(E_i-LET_{i})$ -> maximum tardiness
 Throughput (number of tasks finished in $t$ time) / peak resource utilization / sum of set up times and costs
 
 ##
+
+##
 ---
 # Exercises
 ## MiniZinc Setup ⚠ IMPORTANT
@@ -747,7 +755,7 @@ Dunno if i should publish everything... or publishing anything at all
 alternatively, use the `var_sqr_sym(B)`, which does exactly the permutation we need
 
 
-## Assignment 2 Notes ->
+## Assignment 2 Notes
 not adding `::domain_propagation` does not use GAC
 adding `::domain_propagation` uses it
 
@@ -755,4 +763,6 @@ BC -> **Bounds Consistency** (BC) They detect inconsistent partial assignments o
 
 GAC -> **Generalized Arc Consistency** (GAC, Hyper-arc or domain consistency) basically defines all possible combinations that satisfy the $any$ constraint
 
+## Assignment 3 Notes
+`¯\_(ツ)_/¯`
 ##
