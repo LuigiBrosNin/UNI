@@ -669,6 +669,7 @@ decide:
 - Temporal constraints.
 - Performance metric → schedule dependent cost function.
 
+6 -> 10 MISSING
 
 **Resources** -> asset available to execute operations (eg. capacity, number of seats in a classroom, num of available workers)
 
@@ -686,7 +687,24 @@ $$\text{cumulative}([S_1,...,S_n],[d_1,...,d_n],[rq_{1k},...,S_{nk}],c_{k})
 \iff \sum\limits_{i|S_{i}\le u < S_{i}d_{i}}rq_{ik}\le c_{k}\ \forall u \in D $$
 RCPSP resources are cumulative
 
-Unary/Disjunctive/Sequential Resource
+==Unary/Disjunctive/Sequential Resource==
+only 1 activity at a time
+`noOverlap` constraint among any 2 activities
+
+==Temporal Constraints==
+- **Precedence** constraints -> forces one activity to end before another starts
+	$a_{i} \to a_{j}|E_{i}\le S_j$
+	Activities and precedence constraints form DAG
+- **Time-legs** & **Time windows** -> Bounds the difference between the end time and the start time of two activities
+- **Sequence-dependent set up times** -> defined for unary resources, if $a$ and $b$ are scheduled in a sequence, then they must obey a separation constraint
+	![[Pasted image 20241118153626.png]]
+
+==Cost Function==
+**Makespan** -> completion time of the last activity
+we want to minimize the Makespan
+![[Pasted image 20241118154254.png]]
+
+
 
 ##
 ---
