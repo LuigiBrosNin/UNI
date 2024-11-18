@@ -1026,6 +1026,13 @@ We fix it with redundant execution and average all result instances :)
 	![[Pasted image 20241118101742.png]]
 
 ## Rational dynamics
+**Dynamics** -> what is happening in the network (eg. navigation, gossiping, ...)
+**Rational dynamics** -> nodes as individuals/active entities with intent, goals and self-interests
+
+Let's study rational dynamics trough *Game theory*
+
+Players are **rational** -> each tries to maximize her own payoff, given her beliefs about the strategies used by other players
+
 
 
 ##
