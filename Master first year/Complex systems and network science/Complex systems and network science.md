@@ -994,7 +994,19 @@ So far we've seen processes as
 - Gossiping
 - Heartbeat sync
 - Formation creation
+We'll look into **aggregation** now
 
+**Aggregation** -> Each node has an initial value, i want to compute in a decentralized manner an aggregate function over the initial values
+eg. Average
+
+==Gossip instantiation example==
+Style -> Push-pull
+Local state `S` -> current estimate of global aggregate
+Method `SelectPeer()` -> Single random neighbor
+Method `Update()` -> defined according to the desired global aggregate
+
+$S_p$ local variable, current estimate of the aggregate
+`Update`$(S_p,S_{q})=\frac{S_p+S_q}{2}$ (average)
 
 ##
 ##
