@@ -648,7 +648,18 @@ $<X,D,C,f>$, where $f$ is the formalization of the optimization criterion as an 
 
 
 
-## 
+## Constraint-Based Scheduling
+
+MISSING 1 -> 11
+
+**Resources** -> asset available to execute operations (eg. capacity, number of seats in a classroom, num of abailable workers)
+
+**Cumulative/Parallel Resource** -> can execute multiple activities in paralel (activities can overlap over time, eg. a multi-core CPU)
+
+![[Pasted image 20241118144610.png]]
+$r_k$ resource associated with capacity $c_k$
+each $a_i$
+
 ##
 ---
 # Exercises
