@@ -1025,7 +1025,9 @@ We fix it with redundant execution and average all result instances :)
 	![[Pasted image 20241118101726.png]]
 	![[Pasted image 20241118101742.png]]
 
-## 
+## Rational dynamics
+
+
 ##
 
 # Paper presentation
