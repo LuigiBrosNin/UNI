@@ -663,13 +663,19 @@ decide:
 
 ==Constraint-based model==
 - Tasks -> decision variables
+	- correspond to operation performed, we need to decide the position in the timeline of the schedule
 - Resource constraints -> 
 	- unary/disjunctive/sequential resource;
 	- cumulative/parallel resource.
 - Temporal constraints.
 - Performance metric → schedule dependent cost function.
 
-6 -> 10 MISSING
+==Decision variables==
+- $a_i$ -> Activity
+- $S_i$ -> Start Time
+	- $EST_i$ -> $\min(S_i)$ earliest start time (release date)
+	- $LST_i$ -> $\max(S_i)$ latest start time
+- 
 
 **Resources** -> asset available to execute operations (eg. capacity, number of seats in a classroom, num of available workers)
 
@@ -704,7 +710,11 @@ only 1 activity at a time
 we want to minimize the Makespan
 ![[Pasted image 20241118154254.png]]
 
+Total (weighted) ==Tardiness / earliness== costs -> tasks can finish late/early, we calculate it like this (given the end tasks and LET)
+$$\sum\limits_{𝑎_{𝑖 \in 𝐴}} 𝑤_𝑖 ∗ \max(0, 𝐸_𝑖 - 𝐿𝐸𝑇_{𝑖}) \sum\limits_{𝑎_{𝑖 \in 𝐴}} 𝑤_𝑖 ∗ \max(0, EST_{𝑖}-E_{i})$$
+$\max_{a_{i\in A}}(E_i-LET_{i})$ -> maximum tardiness
 
+Throughput (number of tasks finished in $t$ time) / peak resource utilization / sum of set up times and costs
 
 ##
 ---
