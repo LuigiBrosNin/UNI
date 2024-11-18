@@ -1070,13 +1070,27 @@ The individuals will (obv) tend to aggregate
 ==Schelling’s threshold model==
 Schelling’s Segregation Model to study homophily in a fixed grid network based on a threshold $t$
 
-The eight compass neighbors (N, S, E, W, NE, NW, SE, SW) of an individual
+The eight compass neighbors of an individual
 define its “neighborhood”
-- If the percentage of same-type individuals in its neighborhood is at least t, the given individual is happy and stays where it is
+- If the percentage of same-type individuals in its neighborhood is at least $t$, the given individual is happy and stays where it is
 - Otherwise, it is unhappy and it moves to another (empty) grid position
 - Collective game
 ![[Pasted image 20241118111917.png]]
+5 changes from red to green -> $x$ will leave
 
+With a $k\times k$ grid, there are $k^{2}$ possible strategies about choosing where to live
+
+payoffs:
+$h$ -> percentage of neighbor cells with the same type as self
+$t$ -> threshold 
+payoff 1 -> $h\ge t$
+payoff 0 -> $h< t$
+
+individuals move when payoff is 0
+Equilibrium dynamics reached when all players have payoff 1
+
+51% Tolerance leads to almost perfect desegregation (94% of individuals having similar type neighbors)
+##
 
 ##
 
