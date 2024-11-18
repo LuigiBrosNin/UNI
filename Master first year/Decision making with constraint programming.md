@@ -448,7 +448,7 @@ approaches to develop specialized propagation for global constraints
 		$max(N) ≤ \sum\limits_{i}max(X_i)$
 		- cache $max(N)$ as $max\$(N)$
 		- whenever the bounds of a variable $X_i$ is pruned:
-		- $max(N) ≤ max\$(N) – (old(max(X_i)) - max(X_i))$ -> $O(1)$
+		- $max(N) ≤ max\$(N) - (old(max(X_i)) - max(X_i))$ -> $O(1)$
 		Complexity went to $O(n)\to O(1)$ 🤯
 
 - example
@@ -650,10 +650,29 @@ $<X,D,C,f>$, where $f$ is the formalization of the optimization criterion as an 
 
 ## Constraint-Based Scheduling
 
-MISSING 1 -> 11
+**Scheduling** -> ordering resource-requiring tasks over time
 
-**Resources** -> asset available to execute operations (eg. capacity, number of seats in a classroom, num of abailable workers)
+==Resource Constrained Project Scheduling Problem (RCPSP)==
+Given:
+- a set of **resources** with **fixed capacities**,
+- a set of **tasks** with given **duration and resource requirements**,
+- a set of **temporal constraints** between tasks,
+- and a **performance metric**,
+decide:
+- when to execute each task so as to optimize the performance metric, subject to temporal and resource constraints.
 
+==Constraint-based model==
+- Tasks -> decision variables
+- Resource constraints -> 
+	- unary/disjunctive/sequential resource;
+	- cumulative/parallel resource.
+- Temporal constraints.
+- Performance metric → schedule dependent cost function.
+
+
+**Resources** -> asset available to execute operations (eg. capacity, number of seats in a classroom, num of available workers)
+
+==Cumulative/Parallel Resource==
 **Cumulative/Parallel Resource** -> can execute multiple activities in paralel (activities can overlap over time, eg. a multi-core CPU)
 
 ![[Pasted image 20241118144610.png]]
@@ -667,7 +686,7 @@ $$\text{cumulative}([S_1,...,S_n],[d_1,...,d_n],[rq_{1k},...,S_{nk}],c_{k})
 \iff \sum\limits_{i|S_{i}\le u < S_{i}d_{i}}rq_{ik}\le c_{k}\ \forall u \in D $$
 RCPSP resources are cumulative
 
-
+Unary/Disjunctive/Sequential Resource
 
 ##
 ---
