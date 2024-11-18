@@ -1033,6 +1033,49 @@ Let's study rational dynamics trough *Game theory*
 
 Players are **rational** -> each tries to maximize her own payoff, given her beliefs about the strategies used by other players
 
+Iterated network games, prisoner's dilemma
+(i won't explain the dilemma again)
+
+==**Copy and rewire**==
+- Two logically distinct networks:
+	- Random overlay network to maintain connectivity
+	- Application-dependent interaction network
+- Periodically, node P compares its utility with that of a peer Q selected at random (from the connectivity network)
+- If Q has been achieving higher utility
+	- P copies Q ’s strategy
+	- P rewires its links to the neighbors of Q
+- With (very) small probability, node P
+	- “Mutates” its strategy (picks an alternative strategy at random)
+	- Drops all of its current links
+	- Links to a random node
+
+- Pull style interactions
+- Local state $S$ -> Current utility, strategy and neighborhood within an interaction network
+- `SelectPeer()`: Single random sample
+- `Update()`: Copy strategy and neighborhood if the peer is achieving better utility (average payoff achieved so far)
+
+==Homophily==
+Individuals seek similar individuals
+
+Peer effects -> related but different property where individuals adopt the
+behavior of their peers
+
+**Segregation** -> Individuals:
+- Have a type;
+- Achieve utility based on the types of individuals in their surrounding;
+- They care about where they live; 
+- Can move if they're not happy;
+The individuals will (obv) tend to aggregate
+
+==Schelling’s threshold model==
+Schelling’s Segregation Model to study homophily in a fixed grid network based on a threshold $t$
+
+The eight compass neighbors (N, S, E, W, NE, NW, SE, SW) of an individual
+define its “neighborhood”
+- If the percentage of same-type individuals in its neighborhood is at least t, the given individual is happy and stays where it is
+- Otherwise, it is unhappy and it moves to another (empty) grid position
+- Collective game
+![[Pasted image 20241118111917.png]]
 
 
 ##
