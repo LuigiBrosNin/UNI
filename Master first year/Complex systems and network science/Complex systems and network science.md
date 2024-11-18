@@ -961,10 +961,39 @@ modified Newscast to generate networks with small diameter and small clustering 
 ![[Pasted image 20241114154600.png]]
 ![[Pasted image 20241114154625.png]]
 
+- Small clustering coefficient
+- Small average path length
+- Cyclon generated graphs are closer to random (rather than small world)
+
 - ==Cyclon Plots==
 	![[Pasted image 20241114154709.png]]
 
+==Topology management==
+- **Morphogenesis** attempts to understand the processes that control the organized spatial distribution of cells during embryonic development and that give rise to the characteristic forms of *tissues, organs, and overall body anatomy*
+- An interesting theory based on “differential cell adhesion”
+	- different cell types “sort out” based on “likes” and “dislikes” for each other
+	- any cell configuration has an energy level
+	- cells try to minimize the free energy in the system by a stochastic movement process
+![[Pasted image 20241118092423.png]]
 
+In overlay networks we have freedom to define peer relationships as we wish
+- Using the notion of "like" and "dislike" by ranking function
+- We can change topology on the fly
+
+==T-Man==
+Each node maintains a local view of neighbors, and periodically exchange its view with a random neighbor peer
+Each nodes updates its local view by applying the ranking function to the union of the two views
+
+- ==T-Man plots==
+	![[Pasted image 20241118093136.png]]
+	![[Pasted image 20241118093204.png]]
+
+## Aggregation
+Networks seen as the underlying transport mechanism for processes that are being carried out on top of them
+So far we've seen processes as
+- Gossiping
+- Heartbeat sync
+- Formation creation
 
 
 ##
