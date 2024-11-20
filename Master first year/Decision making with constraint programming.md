@@ -722,8 +722,18 @@ $\max_{a_{i\in A}}(E_i-LET_{i})$ -> maximum tardiness
 
 Throughput (number of tasks finished in $t$ time) / peak resource utilization / sum of set up times and costs
 
+==Sample RCPSP==
+![[Pasted image 20241120173534.png]]
+![[Pasted image 20241120173605.png]]
+Typical instances have large domains, how can we define our search heuristics?
 
+==Value selection==
+minimize makespan
+increasing an $S_i$ value (without touching other $S_j$) cannot improve the makespan -> Select $EST_i$
 
+**Regular cost metrics** -> problems where increasing $S_i$ cannot improve the cost
+
+Amazing example on slides about it that i don't paste here (slide 32 -> 50)
 
 
 ##
