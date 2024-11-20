@@ -735,6 +735,20 @@ increasing an $S_i$ value (without touching other $S_j$) cannot improve the make
 
 Amazing example on slides about it that i don't paste here (slide 32 -> 50)
 
+The greedy approach works well most times but it only makes the best decisions locally
+How can we prove optimality after the greedy algorythm?
+**Alternative** -> Mark activity $i$ as postponed (activity $i$ can be selected only after its EST changes)
+**Rationale** -> we want to explore a different branching decision, The scheduling decision changes when $EST_i$ changes
+
+==SetTimes Search strategy==
+Main idea:
+- On the first branch schedule an activity ai with minimum $EST_i$, schedule it at its $EST_i$.
+	- Break ties according to any rule.
+- On backtracking, postpone ai.
+	- When propagation updates $EST_i$, schedule ai.
+
+Works good B)
+doesn't work in Non-regular cost functions and side constraints that alter the problem structures (eg. maximal time legs)
 
 ##
 
