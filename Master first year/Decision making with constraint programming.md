@@ -717,10 +717,14 @@ we want to minimize the Makespan
 ![[Pasted image 20241118154254.png]]
 
 Total (weighted) ==Tardiness / earliness== costs -> tasks can finish late/early, we calculate it like this (given the end tasks and LET)
-$$\sum\limits_{𝑎_{𝑖 \in 𝐴}} 𝑤_𝑖 ∗ \max(0, 𝐸_𝑖 - 𝐿𝐸𝑇_{𝑖}) \sum\limits_{𝑎_{𝑖 \in 𝐴}} 𝑤_𝑖 ∗ \max(0, EST_{𝑖}-E_{i})$$
+$$\sum\limits_{𝑎_{𝑖 \in 𝐴}} 𝑤_𝑖 ∗ \max(0, 𝐸_𝑖 - 𝐿𝐸𝑇_{𝑖}) \sum\limits_{𝑎_{𝑖 \in 𝐴}} 𝑤_𝑖 ∗ \max(0, LET_{𝑖}-E_{i})$$
 $\max_{a_{i\in A}}(E_i-LET_{i})$ -> maximum tardiness
 
 Throughput (number of tasks finished in $t$ time) / peak resource utilization / sum of set up times and costs
+
+
+
+
 
 ##
 
