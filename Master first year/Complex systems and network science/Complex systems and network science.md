@@ -1138,6 +1138,10 @@ classification
 - report -> produces an output
 - command -> does not produce an output
 
+Functions (basically)
+![[Pasted image 20241121145625.png]]
+![[Pasted image 20241121145642.png]]
+
 Style tips
 - camelCase for procedures
 - no underscores in names
@@ -1170,7 +1174,29 @@ Conditionals examples
 Loops examples
 ![[Pasted image 20241121144119.png]]
 
+Lists
+Lists are immutable, ordered and potentially (regarding type) heterogeneous
+`[1, true, "two"]`
 
+General program structure
+1. global variable declaration
+2. agent variable declaration
+3. setup procedure -> global variables initialization, agents creation, environment initialization
+4. go procedure -> implements one cycle of simulation
+
+==Some useful features==
+**Higher order procedures** -> we can simulate it using anonymous procedures/reporters (basically inline functions)
+![[Pasted image 20241121145722.png]]
+example
+![[Pasted image 20241121145757.png]]
+
+**Map, filter and reduce** -> basic constructors that allow efficient and elegant operations on lists.
+- **Map** -> applies an anonymous-reporter to every element in a list.
+- **Filter** -> applies a predicate (in the form of anonymous-reporter) to a list and returns only those items that entails the predicate.
+- **Reduce** -> applies an anonymous-reporter from left to right, resulting in a single value.
+
+**Breeds** -> a way to **subclass** the turtle type ("breeding" an agentset)
+**Graphing** -> 
 
 
 
