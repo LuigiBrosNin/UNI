@@ -862,7 +862,18 @@ decay (real networks exhibit power-law degree distributions that decay way slowe
 Diameter range based on model parameter $p$ -> 0 to 1
 ER diameter (after calculations) is in the order of $l$ steps $\log(n)/\log(z)$ 
 $z$ being the mean $p(n-1)$
+Actual diameter is roughly twice $\log(n)/\log(z)$, and ER is a good predictor of diameter and avg path length for real networks
 
+==ER clustering coefficient==
+**Clustering coefficient** of a node -> probability that two randomly selected friends of it are friends themselves
+in ER model, an edge is present with probability $p$ = CC
+**Edge density** of a network -> actual number of edges in proportion to the
+maximum possible number of edges
+in ER model, $pn(n−1)/2$ nodes on average
+ER models are not highly clustered and are bad predictors
+
+==ER giant component==
+for edge density $p$, expected node degree is $p(n-1) \sim pn$   
 
 
 
