@@ -365,8 +365,8 @@ I exited quite confused B)
 
 # Exam
 - exam dates
-	- end of January
-	- end of February
+	- 30th January
+	-  February
 
 
 
