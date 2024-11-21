@@ -859,7 +859,10 @@ decay (real networks exhibit power-law degree distributions that decay way slowe
 
 ==ER diameter==
 **Diameter** -> longest shortest path between pairs of nodes / the average distance between 2 random nodes
-Diameter range based on $p$ -> 
+Diameter range based on model parameter $p$ -> 0 to 1
+ER diameter (after calculations) is in the order of $l$ steps $\log(n)/\log(z)$ 
+$z$ being the mean $p(n-1)$
+
 
 
 
