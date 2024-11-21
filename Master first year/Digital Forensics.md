@@ -364,9 +364,13 @@ I exited quite confused B)
 ##
 
 # Exam
-- exam dates
+- exam dates AA 24/25
+	- 2th Jan deadline for papers
 	- 30th January
-	-  February
+	--- 
+	- 30th Jan deadline for papers
+	- 6th February
+
 
 
 
