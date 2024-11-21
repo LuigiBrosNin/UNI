@@ -824,7 +824,27 @@ friends of it are friends themselves (*closed triangle*)
 > - Very few (typically just one) connected components
 
 ## Erdős-Rényi Model for Network Formation
-TODO
+approach of Random model -> choices independent of current network structures
+Characteristics
+- Undirected network
+- Start with all isolated nodes and add edges one at a time randomly
+- Simple af but helpful, benchmark for evaluating real networks
+- Populating by
+	- randomize edge presence or absence
+	- randomize node pairs
+
+==Random edge presence==
+$n$ -> Number of nodes
+$p$ -> Probability that an edge is present
+![[Pasted image 20241121153237.png]]
+![[Pasted image 20241121153322.png]]
+$k$ -> node degree (number of edges connected to that node)
+The probability that a given node has degree $k$ is given by the Binomial
+distribution:
+$$\pmatrix{n-1 \\ k}p^k(1-p)^{n-1-k}$$
+
+
+
 
 ## 11 TODO
 ## 12 TODO
@@ -1196,9 +1216,12 @@ example
 - **Reduce** -> applies an anonymous-reporter from left to right, resulting in a single value.
 
 **Breeds** -> a way to **subclass** the turtle type ("breeding" an agentset)
-**Graphing** -> 
+**Graphing** -> special agents that moves trough the graph
+* **setup** -> where we set the graph range (x-axis) with special agent pen properties
+- **update** ->where we need to draw data, called every tick
 
 
+#
 
 ##
 
