@@ -873,13 +873,21 @@ in ER model, $pn(n−1)/2$ nodes on average
 ER models are not highly clustered and are bad predictors
 
 ==ER giant component==
-for edge density $p$, expected node degree is $p(n-1) \sim pn$   
+for edge density $p$, expected node degree is $p(n-1) \sim pn$ for large $n$   
+Giant components start to form at low values of $p$
+- $p< 1/n$ -> probability of a giant component tends to 0
+- $p> 1/n$ -> probability of a giant component tends to 1, components have at most size $\log n$
+
+EL model is able to explain
+- small diameter, path lengths
+- giant components
+EL model is not able to explain
+- degree distributions
+- clustering
+
+## Clustered Models
 
 
-
-
-
-## 11 TODO
 ## 12 TODO
 
 ## 13 TODO
