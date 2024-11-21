@@ -1132,3 +1132,14 @@ to solve the codification problem, we just code the strings into vectors (Vector
 
 
 # Exam
+
+
+
+
+
+%% Begin Waypoint %%
+- **[[attachments]]**
+
+- [[Marketplaces for Data Notes]]
+
+%% End Waypoint %%

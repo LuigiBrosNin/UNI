@@ -1,6 +1,6 @@
 > Notes taken by Luizo ( [@LuigiBrosNin](https://t.me/LuigiBrosNin) on Telegram)
 
-TODO - Download Autopsy software - FTK (only windows :^)
+TODO - Download Autopsy software and FTK (only windows :^)
 #### Info Esame
 Simulazione di un caso giuridico
 t1 e t2 lavorano per azienza x, cambiano azienda / c'e' un caso di accordi che compromettono la proprieta' di dati.
@@ -19,7 +19,7 @@ medie alte dei voti (lol)
 
 le informazioni nei dati sono condivisibili con altri gruppi liberamente (la collaborazione e' giusta)
 
-# Teoria
+# Theory
 
 ## Introduction
 ==Digital forensics== -> division of forensics involving the recovery and analysis of data that has been recovered from digital devices.

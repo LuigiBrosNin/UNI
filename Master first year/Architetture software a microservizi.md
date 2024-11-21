@@ -2,6 +2,7 @@
 
 > Notes taken by Luizo ( [@LuigiBrosNin](https://t.me/LuigiBrosNin) on Telegram)
 # Notes
+Won't be frequenting this course sadly :,)
 
 ## 1. Distributed systems and SOAs
 ==Distributed system== -> a network of endpoints that communicate by exchanging messages
