@@ -1124,9 +1124,55 @@ You can find the presentation source file in my repo :)
 	- shape,size,color
 	- hidden?
 - ==Observer==
-	modifies the environment and the agents
+	The **observer** modifies the environment and the agents trough **commands**
+	- `create turtles <num>
+	- `inspect turtle <whoID>`
+	![[Pasted image 20241121142911.png]]
 
-slide 10
+==NetLogo programming==
+**Instructions** tell agents what to do
+classification
+- primitive -> built in
+- procedure -> user implemented
+---
+- report -> produces an output
+- command -> does not produce an output
+
+Style tips
+- camelCase for procedures
+- no underscores in names
+- command procedure are nouns, reporters with berbs
+
+Variables
+- Local -> part of a procedure
+- Agent -> part of each agent
+- Global -> accessible by procedures and agents
+![[Pasted image 20241121143411.png]]
+Variables are dynamically typed.
+primitives -> numbers (all floating points), booleans, lists, strings
+
+Agentsets
+When asking to update an agent variables a subset of all the agents,
+called agentset, can be used.
+An **agentset** contains one or more agents, all of the same type, and
+it's always randomly ordered.
+```netLogo
+ask one-of turtles [ <command> ] ; randomly choose among the whole set
+
+let some-patches patches with [ pxcor < 3 ] ; take patches with X < 3
+
+ask some-patches [ set pcolor red ] ; change the color of the subset
+```
+
+Conditionals examples
+![[Pasted image 20241121144044.png]]
+
+Loops examples
+![[Pasted image 20241121144119.png]]
+
+
+
+
 
 ##
 
