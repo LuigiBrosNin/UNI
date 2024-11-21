@@ -842,6 +842,25 @@ $k$ -> node degree (number of edges connected to that node)
 The probability that a given node has degree $k$ is given by the Binomial
 distribution:
 $$\pmatrix{n-1 \\ k}p^k(1-p)^{n-1-k}$$
+![[Pasted image 20241121153841.png]]
+![[Pasted image 20241121153901.png]]
+
+![[Pasted image 20241121153924.png]]
+
+==Randomize node pairs==
+$n$ -> number of nodes
+$m$ -> number of nodes
+![[Pasted image 20241121154731.png]]
+
+==Degree distribution in ER models==
+The ER model is a poor predictor of degree distribution compared to real
+networks, as it results in Poisson degree distributions that have exponential
+decay (real networks exhibit power-law degree distributions that decay way slower)
+
+==ER diameter==
+**Diameter** -> longest shortest path between pairs of nodes / the average distance between 2 random nodes
+Diameter range based on $p$ -> 
+
 
 
 
