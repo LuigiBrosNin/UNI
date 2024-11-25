@@ -885,7 +885,7 @@ EL model is not able to explain
 - degree distributions
 - clustering
 
-## Clustered Models
+## Clustered Models TODO
 
 
 ## 12 TODO
@@ -1151,7 +1151,7 @@ individuals move when payoff is 0
 Equilibrium dynamics reached when all players have payoff 1
 
 51% Tolerance leads to almost perfect desegregation (94% of individuals having similar type neighbors)
-##
+## 
 
 ##
 
