@@ -885,8 +885,29 @@ EL model is not able to explain
 - degree distributions
 - clustering
 
-## Clustered Models TODO
+## Clustered Models
+Extending the ER model to be a better predictor
+Let's add edges with reason instead of randomly
 
+**Triadic closure** -> People that have common friends have more occasions to meet each other and
+become friends themselves
+**Homophily** -> People who have common friends often also have common interests
+
+==Alpha model==
+Bias connection towards nodes that have common neighbors
+
+$y$ -> probability of adding an edge between a pair of nodes with $x$ common neighbors
+$$y\sim p+(x/n)6^a$$
+for some constants $p,a$
+![[Pasted image 20241125195519.png]]
+![[Pasted image 20241125195536.png]]
+we can tune the model with the $a$ parameter and achieve high clustering
+
+==Watts-Strogatz model==
+regular network capturing relations that correspond to geographic, social proximity
+high clustering, large diameter
+
+Rewire
 
 ## 12 TODO
 
