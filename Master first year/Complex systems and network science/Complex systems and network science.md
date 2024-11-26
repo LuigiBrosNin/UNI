@@ -907,7 +907,25 @@ we can tune the model with the $a$ parameter and achieve high clustering
 regular network capturing relations that correspond to geographic, social proximity
 high clustering, large diameter
 
-Rewire
+**Rewire** -> replace a few local edges with random shortcut edges corresponding to occasional contacts outside of usual social circles (balance local and "long distance" edges)
+![[Pasted image 20241125195949.png]]
+$q$ -> probability of replacing an edge
+- Diameter is governed by the number of random shortcuts ($qn$)
+- Clustering is governed by the fraction of random shortcuts ($q$)
+![[Pasted image 20241125200057.png]]
+
+Clustering coefficient of $K$-regular lattice:
+$$\frac{3(K-2)}{4(k-1)}$$
+Converges to 3/4 in the limit for large $K$
+ Average path length for a d-dimensional hypercube scales as $n^\frac{1}{d}$ which grows much faster than logarithmic
+
+CC of WS model:
+$$\frac{3K(K-1)}{2K(2K-1)+8qK^2+4q^2K^2}$$
+Average path length:
+$$\frac{n^\frac{1}{d}}{K}f(qKn)$$
+where $f$ is a universal scaling fuction
+
+(yeah i understood nothing either  in that last slide lol)
 
 ## 12 TODO
 
@@ -1172,7 +1190,7 @@ individuals move when payoff is 0
 Equilibrium dynamics reached when all players have payoff 1
 
 51% Tolerance leads to almost perfect desegregation (94% of individuals having similar type neighbors)
-## 
+## 18 TODO
 
 ##
 
