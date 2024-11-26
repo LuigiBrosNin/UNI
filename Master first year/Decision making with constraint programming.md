@@ -560,8 +560,9 @@ Why not use both lol
 
 Map colouring example on slides, am not reporting it here but helps understand the search tree size with various methods
 
-==Weighted degree heuristic==
-Constraints are weightet, starting at 1 and incremented by 1 if the constraint fails.
+==Weighted degree heuristic (domWdeg)==
+Constraints are weighted ($w(c)$, starting at 1 and incremented by 1 if the constraint fails.
+Weight of variable $w(X_i)$:
 $$w(X_i)=\sum\limits_{c.s.t\ X_{i}\in X(c)} w(c)$$
 Domain over weighted degree heuristic (**domWdeg**) -> 
 Choose the variable $X_i$ with minimum $dom(X_i) / w(X_i)$.
@@ -644,9 +645,6 @@ $<X,D,C,f>$, where $f$ is the formalization of the optimization criterion as an 
 	- Backtracks and looks for a new solution with the additional bounding constraint, using the same search tree
 	- Repeats until infeasible -> last solution found is optimal
 	![[Pasted image 20241106174059.png]]
-
-
-
 
 ## Constraint-Based Scheduling
 
