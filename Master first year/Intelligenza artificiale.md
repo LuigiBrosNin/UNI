@@ -120,3 +120,7 @@ TODO
 ##
 
 # Exam Projects
+- prompt engineering ideas
+	- break down the problem in simpler steps to make the LLM "think"
+	- expand some operations (eg. 8 -> 3+5 = 8) if relevant in the problem
+	- point with the prompt (with screens or so) at errors so it's able to find and fix them
