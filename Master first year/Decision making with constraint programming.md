@@ -822,6 +822,21 @@ Similar to Local search, but
 ==Population-based Methods==
 At each algorithm iteration, a set (population) of solutions are used,
 Search process is the evolution of a set of points or a probability distribution in the search space
+Basic principle -> learn correlations between good solution components
+- Candidate solutions are generated using a parametrized probabilistic model.
+- Updated model based on previous set of solution to concentrate in high quality regions of solutions
+- Ant colony Optimization (ACO)
+
+==ACO==
+Pheromone trails are simulated by a parametrized probabilistic model "pheromone model"
+![[Pasted image 20241127174907.png]]
+- Pheromone values are the set of parameters
+- They act as the memory to keep track of the process so as to intensify search around the best solution components
+![[Pasted image 20241127175029.png]]
+Pheromone values are updated:
+- all are decreased by an evaporation factor (allows diversification, forget older solutions and emphasize with more recent ones)
+- values associated to good solutions are increased proportionally to the quality of solutions
+
 
 
 ##
