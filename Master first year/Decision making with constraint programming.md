@@ -802,11 +802,26 @@ Similar to Local search, but
 	- max number of iterations without improvement
 	- sufficient solution quality
 
-- Simulated Annealing (SA)
-- Variable Neighbourhood Search (VNS)
-- Tabu Search (TS)
-- Guided Local Search (GLS)
+- **Simulated Annealing (SA)**
+	- Accept worsening (up-hill) moves in local minima (so we can go down afterwards)
+	- probability of using the move decreased during search (intensification > diversification)
+- **Variable Neighbourhood Search (VNS)**
+	- Change neighbourhood structure during search
+	- different search landscapes may lead to the right path
+	![[Pasted image 20241127172206.png]]
+- **Tabu Search (TS)**
+	- Change neighbourhood structure during search by exploiting search history
+	- Tabu list -> keeps track of recently visited solutions/moves and forbids them (leads to different neighbourhoods) 
+	![[Pasted image 20241127172401.png]]
+	- **Aspiration criteria** -> accept a forbidden move towards a solution better than the current one.
+	- Tabu list size determines the size of exploration, favouring diversification to intensification as the size increases.
+- **Guided Local Search (GLS)**
+	- Change the objective function during search so as to “fill in” local minima.
+	- We modify the search landscape with the aim of making the current local optimum less desirable, aka avoid solution features that occur frequently to lead exploration elsewhere
 
+==Population-based Methods==
+At each algorithm iteration, a set (population) of solutions are used,
+Search process is the evolution of a set of points or a probability distribution in the search space
 
 
 ##
