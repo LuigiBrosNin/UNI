@@ -748,8 +748,33 @@ Main idea:
 Works good B)
 doesn't work in Non-regular cost functions and side constraints that alter the problem structures (eg. maximal time legs)
 
-##
+## Heuristic Search
 
+==Combinatorial optimization: Approximate methods==
+no guarantee for optimality, nor termination when unfeasible, but good quality solutions in a significantly reduced amount of time
+Some example
+1. **Constructive heuristics**
+	Fastest approximation methods, eg. greedy heuristics.
+	Generate solutions from scratch by repeatedly extending the current partial assignments until a solution is found or stopping criteria are satisfied.
+	✅ Simple, quick and often give good approximations.
+	⭕ Solutions maybe far from optimal!
+	⭕ Commit to certain choices too early.
+2. **Local search**
+	Starts from some initial solution and iteratively tries to replace the current solution with a better one in an appropriately defined neighbourhood by applying small (local) modifications.	
+3. **Metaheuristics**
+
+==Neighbourhood structure==
+Function $N : S → 2^S$ that assigns to every $s \in S$ a set of neighbours $N(s) \subseteq S$ . $N(s)$ is called the **neighbourhood** of $s$.
+**Move** -> application of such an operator to $s$ that produces a neighbour
+
+**Local minimum** -> with respect to a neighbourhood structure $N$ is a solution $s'$ such that $f(s') \le f(s)$ for all $s \in N(s')$
+
+Iterative improvement
+![[Pasted image 20241127163938.png]]
+
+
+
+##
 ##
 ---
 # Exercises
