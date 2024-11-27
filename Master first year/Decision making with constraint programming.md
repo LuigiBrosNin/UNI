@@ -762,7 +762,13 @@ Some example
 2. **Local search**
 	Starts from some initial solution and iteratively tries to replace the current solution with a better one in an appropriately defined neighbourhood by applying small (local) modifications.	
 3. **Metaheuristics**
+	High level strategies to increase performance that uses
+	- a priori knowledge
+	- exploitation of search history
+	- randomness
+	- general strategies to balance intensification and diversification
 
+==Local search==
 ==Neighbourhood structure==
 Function $N : S → 2^S$ that assigns to every $s \in S$ a set of neighbours $N(s) \subseteq S$ . $N(s)$ is called the **neighbourhood** of $s$.
 **Move** -> application of such an operator to $s$ that produces a neighbour
@@ -771,6 +777,35 @@ Function $N : S → 2^S$ that assigns to every $s \in S$ a set of neighbours $N(
 
 Iterative improvement
 ![[Pasted image 20241127163938.png]]
+
+==K-exchange Neighbourhood==
+Used to define neighbourhood structure
+![[Pasted image 20241127164339.png]]
+
+==Metaheuristics==
+==Intensification & Diversification==
+**Intensification** -> exploitation of the accumulated search experience
+**Diversification** -> exploration "in the large" of the search space
+
+**Contrary and complementary**:
+- Need to quickly identify regions in the search space with high quality solutions, without wasting too much time in the regions already explored or not containing high quality solutions;
+- Their dynamical balance determines the effectiveness of the metaheuristics.
+
+==LS-based Methods==
+Similar to Local search, but
+- adds a **diversification component** to iterative improvement for escaping from local minima
+	- allow worsening moves
+	- change neighbourhood structure during seatch
+	- change objective function during search
+- Termination criteria
+	- max CPU time,
+	- max number of iterations without improvement
+	- sufficient solution quality
+
+- Simulated Annealing (SA)
+- Variable Neighbourhood Search (VNS)
+- Tabu Search (TS)
+- Guided Local Search (GLS)
 
 
 
