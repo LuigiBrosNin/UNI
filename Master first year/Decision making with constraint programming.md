@@ -836,7 +836,19 @@ Pheromone trails are simulated by a parametrized probabilistic model "pheromone 
 Pheromone values are updated:
 - all are decreased by an evaporation factor (allows diversification, forget older solutions and emphasize with more recent ones)
 - values associated to good solutions are increased proportionally to the quality of solutions
+![[Pasted image 20241127175651.png]]
 
+LS-based methods good when
+- neighbourhood structures create a correlated search graph
+- inventing moves is easy
+- computational cost of moves is low
+Population-based methods good when
+- solutions can be encoded as composition of good building blocks;
+- computational cost of moves in LS is high;
+- it is difficult to design effective neighbourhood structures;
+- coarse grained exploration (e.g., huge search spaces) is preferable.
+
+==Hybrid Metaheuristics==
 
 
 ##
