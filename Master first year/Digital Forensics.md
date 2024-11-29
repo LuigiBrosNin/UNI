@@ -360,8 +360,8 @@ I exited quite confused B)
 
 
 ## Windows Artifact Analysis
-
-
+Account user profiles on windows are under the Users folder along with the "`AppData`" folder (that contains a shitload of stuff).
+inside `AppData` there's the `Roaming` folder too, which contains many many info about the history and actions of the user (`l)
 
 ##
 
