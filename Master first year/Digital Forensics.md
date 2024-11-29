@@ -359,7 +359,10 @@ I exited quite confused B)
 
 
 
-## 
+## Windows Artifact Analysis
+
+
+
 ##
 
 # Exam
@@ -372,5 +375,4 @@ I exited quite confused B)
 
 
 - Cases
-	- case 1 -> look at emails
-	- 
+	- case 1 -> basically look at emails
