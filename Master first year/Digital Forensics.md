@@ -361,8 +361,10 @@ I exited quite confused B)
 
 ## Windows Artifact Analysis
 Account user profiles on windows are under the Users folder along with the "`AppData`" folder (that contains a shitload of stuff).
-inside `AppData` there's the `Roaming` folder too, which contains many many info about the history and actions of the user (`l)
+inside `AppData` there's the `Roaming` folder too, which contains many many info about the history and actions of the user (`local` folder too in AppData)
 
+The Windows Registry is the very heart of the WindowsOS and will be the source of many artifacts, which is a central hierarchical database found in `System32`.
+In Autopsy we can browse the Registry
 ##
 
 # Exam
