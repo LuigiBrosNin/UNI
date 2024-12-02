@@ -884,14 +884,33 @@ Neighbourhoods
 - Small -> fast to improve, low local minima quality
 - Large -> finding an improvement is difficult, high local minima quality
 
-Large search -> use a generic/large neighbourhood, and explore it with a complete method like CP
+==LNS==
+**Large Neighbourhood Search (LNS)** -> use a generic/large neighbourhood, and explore it with a complete method like CP
 
+![[Pasted image 20241202151143.png]]
+Advantages
+- Efficient neighbourhood exploration.
+- LNS is easier to develop than LS
+- More scalable than just CP
 
+==Design Decisions==
+- How many variables to fix?
+	- The neighbourhood size should be large enough to diversify the search, but the complexity of solving it should be rather low.
+	- Often hand-tuned for custom applications.
+	- Automatic/adaptive techniques.
+- Which variables to fix?
+	- Random (ensures diversification).
+	- Problem specific approaches.
+	- Automatic/adaptive techniques.
 
+==ACO + CP==
+use CP as solution construction for artificial ants
+use ACO for variable and value ordering heuristics in CP
 
+CP in ACO -> Artificial ants employ CP for probabilistically constructing solutions using pheromone values
+Once ACO + CP is performed, final pheromone matrix is saved and used as CP upper bound.
+CP performs a complete search and uses the pheromone matrix as a heuristic information for value selection.
 
-
-##
 ##
 ---
 # Exercises
@@ -933,4 +952,8 @@ GAC -> **Generalized Arc Consistency** (GAC, Hyper-arc or domain consistency) ba
 
 ## Assignment 3 Notes
 `¯\_(ツ)_/¯`
+
+## Assignment 4 Notes
+
+
 ##
