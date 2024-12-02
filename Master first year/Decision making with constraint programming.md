@@ -849,6 +849,27 @@ Population-based methods good when
 - coarse grained exploration (e.g., huge search spaces) is preferable.
 
 ==Hybrid Metaheuristics==
+Goal -> exploit complementary strengths of the individual strategies (synergy)
+
+Combinatorial Optimization
+
+
+Complementary strengths:
+**CP** -> complete method
+- Focus on constraints and feasibility
+- Easy modelling and control of search
+- Poor in optimization with loose bounds on the objective function
+**Metaheuristics**  -> approximation method
+- Effective in finding good-quality solutions quickly.
+- Constraints are handled inefficiently, i.e. often by penalizing infeasible assignments in the objective function.
+
+==Metaheuristics + Complete Methods==
+- Metaheuristics are applied before complete methods providing a valuable input, or vice versa.
+- A complete method method applies a metaheuristic in order to improve a solution.
+- Metaheuristics use a complete method to efficiently explore the neighbourhood.
+- Metaheuristic concepts can also be used to obtain incomplete but efficient tree exploration strategies.
+
+
 
 
 ##
