@@ -851,8 +851,14 @@ Population-based methods good when
 ==Hybrid Metaheuristics==
 Goal -> exploit complementary strengths of the individual strategies (synergy)
 
-Combinatorial Optimization
-
+Combinatorial Optimization:
+**Complete methods**
+- Guarantee to find for every finite size instance an (optimal) solution in bounded time.
+- Might need exponential computation time.  
+- E.g., constructive tree search in CP and branch & bound, branch & cut in ILP, other tree search methods.
+**Approximate methods**
+- Cannot guarantee optimality, nor termination in case of infeasibility.
+- Obtain good-quality solutions in a significantly reduced amount of time.
 
 Complementary strengths:
 **CP** -> complete method
@@ -867,7 +873,20 @@ Complementary strengths:
 - Metaheuristics are applied before complete methods providing a valuable input, or vice versa.
 - A complete method method applies a metaheuristic in order to improve a solution.
 - Metaheuristics use a complete method to efficiently explore the neighbourhood.
-- Metaheuristic concepts can also be used to obtain incomplete but efficient tree exploration strategies.
+	- Large Neighbourhood Search
+	- ACO + CP
+
+Problems in LS-based methods
+- defining a neighbourhood structure
+- how to examine the neghbourhood of a solution
+
+Neighbourhoods
+- Small -> fast to improve, low local minima quality
+- Large -> finding an improvement is difficult, high local minima quality
+
+Large search -> use a generic/large neighbourhood, and explore it with a complete method like CP
+
+
 
 
 
