@@ -4,7 +4,8 @@
 - **[[Complementi di basi di dati]]**
 - **[[Complex systems and network science]]**
 - [[Decision making with constraint programming]]
-- [[Digital Forensics]]
+- **[[Digital Forensics]]**
+	- [[Appunti Relazione Caso 1 (Attaccante)]]
 - [[Intelligenza artificiale]]
 - [[Natural language processing]]
 - [[Simulazione di modelli]]
@@ -18,14 +19,17 @@
 POSSIBLE ONES 3/4
 
 - [x] COMPLEX SYSTEMS **81943** (gestire sistemi complessi)
+- [ ] LABORATORIO DI REALTA' VIRTUALE E REALTA' AUMENTATA 91721
 - [x] DECISION MAKING WITH CONSTRAINT PROGRAMMING (AI e come applicarla)
 - [x] **81676 - DIGITAL FORENSICS** (acquisizione dati, potrebbe essere interessante, ma non credo di farci qualcosa al di fuori di didattica personale)
 
 ---
 
-- [x] INTRODUCTION TO QUANTUM COMPUTING (da vedere)
+- [ ] INTRODUCTION TO QUANTUM COMPUTING (da vedere)
+- [ ] **81678 - LABORATORIO DI MAKING** (chiedere com’e’) (interessante ma ho paura, sembra difficile, davoli + montori, software che si interfaccia con dispositivi)
+- [ ] COMPLEMENTI DI LINGUAGGI (interessante, ma ESAME+PROGETTO, e insegna Laneve)
 - [ ] ==**91269**== **- MULTIMEDIA DATA MANAGEMENT** (sembra interessante ed all purpose, ci daro’ un’occhiata piu’ avanti)
-
+- [x] UUX
 
   
 
