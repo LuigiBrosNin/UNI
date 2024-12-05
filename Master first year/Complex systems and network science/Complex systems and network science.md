@@ -944,9 +944,15 @@ for large $t$ can be approximated to -> $m(1+\log (t/i))$
 **Average node degree less than k** are those such that -> $m(1+\log(t/i)) < k$
 ![[Pasted image 20241205194112.png]]
 if we solve $m(1+\log(t/i)) < k$ for $i$ we get the time that a node has to be born to have degree less than $k$ ($i > t\ e^{−(k−m)/m}$)
+Distribution of expected degrees is exponential with mean $m$
 
+==Preferential attachment==
+Idea: Do not link new nodes uniformly and randomly but according to a “rich-get-richer” scheme which is known to produce heavy-tailed distributions
+This process amplifies inequality among node degrees
 
-## 13 TODO
+**Preferential attachment** -> model where the likelihood of linking to a node is proportional to its current degree. The greater the degree, the more edges it will get making its degree even greater
+
+## 13 MISSING
 
 ## Peer-to-Peer Systems
 Definition -> Distributed systems where all nodes are peers without distinction between servers and clients
@@ -1207,7 +1213,7 @@ individuals move when payoff is 0
 Equilibrium dynamics reached when all players have payoff 1
 
 51% Tolerance leads to almost perfect desegregation (94% of individuals having similar type neighbors)
-## 18 TODO
+## 18 MISSING
 
 ##
 
