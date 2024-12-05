@@ -952,6 +952,25 @@ This process amplifies inequality among node degrees
 
 **Preferential attachment** -> model where the likelihood of linking to a node is proportional to its current degree. The greater the degree, the more edges it will get making its degree even greater
 
+- **Price model**
+	- Each new paper generates (on the average) m citations
+	* New papers cite previous papers with probability proportional to their citation count
+	* Preferential attachment rule: probability of citing a paper with k citations is proportional to $k+1$
+	- Generates a power-law with exponent $\alpha=2+1/m$
+- **Barabási–Albert model**
+	- A new page is born at every time step
+	- New pages link to $m$ existing pages
+	- At time $t$, there will be a total of $t$ pages and $mt$ edges
+	- Sum of all page degrees is $2mt$
+	- Preferential attachment rule: probability of a new page linking to page i is given by $k_i(t)/2mt$
+	![[Pasted image 20241205213015.png]]
+- **Alternative interpretation**
+	- A new page is born at every time step
+	- New pages link to a single existing page
+	- The link of the ith page is attached to an earlier page according to:
+		- Page i chooses a page j uniformly at random from among all earlier pages, and with probability p adds an edge to page $j$
+		- With probability 1−p, page i instead adds an edge to the page that $j$ points to: ![[Pasted image 20241205213241.png]]
+
 ## 13 MISSING
 
 ## Peer-to-Peer Systems
