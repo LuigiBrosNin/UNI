@@ -265,15 +265,6 @@ SSD device *firmware* uses **Wear leveling** -> feature that ensures the storage
 Plugging in the solid-state device can cause the firmware to mode data around, thus not making the hashes of the copy correspond.
 Also, more time passes, the harder it is to restore trashed data because of this.
 
-
-
-
-
-
-
-
-
-
 ## Digital documents
 
 - Many documents are PDFe
@@ -355,24 +346,13 @@ I exited quite confused B)
 	- contains store locations and configs of drivers
 
 
-
-
-<<<<<<< Updated upstream:Master first year/Digital Forensics.md
-=======
-<<<<<<< Updated upstream:Home/UNI/Master first year/Digital Forensics.md
->>>>>>> Stashed changes:Master first year/Digital Forensics/Digital Forensics.md
 ## Windows Artifact Analysis
 Account user profiles on windows are under the Users folder along with the "`AppData`" folder (that contains a shitload of stuff).
 inside `AppData` there's the `Roaming` folder too, which contains many many info about the history and actions of the user (`local` folder too in AppData)
 
 The Windows Registry is the very heart of the WindowsOS and will be the source of many artifacts, which is a central hierarchical database found in `System32`.
 In Autopsy we can browse the Registry
-<<<<<<< Updated upstream:Master first year/Digital Forensics.md
-=======
-=======
 
->>>>>>> Stashed changes:Home/UNI/Master first year/Digital Forensics/Digital Forensics.md
->>>>>>> Stashed changes:Master first year/Digital Forensics/Digital Forensics.md
 ##
 
 # Exam
