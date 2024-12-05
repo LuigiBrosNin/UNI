@@ -927,7 +927,19 @@ where $f$ is a universal scaling fuction
 
 (yeah i understood nothing either  in that last slide lol)
 
-## 12 TODO
+## Random and preferential attachment models for network growth
+We want to examine models that define network growth.
+Growth adds more realism, dynamism and heterogeneity
+
+==Uniform random model==
+Extend the Erdos-Renyi model to dynamic nodes
+- a new node is born at each time step
+- the new node has $m$ edges to allocate to existing nodes
+- each node to link to is selected at random uniformly
+- Assume first $m$ nodes are fully connected
+- At time $t$ there will be $t$ nodes all together ($t−1$ existing nodes plus the new one) and an existing node will get a new link with probability $m/t$
+![[Pasted image 20241205193606.png]]
+
 
 ## 13 TODO
 
