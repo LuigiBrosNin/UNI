@@ -971,7 +971,27 @@ This process amplifies inequality among node degrees
 		- Page i chooses a page j uniformly at random from among all earlier pages, and with probability p adds an edge to page $j$
 		- With probability 1−p, page i instead adds an edge to the page that $j$ points to: ![[Pasted image 20241205213241.png]]
 
-## 13 MISSING
+## Small world networks and the navigation problem
+
+==Travers-Milgram==
+**Structural explanation** -> given two individuals selected randomly from the population, ==what is the probability that the minimum number of intermediaries required to link them is== $0,1,2,...k$ ?
+**Algorithmic explanation** -> perhaps the most direct way of attacking the small world problem is to trace a number of real acquaintance chains in a large population, this is the technique of the study reported in this paper.
+
+==Methodology==
+Target person and a group of starters selected
+basically they get a document/letter to forward towards the target, they could forward the mail only to a first-name-based acquaintance of the sender until someone declined or the letter arrived at the target (information about the target were given to guide the choice of next recipient)
+![[Pasted image 20241205215327.png]]
+- Many of the completed chains passed through a very small number of penultimate individuals, “funnels”
+- “Connectors” or “hubs” with high degree often exist in social networks
+- Target need not be a “connector” for small-world phenomenon to exist
+- Like “hub” airports in air traffic
+
+==Columbia small worlds project==
+Model incarnation of Travers-Milgram
+based on email tracking
+24K initiated chains, 384 completed
+
+
 
 ## Peer-to-Peer Systems
 Definition -> Distributed systems where all nodes are peers without distinction between servers and clients
