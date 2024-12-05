@@ -973,7 +973,9 @@ This process amplifies inequality among node degrees
 
 ## Small world networks and the navigation problem
 
-==Travers-Milgram==
+Studies (skippable, imo)
+
+### Travers-Milgram
 **Structural explanation** -> given two individuals selected randomly from the population, ==what is the probability that the minimum number of intermediaries required to link them is== $0,1,2,...k$ ?
 **Algorithmic explanation** -> perhaps the most direct way of attacking the small world problem is to trace a number of real acquaintance chains in a large population, this is the technique of the study reported in this paper.
 
@@ -981,15 +983,49 @@ This process amplifies inequality among node degrees
 Target person and a group of starters selected
 basically they get a document/letter to forward towards the target, they could forward the mail only to a first-name-based acquaintance of the sender until someone declined or the letter arrived at the target (information about the target were given to guide the choice of next recipient)
 ![[Pasted image 20241205215327.png]]
-- Many of the completed chains passed through a very small number of penultimate individuals, “funnels”
+- Many of the completed chains passed through a very small number of penultimate individuals, “**funnels**”
 - “Connectors” or “hubs” with high degree often exist in social networks
 - Target need not be a “connector” for small-world phenomenon to exist
 - Like “hub” airports in air traffic
 
-==Columbia small worlds project==
+### Columbia small worlds project
 Model incarnation of Travers-Milgram
 based on email tracking
-24K initiated chains, 384 completed
+- 24K initiated chains, 384 completed
+- no "funneling" 
+- Large degree was rarely a reason for forwarding choice
+- algorithmic choices as function of chain length ("geographic" early on, "work" later)
+![[Pasted image 20241205215830.png]]
+![[Pasted image 20241205215844.png]]
+
+### Microsoft Instant Messenger
+- Worldwide buzz: Planetary-scale views on an instant-messaging network
+- “Structural” study based on 240M Microsoft IM user accounts active in 2008
+- Two users considered “connected” if they communicated at least once during a month-long observation period
+- No need for “tracers” since the full social graph is known
+- Shortest paths computed on the graph using “breadth-first search”
+![[Pasted image 20241205220045.png]]
+
+### Facebook study
+- Four degrees of separation
+- “Structural” study based on 721M active Facebook users with 69B friendship links
+- Again, not a random sample from general population but by 2012, Facebook much more representative than IM in 2008
+- Repeated in 2016 with 1.59B Facebook users
+- The biggest technical feat of this study is the ability to process huge datasets algorithmically
+![[Pasted image 20241205220351.png]]
+![[Pasted image 20241205220401.png]]
+![[Pasted image 20241205220417.png]]
+
+###
+---
+### The navigation problem
+Suppose we're a node in a very large social network
+how can we find a short path to another node if you only know your neighbours?
+Ask them to make introductions
+
+Two aspects for solving the navigation (search) problem:
+- **Structural** -> Verify the existence of short paths in the network — 
+- **Algorithmic** -> Allow people to actually find these short paths using only distributed, local information
 
 
 
