@@ -939,6 +939,11 @@ Extend the Erdos-Renyi model to dynamic nodes
 - Assume first $m$ nodes are fully connected
 - At time $t$ there will be $t$ nodes all together ($t−1$ existing nodes plus the new one) and an existing node will get a new link with probability $m/t$
 ![[Pasted image 20241205193606.png]]
+**Average edges for each node** at time $t$ -> $m+m/(i+1)+m/(i+2)+ … +m/t$ 
+for large $t$ can be approximated to -> $m(1+\log (t/i))$
+**Average node degree less than k** are those such that -> $m(1+\log(t/i)) < k$
+![[Pasted image 20241205194112.png]]
+if we solve $m(1+\log(t/i)) < k$ for $i$ we get the time that a node has to be born to have degree less than $k$ ($i > t\ e^{−(k−m)/m}$)
 
 
 ## 13 TODO
