@@ -1026,8 +1026,46 @@ Ask them to make introductions
 Two aspects for solving the navigation (search) problem:
 - **Structural** -> Verify the existence of short paths in the network — 
 - **Algorithmic** -> Allow people to actually find these short paths using only distributed, local information
+Algorithmic constraints
+- Only know your immediate neighbors
+- Limited information about the target
+- Simple heuristic strategies
 
+### Kleinberg's model
+abstract formulation of the navigation problem in a small-world network to study the structural and algorithmic constraints
+![[Pasted image 20241205221819.png]]
+![[Pasted image 20241205221840.png]]
+![[Pasted image 20241205221902.png]]
+“**Efficient navigation**” -> the number of hops is bounded by a function $\log ^a(n)$
+we want $r$ so that we permit efficient navigation
+algorithmic constraints:
+- Nodes know the coordinates of their neighbors
+- Nodes know the coordinate of the target
+- Nodes always forward to neighbors closest to target in grid distance (“greedy” strategy excludes “backwards” hops even though they may lead to shorter paths)
+- Forwarding based on local geometric information only (with global knowledge, the solution becomes trivial)
 
+$r$ too small -> we can get close to the target quickly, need grid edges to conclude
+$r$ too large -> long-distance edges are actually local and do not help much, short paths may not exist
+“Efficient” navigation requires a delicate mix of local and long-distance edges
+![[Pasted image 20241205222720.png]]
+![[Pasted image 20241205222730.png]]
+![[Pasted image 20241205222800.png]]
+
+Navigability requires networks to be **multiscale**
+As $n$ (number of nodes) becomes large, for any decentralized navigation algorithm, the expected number of hops is bounded by a function proportional to:
+- $n^{\frac{2−r}{3}}\ if\ r<2$
+- $n^\frac{r−2}{r−1}\ if\ r>2$
+- $\log^2 n\ if\ r=2$
+Results can be generalized to $d$-dimensional lattices for any value of $d≥1$
+The critical value becomes $r=d$
+![[Pasted image 20241205223405.png]]
+![[Pasted image 20241205223417.png]]
+
+### Where’s George
+Based on the “Where’s George?” dataset
+■ Tracks movement of dollar bills
+■ Illustration of multiscale networks
+■ Idea: movement of dollar bills can be a good proxy for movement of people
 
 ## Peer-to-Peer Systems
 Definition -> Distributed systems where all nodes are peers without distinction between servers and clients
