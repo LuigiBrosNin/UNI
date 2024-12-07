@@ -1340,7 +1340,20 @@ individuals move when payoff is 0
 Equilibrium dynamics reached when all players have payoff 1
 
 51% Tolerance leads to almost perfect desegregation (94% of individuals having similar type neighbors)
-## 18 MISSING
+## Diffusion, Percolation, Tipping Points, Contagion and Cascades
+
+**Diffusion** ->  
+- **Simple diffusion** -> viral spread, seen as contagion
+- **Complex diffusion** -> peer-effects, spread of new opinion
+
+==Spatial networks==
+Implicit networks that arise due to geographic proximity
+like Kleinberg's small world model
+![[Pasted image 20241207183757.png]]
+
+
+
+
 
 ##
 
