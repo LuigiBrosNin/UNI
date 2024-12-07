@@ -1366,11 +1366,42 @@ When a missing piece does, the breakthrough may be enabled in several different 
 Contagion can be formulated on any arbitrary network
 
 **Susceptible-Infected-Susceptible (SIS) model** -> after being infected, individuals remain susceptible, to study recurring diseases
+- Infection rate $a$
 
 **Susceptible-Infected-Resistant (SIR) model** -> after infection, allows immunity/resistance to be gained, with the addiction of:
 - Recovered state
-- Recovery rate parameter
+- Recovery rate parameter $b$
 - Gain resistance parameter
+Population divided into three groups:
+- $S(t)$ -> the number of susceptible at time $t$
+- $I(t)$ -> the number of infected at time $t$
+- $R(t)$ -> the number of recovered at time $t$
+- $\frac{dS}{dt} = − aSI$
+- $\frac{dI}{dt} = aSI − bI = I(aS − b)$
+- $\frac{dR}{dt} = bI$
+![[Pasted image 20241207193418.png]]
+
+if $aS_{0} -b> 0$ (S around time 0)-> population will grow exponentially and we will have an epidemic
+- $R=\frac{aS_{0}}{b}$ is a critical parameter in epidemiology
+- $R>1$ the infected population will start to grow exponentially leading to an epidemic
+- $R<1$ the infected population will extinguish
+We can decrease $R$ by
+- decreasing the infection rate a (washing hands, social distancing),
+- by decreasing the initial susceptible population (vaccination),
+- by increasing the recovery rate b (better health care, usually difficult)
+
+==Peer-effects==
+Infection rates depend on the number of infected nodes
+Captures the notion of "peer-effects" -> we adopt the behavior/choices of our peers
+![[Pasted image 20241207194301.png]]
+
+==Peer-effects, Bass model==
+no explicit network, 2 states/behaviors (0 and 1) that are irreversible
+Let $F(t)$ denote the fraction of population who have adopted state 1 at time t
+- Let $p$ denote the rate of spontaneous adoption
+Let $q$ denote the rate of peer-effect adoption
+■ How does the fraction of adoption vary with time?
+
 
 ##
 
