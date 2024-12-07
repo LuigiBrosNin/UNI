@@ -1344,7 +1344,7 @@ Equilibrium dynamics reached when all players have payoff 1
 
 **Diffusion** ->  
 - **Simple diffusion** -> viral spread, seen as contagion
-- **Complex diffusion** -> peer-effects, spread of new opinion
+- **Complex diffusion** -> peer-effects, infection depends on choices/decisions
 
 ==Spatial networks==
 Implicit networks that arise due to geographic proximity
@@ -1397,18 +1397,52 @@ Captures the notion of "peer-effects" -> we adopt the behavior/choices of our pe
 
 ==Peer-effects, Bass model==
 no explicit network, 2 states/behaviors (0 and 1) that are irreversible
-Let $F(t)$ denote the fraction of population who have adopted state 1 at time t
-- Let $p$ denote the rate of spontaneous adoption
-Let $q$ denote the rate of peer-effect adoption
-■ How does the fraction of adoption vary with time?
+Let $F(t)$ denote the fraction of population who have adopted state 1 at time $t$
+- $p$ -> rate of spontaneous adoption
+- $q$ -> rate of peer-effect adoption
+How does the fraction of adoption vary with time?
+$$\frac{dF(t)}{dt}= (p+qF(t))(1-F(t))$$
+ - When $F(t)$ nears 1, $dF(t)/dt$ nears 0
+- When $F(t)=0$, $dF(t)/dt=p$
+- When $F(t)=\epsilon$ for some $\epsilon$, $dF(t)/dt=( p+q\epsilon)(1−\epsilon)$
+- To get initial convexity, $( p+q\epsilon)(1−\epsilon)$ must be greater than $p$
+- Or $q(1−\epsilon)>p$ and for small $\epsilon$, this is equivalent to $q > p$
+- Thus, we get the “S-shape” if $q > p$
+![[Pasted image 20241207195209.png]]
 
+==Complex diffusion==
+Appropriate for modeling adoption of new technologies, behaviors, opinions,
+fashion trends, etc.
+Suppose a node will adopt a behavior (get a tattoo) only if two of its neighbors have adopted the behavior
 
-##
+Network coordination game
+A and B behaviours
+neighbor nodes have an incentive to adopt the same behavior
+Payoff matrix:
+![[Pasted image 20241207195724.png]]
+Utility of a node is the sum of the payoffs obtained from the individual games
+![[Pasted image 20241207195835.png]]
+if at least $\frac{b}{a+b}$ fraction of $v$’s neighbors chose A, then $v$ should
+chose A as well
+
+Cascading behavior -> 2 equilibria: all A, all B
+can we flip an equilibria?
+![[Pasted image 20241207200028.png]]
+![[Pasted image 20241207200058.png]]
+**Partial cascades** -> when 2 or more decisions coexist
+
+surviving as opposing strategy A when B:
+- increase $a$
+- pick initial adopters smartly
+- modify network structure (not often possible)
+
+## The
+end :)
 
 # Paper presentation
 [[Presentation notes]]
 
-You can find the presentation source file in my repo :)
+You can find the presentation source file and pdf in my repo :)
 # NetLogo Notes
 
 **NetLogo** -> Programmable modeling environment, used to model complex system development, FOSS :)
@@ -1512,7 +1546,7 @@ example
 - **update** ->where we need to draw data, called every tick
 
 
-#
+# Project
 
 ## 
 
