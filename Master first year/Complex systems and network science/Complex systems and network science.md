@@ -974,7 +974,6 @@ This process amplifies inequality among node degrees
 ## Small world networks and the navigation problem
 
 Studies (skippable, imo)
-
 ### Travers-Milgram
 **Structural explanation** -> given two individuals selected randomly from the population, ==what is the probability that the minimum number of intermediaries required to link them is== $0,1,2,...k$ ?
 **Algorithmic explanation** -> perhaps the most direct way of attacking the small world problem is to trace a number of real acquaintance chains in a large population, this is the technique of the study reported in this paper.
@@ -1063,9 +1062,24 @@ The critical value becomes $r=d$
 
 ### Where’s George
 Based on the “Where’s George?” dataset
-■ Tracks movement of dollar bills
-■ Illustration of multiscale networks
-■ Idea: movement of dollar bills can be a good proxy for movement of people
+Tracks movement of dollar bills
+Illustration of multiscale networks
+Idea: movement of dollar bills can be a good proxy for movement of people
+![[Pasted image 20241205223910.png]]
+
+### Physical models
+Each network has an associated “energy level” which the topology tries to minimize
+Define the energy level $E$ as a weighted sum of two terms:
+$E = λL + (1−λ)W$
+where L is the average shortest distance in hops, $W$ is the average Euclidean distance (in meters) and $λ$ is a parameter between 0 and 1
+![[Pasted image 20241205224144.png]]
+![[Pasted image 20241205224233.png]]
+![[Pasted image 20241205224253.png]]
+![[Pasted image 20241205224306.png]]
+
+
+
+
 
 ## Peer-to-Peer Systems
 Definition -> Distributed systems where all nodes are peers without distinction between servers and clients
