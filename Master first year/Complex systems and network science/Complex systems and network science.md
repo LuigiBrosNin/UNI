@@ -1357,9 +1357,20 @@ Fire will spread to all nodes in the connected component of the network containi
 
 **Tipping phenomenon** -> 57% to 62% Density, percentage of burnt forest goes from small values to 100%: massive increases in diffusion is a "tipping" phenomenon ("threshold"/"critical" phenomena)
 
-**Percolation** -> 
+**Percolation** -> water percolating trough coffee grinds analogy
 ![[Pasted image 20241207190644.png]]
+Requires all missing pieces to fall in the right place
+When a missing piece does, the breakthrough may be enabled in several different ways
 
+==Contagion (Simple Diffusion)==
+Contagion can be formulated on any arbitrary network
+
+**Susceptible-Infected-Susceptible (SIS) model** -> after being infected, individuals remain susceptible, to study recurring diseases
+
+**Susceptible-Infected-Resistant (SIR) model** -> after infection, allows immunity/resistance to be gained, with the addiction of:
+- Recovered state
+- Recovery rate parameter
+- Gain resistance parameter
 
 ##
 
