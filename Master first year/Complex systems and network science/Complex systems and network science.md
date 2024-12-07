@@ -1351,8 +1351,14 @@ Implicit networks that arise due to geographic proximity
 like Kleinberg's small world model
 ![[Pasted image 20241207183757.png]]
 
+Simple diffusion in spatial networks work *like the spread of forest fire*
+Density parameter $p$ -> probability that a grid position is Forest ($1-p$ empty)
+Fire will spread to all nodes in the connected component of the network containing the source fire
 
+**Tipping phenomenon** -> 57% to 62% Density, percentage of burnt forest goes from small values to 100%: massive increases in diffusion is a "tipping" phenomenon ("threshold"/"critical" phenomena)
 
+**Percolation** -> 
+![[Pasted image 20241207190644.png]]
 
 
 ##
