@@ -16,7 +16,7 @@ l'acquisizione va' a circa 2-3 MB/s per 60 GB, che sono ammontate a quasi 6 ore 
 
 successivamente lo stesso comando e' stato usato per acquisire i contenuti della chiavetta (7 MB/s, ha finito in pochi minuti dato che si trattava di solo 2 GB di acquisizione)
 ```bash
-sudo dd if=/dev/sdd of=/media/kali/9C33-6BBD/forensics_acquisizione/acq.img bs=512 conv=noerror,sync status=progress iflag=fullblock
+sudo dd if=/dev/sdd of=/media/kali/9C33-6BBD/forensics_acquisizione/usb.img bs=512 conv=noerror,sync status=progress iflag=fullblock
 ```
 
 la versione del tool `dd` utilizzato e' la 9.4
