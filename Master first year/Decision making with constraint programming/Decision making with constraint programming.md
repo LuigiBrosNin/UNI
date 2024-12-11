@@ -954,6 +954,7 @@ GAC -> **Generalized Arc Consistency** (GAC, Hyper-arc or domain consistency) ba
 # Assignments answers
 
 %% Begin Waypoint %%
+- **[[aaa]]**
 - [[Assignment_1]]
 - [[Assignment_2]]
 - [[Assignment_3]]
