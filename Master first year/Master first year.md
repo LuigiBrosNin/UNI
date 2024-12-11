@@ -5,7 +5,7 @@
 - **[[Complex systems and network science]]**
 - **[[Decision making with constraint programming]]**
 - **[[Digital Forensics]]**
-	- [[Appunti Relazione Caso 1 (Attaccante)]]
+	- [[Appunti Acquisizione]]
 - [[Intelligenza artificiale]]
 - [[Natural language processing]]
 - [[Simulazione di modelli]]
