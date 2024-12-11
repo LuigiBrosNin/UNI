@@ -27,7 +27,7 @@ Gecode 6.3.0
 	
 2. BONUS Is the Cumulative resource constraint an implied constraint? why?
 	The Cumulative Resource constraint proves to be helpful to the model as an implied constraint, as:
-	+ The first constraint declares that "each rectangle must fit inside the paper", which is satisfied by the cumulative resource constraint as we have the size of the papers as capacities and time limits respectively, which pose the same spatial limits;
+	- The first constraint declares that "each rectangle must fit inside the paper", which is satisfied by the cumulative resource constraint as we have the size of the papers as capacities and time limits respectively, which pose the same spatial limits;
 	- The second constraint declares that "each rectangle must not overlap", which is satisfied since no element in the cumulative resource constraint can occupy the same position in time or the same resource as another one.
 
 
