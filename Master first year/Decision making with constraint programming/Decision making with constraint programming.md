@@ -913,7 +913,7 @@ CP performs a complete search and uses the pheromone matrix as a heuristic infor
 
 ##
 ---
-# Exercises
+# Exercises Notes
 ## MiniZinc Setup ⚠ IMPORTANT
 Setup is quick and easy: all you need to do is modify a few parameters from the configuration editor (the solver)
 Set up like this to get the info needed to fill the assignments
@@ -950,10 +950,16 @@ BC -> **Bounds Consistency** (BC) They detect inconsistent partial assignments o
 
 GAC -> **Generalized Arc Consistency** (GAC, Hyper-arc or domain consistency) basically defines all possible combinations that satisfy the $any$ constraint
 
-## Assignment 3 Notes
-`¯\_(ツ)_/¯`
 
-## Assignment 4 Notes
+# Assignments answers
 
+%% Begin Waypoint %%
+- [[Assignment_1]]
+- [[Assignment_2]]
+- [[Assignment_3]]
+- [[Assignment_4]]
+- [[Assignment_5]]
+
+%% End Waypoint %%
 
 ##

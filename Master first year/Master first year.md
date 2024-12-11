@@ -3,7 +3,7 @@
 - **[[attachments]]**
 - **[[Complementi di basi di dati]]**
 - **[[Complex systems and network science]]**
-- [[Decision making with constraint programming]]
+- **[[Decision making with constraint programming]]**
 - **[[Digital Forensics]]**
 	- [[Appunti Relazione Caso 1 (Attaccante)]]
 - [[Intelligenza artificiale]]
