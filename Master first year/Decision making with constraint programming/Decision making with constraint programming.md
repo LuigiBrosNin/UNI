@@ -694,7 +694,7 @@ we'll focus on non-preemptive activities
 Always related by a **cumulative constraint**
 $\forall r_{k}\in R$ with capacity $c_{k}$ -> 
 $$\text{cumulative}([S_1,...,S_n],[d_1,...,d_n],[rq_{1k},...,S_{nk}],c_{k}) 
-\iff \sum\limits_{i|S_{i}\le u < S_{i}d_{i}}rq_{ik}\le c_{k}\ \forall u \in D $$
+\iff \sum\limits_{i|S_{i}\le u < S_{i}d_{i}}rq_{ik}\le c_{k}\ \forall u \in D$$
 RCPSP resources are cumulative
 
 ==Unary/Disjunctive/Sequential Resource==
