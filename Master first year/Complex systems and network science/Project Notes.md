@@ -7,3 +7,6 @@ PDF report
 - explain the experiments that you performed in terms of methodology and the results that you obtained
 - find tipping points or interesting equilibrium states in your model.
 
+### 1. Baseline model
+2d space, agents move (fishes)
+- Roaming
