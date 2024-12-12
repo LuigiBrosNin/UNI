@@ -22,4 +22,15 @@ speed v (slightly higher in dolphins)
 vision range $\gamma$   
 
 ### 2. Schooling of fish model
-Separation: If a fish is inside a threshold distance γ near , move away from the nearest fish in the opposite direction to avoid collision.
+- Separation -> If a fish is inside a threshold distance γ near , move away from the nearest fish in the opposite direction to avoid collision.
+- Cohesion / Alignment -> Move towards other fishes while maintaining alignment to them. The desired direction is the weighted contribution of the cohesion ĉ and alignment vector â. The cohesion vector ĉ is the direction toward the centroid of nearby fishes. The alignment vector â is the mean direction of nearby fishes’ current directions.
+- fleeing
+- roaming (current direction)
+
+additional params
+near range collision Y near
+current direction s_t (last fish direction to compute next step)
+max turn theta_max (optional, max turn angle for current fish direction)
+
+### 3. Hunting strategy model
+
