@@ -18,5 +18,8 @@ PDF report
 - Eat
 
 params
-speed v
+speed v (slightly higher in dolphins)
 vision range $\gamma$   
+
+### 2. Schooling of fish model
+Separation: If a fish is inside a threshold distance γ near , move away from the nearest fish in the opposite direction to avoid collision.
