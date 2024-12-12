@@ -19,3 +19,4 @@ PDF report
 
 params
 speed v
+vision range $\gamma$   
