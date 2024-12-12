@@ -10,3 +10,12 @@ PDF report
 ### 1. Baseline model
 2d space, agents move (fishes)
 - Roaming
+- Fleeing
+- Reproduce
+(Dolphin)
+- Roaming
+- Hunting
+- Eat
+
+params
+speed v
