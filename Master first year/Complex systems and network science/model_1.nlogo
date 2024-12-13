@@ -9,6 +9,7 @@ to setup
 
   ; blue background
   ask patches [ set pcolor blue ]
+  set fish-reproduce 0
 
   create-fishes initial-number-fish ; create the fishes, then initialize their variables
   [
@@ -21,7 +22,7 @@ to setup
 
   create-dolphins initial-number-dolphins  ; create the dolphines, then initialize their variables
   [
-    set shape "dolphin"
+    set shape "shark"
     set color black
     set size 2  ; easier to see
     setxy random-xcor random-ycor
@@ -38,8 +39,11 @@ to go
   ask fishes [
     move-fish
 
+    if fish-reproduction [
     reproduce-fishes  ; fish reproduce at a random rate governed by a slider
+    ]
   ]
+
   ask dolphins [
     move-dolphin
 
@@ -51,22 +55,22 @@ to go
 end
 
 to move-fish  ; move fish procedure
-  rt random 360
-  lt random 360
+  rt random 180
+  lt random 180
   fd speed-fish
 end
 
 to move-dolphin  ; move fish procedure
-  rt random 360
-  lt random 360
+  rt random 180
+  lt random 180
   fd speed-dolphin
 end
 
 to reproduce-fishes  ; fishes procedure
-  set fish-reproduce (fish-reprodce + 1)
-  if fish-reproduction-rate <= fish-reproduce [  ; check if it's time to make fishes reproduce
+  set fish-reproduce (fish-reproduce + 1)
+  if fish-reproduce >= fish-reproduction-rate [  ; check if it's time to make fishes reproduce
     hatch 1 [ rt random-float 360 fd 1 ]   ; hatch an offspring and move it forward 1 step
-    set fish-reproduction-rate 0
+    set fish-reproduce 0
   ]
 end
 
@@ -86,9 +90,9 @@ end
 ; See Info tab for full copyright and license.
 @#$#@#$#@
 GRAPHICS-WINDOW
-355
+360
 10
-873
+878
 529
 -1
 -1
@@ -128,33 +132,18 @@ NIL
 HORIZONTAL
 
 SLIDER
-5
-196
-207
-229
+0
+190
+202
+223
 fish-reproduction-rate
 fish-reproduction-rate
 0
 100
-20.0
+50.0
 1
 1
 NIL
-HORIZONTAL
-
-SLIDER
-5
-231
-179
-264
-sheep-reproduce
-sheep-reproduce
-1.0
-20.0
-4.0
-1.0
-1
-%
 HORIZONTAL
 
 SLIDER
@@ -170,36 +159,6 @@ initial-number-dolphins
 1
 1
 NIL
-HORIZONTAL
-
-SLIDER
-183
-195
-348
-228
-wolf-gain-from-food
-wolf-gain-from-food
-0.0
-100.0
-20.0
-1.0
-1
-NIL
-HORIZONTAL
-
-SLIDER
-183
-231
-348
-264
-wolf-reproduce
-wolf-reproduce
-0.0
-20.0
-5.0
-1.0
-1
-%
 HORIZONTAL
 
 SLIDER
@@ -267,17 +226,16 @@ true
 true
 "" ""
 PENS
-"sheep" 1.0 0 -612749 true "" "plot count sheep"
-"wolves" 1.0 0 -16449023 true "" "plot count wolves"
-"grass / 4" 1.0 0 -10899396 true "" "if model-version = \"sheep-wolves-grass\" [ plot count grass / 4 ]"
+"fishes" 1.0 0 -612749 true "" "plot count fishes"
+"dolphins" 1.0 0 -16449023 true "" "plot count dolphins"
 
 MONITOR
 41
 308
-111
+108
 353
-sheep
-count sheep
+fishes
+count fishes
 3
 1
 11
@@ -285,44 +243,13 @@ count sheep
 MONITOR
 115
 308
-185
+182
 353
-wolves
-count wolves
+dolphins
+count dolphins
 3
 1
 11
-
-MONITOR
-191
-308
-256
-353
-grass
-count grass / 4
-0
-1
-11
-
-TEXTBOX
-20
-178
-160
-196
-Sheep settings
-11
-0.0
-0
-
-TEXTBOX
-198
-176
-311
-194
-Wolf settings
-11
-0.0
-0
 
 SWITCH
 105
@@ -349,6 +276,17 @@ speed-dolphin
 1
 NIL
 HORIZONTAL
+
+SWITCH
+0
+225
+177
+258
+fish-reproduction
+fish-reproduction
+0
+1
+-1000
 
 @#$#@#$#@
 ## WHAT IS IT?
@@ -719,6 +657,19 @@ Polygon -7500403 true true 165 180 165 210 225 180 255 120 210 135
 Polygon -7500403 true true 135 105 90 60 45 45 75 105 135 135
 Polygon -7500403 true true 165 105 165 135 225 105 255 45 210 60
 Polygon -7500403 true true 135 90 120 45 150 15 180 45 165 90
+
+shark
+false
+0
+Polygon -7500403 true true 283 153 288 149 271 146 301 145 300 138 247 119 190 107 104 117 54 133 39 134 10 99 9 112 19 142 9 175 10 185 40 158 69 154 64 164 80 161 86 156 132 160 209 164
+Polygon -7500403 true true 199 161 152 166 137 164 169 154
+Polygon -7500403 true true 188 108 172 83 160 74 156 76 159 97 153 112
+Circle -16777216 true false 256 129 12
+Line -16777216 false 222 134 222 150
+Line -16777216 false 217 134 217 150
+Line -16777216 false 212 134 212 150
+Polygon -7500403 true true 78 125 62 118 63 130
+Polygon -7500403 true true 121 157 105 161 101 156 106 152
 
 sheep
 false
