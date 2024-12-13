@@ -2,6 +2,8 @@
 breed [ fishes fish ]
 breed [ dolphins dolphin ]
 
+globals [ fish-reproduce ]
+
 to setup
   clear-all
 
@@ -17,12 +19,11 @@ to setup
     setxy random-xcor random-ycor
   ]
 
-  create- initial-number-wolves  ; create the wolves, then initialize their variables
+  create-dolphins initial-number-dolphins  ; create the dolphines, then initialize their variables
   [
-    set shape "wolf"
+    set shape "dolphin"
     set color black
     set size 2  ; easier to see
-    set energy random (2 * wolf-gain-from-food)
     setxy random-xcor random-ycor
   ]
   display-labels
@@ -30,101 +31,54 @@ to setup
 end
 
 to go
-  ; stop the model if there are no wolves and no sheep
+  ; stop the model if there are no turtles
   if not any? turtles [ stop ]
-  ; stop the model if there are no wolves and the number of sheep gets very large
-  if not any? wolves and count sheep > max-sheep [ user-message "The sheep have inherited the earth" stop ]
-  ask sheep [
-    move
+  ; stop the model if there are no dolphins
+  if not any? dolphins [ user-message "The fishes have inherited the earth" stop ]
+  ask fishes [
+    move-fish
 
-    ; in this version, sheep eat grass, grass grows, and it costs sheep energy to move
-    if model-version = "sheep-wolves-grass" [
-      set energy energy - 1  ; deduct energy for sheep only if running sheep-wolves-grass model version
-      eat-grass  ; sheep eat grass only if running the sheep-wolves-grass model version
-      death ; sheep die from starvation only if running the sheep-wolves-grass model version
-    ]
-
-    reproduce-sheep  ; sheep reproduce at a random rate governed by a slider
+    reproduce-fishes  ; fish reproduce at a random rate governed by a slider
   ]
-  ask wolves [
-    move
-    set energy energy - 1  ; wolves lose energy as they move
-    eat-sheep ; wolves eat a sheep on their patch
-    death ; wolves die if they run out of energy
-    reproduce-wolves ; wolves reproduce at a random rate governed by a slider
-  ]
+  ask dolphins [
+    move-dolphin
 
-  if model-version = "sheep-wolves-grass" [ ask patches [ grow-grass ] ]
+    eat-fish ; dolphins eat a fish on their patch
+  ]
 
   tick
   display-labels
 end
 
-to move  ; turtle procedure
-  rt random 50
-  lt random 50
-  fd 1
+to move-fish  ; move fish procedure
+  rt random 360
+  lt random 360
+  fd speed-fish
 end
 
-to eat-grass  ; sheep procedure
-  ; sheep eat grass and turn the patch brown
-  if pcolor = green [
-    set pcolor brown
-    set energy energy + sheep-gain-from-food  ; sheep gain energy by eating
-  ]
+to move-dolphin  ; move fish procedure
+  rt random 360
+  lt random 360
+  fd speed-dolphin
 end
 
-to reproduce-sheep  ; sheep procedure
-  if random-float 100 < sheep-reproduce [  ; throw "dice" to see if you will reproduce
-    set energy (energy / 2)                ; divide energy between parent and offspring
+to reproduce-fishes  ; fishes procedure
+  set fish-reproduce (fish-reproduce + 1)
+  if fish-reproduction-rate <= fish-reproduce [  ; check if it's time to make fishes reproduce
     hatch 1 [ rt random-float 360 fd 1 ]   ; hatch an offspring and move it forward 1 step
+    set fish-reproduction-rate 0
   ]
 end
 
-to reproduce-wolves  ; wolf procedure
-  if random-float 100 < wolf-reproduce [  ; throw "dice" to see if you will reproduce
-    set energy (energy / 2)               ; divide energy between parent and offspring
-    hatch 1 [ rt random-float 360 fd 1 ]  ; hatch an offspring and move it forward 1 step
-  ]
-end
-
-to eat-sheep  ; wolf procedure
-  let prey one-of sheep-here                    ; grab a random sheep
+to eat-fish  ; fish procedure
+  let prey one-of fishes-here                    ; grab a random sheep
   if prey != nobody  [                          ; did we get one? if so,
-    ask prey [ die ]                            ; kill it, and...
-    set energy energy + wolf-gain-from-food     ; get energy from eating
+    ask prey [ die ]                            ; kill it
   ]
 end
-
-to death  ; turtle procedure (i.e. both wolf and sheep procedure)
-  ; when energy dips below zero, die
-  if energy < 0 [ die ]
-end
-
-to grow-grass  ; patch procedure
-  ; countdown on brown patches: if you reach 0, grow some grass
-  if pcolor = brown [
-    ifelse countdown <= 0
-      [ set pcolor green
-        set countdown grass-regrowth-time ]
-      [ set countdown countdown - 1 ]
-  ]
-end
-
-to-report grass
-  ifelse model-version = "sheep-wolves-grass" [
-    report patches with [pcolor = green]
-  ]
-  [ report 0 ]
-end
-
 
 to display-labels
   ask turtles [ set label "" ]
-  if show-energy? [
-    ask wolves [ set label round energy ]
-    if model-version = "sheep-wolves-grass" [ ask sheep [ set label round energy ] ]
-  ]
 end
 
 
@@ -159,12 +113,12 @@ ticks
 30.0
 
 SLIDER
-5
-60
-179
-93
-initial-number-sheep
-initial-number-sheep
+0
+10
+202
+43
+initial-number-fish
+initial-number-fish
 0
 250
 100.0
@@ -174,100 +128,55 @@ NIL
 HORIZONTAL
 
 SLIDER
-5
-196
-179
-229
-sheep-gain-from-food
-sheep-gain-from-food
-0.0
-50.0
-4.0
-1.0
-1
-NIL
-HORIZONTAL
-
-SLIDER
-5
-231
-179
-264
-sheep-reproduce
-sheep-reproduce
-1.0
-20.0
-4.0
-1.0
-1
-%
-HORIZONTAL
-
-SLIDER
-185
-60
-350
-93
-initial-number-wolves
-initial-number-wolves
 0
-250
-50.0
-1
-1
-NIL
-HORIZONTAL
-
-SLIDER
-183
-195
-348
-228
-wolf-gain-from-food
-wolf-gain-from-food
-0.0
-100.0
-20.0
-1.0
-1
-NIL
-HORIZONTAL
-
-SLIDER
-183
-231
-348
-264
-wolf-reproduce
-wolf-reproduce
-0.0
-20.0
-5.0
-1.0
-1
-%
-HORIZONTAL
-
-SLIDER
-40
+190
+202
+223
+fish-reproduction-rate
+fish-reproduction-rate
+0
 100
-252
+20.0
+1
+1
+NIL
+HORIZONTAL
+
+SLIDER
+0
+45
+217
+78
+initial-number-dolphins
+initial-number-dolphins
+0
+250
+50.0
+1
+1
+NIL
+HORIZONTAL
+
+SLIDER
+0
+100
+212
 133
-grass-regrowth-time
-grass-regrowth-time
-0
-100
-30.0
+speed-fish
+speed-fish
 1
+5
+1.0
+0.5
 1
 NIL
 HORIZONTAL
 
 BUTTON
-40
-140
-109
-173
+280
+10
+349
+43
 setup
 setup
 NIL
@@ -281,10 +190,10 @@ NIL
 1
 
 BUTTON
-115
-140
-190
-173
+275
+50
+350
+83
 go
 go
 T
@@ -313,17 +222,16 @@ true
 true
 "" ""
 PENS
-"sheep" 1.0 0 -612749 true "" "plot count sheep"
-"wolves" 1.0 0 -16449023 true "" "plot count wolves"
-"grass / 4" 1.0 0 -10899396 true "" "if model-version = \"sheep-wolves-grass\" [ plot count grass / 4 ]"
+"fishes" 1.0 0 -612749 true "" "plot count fishes"
+"dolphins" 1.0 0 -16449023 true "" "plot count dolphins"
 
 MONITOR
 41
 308
-111
+108
 353
-sheep
-count sheep
+fishes
+count fishes
 3
 1
 11
@@ -331,44 +239,13 @@ count sheep
 MONITOR
 115
 308
-185
+182
 353
-wolves
-count wolves
+dolphins
+count dolphins
 3
 1
 11
-
-MONITOR
-191
-308
-256
-353
-grass
-count grass / 4
-0
-1
-11
-
-TEXTBOX
-20
-178
-160
-196
-Sheep settings
-11
-0.0
-0
-
-TEXTBOX
-198
-176
-311
-194
-Wolf settings
-11
-0.0
-0
 
 SWITCH
 105
@@ -377,19 +254,24 @@ SWITCH
 303
 show-energy?
 show-energy?
-1
+0
 1
 -1000
 
-CHOOSER
-5
-10
-350
-55
-model-version
-model-version
-"sheep-wolves" "sheep-wolves-grass"
+SLIDER
+0
+135
+172
+168
+speed-dolphin
+speed-dolphin
 1
+10
+1.0
+0.5
+1
+NIL
+HORIZONTAL
 
 @#$#@#$#@
 ## WHAT IS IT?
