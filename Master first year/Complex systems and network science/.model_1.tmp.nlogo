@@ -66,6 +66,9 @@ to move-dolphin  ; move fish procedure
   fd speed-dolphin
 end
 
+to flee-fish ; fleeing for fishes
+
+
 
 to reproduce-fishes  ; fishes procedure
   set fish-reproduce (fish-reproduce + 1)
