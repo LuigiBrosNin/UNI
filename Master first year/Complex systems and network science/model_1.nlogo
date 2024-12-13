@@ -66,6 +66,11 @@ to move-dolphin  ; move fish procedure
   fd speed-dolphin
 end
 
+to flee-fish ; fleeing for fishes
+
+
+end
+
 to reproduce-fishes  ; fishes procedure
   set fish-reproduce (fish-reproduce + 1)
   if fish-reproduce >= fish-reproduction-rate [  ; check if it's time to make fishes reproduce
@@ -140,7 +145,7 @@ fish-reproduction-rate
 fish-reproduction-rate
 0
 100
-50.0
+100.0
 1
 1
 NIL
@@ -251,17 +256,6 @@ count dolphins
 1
 11
 
-SWITCH
-105
-270
-241
-303
-show-energy?
-show-energy?
-0
-1
--1000
-
 SLIDER
 0
 135
@@ -271,7 +265,7 @@ speed-dolphin
 speed-dolphin
 1
 10
-1.0
+1.5
 0.5
 1
 NIL
