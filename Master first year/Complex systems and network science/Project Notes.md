@@ -7,6 +7,14 @@ PDF report
 - explain the experiments that you performed in terms of methodology and the results that you obtained
 - find tipping points or interesting equilibrium states in your model.
 
+For a good analysis, different values of the parameters should be used
+highlighting the differences and impact that each of them have on the model.
+You must make previsions and discuss differences between parameters values
+as well between the different models. Suggested metrics to be analyzed are
+population count of fishes (dolphins population is fixed), max life time among
+fishes, average fishes eaten per dolphin. Particular attention should be paid to
+collective behaviors of agents, such as self-organization of preys and predators.
+
 ### 1. Baseline model
 2d space, agents move (fishes)
 - Roaming
@@ -33,4 +41,10 @@ current direction s_t (last fish direction to compute next step)
 max turn theta_max (optional, max turn angle for current fish direction)
 
 ### 3. Hunting strategy model
+peer to peer communication network overlay for predators. high churn
+- roaming
+- hunting - additionally communicate the position of nearby fishes to the networks with strategy
+- Follow instructions: If no fishes are detected nearby, ask the peer to peer network for position of the fishes, then move towards the nearest known position of a fish.
 
+additional params
+communication range Y net
