@@ -35,10 +35,9 @@ to go
   ; stop the model if there are no turtles
   if not any? turtles [ stop ]
   ; stop the model if there are no dolphins
-  if not any? dolphins [ user-message "The fishes have inherited the earth" stop ]
+  if not any? fishes [ user-message "The dolphins have inherited the earth" stop ]
 
   ask fishes [ ; fish logic
-
     move-fish
 
     if fish-reproduction [
@@ -58,13 +57,13 @@ end
 
 to move-fish  ; move fish procedure
 
-  let closest-dolphin min-one-of dolphins [distance self]  ;; Find the closest dolphin to this fish
+  let closest-dolphin min-one-of dolphins [distance self]  ; Find the closest dolphin to this fish
 
   ; move or flee based on nearby dolphins
-  ifelse closest-dolphin != nobody and distance closest-dolphin <= fish-vision-range [  ;; Adjust to vision range
-    face closest-dolphin  ;; Make the fish face the dolphin
-    set heading (heading + 180)  ;; Set heading to the opposite direction (flee)
-    fd speed-fish ;; Move the fish away from the dolphin (increase number if faster fleeing is desired)
+  ifelse closest-dolphin != nobody and distance closest-dolphin <= fish-vision-range [  ; Adjust to vision range
+    face closest-dolphin  ; Make the fish face the dolphin
+    set heading (heading + 180)  ; Set heading to the opposite direction (flee)
+    fd speed-fish ; Move the fish away from the dolphin (increase number if faster fleeing is desired)
   ]
   [
     rt random 180
@@ -75,8 +74,13 @@ to move-fish  ; move fish procedure
 end
 
 to move-dolphin  ; move dolphin procedure
-  let closest-fish min-one-of fishes [distance self]
-  ifelse closest-fish != nobody and distance closest-fish <= dolphin-vision-range [  ;; Adjust to vision range
+  let nearby-fish fishes with [distance self <= dolphin-vision-range]
+  let closest-fish min-one-of nearby-fish [distance self]
+  foreach nearby-fish [
+    let dist-to-fish distance self
+    print (word "Fish " who " at distance " dist-to-fish)
+  ]
+  ifelse closest-fish != nobody and distance closest-fish <= dolphin-vision-range [ ; Adjust to vision range
     set color red
     face closest-fish
     fd speed-dolphin
@@ -148,7 +152,7 @@ initial-number-fish
 initial-number-fish
 1
 250
-250.0
+2.0
 1
 1
 NIL
@@ -283,7 +287,7 @@ speed-dolphin
 speed-dolphin
 1
 10
-2.0
+2.5
 0.5
 1
 NIL
