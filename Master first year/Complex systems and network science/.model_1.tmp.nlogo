@@ -39,15 +39,7 @@ to go
 
   ask fishes [ ; fish logic
 
-    let closest-dolphin min-one-of dolphins [distance self]  ;; Find the closest dolphin to this fish
-
-    ; move or flee based on nearby dolphins
-    ifelse closest-dolphin != nobody and distance closest-dolphin <= fish-vision-range [  ;; Adjust to vision range
-      flee-fish
-    ]
-    [
-      move-fish
-    ]
+    move-fish
 
     if fish-reproduction [
       reproduce-fishes  ; fish reproduce at a random rate governed by a slider
@@ -56,13 +48,14 @@ to go
 
   ask dolphins [
     let closest-fish min-one-of fishes [distance self]  ;; Find the closest dolphin to this fish
+    print distance closest-fish
 
     ifelse closest-fish != nobody and distance closest-fish <= dolphin-vision-range [  ;; Adjust to vision range
       chase-dolphin
     ]
     [
       move-dolphin
-    ]
+
 
     eat-fish ; dolphins eat a fish on their patch
   ]
@@ -72,32 +65,36 @@ to go
 end
 
 to move-fish  ; move fish procedure
-  rt random 180
-  lt random 180
-  fd speed-fish
-end
 
-to move-dolphin  ; move dolphin procedure
-  set color black
-  rt random 180
-  lt random 180
-  fd speed-dolphin
-end
+  let closest-dolphin min-one-of dolphins [distance self]  ;; Find the closest dolphin to this fish
 
-to flee-fish ; fleeing for fishes
-    let closest-dolphin min-one-of dolphins [distance self]  ;; Find the closest dolphin to this fish
-
+  ; move or flee based on nearby dolphins
+  ifelse closest-dolphin != nobody and distance closest-dolphin <= fish-vision-range [  ;; Adjust to vision range
     face closest-dolphin  ;; Make the fish face the dolphin
     set heading (heading + 180)  ;; Set heading to the opposite direction (flee)
     fd speed-fish ;; Move the fish away from the dolphin (increase number if faster fleeing is desired)
+  ]
+  [
+    rt random 180
+    lt random 180
+    fd speed-fish
+  ]
+
 end
 
-to chase-dolphin ; chasing for dolphins
+to move-dolphin  ; move dolphin procedure
+  let closest-fish min-one-of fishes [distance self]
+  ifelse closest-fish != nobody and distance closest-fish <= dolphin-vision-range [  ;; Adjust to vision range
     set color red
-    let closest-fish min-one-of fishes [distance self]
-
     face closest-fish
     fd speed-dolphin
+  ]
+  [
+    set color black
+    rt random 180
+    lt random 180
+    fd speed-dolphin
+  ]
 end
 
 to reproduce-fishes  ; fishes procedure
@@ -318,10 +315,10 @@ SLIDER
 168
 fish-vision-range
 fish-vision-range
-1
-25
-5.0
-1
+0
+250
+10.0
+10
 1
 NIL
 HORIZONTAL
@@ -329,14 +326,14 @@ HORIZONTAL
 SLIDER
 135
 135
-295
+337
 168
 dolphin-vision-range
 dolphin-vision-range
-1
-25
-5.0
-1
+0
+250
+20.0
+10
 1
 NIL
 HORIZONTAL
