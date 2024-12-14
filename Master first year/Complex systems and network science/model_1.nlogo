@@ -36,8 +36,19 @@ to go
   if not any? turtles [ stop ]
   ; stop the model if there are no dolphins
   if not any? dolphins [ user-message "The fishes have inherited the earth" stop ]
-  ask fishes [
+
+  ask fishes [ ; fish logic
+
+    let closest-dolphin min-one-of dolphins [distance self]  ;; Find the closest dolphin to this fish
+
+    ifelse closest-dolphin != nobody and abs (xcor - [xcor] of closest-dolphin) <= fish-vision-range [  ;; Adjust to vision range
+      flee-fish
+    ]
+    [
     move-fish
+    ]
+
+
 
     if fish-reproduction [
     reproduce-fishes  ; fish reproduce at a random rate governed by a slider
@@ -67,6 +78,11 @@ to move-dolphin  ; move fish procedure
 end
 
 to flee-fish ; fleeing for fishes
+    let closest-dolphin min-one-of dolphins [distance self]  ;; Find the closest dolphin to this fish
+
+    face closest-dolphin  ;; Make the fish face the dolphin
+    set heading (heading + 180)  ;; Set heading to the opposite direction (flee)
+    fd 1  ;; Move the fish away from the dolphin (increase number if faster fleeing is desired)
 
 
 end
@@ -169,7 +185,7 @@ HORIZONTAL
 SLIDER
 0
 100
-212
+110
 133
 speed-fish
 speed-fish
@@ -257,10 +273,10 @@ count dolphins
 11
 
 SLIDER
-0
-135
-172
-168
+110
+100
+245
+133
 speed-dolphin
 speed-dolphin
 1
@@ -281,6 +297,21 @@ fish-reproduction
 0
 1
 -1000
+
+SLIDER
+205
+190
+340
+223
+fish-vision-range
+fish-vision-range
+1
+25
+6.0
+1
+1
+NIL
+HORIZONTAL
 
 @#$#@#$#@
 ## WHAT IS IT?
