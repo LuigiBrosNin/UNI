@@ -58,7 +58,7 @@ end
 
 to move-fish  ; move fish procedure
 
-  let closest-dolphin min-one-of dolphins [distance self]  ; Find the closest dolphin to this fish
+  let closest-dolphin min-one-of dolphins [distance myself]  ; Find the closest dolphin to this fish
 
   ; move or flee based on nearby dolphins
   ifelse closest-dolphin != nobody and distance closest-dolphin <= fish-vision-range [  ; Adjust to vision range
@@ -75,8 +75,8 @@ to move-fish  ; move fish procedure
 end
 
 to move-dolphin  ; move dolphin procedure
-  let closest-fish min-one-of fishes [distance self]  ; Find the closest fish to this dolphin
-
+  let closest-fish min-one-of fishes [distance myself]  ; Find the closest fish to this dolphin
+  print distance closest-fish
   ifelse closest-fish != nobody and distance closest-fish <= dolphin-vision-range [  ; Adjust to vision range
     set color red  ; Change color to red if a fish is detected
     face closest-fish  ; Face the closest fish
@@ -319,10 +319,10 @@ SLIDER
 168
 dolphin-vision-range
 dolphin-vision-range
-0
-250
-20.0
-10
+1
+25
+6.0
+1
 1
 NIL
 HORIZONTAL
