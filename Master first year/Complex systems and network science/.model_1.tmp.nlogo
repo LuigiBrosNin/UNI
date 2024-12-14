@@ -72,15 +72,15 @@ to go
 end
 
 to move-fish  ; move fish procedure
-  rt random
-  lt random 150
+  rt random 180
+  lt random 180
   fd speed-fish
 end
 
-to move-dolphin  ; move fish procedure
+to move-dolphin  ; move dolphin procedure
   set color black
-  rt random 50
-  lt random 50
+  rt random 180
+  lt random 180
   fd speed-dolphin
 end
 
@@ -159,7 +159,7 @@ initial-number-fish
 initial-number-fish
 1
 250
-4.0
+250.0
 1
 1
 NIL
@@ -335,7 +335,7 @@ dolphin-vision-range
 dolphin-vision-range
 1
 25
-25.0
+5.0
 1
 1
 NIL
