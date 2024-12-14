@@ -42,7 +42,7 @@ to go
     let closest-dolphin min-one-of dolphins [distance self]  ;; Find the closest dolphin to this fish
 
     ; move or flee based on nearby dolphins
-    ifelse closest-dolphin != nobody and abs (xcor - [xcor] of closest-dolphin) <= fish-vision-range [  ;; Adjust to vision range
+    ifelse closest-dolphin != nobody and distance closest-dolphin <= fish-vision-range [  ;; Adjust to vision range
       flee-fish
     ]
     [
@@ -55,7 +55,14 @@ to go
   ]
 
   ask dolphins [
-    move-dolphin
+    let closest-fish min-one-of fishes [distance self]  ;; Find the closest dolphin to this fish
+
+    ifelse closest-fish != nobody and distance closest-fish <= dolphin-vision-range [  ;; Adjust to vision range
+      chase-dolphin
+    ]
+    [
+      move-dolphin
+    ]
 
     eat-fish ; dolphins eat a fish on their patch
   ]
@@ -65,14 +72,15 @@ to go
 end
 
 to move-fish  ; move fish procedure
-  rt random 180
-  lt random 180
+  rt random
+  lt random 150
   fd speed-fish
 end
 
 to move-dolphin  ; move fish procedure
-  rt random 180
-  lt random 180
+  set color black
+  rt random 50
+  lt random 50
   fd speed-dolphin
 end
 
@@ -81,9 +89,15 @@ to flee-fish ; fleeing for fishes
 
     face closest-dolphin  ;; Make the fish face the dolphin
     set heading (heading + 180)  ;; Set heading to the opposite direction (flee)
-    fd 1  ;; Move the fish away from the dolphin (increase number if faster fleeing is desired)
+    fd speed-fish ;; Move the fish away from the dolphin (increase number if faster fleeing is desired)
+end
 
+to chase-dolphin ; chasing for dolphins
+    set color red
+    let closest-fish min-one-of fishes [distance self]
 
+    face closest-fish
+    fd speed-dolphin
 end
 
 to reproduce-fishes  ; fishes procedure
@@ -143,9 +157,9 @@ SLIDER
 43
 initial-number-fish
 initial-number-fish
-0
+1
 250
-3.0
+4.0
 1
 1
 NIL
@@ -175,7 +189,7 @@ initial-number-dolphins
 initial-number-dolphins
 1
 250
-0.0
+1.0
 1
 1
 NIL
@@ -280,7 +294,7 @@ speed-dolphin
 speed-dolphin
 1
 10
-1.5
+2.0
 0.5
 1
 NIL
@@ -293,20 +307,35 @@ SWITCH
 258
 fish-reproduction
 fish-reproduction
-0
+1
 1
 -1000
 
 SLIDER
-205
-190
-340
-223
+0
+135
+135
+168
 fish-vision-range
 fish-vision-range
 1
 25
-6.0
+5.0
+1
+1
+NIL
+HORIZONTAL
+
+SLIDER
+135
+135
+295
+168
+dolphin-vision-range
+dolphin-vision-range
+1
+25
+25.0
 1
 1
 NIL
