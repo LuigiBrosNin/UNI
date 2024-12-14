@@ -38,6 +38,7 @@ to go
   if not any? fishes [ user-message "The dolphins have inherited the earth" stop ]
 
   ask fishes [ ; fish logic
+
     move-fish
 
     if fish-reproduction [
@@ -74,22 +75,18 @@ to move-fish  ; move fish procedure
 end
 
 to move-dolphin  ; move dolphin procedure
-  let nearby-fish fishes with [distance self <= dolphin-vision-range]
-  let closest-fish min-one-of nearby-fish [distance self]
-  foreach nearby-fish [
-    let dist-to-fish distance self
-    print (word "Fish " who " at distance " dist-to-fish)
-  ]
-  ifelse closest-fish != nobody and distance closest-fish <= dolphin-vision-range [ ; Adjust to vision range
-    set color red
-    face closest-fish
-    fd speed-dolphin
+  let closest-fish min-one-of fishes [distance self]  ; Find the closest fish to this dolphin
+  print distance closest-fish
+  ifelse closest-fish != nobody and distance closest-fish <= dolphin-vision-range [  ; Adjust to vision range
+    set color red  ; Change color to red if a fish is detected
+    face closest-fish  ; Face the closest fish
+    fd speed-dolphin  ; Move toward the fish
   ]
   [
-    set color black
-    rt random 180
+    set color black  ; Set color back to black if no fish are detected
+    rt random 180  ; Turn randomly
     lt random 180
-    fd speed-dolphin
+    fd speed-dolphin  ; Move in a random direction
   ]
 end
 
@@ -111,10 +108,6 @@ end
 to display-labels
   ask turtles [ set label "" ]
 end
-
-
-; Copyright 1997 Uri Wilensky.
-; See Info tab for full copyright and license.
 @#$#@#$#@
 GRAPHICS-WINDOW
 360
