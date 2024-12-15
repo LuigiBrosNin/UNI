@@ -9,7 +9,7 @@ to setup
 
   ; blue background
   ask patches [ set pcolor blue ]
-  set fish-reproduce 0
+  set fish-reproduce random fish-reproduction-rate
 
   create-fishes initial-number-fish ; create the fishes, then initialize their variables
   [
@@ -27,7 +27,7 @@ to setup
     set size 2  ; easier to see
     setxy random-xcor random-ycor
   ]
-  display-labels
+  displayLabels
   reset-ticks
 end
 
@@ -39,24 +39,24 @@ to go
 
   ask fishes [ ; fish logic
 
-    move-fish
+    moveFish
 
     if fish-reproduction [
-      reproduce-fishes  ; fish reproduce at a random rate governed by a slider
+      reproduceFishes  ; fish reproduce at a random rate governed by a slider
     ]
   ]
 
   ask dolphins [
-    move-dolphin
+    moveDolphin
 
-    eat-fish ; dolphins eat a fish on their patch
+    eatFish ; dolphins eat a fish on their patch
   ]
 
   tick
-  display-labels
+  displayLabels
 end
 
-to move-fish  ; move fish procedure
+to moveFish  ; move fish procedure
 
   let closest-dolphin min-one-of dolphins [distance myself]  ; Find the closest dolphin to this fish
 
@@ -74,13 +74,18 @@ to move-fish  ; move fish procedure
 
 end
 
-to move-dolphin  ; move dolphin procedure
+to moveDolphin  ; move dolphin procedure
   let closest-fish min-one-of fishes [distance myself]  ; Find the closest fish to this dolphin
   print distance closest-fish
   ifelse closest-fish != nobody and distance closest-fish <= dolphin-vision-range [  ; Adjust to vision range
     set color red  ; Change color to red if a fish is detected
     face closest-fish  ; Face the closest fish
-    fd speed-dolphin  ; Move toward the fish
+    ifelse distance closest-fish < speed-dolphin [ ; fish in speed range -> no need to go at full speed
+      fd distance closest-fish ; move to the fish
+    ]
+    [
+      fd speed-dolphin  ; Move toward the fish
+    ]
   ]
   [
     set color black  ; Set color back to black if no fish are detected
@@ -90,7 +95,7 @@ to move-dolphin  ; move dolphin procedure
   ]
 end
 
-to reproduce-fishes  ; fishes procedure
+to reproduceFishes  ; fishes procedure
   set fish-reproduce (fish-reproduce + 1)
   if fish-reproduce >= fish-reproduction-rate [  ; check if it's time to make fishes reproduce
     hatch 1 [ rt random-float 360 fd 1 ]   ; hatch an offspring and move it forward 1 step
@@ -98,14 +103,14 @@ to reproduce-fishes  ; fishes procedure
   ]
 end
 
-to eat-fish  ; fish procedure
-  let prey one-of fishes-here                    ; grab a random sheep
+to eatFish  ; dolphin procedure to eat
+  let prey one-of fishes-here                    ; grab a random fish
   if prey != nobody  [                          ; did we get one? if so,
     ask prey [ die ]                            ; kill it
   ]
 end
 
-to display-labels
+to displayLabels
   ask turtles [ set label "" ]
 end
 @#$#@#$#@
