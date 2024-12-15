@@ -1555,5 +1555,6 @@ example
 
 - [[Presentation notes]]
 - [[Project Notes]]
+- [[Project paper notes]]
 
 %% End Waypoint %%
