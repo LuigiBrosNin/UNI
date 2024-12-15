@@ -25,4 +25,5 @@ This led to giving the dolphins the ability to adjust their velocity to catch fi
 
 ## 2.2 Methodology and results
 Research was conducted to find under what conditions and limits the network is in a state of equilibrium, while still being able to predict where the fishes or the dolphins would dominate the environment.
-That is, at what point do the survivability of fishes exceeds the dolphin
+That is, at what point do the survivability of fishes exceeds the dolphin hunting effectiveness, and thus we'll see an increase in the population? at what point the population growth will be equal to the lost fishes?
+
