@@ -28,6 +28,7 @@ to setup
     set shape "shark"
     set color black
     set size 2  ; easier to see
+    set fishes-eaten 0
     setxy random-xcor random-ycor
   ]
   displayLabels
@@ -115,6 +116,7 @@ to eatFish  ; dolphin procedure to eat
   let prey one-of fishes-here                    ; grab a random fish
   if prey != nobody  [                          ; did we get one? if so,
     ask prey [ die ]                            ; kill it
+    set fishes-eaten fishes-eaten + 1
   ]
 end
 
@@ -173,7 +175,7 @@ fish-reproduction-rate
 fish-reproduction-rate
 0
 1000
-350.0
+100.0
 10
 1
 NIL
@@ -203,7 +205,7 @@ speed-fish
 speed-fish
 1
 5
-2.5
+1.0
 0.5
 1
 NIL
@@ -331,10 +333,32 @@ HORIZONTAL
 MONITOR
 5
 480
-137
+95
 525
-avg fishes lifetime
+avg lifetime
 mean [lifetime] of fishes
+17
+1
+11
+
+MONITOR
+5
+435
+97
+480
+max lifetime
+max [lifetime] of fishes
+17
+1
+11
+
+MONITOR
+95
+480
+217
+525
+avg fishes eaten
+mean [fishes-eaten] of dolphins
 17
 1
 11
