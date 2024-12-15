@@ -1490,7 +1490,7 @@ Functions (basically)
 Style tips
 - camelCase for procedures
 - no underscores in names
-- command procedure are nouns, reporters with berbs
+- command procedure are nouns, reporters with verbs
 
 Variables
 - Local -> part of a procedure
