@@ -115,6 +115,7 @@ to eatFish  ; dolphin procedure to eat
   let prey one-of fishes-here                    ; grab a random fish
   if prey != nobody  [                          ; did we get one? if so,
     ask prey [ die ]                            ; kill it
+
   ]
 end
 
@@ -173,7 +174,7 @@ fish-reproduction-rate
 fish-reproduction-rate
 0
 1000
-350.0
+100.0
 10
 1
 NIL
@@ -203,7 +204,7 @@ speed-fish
 speed-fish
 1
 5
-2.5
+1.0
 0.5
 1
 NIL
@@ -335,6 +336,17 @@ MONITOR
 525
 avg fishes lifetime
 mean [lifetime] of fishes
+17
+1
+11
+
+MONITOR
+5
+435
+97
+480
+max lifetime
+max [lifetime] of fishes
 17
 1
 11
