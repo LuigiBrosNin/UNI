@@ -27,7 +27,7 @@ This led to giving the dolphins the ability to adjust their velocity to catch fi
 Research was conducted to find under what conditions and limits the network is in a state of equilibrium, while still being able to predict where the fishes or the dolphins would dominate the environment.
 That is, at what point do the survivability of fishes exceeds the dolphin hunting effectiveness, and thus we'll see an increase in the population? at what point the population growth will be equal to the lost fishes?
 
-- results
+- random results
 	100 fish
 	10 dolphins
 	100 tick reproduction
@@ -80,5 +80,26 @@ That is, at what point do the survivability of fishes exceeds the dolphin huntin
 	delta vision range 5
 	100 fishes
 	25 dolphins
-	increases consistency in ticks (tends to constant ticks when range=board, fishes fleeing shouldn't cause flactuation, to test)
+	increases consistency in ticks? (tends to constant ticks when range=board, fishes fleeing shouldn't cause flactuation, to test)
 	267, 275, 243, 223, 319
+
+- predictions + results
+	- initial number of fish -> higher = more ticks, log increase
+		- 1 fish -> 8 ticks
+		- 250 fish -> 80 ticks
+		- 125 fish -> 40 ticks
+		Linear increase, makes sense as the dolphins eat linearly
+	- initial number of dolphins -> higher -> less ticks, log decrease
+		1 dolphin -> 1089
+		25 dolphins -> 89
+		125 -> 15
+		250 -> 10 ticks
+		Decrease is logarithmic, more dolphins less difference.
+		Board size has an impact on this
+	- delta speed (dolphin > fish) -> 0 tends to infinite ticks, the higher the more fishes eaten per tick, exp increase?
+		0.1 -> 422 ticks, 0.2~ eaten per tick
+		0.5 -> 261, 0.35~ eaten per tick
+		1 -> 148, 0.60~ eaten per tick
+		2 -> 100~, 0.75~ eaten per tick, inconsistent (0.5 - 1.2)
+		5 -> 80
+		
