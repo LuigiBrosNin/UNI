@@ -94,12 +94,19 @@ That is, at what point do the survivability of fishes exceeds the dolphin huntin
 		25 dolphins -> 89
 		125 -> 15
 		250 -> 10 ticks
-		Decrease is logarithmic, more dolphins less difference.
+		rational type
 		Board size has an impact on this
-	- delta speed (dolphin > fish) -> 0 tends to infinite ticks, the higher the more fishes eaten per tick, exp increase?
+	- delta speed (dolphin > fish) -> 0 tends to infinite ticks, the higher the more fishes eaten per tick, rational type
+		-0.1 -> 3k ticks
+		0 -> 1100 - 1400 ticks, 0.08~ eaten
 		0.1 -> 422 ticks, 0.2~ eaten per tick
 		0.5 -> 261, 0.35~ eaten per tick
 		1 -> 148, 0.60~ eaten per tick
 		2 -> 100~, 0.75~ eaten per tick, inconsistent (0.5 - 1.2)
-		5 -> 80
-		
+		5 -> 90~, 0.9~ eaten per tick
+		rational positive type
+		doesn't tend to infinite when 0 nor negative because multiple dolphins can create a local world state where a fish can be eaten
+	- delta vision range -> negative tends to infinite ticks, higher more fishes eaten per tick?
+		-1
+		0 -> 300-400 ticks
+		25 -> 40-60 ticks

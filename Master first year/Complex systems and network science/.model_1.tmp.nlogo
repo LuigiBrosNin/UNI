@@ -175,7 +175,7 @@ fish-reproduction-rate
 fish-reproduction-rate
 0
 1000
-80.0
+100.0
 2
 1
 NIL
@@ -190,7 +190,7 @@ initial-number-dolphins
 initial-number-dolphins
 1
 250
-26.0
+10.0
 1
 1
 NIL
@@ -205,8 +205,8 @@ speed-fish
 speed-fish
 1
 5
-1.0
-0.5
+1.5
+0.1
 1
 NIL
 HORIZONTAL
@@ -283,7 +283,7 @@ speed-dolphin
 speed-dolphin
 1
 10
-1.1
+1.0
 0.1
 1
 NIL
@@ -309,7 +309,7 @@ fish-vision-range
 fish-vision-range
 1
 25
-5.0
+3.0
 1
 1
 NIL
@@ -324,7 +324,7 @@ dolphin-vision-range
 dolphin-vision-range
 1
 25
-6.0
+3.0
 1
 1
 NIL
@@ -369,7 +369,7 @@ MONITOR
 242
 480
 fishes eaten per tick
-mean [ fishes-eaten ] of turtles / ticks
+sum [ fishes-eaten ] of turtles / ticks
 17
 1
 11
