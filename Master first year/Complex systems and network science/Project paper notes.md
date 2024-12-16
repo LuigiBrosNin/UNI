@@ -71,4 +71,14 @@ That is, at what point do the survivability of fishes exceeds the dolphin huntin
 	delta speed 0.1
 	614, 600, 683, 606, 536
 	low delta speed increases consistency? 
+
+	reproduction rate 80
+	dolphins 8 -> 26
+	fishes overpopulate up to 26 where they will go extinct (26 tipping point for 100 fishes, reproduction 80)
+	fishes eaten per tick 0.42, 0.58
 	
+	delta vision range 5
+	100 fishes
+	25 dolphins
+	increases consistency in ticks (tends to constant ticks when range=board, fishes fleeing shouldn't cause flactuation, to test)
+	267, 275, 243, 223, 319

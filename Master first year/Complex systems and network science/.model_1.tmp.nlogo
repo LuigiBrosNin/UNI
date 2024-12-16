@@ -175,7 +175,7 @@ fish-reproduction-rate
 fish-reproduction-rate
 0
 1000
-36.0
+80.0
 2
 1
 NIL
@@ -190,7 +190,7 @@ initial-number-dolphins
 initial-number-dolphins
 1
 250
-8.0
+26.0
 1
 1
 NIL
@@ -283,7 +283,7 @@ speed-dolphin
 speed-dolphin
 1
 10
-1.5
+1.1
 0.1
 1
 NIL
@@ -359,6 +359,17 @@ MONITOR
 525
 avg fishes eaten
 mean [fishes-eaten] of dolphins
+17
+1
+11
+
+MONITOR
+95
+435
+242
+480
+fishes eaten per tick
+mean [ fishes-eaten ] of turtles / ticks
 17
 1
 11
