@@ -107,6 +107,12 @@ That is, at what point do the survivability of fishes exceeds the dolphin huntin
 		rational positive type
 		doesn't tend to infinite when 0 nor negative because multiple dolphins can create a local world state where a fish can be eaten
 	- delta vision range -> negative tends to infinite ticks, higher more fishes eaten per tick?
-		-1
+		-1 -> 6.5k
 		0 -> 300-400 ticks
+		12 -> 150~ ticks
 		25 -> 40-60 ticks
+		doesn't tend to infinite when 0 nor negative because multiple dolphins can create a local world state where a fish can be eaten
+	- fish reproduction rate
+		- when fishes eaten over their reproduction rate doesn't exceed half consistently, exponential increase.
+		- reproduction drags the simulation significantly longer since few fishes require more time to "find", noticeable especially in low dolphin numbers and delta vision range
+		![[Pasted image 20241217001906.png]]
