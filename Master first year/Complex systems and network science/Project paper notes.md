@@ -27,3 +27,21 @@ This led to giving the dolphins the ability to adjust their velocity to catch fi
 Research was conducted to find under what conditions and limits the network is in a state of equilibrium, while still being able to predict where the fishes or the dolphins would dominate the environment.
 That is, at what point do the survivability of fishes exceeds the dolphin hunting effectiveness, and thus we'll see an increase in the population? at what point the population growth will be equal to the lost fishes?
 
+- results
+	100 fish
+	10 dolphins
+	100 tick reproduction
+	delta vision range = 1
+	delta speed = 0.5
+	148 ticks
+	max lifetime 46, avg fish eaten 10.3
+	
+	decreased reproduction from 100 to 60
+	166 ticks
+	max lifetime 102, avg 12.6
+	
+	reproduction 30
+	fishes reproduce indefinitely
+	
+	reproduciton 40
+	344 ticks, avg 30.9 eaten
