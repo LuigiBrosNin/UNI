@@ -43,5 +43,32 @@ That is, at what point do the survivability of fishes exceeds the dolphin huntin
 	reproduction 30
 	fishes reproduce indefinitely
 	
-	reproduciton 40
+	reproduction 40
 	344 ticks, avg 30.9 eaten
+	
+	reproduction 36
+	multiple runs, some reproducing indefinitely, one ending on 425 ticks, 39.7 fishes eaten
+	
+	no reproduction
+	144 ticks, 121, 154, 169, 135
+	
+	200 Fishes, 20 dolphins
+	100, 134, 120, 110, 106
+	1 dolphin is heavier than 10 fishes
+	
+	8 dolphins
+	373, 212, 183,237,  148
+	more unstable ticks cuz dolphins need to find the fishes
+	
+	delta vision range 0
+	198 , 294, 234, 330, 171
+	slighty higher avg ticks, fishes rarely have the chance to run away
+	
+	delta vision range 1
+	delta speed 0
+	equilibrium 90 fishes, 1.24 avg eaten (when all dolphins all chase the same fish -> equilibrium)
+	
+	delta speed 0.1
+	614, 600, 683, 606, 536
+	low delta speed increases consistency? 
+	

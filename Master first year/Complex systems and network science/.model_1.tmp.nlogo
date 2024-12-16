@@ -175,7 +175,7 @@ fish-reproduction-rate
 fish-reproduction-rate
 0
 1000
-50.0
+36.0
 2
 1
 NIL
@@ -190,7 +190,7 @@ initial-number-dolphins
 initial-number-dolphins
 1
 250
-10.0
+8.0
 1
 1
 NIL
@@ -284,7 +284,7 @@ speed-dolphin
 1
 10
 1.5
-0.5
+0.1
 1
 NIL
 HORIZONTAL
@@ -296,7 +296,7 @@ SWITCH
 258
 fish-reproduction
 fish-reproduction
-0
+1
 1
 -1000
 
