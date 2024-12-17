@@ -27,6 +27,12 @@
 | jobshop1 | 802             | -    | 186msec               |
 | jobshop2 | 921             | -    | 295msec               |
 
+| EST      | Objective value | Time | Time initial solution |
+| -------- | --------------- | ---- | --------------------- |
+| jobshop1 | 732             | -    | 103msec               |
+| jobshop2 | 1086            | -    | 120msec               |
+
+
 1. Is searching on EST a good strategy to find an initial solution?
 	The initial solutions of the EST methods are good approximations of the optimal solutions and they get compute very early in the search (in the msec range for all our tests). The initial solutions found are close enough to what the optimal solution is in the RCPSP exercise, while in the JSP exercise the initial solutions are way more far off the optimal solution found by the default search, which depending on the situation, might not be a good enough solution.
 	EST appears to be a consistent strategy time-wise, where it could be considered a good strategy for a initial solution if the context of the problem admits initial solutions that may be relatively far from optimal.
