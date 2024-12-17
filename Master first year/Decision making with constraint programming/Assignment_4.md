@@ -1,11 +1,11 @@
 
 # RCPSP
 
-| Default search | Objective value | Time    |
-| -------------- | --------------- | ------- |
-| rcpspData1     | 90              | 669msec |
-| rcpspData2     | 54              | 1m 27s  |
-| rcpspData3     | 68              | 1m 16s  |
+| Default search | Objective value | Time                                            |
+| -------------- | --------------- | ----------------------------------------------- |
+| rcpspData1     | 90              | 669msec                                         |
+| rcpspData2     | 54              | 1m 27s (last solution found before timeout)     |
+| rcpspData3     | 75              | 5s 304msec (last solution found before timeout) |
 
 | EST        | Objective value | Time        | Time initial solution |
 | ---------- | --------------- | ----------- | --------------------- |
