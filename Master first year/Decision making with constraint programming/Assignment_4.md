@@ -31,7 +31,7 @@ new model with dummy task
 
 | EST      | Objective value | Time | Time initial solution |
 | -------- | --------------- | ---- | --------------------- |
-| jobshop1 | 732             | -    | 103msec               |
+| jobshop1 | 669             | -    | 969msec               |
 | jobshop2 | 1086            | -    | 120msec               |
 
 
