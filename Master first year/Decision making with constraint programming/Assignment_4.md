@@ -27,6 +27,8 @@
 | jobshop1 | 802             | -    | 186msec               |
 | jobshop2 | 921             | -    | 295msec               |
 
+new model with dummy task
+
 | EST      | Objective value | Time | Time initial solution |
 | -------- | --------------- | ---- | --------------------- |
 | jobshop1 | 732             | -    | 103msec               |
