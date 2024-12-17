@@ -3,8 +3,8 @@
 
 | Default search | Objective value | Time    |
 | -------------- | --------------- | ------- |
-| rcpspData1     | 60              | 293msec |
-| rcpspData2     | 46              | 347msec |
+| rcpspData1     | 90              | 669msec |
+| rcpspData2     | 54              | 1m 27s  |
 | rcpspData3     | 68              | 1m 16s  |
 
 | EST        | Objective value | Time        | Time initial solution |
