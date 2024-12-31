@@ -1,26 +1,24 @@
-
 # RCPSP
 
-| Default search | Objective value | Time                                            |
-| -------------- | --------------- | ----------------------------------------------- |
-| rcpspData1     | 90              | 669msec                                         |
-| rcpspData2     | 54              | 1m 27s (last solution found before timeout)     |
-| rcpspData3     | 75              | 5s 304msec (last solution found before timeout) |
+| Default search | Objective value | Time       |
+| -------------- | --------------- | ---------- |
+| rcpspData1     | 90              | 360msec    |
+| rcpspData2     | 53              | 1s 53msec  |
+| rcpspData3     | 82              | 5s 567msec |
 
 | EST        | Objective value | Time        | Time initial solution |
 | ---------- | --------------- | ----------- | --------------------- |
-| rcpspData1 | 60              | 343msec     | 343msec               |
-| rcpspData2 | 49              | 39s 858msec | 313msec               |
-| rcpspData3 | 70              | 11s 243msec | 358msec               |
-
+| rcpspData1 | 90              | 362msec     | 343msec               |
+| rcpspData2 | 54              | 45s 901msec | 361msec               |
+| rcpspData3 | 75              | 2s 506msec  | 362msec               |
 
 
 # JSP
 
 | Default search | Objective value | Time    |
 | -------------- | --------------- | ------- |
-| jobshop1       | 663             | 141msec |
-| jobshop2       | 826             | 3m 46s  |
+| jobshop1       | 666             | 370msec |
+| jobshop2       | 924             | -       |
 
 | EST      | Objective value | Time | Time initial solution |
 | -------- | --------------- | ---- | --------------------- |

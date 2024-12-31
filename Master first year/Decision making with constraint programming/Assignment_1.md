@@ -41,6 +41,11 @@
 	By constraining the symmetries in the solutions, we are narrowing the search space considerably, this is why we have noticeably less failures. 
 
 
+PROF NOTES
+- It is not clear why "combining models enhances constraint propagation thanks to the channeling constraints." I can ask this during the oral exam
+	- channeling constraints make sure to link together the different parts of the solution space (row, column, diagonal constraints).
+	- By channeling these variables (row, column, diagonal), we make sure that assigning values to one set of variables (e.g., rows) automatically informs or restricts the values of others (e.g., columns or diagonals), helping propagate constraints more effectively.
+
 
 # Sequence
 
