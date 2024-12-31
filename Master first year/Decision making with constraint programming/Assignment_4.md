@@ -24,15 +24,8 @@
 
 | EST      | Objective value | Time | Time initial solution |
 | -------- | --------------- | ---- | --------------------- |
-| jobshop1 | 802             | -    | 186msec               |
-| jobshop2 | 921             | -    | 295msec               |
-
-new model with dummy task
-
-| EST      | Objective value | Time | Time initial solution |
-| -------- | --------------- | ---- | --------------------- |
 | jobshop1 | 669             | -    | 969msec               |
-| jobshop2 | 1086            | -    | 120msec               |
+| jobshop2 | 984             | -    | 540msec               |
 
 
 1. Is searching on EST a good strategy to find an initial solution?
@@ -44,3 +37,5 @@ new model with dummy task
 	In any of our experiments, EST timed out or took considerably longer times to achieve a solution that was somewhat close but never better than what the default search was able to find, so it doesn't appear that EST can be considered a good strategy to find optimal solutions compared to the default search.
 	EST is designed to easily find feasible solutions by focusing on scheduling jobs as early as possible, which may not always lead to the global optimal makespan due to the complexity of task-machine interactions or due to the resource constraints in the exercises we conducted.
 	It is not an ideal strategy for finding the **optimal solution** due to its tendency to prioritize early task start times without considering the broader problem structure.
+
+Q2: You have written generic descriptions, instead focus on how new solutions would look like with the regular backtracking in EST with proper justification, and how different it is from the optimal (which also motivates another strategy (SetTimes) based on postponing). You can verify it even with the small example used in the slides.
