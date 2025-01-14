@@ -1128,11 +1128,9 @@ to solve the codification problem, we just code the strings into vectors (Vector
 
 
 
-# Summaries
-
 
 # Exam
-
+[[Domande esame con risposta]]
 
 
 
@@ -1140,6 +1138,7 @@ to solve the codification problem, we just code the strings into vectors (Vector
 %% Begin Waypoint %%
 - **[[attachments]]**
 
+- [[Domande esame con risposta]]
 - [[Marketplaces for Data Notes]]
 
 %% End Waypoint %%

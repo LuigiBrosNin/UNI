@@ -1558,8 +1558,13 @@ example
 
 	- **[[model 2]]**
 
+	- **model 3**
+
+- **[[models]]**
+
 - [[Presentation notes]]
 - [[Project Notes]]
 - [[Project paper notes]]
+- [[README]]
 
 %% End Waypoint %%
