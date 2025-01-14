@@ -1,4 +1,5 @@
-WIP PAGE!!
+==WIP PAGE!!==
+🐰Le domande sono scritte live da un anonimo eroe che ci ha graziato con questa conoscenza, percio' possono risultare difficili da capire. Ho cercato di dare il mio meglio con le risposte, ma e' evidente che il buon Danilone non chiede la luna, gli bastano due paroline sull'argomento e ti manda a casa (con un bel voto dai :LiSmile:). 
 
 1.  Differenza tra Data Mining e Data Warehouse
 	- **Data Mining** si riferisce alla ricerca di pattern all'interno dei dati, dove i pattern sono delle regolarità che si ripresentano nei dati.
@@ -18,37 +19,49 @@ WIP PAGE!!
 
 5. Se invece di estrarre dal testo la dimensione temporale volessimo estrarre la dimensione spaziale, immaginiamo che nel testo ci sia un riferimento spaziale e ci sia un modo che lo riconosca. Problemi di un sistema di IR che contiene la dimensione spaziale e le query relative.
 	   Una dimensione spaziale e' possibile da implementare come oggetto di una query di un sistema IR, ma non perfettamente: i maggiori problemi che sorgono sono riguardo la **coerenza e pertinenza** del testo con la query invece che delle match esatte. Infatti, le query possono essere ambigue (il nome di una via puo' corrispondere ad un altro luogo nel mondo non necessariamente una via), cosi' come i risultati possono essere soggetti a diversi significati (con che criterio posso giudicare se dei risultati sono "vicini"?).
-	   Questo e' il problema principale non solo della dimensione spaziale, ma 
+	   Questo e' il problema principale non solo della dimensione spaziale, ma un problema di IR su testo in generale.
 
 6. Nei Data Warehouse che cos'è un fatto/misura e che proprietà hanno?
-	Fatto: il soggetto che vogliamo analizzare -> La vendita dei prodotti
-	Misura: Quantifica i fatti -> quantità di prodotti venduti
-	Misure possono essere:
-	 - additive -> sommate su tutte le dimensioni
-	 - semiadditive -> sommate su alcune dimensioni
-	 - non additive -> non sommate per alcuna dimensione
-	 - distributive -> definite come una funzione di aggregazione che viene calcolata in modo distributivo (count)
-	 - algebriche -> definite come una funzione di aggregazione che può essere espressa come una funzione scalare  (media)
-	 - olistiche -> non possono essere calcolate da altri sottoaggregati (mediana)
+	- **Fatto**: il soggetto che vogliamo analizzare -> La vendita dei prodotti
+	- **Misura**: Quantifica i fatti -> quantità di prodotti venduti
+	- Misure possono essere:
+		 - **additive** -> sommate su tutte le dimensioni
+		 - **semiadditive** -> sommate su alcune dimensioni
+		 - **non additive** -> non sommate per alcuna dimensione
+		 - **distributive** -> definite come una funzione di aggregazione che viene calcolata in modo distributivo (count)
+		 - **algebriche** -> definite come una funzione di aggregazione che può essere espressa come una funzione scalare  (media)
+		 - **olistiche** -> non possono essere calcolate da altri sottoaggregati (mediana)
 
-7. Pensiamo ai dati semi-strutturati se uno ti dicesse mettiamo in piedi un modello di progettazione semi strutturati come ti muoveresti?
-	I semi non hanno schemi fissi potrai dover aggiungere attributi tra qualche mese e dover aggiungere dei valori, lo schema ER potrebbe avere valori nulli.
+7. Pensiamo ai dati semi-strutturati: se uno ti dicesse mettiamo in piedi un modello di progettazione semi strutturato come ti muoveresti?
+	> 🐰ma e' proprio come parla Danilone!
+	
+	 I modelli semi-strutturati non hanno schemi fissi, e' possibile liberamente aggiungere attributi in qualsiasi momento, tuttavia lo schema ER potrebbe avere valori nulli come conseguenza.
+	 Non avrei sicuramente problemi a definire uno schema sul momento data la manovrabilita' in retrospettiva dello stesso, tuttavia sara' necessario trovare un modo per aggiornare i campi mancanti nei vecchi documenti, se necessario.
 
 8. Fare data mining su dati testuali, che tipo di attività si potrebbero fare?
-	Risposta: popolarità di autori, classificazione di parole, frequenza
+	Data mining ricerca dei pattern nei dati ottenuti per estrapolare informazioni (eg. relazione tra comprare il latte e comprare i cereali).
+	Alcune misure di classifica/pattern che si possono estrapolare sono:
+	- Popolarità di autori
+	- Classificazione di parole
+	- Frequenza
 
 9. Cosa si può fare con il data mining applicati a social network? 
-	Popolarità, estrazione di sottografi basati su proprietà (clustering)
+	Rilevazione di pattern e correlazioni, eg. 
+	- Sentimenti nei post
+	- Popolarità di post relazionati ad utenti
+	- Interessi di uno specifico utente (funzionalita' dell'algoritmo)
+	- estrazione di sottografi basati su proprietà (clustering)
 
 10. SQL/XML e XQuery che differenza c'è?
-	SQL/XML è utilizzato per manipolare storage di dati XML in SQL. Prende in input dati relazionali e tira fuori alberi XML
-	XQuery è utilizzato per manipolare documenti XML, e quindi permette di accedere a dati semi-strutturati. Prende in input documenti xml e tira fuori xml
+	- **SQL/XML** è utilizzato per manipolare storage di dati XML in SQL. Prende in input dati relazionali e tira fuori alberi XML
+	- **XQuery** è utilizzato per manipolare documenti XML, e quindi permette di accedere a dati semi-strutturati. Prende in input documenti xml e tira fuori xml
 	SQL/XML prende dati relazionali e tira fuori alberi XML. XQuery prende documenti XML e tira fuori XML.
 
 11. se immagini che un linguaggio parte da insiemi di grafi, dobbiamo supporre di fare un join tra grafi. Come ti muoveresti?
+	
 
 
-12. Dati semistrutturati che problematiche vedi nell'uso di questi dati per l'apprendimento automatico.
+13. Dati semistrutturati che problematiche vedi nell'uso di questi dati per l'apprendimento automatico.
 	problema piu importante è la mancanza di uno schema che differiscono da un caso all'altro.
 
  

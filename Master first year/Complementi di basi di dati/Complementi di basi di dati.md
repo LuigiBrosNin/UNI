@@ -96,10 +96,8 @@ SQL/XML is a bridge for archiving locally these data in a relational manner
         - Name → given explicitly trough a constant
         - Content → you can specify any objects, elements or strings ( concat op → || )
         - attributes → optional list
-    - ==XMLATTRIBUTES== → params corresponding to attributes, default name as the attr name
-        
-        ![[complementi_basi_11.png]]        
-    - XMLFOREST → produces a list of simple elements, same params as XMLATRIBUTES
+    - ==XMLATTRIBUTES== → params corresponding to attributes, default name as the attr name        
+    - ==XMLFOREST== → produces a list of simple elements, same params as XMLATRIBUTES
         ![[Pasted image 20240918183123.png]]
                 
     - ==XMLCONCAT== → concats a forest of elements
