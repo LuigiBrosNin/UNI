@@ -58,11 +58,16 @@
 	SQL/XML prende dati relazionali e tira fuori alberi XML. XQuery prende documenti XML e tira fuori XML.
 
 11. se immagini che un linguaggio parte da insiemi di grafi, dobbiamo supporre di fare un join tra grafi. Come ti muoveresti?
-	
+	Bisogna prima di tutto individuare vertici o etichette comuni dei grafi interessati per l'operazione di join. Questo dipende da caso in caso, dato che si potrebbero unire grafi in parte, con archi comuni o con nuovi significati agli archi dei grafi
+	esempio:
+	- Il **grafo A** ha vertici etichettati con persone e archi che indicano amicizie.
+	- Il **grafo B** ha vertici etichettati con persone e archi che indicano parentele.
+	Se desideriamo fare un join tra i due grafi sulla base delle persone (vertici comuni), il risultato potrebbe essere un nuovo grafo in cui ogni vertice rappresenta una persona, e ogni arco rappresenta sia una relazione di amicizia che un grado di parentela. Se i vertici non corrispondono esattamente, potremmo unirli utilizzando identificatori comuni.
 
+TODO CONTINUA A SISTEMARE LE DOMANDE DA QUI
 
-13. Dati semistrutturati che problematiche vedi nell'uso di questi dati per l'apprendimento automatico.
-	problema piu importante è la mancanza di uno schema che differiscono da un caso all'altro.
+12. Riguardo i dati semistrutturati, che problematiche vedi nell'uso di questi dati per l'apprendimento automatico?
+	il problema piu' importante è la mancanza di uno schema che differiscono da un caso all'altro.
 
  
 13. Perchè abbiamo introdotto il Vectore Space model? Cosa non andava bene nel modello booleano?
