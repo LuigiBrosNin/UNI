@@ -6,17 +6,19 @@ WIP PAGE!!
 
 2. Differenza tra Boolean Model e Vector Space Model
 	Il **Boolean Model** fa data retrieval di tipo information retrieval (aka corrispondente, booleano), o i documenti corrispondono alla ricerca oppure no
-	**Vector Space Model** cerca i top $k$ documenti rilevanti, ordinandoli come se fossero vettori che rappresentano una proprieta'. utilizzando varie feature come la frequenza e la frequenza di termini rari
-	Vede un documento come tante parole ed è rappresentato come un vettore di termini pesati. Uno spazio vettoriale di dimensione |v|, gli assi sono i termini e i doc sono vettori di questo spazio (sparsi) e anche le query sono visti come vettori. La rilevanza si calcola con la distanza dei vettori dei documenti con il vettore query (euclidea, angolo)
+	**Vector Space Model** cerca i top $k$ documenti rilevanti, ordinandoli come se fossero vettori o matrici in base alle parole contenute. Il ranking viene espresso grazie al peso delle parole, dato in parte ma non solo dalla frequenza dei termini.
+	Nel VSM (Vector Space Model) ogni dimensione del vettore rappresenta un termine, mentre documenti e query sono anch'esse considerate vettori. Per la rilevanza alla query infatti i vettori vengono classificati per distanza vettoriale dal vettore query (euclidea, angolo).
 
 3. Relazione tra XPath e XQuery 
-	XPath fa parte di XQuery e ti permette elaborare e manipolare le stringhe. Ci si può estrarre valori da nodi xml o alberi che rappresentano documenti xml.
-	XQuery di appoggia a XPath per calcolare cammini su dati espressi in formato xml.
+	**XPath** fa parte di XQuery e ti permette elaborare e manipolare le stringhe. Ci si può estrarre valori da nodi xml o alberi che rappresentano documenti xml.
+	**XQuery** si appoggia a XPath per calcolare cammini (path) su dati espressi in formato xml.
   
 4. Se volessi prendere XQuery ed estenderlo per manipolare grafi piuttosto che alberi, che problemi ci sono?
-	In un grafo puoi non terminare, in un albero termini sempre. 
+	In un grafo puoi non terminare (per la possibilità' di grafi contenenti cicli), in un albero termini sempre. 
 
 5. Se invece di estrarre dal testo la dimensione temporale volessimo estrarre la dimensione spaziale, immaginiamo che nel testo ci sia un riferimento spaziale e ci sia un modo che lo riconosca. Problemi di un sistema di IR che contiene la dimensione spaziale e le query relative.
+	   Una dimensione spaziale e' possibile da implementare come oggetto di una query di un sistema IR, ma non perfettamente: i maggiori problemi che sorgono sono riguardo la **coerenza e pertinenza** del testo con la query invece che delle match esatte. Infatti, le query possono essere ambigue (il nome di una via puo' corrispondere ad un altro luogo nel mondo non necessariamente una via), cosi' come i risultati possono essere soggetti a diversi significati (con che criterio posso giudicare se dei risultati sono "vicini"?).
+	   Questo e' il problema principale non solo della dimensione spaziale, ma 
 
 6. Nei Data Warehouse che cos'è un fatto/misura e che proprietà hanno?
 	Fatto: il soggetto che vogliamo analizzare -> La vendita dei prodotti
