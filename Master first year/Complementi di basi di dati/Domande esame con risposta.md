@@ -1,12 +1,12 @@
 WIP PAGE!!
 
 1.  Differenza tra Data Mining e Data Warehouse
-	Data Mining si riferisce alla ricerca di pattern all'interno dei dati, dove i pattern sono delle regolarità che si ripresentano nei dati.
-	Data Warehouse è una collezione di dati orientati al soggetto, integrati, variabili nel tempo e non volatili
+	- **Data Mining** si riferisce alla ricerca di pattern all'interno dei dati, dove i pattern sono delle regolarità che si ripresentano nei dati.
+	- **Data Warehouse** è una collezione di dati orientati al soggetto, integrati, variabili nel tempo e non volatili
 
 2. Differenza tra Boolean Model e Vector Space Model
-	Il Boolean Model fa data retrival di tipo information retrival (matcha), o caccia tanti documenti o ne caccia pochi
-	Vector Space Model cerca i top k documenti rilevanti utilizzando varie feature come la frequenza e la frequenza di termini rari
+	Il **Boolean Model** fa data retrieval di tipo information retrieval (aka corrispondente, booleano), o i documenti corrispondono alla ricerca oppure no
+	**Vector Space Model** cerca i top $k$ documenti rilevanti, ordinandoli come se fossero vettori che rappresentano una proprieta'. utilizzando varie feature come la frequenza e la frequenza di termini rari
 	Vede un documento come tante parole ed è rappresentato come un vettore di termini pesati. Uno spazio vettoriale di dimensione |v|, gli assi sono i termini e i doc sono vettori di questo spazio (sparsi) e anche le query sono visti come vettori. La rilevanza si calcola con la distanza dei vettori dei documenti con il vettore query (euclidea, angolo)
 
 3. Relazione tra XPath e XQuery 

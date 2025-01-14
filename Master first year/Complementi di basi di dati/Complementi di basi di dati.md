@@ -1,4 +1,3 @@
-[Slides in Google Drive](https://drive.google.com/drive/folders/17KWQxgAnnMr2mFXI0n22wykwv11ChkKX)
 
 > Notes taken by Luizo ( [@LuigiBrosNin](https://t.me/LuigiBrosNin) on Telegram)
 
