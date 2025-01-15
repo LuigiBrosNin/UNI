@@ -6,20 +6,19 @@
 	- **Data Warehouse** è una collezione di dati orientati al soggetto, integrati, variabili nel tempo e non volatili
 
 2. Differenza tra Boolean Model e Vector Space Model
-	Il **Boolean Model** fa data retrieval di tipo information retrieval (aka corrispondente, booleano), o i documenti corrispondono alla ricerca oppure no
-	**Vector Space Model** cerca i top $k$ documenti rilevanti, ordinandoli come se fossero vettori o matrici in base alle parole contenute. Il ranking viene espresso grazie al peso delle parole, dato in parte ma non solo dalla frequenza dei termini.
-	Nel VSM (Vector Space Model) ogni dimensione del vettore rappresenta un termine, mentre documenti e query sono anch'esse considerate vettori. Per la rilevanza alla query infatti i vettori vengono classificati per distanza vettoriale dal vettore query (euclidea, angolo).
+	- Il **Boolean Model** fa data retrieval di tipo information retrieval (aka corrispondente, booleano), o i documenti corrispondono alla ricerca oppure no
+	- **Vector Space Model** cerca i top $k$ documenti rilevanti, ordinandoli come se fossero vettori o matrici in base alle parole contenute. Il ranking viene espresso grazie al peso delle parole, dato in parte ma non solo dalla frequenza dei termini.
+	- Nel VSM (Vector Space Model) ogni dimensione del vettore rappresenta un termine, mentre documenti e query sono anch'esse considerate vettori. Per la rilevanza alla query infatti i vettori vengono classificati per distanza vettoriale dal vettore query (euclidea, angolo).
 
 3. Relazione tra XPath e XQuery 
-	**XPath** fa parte di XQuery e ti permette elaborare e manipolare le stringhe. Ci si può estrarre valori da nodi xml o alberi che rappresentano documenti xml.
-	**XQuery** si appoggia a XPath per calcolare cammini (path) su dati espressi in formato xml.
+	- **XPath** fa parte di XQuery e ti permette elaborare e manipolare le stringhe. Ci si può estrarre valori da nodi xml o alberi che rappresentano documenti xml.
+	- **XQuery** si appoggia a XPath per calcolare cammini (path) su dati espressi in formato xml.
   
 4. Se volessi prendere XQuery ed estenderlo per manipolare grafi piuttosto che alberi, che problemi ci sono?
-	In un grafo puoi non terminare (per la possibilità' di grafi contenenti cicli), in un albero termini sempre. 
+	- In un grafo puoi non terminare (per la possibilità' di grafi contenenti cicli), in un albero termini sempre. 
 
 5. Se invece di estrarre dal testo la dimensione temporale volessimo estrarre la dimensione spaziale, immaginiamo che nel testo ci sia un riferimento spaziale e ci sia un modo che lo riconosca. Problemi di un sistema di IR che contiene la dimensione spaziale e le query relative.
-	   Una dimensione spaziale e' possibile da implementare come oggetto di una query di un sistema IR, ma non perfettamente: i maggiori problemi che sorgono sono riguardo la **coerenza e pertinenza** del testo con la query invece che delle match esatte. Infatti, le query possono essere ambigue (il nome di una via puo' corrispondere ad un altro luogo nel mondo non necessariamente una via), cosi' come i risultati possono essere soggetti a diversi significati (con che criterio posso giudicare se dei risultati sono "vicini"?).
-	   Questo e' il problema principale non solo della dimensione spaziale, ma un problema di IR su testo in generale.
+	- Una dimensione spaziale e' possibile da implementare come oggetto di una query di un sistema IR, ma non perfettamente: i maggiori problemi che sorgono sono riguardo la **coerenza e pertinenza** del testo con la query invece che delle match esatte. Infatti, le query possono essere ambigue (il nome di una via puo' corrispondere ad un altro luogo nel mondo non necessariamente una via), cosi' come i risultati possono essere soggetti a diversi significati (con che criterio posso giudicare se dei risultati sono "vicini"?). Questo e' il problema principale non solo della dimensione spaziale, ma un problema di IR su testo in generale.
 
 6. Nei Data Warehouse che cos'è un fatto/misura e che proprietà hanno?
 	- **Fatto**: il soggetto che vogliamo analizzare -> La vendita dei prodotti
@@ -35,34 +34,33 @@
 7. Pensiamo ai dati semi-strutturati: se uno ti dicesse mettiamo in piedi un modello di progettazione semi strutturato come ti muoveresti?
 	> 🐰ma e' proprio come parla Danilone!
 	
-	 I modelli semi-strutturati non hanno schemi fissi, e' possibile liberamente aggiungere attributi in qualsiasi momento, tuttavia lo schema ER potrebbe avere valori nulli come conseguenza.
-	 Non avrei sicuramente problemi a definire uno schema sul momento data la manovrabilita' in retrospettiva dello stesso, tuttavia sara' necessario trovare un modo per aggiornare i campi mancanti nei vecchi documenti, se necessario.
+	 - I modelli semi-strutturati non hanno schemi fissi, e' possibile liberamente aggiungere attributi in qualsiasi momento, tuttavia lo schema ER potrebbe avere valori nulli come conseguenza. Non avrei sicuramente problemi a definire uno schema sul momento data la manovrabilita' in retrospettiva dello stesso, tuttavia sara' necessario trovare un modo per aggiornare i campi mancanti nei vecchi documenti, se necessario.
 
 8. Fare data mining su dati testuali, che tipo di attività si potrebbero fare?
-	Data mining ricerca dei pattern nei dati ottenuti per estrapolare informazioni (eg. relazione tra comprare il latte e comprare i cereali).
-	Alcune misure di classifica/pattern che si possono estrapolare sono:
-	- Popolarità di autori
-	- Classificazione di parole
-	- Frequenza
+	- Data mining ricerca dei pattern nei dati ottenuti per estrapolare informazioni (eg. relazione tra comprare il latte e comprare i cereali).
+	- Alcune misure di classifica/pattern che si possono estrapolare sono:
+		- Popolarità di autori
+		- Classificazione di parole
+		- Frequenza
 
 9. Cosa si può fare con il data mining applicati a social network? 
-	Rilevazione di pattern e correlazioni, eg. 
-	- Sentimenti nei post
-	- Popolarità di post relazionati ad utenti
-	- Interessi di uno specifico utente (funzionalita' dell'algoritmo)
-	- estrazione di sottografi basati su proprietà (clustering)
+	- Rilevazione di pattern e correlazioni, eg. 
+		- Sentimenti nei post
+		- Popolarità di post relazionati ad utenti
+		- Interessi di uno specifico utente (funzionalita' dell'algoritmo)
+		- estrazione di sottografi basati su proprietà (clustering)
 
 10. SQL/XML e XQuery che differenza c'è?
 	- **SQL/XML** è utilizzato per manipolare storage di dati XML in SQL. Prende in input dati relazionali e tira fuori alberi XML
 	- **XQuery** è utilizzato per manipolare documenti XML, e quindi permette di accedere a dati semi-strutturati. Prende in input documenti xml e tira fuori xml
-	SQL/XML prende dati relazionali e tira fuori alberi XML. XQuery prende documenti XML e tira fuori XML.
+	- SQL/XML prende dati relazionali e tira fuori alberi XML. XQuery prende documenti XML e tira fuori XML.
 
 11. se immagini che un linguaggio parte da insiemi di grafi, dobbiamo supporre di fare un join tra grafi. Come ti muoveresti?
-	Bisogna prima di tutto individuare vertici o etichette comuni dei grafi interessati per l'operazione di join. Questo dipende da caso in caso, dato che si potrebbero unire grafi in parte, con archi comuni o con nuovi significati agli archi dei grafi
-	esempio:
-	- Il **grafo A** ha vertici etichettati con persone e archi che indicano amicizie.
-	- Il **grafo B** ha vertici etichettati con persone e archi che indicano parentele.
-	Se desideriamo fare un join tra i due grafi sulla base delle persone (vertici comuni), il risultato potrebbe essere un nuovo grafo in cui ogni vertice rappresenta una persona, e ogni arco rappresenta sia una relazione di amicizia che un grado di parentela. Se i vertici non corrispondono esattamente, potremmo unirli utilizzando identificatori comuni.
+	- Bisogna prima di tutto individuare vertici o etichette comuni dei grafi interessati per l'operazione di join. Questo dipende da caso in caso, dato che si potrebbero unire grafi in parte, con archi comuni o con nuovi significati agli archi dei grafi
+	- esempio:
+		- Il **grafo A** ha vertici etichettati con persone e archi che indicano amicizie.
+		- Il **grafo B** ha vertici etichettati con persone e archi che indicano parentele.
+		Se desideriamo fare un join tra i due grafi sulla base delle persone (vertici comuni), il risultato potrebbe essere un nuovo grafo in cui ogni vertice rappresenta una persona, e ogni arco rappresenta sia una relazione di amicizia che un grado di parentela. Se i vertici non corrispondono esattamente, potremmo unirli utilizzando identificatori comuni.
 
 TODO CONTINUA A SISTEMARE LE DOMANDE DA QUI
 
