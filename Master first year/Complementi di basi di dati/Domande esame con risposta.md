@@ -1,5 +1,4 @@
-==WIP PAGE!!==
-🐰Le domande sono scritte live da un anonimo eroe che ci ha graziato con questa conoscenza, percio' possono risultare difficili da capire. Ho cercato di dare il mio meglio con le risposte, ma e' evidente che il buon Danilone non chiede la luna, gli bastano due paroline sull'argomento e ti manda a casa (con un bel voto dai :LiSmile:). 
+🐰Le domande sono scritte live da un anonimo eroe che ci ha graziato con questa conoscenza, percio' possono risultare difficili da capire. Ho cercato di dare il mio meglio con le risposte ampliando quelle che gia' c'erano, ma e' evidente che il buon Danilone non chiede la luna, gli bastano due paroline sull'argomento e ti manda a casa (con un bel voto dai :LiSmile:). 
 
 1.  Differenza tra Data Mining e Data Warehouse
 	- **Data Mining** si riferisce alla ricerca di pattern all'interno dei dati, dove i pattern sono delle regolarità che si ripresentano nei dati.
@@ -62,8 +61,6 @@
 		- Il **grafo B** ha vertici etichettati con persone e archi che indicano parentele.
 		Se desideriamo fare un join tra i due grafi sulla base delle persone (vertici comuni), il risultato potrebbe essere un nuovo grafo in cui ogni vertice rappresenta una persona, e ogni arco rappresenta sia una relazione di amicizia che un grado di parentela. Se i vertici non corrispondono esattamente, potremmo unirli utilizzando identificatori comuni.
 
-TODO CONTINUA A SISTEMARE LE DOMANDE DA QUI
-
 12. Riguardo i dati semistrutturati, che problematiche vedi nell'uso di questi dati per l'apprendimento automatico?
 	- Il problema piu' importante è la mancanza di uno schema, e che quindi i dati differiscono da un caso all'altro. L'apprendimento automatico dipende fortemente dai dati inseriti per il training, a priori dall'approccio usato. Dati inconsistenti fondamentalmente.
 
@@ -122,4 +119,4 @@ TODO CONTINUA A SISTEMARE LE DOMANDE DA QUI
 	- Operates on sequences 
 	- Can receive in input $0$﻿ or $n$﻿ sequences
 	- Can output an <u>ordered and not-nested</u> sequence
-	- Explore XML elements trough n
+	- Explore XML data trough nodes.
