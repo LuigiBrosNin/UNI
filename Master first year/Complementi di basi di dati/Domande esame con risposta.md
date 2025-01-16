@@ -95,18 +95,31 @@ TODO CONTINUA A SISTEMARE LE DOMANDE DA QUI
 		 - pearson's chi-squared
 
 
-18. Abbiamo visto SQL/XML se volesismo fare SQL/Text che prende dati relazionali e li mette in documenti testuali 
-	Clausola contain, i sistemi relazionali sono normalizzati quindi non ha senso fare tipo la frequenza dei termini 
+18. Abbiamo visto SQL/XML: se volessimo fare SQL/Text che prende dati relazionali e li mette in documenti testuali come potremmo procedere?
+	- Dalla natura normalizzata di SQL, non e' necessario effettuare operazioni complesse per sistemare dati in un documento di testo.
+	- Per la ricerca nei documenti testuali sarebbe sufficiente la clausola "contains"
 
 
 19. Abbiamo visto SQL/XML, XPath e XQuery, relazione tra i tre linguaggi e differenze un po' ad alto livello.
+	- **SQL/XML** e' un linguaggio che contiene costruttori, routine e funzioni che supportano la manipolazione e archiviazione di XML in un database SQL
+	- **XPath** permette di elaborare e manipolare le stringhe all'interno di documenti. Ci si può estrarre valori da nodi xml o alberi che rappresentano documenti xml.
+	- **XQuery** si appoggia a XPath per calcolare cammini (path) su dati espressi in formato xml. E' usato per effettuare query su documenti XML.
 
 20. Relazione tra misura e dimensione in un cubo di un data Warehouse.
-	L'aggregazione delle misure cambia il livello di astrazione nel quale i dati vengono visualizzati.
-	 - additive -> sommate su tutte le dimensioni
-	 - semiadditive -> sommate su alcune dimensioni
-	 - non additive -> non sommate per alcuna dimensione
+	- Le dimensioni influiscono sulla decisone dell'aggregazione delle misure. Cambia il livello di astrazione nel quale i dati vengono visualizzati. In particolare abbiamo misure:
+		 - **additive** -> sommate su tutte le dimensioni
+		 - **semiadditive** -> sommate su alcune dimensioni
+		 - **non additive** -> non sommate per alcuna dimensione
 
 21. SQL per gestire immagini o video.
+	- 🐰Bleah
+	- Storing images and videos in SQL databases is possible trough Binary fields, but it is considered a bad practice, as it's difficult to manipulate due to the size of these files, as well as the inability to accurately locate and preview the files after a given query.
+	- A "good" approach would be to store the path to the resources (url or local location).
 
-22. Come nasce cosa fa e che caratteristiche ha XQuery.
+23. Come nasce cosa fa e che caratteristiche ha XQuery.
+	- XQuery was born to access XML data
+	- Has XSLT functions (e**X**tensible **S**tylesheet **L**anguage **T**ransformations)
+	- Operates on sequences 
+	- Can receive in input $0$﻿ or $n$﻿ sequences
+	- Can output an <u>ordered and not-nested</u> sequence
+	- Explore XML elements trough n

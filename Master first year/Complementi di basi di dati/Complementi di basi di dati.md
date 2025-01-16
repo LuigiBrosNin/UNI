@@ -114,7 +114,7 @@ SQL/XML is a bridge for archiving locally these data in a relational manner
 
 ## 2.3 XQuery - XQuery language
 
-XQuery <u>can be used to acces s XML</u> expressed data and has XSLT functions (e**X**tensible **S**tylesheet **L**anguage **T**ransformations).
+XQuery <u>can be used to access XML</u> expressed data and has XSLT functions (e**X**tensible **S**tylesheet **L**anguage **T**ransformations).
 
 XQuery operates on sequences, that can be ==atom values== (eg. “hello” string, “3” integer) or ==nodes==.
 
@@ -821,7 +821,7 @@ we can use co-occurencies based on:
     
     $P(a,b)* \log\frac{P(a,b)}{P(a)P(b)}$
     
-4. ==Pearson’s Chi-squared (====$\chi^2$==﻿==)== → confronts the number of co-occurencies with the expected number of co-occurencies if the words were independent and normalizes it (dividing it) with the expected number
+4. ==Pearson’s Chi-squared== ($\chi^2$﻿) → confronts the number of co-occurencies with the expected number of co-occurencies if the words were independent and normalizes it (dividing it) with the expected number
     
     $\frac{(n_{ab}-N*\frac{n_a}{N}*\frac{n_b}{N})^2}{N*\frac{n_a}{N}*\frac{n_b}{N}}$
     
