@@ -65,15 +65,17 @@
 TODO CONTINUA A SISTEMARE LE DOMANDE DA QUI
 
 12. Riguardo i dati semistrutturati, che problematiche vedi nell'uso di questi dati per l'apprendimento automatico?
-	il problema piu' importante è la mancanza di uno schema che differiscono da un caso all'altro.
+	- Il problema piu' importante è la mancanza di uno schema, e che quindi i dati differiscono da un caso all'altro. L'apprendimento automatico dipende fortemente dai dati inseriti per il training, a priori dall'approccio usato. Dati inconsistenti fondamentalmente.
 
  
-13. Perchè abbiamo introdotto il Vectore Space model? Cosa non andava bene nel modello booleano?
+13. Perchè abbiamo introdotto il Vector Space model? Cosa non andava bene nel modello booleano?
+	- Il modello booleano presenta un limite che il Vector space model sorpassa: I documenti/dati corrispondono alla query oppure no. Avevamo bisogno di uno spettro di corrispondenza alla query. In altre parole ricercare documenti per rilevanza piuttosto che corrispondenze esatte. Il VSM permette un ranking dei risultati per pertinenza con la query, invece che una lista di exact matches.
+	- Un esempio e' quando effettuiamo una ricerca per topic.
 
 14. ETL nel data warehouse.
-	Estrazione dei dati dalle diverse sorgenti (statica o incrementale)
-	Trasformazione: trasformazione e cleaning dei dati in un formato valido per il dw
-	Loading: caricamento dei dati nel dw
+	- **Estrazione** dei dati dalle diverse sorgenti (statica o incrementale)
+	- **Trasformazione**: trasformazione e cleaning dei dati in un formato valido per il dw
+	- **Loading**: caricamento dei dati nel dw
 
 15. Differenza tra i sistemi SQL e i sistemi NoSQL.
 	SQL rispettano la proprietà ACID mentre NoSQL rispettano la proprietà BASE(Basic Avaliability, Soft State, Eventual Consistency).
