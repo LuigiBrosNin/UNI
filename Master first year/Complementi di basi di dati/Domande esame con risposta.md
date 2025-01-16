@@ -78,21 +78,21 @@ TODO CONTINUA A SISTEMARE LE DOMANDE DA QUI
 	- **Loading**: caricamento dei dati nel dw
 
 15. Differenza tra i sistemi SQL e i sistemi NoSQL.
-	SQL rispettano la proprietà ACID mentre NoSQL rispettano la proprietà BASE(Basic Avaliability, Soft State, Eventual Consistency).
-	La differenza fondamentale è che con i SQL c'è poca disponibilità, non ridondanza e forte consistenza, mentre nei NoSQL molta disponibilità, meno consistenza e appoccio best effort
-
+	- SQL rispettano la proprietà ACID mentre NoSQL rispettano la proprietà BASE(Basic Avaliability, Soft State, Eventual Consistency).
+	- La differenza fondamentale è che con i SQL c'è poca disponibilità, non ridondanza e forte consistenza, mentre nei NoSQL molta disponibilità, meno consistenza e appoccio best effort
 
 16. Star Schema e Snowflakes schema nei Data Warehouse.
-	Tabella dei fatti al centro dello schema in entrambi.
-	1. Ha ridondanza e ha una sola tabella per dimensione
-	2. Elimina la ridondanza frammentando in più tabelle gerarchiche normalizzate
+	- La tabella dei fatti e' al centro dello schema in entrambi.
+		1. **Snowflake** Ha ridondanza e ha una sola tabella per dimensione
+		2. **Star** Elimina la ridondanza frammentando in più tabelle gerarchiche normalizzate
+		![[Pasted image 20250116115848.png]]
 
 17. Valutazione dei sistemi di Information Retrieval tramite collezione TREC.
-	Estrarre parole affini
-	 - coefficiente di dice
-	 - mutual information
-	 - expected mutual information
-	 - pearson's chi-squared
+	- Text REtrieval Conference -> Grandi collezioni, bisogna estrarre parole affini efficacemente
+		 - coefficiente di dice
+		 - mutual information
+		 - expected mutual information
+		 - pearson's chi-squared
 
 
 18. Abbiamo visto SQL/XML se volesismo fare SQL/Text che prende dati relazionali e li mette in documenti testuali 
