@@ -549,7 +549,7 @@ We need a pertinence-based ranking instead of an exact match, to accomodate the 
 
 - Tokenization → cut character sequence into word tokens
 - Normalization → map text terms to same “normal” form (eg. U.S.A and USA)
-- Lemmatization → reduce to simple correct forms (eg. the boy’s car are different colours → the boy care be different colours)
+- Lemmatization → reduce to simple correct forms (eg. the boy’s car are different colours → the boy car be different colours)
 - Stemming → different forms of a root to match (authorize, authorization)
 - Stop words → omit very common words (the, a, to, of)
 - Dictionary → lexical indexes, used for autocorrection too
