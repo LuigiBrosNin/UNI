@@ -3,6 +3,7 @@
 1.  Differenza tra Data Mining e Data Warehouse
 	- **Data Mining** si riferisce alla ricerca di pattern all'interno dei dati, dove i pattern sono delle regolarità che si ripresentano nei dati.
 	- **Data Warehouse** è una collezione di dati orientati al soggetto, integrati, variabili nel tempo e non volatili
+	- Il data warehouse permette solo di aggregare dati, il data mining invece crea nuova knowledge
 
 2. Differenza tra Boolean Model e Vector Space Model
 	- Il **Boolean Model** fa data retrieval di tipo information retrieval (aka corrispondente, booleano), o i documenti corrispondono alla ricerca oppure no
@@ -63,7 +64,6 @@
 
 12. Riguardo i dati semistrutturati, che problematiche vedi nell'uso di questi dati per l'apprendimento automatico?
 	- Il problema piu' importante è la mancanza di uno schema, e che quindi i dati differiscono da un caso all'altro. L'apprendimento automatico dipende fortemente dai dati inseriti per il training, a priori dall'approccio usato. Dati inconsistenti fondamentalmente.
-
  
 13. Perchè abbiamo introdotto il Vector Space model? Cosa non andava bene nel modello booleano?
 	- Il modello booleano presenta un limite che il Vector space model sorpassa: I documenti/dati corrispondono alla query oppure no. Avevamo bisogno di uno spettro di corrispondenza alla query. In altre parole ricercare documenti per rilevanza piuttosto che corrispondenze esatte. Il VSM permette un ranking dei risultati per pertinenza con la query, invece che una lista di exact matches.
@@ -120,3 +120,15 @@
 	- Can receive in input $0$﻿ or $n$﻿ sequences
 	- Can output an <u>ordered and not-nested</u> sequence
 	- Explore XML data trough nodes.
+
+24. Oltre ai modelli Boolean e Vector abbiamo parlato dei modelli probabilistici, parlamene
+	- La graduatoria dei documenti è in ordine decrescente di probabilità di rilevanza, stimata nel modo più accurato possibile utilizzando i dati disponibili
+	- I modelli probabilistici che abbiamo visto sono: BM25 e linguistic models
+	- **BM25** -> modello probabilistico sensibile alla frequenza del termine, alla rarità del termine (simile a IDF) e alla lunghezza del documento
+	- **Modello linguistico** ->  un modello di linguaggio statistico assegna una probabilità a una sequenza m di parole mediante una distribuzione di probabilità.
+
+25. Cos' è un fatto in un data warehouse?
+	- si tratta dell'oggetto di interesse dal punto di vista dell'utente, ad esempio le vendite di automobili se siamo una concessionaria. 
+
+26. Qual è il vantaggio per un programmatore usare SQL/XML?
+	- Il vantaggio è che tu crei un file xml avendo le proprietà delle transazioni invece di fare prima una query sql e poi convertirla in file xml
