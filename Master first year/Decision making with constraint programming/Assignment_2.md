@@ -2,8 +2,6 @@
 # N-Queens
 Gecode 6.3.0
 
-
-
 | n   | Alldifferent GC |             | Decomposition |            |
 | --- | --------------- | ----------- | ------------- | ---------- |
 |     | fails           | Time        | Fails         | Time       |
