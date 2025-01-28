@@ -1,4 +1,4 @@
-
+99/100
 # N-Queens
 
 | n   | # sols | r       | rc1     | rc2     | rc3     | alldiff |

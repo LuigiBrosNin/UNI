@@ -1,3 +1,4 @@
+100/100
 # N-Queens
 Gecode 6.3.0
 
