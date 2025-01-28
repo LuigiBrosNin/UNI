@@ -94,7 +94,7 @@ following points.
 Present briefly your observations. Pay attention to the following points.
 - When does programming search do not improve the default search?
 	The only instance where the default search is better than the programming searches are with the qc30-08 set of inputs.
-	In this case, the default search strategy alligns well with the problem structure, and the complexity added by the other heuristics slow down what would be an already optimal performance with the default search.
+	In this case, the default search strategy aligns well with the problem structure, and the complexity added by the other heuristics slow down what would be an already optimal performance with the default search.
 	domWdeg -random value and Luby restarting may not provide a significant advantage because there is little to exploit in the constraint weights or domain choices, and the default heuristic might do a better job exploiting the problem structure with that particular set of inputs.
 	
 - When restarting the domWdeg - random value heuristic degrade the performance, what could be the reason?
