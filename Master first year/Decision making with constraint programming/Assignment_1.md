@@ -30,7 +30,7 @@
 	Each removed constraint is implied from `inverse(rows,cols)`-> $\forall i,j\ X_{i}=j\iff Y_{j}= i$) (C1)
 	as:
 	`alldifferent([X_1,..,X_n])` -> redundant as C1 already imposes all values of $X$ to be different (the constraints effectively maps indexes 1 on 1 between the 2 arrays, and if there's a repeated value inside `X_i` then `Y_j` should contain two distinct values, which is not possible)
-	`alldifferent([Y_1,..,Y_n])` -> redundant as C1 imposes all values of $Y$ to be different (see above explaination)
+	`alldifferent([Y_1,..,Y_n])` -> redundant as C1 imposes all values of $Y$ to be different (see above explanation)
 	$\forall\ i<j\ |Y_i - Y_j| ≠ |i - j|$ -> redundant as the channeling constraint C1 imposes this same constraint implicitly trough symmetry:
 	since we have $\forall\ i<j\ |X_i - X_j| ≠ |i - j|$, $Y$ has to abide by the same rule, because if the $X$ board is not able to make diagonal attacks, by inverting the board like C1 imposes, the same is true for the $Y$ board. if Diagonal attacks are not possible in any of the two boards, we can say that it is not possible in both boards.
 	These constraints do not change the solution set, but they narrow the search space of the solver, thus making the failures higher when the search space is wider, which is expected.
