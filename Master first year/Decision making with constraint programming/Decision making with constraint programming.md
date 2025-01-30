@@ -684,7 +684,7 @@ we'll focus on non-preemptive activities
 **Resources** -> asset available to execute operations (eg. capacity, number of seats in a classroom, num of available workers)
 
 ==Cumulative/Parallel Resource==
-**Cumulative/Parallel Resource** -> can execute multiple activities in paralel (activities can overlap over time, eg. a multi-core CPU)
+**Cumulative/Parallel Resource** -> can execute multiple activities in parallel (activities can overlap over time, eg. a multi-core CPU)
 
 ![[Pasted image 20241118144610.png]]
 - $r_k$ resource associated with capacity $c_k$
@@ -739,10 +739,10 @@ How can we prove optimality after the greedy algorythm?
 
 ==SetTimes Search strategy==
 Main idea:
-- On the first branch schedule an activity ai with minimum $EST_i$, schedule it at its $EST_i$.
+- On the first branch schedule an activity $a_i$ with minimum $EST_i$, schedule it at its $EST_i$.
 	- Break ties according to any rule.
-- On backtracking, postpone ai.
-	- When propagation updates $EST_i$, schedule ai.
+- On backtracking, postpone $a_i$.
+	- When propagation updates $EST_i$, schedule $a_i$.
 
 Works good B)
 doesn't work in Non-regular cost functions and side constraints that alter the problem structures (eg. maximal time legs)
