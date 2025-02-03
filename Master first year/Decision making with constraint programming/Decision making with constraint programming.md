@@ -794,7 +794,7 @@ Used to define neighbourhood structure
 Similar to Local search, but
 - adds a **diversification component** to iterative improvement for escaping from local minima
 	- allow worsening moves
-	- change neighbourhood structure during seatch
+	- change neighbourhood structure during search
 	- change objective function during search
 - Termination criteria
 	- max CPU time,
@@ -827,7 +827,7 @@ Basic principle -> learn correlations between good solution components
 - Ant colony Optimization (ACO)
 
 ==ACO==
-Pheromone trails are simulated by a parametrized probabilistic model "pheromone model"
+Pheromone trails are simulated by a parameterized probabilistic model "pheromone model"
 ![[Pasted image 20241127174907.png]]
 - Pheromone values are the set of parameters
 - They act as the memory to keep track of the process so as to intensify search around the best solution components
