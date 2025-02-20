@@ -20,7 +20,13 @@
 
 **Perspective Projection** -> The geometric model of image formation in a pinhole camera
 ![[Pasted image 20250220152517.png]]
-we want to find a relationship between 3d and 2d points
+we want to find a relationship between 3d and 2d points:
+![[Pasted image 20250220152859.png]]
+The above formulas are true because of triangular similarity
+![[Pasted image 20250220153320.png]]
+![[Pasted image 20250220153936.png]]
+
+Slides seem to be good, and are very visual. There are 41 slides and i don't feel like just adding a phrase and pasting the slide, so i'll freeze notes for now, see what to do of them, studying to slides to understand might be better. Maybe notes to remember definitions, as in summaries.
 ##
 
 ##
