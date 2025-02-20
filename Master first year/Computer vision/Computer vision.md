@@ -27,6 +27,7 @@ The above formulas are true because of triangular similarity
 ![[Pasted image 20250220153936.png]]
 
 Slides seem to be good, and are very visual. There are 41 slides and i don't feel like just adding a phrase and pasting the slide, so i'll freeze notes for now, see what to do of them, studying to slides to understand might be better. Maybe notes to remember definitions, as in summaries.
-##
+## 
 
-##
+
+## 
