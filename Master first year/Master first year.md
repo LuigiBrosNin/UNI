@@ -3,6 +3,9 @@
 - **[[attachments]]**
 - **[[Complementi di basi di dati]]**
 - **[[Complex systems and network science]]**
+- **[[Computer vision]]**
+	- **[[attachments]]**
+
 - **[[Decision making with constraint programming]]**
 - **[[Digital Forensics]]**
 	- [[Appunti Acquisizione]]
