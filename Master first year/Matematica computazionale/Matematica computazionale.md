@@ -12,6 +12,8 @@ Avvisi -> https://www.unibo.it/sitoweb/giulia.spaletta/avvisi
 ## Mathematica tutorial
 [Free licence with Unibo](https://www.unibo.it/it/studiare/vivere-luniversita-e-la-citta/agevolazioni-per-computer-tablet-e-software/mathematica-licenza-campus)
 
+`ResourceFunction["DarkMode"][]` -> mette la darkmode lol
+
 **Mathematica** -> sistema basato sulla riscrittura dei termini
 aka sostituisce termini
 ```mathematica
@@ -28,6 +30,7 @@ La funzione Trace ti spiega passo passo la sostituzione
 **Espressioni** -> sono l’unico tipo di oggetto in Mathematica, vengono usate per rappresentare sia il codice che i dati.
 - Struttura annidata, espressioni composte da altre espressioni fino ad atomi (non suddivisibili)
 - Il Kernel rimpiazza espressioni (rispettando uno standard stabilito su come rappresentare certe espressioni)
+- -Form desinenza indica che la "funzione" stampa in output quel che computa
 ==Ogni cosa in Mathematica è una espressione.==
 ogni espressione normale ha forma `Head[part1, part2, ...]`
 eg.
@@ -66,8 +69,14 @@ FullForm e Map
 ### Numeri (Atomi)
 - Intero -> decimali `ddddd`
 - Razionale -> `intero1/intero2`
-- Reale -> `dddd.dddd` (16 cifre significative a 64 bit)
+	- i razionali si semplificano automaticamente (`4/6` -> `2/3`)
+- Reale -> `dddd.dddd`
+	- 16 cifre significative a 64 bit
+	- soggette a machine precision invece che vera precisione
+	- possiamo usare ScientificForm per avere il numero in notazione scientifica
 - Complesso -> `a+b` dove `a` e `b` sono qualsiasi dei tipi precedenti
+
+
 ###
 ##
 ##
