@@ -11,6 +11,8 @@
 
 
 # Theory
+Slides seem to be good, and are very visual. There are 41 slides and i don't feel like just adding a phrase and pasting the slide, so i'll freeze notes for now, see what to do of them, studying to slides to understand might be better. Maybe notes to remember definitions, as in summaries.
+Also, i'm unsure if i'll be able to study the course or if i want to, so we'll see what becomes of it
 
 ## 0 
 ## 1 - Image Formation Process

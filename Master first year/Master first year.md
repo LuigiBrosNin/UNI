@@ -10,6 +10,7 @@
 - **[[Digital Forensics]]**
 	- [[Appunti Acquisizione]]
 - [[Intelligenza artificiale]]
+- **[[Matematica computazionale]]**
 - [[Natural language processing]]
 - [[Simulazione di modelli]]
 - [[Social network analysis]]
