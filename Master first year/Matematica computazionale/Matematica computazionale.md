@@ -24,6 +24,7 @@ La funzione Trace ti spiega passo passo la sostituzione
 `Trace(a * a + D[ a ^ 3, a])`
 ![[Pasted image 20250221100227.png]]
 
+### Espressioni normali
 **Espressioni** -> sono l’unico tipo di oggetto in Mathematica, vengono usate per rappresentare sia il codice che i dati.
 - Struttura annidata, espressioni composte da altre espressioni fino ad atomi (non suddivisibili)
 - Il Kernel rimpiazza espressioni (rispettando uno standard stabilito su come rappresentare certe espressioni)
@@ -38,6 +39,36 @@ Sin[Log[2.5,7]]
 	- Head -> atomo `Log`
 	- 2 parti -> num reale 2.5 e num intero 7
 
+`RGBColor[1,0,0]` -> direttiva grafica, primitiva e non funzione, resa colore
+![[Pasted image 20250221102829.png]]
+
+Ogni espressione in Mathematica può essere costruita usando solo tre blocchi di costruzione sintattica: atomi, virgole, parentesi quadre `[ ]`.
+
+FullForm e Map
+![[Pasted image 20250221103011.png]]
+
+`*-+^` -> forme speciali di input, al posto di Times, Minus, Plus etc. 
+
+
+
+### Atomi
+**Atomo** -> espressione che non puo' essere suddivisa
+- Simbolo
+	- `{a, abc, a2, a2b, $a, a$}`
+	- non e' necessario assegnare un valore ad un simbolo
+	- Un simbolo segnala se stesso.
+	- Un simbolo non è meramente un sostituto (proxy) per un dato.
+- Numero
+- Stringa di caratteri
+	- sequenza di caratteri racchiusa tra una coppia di apici
+		![[Pasted image 20250221103804.png]]
+	- ci sono built-in per agire sulle stringhe di caratteri
+### Numeri (Atomi)
+- Intero -> decimali `ddddd`
+- Razionale -> `intero1/intero2`
+- Reale -> `dddd.dddd` (16 cifre significative a 64 bit)
+- Complesso -> `a+b` dove `a` e `b` sono qualsiasi dei tipi precedenti
+###
 ##
 ##
 
