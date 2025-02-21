@@ -11,6 +11,8 @@
 	- [[Appunti Acquisizione]]
 - [[Intelligenza artificiale]]
 - **[[Matematica computazionale]]**
+	- **[[attachments]]**
+
 - [[Natural language processing]]
 - [[Simulazione di modelli]]
 - [[Social network analysis]]
