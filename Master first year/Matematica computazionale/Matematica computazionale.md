@@ -76,6 +76,11 @@ FullForm e Map
 	- possiamo usare ScientificForm per avere il numero in notazione scientifica
 - Complesso -> `a+b I` dove `a` e `b` sono qualsiasi dei tipi precedenti
 
+- **Esatti** -> interi, razionali, complessi con coefficienti esatti
+- **Approssimati** -> numeri che contengono sempre la virgola mobile
+	- precisione di macchina
+	- precisione arbitraria
+TODO finish last 2 pages to recap
 
 ###
 ##
