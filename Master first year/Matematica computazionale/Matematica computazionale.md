@@ -74,7 +74,7 @@ FullForm e Map
 	- 16 cifre significative a 64 bit
 	- soggette a machine precision invece che vera precisione
 	- possiamo usare ScientificForm per avere il numero in notazione scientifica
-- Complesso -> `a+b` dove `a` e `b` sono qualsiasi dei tipi precedenti
+- Complesso -> `a+b I` dove `a` e `b` sono qualsiasi dei tipi precedenti
 
 
 ###
