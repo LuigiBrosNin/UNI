@@ -24,6 +24,19 @@ La funzione Trace ti spiega passo passo la sostituzione
 `Trace(a * a + D[ a ^ 3, a])`
 ![[Pasted image 20250221100227.png]]
 
+**Espressioni** -> sono l’unico tipo di oggetto in Mathematica, vengono usate per rappresentare sia il codice che i dati.
+- Struttura annidata, espressioni composte da altre espressioni fino ad atomi (non suddivisibili)
+- Il Kernel rimpiazza espressioni (rispettando uno standard stabilito su come rappresentare certe espressioni)
+==Ogni cosa in Mathematica è una espressione.==
+ogni espressione normale ha forma `Head[part1, part2, ...]`
+eg.
+```Mathematica
+Sin[Log[2.5,7]]
+```
+- Head e' un atomo (`Sin`)
+- 1 parte (`Log[2.5,7]`), espressione normale
+	- Head -> atomo `Log`
+	- 2 parti -> num reale 2.5 e num intero 7
 
 ##
 ##
