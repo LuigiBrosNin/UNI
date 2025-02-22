@@ -7,8 +7,10 @@
 3. Che tipo di RAID viene utilizzato?
 	- I tipi piu' comuni di RAID utilizzati sono
 		- RAID 0 (striping)
-		- 
-	- The most common types are RAID 0 (striping), RAID 1 (mirroring) and its variants, RAID 5 (distributed parity), and RAID 6 (dual parity). Multiple RAID levels can also be combined or nested, for instance RAID 10 (striping of mirrors) or RAID 01 (mirroring stripe sets).
+		- RAID 1 (mirroring)
+		- RAID 5 (distributed parity)
+		- RAID 6 (dual parity)
+	- diversi livelli di RAID possono essere combinati o innestati, ad esempio RAID 10 (striping of mirrors)
 
 4. è necessario che tutte le unità siano collegate in modo che il sistema operativo ne veda il contenuto?
 	- Se viene utilizzata un'acquisizione in formato proprietario con compressione applicata, è necessaria una minore memorizzazione dei dati. Tutti gli strumenti di analisi forense possono analizzare un'immagine perché vedono i dati acquisiti come un'unica unità di grandi dimensioni, non come tante unità separate.
@@ -35,49 +37,55 @@
 	- La velocità massima del 2.0 è di 480MB/s, del 3.0. 4,8Gb/s. Il 3.0. è 10 volte più veloce! Il 2.0. ed il 3.0. funzionano in modi diversi: il 2.0. ha solo la possibilità di scrivere o leggere i dati mentre il 3.0. può fare entrambe le cose contemporaneamente. Questo è il motivo per il quale il 2.0. ha 4 cavi ed il 3.0. ne ha 9.
 
 9. Tipi di acquisizione
-	- 
+	- Acquisizione a runtime (peggior metodo dato che siamo in un ambiente non controllato)
+	- Estrarre fisicamente il disco dal pc (non sempre possibile)
+	- Live da un altro OS sullo stesso dispositivo (bisogna maneggiare con il processo di boot)
 
 10. Differenza tra acquisizione logica e sparsa
-	- 
+	- (sparsa -> raw)
+	- l'acquisizione sparsa e' un'acquisizione bit a bit del device fonte
+	- l'acquisizione logica e' un'acquisizione di file selezionati
+	- entrambe sono mantenute in un file di immagine forense
 
 11. Come si acquisisce un file non allocato?
-	- 
+	- con un'acquisizione sparsa, ovvero bit a bit del dispositivo di archiviazione
 
 12. Cos’è l’OCR?
-	- 
+	- L'**OCR** (Optical Character Recognition, ovvero "Riconoscimento Ottico dei Caratteri") è una tecnologia che consente di **convertire** immagini di testo stampato o scritto a mano in **testo digitale** modificabile e ricercabile.
 
 13. Slack in windows 
-	- 
+	- lo slack e' lo spazio "avanzato" dentro un cluster dopo l'End of file. Puo' contenere dati di vecchi file, quasi esclusivamente incompleti. puo' avvenire solo negli hard disk, non in SSD.
 
 14. Cosa sono rainbow table
-	- 
+	- Le **rainbow table** sono strumenti utilizzati nella **sicurezza informatica** per **decifrare** le **password** criptate, sfruttando un processo di **precomputazione**. Sono tabelle precompilate che contengono una grande quantità di hash di password comuni e le relative password in chiaro.
 
 15. Write blocker spiegare
+	- assicura l'integrita' dei device che si sta leggendo
+	- Puo' essere sia hardware che software
+
+17. Come si acquisisce VM 
+
+
+18. ordine di acquisione da più a meno volatili
 	- 
 
-16. Come si acquisisce VM 
-
-
-17. ordine di acquisione da più a meno volatili
+19. Ssd e acquisizione (garbage collection e trim)
 	- 
 
-18. Ssd e acquisizione (garbage collection e trim)
+20. file slack e cazzi vari
 	- 
 
-19. file slack e cazzi vari
-	- 
-
-20. Formati di acquisizione vari, se sono proprietari e blabla
+21. Formati di acquisizione vari, se sono proprietari e blabla
 	- 
 
 
-21. Autenticita' e integrita'
+22. Autenticita' e integrita'
 	- 
 
-22. Timeline
+23. Timeline
 	- 
 
-23. NIST
+24. NIST
 	- 
 
 
