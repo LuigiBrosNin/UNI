@@ -8,7 +8,6 @@
 
 - **[[Decision making with constraint programming]]**
 - **[[Digital Forensics]]**
-	- [[Appunti Acquisizione]]
 - [[Intelligenza artificiale]]
 - **[[Matematica computazionale]]**
 	- **[[attachments]]**

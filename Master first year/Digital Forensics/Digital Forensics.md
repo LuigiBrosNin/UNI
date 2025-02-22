@@ -365,3 +365,9 @@ In Autopsy we can browse the Registry
 
 - Cases
 	- case 1 -> basically look at emails
+
+%% Begin Waypoint %%
+- [[Appunti Acquisizione]]
+- [[Domande e risposte Esame]]
+
+%% End Waypoint %%
