@@ -46,10 +46,32 @@
 13. Slack in windows 
 	- 
 
-cosa sono rainbow table
-write blocker spiegare
-come si acquisisce VM 
-ordine di acquisione da più a meno volatili
-ssd e acquisizione (garbage collection e trim)
-file slack e cazzi vari
-formati di acquisizione vari, se sono proprietari e blabla
+14. Cosa sono rainbow table
+	- 
+
+15. Write blocker spiegare
+	- 
+
+16. Come si acquisisce VM 
+
+
+17. ordine di acquisione da più a meno volatili
+	- 
+
+18. Ssd e acquisizione (garbage collection e trim)
+	- 
+
+19. file slack e cazzi vari
+	- 
+
+20. Formati di acquisizione vari, se sono proprietari e blabla
+	- 
+
+
+21. Autenticita' e integrita'
+	- 
+
+
+
+
+
