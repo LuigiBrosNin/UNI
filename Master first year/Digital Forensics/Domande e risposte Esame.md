@@ -103,69 +103,99 @@
 
 17. Come si acquisisce VM 
 	1. Risposta Giuseppe
-		per prima cosa devi individuare il path alla virtual machine dove sono salvati tutti i file relativi alla virtual machine tipo file relativi al file system della cvm oppure file relativi allo snapshot della vm oppure file relativi alla configurazione della vm o anche file relativi allo stato della RAM della vm quindi della memoria 
-    volatile, ogni tipologia di file che ho elencato avra' un estensione diversa ed essa 
-    dipende anche dall'azienda che gestisce vm tipo Virtual Box, una volta identificati
-    questi file fai un'acquisizione logica se vuoi fare un'acquisizione live o fisica 
-    se non ti serve recupare la memoria volatile
+		per prima cosa devi individuare il path alla virtual machine dove sono salvati tutti i file relativi alla virtual machine tipo file relativi al file system della cvm oppure file relativi allo snapshot della vm oppure file relativi alla configurazione della vm o anche file relativi allo stato della RAM della vm quindi della memoria  volatile, ogni tipologia di file che ho elencato avra' un estensione diversa ed essa dipende anche dall'azienda che gestisce vm tipo Virtual Box, una volta identificati questi file fai un'acquisizione logica se vuoi fare un'acquisizione live o fisica se non ti serve recupare la memoria volatile
 
 18. ordine di acquisizione da più a meno volatili
-	- RAM
-	- Cache/registri di sistema
-	- Dati di rete (pacchetti)
-	- File di paging e file di swap
-	- dispositivi di memorizzazione non volatili (HD, SSD)
-	- File di sistema e log (inclusi nei dispositivi non volatili)
-	- Non e' sempre possibile acquisire i dati piu' volatili (eg. la RAM)
+	1. Risposta Luizo
+		- RAM
+		- Cache/registri di sistema
+		- Dati di rete (pacchetti)
+		- File di paging e file di swap
+		- dispositivi di memorizzazione non volatili (HD, SSD)
+		- File di sistema e log (inclusi nei dispositivi non volatili)
+		- Non e' sempre possibile acquisire i dati piu' volatili (eg. la RAM)
+	2. Risposta Giuseppe
+		- e' importante l'ordine di acquisizione dei dati volatili per non compromettere i dati acquisiti, ad esempio se acquisi prima una cosa non volatile magari la cosa volatile si puo' perdere
+	    - live system - log di sistema 
+	    - running - i processi running 
+	    - network - ARP table, routing table, connessioni
+	    - virtual - dispositivi virtuali, ad esempio una virtual machine e quindi puoi acquisire lo snapshot della macchina
+	    - physical - dispositivi fisici come USB o Hard Disk
 
 19. Ssd e acquisizione (garbage collection e trim)
-	- Garbage collection e Trim sono meccanismi delle ssd che modificano o eliminano attivamente i dati, anche quelli che potrebbero sembrare ancora presenti a livello logico.
-	- La Garbage Collection è un meccanismo che:
-		- Raccoglie i blocchi di celle di memoria che sono "segnati come liberi" (cioè, che contengono dati obsoleti o cancellati).
-		- **Sovrascrive** queste celle con nuovi dati per liberare spazio e mantenere le prestazioni dell'SSD.
-	- TRIM segnala esplicitamente all'SSD che i blocchi di memoria che contenevano i dati eliminati possono essere cancellati immediatamente.
+	1. Risposta Luizo
+		- Garbage collection e Trim sono meccanismi delle ssd che modificano o eliminano attivamente i dati, anche quelli che potrebbero sembrare ancora presenti a livello logico.
+		- La Garbage Collection è un meccanismo che:
+			- Raccoglie i blocchi di celle di memoria che sono "segnati come liberi" (cioè, che contengono dati obsoleti o cancellati).
+			- **Sovrascrive** queste celle con nuovi dati per liberare spazio e mantenere le prestazioni dell'SSD.
+		- TRIM segnala esplicitamente all'SSD che i blocchi di memoria che contenevano i dati eliminati possono essere cancellati immediatamente.
+	2. Risposta Giuseppe
+		- Il firmware dell'SSD fa delle operazioni in maniera arbitraria che possono  compromettere l'hash dell'acquisizione infatti se uno fa l'acquisizione magari oggi con un certo hash e poi non usa piu' il dispositivo e poi dopo qualche mese rifa' l'acquisizione senza cambiare i dati comunque l'hash puo' essere diverso.
+	    - operazioni firmware:
+	        - per preservare il componente fisico dell'SSD nei vari chips il firmware  puo' spostare dati fra diversi chips per non consumare esageratamente un certo chips ma espandere i dati fra tutti i chips 
+	        - quando si elimina un file il garbage collector puo' far avvenire il processo  di trimming in cui vengono effettivamente eliminati file in spazio non allocato mettendo tutti i bit a 0 
 
 20. Formati di acquisizione vari, se sono proprietari e blabla
-	- .img/.dd 
-		- e' il formato delle acquisizioni forensi standanrd e libero, non contiene metadati avanzati come hash o dettagli sulla catena di custodia
-	- .E01
-		- EnCase (Guidance Software)
-		- È un formato proprietario, quindi richiede EnCase per l'analisi, sebbene alcuni strumenti forensi possano supportare l'importazione di immagini E01.
-	- AFF
-		- Il formato **AFF** è proprietario, ma è un formato più aperto rispetto ad altri.
-		- Riconosciuto da FTK imager
-	- AD1
-		- AccessData FTK
-		- Il formato **AD1** è un formato di acquisizione proprietario sviluppato da **AccessData**. Supporta la creazione di immagini di disco bit-per-bit e memorizza metadati per garantire l'integrità dell'immagine acquisita.
-	![[Pasted image 20250222121507.png]]
+	1. Risposta Luizo
+		- .img/.dd 
+			- e' il formato delle acquisizioni forensi standanrd e libero, non contiene metadati avanzati come hash o dettagli sulla catena di custodia
+		- .E01
+			- EnCase (Guidance Software)
+			- È un formato proprietario, quindi richiede EnCase per l'analisi, sebbene alcuni strumenti forensi possano supportare l'importazione di immagini E01.
+		- AFF
+			- Il formato **AFF** è proprietario, ma è un formato più aperto rispetto ad altri.
+			- Riconosciuto da FTK imager
+		- AD1
+			- AccessData FTK
+			- Il formato **AD1** è un formato di acquisizione proprietario sviluppato da **AccessData**. Supporta la creazione di immagini di disco bit-per-bit e memorizza metadati per garantire l'integrità dell'immagine acquisita.
+		![[Pasted image 20250222121507.png]]
+	2. Risposta Giuseppe
+		- dd - il formato raw di acquisizione e' dd (open source) ed e' associato a un comando linux chiamato dd, diversi tool forensics usano dd o sue estensioni come dc3dd, ad esempio FTK imager
+	    - E01 - il formato di acquisizione del software proprietario EnCase, nel tempo E01 e' diventato un formato standard e ormai non solo EnCase lo usa
+	    - AFF - formato open source di immagini forense 
 
+    di base si usa dd o E01
 
 21. Autenticita' e integrita'
-	- Relativo ai documenti digitali:
-	- solo alcuni formati sono accettati, poiche' devono essere leggibili anche dopo diversi anni (so (eg) .CAD files are not ok, PDFs and PNGs are okay)
-	- Documenti dinamici
-		- documenti che contengono macro
-		- documenti che contengono links
-	- i docs dinamici non possono essere firmati con sicurezza dato che il loro output puo' cambiare, non garantendo l'integrita'.
-	- Relativo agli Hash:
-		- gli hash sono la base per garantire autenticita' di un documento, l'impronta digitale di un file.
+	1. Risposta Luizo
+		- Relativo ai documenti digitali:
+		- solo alcuni formati sono accettati, poiche' devono essere leggibili anche dopo diversi anni (so (eg) .CAD files are not ok, PDFs and PNGs are okay)
+		- Documenti dinamici
+			- documenti che contengono macro
+			- documenti che contengono links
+		- i docs dinamici non possono essere firmati con sicurezza dato che il loro output puo' cambiare, non garantendo l'integrita'.
+		- Relativo agli Hash:
+			- gli hash sono la base per garantire autenticita' di un documento, l'impronta digitale di un file.
+	2. Risposta GIuseppe
+		- dipende in che contesto e' fatta questa domanda, se parliamo di autenticita' e integrita' di prove allora esse sono garantite dalla catena di custodia se parliamo di un file allora conviene parlare degli hash se parliamo di un documento digitale allora si parla che il CAD (codice amministrazione digitale) ha introdotto tre concetti:
+		    - firma elettronica semplice - insieme di dati che attribuiscono un file a un individuo
+		    - firma elettronica avanzata - permette di identificare in maniera univoca che e' stato quell'individuo a firmare
+		    - firma digitale - firma col massimo valore legale, e' rilasciata da un ente certificatore accreditato
 
 22. Timeline
-	- Legge gli ultimi accessi e modifiche
-	- Legge i registri
-		- contiene la cronologia del browser
-		- contiene i dispositivi connessi
-		- contiene tutte le connessioni al server
-		- contiene le posizioni di archiviazione e le configurazioni dei driver
+	1. Risposta Luizo
+		- Legge gli ultimi accessi e modifiche
+		- Legge i registri
+			- contiene la cronologia del browser
+			- contiene i dispositivi connessi
+			- contiene tutte le connessioni al server
+			- contiene le posizioni di archiviazione e le configurazioni dei driver
+	2. Risposta Giuseppe
+		- la timeline e' fondamentale per capire il contesto nel quale e' avvenuto un determinato evento e per attribuire con maggiore fermezza un evento a una persona se si guarda solo il MAC di un file (Modified, Accessed, Created) il tutto e' abbastanza limitante e poi il MAC potrebbe essere modificato dall'utente stesso quindi conviene vedere tutto il contesto e creare una timeline per seguire come e' avvenuto un determinato evento, i vari passi, e vedere tanti file e sorgenti diverse come log di sistema o network, e' importante controllare pure il time system del pc. La timeline viene creata automaticamente dai tool forense avanzati come Autopsy
 
 
 23. NIST
-	- **NIST** (National Institute of Standards and Technology)
-	- Il NIST crea e promuove standard e linee guida che disciplinano la pratica della digital forensics. Forniscono le **migliori pratiche** per la raccolta, l'analisi e la gestione dei dati durante le indagini digitali.
-	- Il NIST sviluppa e supporta vari **strumenti open-source** e risorse software, quali:
-		- **Forensic Tool (FTK Imager)**
-		- **NIST Computer Forensic Tool Testing (CFTT)**
+	1. Risposta Luizo
+		- **NIST** (National Institute of Standards and Technology)
+		- Il NIST crea e promuove standard e linee guida che disciplinano la pratica della digital forensics. Forniscono le **migliori pratiche** per la raccolta, l'analisi e la gestione dei dati durante le indagini digitali.
+		- Il NIST sviluppa e supporta vari **strumenti open-source** e risorse software, quali:
+			- **Forensic Tool (FTK Imager)**
+			- **NIST Computer Forensic Tool Testing (CFTT)**
+	2. Risposta Giuseppe
+		- e' il National Institute of Standard and Technology, per quanto riguarda la digital forensics esso offre delle linee guida per creare degli standard a livello mondiale, offre dei dataset per validare e testare i propri tool forense o anche offre un documento per la catena di custodia, ha fornito pure il RDS (reference data set) che e' un insieme di hash di firme digitali di file sia di tool buoni che cattivi e dannosi e quindi puo' essere utile quando si fa un'acquisizione fare un check su questo dataset di firme digitali
 
-
+24. catena di custodia
+	1. Risposta Giuseppe
+	    - la catena di custodia e' un registro dettagliato che documenta ogni passaggio della prova da quando e' stata acquisita al suo utilizzo finale (ad esempio viene usata in tribunale) essa garantisce l'integrita' della prova(non viene alterata o modificata) e autenticita' (la prova e' cio' che si afferma essere) nel documento della catena di custodia viene scritto quindi come e' stata acquisita la prova e quando e poi ogni passaggio di testimone con firma e data, e poi una descrizione della prova 
 
 
