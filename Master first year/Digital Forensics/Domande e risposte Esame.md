@@ -105,13 +105,24 @@
 		- documenti che contengono links
 	- i docs dinamici non possono essere firmati con sicurezza dato che il loro output puo' cambiare, non garantendo l'integrita'.
 	- Relativo agli Hash:
-		- gli hash sono la base per garantire autenticita' che un documento sia inequivocabilmente 
+		- gli hash sono la base per garantire autenticita' di un documento, l'impronta digitale di un file.
 
 22. Timeline
-	- 
+	- Legge gli ultimi accessi e modifiche
+	- Legge i registri
+		- contiene la cronologia del browser
+		- contiene i dispositivi connessi
+		- contiene tutte le connessioni al server
+		- contiene le posizioni di archiviazione e le configurazioni dei driver
+
 
 23. NIST
-	- 
+	- **NIST** (National Institute of Standards and Technology)
+	- Il NIST crea e promuove standard e linee guida che disciplinano la pratica della digital forensics. Forniscono le **migliori pratiche** per la raccolta, l'analisi e la gestione dei dati durante le indagini digitali.
+	- Il NIST sviluppa e supporta vari **strumenti open-source** e risorse software, quali:
+		- **Forensic Tool (FTK Imager)**
+		- **NIST Computer Forensic Tool Testing (CFTT)**
+		- 
 
 
 
