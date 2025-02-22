@@ -2,10 +2,13 @@
 	- La dimensione è la preoccupazione maggiore perché molti sistemi RAID ora stanno spingendo in exabyte o più di dati.
 
 2. Quanta memoria di dati è necessaria per acquisire tutti i dati per un'immagine forense?
-	- 
+	- Pari alla dimensione degli archivi di memoria che si vogliono acquisire.
 
 3. Che tipo di RAID viene utilizzato?
-	- 
+	- I tipi piu' comuni di RAID utilizzati sono
+		- RAID 0 (striping)
+		- 
+	- The most common types are RAID 0 (striping), RAID 1 (mirroring) and its variants, RAID 5 (distributed parity), and RAID 6 (dual parity). Multiple RAID levels can also be combined or nested, for instance RAID 10 (striping of mirrors) or RAID 01 (mirroring stripe sets).
 
 4. è necessario che tutte le unità siano collegate in modo che il sistema operativo ne veda il contenuto?
 	- Se viene utilizzata un'acquisizione in formato proprietario con compressione applicata, è necessaria una minore memorizzazione dei dati. Tutti gli strumenti di analisi forense possono analizzare un'immagine perché vedono i dati acquisiti come un'unica unità di grandi dimensioni, non come tante unità separate.
@@ -71,7 +74,11 @@
 21. Autenticita' e integrita'
 	- 
 
+22. Timeline
+	- 
 
+23. NIST
+	- 
 
 
 
