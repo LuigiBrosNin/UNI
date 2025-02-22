@@ -64,28 +64,53 @@
 	- Puo' essere sia hardware che software
 
 17. Come si acquisisce VM 
+	- ???
 
-
-18. ordine di acquisione da più a meno volatili
-	- 
+18. ordine di acquisizione da più a meno volatili
+	- RAM
+	- Cache/registri di sistema
+	- Dati di rete (pacchetti)
+	- File di paging e file di swap
+	- dispositivi di memorizzazione non volatili (HD, SSD)
+	- File di sistema e log (inclusi nei dispositivi non volatili)
+	- Non e' sempre possibile acquisire i dati piu' volatili (eg. la RAM)
 
 19. Ssd e acquisizione (garbage collection e trim)
+	- Garbage collection e Trim sono meccanismi delle ssd che modificano o eliminano attivamente i dati, anche quelli che potrebbero sembrare ancora presenti a livello logico.
+	- La Garbage Collection è un meccanismo che:
+		- Raccoglie i blocchi di celle di memoria che sono "segnati come liberi" (cioè, che contengono dati obsoleti o cancellati).
+		- **Sovrascrive** queste celle con nuovi dati per liberare spazio e mantenere le prestazioni dell'SSD.
+	- TRIM segnala esplicitamente all'SSD che i blocchi di memoria che contenevano i dati eliminati possono essere cancellati immediatamente.
+
+20. Formati di acquisizione vari, se sono proprietari e blabla
+	- .img/.dd 
+		- e' il formato delle acquisizioni forensi standanrd e libero, non contiene metadati avanzati come hash o dettagli sulla catena di custodia
+	- .E01
+		- EnCase (Guidance Software)
+		- È un formato proprietario, quindi richiede EnCase per l'analisi, sebbene alcuni strumenti forensi possano supportare l'importazione di immagini E01.
+	- AFF
+		- Il formato **AFF** è proprietario, ma è un formato più aperto rispetto ad altri.
+		- Riconosciuto da FTK imager
+	- AD1
+		- AccessData FTK
+		- Il formato **AD1** è un formato di acquisizione proprietario sviluppato da **AccessData**. Supporta la creazione di immagini di disco bit-per-bit e memorizza metadati per garantire l'integrità dell'immagine acquisita.
+	![[Pasted image 20250222121507.png]]
+
+
+21. Autenticita' e integrita'
+	- Relativo ai documenti digitali:
+	- solo alcuni formati sono accettati, poiche' devono essere leggibili anche dopo diversi anni (so (eg) .CAD files are not ok, PDFs and PNGs are okay)
+	- Documenti dinamici
+		- documenti che contengono macro
+		- documenti che contengono links
+	- i docs dinamici non possono essere firmati con sicurezza dato che il loro output puo' cambiare, non garantendo l'integrita'.
+	- Relativo agli Hash:
+		- gli hash sono la base per garantire autenticita' che un documento sia inequivocabilmente 
+
+22. Timeline
 	- 
 
-20. file slack e cazzi vari
-	- 
-
-21. Formati di acquisizione vari, se sono proprietari e blabla
-	- 
-
-
-22. Autenticita' e integrita'
-	- 
-
-23. Timeline
-	- 
-
-24. NIST
+23. NIST
 	- 
 
 

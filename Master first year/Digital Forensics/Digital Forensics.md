@@ -368,6 +368,8 @@ In Autopsy we can browse the Registry
 
 %% Begin Waypoint %%
 - [[Appunti Acquisizione]]
+- **[[attachments]]**
+
 - [[Domande e risposte Esame]]
 
 %% End Waypoint %%
