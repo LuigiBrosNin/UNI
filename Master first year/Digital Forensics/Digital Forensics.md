@@ -17,6 +17,11 @@ medie alte dei voti (lol)
 
 le informazioni nei dati sono condivisibili con altri gruppi liberamente (la collaborazione e' giusta)
 
+# Resources
+ ![[learn-conputer-forensics-william-oettinger-2022.pdf]]
+
+
+
 # Theory
 
 ## Introduction
@@ -362,9 +367,12 @@ In Autopsy we can browse the Registry
 	- 30th Jan deadline for papers
 	- 6th February
 
+- Relazione "attaccanti"
+	![[Relazione_attaccanti.pdf]]
 
-- Cases
-	- case 1 -> basically look at emails
+- Controrelazione "attaccanti"
+	![[Controrelazione_attaccanti.pdf]]
+
 
 %% Begin Waypoint %%
 - [[Appunti Acquisizione]]
