@@ -84,8 +84,28 @@ FullForm e Map
 
 TODO finish last 2 pages to recap
 
-###
-##
+
+## Valutazione espressioni
+- Il Kernel continua a riscrivere termini fino a che non rimane nulla che esso sappia riscrivere in una forma diversa.
+- In analogia alla chiamata di funzione in altri linguaggi, chiamiamo valore di ritorno (return value) di una data espressione il risultato della valutazione di tale espressione.
+
+- `Trace[expression]` -> ottieni una descrizione post mortem della valutazione
+- `TreeForm[expression]` -> stampa l'espressione esplicitamente in forma d'albero
+- `HoldForm[expression]` -> restituisce la stampa di un'espressione mantenendo l'espressione in formato non valutato (unevaluated) ( `Log(2.5 , 7)` rimane cosi' invece che un numero float)
+- `Attributes[head]` -> verifica se una head simbolica inibisce la valutazione delle sue parti ed esaminare le caratteristiche
+	- eg.
+```mathematica
+Attributes[HoldForm]
+(* HoldForm ha la caratteristica HoldAll i.e. per tutte le
+parti incluse nell'head HoldForm[] è inibita la valutazione *)
+(* HoldForm ha la caratteristica Protected
+i.e. il suo nome non è ridefinibile da utente *)
+---
+{HoldAll, Protected}
+```
+
+- `SetDelayed[]` -> rutirba uk rusyktati dekka valutazion
+
 ##
 
 #
