@@ -8,6 +8,7 @@ Avvisi -> https://www.unibo.it/sitoweb/giulia.spaletta/avvisi
 	- 
 
 # Notes
+Le risorse su virtuale sono magnifiche, soprattutto per gli esercizi e la teoria, spiegati bene come se fossimo bambini :)))
 
 ## Mathematica tutorial
 [Free licence with Unibo](https://www.unibo.it/it/studiare/vivere-luniversita-e-la-citta/agevolazioni-per-computer-tablet-e-software/mathematica-licenza-campus)
@@ -80,6 +81,7 @@ FullForm e Map
 - **Approssimati** -> numeri che contengono sempre la virgola mobile
 	- precisione di macchina
 	- precisione arbitraria
+
 TODO finish last 2 pages to recap
 
 ###
