@@ -52,7 +52,7 @@
 	1. Risposta
 		- La velocità massima del 2.0 è di 480MB/s, del 3.0. 4,8Gb/s. Il 3.0. è 10 volte più veloce! Il 2.0. ed il 3.0. funzionano in modi diversi: il 2.0. ha solo la possibilità di scrivere o leggere i dati mentre il 3.0. può fare entrambe le cose contemporaneamente. Questo è il motivo per il quale il 2.0. ha 4 cavi ed il 3.0. ne ha 9.
 	2.  Risposta Giuseppe
-		- Usb 2.0 ha una velocita' massima teorica di 480 mega bit al secondo, ha 4 fili, generalmente il connettore e' blu
+		- Usb 2.0 ha una velocita' massima teorica di 480 mega bit al secondo, ha 4 fili
 	    - Usb 3.0 ha una velocita' massima teorica di 4.8 gigabit al secondo, 10 volte usb 2.0, ha 9 fili e quindi riesce a scrivere e leggere dati contemporaneamente, generalmente il connettore e' bianco o nero
 
 9. Tipi di acquisizione
@@ -188,9 +188,7 @@
 	1. Risposta Luizo
 		- **NIST** (National Institute of Standards and Technology)
 		- Il NIST crea e promuove standard e linee guida che disciplinano la pratica della digital forensics. Forniscono le **migliori pratiche** per la raccolta, l'analisi e la gestione dei dati durante le indagini digitali.
-		- Il NIST sviluppa e supporta vari **strumenti open-source** e risorse software, quali:
-			- **Forensic Tool (FTK Imager)**
-			- **NIST Computer Forensic Tool Testing (CFTT)**
+		- Il NIST sviluppa e supporta vari **strumenti open-source** e risorse software.
 	2. Risposta Giuseppe
 		- e' il National Institute of Standard and Technology, per quanto riguarda la digital forensics esso offre delle linee guida per creare degli standard a livello mondiale, offre dei dataset per validare e testare i propri tool forense o anche offre un documento per la catena di custodia, ha fornito pure il RDS (reference data set) che e' un insieme di hash di firme digitali di file sia di tool buoni che cattivi e dannosi e quindi puo' essere utile quando si fa un'acquisizione fare un check su questo dataset di firme digitali
 

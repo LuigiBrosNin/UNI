@@ -1,18 +1,29 @@
 
-NOTE IN ITALIANO
+NOTE IN ITALIANO ? devo decidere...
 
 > Notes taken by Luizo ( [@LuigiBrosNin](https://t.me/LuigiBrosNin) on Telegram)
 
 
 - Exam
-	- TODO
+	- Assignments: 45%
+	- 4 over 6 programming assignments (individually)
+		- 0: Warm up 2D and 3D
+		- 1: trajectories in 2D
+		- 2: gaming/animation 2D
+		- 3: interaction and 3D scene (mesh display)
+		- 4: modelling in Blender -> 3D scanning/VR/3D printing 
+		- 5: rendering and Ray Tracing contest in Blender
+		- 6: 3D scene texturing and special effects
+	- alternatively: individual project or seminar presentation
+	- Final Exam: 50% –> oral
+	- participation 5%
 
 # Sunti
 ## 1 - Intro
 ###  1.1 - Graphic Systems
 ## 2 - Modelling
 ### 2.1 - Geometry for CG
-##
+## 3 - Rendering
 ###
 ###
 ##
@@ -63,7 +74,7 @@ potete avviare l'output con
 ```
 
 
-##
+## OpenGL part I
 ##
 # 
 #
