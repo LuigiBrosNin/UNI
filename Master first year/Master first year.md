@@ -3,6 +3,7 @@
 - **[[attachments]]**
 - **[[Complementi di basi di dati]]**
 - **[[Complex systems and network science]]**
+- **[[Computer graphics]]**
 - **[[Computer vision]]**
 	- **[[attachments]]**
 
