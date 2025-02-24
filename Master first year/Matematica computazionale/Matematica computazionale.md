@@ -1,3 +1,6 @@
+
+> Notes taken by Luizo ( [@LuigiBrosNin](https://t.me/LuigiBrosNin) on Telegram)
+
 NOTE IN ITALIANO
 
 SILLABO -> https://www.unibo.it/it/studiare/dottorati-master-specializzazioni-e-altra-formazione/insegnamenti/insegnamento/2024/479026

@@ -1,3 +1,7 @@
+
+> Notes taken by Luizo ( [@LuigiBrosNin](https://t.me/LuigiBrosNin) on Telegram)
+
+
 - Exam
 	- An exam consisting of two parts:
 	- First part (project):
