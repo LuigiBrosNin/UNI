@@ -52,8 +52,8 @@
 	1. Risposta
 		- La velocità massima del 2.0 è di 480MB/s, del 3.0. 4,8Gb/s. Il 3.0. è 10 volte più veloce! Il 2.0. ed il 3.0. funzionano in modi diversi: il 2.0. ha solo la possibilità di scrivere o leggere i dati mentre il 3.0. può fare entrambe le cose contemporaneamente. Questo è il motivo per il quale il 2.0. ha 4 cavi ed il 3.0. ne ha 9.
 	2.  Risposta Giuseppe
-		- Usb 2.0 ha una velocita' massima teorica di 480 mega bit al secondo, ha 4 fili
-	    - Usb 3.0 ha una velocita' massima teorica di 4.8 gigabit al secondo, 10 volte usb 2.0, ha 9 fili e quindi riesce a scrivere e leggere dati contemporaneamente, generalmente il connettore e' bianco o nero
+		- Usb 2.0 ha una velocita' massima teorica di 480 mega bit al secondo, ha 4 fili. Generalmente il connettore e' nero o bianco
+	    - Usb 3.0 ha una velocita' massima teorica di 4.8 gigabit al secondo, 10 volte usb 2.0, ha 9 fili e quindi riesce a scrivere e leggere dati contemporaneamente, generalmente il connettore e' blu
 
 9. Tipi di acquisizione
 	1. Risposta Luizo
