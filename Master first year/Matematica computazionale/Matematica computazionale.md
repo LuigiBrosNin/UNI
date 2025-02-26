@@ -109,6 +109,7 @@ i.e. il suo nome non è ridefinibile da utente *)
 - `SetDelayed[expression], :=` -> ritorna il risultato della valutazione di tale espressione quando richiediamo la "variabile"
 	- eg `s2 = Sqrt[2] (*set*) - s3 := Sqrt[3]`
 	- se valuto la cella, stampera' `Sqrt[2]`, verra' restituito `Null` (che non viene stampato), s3 verra' valutato e restituito quando chiederemo nuovamente di stampare/utilizzare s3 (⚠ valutato ogni volta che viene chiamato)
+
 - **Disgressione** (aka roba che la prof ci fa vedere arricchendo la spiegazione)
 ```mathematica
 (* Disgressione su Null e sul punto-e-virgola *)
