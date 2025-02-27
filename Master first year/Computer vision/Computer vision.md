@@ -48,11 +48,20 @@ Slides seem to be good, and are very visual. There are 41 slides and i don't fee
 ==Denoising==
 We can denoise an image by taking a mean across time (multiple images)
 With a single image, we can compute a mean across neighbouring pixels (mean across space)
+
 ==**Image Filters**== -> Image processing operators that compute the new intensity (colour) of a pixel, $p$, based on the intensities (colours) of the support (neighbourhood) of $p$. They accomplish useful stuff such as denoising/sharpening.
-- **Linear and Translation-Equivalent (LTE)** filter subclass operators, used as feature extractors in CNNs (Convolutional Neural Networks)
+- **Linear and Translation-Equivariant (LTE)** filter subclass operators, used as feature extractors in CNNs (Convolutional Neural Networks)
 **Signal theory** -> their application in image processing consist in a <u>2D convolution</u> between the input image and the <u>impulse response function</u> (point spread function or kernel) of the LTE operator.
 
+**Linear operator** $T\{\cdot\}:o(x,y)$ -> Given an input 2D signal $i(x,y)$ and a 2D linear operator 
+$$T\{i(x,y)\} \text{ is Linear} \iff T\{\alpha i_{1}(x,y) + \beta i_{2}(x,y)\} = \alpha o_{1}(x,y) + \beta o_{2}(x,y)$$
+$$\text{with }\quad o_{1}=T\{i_{1}\} \land o_{2}=T\{i_{2}\} $$
+$\alpha \beta$ -> constants
 
+**Translation-equivariant operator** ->
+$$T\{i(x,y)\} \text{ is Translation-equivariant } \iff T\{i(x-x_{0}, y-y_{0})=o(x-x_{0},y-y_{0}\}$$
+
+ if we have an LTE operator ->  output signal is given by the <u>convolution</u> (mathematical operation on two functions that produces a third function)
 
 ## 3 - 
 ##
