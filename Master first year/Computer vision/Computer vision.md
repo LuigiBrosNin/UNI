@@ -71,6 +71,7 @@ $$T\{i(x,y)\} \text{ is Translation-equivariant } \iff T\{i(x-x_{0}, y-y_{0})=o(
 #TODO FINISH SLIDES 11 -> 31
 
 ## 3 - Edge Detection
+(Everything is in grayscale)
 **Eges** -> seen as sharp changes of a 1D signal
 - We use **derivatives** to detect edges with thresholds for detection
 - We use **partial derivatives** to detect edges in 2d to detect the direction of the edge
@@ -82,6 +83,15 @@ $$T\{i(x,y)\} \text{ is Translation-equivariant } \iff T\{i(x-x_{0}, y-y_{0})=o(
 - We can estimate magnitude using different approximations, best one is the max of $|I_{x}|,|I_{y}|$
 	- $I$ -> Image, $\Delta I$ -> Edge estimation
 	- $|\Delta I|_{\max} = \max(|I_{x}|,|I_{y}|)$
+
+Noise cause problems in image detection, we incorporate the smoothing process of the image when detecting edges (i take the average of a group of pixels compared to the average of another group)
+==Prewitt and Sobel==
+- **Prewitt operator** -> approximating partial derivatives by central differences
+	![[Pasted image 20250227171204.png]]
+- **Sobel operator** -> central pixel weight
+	![[Pasted image 20250227171301.png]]
+
+
 
 ##
 ##
