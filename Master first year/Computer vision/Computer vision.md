@@ -61,8 +61,18 @@ $\alpha \beta$ -> constants
 **Translation-equivariant operator** ->
 $$T\{i(x,y)\} \text{ is Translation-equivariant } \iff T\{i(x-x_{0}, y-y_{0})=o(x-x_{0},y-y_{0}\}$$
 
- if we have an LTE operator ->  output signal is given by the <u>convolution</u> (mathematical operation on two functions that produces a third function)
+ if we have an LTE operator ->  output signal is given by the <u>convolution</u> (mathematical operation on two functions that produces a third function) between the **input signal** and the **impulse response** (point spread function) $h(x,y)=T\{\delta (x,y)\}$ of the operator ($\delta$ -> Unit impulse)
+ 
+ ==Convolution proprieties==
+ - Associative property
+ - Commutative property
+ - Distributive property with the sum
+ - Convolution Commutes with Differentiation
+#TODO FINISH SLIDES 11 -> 31
 
-## 3 - 
+## 3 - Edge Detection
+**Eges** -> seen as sharp changes of a 1D signal
+We use **derivatives** to detect edges
+
 ##
 ##
