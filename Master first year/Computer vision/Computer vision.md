@@ -72,7 +72,16 @@ $$T\{i(x,y)\} \text{ is Translation-equivariant } \iff T\{i(x-x_{0}, y-y_{0})=o(
 
 ## 3 - Edge Detection
 **Eges** -> seen as sharp changes of a 1D signal
-We use **derivatives** to detect edges
+- We use **derivatives** to detect edges with thresholds for detection
+- We use **partial derivatives** to detect edges in 2d to detect the direction of the edge
+- We can approximate the gradient with difference 
+	- Backward differences -> $(i) - (i-1)$
+	- Forward Differences -> $(i+1)-(i)$
+	- Central differences -> $(i+1) - (i-1)$
+	- Correlation kernels -> $\begin{bmatrix}-1&0&1\end{bmatrix}\ \begin{bmatrix}-1\\0\\1\end{bmatrix}$
+- We can estimate magnitude using different approximations, best one is the max of $|I_{x}|,|I_{y}|$
+	- $I$ -> Image, $\Delta I$ -> Edge estimation
+	- $|\Delta I|_{\max} = \max(|I_{x}|,|I_{y}|)$
 
 ##
 ##
