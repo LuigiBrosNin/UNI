@@ -37,3 +37,23 @@ Slides seem to be good, and are very visual. There are 41 slides and i don't fee
 
 
 ## 
+
+# Summaries
+## 0 - Intro
+**Computer vision** -> deals with extraction of information from images (eg. pic of a bird -> "This is a bird!")
+
+## 1 - Image Formation Process
+#TODO
+## 2 - Spacial Filtering
+==Denoising==
+We can denoise an image by taking a mean across time (multiple images)
+With a single image, we can compute a mean across neighbouring pixels (mean across space)
+==**Image Filters**== -> Image processing operators that compute the new intensity (colour) of a pixel, $p$, based on the intensities (colours) of the support (neighbourhood) of $p$. They accomplish useful stuff such as denoising/sharpening.
+- **Linear and Translation-Equivalent (LTE)** filter subclass operators, used as feature extractors in CNNs (Convolutional Neural Networks)
+**Signal theory** -> their application in image processing consist in a <u>2D convolution</u> between the input image and the <u>impulse response function</u> (point spread function or kernel) of the LTE operator.
+
+
+
+## 3 - 
+##
+##
