@@ -132,7 +132,7 @@ f2[ 100.]
 ```
 #TODO finish?
 ## 2.3 Operatori, Funzioni, Espressioni Composite, Liste, Rule
-### Operatori relazionali e booleani
+### 2.3.2 Operatori relazionali e booleani
 Stessi operatori in C, short-circuit evaluation (in `FALSE && e_1`, `e_1` non viene evaluata, si ferma al false)
 - And -> `&&`
 - Or -> `||`
@@ -142,10 +142,31 @@ Stessi operatori in C, short-circuit evaluation (in `FALSE && e_1`, `e_1` non vi
 - LessEqual -> `<=`
 
 Proprieta' Funzioni
-- Idempotenza -> `f[x],f[f[x]], ...` sono equivalenti a `x`
-- Associativa -> `f[f[a,b],f[c]] = f[a,]`
+- Idempotenza -> `OneIdentity` `f[x],f[f[x]], ...` sono equivalenti a `x`
+- Associativa ->`Flat` `f[f[a,b],f[c]] = f[a,b,c]`
+- Commutativa -> `Orderless` `f[a,b]=f[b,a]`
+- Listable -> `f[a,b,c] = f[a],f[b],f[c]`
+- Protected -> previene i simboli dall'essere modificati (eg. $\pi$)
 
-###
+Gli operatori relazionali possono essere usati a catena
+`5 > 4 > 3` corrisponde a `5 > 4 && 4 > 3` -> `True`
+I simboli rimangono Unevaluated
+- `SameQ[]` -> ` ===` evaluation dei simboli
+- `UnsameQ[]` -> ` =!=` negazione logica di SameQ
+
+
+
+### 2.3.6 Definizione di funzione
+*Mathematica* ci permette di definire nostre funzioni.
+```mathematica
+z[x_ , y_] := x + y (* SetDelayed *)
+(* z -> dichiarazione *)
+(* x+y corpo funzione *)
+```
+I valori dei parametri formali x ed y non dipendono dai valori dei simboli globali x ed y (perche' `z` e' definito con `setDelayed[]`.
+Se non la definiamo con `setDelayed[]`, definire `x` e `y` globalmente cambia il risultato della f
+
+
 ###
 
 #
