@@ -13,7 +13,7 @@ Avvisi -> https://www.unibo.it/sitoweb/giulia.spaletta/avvisi
 # Notes
 Le risorse su virtuale sono magnifiche, soprattutto per gli esercizi e la teoria, spiegati bene come se fossimo bambini :)))
 
-## Mathematica tutorial
+## 2 Mathematica tutorial
 [Free licence with Unibo](https://www.unibo.it/it/studiare/vivere-luniversita-e-la-citta/agevolazioni-per-computer-tablet-e-software/mathematica-licenza-campus)
 
 `ResourceFunction["DarkMode"][]` -> mette la darkmode lol
@@ -30,7 +30,7 @@ La funzione Trace ti spiega passo passo la sostituzione
 `Trace(a * a + D[ a ^ 3, a])`
 ![[Pasted image 20250221100227.png]]
 
-### Espressioni normali
+### 2.1.1 Espressioni normali
 **Espressioni** -> sono l’unico tipo di oggetto in Mathematica, vengono usate per rappresentare sia il codice che i dati.
 - Struttura annidata, espressioni composte da altre espressioni fino ad atomi (non suddivisibili)
 - Il Kernel rimpiazza espressioni (rispettando uno standard stabilito su come rappresentare certe espressioni)
@@ -58,7 +58,7 @@ FullForm e Map
 
 
 
-### Atomi
+### 2.1.2 Atomi
 **Atomo** -> espressione che non puo' essere suddivisa
 - Simbolo
 	- `{a, abc, a2, a2b, $a, a$}`
@@ -70,7 +70,7 @@ FullForm e Map
 	- sequenza di caratteri racchiusa tra una coppia di apici
 		![[Pasted image 20250221103804.png]]
 	- ci sono built-in per agire sulle stringhe di caratteri
-### Numeri (Atomi)
+### 2.1.2 Numeri (Atomi)
 - Intero -> decimali `ddddd`
 - Razionale -> `intero1/intero2`
 	- i razionali si semplificano automaticamente (`4/6` -> `2/3`)
@@ -88,7 +88,7 @@ FullForm e Map
 TODO finish last 2 pages to recap
 
 
-## Valutazione espressioni
+## 2.2 Valutazione espressioni
 - Il Kernel continua a riscrivere termini fino a che non rimane nulla che esso sappia riscrivere in una forma diversa.
 - In analogia alla chiamata di funzione in altri linguaggi, chiamiamo valore di ritorno (return value) di una data espressione il risultato della valutazione di tale espressione.
 
@@ -130,7 +130,22 @@ f2[ 100.]
 ---
 1.77828
 ```
+#TODO finish?
+## 2.3 Operatori, Funzioni, Espressioni Composite, Liste, Rule
+### Operatori relazionali e booleani
+Stessi operatori in C, short-circuit evaluation (in `FALSE && e_1`, `e_1` non viene evaluata, si ferma al false)
+- And -> `&&`
+- Or -> `||`
+- Xor -> `Xor[e_1, e_2, ...]`
+- Equal -> ` ==`
+- Unequal -> `!=`
+- LessEqual -> `<=`
 
-##
+Proprieta' Funzioni
+- Idempotenza -> `f[x],f[f[x]], ...` sono equivalenti a `x`
+- Associativa -> `f[f[a,b],f[c]] = f[a,]`
+
+###
+###
 
 #
