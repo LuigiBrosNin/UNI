@@ -81,7 +81,7 @@ $$T\{i(x,y)\} \text{ is Translation-equivariant } \iff T\{i(x-x_{0}, y-y_{0})=o(
 	- Central differences -> $(i+1) - (i-1)$
 	- Correlation kernels -> $\begin{bmatrix}-1&0&1\end{bmatrix}\ \begin{bmatrix}-1\\0\\1\end{bmatrix}$
 - We can estimate magnitude using different approximations, best one is the max of $|I_{x}|,|I_{y}|$
-	- $I$ -> Image, $\Delta I$ -> Edge estimation
+	- $I$ -> Image, $\Delta I$ -> Gradient at every position
 	- $|\Delta I|_{\max} = \max(|I_{x}|,|I_{y}|)$
 
 Noise cause problems in image detection, we incorporate the smoothing process of the image when detecting edges (i take the average of a group of pixels compared to the average of another group)
