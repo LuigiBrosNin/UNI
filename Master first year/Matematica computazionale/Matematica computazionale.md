@@ -163,9 +163,17 @@ z[x_ , y_] := x + y (* SetDelayed *)
 (* z -> dichiarazione *)
 (* x+y corpo funzione *)
 ```
-I valori dei parametri formali x ed y non dipendono dai valori dei simboli globali x ed y (perche' `z` e' definito con `setDelayed[]`.
-Se non la definiamo con `setDelayed[]`, definire `x` e `y` globalmente cambia il risultato della f
+- I valori dei parametri formali x ed y non dipendono dai valori dei simboli globali x ed y (perche' `z` e' definito con `setDelayed[]`.
+- Se non la definiamo con `setDelayed[]`, definire `x` e `y` globalmente cambia il risultato della funzione (perche' valuta `x` e `y` globali e basta)
+- `Blank[]` -> `x_` , indicano che sono parametri formali e non valori letterari
 
+
+
+### 2.3.7 Espressioni Composite
+```mathematica
+Clear[a] ; a = 1 ; b = 2 ; a+b
+```
+gli output saranno nella stessa linea, 
 
 ###
 
