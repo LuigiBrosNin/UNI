@@ -167,13 +167,29 @@ z[x_ , y_] := x + y (* SetDelayed *)
 - Se non la definiamo con `setDelayed[]`, definire `x` e `y` globalmente cambia il risultato della funzione (perche' valuta `x` e `y` globali e basta)
 - `Blank[]` -> `x_` , indicano che sono parametri formali e non valori letterari
 
+Possiamo definire `f` piu' volte e richiamare la versione che vogliamo
+![[Pasted image 20250228111815.png]]
 
 
 ### 2.3.7 Espressioni Composite
 ```mathematica
 Clear[a] ; a = 1 ; b = 2 ; a+b
 ```
-gli output saranno nella stessa linea, 
+- gli output saranno nella stessa linea, utile quando sono ingombranti
+- `CompoundExpression[]` -> `;`
+- i `;` permettono uno stile di programmazione simil C per le funzioni
+```mathematica
+f[x_] := (
+	firstLine;
+		secondLine;
+	...
+	lastLine
+)
+```
+- psa. usate `Block[]` o Module/DynamicModule per scrivere funzioni (vediamo dopo)
+- la prof non vuole vedere parentesi tonde nei progetti
+
+
 
 ###
 
