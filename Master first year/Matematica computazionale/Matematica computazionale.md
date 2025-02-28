@@ -56,8 +56,6 @@ FullForm e Map
 
 `*-+^` -> forme speciali di input, al posto di Times, Minus, Plus etc. 
 
-
-
 ### 2.1.2 Atomi
 **Atomo** -> espressione che non puo' essere suddivisa
 - Simbolo
@@ -153,9 +151,6 @@ Gli operatori relazionali possono essere usati a catena
 I simboli rimangono Unevaluated
 - `SameQ[]` -> ` ===` evaluation dei simboli
 - `UnsameQ[]` -> ` =!=` negazione logica di SameQ
-
-
-
 ### 2.3.6 Definizione di funzione
 *Mathematica* ci permette di definire nostre funzioni.
 ```mathematica
@@ -188,7 +183,7 @@ f[x_] := (
 ```
 - psa. usate `Block[]` o Module/DynamicModule per scrivere funzioni (vediamo dopo)
 - la prof non vuole vedere parentesi tonde nei progetti
-### Liste
+### 2.3.8 Liste
 Sono la struttura dati base in Mathematica
 ```mathematica
 {1,x,i+j, Graphics[Circle[], ImageSize -> Tiny]}
@@ -218,6 +213,14 @@ True
 
 Lista stampata come Tree
 ![[Pasted image 20250228114224.png]]
-###
-
+### 2.3.9 Rules
+- `Rule[a,b]` -> `a -> b`
+- container per una coppia di espressioni con forma speciale di I/O
+- `ReplaceAll[expression, rule]` -> applica la regola ad una lista, eg
+```mathematica
+ReplaceAll[x+y^2, x -> w]
+---
+w + y^2
+```
+- Un altro impiego comune per le Regole e’ nello specificare Opzioni ad una funzione, detti “argomenti-con-nome” (named arguments) ed hanno la forma nome → valore (name → value).
 #
