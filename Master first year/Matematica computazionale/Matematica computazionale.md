@@ -167,7 +167,7 @@ z[x_ , y_] := x + y (* SetDelayed *)
 - Se non la definiamo con `setDelayed[]`, definire `x` e `y` globalmente cambia il risultato della funzione (perche' valuta `x` e `y` globali e basta)
 - `Blank[]` -> `x_` , indicano che sono parametri formali e non valori letterari
 
-Possiamo definire `f` piu' volte e richiamare la versione che vogliamo
+Possiamo definire `f` piu' volte e richiamare la versione che vogliamo a seconda degli argomenti
 ![[Pasted image 20250228111815.png]]
 
 
@@ -188,9 +188,36 @@ f[x_] := (
 ```
 - psa. usate `Block[]` o Module/DynamicModule per scrivere funzioni (vediamo dopo)
 - la prof non vuole vedere parentesi tonde nei progetti
+### Liste
+Sono la struttura dati base in Mathematica
+```mathematica
+{1,x,i+j, Graphics[Circle[], ImageSize -> Tiny]}
+```
+- Indici iniziano da 1 😦
 
+Possiamo fare plot 2D e 3D
+![[Pasted image 20250228112615.png]]
+![[Pasted image 20250228112701.png]]
+Ci sono diverse built-in per la manipolazione liste
+```mathematica
+miaLista = Table[i,{i,10}];
+mialista
+---
+{1,2,3,4,5,6,7,8,9,10}
+```
+- `Table[f[iterator], {iterator, start, stop, step} *]` -> crea liste e le popola
+- per accedere ad un indice usiamo `[[]]`
+- Le liste possono essere annidate, non sono matrici ma si accedono come se lo fossero
+```mathematica
+miaLista = {a, {b, c, {d, e}, f}, g}
+d == miaLista[[2, 3, 1]] 
+---
+True
+```
+- `MatrixForm[lista]` -> converte una lista in forma matrice (visualizzazione)
 
-
+Lista stampata come Tree
+![[Pasted image 20250228114224.png]]
 ###
 
 #
