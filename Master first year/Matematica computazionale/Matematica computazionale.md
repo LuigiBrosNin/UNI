@@ -268,6 +268,7 @@ test /. expr_f -> expr^2
 - `expr_f` matcha tutte le espressioni con head `f`
 - `f[x_]` matcha head `f` ed una sola variabile x in chiamata
 
+
 ##
 ##
 ##
