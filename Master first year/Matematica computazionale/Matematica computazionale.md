@@ -224,6 +224,11 @@ w + y^2
 ```
 - Un altro impiego comune per le Regole e’ nello specificare Opzioni ad una funzione, detti “argomenti-con-nome” (named arguments) ed hanno la forma nome → valore (name → value).
 
+- La built-in `Options[ ]` restituisce la lista di tutti gli argomenti opzionali (e dei loro valori di default) di una data funzione
+- `SetOptions[ ]` ->  cambia i valori di default per gli argomenti opzionali di una funzione (utile se dobbiamo chiamare una funzione tante volte)
+
+
+
 ## 6 Patterns
 ### 6.1.1 Pattern
 
