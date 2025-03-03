@@ -231,6 +231,16 @@ Il resto di questo file parla di come usare i plot, sicuramente sara' utile ma l
 
 ## 6 Programmazione basata su Regole
 ### 6.1.1 Pattern
+**Pattern** -> espressione in Mathematica che rappresenta una intera classe di espressioni (eg. il Blank `_` singolo)
+I pattern possono essere usati per alterare la struttura di espressioni.
+
+Regola che eleva al quadrato ogni numero reale nella espressione `expr`
+```mathematica
+expr = 3a+4.5b^2
+expr /. x_Real -> x^2
+```
+
+
 
 
 ##
