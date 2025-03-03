@@ -75,6 +75,52 @@ potete avviare l'output con
 
 
 ## OpenGL part I
+### Make the project work in Linux
+My new makefile for generic CP projects
+```Makefile syntax
+# Compiler and Flags
+CXX = g++
+CXXFLAGS = -std=c++11 -Wall -g -pthread
+LDFLAGS = -lglfw -lGLU -lGL -lXrandr -lXxf86vm -lXi -lXinerama -lX11 -lrt -ldl
+SOURCES = $(wildcard *.cpp) glad.c # Automatically finds all .cpp files
+OBJECTS = $(SOURCES:.cpp=.o)
+EXEC = LAB_0_2D
+
+# Default target (build the project)
+all: $(EXEC)
+
+# Linking object files to create the final executable
+$(EXEC): $(OBJECTS)
+	$(CXX) $(OBJECTS) -o $(EXEC) $(LDFLAGS)
+
+# Compiling source files into object files
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+# Clean up build artifacts
+clean:
+	rm -f $(OBJECTS) $(EXEC)
+
+# Add phony target for "clean" to avoid conflicts with file names
+.PHONY: all clean
+```
+
+Inoltre, per 2h ho avuto l'errore al caricamento delle shader
+```
+ERROR::SHADER::VERTEX::COMPILATION_FAILED
+
+ERROR::SHADER::FRAGMENT::COMPILATION_FAILED
+
+```
+mi sono impazzito per cercare di fixare il problema, credendo fosse qualche dipendenza oscura di OpenGL o simili, invece e' solo che su `LAB_0_2D.cpp ` vengono chiamati i file con il nome sbagliato (case sensitive su Linux, quindi su Windows non c'e' problema)
+```c++
+char* vertexShader = (char*)"vertexShaderC.glsl";
+char* fragmentShader = (char*)"fragmentShaderC.glsl";
+```
+(vaffanculo aggiungerei)
+
+###
+
 ##
 # 
 #
