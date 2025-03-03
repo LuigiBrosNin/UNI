@@ -216,11 +216,18 @@ Lista stampata come Tree
 ### 2.3.9 Rules
 - `Rule[a,b]` -> `a -> b`
 - container per una coppia di espressioni con forma speciale di I/O
-- `ReplaceAll[expression, rule]` -> applica la regola ad una lista, eg
+- `ReplaceAll[expression, rule]` -> `/.` applica la regola ad una lista, eg
 ```mathematica
 ReplaceAll[x+y^2, x -> w]
 ---
 w + y^2
 ```
 - Un altro impiego comune per le Regole e’ nello specificare Opzioni ad una funzione, detti “argomenti-con-nome” (named arguments) ed hanno la forma nome → valore (name → value).
+
+## 6 Patterns
+### 6.1.1 Pattern
+
+##
+##
+##
 #
