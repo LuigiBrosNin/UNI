@@ -240,8 +240,33 @@ expr = 3a+4.5b^2
 expr /. x_Real -> x^2
 ```
 
+- `x_Symbol` sostituisce i simboli, attenti ad usare sta roba
 
+```mathematica
+expr /. x_Symbol -> x^2
+---
+Plus^2[Times^2[3, a^2], Times^2[4.5, Power^2[b^2 , 2]]]
+```
+- `Plus^2` e' privo di ogni significato e non valutabile, stessa cosa per ogni altra sostituzione
+- Pero' e' utile per cambiare operazione, eg `Plus -> Times`
 
+Possiamo definire una lista di sostituzioni per comodità
+```mathematica
+expr /. {a -> x^2, b -> x^2}
+---
+3x^2 + 4.5x^4
+```
+
+Possiamo usare pattern per definire variabili-pattern (pattern variables)
+```mathematica
+test = (f[a] + g[b])/(f[a,b]);
+
+test /. expr_f -> expr^2
+---
+(f[a]^2 + g[b])/(f[a,b]^2);
+```
+- `expr_f` matcha tutte le espressioni con head `f`
+- `f[x_]` matcha head `f` ed una sola variabile x in chiamata
 
 ##
 ##
