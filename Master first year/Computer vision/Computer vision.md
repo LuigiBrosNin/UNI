@@ -71,7 +71,11 @@ $$T\{i(x,y)\} \text{ is Translation-equivariant } \iff T\{i(x-x_{0}, y-y_{0})=o(
 
 ==Correlation==
 ![[Pasted image 20250305192216.png]]
+🐰? tbh i'm having trouble understanding what's all this for, and what this means
 
+if $h$ is an even function ($h(x,y) = h(-x,-y)$) -> $i*h=h*i=h\circ i$ (where * is convolution, $\circ$ is correlation) 
+
+**Discrete convolution** -> consists in summing the product of the two signals where one has been reflected about the origin and translated.
 
 
 ## 3 - Edge Detection
