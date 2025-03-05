@@ -84,7 +84,15 @@ FullForm e Map
 	- precisione arbitraria
 
 Mathematica non esegue mai una (qualsiasi) operazione numerica che potrebbe convertire una espressione esatta in una approssimata.
+eg. `Sqrt[3]` -> $\sqrt 3$
+Perché per fare ciò dovrebbe inserire una approssimazione (dato che `Sqrt[3]` non ha una rappresentazione decimale finita).
+invece
+`Sqrt[3.]` -> `1.73205`
+L’argomento 3. (della funzione `Sqrt[ ]`) è considerato approssimato, perché contiene la virgola mobile ed e' considerato gia' approssimato.
 
+`N[]` -> valuta sempre numericamente ogni espressione esatta.
+
+<u>MachinePrecision + ExactPrecision = MachinePrecision</u> (ovviamente)
 
 ## 2.2 Valutazione espressioni
 - Il Kernel continua a riscrivere termini fino a che non rimane nulla che esso sappia riscrivere in una forma diversa.
