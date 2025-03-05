@@ -120,7 +120,7 @@ char* fragmentShader = (char*)"fragmentShaderC.glsl";
 (vaffanculo aggiungerei)
 
 ### LAB_0_2D_heart
-
+#TODO some notes on it at least :/
 
 ### LAB_0_3D_cube
 #TODO 
