@@ -197,3 +197,6 @@
 	    - la catena di custodia e' un registro dettagliato che documenta ogni passaggio della prova da quando e' stata acquisita al suo utilizzo finale (ad esempio viene usata in tribunale) essa garantisce l'integrita' della prova(non viene alterata o modificata) e autenticita' (la prova e' cio' che si afferma essere) nel documento della catena di custodia viene scritto quindi come e' stata acquisita la prova e quando e poi ogni passaggio di testimone con firma e data, e poi una descrizione della prova 
 
 
+25. Problema delle acquisizioni dinamiche, come assicuriamo l'autenticita'?
+	1. Risposta Luizo
+		Tramite Hash dinamico (acquisiamo tot. dati e poi calcoliamo l'hash di quei dati man mano), eg. in un'acquisizione di rete bisogna calcolare l'hash di una sequenza di pacchetti che stiamo acquisendo mano mano

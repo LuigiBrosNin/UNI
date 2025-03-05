@@ -83,7 +83,7 @@ FullForm e Map
 	- precisione di macchina
 	- precisione arbitraria
 
-TODO finish last 2 pages to recap
+Mathematica non esegue mai una (qualsiasi) operazione numerica che potrebbe convertire una espressione esatta in una approssimata.
 
 
 ## 2.2 Valutazione espressioni
@@ -128,7 +128,23 @@ f2[ 100.]
 ---
 1.77828
 ```
-#TODO finish?
+Null appare se sopprimiamo esplicitamente un output (magari perche’ è troppo grande, oppure perché non ci interessa vederlo)
+
+`SetDelayed[ ]` -> funzione che opera producendo un effetto collaterale (side effect):
+il risultato atteso dalla esecuzione della funzione non è il return value, ma è piuttosto un *cambiamento apportato allo stato della sessione di Mathematica* (aka valuta l'espressione non nel momento della chiamata di SetDelayed ma quando richiamiamo la "variabile")
+
+==Disgressione==
+```mathematica
+(* Ricetta per un disastro! *)
+yin := yang
+(* il primo statement dice al Kernel che yin può essere riscritto come yang *)
+yang := yin
+(* il secondo statement dice al Kernel che yang può essere riscritto come yin *)
+```
+- attenti alle dipendenze cicliche, altrimenti avrete `$IterationLimit: Iteration limit of 4096 exceeded.`, perche' yin diventa yang e yang diventa yin ciclicamente.
+- per evitarlo si usa `Hold[yin]`, che dopo $2^{12}$ iterazioni, Mathematica fa automaticamente
+
+`Message[]` -> può essere chiamata direttamente (dal programmatore, per associare messaggi di errore o warnings alle funzioni che lei/lui scrive)
 ## 2.3 Operatori, Funzioni, Espressioni Composite, Liste, Rule
 ### 2.3.2 Operatori relazionali e booleani
 Stessi operatori in C, short-circuit evaluation (in `FALSE && e_1`, `e_1` non viene evaluata, si ferma al false)
@@ -227,7 +243,7 @@ w + y^2
 - La built-in `Options[ ]` restituisce la lista di tutti gli argomenti opzionali (e dei loro valori di default) di una data funzione
 - `SetOptions[ ]` ->  cambia i valori di default per gli argomenti opzionali di una funzione (utile se dobbiamo chiamare una funzione tante volte)
 
-Il resto di questo file parla di come usare i plot, sicuramente sara' utile ma lo vedro' da solo quando mi servira'
+Il resto di questo file parla di come usare i plot, sicuramente sara' utile ma lo vedro' da solo quando mi servira', non lo sto a segnare qui (sono pigro)
 
 ## 6 Programmazione basata su Regole
 ### 6.1.1 Pattern

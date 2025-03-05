@@ -1,4 +1,7 @@
 Attaccante -> Consulente del dipendente (chiamato cosi' per comodita')
+
+⚠ DD non genera hash necessariamente uguali ad ogni acquisizione, quindi meglio che usate un altro comando!
+
 ## Acquisizione
 
 l'acquisizione e' stata effettuata con Kali Linux 2024.3 Live 32 bit (disponibile da https://www.kali.org/get-kali/#kali-live)
