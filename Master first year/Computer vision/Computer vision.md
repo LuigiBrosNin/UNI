@@ -68,7 +68,11 @@ $$T\{i(x,y)\} \text{ is Translation-equivariant } \iff T\{i(x-x_{0}, y-y_{0})=o(
  - Commutative property
  - Distributive property with the sum
  - Convolution Commutes with Differentiation
-#TODO FINISH SLIDES 11 -> 31
+
+==Correlation==
+![[Pasted image 20250305192216.png]]
+
+
 
 ## 3 - Edge Detection
 (Everything is in grayscale)
