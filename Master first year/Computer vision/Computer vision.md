@@ -76,6 +76,28 @@ $$T\{i(x,y)\} \text{ is Translation-equivariant } \iff T\{i(x-x_{0}, y-y_{0})=o(
 if $h$ is an even function ($h(x,y) = h(-x,-y)$) -> $i*h=h*i=h\circ i$ (where * is convolution, $\circ$ is correlation) 
 
 **Discrete convolution** -> consists in summing the product of the two signals where one has been reflected about the origin and translated.
+![[Pasted image 20250305194345.png]]
+In a practical implementation, we cycle trough the kernel from $-k$ to $+k$ instead of the infinities (duh)
+To solve the border issue, we either CROP or PAD the image
+
+**==Mean Filter==** -> replace pixel intensity with the average intensity of neighbourhood 
+Fastest way to denoise an image
+
+**==Gaussian Filter==** -> LTE operator whose impulse response is a 2D Gaussian function (aka having gaussian distribution)(with zero mean and constant diagonal covariance matrix)
+
+$\sigma$ param -> amount of smoothing by the filter (higher -> more blurry)
+
+🐰for practical implementation, i genuinely didn't understand a thing.
+
+Size of the filter given $\sigma$ -> with interval $[-3\sigma,3\sigma]$, captures 99% of the area (“energy”)
+of the Gaussian function, we take $(2k+1)\times(2k+1)$ kernel with $k=[3\sigma]$
+
+Deploying the separability property speeds up the filtering operation ( one 2D gaussian split into two 1D convolutions)
+
+==Median Filter== -> Non linear filter, each pixel intensity is replaced by the median over a given neighbourhood, the median being the value falling half-way in the sorted set of intensities.
+![[Pasted image 20250305195940.png|200]]
+
+
 
 
 ## 3 - Edge Detection
