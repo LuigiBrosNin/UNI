@@ -173,7 +173,33 @@ Trough this method we can find the best scale since we're defining the point to 
 ![[Pasted image 20250306165051.png]]
 
 ==Scale and Rotation Invariance Description==
-defining scale and rotation invariant description -> same $\sigma$ = same scale, 
+Defining scale and rotation invariant description -> same $\sigma$ = same scale, but rotation descriptors are not invariant, so it's not trivial
+
+==Exemplar DoG keypoints==
+We take pixel coordinates in the local reference frame to identify a direction inherent to the patch, called **canonical orientation**, and we define it as a **local reference frame**
+![[Pasted image 20250306170348.png]]
+
+**Rotation invariance** -> a canonical (aka characteristic) patch orientation is computed, so that the descriptor can then be computed on a **canonically-oriented** patch
+
+![[Pasted image 20250306170554.png|450]]
+
+==Canonical Orientation==
+Given the keypoint, the **magnitude** and **orientation** of the gradient are <u>computed at each pixel of the associated Gaussian-smoothed image</u>, L:
+![[Pasted image 20250306170924.png]]
+The characteristic orientation of the keypoint is given by <u>the highest peak of the orientation histogram</u>
+![[Pasted image 20250306171013.png]]
+
+==SIFT Descriptor==
+The SIFT (Scale Invariant Feature Transform) descriptor is computed as follows
+![[Pasted image 20250306171107.png]]
+-  A 16x16 <u>oriented</u> pixel grid around each keypoint is considered  
+-  This is further divided into 4x4 regions (each of size 4x4 pixels)  
+-  A gradient orientation histogram is created for each region  
+-  Each histogram has 8 bins (i.e. bin size 45°)  
+-  Each pixel in the region contributes to its designated bin according to  
+	-  Gradient magnitude  
+	-  Gaussian weighting function centred at the keypoint (with σ equal to half the grid size)
+In other words, we classify many points and generate an orientation based on 
 
 ## 5 -
 ##
