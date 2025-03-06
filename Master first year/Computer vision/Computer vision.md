@@ -127,6 +127,14 @@ Noise cause problems in image detection, we incorporate the smoothing process of
 
 
 ## 4 - Local Features
-#TODO 
+#TODO 1 -> 10
+
+==**Harris Corner Detector**== -> to find corresponding points, we rely on a continuous formulation of the Moravec's error function, based on the weighted sum of derivatives around the point of interest (aka, i look at points around the interested one to figure out if it's somewhat the same one, eg:)
+![[Pasted image 20250306152512.png|400]]
+
+
+
+
+
 ## 5 -
 ##
