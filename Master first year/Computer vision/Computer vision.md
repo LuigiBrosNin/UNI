@@ -101,8 +101,6 @@ Deploying the separability property speeds up the filtering operation ( one 2D g
 ==Bilateral Filter== -> Advanced non-linear filter to accomplish denoising of Gaussian-like noise without blurring the image (aka edge preserving smoothing).
 
 ==Non-local Means Filter== -> non-linear edge preserving smoothing filter. The key idea is that the similarity among patches spread over the image can be deployed to achieve denoising.
-
-
 ## 3 - Edge Detection
 (Everything is in grayscale)
 **Eges** -> seen as sharp changes of a 1D signal
@@ -124,8 +122,6 @@ Noise cause problems in image detection, we incorporate the smoothing process of
 - **Sobel operator** -> central pixel weight
 	![[Pasted image 20250227171301.png]]
 #TODO FINISH 12 -> 28
-
-
 ## 4 - Local Features
 #TODO 1 -> 10
 
@@ -150,6 +146,13 @@ Noise cause problems in image detection, we incorporate the smoothing process of
 
 ==Scale-space==
 **Key finding** -> apply a <u>fixed-size detection</u> tool on increasingly <u>down-sampled</u> and <u>smoothed</u> versions of the input image
+![[Pasted image 20250306154726.png|400]]
+
+==Gaussian Scale-Space==
+**Scale-Space** -> a one-parameter family of images created from the original one so that the structures at smaller scales are successively suppressed by smoothing operations.
+It must be realized by <u>Gaussian Smoothing</u>.
+
+criterion to select their characteristic scale -> finding their **extrema**
 
 
 ## 5 -
