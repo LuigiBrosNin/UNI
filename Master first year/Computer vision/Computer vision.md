@@ -199,7 +199,7 @@ The SIFT (Scale Invariant Feature Transform) descriptor is computed as follows
 -  Each pixel in the region contributes to its designated bin according to  
 	-  Gradient magnitude  
 	-  Gaussian weighting function centred at the keypoint (with σ equal to half the grid size)
-In other words, we classify many points and generate an orientation based on 
-
+🐰 I did not understand the point of this yet
+This is used to generate descriptors to match, and the Feature vector is the output
 ## 5 -
 ##
