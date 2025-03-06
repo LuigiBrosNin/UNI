@@ -131,9 +131,25 @@ Noise cause problems in image detection, we incorporate the smoothing process of
 
 ==**Harris Corner Detector**== -> to find corresponding points, we rely on a continuous formulation of the Moravec's error function, based on the weighted sum of derivatives around the point of interest (aka, i look at points around the interested one to figure out if it's somewhat the same one, eg:)
 ![[Pasted image 20250306152512.png|400]]
+1. Compute C at each pixel
+2. Select all pixels where C is higher than a chosen positive threshold (T)
+3. Within the previous set, detect as corners only those pixels that are local maxima of C (NMS)
 
+==Invariance properties==
+**Rotation invariance** -> eigenvalues of M (M encodes the local img structure around the considered pixel) are invariant to a rotation of the image axes, thus so is Harris cornerness function
 
+**No invariance to an affine intensity change** ->
+- Yes, for additive bias ($I' = I+b$) due to the use of derivatives
+- No, to multiplication by a gain factor ($I'=a\cdot I$) => derivatives gets multiplied by the same factor
 
+**No scale invariance property** -> Harris is not scale invariant
+- An image contains features at different scales -> Detecting all features requires to analyze the image across the range of scales “deemed as relevant”
+	![[Pasted image 20250306153923.png|400]]
+- We detect features in order to match their **descriptors**
+- To compute and match descriptors we need to smooth out the details that do not appear across the range of scales
+
+==Scale-space==
+**Key finding** -> apply a <u>fixed-size detection</u> tool on increasingly <u>down-sampled</u> and <u>smoothed</u> versions of the input image
 
 
 ## 5 -
