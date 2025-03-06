@@ -15,8 +15,7 @@
 
 
 # Theory
-Slides seem to be good, and are very visual. There are 41 slides and i don't feel like just adding a phrase and pasting the slide, so i'll freeze notes for now, see what to do of them, studying to slides to understand might be better. Maybe notes to remember definitions, as in summaries.
-Also, i'm unsure if i'll be able to study the course or if i want to, so we'll see what becomes of it
+Slides seem to be good, and are very visual. I don't feel like just adding a phrase and pasting the slide, so i'll freeze notes for now, see what to do of them, studying to slides to understand might be better. Maybe notes to remember definitions, as in summaries.
 
 ## 0 
 ## 1 - Image Formation Process
@@ -165,8 +164,16 @@ Features (Blob-like) and scales detected as extrema of the scale-normalized LOG
 - Detect keypoints by seeking for the extrema of the DoG (Difference of Gaussian) function across the $(x,y,\sigma)$ domain (different adjacents in the scale)
 	![[Pasted image 20250306163056.png]]
 
+==Keypoint Detection and Tuning==
+**Extrema detection** -> a point is detected as a keypoint $\iff$ its DoG is higher (lower) than that of the 26 neighbours (in 3D)
+![[Pasted image 20250306164454.png]]
+We can prune weak responses to receive a better result, as DoG extrema is scarcely repeatable
 
+Trough this method we can find the best scale since we're defining the point to a specific scale (it's hard to understand, just know that DoG helps us find the optimal scale for each detail we want to "classify")
+![[Pasted image 20250306165051.png]]
 
+==Scale and Rotation Invariance Description==
+defining scale and rotation invariant description -> same $\sigma$ = same scale, 
 
 ## 5 -
 ##
