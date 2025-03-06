@@ -154,6 +154,19 @@ It must be realized by <u>Gaussian Smoothing</u>.
 
 criterion to select their characteristic scale -> finding their **extrema**
 
+Scale-normalized Laplacian of Gaussian (LOG)
+![[Pasted image 20250306162610.png]]
+
+==Multi-Scale Feature Detection==
+Features (Blob-like) and scales detected as extrema of the scale-normalized LOG
+![[Pasted image 20250306162700.png]]
+
+==Difference of Gaussian (DoG)== -> very close approximation of Lindeberg's scale-normalized LOG
+- Detect keypoints by seeking for the extrema of the DoG (Difference of Gaussian) function across the $(x,y,\sigma)$ domain (different adjacents in the scale)
+	![[Pasted image 20250306163056.png]]
+
+
+
 
 ## 5 -
 ##
