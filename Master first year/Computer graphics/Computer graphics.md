@@ -129,7 +129,6 @@ per runnare, chiama l'eseguibile generato dal make
 
 ### LAB_0_3D_cube
 #TODO 
-
 ##
 # 
 #
