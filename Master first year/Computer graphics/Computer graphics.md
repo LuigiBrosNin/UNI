@@ -78,6 +78,8 @@ potete avviare l'output con
 
 
 ## OpenGL part I
+Vertex Buffer Object (VBO) -> stores data regarding vertexes (generic attributes for the stuff we need)
+![[Pasted image 20250308002001.png]]
 ### Make the project work in Linux
 My new makefile for generic CP projects
 ```Makefile syntax
@@ -125,8 +127,37 @@ char* fragmentShader = (char*)"fragmentShaderC.glsl";
 per compilare, basta il comando `make`
 per runnare, chiama l'eseguibile generato dal make
 ### LAB_0_2D_heart
-#TODO some notes on it at least :/
+We mainly removed the unnecessary 2d shapes (i don't need to explain it, it's very easy) and updated 1 function:
 
+```c++
+void drawScene(void)
+{
+glClearColor(r, g, b, 1.0f);
+glClear(GL_COLOR_BUFFER_BIT);
+
+float currentTime = glfwGetTime();
+
+raggiox = sin(currentTime * 2.0f + PI) * 0.25f + 0.75;
+INIT_HEART(cx, cy, 0.05 * raggiox, 0.05 * raggiox, &heart);
+
+glBindBuffer(GL_ARRAY_BUFFER, heart.VBO_vertices);
+
+glBufferSubData(GL_ARRAY_BUFFER, 0, heart.vertices.size() * sizeof(vec3), heart.vertices.data());
+
+glClearColor(r, g, b, 1.0f);
+glClear(GL_COLOR_BUFFER_BIT);
+
+//Rende attivo il VAO del cuore e lo disegna
+glBindVertexArray(heart.VAO);
+glDrawArrays(heart.render, 0, heart.nv);
+
+heart.vertices.clear();
+heart.colors.clear();
+
+}
+
+```
+And that's about it. I absolutely need to add comments to the function
 ### LAB_0_3D_cube
 #TODO 
 ##
