@@ -21,9 +21,12 @@ NOTE IN ITALIANO ? devo decidere...
 # Sunti
 ## 1 - Intro
 ###  1.1 - Graphic Systems
+#TODO 
 ## 2 - Modelling
 ### 2.1 - Geometry for CG
+#TODO 
 ## 3 - Rendering
+#TODO 
 ###
 ###
 ##
