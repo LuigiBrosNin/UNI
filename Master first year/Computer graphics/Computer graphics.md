@@ -85,7 +85,7 @@ My new makefile for generic CP projects
 CXX = g++
 CXXFLAGS = -std=c++11 -Wall -g -pthread
 LDFLAGS = -lglfw -lGLU -lGL -lXrandr -lXxf86vm -lXi -lXinerama -lX11 -lrt -ldl
-SOURCES = $(wildcard *.cpp) glad.c # Automatically finds all .cpp files
+SOURCES = $(filter-out LAB_0_2D.cpp, $(wildcard *.cpp)) glad.c # Automatically finds all .cpp files
 OBJECTS = $(SOURCES:.cpp=.o)
 EXEC = LAB_0_2D
 
@@ -122,6 +122,8 @@ char* fragmentShader = (char*)"fragmentShaderC.glsl";
 ```
 (vaffanculo aggiungerei)
 
+per compilare, basta il comando `make`
+per runnare, chiama l'eseguibile generato dal make
 ### LAB_0_2D_heart
 #TODO some notes on it at least :/
 
