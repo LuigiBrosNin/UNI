@@ -135,15 +135,21 @@ void drawScene(void)
 glClearColor(r, g, b, 1.0f);
 glClear(GL_COLOR_BUFFER_BIT);
 
+// GLFW function to get current time
 float currentTime = glfwGetTime();
-
 raggiox = sin(currentTime * 2.0f + PI) * 0.25f + 0.75;
+
+// INIT HEART function, initiates geometry at position cx, cy, with radius raggiox
 INIT_HEART(cx, cy, 0.05 * raggiox, 0.05 * raggiox, &heart);
 
+// buffer updates, updates the VBO with the new vertices
+// bind the VBO buffer to the VAO buffer
 glBindBuffer(GL_ARRAY_BUFFER, heart.VBO_vertices);
 
+// modifies the VBO buffer with the new vertices without reallocating memory
 glBufferSubData(GL_ARRAY_BUFFER, 0, heart.vertices.size() * sizeof(vec3), heart.vertices.data());
 
+// set colour again
 glClearColor(r, g, b, 1.0f);
 glClear(GL_COLOR_BUFFER_BIT);
 
@@ -151,11 +157,10 @@ glClear(GL_COLOR_BUFFER_BIT);
 glBindVertexArray(heart.VAO);
 glDrawArrays(heart.render, 0, heart.nv);
 
+// Unbind the VAO buffer
 heart.vertices.clear();
 heart.colors.clear();
-
 }
-
 ```
 And that's about it. I absolutely need to add comments to the function
 ### LAB_0_3D_cube
