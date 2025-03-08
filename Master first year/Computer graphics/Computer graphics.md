@@ -167,7 +167,39 @@ heart.colors.clear();
 ```
 And that's about it.
 ### LAB_0_3D_cube
-#TODO 
+-  Disegnare un solo cubo
+```c++
+void drawScene()
+{
+int i, n_cubi = 1; // fino a 10 cubi
+```
+
+- Cambiare il colore del cubo da colori ai vertici a colori alle facce
+```c++ 
+void polygon(int a, int b, int c, int d, int cl)
+{ // aggiunto l'argomento cl come colore, ogni faccia ne ha uno solo 
+vColors[Index] = colors[cl]; vPositions[Index] = positions[a]; Index++;
+vColors[Index] = colors[cl]; vPositions[Index] = positions[b]; Index++;
+vColors[Index] = colors[cl]; vPositions[Index] = positions[c]; Index++;
+vColors[Index] = colors[cl]; vPositions[Index] = positions[a]; Index++;
+vColors[Index] = colors[cl]; vPositions[Index] = positions[c]; Index++;
+vColors[Index] = colors[cl]; vPositions[Index] = positions[d]; Index++;
+}
+
+void colorcube()
+{ // ho chiamato i colori uno dopo l'altro, a parte il 2 che da giallo si confonde con lo sfondo
+polygon(0, 3, 2, 1, 0);
+polygon(2, 3, 7, 6, 1);
+polygon(0, 4, 7, 3, 6);
+polygon(1, 2, 6, 5, 3);
+polygon(4, 5, 6, 7, 4);
+polygon(0, 1, 5, 4, 5);
+}
+
+```
+
+- callback mouse
+
 ##
 # 
 #
