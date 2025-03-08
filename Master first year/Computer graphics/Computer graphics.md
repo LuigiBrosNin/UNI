@@ -80,6 +80,9 @@ potete avviare l'output con
 ## OpenGL part I
 Vertex Buffer Object (VBO) -> stores data regarding vertexes (generic attributes for the stuff we need)
 ![[Pasted image 20250308002001.png]]
+
+#TODO this section would absolutely benefit for a summary of those 93 or so slides
+
 ### Make the project work in Linux
 My new makefile for generic CP projects
 ```Makefile syntax
@@ -162,7 +165,7 @@ heart.vertices.clear();
 heart.colors.clear();
 }
 ```
-And that's about it. I absolutely need to add comments to the function
+And that's about it.
 ### LAB_0_3D_cube
 #TODO 
 ##
