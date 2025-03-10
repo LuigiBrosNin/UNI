@@ -291,9 +291,8 @@ test /. expr_f -> expr^2
 ```
 - `expr_f` matcha tutte le espressioni con head `f`
 - `f[x_]` matcha head `f` ed una sola variabile x in chiamata
-#TODO Finish
-
 ### 6.1.3 Testare Pattern
+#TODO 
 ### 6.1.4 Ruolo degli Attributes
 ### 6.1.5 Funzioni Built-in che usano Pattern
 ### 6.2.2 DownValues
@@ -301,11 +300,58 @@ test /. expr_f -> expr^2
 **Module** -> scoping statico o lessicale (localizza i nomi di variabile): le variabili sono trattate come locali ad una determinata <u>sezione del codice</u> (in un programma).  
 **Block** -> scoping dinamico (localizza i valori delle variabili): le variabili sono trattate come locali ad una determinata parte della <u>history di esecuzione</u> (di un programma).
 
+==Block example==
 ```mathematica
+z;
+x=1;
+print["prima block: x= ", x, ", z= ", z];
 Block[ {x} (* local "variable" *)
 z=x;
+
+print["dentro block: x= ", x, ", z= ", z];
 ]
+
+print["fuori block: x= ", x, ", z= ", z];
+
+x=2;
+
+print["x riassegnata: x= ", x, ", z= ", z];
+---
+(*
+prima block: x=1, z=z
+dentro block: x=x, z=x
+finita block: x=1, z=1
+x riassegnata: x=2, z=2
+*)
 ```
+Block crea una parte di codice che cambia temporaneamente il valore delle variabili d'interesse
+
+==Module example==
+```mathematica
+z;
+x=1;
+print["prima module: x= ", x, ", z= ", z];
+Module[ {x} (* local "variable" *)
+z=x;
+
+print["dentro module: x= ", x, ", z= ", z];
+]
+
+print["fuori module: x= ", x, ", z= ", z];
+
+x=2;
+
+print["x riassegnata: x= ", x, ", z= ", z];
+---
+(*
+prima module: x=1, z=z
+dentro module: x=x$3723, z=x$3723
+finita module: x=1, z=x$3723
+x riassegnata: x=2, z=x$3723
+*)
+```
+Ogni volta che Module è usata, viene creato un nuovo simbolo per rappresentare ciascuna delle sue variabili locali.
+
 
 ##
 ##
