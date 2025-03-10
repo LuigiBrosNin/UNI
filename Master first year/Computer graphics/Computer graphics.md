@@ -89,10 +89,17 @@ Repeating $N$ times the process defines the curve
 ==Connecting Bézier curves==
 1. **Piecewise Bézier curves** -> Piecewise polynomial
 	- No continuity built in
-	- Achieve $C^1$ using collinear control points
+	- Achieve $C^1$ (continuity) using collinear control points
 2. **Polynomial Spline** -> Piecewise polynomial 
 	- with given regularity
 	- conditions $C^1$ or more at the joints
+
+$C^0$ -> Continuity: Curve that can be drawn without lifting the pen off the paper sheet
+$C^1$ -> The derived curve components are continuous
+$G^1$ -> Geometry Continuity: If the direction tangent to a parametric curve varies in a continuous manner (Its magnitude can also have discontinuous jumps)
+
+![[Pasted image 20250311000536.png]]
+
 ## 3 - Rendering
 
 ### Rendering Pipeline
@@ -291,7 +298,7 @@ that's it
 ## LAB_1
 1. yeah, they work lol
 2. :LiEye: :LiEye:
-3. .
+3. TODO
 	- ![[Pasted image 20250310233951.png]]
 4. 
 # 
