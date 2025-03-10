@@ -296,7 +296,7 @@ test /. expr_f -> expr^2
 ### 6.1.4 Ruolo degli Attributes
 ### 6.1.5 Funzioni Built-in che usano Pattern
 ### 6.2.2 DownValues
-`DownValues[f]` -> restituisce le regole corrispondenti alle definizioni fatte per il simbolo `f`
+`DownValues[f]` or `? f` -> restituisce le regole corrispondenti alle definizioni fatte per il simbolo `f`
 
 Come la prof vuole che programmiamo:
 ```mathematica
@@ -306,6 +306,7 @@ f[x_ /; x < 2] := g2[x];
 DownValues[ f] // TableForm
 ```
 g1 e g2 non sono ancora definite, pero' il "redirecting" e' gia' operativo
+
 
 
 ### Module and Block
@@ -372,6 +373,6 @@ Ogni volta che Module è usata, viene creato un nuovo simbolo per rappresentare 
 
 
 Mail per risorse su:
-Gradbit
+GuardBit
 
 Aritmetica ad intervalli
