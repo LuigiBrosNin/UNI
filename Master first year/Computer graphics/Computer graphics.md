@@ -66,8 +66,20 @@ Tangents -> The control polygon of C(t) is tangent to the curve at the beginning
 5. The curve is **smooth** with smooth derivatives.
 6. The curve is **tangent at the first and last control points**, to the first and last line segments of the control polygon.
 7. The curve is contained into the **convex hull** of the control points, that is inside the smallest polygon formed by its control points.
-8. Linear Precision: when all the control points lie on a line, then the Bézier curve is the segment line interpolating the points. (from convex hull property)
-9. 
+8. **Linear Precision** -> when all the control points lie on a line, then the Bézier curve is the segment line interpolating the points. (from convex hull property)
+
+==De Casteljau’s Algorithm==
+- Given a parameter value $t$, evaluate the poly value $f(t)$ by geometric construction  
+- Apply the algorithm to each curve component
+- Plot the curve by means of a sequence of recursive linear interpolations
+
+==Linear Interpolation (Lerp)== -> compute a value inbetween two values
+We *Lerp* repeatetly and a Bézier Curve will form
+
+
+
+
+
 ## 3 - Rendering
 
 ### Rendering Pipeline
