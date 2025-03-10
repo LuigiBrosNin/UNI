@@ -223,7 +223,7 @@ glDrawArrays(GL_TRIANGLES, 0, NumVertices);
 
 that's it
 ## LAB_1
-#TODO 
+1. :f
 # 
 ##
 #
