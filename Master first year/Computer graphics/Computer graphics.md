@@ -30,10 +30,13 @@ NOTE IN ITALIANO ? devo decidere...
 **Approximation** -> curve is influenced by control points
 
 ==Bézier curve==
+$C(t)$ -> curve which interpolates endpoints $= at^{2}+bt+c$ , $t\in [0,1]$ and $a,b,c$ = coefficient vectors
 ![[Pasted image 20250310194326.png]]
-$C(t)$ -> curve which interpolates endpoints $= at^{2}+bt+c$
 
-
+**Bézier curve** of degree $n$ (in parametric form) -> defined as
+$$C(t) = \sum\limits^{n}_{i=0} P_{i}B_{i}^{n}(t),\quad P_{i},i=0,..,n, \text{d-dimentional space } \!R^{d},d=2,3,4$$
+**Bernstein basis functions** -> They're basically an approximation for curves 
+$$B^{n}_{i}(t)=\begin{pmatrix}n\\i\end{pmatrix}t^{i}(1-t)^{n-i}, \quad i=0,..,n$$
 
 
 ## 3 - Rendering
