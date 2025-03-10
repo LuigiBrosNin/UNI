@@ -223,7 +223,9 @@ glDrawArrays(GL_TRIANGLES, 0, NumVertices);
 
 that's it
 ## LAB_1
-1. :f
+1. yeah, they work lol
+2. :LiEye: :LiEye:
+3. 
 # 
 ##
 #
