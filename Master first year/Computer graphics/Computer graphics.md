@@ -34,11 +34,22 @@ $C(t)$ -> curve which interpolates endpoints $= at^{2}+bt+c$ , $t\in [0,1]$ and 
 ![[Pasted image 20250310194326.png]]
 
 **Bézier curve** of degree $n$ (in parametric form) -> defined as
-$$C(t) = \sum\limits^{n}_{i=0} P_{i}B_{i}^{n}(t),\quad P_{i},i=0,..,n, \text{d-dimentional space } \!R^{d},d=2,3,4$$
+$$C(t) = \sum\limits^{n}_{i=0} P_{i}B_{i}^{n}(t),\quad P_{i}\ ,\ i=0,..,n,\quad \text{d-dimentional space } \!R^{d},d=2,3,4$$
 **Bernstein basis functions** -> They're basically an approximation for curves 
 $$B^{n}_{i}(t)=\begin{pmatrix}n\\i\end{pmatrix}t^{i}(1-t)^{n-i}, \quad i=0,..,n$$
 
+Several ways to represent mathematically a Bézier curve:  
+- By Bernstein Polynomial basis
+	- I hope we don't get asked to know how to write the monster i'm seeing in the slides right now, better gather info about the theory required in the oral exam
+- Matrix Form  
+- de Casteljau Algorithm (linear interpolation)
 
+ ==Bernstein Polynomial basis properties==
+1. They take on positive values in the interval `[0,1]`
+2. They are a partition of unity (the sum of $B_{i}^{n}(t)$ is 1 given $t\in [0,1]$ for all $n$)
+	- if `2.` , then $f(t)=P_{0}B_{0}^{n}(t)+..+P_{n}B_{n}^{n}(t)$ is an **affine combination** of the set of points
+	- $t \in [0,1] \implies 1\ge B^{n}_{i}(t)\ge 0$
+- if `1.` holds, $f(t)$ is a **convex combination** of the points
 ## 3 - Rendering
 
 ### Rendering Pipeline
