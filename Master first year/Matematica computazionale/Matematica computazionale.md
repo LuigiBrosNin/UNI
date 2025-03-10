@@ -291,7 +291,21 @@ test /. expr_f -> expr^2
 ```
 - `expr_f` matcha tutte le espressioni con head `f`
 - `f[x_]` matcha head `f` ed una sola variabile x in chiamata
+#TODO Finish
 
+### 6.1.3 Testare Pattern
+### 6.1.4 Ruolo degli Attributes
+### 6.1.5 Funzioni Built-in che usano Pattern
+### 6.2.2 DownValues
+### Module and Block
+**Module** -> scoping statico o lessicale (localizza i nomi di variabile): le variabili sono trattate come locali ad una determinata <u>sezione del codice</u> (in un programma).  
+**Block** -> scoping dinamico (localizza i valori delle variabili): le variabili sono trattate come locali ad una determinata parte della <u>history di esecuzione</u> (di un programma).
+
+```mathematica
+Block[ {x} (* local "variable" *)
+z=x;
+]
+```
 
 ##
 ##
