@@ -296,6 +296,18 @@ test /. expr_f -> expr^2
 ### 6.1.4 Ruolo degli Attributes
 ### 6.1.5 Funzioni Built-in che usano Pattern
 ### 6.2.2 DownValues
+`DownValues[f]` -> restituisce le regole corrispondenti alle definizioni fatte per il simbolo `f`
+
+Come la prof vuole che programmiamo:
+```mathematica
+f[ x_ /; x > - 2] := g1[x];
+f[x_ /; x < 2] := g2[x];
+
+DownValues[ f] // TableForm
+```
+g1 e g2 non sono ancora definite, pero' il "redirecting" e' gia' operativo
+
+
 ### Module and Block
 **Module** -> scoping statico o lessicale (localizza i nomi di variabile): le variabili sono trattate come locali ad una determinata <u>sezione del codice</u> (in un programma).  
 **Block** -> scoping dinamico (localizza i valori delle variabili): le variabili sono trattate come locali ad una determinata parte della <u>history di esecuzione</u> (di un programma).
@@ -356,4 +368,10 @@ Ogni volta che Module è usata, viene creato un nuovo simbolo per rappresentare 
 ##
 ##
 ##
-#
+# 
+
+
+Mail per risorse su:
+Gradbit
+
+Aritmetica ad intervalli
