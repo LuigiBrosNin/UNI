@@ -199,7 +199,27 @@ polygon(0, 1, 5, 4, 5);
 ```
 
 - callback mouse
+sembrava il piu' impegnativo, ma abbiamo gia' il callback al mouse e lo scaling fatto, va solo applicato
+```c++
+for (i = 0; i < n_cubi; i++)
+{
+Model = mat4(1.0);
+Model = translate(Model, cubePositions[i]);
+Model = rotate(Model, radians(rotateX), glm::vec3(1.0f, 0.0f, 0.0f));
+Model = rotate(Model, radians(rotateY), glm::vec3(0.0f, 1.0f, 0.0f));
+Model = rotate(Model, radians(rotateZ), glm::vec3(0.0f, 0.0f, 1.0f));
+// sc e' un vec3 che aggiorniamo tramite il callback, basta passarlo a scale() per far applicare il ridimensionamento
+Model = scale(Model, sc);
 
+// Passo al Vertex Shader il puntatore alla matrice Model,
+glUniformMatrix4fv(MatModel, 1, GL_FALSE, value_ptr(Model));
+glBindVertexArray(vao);
+//glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+glDrawArrays(GL_TRIANGLES, 0, NumVertices);
+}
+```
+
+that's it
 ##
 # 
 #
