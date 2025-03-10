@@ -49,7 +49,7 @@ Several ways to represent mathematically a Bézier curve:
 2. They are a partition of unity (the sum of $B_{i}^{n}(t)$ is 1 given $t\in [0,1]$ for all $n$)
 	- if `2.` , then $f(t)=P_{0}B_{0}^{n}(t)+..+P_{n}B_{n}^{n}(t)$ is an **affine combination** of the set of points
 	- $t \in [0,1] \implies 1\ge B^{n}_{i}(t)\ge 0$
-- if `1.` holds, $f(t)$ is a **convex combination** of the points
+- If `1.` holds, $f(t)$ is a **convex combination** of the points
 
 ==Conversion to the power basis==
 $$f(t)=\sum\limits^{n}_{i=0}c_{i}B^{n}_{i}=\sum\limits^{n}_{i=0}a_{i}t^{i}$$
