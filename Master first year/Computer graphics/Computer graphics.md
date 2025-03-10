@@ -50,6 +50,13 @@ Several ways to represent mathematically a Bézier curve:
 	- if `2.` , then $f(t)=P_{0}B_{0}^{n}(t)+..+P_{n}B_{n}^{n}(t)$ is an **affine combination** of the set of points
 	- $t \in [0,1] \implies 1\ge B^{n}_{i}(t)\ge 0$
 - if `1.` holds, $f(t)$ is a **convex combination** of the points
+
+==Conversion to the power basis==
+$$f(t)=\sum\limits^{n}_{i=0}c_{i}B^{n}_{i}=\sum\limits^{n}_{i=0}a_{i}t^{i}$$
+Using whatever monstrosity i just typed above, we write a polynomial in Matrix form
+$$f(t)=\begin{bmatrix}1&t&t^{2}&...&t^n\end{bmatrix}\begin{bmatrix}b_{00}&0&...&0\\b_{10}&b_{11}&...&0\\...&...&...&0\\b_{n0}&b_{n1}&...&b_{nn}\end{bmatrix}\begin{bmatrix}c_{0}\\c_{1}\\...\\c_n\end{bmatrix}$$
+
+
 ## 3 - Rendering
 
 ### Rendering Pipeline
