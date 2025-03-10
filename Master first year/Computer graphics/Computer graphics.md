@@ -75,11 +75,24 @@ Tangents -> The control polygon of C(t) is tangent to the curve at the beginning
 
 ==Linear Interpolation (Lerp)== -> compute a value inbetween two values
 We *Lerp* repeatetly and a Bézier Curve will form
+![[Pasted image 20250310233613.png|250]]
 
+Repeating $N$ times the process defines the curve 
+![[Pasted image 20250310233654.png]]
 
+**Curve Subdivision** -> process of splitting a single Bézier curve of degree $n$ into two subcurves of the degree $n$
 
+==Drawing Bézier Curves==
+- **Uniform method** -> Discretize the parametric interval into $N$ equidistant points, then plot the polygonal joining corresponding evaluated points on the curve.
+- **Adaptive Subdivision method** -> Break a curve into smaller and smaller subcurves until each subcurve is sufficiently close to being a straight line (according to the flat test), so that rendering the subcurves as straight lines gives adequate results.
 
-
+==Connecting Bézier curves==
+1. **Piecewise Bézier curves** -> Piecewise polynomial
+	- No continuity built in
+	- Achieve $C^1$ using collinear control points
+2. **Polynomial Spline** -> Piecewise polynomial 
+	- with given regularity
+	- conditions $C^1$ or more at the joints
 ## 3 - Rendering
 
 ### Rendering Pipeline
@@ -278,7 +291,9 @@ that's it
 ## LAB_1
 1. yeah, they work lol
 2. :LiEye: :LiEye:
-3. 
+3. .
+	- ![[Pasted image 20250310233951.png]]
+4. 
 # 
 ##
 #
