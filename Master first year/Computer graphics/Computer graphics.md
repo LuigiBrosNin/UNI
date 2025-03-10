@@ -57,6 +57,8 @@ Using whatever monstrosity i just typed above, we write a polynomial in Matrix f
 $$f(t)=\begin{bmatrix}1&t&t^{2}&...&t^n\end{bmatrix}\begin{bmatrix}b_{00}&0&...&0\\b_{10}&b_{11}&...&0\\...&...&...&0\\b_{n0}&b_{n1}&...&b_{nn}\end{bmatrix}\begin{bmatrix}c_{0}\\c_{1}\\...\\c_n\end{bmatrix}$$
 
 
+
+
 ## 3 - Rendering
 
 ### Rendering Pipeline
