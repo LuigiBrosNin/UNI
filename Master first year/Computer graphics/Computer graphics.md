@@ -18,7 +18,7 @@ NOTE IN ITALIANO ? devo decidere...
 	- Final Exam: 50% –> oral
 	- participation 5%
 
-# Sunti
+# Summaries
 ## 1 - Intro
 ###  1.1 - Graphic Systems
 #TODO 
@@ -26,6 +26,15 @@ NOTE IN ITALIANO ? devo decidere...
 ### 2.1 - Geometry for CG
 ### 2.2 - Intro to Geometric Modeling
 ### 2.3 - Bézier Curves
+**Interpolation** -> Curve must pass trough control points
+**Approximation** -> curve is influenced by control points
+
+==Bézier curve==
+![[Pasted image 20250310194326.png]]
+$C(t)$ -> curve which interpolates endpoints $= at^{2}+bt+c$
+
+
+
 
 ## 3 - Rendering
 
