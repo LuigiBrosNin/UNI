@@ -24,10 +24,12 @@ NOTE IN ITALIANO ? devo decidere...
 #TODO 
 ## 2 - Modelling
 ### 2.1 - Geometry for CG
-#TODO 
+### 2.2 - Intro to Geometric Modeling
+### 2.3 - Bézier Curves
+
 ## 3 - Rendering
-#TODO 
-###
+
+### Rendering Pipeline
 ###
 ##
 ###
@@ -82,7 +84,7 @@ Vertex Buffer Object (VBO) -> stores data regarding vertexes (generic attributes
 ![[Pasted image 20250308002001.png]]
 
 #TODO this section would absolutely benefit for a summary of those 93 or so slides
-
+## LAB_0
 ### Make the project work in Linux
 My new makefile for generic CP projects
 ```Makefile syntax
@@ -220,6 +222,9 @@ glDrawArrays(GL_TRIANGLES, 0, NumVertices);
 ```
 
 that's it
-##
+## LAB_1
+#TODO 
 # 
+##
 #
+##
