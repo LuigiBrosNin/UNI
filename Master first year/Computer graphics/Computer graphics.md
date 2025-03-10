@@ -53,12 +53,21 @@ Several ways to represent mathematically a Bézier curve:
 
 ==Conversion to the power basis==
 $$f(t)=\sum\limits^{n}_{i=0}c_{i}B^{n}_{i}=\sum\limits^{n}_{i=0}a_{i}t^{i}$$
-Using whatever monstrosity i just typed above, we write a polynomial in Matrix form
+Using whatever monstrosity i just typed above, we write a polynomial in **Matrix form**
 $$f(t)=\begin{bmatrix}1&t&t^{2}&...&t^n\end{bmatrix}\begin{bmatrix}b_{00}&0&...&0\\b_{10}&b_{11}&...&0\\...&...&...&0\\b_{n0}&b_{n1}&...&b_{nn}\end{bmatrix}\begin{bmatrix}c_{0}\\c_{1}\\...\\c_n\end{bmatrix}$$
 
+Tangents -> The control polygon of C(t) is tangent to the curve at the beginning and end of the curve
 
-
-
+==Properties of a Bézier curve==
+1. **Shape Control** -> Moving a control point modifies the shape of the curve.
+2. The curve interpolates only its first and last control points.
+3. It’s **variation diminishing** (without undesired oscillations) it has no more intersections with a line than its control polygon.
+4. **It’s invariant under an affine transformation** (translation, rotation, scaling, or shear) -> apply an affine transformation to the control points and then evaluate the curve represented by these transformed control points at ti, is the same as apply an affine transformation to the point $C(t_{i})$.
+5. The curve is **smooth** with smooth derivatives.
+6. The curve is **tangent at the first and last control points**, to the first and last line segments of the control polygon.
+7. The curve is contained into the **convex hull** of the control points, that is inside the smallest polygon formed by its control points.
+8. Linear Precision: when all the control points lie on a line, then the Bézier curve is the segment line interpolating the points. (from convex hull property)
+9. 
 ## 3 - Rendering
 
 ### Rendering Pipeline
