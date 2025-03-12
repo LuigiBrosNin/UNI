@@ -298,9 +298,59 @@ that's it
 ## LAB_1
 1. yeah, they work lol
 2. :LiEye: :LiEye:
-3. TODO
-	- ![[Pasted image 20250310233951.png]]
-4. 
+3. Draw the curve
+```c++
+// draw the bezier curve
+// with castejau algorithm
+void drawCurve(int segments = 50)
+{   
+    // there's no need for this to be global,
+    // but prof defined it this way so I'm keeping it
+    NumPoints = 0;
+
+    // Calculate points for multiple t values
+    // for loop > recursion for performance
+    for (float t = 0.0f; t <= 1.0f; t += 1.0f/segments) {
+        // Make a copy of control points for this iteration
+        float temp[MaxNumPts][2];
+        memcpy(temp, vPositions_CP, sizeof(vPositions_CP));
+
+        // de Casteljau's algorithm
+        // every iteration computes a single segment
+        // that we later add to the curve (vPositions_C)
+        for (int i = 1; i < NumPts; i++) {
+            for (int j = 0; j < NumPts - i; j++) {
+                // linear interpolation
+                temp[j][0] = (1 - t) * temp[j][0] + t * temp[j + 1][0];
+                temp[j][1] = (1 - t) * temp[j][1] + t * temp[j + 1][1];
+            }
+        }
+
+        // Store the point on the curve
+        vPositions_C[NumPoints][0] = temp[0][0];
+        vPositions_C[NumPoints][1] = temp[0][1];
+        NumPoints++;
+    }
+
+    // Add final point
+    vPositions_C[NumPoints][0] = vPositions_CP[NumPts-1][0];
+    vPositions_C[NumPoints][1] = vPositions_CP[NumPts-1][1];
+    NumPoints++;
+
+    // Draw the curve
+    glBindVertexArray(vao_2);
+    glBindBuffer(GL_ARRAY_BUFFER, vposition_Curve_ID);
+    glBufferData(GL_ARRAY_BUFFER, NumPoints * 2 * sizeof(float), vPositions_C, GL_STREAM_DRAW);
+    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float), (void*)0);
+    glEnableVertexAttribArray(0);
+    
+    glLineWidth(2.0);
+    glDrawArrays(GL_LINE_STRIP, 0, NumPoints);
+    glBindVertexArray(0);
+}
+```
+i also added colour to the line, but i had to modify the fragment and vertex Shaders and fix the invisible points and segments since everything needs to be specified colours, so i'm not sharing that part of the code lol, it's useless, just pretty :>
+4. TODO 
 # 
 ##
 #
