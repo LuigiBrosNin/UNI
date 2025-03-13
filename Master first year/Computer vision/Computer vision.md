@@ -212,7 +212,7 @@ Enforce criteria to judge matches found by the NN search process, usually a thre
 indexing techniques are exploited to speed up the otherswise slow NN-search process
 - k-d tree
 - Best Bin First (BBF)
-- 
+
 
 
 
@@ -220,6 +220,9 @@ indexing techniques are exploited to speed up the otherswise slow NN-search proc
 ##
 ##
 ##
+
+# Exam experiment
+## Topic Ideas
 lightweight
 2d image to 3d polygon
 OCR
