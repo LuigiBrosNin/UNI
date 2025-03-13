@@ -201,5 +201,20 @@ The SIFT (Scale Invariant Feature Transform) descriptor is computed as follows
 	-  Gaussian weighting function centred at the keypoint (with σ equal to half the grid size)
 🐰 I did not understand the point of this yet
 This is used to generate descriptors to match, and the Feature vector is the output
+
+==Matching process==
+**Nearest Neighbour (NN) Search problem** -> Given a set $S$ of points, $p_i$, in a metric space $M$ and a query point $q \in M$, find the $p_i$ closest to $q$.
+
+==Validating Matches==
+Enforce criteria to judge matches found by the NN search process, usually a threshold
+
+==Efficient NN-Search==
+indexing techniques are exploited to speed up the otherswise slow NN-search process
+- k-d tree
+- Best Bin First (BBF)
+- 
+
+
+
 ## 5 -
 ##
