@@ -218,3 +218,8 @@ indexing techniques are exploited to speed up the otherswise slow NN-search proc
 
 ## 5 -
 ##
+##
+##
+lightweight
+2d image to 3d polygon
+OCR
