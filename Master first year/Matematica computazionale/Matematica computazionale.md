@@ -307,6 +307,7 @@ DownValues[ f] // TableForm
 ```
 g1 e g2 non sono ancora definite, pero' il "redirecting" e' gia' operativo
 
+`/;` -> condizionale
 
 
 ### Module and Block
@@ -371,14 +372,13 @@ Ogni volta che Module è usata, viene creato un nuovo simbolo per rappresentare 
 ### 6.2.5. Rimuovere selettivamente le definizioni File
 ### 6.2.6. Programmazione "puramente" basata su regole 
 ### 6.3.1. Pattern di vincolo 
-
-
+3 costrutti possono essere usati come pattern di vincolo
+- `_head`  -> Un Blank puo' essere vincolato a combaciare solo con certe espressioni aventi un Head particolare (eg. `_Integer`)
+- `_?test` -> test puo' essere qualsiasi funzione di un solo argomento, e se restituisce true il pattern combacia (eg `_?IntegerQ`)
+	- Possiamo usare test definiti da noi
+	- Possiamo combinare pattern (eg. `_Integer?NonNegative`)
+- `/;` -> Condition (eg. `factorial1[ n_ Integer /; NonNegative[n]] := body[ n ]` )
 ###
 ##
 ##
 # 
-
-
-Mail per risorse su:
-GuardBit
-Aritmetica ad intervalli
