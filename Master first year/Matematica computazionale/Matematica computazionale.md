@@ -378,6 +378,14 @@ Ogni volta che Module è usata, viene creato un nuovo simbolo per rappresentare 
 	- Possiamo usare test definiti da noi
 	- Possiamo combinare pattern (eg. `_Integer?NonNegative`)
 - `/;` -> Condition (eg. `factorial1[ n_ Integer /; NonNegative[n]] := body[ n ]` )
+
+==Single, double, triple blank==
+identificano 1,2,3 patterns
+![[Pasted image 20250314112555.png]]
+3 blanks means empty pattern is accepted
+`_` -> single "element"
+`_ _` -> any number of elements minus none
+`_ _ _` -> any number of elements
 ###
 ##
 ##
