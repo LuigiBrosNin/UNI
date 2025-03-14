@@ -366,7 +366,14 @@ x riassegnata: x=2, z=x$3723
 Ogni volta che Module è usata, viene creato un nuovo simbolo per rappresentare ciascuna delle sue variabili locali.
 
 
-##
+### 6.2.3 Definizioni multiple per uno stesso simbolo File
+#TODO 
+### 6.2.5. Rimuovere selettivamente le definizioni File
+### 6.2.6. Programmazione "puramente" basata su regole 
+### 6.3.1. Pattern di vincolo 
+
+
+###
 ##
 ##
 # 
