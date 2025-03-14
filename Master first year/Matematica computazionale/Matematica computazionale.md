@@ -379,13 +379,21 @@ Ogni volta che Module è usata, viene creato un nuovo simbolo per rappresentare 
 	- Possiamo combinare pattern (eg. `_Integer?NonNegative`)
 - `/;` -> Condition (eg. `factorial1[ n_ Integer /; NonNegative[n]] := body[ n ]` )
 
+Common mistake:
+```Mathematica
+(* SI! *) f[x_ , y_ ] /; x < y := body[x];  
+(* NO *) f[x_ , y_ /; x < y ] := body[x];
+(* la condition si applica a y_ solamente e riferisce alla variabile x globale*)
+```
+
+
 ==Single, double, triple blank==
 identificano 1,2,3 patterns
 ![[Pasted image 20250314112555.png]]
-3 blanks means empty pattern is accepted
 `_` -> single "element"
 `_ _` -> any number of elements minus none
 `_ _ _` -> any number of elements
+
 ###
 ##
 ##
