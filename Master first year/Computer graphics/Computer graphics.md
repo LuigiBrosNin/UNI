@@ -350,7 +350,7 @@ void drawCurve(int segments = 50)
 }
 ```
 i also added colour to the line, but i had to modify the fragment and vertex Shaders and fix the invisible points and segments since everything needs to be specified colours, so i'm not sharing that part of the code lol, it's useless, just pretty :>
-4. TODO 
+4. #TODO 
 # 
 ##
 #
