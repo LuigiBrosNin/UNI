@@ -296,9 +296,9 @@ glDrawArrays(GL_TRIANGLES, 0, NumVertices);
 
 that's it
 ## LAB_1
-1. yeah, they work lol
-2. :LiEye: :LiEye:
-3. Draw the curve
+### 1. yeah, they work lol
+### 2. :LiEye: :LiEye:
+### 3. Draw the curve
 ```c++
 // draw the bezier curve
 // with castejau algorithm
@@ -350,8 +350,81 @@ void drawCurve(int segments = 50)
 }
 ```
 i also added colour to the line, but i had to modify the fragment and vertex Shaders and fix the invisible points and segments since everything needs to be specified colours, so i'm not sharing that part of the code lol, it's useless, just pretty :>
-4. 
-# 
+### 4. Drag
+My implementation might be different from what the prof wanted, here's how i modified the callbacks / what i added
+- In `gestioneCallback.cpp`
+```c++
+extern float   vPositions_CP[MaxNumPts][2];
+extern int      NumPts;
+extern int      PointBeingModified;
+
+#define DELTA_DIFFERENCE_TRESHOLD 0.1
+
+// [...]
+
+// glfw: whenever the mouse moves, this callback is called
+void cursor_position_callback(GLFWwindow* window, double x, double y) {
+    // (x,y) viewport(0,width)x(0,height)   -->   (xPos,yPos) window(-1,1)x(-1,1)
+    float xPos = -1.0f + ((float)x) * 2 / ((float)(width));
+    float yPos = -1.0f + ((float)(height - y)) * 2 / ((float)(height));
+
+    // if the button is being held, move the point
+    if (glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT) == GLFW_PRESS && PointBeingModified != -1) {
+        // if the mouse is near a point, modify it instead of adding a new one
+        modifySpecificPoint(xPos, yPos, PointBeingModified);
+    }
+
+}
+
+// glfw: whenever the mouse button is pressed or released
+void mouse_button_callback(GLFWwindow* window, int button, int action, int mods)
+{
+    
+    if (button == GLFW_MOUSE_BUTTON_LEFT && action == GLFW_PRESS) {
+        // (x,y) viewport(0,width)x(0,height)   -->   (xPos,yPos) window(-1,1)x(-1,1)
+        double x, y;
+        //getting cursor position
+        glfwGetCursorPos(window, &x, &y); 
+        float xPos = -1.0f + ((float)x) * 2 / ((float)(width));
+        float yPos = -1.0f + ((float)(height - y)) * 2 / ((float)(height));
+
+        // if the mouse is near a point, modify it instead of adding a new one
+        
+        for (int i = 0; i < NumPts; i++) {
+            if (abs(vPositions_CP[i][0] - xPos) < DELTA_DIFFERENCE_TRESHOLD && abs(vPositions_CP[i][1] - yPos) < DELTA_DIFFERENCE_TRESHOLD) {
+                PointBeingModified = i;
+                return;
+            }
+        }
+        
+        addNewPoint(xPos, yPos);
+        PointBeingModified = NumPts - 1;
+    }
+    else {
+        // Reset the point being modified
+        PointBeingModified = -1;
+    }
+ }
+```
+- In `LAB_1.cpp`
+```c++
+void modifySpecificPoint(float xPos, float yPos, int index) {
+
+if (index >= 0 && index < NumPts) {
+
+vPositions_CP[index][0] = xPos;
+
+vPositions_CP[index][1] = yPos;
+
+}
+
+}
+```
+### 5. 
+## LAB_2
+###
+###
+##
 ##
 #
 ##
