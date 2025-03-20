@@ -122,7 +122,22 @@ Noise cause problems in image detection, we incorporate the smoothing process of
 	![[Pasted image 20250227171301.png]]
 #TODO FINISH 12 -> 28
 ## 4 - Local Features
-#TODO 1 -> 10
+We want to find **Corresponding Points** between 2+ images of a scene
+![[Pasted image 20250320153021.png|500]]
+**Correspondences** -> image points which are the projection of the same 3D point in different views of the scene
+
+3 successive steps for defining correspondences:  
+- **Detection** of salient points (aka keypoints, interest points, feature points...)  
+- **Description** -> computation of a suitable descriptor based on pixels in the keypoint neighbourhood  
+- **Matching** descriptors between images  
+
+==Detectors/Descriptors good properties==
+- Detector
+	- **Repeatability** -> it should find the same keypoints in different views of the scene despite the transformations undergone by the images  
+	- **Saliency** -> it should find keypoints surrounded by informative patterns (good for making them discriminative for the matching)  
+- Descriptor  
+	- **Distinctiveness vs. Robustness Trade-off** -> the description algorithm should capture the salient information around a keypoint, so to keep important tokens and disregard changes due to nuisances (e.g. light changes) and noise  
+	- **Compactness** -> the description should be as concise as possible, to minimize memory occupancy and allow for efficient matching
 
 ==**Harris Corner Detector**== -> to find corresponding points, we rely on a continuous formulation of the Moravec's error function, based on the weighted sum of derivatives around the point of interest (aka, i look at points around the interested one to figure out if it's somewhat the same one, eg:)
 ![[Pasted image 20250306152512.png|400]]
