@@ -133,11 +133,16 @@ We want to find **Corresponding Points** between 2+ images of a scene
 
 ==Detectors/Descriptors good properties==
 - Detector
-	- **Repeatability** -> it should find the same keypoints in different views of the scene despite the transformations undergone by the images  
-	- **Saliency** -> it should find keypoints surrounded by informative patterns (good for making them discriminative for the matching)  
+	- **Repeatability** -> find the same keypoints in different views  
+	- **Saliency** -> find keypoints surrounded by informative patterns 
 - Descriptor  
-	- **Distinctiveness vs. Robustness Trade-off** -> the description algorithm should capture the salient information around a keypoint, so to keep important tokens and disregard changes due to nuisances (e.g. light changes) and noise  
-	- **Compactness** -> the description should be as concise as possible, to minimize memory occupancy and allow for efficient matching
+	- **Distinctiveness vs. Robustness Trade-off** -> capture the salient information around a keypoint, disregard changes due to nuisances (e.g. light changes) and noise  
+	- **Compactness** -> description as concise as possible
+- Desirable **speed** for both
+
+==Moravec Interest Point Detector==
+Look at patches in the image and compute cornerness
+![[Pasted image 20250320154429.png|150]]
 
 ==**Harris Corner Detector**== -> to find corresponding points, we rely on a continuous formulation of the Moravec's error function, based on the weighted sum of derivatives around the point of interest (aka, i look at points around the interested one to figure out if it's somewhat the same one, eg:)
 ![[Pasted image 20250306152512.png|400]]
@@ -196,7 +201,7 @@ We take pixel coordinates in the local reference frame to identify a direction i
 
 **Rotation invariance** -> a canonical (aka characteristic) patch orientation is computed, so that the descriptor can then be computed on a **canonically-oriented** patch
 
-![[Pasted image 20250306170554.png|450]]
+![[Pasted image 20250306170554.png|250]]
 
 ==Canonical Orientation==
 Given the keypoint, the **magnitude** and **orientation** of the gradient are <u>computed at each pixel of the associated Gaussian-smoothed image</u>, L:
@@ -231,7 +236,9 @@ indexing techniques are exploited to speed up the otherswise slow NN-search proc
 
 
 
-## 5 -
+## 5 - Camera Calibration
+
+
 ##
 ##
 ##
