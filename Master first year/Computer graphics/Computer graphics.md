@@ -420,7 +420,84 @@ vPositions_CP[index][1] = yPos;
 
 }
 ```
-### 5. 
+### 5. Catmull-Rom spline
+I dunno we had to use the Hermite basis functions but i thank Copilot for warning me about them.
+Also, segments get so high they cause segfaults, hence why i added the check to adjust segments.
+```c++
+// draw the curve
+// with Catmull-Rom algorithm
+void drawCurveCatmull(int segments = 10)
+{
+
+    NumPoints = 0;
+
+    // Calculate maximum number of points that will be generated
+    // prevents segfaults
+    int maxPointsToGenerate = (NumPts - 3) * segments;
+    if (maxPointsToGenerate >= MaxNumPts) {
+        // Adjust segments to fit within MaxNumPts
+        segments = (MaxNumPts / (NumPts - 3)) - 1;
+        if (segments < 1) segments = 1;
+    }
+
+    // Handle first point
+    vPositions_C[NumPoints][0] = vPositions_CP[0][0];
+    vPositions_C[NumPoints][1] = vPositions_CP[0][1];
+    NumPoints++;
+
+    for (int i = 0; i < NumPts-1; i++) {
+        // Get control points
+        float p0x = vPositions_CP[std::max(i-1, 0)][0];
+        float p0y = vPositions_CP[std::max(i-1, 0)][1];
+        float p1x = vPositions_CP[i][0];
+        float p1y = vPositions_CP[i][1];
+        float p2x = vPositions_CP[std::min(i+1, NumPts-1)][0];
+        float p2y = vPositions_CP[std::min(i+1, NumPts-1)][1];
+        float p3x = vPositions_CP[std::min(i+2, NumPts-1)][0];
+        float p3y = vPositions_CP[std::min(i+2, NumPts-1)][1];
+
+        // Generate points along segment
+        for (float t = 0.0f; t <= 1.0f; t += 1.0f / segments) {
+            if (NumPoints >= MaxNumPts) break;
+
+            // Calculate tangents
+            float m0x = (p2x - p0x) / 2.0f;
+            float m0y = (p2y - p0y) / 2.0f;
+            float m1x = (p3x - p1x) / 2.0f;
+            float m1y = (p3y - p1y) / 2.0f;
+
+            // Hermite basis functions
+            float h00 = (1 + 2*t) * (1 - t) * (1 - t);
+            float h10 = t * (1 - t) * (1 - t);
+            float h01 = t * t * (3 - 2*t);
+            float h11 = t * t * (t - 1);
+
+            // Calculate point
+            float x = h00 * p1x + h10 * m0x + h01 * p2x + h11 * m1x;
+            float y = h00 * p1y + h10 * m0y + h01 * p2y + h11 * m1y;
+
+            vPositions_C[NumPoints][0] = x;
+            vPositions_C[NumPoints][1] = y;
+            NumPoints++;
+        }
+    }
+       
+    // Handle last point if we haven't exceeded MaxNumPts
+    if (NumPoints < MaxNumPts) {
+        vPositions_C[NumPoints][0] = vPositions_CP[NumPts-1][0];
+        vPositions_C[NumPoints][1] = vPositions_CP[NumPts-1][1];
+        NumPoints++;
+    }
+    
+    // Draw the curve
+    glBindVertexArray(vao_2);
+    glBindBuffer(GL_ARRAY_BUFFER, vposition_Curve_ID);
+    glBufferData(GL_ARRAY_BUFFER, NumPoints * 2 * sizeof(float), vPositions_C, GL_STREAM_DRAW);
+    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 2 * sizeof(float), (void*)0);
+    glEnableVertexAttribArray(0);
+
+}
+```
 ## LAB_2
 ###
 ###
