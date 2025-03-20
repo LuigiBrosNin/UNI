@@ -238,6 +238,15 @@ indexing techniques are exploited to speed up the otherswise slow NN-search proc
 
 ## 5 - Camera Calibration
 **Perspective projection** model -> Given a point in the 3D space, $M=[x,y,z]^T$ , with coordinates given in the Camera Reference Frame (CRF).
+![[Pasted image 20250320170447.png|250]]
+
+coordinates as a function of teh 3D coordinates in the CRF
+$$
+\begin{cases}u=\frac{f}{z}x\\ v=\frac{f}{z}y \end{cases}
+$$
+
+#TODO 4 -> 41
+
 
 ##
 ##
