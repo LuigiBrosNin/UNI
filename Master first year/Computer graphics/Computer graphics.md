@@ -499,6 +499,31 @@ void drawCurveCatmull(int segments = 10)
 }
 ```
 ## LAB_2
+We need to make a 2d simple game
+keypoints:
+- has to be pretty
+- physical simulations and animations
+- gameplay
+- particle animations
+Here's my pitch for the videogame:
+![[Pasted image 20250324184142.png]]
+Touhou lol
+
+I want to make a simple bullet hell game
+- has to be pretty
+	- i don't think we can import external media into the scene, so the scene has to be coded and in some way textured all in C with OpenGL shaders
+	- thinking of making an arcade artstyle with bumpers in the game screen
+- physical simulations and animations
+	- projectile bounces in the window borders and bounces off bumpers (gains speed that goes back to )
+- gameplay
+	- u move the character with the mouse (dragging ezpz)
+	- player has to dodge all projectile instances
+	- time survived => score
+	- being near projectiles => extra score (touhou gazing)
+- particle animations
+	- touhou gazing indicator is perfect to implement for this
+	- idk i guess death explosion lol
+
 ###
 ###
 ##
