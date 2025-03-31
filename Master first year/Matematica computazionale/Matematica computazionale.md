@@ -402,6 +402,18 @@ identificano 1,2,3 patterns
 ## Dynamic
 `Dynamic[exp]` ->Built in che aggiorna l'output man mano che cambia (valuta nuovamente l'espressione)
 
+`Slider[0.5]` -> built in che crea uno slider centrato su 0.5 tra 0 ed 1
+
+```mathematica
+{Slider[Dynamic[q]], Dynamic[q]}
+---
+(* slider con visualizzazione aggiornata*)
+```
+
+E' possibile usarlo anche per disegnare funzioni
+![[Pasted image 20250331114723.png]]
+
+
 
 
 # 
