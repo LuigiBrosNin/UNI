@@ -400,6 +400,6 @@ identificano 1,2,3 patterns
 #TODO
 ###
 ## Dynamic
-
+Built in che aggiorna l'output man mano che cambia (valuta nuovamente l'espressione)
 
 # 
