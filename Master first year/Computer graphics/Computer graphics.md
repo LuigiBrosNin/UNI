@@ -523,6 +523,8 @@ I want to make a simple bullet hell game
 - particle animations
 	- touhou gazing indicator is perfect to implement for this
 	- idk i guess death explosion lol
+I made a very barebones 2d game with an ufo dodging meteors. there's nothing fancy about it, but it's about everything the keypoints asked, minus animation perhaps? there's nothing except the gaze particle effect. No score cuz i'm lazy and amounts to nothing
+i also cut the bumpers objects, made the meteors bump into each other
 
 ###
 ###

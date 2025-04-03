@@ -252,7 +252,13 @@ $$
 ![[Pasted image 20250403153929.png]]
 :LiArrowBigUp: good slide to make a theory summary check
 
-**Gradient descend** -> 
+==Gradient descend== ->first-order iterative algorithm for minimizing a differentiable multivariate function (**differentiable** -> a function whose derivative always exists in its domain, **multivariate** -> more than one variable) 
+
+We want to minimize the cost function (aka loss function or error function)
+Derivatives tell us how to change $x$ so we can improve $y$ trough $x$ .
+
+
+#TODO 
 
 ##
 ##
