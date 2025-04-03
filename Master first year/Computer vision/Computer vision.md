@@ -248,7 +248,12 @@ $$
 #TODO 4 -> 41
 
 
-##
+## 6 - CNN (recall) (Convolutional neural networks)
+![[Pasted image 20250403153929.png]]
+:LiArrowBigUp: good slide to make a theory summary check
+
+**Gradient descend** -> 
+
 ##
 ##
 
