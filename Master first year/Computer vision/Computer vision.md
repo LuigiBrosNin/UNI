@@ -254,8 +254,10 @@ $$
 
 ==Gradient descend== ->first-order iterative algorithm for minimizing a differentiable multivariate function (**differentiable** -> a function whose derivative always exists in its domain, **multivariate** -> more than one variable) 
 
-We want to minimize the cost function (aka loss function or error function)
-Derivatives tell us how to change $x$ so we can improve $y$ trough $x$ .
+- We want to minimize the cost function (aka loss function or error function)
+- Derivatives tell us how to change $x$ so we can improve $y$ trough $x$ .
+- We can find **local minima**, and it's possible that it is not globally optimal
+
 
 
 #TODO 
