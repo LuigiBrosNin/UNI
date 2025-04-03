@@ -266,8 +266,8 @@ Formula for reaching the minimum
 - **minibatch**-> small set of examples from 1 training set, we use 1 for stochastic method
 - faster as the cost function is divided by the dimension of the minibatch
 	![[Pasted image 20250403165333.png]]
-- **hyperparameter** -> minibatch dimension, usually a power of 2
-- one **epoch** -> whole training set observed one time
+- One **hyperparameter** is a minibatch dimension, usually a power of 2, there are more hyperparameters
+- One **epoch** -> whole training set observed one time
 
 ==Momentum optimizer==
 ![[Pasted image 20250403165930.png]]
@@ -284,8 +284,19 @@ The name “Adam” derives from “adaptive moments”, it's  combination of RM
 ==Hyperparameters optimizer==
 tuning the learning rate hyperparameter
 
+==Convolutions and filters==
+A convolutional filter has the same depth of the input volume
+![[Pasted image 20250403170733.png]]
 
-#TODO 
+==Convolutional Layers==
+the convolution operator shrinks the output, so we add **padding** to the image to preserve the image size
+![[Pasted image 20250403170955.png|300]]
+we consider a slide of 1 (moving the convolutional filters one pixel on the right and one pixel towards the bottom)
+![[Pasted image 20250403171110.png|300]]
+
+
+#TODO 30 -> FINISH SLIDES
+
 
 ##
 ##
