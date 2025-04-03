@@ -256,8 +256,33 @@ $$
 
 - We want to minimize the cost function (aka loss function or error function)
 - Derivatives tell us how to change $x$ so we can improve $y$ trough $x$ .
-- We can find **local minima**, and it's possible that it is not globally optimal
+- We can find **local minima**, and it's possible that it is not globally optimal, we're gonna take this into account when optimizing
 
+Formula for reaching the minimum
+![[Pasted image 20250403164629.png]]
+
+==Stochastic Gradient Descent==
+- approximation of gradient descent using small set of samples
+- **minibatch**-> small set of examples from 1 training set, we use 1 for stochastic method
+- faster as the cost function is divided by the dimension of the minibatch
+	![[Pasted image 20250403165333.png]]
+- **hyperparameter** -> minibatch dimension, usually a power of 2
+- one **epoch** -> whole training set observed one time
+
+==Momentum optimizer==
+![[Pasted image 20250403165930.png]]
+Accumulates an exponentially decaying moving average of past gradients and continues to move in their direction
+- The size of the step depends on how large and how aligned a sequence of gradients are
+- The step size is largest when many successive gradients point in the same direction
+
+==RMSprop optimizer==
+Root Mean Square Propagation (RMSprop) uses an exponentially decaying average to discard history from the extreme past so that it can converge rapidly
+
+==Adam optimizer==
+The name “Adam” derives from “adaptive moments”, it's  combination of RMSprop and momentum
+
+==Hyperparameters optimizer==
+tuning the learning rate hyperparameter
 
 
 #TODO 
