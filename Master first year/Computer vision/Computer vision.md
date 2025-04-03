@@ -232,10 +232,6 @@ Enforce criteria to judge matches found by the NN search process, usually a thre
 indexing techniques are exploited to speed up the otherswise slow NN-search process
 - k-d tree
 - Best Bin First (BBF)
-
-
-
-
 ## 5 - Camera Calibration
 **Perspective projection** model -> Given a point in the 3D space, $M=[x,y,z]^T$ , with coordinates given in the Camera Reference Frame (CRF).
 ![[Pasted image 20250320170447.png|250]]
@@ -248,7 +244,7 @@ $$
 #TODO 4 -> 41
 
 
-## 6 - CNN (recall) (Convolutional neural networks)
+## 6 - CNN (recall) (Convolutional Neural Networks)
 ![[Pasted image 20250403153929.png]]
 :LiArrowBigUp: good slide to make a theory summary check
 
