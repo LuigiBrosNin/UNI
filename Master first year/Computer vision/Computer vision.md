@@ -120,8 +120,13 @@ Deploying the separability property speeds up the filtering operation ( one 2D g
 	![[Pasted image 20250227171204.png]]
 - **Sobel operator** -> central pixel weight
 	![[Pasted image 20250227171301.png]]
+A good approach to detect edges consists in finding the **local maxima** of the absolute value of the derivative of the signal
+![[Pasted image 20250407231227.png|300]]
 
-
+==Non-Maxima Suppresion (NMS)==
+We should look for the maxima along the gradient direction in 2d images
+![[Pasted image 20250407231818.png|600]]
+we cannot know in advance, so we estimate it locally each time
 
 ## 4 - Local Features
 We want to find **Corresponding Points** between 2+ images of a scene
