@@ -528,7 +528,16 @@ i also cut the bumpers objects, made the meteors bump into each other
 
 ###
 ###
-##
+## LAB_3
+### Make it work on Linux
+(i have an ubuntu-based OS)
+this created a bunch of problems, i updated my makefile and changed a few things:
+```bash
+sudo apt-get install libassimp-dev
+```
+i got the library from apt instead of the zip, as it simplified some stuff.
+Grab the other library (ImGui) and put it
+
 ##
 #
 ##
