@@ -536,7 +536,9 @@ this created a bunch of problems, i updated my makefile and changed a few things
 sudo apt-get install libassimp-dev
 ```
 i got the library from apt instead of the zip, as it simplified some stuff.
-Grab the other library (ImGui) and put it
+Grab the other library (ImGui) and put it in the dependencies folder you made in LAB_0 ig
+
+modify these files
 
 ##
 #
