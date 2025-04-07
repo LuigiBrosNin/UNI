@@ -114,13 +114,15 @@ Deploying the separability property speeds up the filtering operation ( one 2D g
 	- $I$ -> Image, $\Delta I$ -> Gradient at every position
 	- $|\Delta I|_{\max} = \max(|I_{x}|,|I_{y}|)$
 
-Noise cause problems in image detection, we incorporate the smoothing process of the image when detecting edges (i take the average of a group of pixels compared to the average of another group)
+**Noise** causes problems in image detection, we incorporate the smoothing process of the image when detecting edges (i take the average of a group of pixels compared to the average of another group)
 ==Prewitt and Sobel==
 - **Prewitt operator** -> approximating partial derivatives by central differences
 	![[Pasted image 20250227171204.png]]
 - **Sobel operator** -> central pixel weight
 	![[Pasted image 20250227171301.png]]
-#TODO FINISH 12 -> 28
+
+
+
 ## 4 - Local Features
 We want to find **Corresponding Points** between 2+ images of a scene
 ![[Pasted image 20250320153021.png|500]]
