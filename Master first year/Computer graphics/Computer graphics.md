@@ -540,12 +540,107 @@ Grab the other library (ImGui) and put it in the dependencies folder you made in
 
 modify these files
 
-Gui.cpp
+Gui.cpp & Lab_03.cpp (i made the makefile handle the paths of these files)
 ```c++
 #include "imgui.h"
 #include "imgui_impl_glfw.h"
 #include "imgui_impl_opengl3.h"
 ```
+Change every broken include with proper paths to the folder with the imgui whenever there's c:/windows etc. in the files (they're only a few)
+
+Change the shader import, the case is broken as always as we've seen every time...
+
+Change the `Lib.h` and `Strutture.h` includes in a couple of files, as they use a different case than the one they actually are for some reason.
+
+Updated makefile
+```makefile
+# Compiler and Flags
+
+CXX = g++
+
+CXXFLAGS = -std=c++11 -Wall -g -pthread \
+
+#! CHANGE THIS PATH TO THE ONE U HAVE FOR ImGui
+-I/home/[USER]/dependencies_GL_GLFW/ImGui \
+
+-I/usr/include
+
+# Add library paths and link flags
+
+LDFLAGS = -lglfw -lGLU -lGL -lXrandr -lXxf86vm -lXi -lXinerama -lX11 -lrt -ldl -lassimp
+
+  
+  
+
+# Source files
+
+IMGUI_DIR = /home/luizo/dependencies_GL_GLFW/ImGui
+
+IMGUI_SOURCES = $(IMGUI_DIR)/imgui.cpp \
+
+$(IMGUI_DIR)/imgui_demo.cpp \
+
+$(IMGUI_DIR)/imgui_draw.cpp \
+
+$(IMGUI_DIR)/imgui_tables.cpp \
+
+$(IMGUI_DIR)/imgui_widgets.cpp \
+
+$(IMGUI_DIR)/imgui_impl_glfw.cpp \
+
+$(IMGUI_DIR)/imgui_impl_opengl3.cpp
+
+  
+
+LOCAL_SOURCES = $(wildcard *.cpp)
+
+SOURCES = $(LOCAL_SOURCES) glad.c $(IMGUI_SOURCES)
+
+OBJECTS = $(LOCAL_SOURCES:.cpp=.o) glad.o $(IMGUI_SOURCES:.cpp=.o)
+
+EXEC = LAB_3
+
+  
+
+# Default target (build the project)
+
+all: $(EXEC)
+
+  
+
+# Linking object files to create the final executable
+
+$(EXEC): $(OBJECTS)
+
+$(CXX) $(OBJECTS) -o $(EXEC) $(LDFLAGS)
+
+  
+
+# Compiling source files into object files
+
+%.o: %.cpp
+
+$(CXX) $(CXXFLAGS) -c $< -o $@
+
+  
+
+# Clean up build artifacts
+
+clean:
+
+rm -f $(OBJECTS) $(EXEC)
+
+  
+
+# Add phony target for "clean" to avoid conflicts with file names
+
+.PHONY: all clean
+```
+
+put the Meshes in the lab folder and compile / execute. Should go smoothly. Hopefully.
+
+### The hell we need to do?
+#TODO 
 
 ##
 #
