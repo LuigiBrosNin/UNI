@@ -140,7 +140,26 @@ Quantitative criteria to measure edge detection performance, and then apply the 
 - One response to one edge -> one single edge pixel detected at each true edge
 Canny shows that the optimal edge detection operation consists in finding local extrema of the convolution of the signal by a first order Gaussian derivative (i.e. G’(x))
 - Edge **streaking** may occur when magnitude varies along object contours
-- **hysteresis** thresholding -> 
+- **hysteresis** thresholding -> approach relying on a higher $(T_h)$ and a lower $(T_l)$threshold.
+	- Pixel taken as edge IF:
+	- gradient magnitude > $T_h$ <u>OR</u>
+	- gradient magnitude > $T_i$ <u>AND</u> pixel is a neighbor of an already detected edge
+
+==Zero-crossing==
+![[Pasted image 20250407234936.png|300]]
+Look for the zero crossing point in the 2nd derivative (computationally significant)
+
+==Discrete Laplacian==
+We can use Laplacian as second order differential operator
+**Laplacian** -> using forward and backward differences to approximate derivatives
+
+==Laplacian of Gaussian (LOG)==
+robust edge detectors should include a smoothing step to filter out noise
+**LOG** concpetually:
+- Gaussian smoothing
+- Second order differentiation by the Laplacian  
+- Extraction of the zero-crossing
+
 ## 4 - Local Features
 We want to find **Corresponding Points** between 2+ images of a scene
 ![[Pasted image 20250320153021.png|500]]
