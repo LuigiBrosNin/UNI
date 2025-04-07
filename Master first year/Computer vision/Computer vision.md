@@ -155,10 +155,11 @@ We can use Laplacian as second order differential operator
 
 ==Laplacian of Gaussian (LOG)==
 robust edge detectors should include a smoothing step to filter out noise
-**LOG** concpetually:
+**LOG** conceptually:
 - Gaussian smoothing
 - Second order differentiation by the Laplacian  
 - Extraction of the zero-crossing
+- Once a sign change is found, the actual edge may be localized at the pixel where the absolute value of the LOG is smaller (best choice) or either pixel towards the positive or negative side.
 
 ## 4 - Local Features
 We want to find **Corresponding Points** between 2+ images of a scene
