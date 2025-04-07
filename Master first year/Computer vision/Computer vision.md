@@ -124,10 +124,23 @@ A good approach to detect edges consists in finding the **local maxima** of the 
 ![[Pasted image 20250407231227.png|300]]
 
 ==Non-Maxima Suppresion (NMS)==
-We should look for the maxima along the gradient direction in 2d images
+We should look for the maxima along the gradient direction in images (2D signals)
 ![[Pasted image 20250407231818.png|600]]
-we cannot know in advance, so we estimate it locally each time
+- We cannot know in advance, so we estimate it locally each time
+- The magnitude of the gradient has to be estimated at points outside the discrete pixel grid
+- We do it by linear interpolation from the closest points belonging to the grid (we base our magnitude by theoretical points that we calculate mathematically, eg. A,B in the example)
+	![[Pasted image 20250407232325.png|300]]
+	
+- After the NMS, we apply a threshold on the magnitude of the gradient to get rid of unwanted edges
 
+==Canny’s Edge Detector==
+Quantitative criteria to measure edge detection performance, and then apply the optimal filter for the best result
+- Good detection -> extract edges even in noisy images
+- Good localization -> minimize found edge and true edge distance
+- One response to one edge -> one single edge pixel detected at each true edge
+Canny shows that the optimal edge detection operation consists in finding local extrema of the convolution of the signal by a first order Gaussian derivative (i.e. G’(x))
+- Edge **streaking** may occur when magnitude varies along object contours
+- **hysteresis** thresholding -> 
 ## 4 - Local Features
 We want to find **Corresponding Points** between 2+ images of a scene
 ![[Pasted image 20250320153021.png|500]]
