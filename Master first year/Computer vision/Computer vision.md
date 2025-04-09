@@ -343,6 +343,6 @@ has to be lightweight for the few resources we have
 2d image to 3d polygon
 - OCR
 	1. Efficient OCR
-		- https://arxiv.org/pdf/2304.02737
+		- https://arxiv.org/html/2304.02737v2
 		- https://github.com/dell-research-harvard/efficient_ocr
 	2. 
