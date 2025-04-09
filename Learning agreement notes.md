@@ -9,7 +9,7 @@ balancing CFUs:
 
 Proposal procedure
 - share onedrive sheet
-- Comments for us, tutor and prof Zenyep
+- Comments for us, tutor and prof Zeynep
 - first tutor approval by email
 - unofficial approval by email
 - write  `[LM INF INT]` in the subject of the email for internationalization of magistrale informatica
