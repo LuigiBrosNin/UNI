@@ -5,4 +5,5 @@ balancing CFUs:
 	- 9 CFU Ingegneria del software -> 2 courses (6+6 CFU) in compatible Software engineering topics
 	- 6 CFU Deep learning -> 1 course (3 CFU) in compatible deep learning topics
 	- they balance out the CFUs so it's fine (this case if it's 2 obligatory courses)
-- alternatively, in the SE course, the extra 3 CFU courses can be counted for the free choices ones 
+- alternatively, in the SE course, the extra 3 CFU courses can be counted for the free choices ones
+
