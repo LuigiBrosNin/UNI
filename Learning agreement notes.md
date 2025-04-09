@@ -7,3 +7,11 @@ balancing CFUs:
 	- they balance out the CFUs so it's fine (this case if it's 2 obligatory courses)
 - alternatively, in the SE course, the extra 3 CFU courses can be counted for the free choices ones
 
+Proposal procedure
+- share onedrive sheet
+- Comments for us, tutor and prof Zenyep
+- first tutor approval by email
+- unofficial approval by email
+- write  `[LM INF INT]` in the subject of the email for internationalization of magistrale informatica
+- upload learning agreement after email approval
+- official approval trough AlmaRM
