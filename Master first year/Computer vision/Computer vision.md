@@ -339,6 +339,10 @@ we consider a slide of 1 (moving the convolutional filters one pixel on the righ
 
 # Exam experiment
 ## Topic Ideas
-lightweight
+has to be lightweight for the few resources we have
 2d image to 3d polygon
-OCR
+- OCR
+	1. Efficient OCR
+		- https://arxiv.org/pdf/2304.02737
+		- https://github.com/dell-research-harvard/efficient_ocr
+	2. 
