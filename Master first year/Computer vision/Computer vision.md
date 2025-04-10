@@ -358,6 +358,14 @@ each step it shows you only previously predicted tokens, while hiding future one
 
 **Self-attention** -> learns representations of the input sequence, trough queries, keys and values $(Q, K, V)$ vectors, mappings of the same token
 $$Attention(Q,K,V)=softmax(\frac{QK^T}{\sqrt d_k})V$$
+$dmodel$ -> dimension of the heap
+$L$ -> length of the sequence
+dimensionality of the vectors -> $L \times dmodel$ 
+
+the output maintains this dimensionality
+![[Pasted image 20250410165655.png]]
+
+
 
 
 
