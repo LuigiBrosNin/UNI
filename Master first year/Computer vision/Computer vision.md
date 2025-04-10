@@ -338,10 +338,18 @@ The function encodes a subset of the input vectors adaptively when decoding the 
 ![[Pasted image 20250410153057.png]]
 **Attention scores** (purple dots) -> dot product between (in the image) each blue vector and green transposed vector (results in a number = a single purple dot), the purple score vector we get as a result is used to predict the output of the decoder.
 
-Then we concatenate or sum the purple vector with the green one
+Then we concatenate or sum the purple vector with the green one, used for the output layer computation (which is our prediction)
 
-It helps predict the current step output based on an approximation of the whole input (in the Attention score)
+==Transformer== -> first model relying entirely on self-attention  
+(and cross-attention) to compute representations of its input and output without using RNNs or convolution
+At each step the model is auto-regressive, consuming the previously  
+generated symbols as additional input when generating the next
 
+==Transformer Encoder==
+It's composed of a stack of N identical layers
+each layer has:
+- a (multi)head self-attention mechanism
+- a feed-forward network
 
 
 ##
