@@ -351,6 +351,15 @@ each layer has:
 - a (multi)head self-attention mechanism
 - a feed-forward network
 
+==Transformer Decoder==
+It always takes the last layer of the encoder, they have the same number of layers
+![[Pasted image 20250410163254.png]]
+each step it shows you only previously predicted tokens, while hiding future ones
+
+**Self-attention** -> learns representations of the input sequence, trough queries, keys and values $(Q, K, V)$ vectors, mappings of the same token
+$$Attention(Q,K,V)=softmax(\frac{QK^T}{\sqrt d_k})V$$
+
+
 
 ##
 
