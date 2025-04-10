@@ -265,6 +265,9 @@ $$
 #TODO 4 -> 41
 
 
+## 
+---
+Part 2
 ## 6 - CNN (recall) (Convolutional Neural Networks)
 ![[Pasted image 20250403153929.png]]
 :LiArrowBigUp: good slide to make a theory summary check
@@ -315,7 +318,28 @@ we consider a slide of 1 (moving the convolutional filters one pixel on the righ
 #TODO 30 -> FINISH SLIDES
 
 
-##
+## 7 - Transformers
+==Recurrent Neural Network (RNN)==
+**RNN** -> family of neural networks for processing sequential data (sequence $x^{[t]}$ with timestep index $t$)
+The parameter sharing used in recurrent networks relies on the assumption that the same parameters can be used for different time steps…
+
+Unfolding process or RNNs advantages:  
+- Same input size for each learned model
+- we can use the same transition function $f$ with the same parameters at every time step
+
+The gradient computation involves performing a forward propagation pass moving left to right through the unrolled graph, followed by a backward propagation pass moving right to left through the graph
+
+==Encoder-Decoder==
+- An **encoder** processes the input sequence. The encoder emits the context C, usually as a function of its final hidden state  
+- A **decoder** is conditioned on that fixed-length vector to generate the output sequence
+
+==Attention mechanism== -> dynamic weight adjustment function based on an attention function
+The function encodes a subset of the input vectors adaptively when decoding the translation
+![[Pasted image 20250410153057.png]]
+
+
+
+
 ##
 
 # Exam experiment
