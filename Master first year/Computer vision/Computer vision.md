@@ -345,4 +345,10 @@ has to be lightweight for the few resources we have
 	1. Efficient OCR
 		- https://arxiv.org/html/2304.02737v2
 		- https://github.com/dell-research-harvard/efficient_ocr
-	2. 
+- 2D to 3D
+	1. 2DGuidedLight3D
+		- https://arxiv.org/pdf/2212.08334
+		- https://github.com/OPradelle/2DGuidedLight3D
+	2. Improving 2D Feature Representations by 3D-Aware Fine-Tuning
+		- https://arxiv.org/abs/2407.20229
+		- https://github.com/ywyue/FiT3D

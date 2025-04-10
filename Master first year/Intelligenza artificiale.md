@@ -29,7 +29,7 @@ There are different measures to attest the efficiency of the model, one of them 
 ## Neural Networks
 
 ## 
-i'm following the lessons without notes from now on, as there are some notes on CSUnibo i could study into, i might still do summaries and exam resources. as usual i recommend Corigliano's notes (italian notes).
+i'm following the lessons without notes from now on, as there are some notes on Carta Binaria i could study into, i might still do summaries and exam resources. as usual i recommend Corigliano's notes (italian notes).
 
 
 # Summaries
@@ -103,14 +103,6 @@ $m$ -> max depth of state space (can be $\infty$)
 ⚠ Failure to detect **repeated states** can turn a linear problem into an exponential one
 
 
-## Informed search algorithms
-TODO
-
-## Local search
-TODO
-
-## Game Playing
-TODO
 
 ## Minizinc
 - Declarative language -> describe the problem -> solve the problem
