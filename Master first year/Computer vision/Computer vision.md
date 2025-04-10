@@ -16,25 +16,6 @@
 
 # Theory
 Slides seem to be good, and are very visual. I don't feel like just adding a phrase and pasting the slide, so i'll freeze notes for now, see what to do of them, studying to slides to understand might be better. Maybe notes to remember definitions, as in summaries.
-
-## 0 
-## 1 - Image Formation Process
- how images get captured by tools
-==**Pinhole camera model**== ->
-![[Pasted image 20250220151912.png]]
-
-**Perspective Projection** -> The geometric model of image formation in a pinhole camera
-![[Pasted image 20250220152517.png]]
-we want to find a relationship between 3d and 2d points:
-![[Pasted image 20250220152859.png]]
-The above formulas are true because of triangular similarity
-![[Pasted image 20250220153320.png]]
-![[Pasted image 20250220153936.png]]
-
-Slides seem to be good, and are very visual. There are 41 slides and i don't feel like just adding a phrase and pasting the slide, so i'll freeze notes for now, see what to do of them, studying to slides to understand might be better. Maybe notes to remember definitions, as in summaries.
-## 
-
-
 ## 
 
 # Summaries
@@ -340,7 +321,6 @@ we consider a slide of 1 (moving the convolutional filters one pixel on the righ
 # Exam experiment
 ## Topic Ideas
 has to be lightweight for the few resources we have
-2d image to 3d polygon
 - OCR
 	1. Efficient OCR
 		- https://arxiv.org/html/2304.02737v2
@@ -352,3 +332,5 @@ has to be lightweight for the few resources we have
 	2. Improving 2D Feature Representations by 3D-Aware Fine-Tuning
 		- https://arxiv.org/abs/2407.20229
 		- https://github.com/ywyue/FiT3D
+##
+##
