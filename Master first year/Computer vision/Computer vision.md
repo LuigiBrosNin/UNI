@@ -365,9 +365,11 @@ dimensionality of the vectors -> $L \times dmodel$
 the output maintains this dimensionality
 ![[Pasted image 20250410165655.png]]
 
+**Multi-Head Attention** -> linearly project the queries, keys and values h times with different, learned linear projections
+![[Pasted image 20250410170920.png]]
+Multi-head attention allows the model to jointly attend to information from different representation subspaces at different positions
 
-
-
+TODO: look for a video tutorial that explains self attention for transformers, slides are terrible 
 
 ##
 
