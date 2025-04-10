@@ -336,7 +336,11 @@ The gradient computation involves performing a forward propagation pass moving l
 ==Attention mechanism== -> dynamic weight adjustment function based on an attention function
 The function encodes a subset of the input vectors adaptively when decoding the translation
 ![[Pasted image 20250410153057.png]]
+**Attention scores** (purple dots) -> dot product between (in the image) each blue vector and green transposed vector (results in a number = a single purple dot), the purple score vector we get as a result is used to predict the output of the decoder.
 
+Then we concatenate or sum the purple vector with the green one
+
+It helps predict the current step output based on an approximation of the whole input (in the Attention score)
 
 
 
