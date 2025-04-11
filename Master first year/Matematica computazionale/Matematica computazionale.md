@@ -416,4 +416,24 @@ E' possibile usarlo anche per disegnare funzioni
 
 
 
-# 
+##
+# Project
+## Cose da evitare
+### No-Nos
+- La prof <u>non</u> vuole piu' istruzioni raggruppate nelle parentesi tonde (compound expressions), non bisogna usare questo modo di scrivere funzioni
+	```mathematica
+f[x_] := (
+	firstLine;
+		secondLine;
+	...
+	lastLine
+)
+```
+- La prof <u>non</u> vuole che venga usata la funzione del simbolo `%`
+- La prof <u>non</u> vuole che venga effettuato l'accesso a variabili globali dentro una `Module` o `Block`
+- 
+- La prof vuole una programmazione rule-based
+- La prof vuole documentazione dettagliata (ogni funzione descritta con input ed output descritti) con una lingua consistente per tutta la doc
+- ogni pacchetto che creeremo deve iniziare con l'intestazione title, context, author ... (vedere qualche esempio 
+su virtuale su tutte le voci da scrivere)
+#
