@@ -101,6 +101,17 @@ $G^1$ -> Geometry Continuity: If the direction tangent to a parametric curve var
 ![[Pasted image 20250311000536.png]]
 
 ## 3 - Rendering
+### 3.1 Rendering Pipeline
+#TODO
+
+### 3.2 Lighting and shading
+When we look at a point on an object, the color that we see is determined by multiple interactions between light sources and reflective surfaces.
+==Real light==
+![[Pasted image 20250411183344.png]]
+![[Pasted image 20250411183417.png]]
+opaque objects 
+
+###
 
 ### Rendering Pipeline
 ###
