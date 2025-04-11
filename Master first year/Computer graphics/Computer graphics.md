@@ -639,6 +639,14 @@ rm -f $(OBJECTS) $(EXEC)
 
 put the Meshes in the lab folder and compile / execute. Should go smoothly. Hopefully.
 
+as a bonus, in the gestione_callback.cpp, you want to change this (line 45)
+```c++
+// on linux this is not necessary, only inverts the y axis controls
+//ypos = height - ypos;
+```
+unless you want the freaky camera it comes with.
+
+I do not like the controls of this program but i guess we'll have to work with that.
 ### The hell we need to do?
 #TODO 
 
