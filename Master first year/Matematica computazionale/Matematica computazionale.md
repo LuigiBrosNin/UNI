@@ -307,7 +307,37 @@ MapAt[ f, {a, b, c, d}, 2]
 {a, f[b], c, d}
 ```
 ### 6.1.3 Testare Pattern
-#TODO 
+- `MatchQ[]` -> testa per vedere se un pattern combacia con un'espressione, ritorna true se c'e' match
+```mathematica
+expr = a + b + c;  
+expr // FullForm  
+MatchQexpr, _ Plus  
+(* expr ha come head Plus ? Si' *)
+---
+True
+```
+- `Cases[]` -> seleziona tutte le espressioni in una lista che combaciano con un 
+ dato pattern
+```mathematica
+exprLista = { a, a + b, a + a }  
+pattern = x_ + y_  
+Cases[exprLista, pattern]  
+(* Solo il secondo elemento Plus[ a,b] di exprLista combacia col pattern *)  
+(* Il terzo elemento di exprLista e' Times[2,a] *)  
+(* Provare anche con :exprLista2={a,a+b,a+a, ab+ba, a+b+c} *)  
+---
+{a+b}
+```
+- Il secondo elemento di Cases puo' essere una Rule, che viene applicata ad ogni espressione combaciante nel return
+```mathematica
+lista = { a, a + b, a + a};  
+(* Cases estrae a+b da lista *)  
+Caseslista, x_ + y_  
+(* Cases estrae a+b da lista e lo sostituisce con b *)  
+Caseslista, x_ + y_ → y
+---
+
+```
 ### 6.1.4 Ruolo degli Attributes
 ### 6.1.5 Funzioni Built-in che usano Pattern
 ### 6.2.2 DownValues
