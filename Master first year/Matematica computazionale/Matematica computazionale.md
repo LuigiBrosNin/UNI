@@ -291,6 +291,21 @@ test /. expr_f -> expr^2
 ```
 - `expr_f` matcha tutte le espressioni con head `f`
 - `f[x_]` matcha head `f` ed una sola variabile x in chiamata
+### 6.1.2 De-Strutturare
+2 modi principali per destrutturare
+- `/. (ReplaceAll[])` -> destrutturare tramite sostituzione, piu' facile e semplice
+```mathematica
+(* expr=f[a]+g[b] *)  
+expr /. x_[y_] → y[x]  
+a[f] + b[g]
+```
+- `MapAt[]` -> Per sostituzioni su strutture piu' complesse
+```mathematica
+(* Applico f alla posizione 2 della lista {a,b,c,d} *)  
+MapAt[ f, {a, b, c, d}, 2]  
+(* Equivalente : MapAt[ f,{a,b,c,d},{2}] *)  
+{a, f[b], c, d}
+```
 ### 6.1.3 Testare Pattern
 #TODO 
 ### 6.1.4 Ruolo degli Attributes
