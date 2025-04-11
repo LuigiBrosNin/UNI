@@ -336,9 +336,20 @@ Caseslista, x_ + y_
 (* Cases estrae a+b da lista e lo sostituisce con b *)  
 Caseslista, x_ + y_ → y
 ---
-
+{b}
+```
+- Puoi inserire un terzo argomento (numerico) per specificare il livello di applicazione (in caso di un'espressione innestata a livelli inferiori di un albero)
+![[Pasted image 20250411115154.png]]
+```mathematica
+(* exprNonLista=5 (a+b)^6; *)  
+Cases[exprNonLista, _Integer]  
+Cases[exprNonLista, _Integer, 2]  
+---
+{5}
+{5,6}
 ```
 ### 6.1.4 Ruolo degli Attributes
+#TODO 
 ### 6.1.5 Funzioni Built-in che usano Pattern
 ### 6.2.2 DownValues
 `DownValues[f]` or `? f` -> restituisce le regole corrispondenti alle definizioni fatte per il simbolo `f`
