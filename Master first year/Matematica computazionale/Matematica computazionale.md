@@ -453,8 +453,6 @@ f[x_] := (
 (* :Requirements: *)  
 (* :Warning: DOCUMENTATE TUTTO il codice *)
 ```
-- 
-
 
 ## Elementi Progetto
 - Tutorial con report e frontend
