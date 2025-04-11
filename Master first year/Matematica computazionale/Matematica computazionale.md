@@ -418,7 +418,7 @@ E' possibile usarlo anche per disegnare funzioni
 
 ##
 # Project
-## Cose da evitare
+## Cose da evitare/fare
 ### No-Nos
 - La prof <u>non</u> vuole piu' istruzioni raggruppate nelle parentesi tonde (compound expressions), non bisogna usare questo modo di scrivere funzioni
 	```mathematica
@@ -431,9 +431,34 @@ f[x_] := (
 ```
 - La prof <u>non</u> vuole che venga usata la funzione del simbolo `%`
 - La prof <u>non</u> vuole che venga effettuato l'accesso a variabili globali dentro una `Module` o `Block`
-- 
+- La prof <u>non</u> vuole variabili nel contesto globale in aree private
+- La prof <u>non</u> vuole codice ripetuto
+- La prof <u>non</u> vuole messaggi di errori/celle non valutate, ogni possibile errore dev'essere gestito
+### Musts
 - La prof vuole una programmazione rule-based
 - La prof vuole documentazione dettagliata (ogni funzione descritta con input ed output descritti) con una lingua consistente per tutta la doc
-- ogni pacchetto che creeremo deve iniziare con l'intestazione title, context, author ... (vedere qualche esempio 
-su virtuale su tutte le voci da scrivere)
+- ogni pacchetto creato deve avere l'intestazione, eg:
+```mathematica
+(* :Title: MappaComplessa4 *)  
+(* :Context: MappaComplessa4` *)  
+(* :Author: GS *)  
+(* :Summary: a version of the ComplexMap package *)  
+(* :Copyright: GS 2025 *)  
+(* :Package Version: 3 *)  
+(* :Mathematica Version: 14 *)  
+(* :History: last modified 14/ 3/ 2025 *)  
+(* :Sources: bblio *)  
+(* :Limitations: educational purposes *)  
+(* :Discussion: Passare Options a routine ausiliarie *)  
+(* :Requirements: *)  
+(* :Warning: DOCUMENTATE TUTTO il codice *)
+```
+- 
+
+
+## Elementi Progetto
+- Tutorial con report e frontend
+- Pacchetto
+- Un minimo di testing per il catch degli errori
+
 #
