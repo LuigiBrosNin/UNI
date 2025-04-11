@@ -648,7 +648,12 @@ unless you want the freaky camera it comes with.
 
 I do not like the controls of this program but i guess we'll have to work with that.
 ### The hell we need to do?
-#TODO 
+#### 1 - Insert object
+i inserted a tree cuz i wanna keep the bunny and make a forest/nature kind of scene
+i also added the grass material and used that one for the base plane.
+#### 2 - extend shaders to handle PHONG shaders
+#TODO
+####
 
 ##
 #
