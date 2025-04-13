@@ -109,7 +109,12 @@ When we look at a point on an object, the color that we see is determined by mul
 ==Real light==
 ![[Pasted image 20250411183344.png]]
 ![[Pasted image 20250411183417.png]]
-opaque objects 
+opaque objects -> the majority of incident light is either the  
+reflected or absorbed
+
+Translucent -> significant light transmission
+
+#TODO slide 10 -> end
 
 ###
 
