@@ -515,4 +515,7 @@ f[x_] := (
 - Pacchetto
 - Un minimo di testing per il catch degli errori
 
+##
+50 40 10 shuffle sui dati
+train - test - val
 #
