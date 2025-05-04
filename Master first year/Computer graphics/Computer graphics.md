@@ -114,11 +114,153 @@ reflected or absorbed
 
 Translucent -> significant light transmission
 
-#TODO slide 10 -> end
+==Lighting models==
+- **Physically-based** -> model physics, use a rendering equation that describes how light interacts with materials
+- **Empirical** -> simple approximation, we follow rays of lights that reach the viewer directly and by reflection from surfaces
 
+We determine colour of a point with
+1. light sources
+2. reflection proprieties of the surface (material)
+3. illumination model that describes the interaction
+
+==Local model==
+![[Pasted image 20250418101725.png]]
+used cuz it's simpler and faster to render
+
+==Global model==
+![[Pasted image 20250418103050.png]]
+not fully compatible with a rendering pipeline
+
+==Light-material interactions==
+1. Specular
+2. Gloss
+3. Diffuse
+![[Pasted image 20250418103404.png]]
+
+==Material properties==
+$$K_{a,d,s,e}\in [0,1]$$
+- $k_a$ -> ambient
+- $k_d$ -> diffuse reflection coefficient
+- $k_S$ -> specular reflection coefficient
+- $k_e$ -> emissive (self emission of light)
+$n_s$ -> specular reflection exponent
+
+==Light==
+1. ambient -> fixed source, hits everything equally
+2. point
+3. directional
+4. spot
+![[Pasted image 20250418122111.png]]
+
+The way a particular material reflects light is referred to as a **reflection model**
+
+==Phong’s local illumination model==
+![[Pasted image 20250418125606.png]]
+$$I_{\lambda}=k_{e}+I_{a}k_{a}+I_{d}k_{d}+I_{S}k_{S}$$
+- $I_a$ -> ambient intensity
+- $I_d$ -> diffusion intensity, $I_{l} \max(0,l*n)$ where $I_l=$Source light intensity, $l$ and $n$ from Lambert's cosine law
+- $I_S$ -> reflection intensity
+
+==Lambert’s cosine law==
+![[Pasted image 20250418142445.png]]
+- $l$ -> light direction
+- $n$ -> surface orientation 
+- $\theta$ -> angle between norma light and direction
+
+==Attenuation term==
+we account for attenuation of the intensity light based on $s$ distance traveled
+Decrease intensity with distance from light
+
+==Blinn-Phong Lighting Model==
+instead of recalculating the dot product like in Phong shading ($v\cdot r$) we use the halfway vector $h$
+specular term in Phong's model is
+![[Pasted image 20250418152356.png]]
+
+==Shading==
+**Shading** (per fragment) -> assigning pixel colour. (How the lighting is used to color the pixels)
+We approximate shading
+**Flat shading** -> computing the average of the three vertices per polygon
+
+Improvements for flat shading
+- Evaluate phong at each pixel of the polygon
+- Vertex normals at each vertex to approximate better the real surface they represent, vertex normals can be provided by different methods 
+
+==Gouraud Shading==
+![[Pasted image 20250418174505.png]]
+- Normals computed at the vertices
+- Color at each vertex decided with normal and phong lighting
+- In rasterization stage, the color intensity is calculated by barycentric interpolation of the intensities at the vertices
+Artifacts (shortcomings) can get generated, eg. 
+- MISSING HIGHLIGHT and SPOTLIGHT effects
+- Mach banding EFFECT (discontinuity in colour range causes a mistake in colouring)
+
+==Phong shading==
+![[Pasted image 20250418175649.png]]
+not into OpenGL
+- **Normals** computed for each vertex
+- **In rasterization stage** -> normal vectors are then interpolated across the face.
+- **Pixel color** -> apply Phong’s light model at every pixel inside face using interpolated normal vector
+computationally expensive, lighting after perspective projection
+
+Recap
+![[Pasted image 20250418175820.png]]
+
+
+### 3.3 Shadows & Transparency
+==Soft and hard shadow==
+![[Pasted image 20250418180944.png]]
+To simulate penumbra we blur shadows in image space (cheap but inaccurate)
+
+==Fake/Generated Shadows==
+1. shadow on planar surfaces
+	- Draw the object primitives a second time, projected into the ground plane
+		![[Pasted image 20250425221831.png]]
+2. Shadow Map Algorithm
+	- Shadow computation similar to view computation (hidden surface removal)
+		![[Pasted image 20250425222713.png]]
+	- STEP 1: compute shadow map (depth from light source) first render the scene using the light source as view reference point; store the result in the shadow z-buffer (Depth image of visible polygons from light source)
+	- STEP 2: Render final image Next, the scene is rendered as usual, but with an extra test to see it the current fragment is in the shadow (by checking shadow z-buffer map to see if points are in shadow)
+	-  **Shadow Depth Maps**
+		- Shadow mapping uses textures called shadow maps.
+		- The depth values as seen from the light source are stored in a shadow map, and are then used in a second pass to generate shadows on the objects
+			![[Pasted image 20250425223031.png]]
+	- **LightMaps** -> generate shadow texture by capturing silhouettes of objects as seen from the light source. Project texture onto scene. must recalculate for moving lights
+3. Shadow volumes
+	- represent the volume of space in shadow
+	- Shoot a ray from the eye to the visible point, Increment/decrement a counter each time we intersect a shadow volume polygon  
+	- If the counter is not 0, the point is in shadow
+		![[Pasted image 20250425223848.png]]
+		![[Pasted image 20250425223916.png]]
+		
+
+==**Ambient Occlusion (AO)**== -> simulation of the shadowing caused by objects blocking the ambient light.
+![[Pasted image 20250425224109.png]]
+1. **Ray casting** -> Rays are cast from every direction from a surface point. Uninterrupted rays  increase the brightness of the surface, while rays that intercept another object do not add any illumination.
+	![[Pasted image 20250425224619.png]]
+2. **Screen Space Ambient Occlusion (SSAO)** -> For every pixel, the fragment shader samples the depth values around the current pixel and tries to compute the amount of occlusion from each of the sampled points.
+==Transparency Rendering==
+Alpha channel material colour, defines opacity of an object (0 -> invisible 1 -> full opacity)
+==Rendering with transparency==
+We need to render transparent surfaces in a back to front (far to near) order  
+This is required because the transparent surface will modify the color already stored at the pixel (normally order doesn't matter)
+<u>We should render all opaque surfaces in a scene before rendering the transparent surfaces.</u>
+
+**Order-Independent Transparency OIT** -> per-pixel sorting done in fragment shader (so that the programmer doesn't need any sorting of objects before rendering)
+Idea
+- Keep a list of colors for each pixel, 
+- sort them by depth, 
+- blend them together in the fragment shader.
+Algorithm
+1. Render Opaque object  
+2. Render Transparent object  
+	- All fragments are stored using per-pixel linked lists.  
+	- Store fragments: Color+alpha+depth (only the first K)  
+3. Resolve Transparent  
+	- each pixel in fragment shader sorts associated linked list.  
+	- blending fragments in sorted order with background.  
+	- output final fragments.
 ###
 
-### Rendering Pipeline
 ###
 ##
 ###
