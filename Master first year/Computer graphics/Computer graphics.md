@@ -268,6 +268,7 @@ Algorithm
 ###
 ##
 # Labs
+per ogni lab prepara una piccola relazione (una pagina o meno) che descrive cos'hai fatto, poi sono da 
 
 ## Install dependencies on Linux and make them work
 Ubuntu-based (uso `apt` :)
