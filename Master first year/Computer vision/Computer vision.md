@@ -424,7 +424,6 @@ The paper proposes a two-stage approach to enhance 2D visual foundation models (
 ### **3. Method**
 
 - **3.1 Lifting Features to 3D**:
-    
     - Multi-view 2D features are encoded into 3D Gaussians.
     - ==3D Gaussian Splats== are used for this (a method that models 3D scenes as a collection of transparent, view-dependent blobs (Gaussians))
 	    - $\mu$ -> position
@@ -440,17 +439,29 @@ The paper proposes a two-stage approach to enhance 2D visual foundation models (
     - Feature vectors are optimized to fit these 3d gaussians, minimizing a combined loss (`L_total = L_color (RGB image error) + L_feat (feature reconstruction error)`)
         
 - **3.2 3D-Aware Fine-Tuning**:
-    
     - Fine-tune the original 2D feature extractor using 3D-rendered features.
-        
-    - Efficient: only 1 epoch required, low memory/computation overhead.
+    1. **Pre-load** all the 3D Gaussians + CNN decoders for all scenes (to save time).
+	2. **For each step**:
+	    - Sample an image `Ii` and its camera pose `Pi`.
+	    - Use the associated Gaussian `G` to render the high-dim feature map `Fhigh`.
+	    - Compare this to the current model’s prediction `ε2D(Ii)` using an L1 loss.
+	    - Update the model weights via backprop.
+	- Efficient: only 1 epoch required, low memory/computation overhead.
         
 - **3.3 Linear Probing for Downstream Tasks**:
-    
-    - Evaluate using simple linear heads on tasks like segmentation and depth estimation.
-        
-    - Combine original and fine-tuned features to maintain generalization.
-        
+	- Once the 2D model is fine-tuned:
+	- Keep it frozen.
+	- Train a **linear head** (single layer neural network, basically acting to give us the output) on the output features for:
+	    - **Semantic segmentation** (per-patch class prediction).
+	    - **Depth estimation** (bin classification from patch features + \[CLS\] token).
+	- Optionally, **concatenate original features with fine-tuned ones** to retain generalization while gaining 3D awareness.
+
+Linear head analogy -> If the pre-trained model is like a **language**, the linear head is a **simple translator**. If the language is expressive and consistent (good features), the translator can do a good job with minimal effort. If the features are weak, even a smart translator won’t help much.
+
+
+- **Why use Gaussians?** Fast optimization + real-time rendering + flexibility.
+- **Why not train end-to-end?** Memory and time constraints, plus they show you can get strong gains with this two-step approach.
+- **Why it works**: Multi-view lifting forces 2D features into geometrically consistent representations, which then teach the 2D model implicit 3D structure.
 
 ---
 
