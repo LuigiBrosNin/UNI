@@ -387,5 +387,6 @@ has to be lightweight for the few resources we have
 	2. Improving 2D Feature Representations by 3D-Aware Fine-Tuning
 		- https://arxiv.org/abs/2407.20229
 		- https://github.com/ywyue/FiT3D
-##
+## Improving 2D Feature Representations by 3D-Aware Fine-Tuning
+
 ##
