@@ -429,7 +429,9 @@ The paper proposes a two-stage approach to enhance 2D visual foundation models (
     - ==3D Gaussian Splats== are used for this (a method that models 3D scenes as a collection of transparent, view-dependent blobs (Gaussians))
 	    - $\mu$ -> position
 	    - Scale, Rotation $s, R$ -> shape and orientation
-	    - Opacity $\alpha$ -> 
+	    - Opacity $\alpha$
+	    - color parameters (SH) -> view dependent rpg info using spherical harmonics
+	    - feature vector (f) -> this is the key! Each Gaussian carries a _semantic feature vector_ distilled from 2D features.
         
     - Each Gaussian stores color and a low-dimensional feature vector.
         
