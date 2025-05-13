@@ -389,4 +389,121 @@ has to be lightweight for the few resources we have
 		- https://github.com/ywyue/FiT3D
 ## Improving 2D Feature Representations by 3D-Aware Fine-Tuning
 
+### **Abstract**
+
+The paper proposes a two-stage approach to enhance 2D visual foundation models (e.g., DINOv2) by integrating 3D awareness. It lifts 2D features into a 3D Gaussian representation, enabling multi-view rendering, and then fine-tunes the original 2D model using these 3D-aware features. This improves performance on downstream tasks like semantic segmentation and depth estimation.
+
+---
+
+### **1. Introduction**
+
+- **Problem**: Current vision models trained on 2D images lack true 3D scene understanding.
+    
+- **Motivation**: Human vision uses 3D structure cues for better understanding. Models should do the same.
+    
+- **Proposal**: A two-stage pipeline:
+    
+    1. Lift 2D features to a 3D Gaussian representation.
+        
+    2. Use the rendered 3D-aware features to fine-tune 2D models.
+        
+
+---
+
+### **2. Related Work**
+
+- **2.1 2D Representation Learning**: Overview of self-supervised learning (e.g., DINO, CLIP), but all trained only on 2D data.
+    
+- **2.2 Distilled Feature Fusion Fields**: Past works distill 2D features into 3D, e.g., NeRFs. This paper goes further by transferring them back into 2D models.
+    
+- **2.3 Injecting 3D Priors to 2D**: Most methods fuse 2D into 3D but don’t enhance 2D models with 3D awareness — this paper addresses that gap.
+    
+
+---
+
+### **3. Method**
+
+- **3.1 Lifting Features to 3D**:
+    
+    - Multi-view 2D features are encoded into 3D Gaussians.
+    - ==3D Gaussian Splats== are used for this (a method that models 3D scenes as a collection of transparent, view-dependent blobs (Gaussians))
+        
+    - Each Gaussian stores color and a low-dimensional feature vector.
+        
+    - A CNN decoder up-projects the low-dim features after rendering.
+        
+- **3.2 3D-Aware Fine-Tuning**:
+    
+    - Fine-tune the original 2D feature extractor using 3D-rendered features.
+        
+    - Efficient: only 1 epoch required, low memory/computation overhead.
+        
+- **3.3 Linear Probing for Downstream Tasks**:
+    
+    - Evaluate using simple linear heads on tasks like segmentation and depth estimation.
+        
+    - Combine original and fine-tuned features to maintain generalization.
+        
+
+---
+
+### **4. Experiments**
+
+- **4.1 Datasets**: Use ScanNet++ for training and various indoor/outdoor datasets for evaluation.
+    
+- **4.2 Implementation Details**:
+    
+    - DINOv2 is fine-tuned for 1 epoch.
+        
+    - Feature Gaussians trained using multi-view images.
+        
+- **4.3 Within-domain Evaluation**:
+    
+    - Significant improvements in segmentation and depth tasks on ScanNet++, NYUv2, and ScanNet.
+        
+- **4.4 Out-of-domain Evaluation**:
+    
+    - Gains are generalizable to ADE20K, Pascal VOC, and KITTI datasets.
+        
+- **4.5 Generalization to Other Vision Models**:
+    
+    - Method improves other models like CLIP, MAE, DeiT-III, showing versatility.
+        
+- **4.6 Ablation Studies and Analysis**:
+    
+    - **Feature dimension**: 64 is a sweet spot between performance and memory.
+        
+    - **Assembly strategy**: Feature concatenation works best.
+        
+    - **Epochs**: 1 epoch sufficient; more can reduce generalization.
+        
+    - **Adapter vs. fine-tuning**: Fine-tuning is simpler and just as effective.
+        
+
+---
+
+### **5. Conclusion**
+
+- The proposed 3D-aware fine-tuning significantly improves the performance of 2D vision models.
+    
+- Demonstrates transferability and generalization.
+    
+- Future work could expand on more diverse 3D datasets.
+    
+
+---
+
+### **Appendices**
+
+- **A**: ViT variant results — works for ViT-B as well as ViT-S.
+    
+- **B**: Performance on classification tasks and with more complex heads (e.g., DPT).
+    
+- **C**: Experiments confirm that gains are due to 3D-aware features, not just increased feature dimensions.
+    
+- **D**: Visual analysis (PCA, clustering) shows cleaner, more detailed feature maps after fine-tuning.
+    
+
+---
+
 ##
