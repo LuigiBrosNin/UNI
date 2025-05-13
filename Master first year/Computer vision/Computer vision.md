@@ -430,12 +430,14 @@ The paper proposes a two-stage approach to enhance 2D visual foundation models (
 	    - $\mu$ -> position
 	    - Scale, Rotation $s, R$ -> shape and orientation
 	    - Opacity $\alpha$
-	    - color parameters (SH) -> view dependent rpg info using spherical harmonics
+	    - color parameters (SH) -> view dependent RGB info using spherical harmonics
 	    - feature vector (f) -> this is the key! Each Gaussian carries a _semantic feature vector_ distilled from 2D features.
         
     - Each Gaussian stores color and a low-dimensional feature vector.
         
-    - A CNN decoder up-projects the low-dim features after rendering.
+    - A CNN decoder up-projects the low-dim feature map after rendering.
+    - This two-step projection is crucial due to memory constraints. Storing full 384-dim features per Gaussian would be too heavy.
+    - Feature vectors are optimized to fit these 3d gaussians, minimizing a combined loss (`L_total = L_color (RGB image error) + L_feat (feature reconstruction error)`)
         
 - **3.2 3D-Aware Fine-Tuning**:
     
