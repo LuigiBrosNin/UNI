@@ -427,6 +427,9 @@ The paper proposes a two-stage approach to enhance 2D visual foundation models (
     
     - Multi-view 2D features are encoded into 3D Gaussians.
     - ==3D Gaussian Splats== are used for this (a method that models 3D scenes as a collection of transparent, view-dependent blobs (Gaussians))
+	    - $\mu$ -> position
+	    - Scale, Rotation $s, R$ -> shape and orientation
+	    - Opacity $\alpha$ -> 
         
     - Each Gaussian stores color and a low-dimensional feature vector.
         
