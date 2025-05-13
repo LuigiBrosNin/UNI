@@ -15,7 +15,7 @@
 
 
 # Theory
-Slides seem to be good, and are very visual. I don't feel like just adding a phrase and pasting the slide, so i'll freeze notes for now, see what to do of them, studying to slides to understand might be better. Maybe notes to remember definitions, as in summaries.
+Slides are terrible, what is important is mostly what the prof talks about, which is not in the slides as he explains.
 ## 
 
 # Summaries
