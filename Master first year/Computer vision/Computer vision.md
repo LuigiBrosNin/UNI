@@ -44,8 +44,18 @@ $d$ -> disparity
 **Lenses** ->
 - focus light more effectively
 - limited depth of field
-- follow the thin lens equation
+- follow the **thin lens equation** for focusing on light 
+$$\frac {1}{d_{s}}+\frac 1{d_{i}} = \frac 1{f_{L}}$$
+- $d_S$​: distance from the **scene point** to the lens (object distance, coords on the 3d world)
+- $d_I$​: distance from the **image point** to the lens (image distance, coordinates on the 2d photo)
+- $f_L$​: **focal length** of the lens (a fixed property of the lens)
+**DOF** can be manipulated using the diaphragm
 
+==Digitalization==
+- **Sensors** (CCD/CMOS) convert light to electrical signals.
+- Two key processes:
+    - **Sampling** (discretizing space → pixels)
+    - **Quantization** (discretizing intensity → levels)
 
 ## 2 - Spacial Filtering
 ==Denoising==
