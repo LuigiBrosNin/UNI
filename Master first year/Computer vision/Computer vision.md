@@ -51,11 +51,23 @@ $$\frac {1}{d_{s}}+\frac 1{d_{i}} = \frac 1{f_{L}}$$
 - $f_L$​: **focal length** of the lens (a fixed property of the lens)
 **DOF** can be manipulated using the diaphragm
 
-==Digitalization==
+==Digitization==
 - **Sensors** (CCD/CMOS) convert light to electrical signals.
 - Two key processes:
-    - **Sampling** (discretizing space → pixels)
-    - **Quantization** (discretizing intensity → levels)
+    - **Sampling** (discretizing space → pixels, hue)
+    - **Quantization** (discretizing intensity → levels of brightness)
+
+==Sensor characteristics==
+- **SNR (Signal-to-Noise Ratio)**
+    - Measures true signal vs. noise.
+    - Higher SNR = clearer images.
+- **Dynamic Range (DR)**
+    - Range of detectable light levels.
+    - Higher DR = better detail in both bright and dark regions.
+**Colour sensor** -> color filter arrays/optical filters are placed in front of the photodetectors, each pixel is sensitive to a specific range of wavelengths to detect RGB channels (basically filters that recognize colour)
+![[Pasted image 20250514172204.png]]
+
+
 
 ## 2 - Spacial Filtering
 ==Denoising==
@@ -564,10 +576,9 @@ Linear head analogy -> If the pre-trained model is like a **language**, the line
 
 - **What is the role of the pinhole camera model in understanding the image formation process?**  
     The pinhole camera model provides a simplified mathematical framework to describe the projection of a 3D scene onto a 2D image plane. It models the camera as having an infinitesimal aperture (no lens) and relates 3D coordinates to 2D image coordinates through simple geometric relationships.
-    
 - **How does the perspective projection model relate 3D scene points to their 2D image projections?**  
     This model relates the coordinates of a point in 3D space (x1, x2, x3) to its corresponding 2D image coordinates (y1, y2). This mapping results in a loss of depth information, making it challenging to infer the 3D structure from a single 2D image.
-    
+
 - **What is the correspondence problem in stereo vision, and how is it solved?**  
     The correspondence problem involves finding matching points in two stereo images that correspond to the same 3D scene point. It is solved using techniques like disparity computation and triangulation, which estimate the depth of scene points based on the relative positions of corresponding points in the two images.
     
