@@ -7,6 +7,7 @@
 	- **[[attachments]]**
 
 - **[[Computer vision]]**
+	- [[Appunti Giuseppe]]
 	- **[[attachments]]**
 
 - **[[Decision making with constraint programming]]**

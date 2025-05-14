@@ -16,6 +16,7 @@
 
 # Theory
 Slides are terrible, what is important is mostly what the prof talks about, which is not in the slides as he explains.
+
 ## 
 
 # Summaries
@@ -23,7 +24,13 @@ Slides are terrible, what is important is mostly what the prof talks about, whic
 **Computer vision** -> deals with extraction of information from images (eg. pic of a bird -> "This is a bird!")
 
 ## 1 - Image Formation Process
-#TODO
+**Key Processes**:
+- **Geometric relationships** (scene point to image point)
+- **Radiometric relationships** (light to brightness)
+- **Digitization** (sampling and quantization)
+
+**Pinhole model** -> capture light rays passing trough a tiny hole
+
 ## 2 - Spacial Filtering
 ==Denoising==
 We can denoise an image by taking a mean across time (multiple images)
@@ -525,3 +532,141 @@ Linear head analogy -> If the pre-trained model is like a **language**, the line
 ---
 
 ##
+
+# Theory questions
+## **Image Formation Process**
+
+- **What is the role of the pinhole camera model in understanding the image formation process?**  
+    The pinhole camera model provides a simplified mathematical framework to describe the projection of a 3D scene onto a 2D image plane. It models the camera as having an infinitesimal aperture (no lens) and relates 3D coordinates to 2D image coordinates through simple geometric relationships.
+    
+- **How does the perspective projection model relate 3D scene points to their 2D image projections?**  
+    This model relates the coordinates of a point in 3D space (x1, x2, x3) to its corresponding 2D image coordinates (y1, y2). This mapping results in a loss of depth information, making it challenging to infer the 3D structure from a single 2D image.
+    
+- **What is the correspondence problem in stereo vision, and how is it solved?**  
+    The correspondence problem involves finding matching points in two stereo images that correspond to the same 3D scene point. It is solved using techniques like disparity computation and triangulation, which estimate the depth of scene points based on the relative positions of corresponding points in the two images.
+    
+- **Explain the concept of epipolar geometry and its importance in stereo vision.  
+    **Epipolar geometry describes the geometric relationships between points observed in two images taken from different viewpoints. It constrains corresponding points to lie on corresponding epipolar lines. This constraint simplifies the search for point correspondences and is essential for stereo vision and 3D reconstruction.
+    
+
+## **Spatial Filtering**
+
+- **What are the differences between convolution and correlation in image processing?  
+    **Convolution: The kernel is flipped before sliding it over the image, defined as: o(x, y) = ∑m,n i(m, n) * h(x−m, y−n)  
+    Correlation: The kernel is not flipped: o(x, y) = ∑m,n i(m, n) ° h(m−x, n−y)
+    
+- **Why is the Gaussian filter preferred over the mean filter for smoothing images?  
+    **The Gaussian filter assigns higher weights to pixels closer to the center, making it better for preserving image structures during smoothing. The mean filter assigns equal weights to all pixels in the neighborhood, which can lead to blurring and loss of image details.
+    
+- **How does the bilateral filter help preserve edges while denoising an image?**  
+    The bilateral filter preserves edges by considering both spatial and intensity differences. Pixels that are spatially close and have similar intensity values contribute more to the smoothing process, avoiding blurring at edges.
+    
+
+## **Edge Detection**
+
+- **How does the Canny Edge Detector use hysteresis thresholding to prevent noisy edges?  
+    **Hysteresis thresholding uses two thresholds, T1 (high) and T2 (low), to track edges. An edge is accepted if its gradient magnitude exceeds T1​ or if it exceeds T2 and is connected to a stronger edge. This approach prevents fragmented edge detection caused by noise.
+    
+- **What is the Laplacian of Gaussian (LoG) kernel, and how is it used in edge detection?  
+    **The LoG kernel combines Gaussian smoothing with the Laplacian operator to detect edges. It smooths the image to reduce noise and then detects zero-crossings in the second derivative to identify edges.
+    
+- **What are the key steps in an edge detection pipeline, and why are they important?  
+    **The edge detection pipeline typically includes:  
+    Noise Reduction: Smooth the image using a filter like the Gaussian filter to reduce noise, which otherwise could lead to false edge detection.  
+    Gradient Computation: Compute the gradients of the image in the x and y directions to identify areas with rapid intensity changes.  
+    Non-Maxima Suppression (NMS): Thin the detected edges by keeping only local maxima in the gradient magnitude along the direction perpendicular to the gradient vector.  
+    Hysteresis Thresholding: Use two thresholds: a high threshold to confirm strong edges and a low threshold to extend weak edges connected to strong ones.  
+    Edge Linking: Connect remaining edge points to form continuous edge contours.
+    
+
+## **Local Features**
+
+- **Why are corners better features than edges for object matching in images?  
+    **Corners provide distinctive features that are repeatable across different images, whereas edges are locally ambiguous and hard to match reliably. Corners exhibit significant variation in intensity in all directions, making them robust keypoints.
+    
+- **How does the Harris corner detector improve upon the Moravec corner detector?  
+    **The Harris corner detector uses a continuous formulation and a Gaussian weighting function, making it more robust to rotation and illumination changes compared to the Moravec detector.
+    
+- **What are the main invariance properties desirable for feature detection?**  
+    Good feature detectors should be invariant to transformations such as rotation, scale changes, and illumination variations. This ensures reliable feature matching across different views of the same scene.
+    
+- **What is blob detection and how does it differ from edge detection?  
+    **Blob detection identifies regions in an image that differ in properties such as intensity or color compared to surrounding areas. While edge detection focuses on finding boundaries between regions, blob detection finds entire regions (blobs) that are brighter or darker than their surroundings. Blob detection is often used in applications like object tracking, feature detection, and keypoint localization.  
+    Common Blob Detection Techniques:  
+    - Laplacian of Gaussian (LoG): Identifies blobs as zero-crossings of the Laplacian of the image after Gaussian smoothing.  
+    - Difference of Gaussians (DoG): Approximates LoG by subtracting two Gaussian-blurred versions of the image.
+    
+
+## **Convolutional Neural Networks (CNNs)**
+
+- **What are the key layers in a CNN, and what roles do they play?  
+    **Convolutional layers: Extract features by applying filters to the input image.  
+    Pooling layers: Downsample feature maps to reduce computational complexity.  
+    Normalization layers: Stabilize and speed up the learning process.
+    
+- **How does parameter sharing in convolutional layers reduce computational complexity?**  
+    Parameter sharing reduces computational complexity by using the same filter weights across different spatial locations in the input image. This makes CNNs efficient and translation-invariant.
+    
+- **What is the purpose of the pooling layer in CNNs?**  
+    Pooling layers reduce the spatial dimensions of feature maps, making the network computationally efficient and less sensitive to small translations in the input image.
+    
+
+## **Object Detection**
+
+- **What is instance-level object detection, and how does it differ from category level detection?**  
+    It identifies specific occurrences of an object in an image (e.g., detecting a specific bottle), whereas category-level detection identifies general categories regardless of appearance or pose (e.g., detecting any car). Instance-level detection often deals with limited variability, while category-level detection faces higher variability and typically requires deep learning techniques.
+    
+- **How does template matching work, and what are its limitations?**  
+    In template matching, the model image is slid across the target image, comparing pixel intensities using metrics like Sum of Squared Differences (SSD) or Zero-Mean Normalized Cross-Correlation (ZNCC).  
+    Limitations:  
+    Computationally expensive for large images.  
+    Not robust to scale, rotation, or intensity changes.
+    
+- **What is the purpose of the Hough Transform in object detection?**  
+    The Hough Transform detects objects with known shapes (e.g., lines, circles) by mapping image points into a parameter space. By detecting intersections in this space, it identifies shapes even if they are partially occluded or noisy.
+    
+- **What is a backbone in object detection networks?**  
+    A backbone is a feature extractor (usually a pre-trained CNN) used in object detection architectures to compute meaningful representations of the input image. Examples: ResNet, VGG, and EfficientNet.
+    
+- **Why is ResNet a popular backbone in computer vision tasks?  
+    **ResNet uses skip connections (residual learning) to solve the vanishing gradient problem, enabling the training of very deep networks. It balances computational efficiency and accuracy, making it a go-to backbone for many object detection frameworks.
+    
+- **What are Feature Pyramid Networks (FPNs), and why are they useful?**  
+    FPNs enhance object detection by leveraging features at multiple scales (pyramidal structure). They combine low-resolution, high-semantic features with high-resolution, low-semantic features, improving small object detection.
+    
+- **How do Region-based CNNs (R-CNNs) work?**  
+    R-CNNs first generate region proposals and then classify each region using a CNN. Fast R-CNN improved efficiency by sharing CNN computation across all proposals. Faster R-CNN introduced a Region Proposal Network (RPN) for faster proposal generation instead of using Selective Search.
+    
+- **What is Single Shot MultiBox Detector (SSD), and how does it differ from R-CNNs?**  
+    SSD directly predicts object classes and bounding boxes without the need for region proposals, making it faster than R-CNNs. SSD uses multiple feature maps at different resolutions for detecting objects of various sizes.
+    
+
+## **Segmentation**
+
+- **What is the difference between image segmentation and instance segmentation?**  
+    Image segmentation: Divides the image into meaningful regions (e.g., separating background and foreground).  
+    Instance segmentation: Not only segments objects but also differentiates between multiple instances of the same category.
+    
+- **How does the U-Net architecture work in segmentation tasks?**  
+    U-Net has a contracting path (encoder) to capture context and an expanding path (decoder) to enable precise localization. It is widely used for biomedical image segmentation.
+    
+
+## **Metric Learning**
+
+- **What is a Siamese Network, and where is it used?**  
+    A Siamese Network consists of two identical subnetworks that process two inputs and output their similarity. It is commonly used in tasks like face verification and signature matching.
+    
+- **How does the triplet loss function work in metric learning?**  
+    Triplet loss minimizes the distance between an anchor and a positive example while maximizing the distance between the anchor and a negative example: Loss = max(d(A, P) − d(A, N) + α, 0), where α is a margin parameter.
+    
+
+## **Transformers**
+
+- **How do Vision Transformers (ViTs) work differently from CNNs?**  
+    Unlike CNNs, which rely on convolutions for feature extraction, ViTs use a self-attention mechanism to model global relationships between patches in an image. Images are divided into patches, which are linearly embedded and processed through multiple attention layers.
+    
+- **What is the role of positional encoding in ViTs?**  
+    Since transformers do not have inherent spatial awareness, positional encoding is added to the input embeddings to retain spatial information.
+    
+- **Why is multi-head self-attention important in transformers?**  
+    Multi-head self-attention allows the model to learn different types of relationships between patches by projecting the input into different subspaces simultaneously.
