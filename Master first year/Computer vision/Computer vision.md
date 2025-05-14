@@ -24,12 +24,28 @@ Slides are terrible, what is important is mostly what the prof talks about, whic
 **Computer vision** -> deals with extraction of information from images (eg. pic of a bird -> "This is a bird!")
 
 ## 1 - Image Formation Process
-**Key Processes**:
+Getting a 3d scene into a 2d image: **Key Processes**:
 - **Geometric relationships** (scene point to image point)
 - **Radiometric relationships** (light to brightness)
 - **Digitization** (sampling and quantization)
 
 **Pinhole model** -> capture light rays passing trough a tiny hole
+**Perspective projection** -> 3d scene points are converted into a 2d image plane, coordinates scale inversely with depth
+
+**Stereo vision** -> to solve the depth info loss, we use 2 images (stereo) to recover 3d structure by triangulation (distance between 2 points is used for depth measurement)
+- optical axes must be parallel
+- equal focal length
+$$\text{depth } z = \frac{b\cdot f} d$$
+$b$ -> baseline
+$f$ -> focal length
+$d$ -> disparity
+
+**Pinhole cameras** have infinite depth of field but poor light gathering.
+**Lenses** ->
+- focus light more effectively
+- limited depth of field
+- follow the thin lens equation
+
 
 ## 2 - Spacial Filtering
 ==Denoising==
