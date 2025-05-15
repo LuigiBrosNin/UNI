@@ -40,6 +40,11 @@ $b$ -> baseline
 $f$ -> focal length
 $d$ -> disparity
 
+**Epipolar geometry** -> **geometric relationship** between two cameras viewing the same 3D scene from different angles.
+![[Pasted image 20250514173811.png]]
+![[Pasted image 20250514173644.png]]
+
+
 **Pinhole cameras** have infinite depth of field but poor light gathering.
 **Lenses** ->
 - focus light more effectively
@@ -578,12 +583,11 @@ Linear head analogy -> If the pre-trained model is like a **language**, the line
     The pinhole camera model provides a simplified mathematical framework to describe the projection of a 3D scene onto a 2D image plane. It models the camera as having an infinitesimal aperture (no lens) and relates 3D coordinates to 2D image coordinates through simple geometric relationships.
 - **How does the perspective projection model relate 3D scene points to their 2D image projections?**  
     This model relates the coordinates of a point in 3D space (x1, x2, x3) to its corresponding 2D image coordinates (y1, y2). This mapping results in a loss of depth information, making it challenging to infer the 3D structure from a single 2D image.
-
 - **What is the correspondence problem in stereo vision, and how is it solved?**  
     The correspondence problem involves finding matching points in two stereo images that correspond to the same 3D scene point. It is solved using techniques like disparity computation and triangulation, which estimate the depth of scene points based on the relative positions of corresponding points in the two images.
     
-- **Explain the concept of epipolar geometry and its importance in stereo vision.  
-    **Epipolar geometry describes the geometric relationships between points observed in two images taken from different viewpoints. It constrains corresponding points to lie on corresponding epipolar lines. This constraint simplifies the search for point correspondences and is essential for stereo vision and 3D reconstruction.
+- **Explain the concept of epipolar geometry and its importance in stereo vision.**
+    Epipolar geometry describes the geometric relationships between points observed in two images taken from different viewpoints. It constrains corresponding points to lie on corresponding epipolar lines. This constraint simplifies the search for point correspondences and is essential for stereo vision and 3D reconstruction.
     
 
 ## **Spatial Filtering**
