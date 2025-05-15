@@ -71,7 +71,8 @@ $$\frac {1}{d_{s}}+\frac 1{d_{i}} = \frac 1{f_{L}}$$
 **Colour sensor** -> color filter arrays/optical filters are placed in front of the photo-detectors, each pixel is sensitive to a specific range of wavelengths to detect RGB channels (basically filters that recognize colour)
 ![[Pasted image 20250514172204.png]]
 ## 2 - Spacial Filtering
-We want to reduce "noise" in images
+We want to reduce "noise" in images trough the spatial domain (pixel neighborhood).
+**Spacial filtering** -> We're understanding how to cleanup images by looking at the surrounding space of each pixel 
 
 ==Denoising==
 We can denoise an image by taking a mean across time (multiple images)
