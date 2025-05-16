@@ -130,9 +130,12 @@ Deploying the separability property speeds up the filtering operation ( one 2D g
 ![[Pasted image 20250305195940.png|200]]
 ⚠ Gaussian-like noise, such as sensor noise, cannot be dealt with by the Median, as this would require computing new noiseless intensities.
 
-==Bilateral Filter== -> Advanced non-linear filter to accomplish denoising of Gaussian-like noise without blurring the image (aka edge preserving smoothing).
+==Bilateral Filter== -> Advanced non-linear filter to accomplish denoising of Gaussian-like noise without blurring the image (aka edge preserving smoothing, blurs only if pixels are similar in position and intensity value).
 
-==Non-local Means Filter== -> non-linear edge preserving smoothing filter. The key idea is that the similarity among patches spread over the image can be deployed to achieve denoising.
+==Non-local Means Filter== -> non-linear edge preserving smoothing filter. Finds patches across the image **that look similar** and averages their center pixels
+
+![[Pasted image 20250516230626.png]]
+
 ## 3 - Edge Detection
 (Everything is in grayscale)
 **Eges** -> seen as sharp changes of a 1D signal
