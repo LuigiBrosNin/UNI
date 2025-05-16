@@ -81,50 +81,52 @@ With a single image, we can compute a mean across neighbouring pixels (mean acro
 
 ==**Image Filters**== -> compute a new (RGB) value for each pixel based on its neighbors. Used for **denoising, sharpening and edge detection**
 
-**filter kernel** -> a small matrix used for calculations
+**filter kernel** -> a small matrix used for some calculations we'll see
 
 **Linear and Translation-Equivariant (LTE)** -> filter type, used as feature extractors in CNNs (Convolutional Neural Networks) Implemented via **2D convolution** between the image and a **kernel** (impulse response).
 
-**Linear operator** $T\{\cdot\}:o(x,y)$ -> Given an input 2D signal $i(x,y)$ and a 2D linear operator 
-$$T\{i(x,y)\} \text{ is Linear} \iff T\{\alpha i_{1}(x,y) + \beta i_{2}(x,y)\} = \alpha o_{1}(x,y) + \beta o_{2}(x,y)$$
-$$\text{with }\quad o_{1}=T\{i_{1}\} \land o_{2}=T\{i_{2}\} $$
-$\alpha \beta$ -> constants
-All this math yap to say the operation is linear :LiSkull:
+**Translation-equivariant operator** -> If you shift the input, the output shifts the same way.
 
-**Translation-equivariant operator** ->
-$$T\{i(x,y)\} \text{ is Translation-equivariant } \iff T\{i(x-x_{0}, y-y_{0})=o(x-x_{0},y-y_{0}\}$$
-
- if we have an LTE operator ->  output signal is given by the <u>convolution</u> (mathematical operation on two functions that produces a third function) between the **input signal** and the **impulse response** (point spread function) $h(x,y)=T\{\delta (x,y)\}$ of the operator ($\delta$ -> Unit impulse)
+ if we have an LTE operator -> sliding the kernel over every pixel, flipping it (that's the convolution), and taking a weighted sum of the neighborhood.
  
  ==Convolution proprieties==
  - Associative property
  - Commutative property
  - Distributive property with the sum
  - Convolution Commutes with Differentiation
+These properties mean we can rearrange operations, simplify pipelines, and apply filters in any order without worrying about the result changing unexpectedly.
 
-==Correlation==
-if $h$ is an even function (symmetric) ($h(x,y) = h(-x,-y)$) -> $i*h=h*i=h\circ i$ (where * is convolution, $\circ$ is correlation), aka convolution and correlation yield the same result.
+==Correlation== -> looks the same as convolution, but:
+- **Convolution flips** the kernel.
+- **Correlation does not**.
+In image processing, this matters **only if your kernel isn’t symmetric**.
 
-**Discrete convolution** -> consists in summing the product of the two signals where one has been reflected about the origin and translated.
+**Discrete convolution** -> consists in summing the product of the two signals where one has been reflected about the origin and translated. We're simplifying the  
 ![[Pasted image 20250305194345.png]]
 In a practical implementation, we cycle trough the kernel from $-k$ to $+k$ instead of the infinities (duh)
-To solve the border issue, we either CROP or PAD the image
+
+- Practical implementation of a filter in a nutshell
+	- Let’s say you’re applying a 3×3 kernel. You’ll:
+	1. Slide it over every pixel
+	2. Multiply corresponding kernel & pixel values
+	3. Sum them
+	4. Replace the center pixel with that sum
+
+To solve the border issue (neighbourhood of bordering pixels incomplete), we either CROP or PAD the image
 
 **==Mean Filter==** -> replace pixel intensity with the average intensity of neighbourhood 
 Fastest way to denoise an image
 
-**==Gaussian Filter==** -> LTE operator whose impulse response is a 2D Gaussian function (aka having gaussian distribution)(with zero mean and constant diagonal covariance matrix)
+**==Gaussian Filter==** -> LTE operator whose impulse response is a 2D Gaussian function (aka having Gaussian distribution)(with zero mean and constant diagonal covariance matrix)
 
-$\sigma$ param -> amount of smoothing by the filter (higher -> more blurry)
+$\sigma$ standard deviation param -> amount of smoothing by the filter (higher -> more blur)
 
-🐰for practical implementation, i genuinely didn't understand a thing.
-
-Size of the filter given $\sigma$ -> with interval $[-3\sigma,3\sigma]$, captures 99% of the area (“energy”)
+Size of the (kernel) filter given $\sigma$ -> with interval $[-3\sigma,3\sigma]$, captures 99% of the area (“energy”)
 of the Gaussian function, we take $(2k+1)\times(2k+1)$ kernel with $k=[3\sigma]$
 
 Deploying the separability property speeds up the filtering operation ( one 2D gaussian split into two 1D convolutions)
 
-==Median Filter== -> Non linear filter, each pixel intensity is replaced by the median over a given neighbourhood, the median being the value falling half-way in the sorted set of intensities.
+==Median Filter== -> Non linear filter, each pixel intensity is replaced by the median over a given neighbourhood, the median being the middle value in the sorted neighbourhood.
 ![[Pasted image 20250305195940.png|200]]
 ⚠ Gaussian-like noise, such as sensor noise, cannot be dealt with by the Median, as this would require computing new noiseless intensities.
 
