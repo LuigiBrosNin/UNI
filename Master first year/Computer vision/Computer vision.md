@@ -86,6 +86,7 @@ With a single image, we can compute a mean across neighbouring pixels (mean acro
 $$T\{i(x,y)\} \text{ is Linear} \iff T\{\alpha i_{1}(x,y) + \beta i_{2}(x,y)\} = \alpha o_{1}(x,y) + \beta o_{2}(x,y)$$
 $$\text{with }\quad o_{1}=T\{i_{1}\} \land o_{2}=T\{i_{2}\} $$
 $\alpha \beta$ -> constants
+All this math yap to say the operation is linear :LiSkull:
 
 **Translation-equivariant operator** ->
 $$T\{i(x,y)\} \text{ is Translation-equivariant } \iff T\{i(x-x_{0}, y-y_{0})=o(x-x_{0},y-y_{0}\}$$
