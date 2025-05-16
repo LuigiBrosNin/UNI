@@ -19,7 +19,9 @@ Slides are terrible, what is important is mostly what the prof talks about, whic
 
 ## 
 
-# Summaries
+# Notes
+I can't make miracles, the slides are hard to follow and lack pedagogical cohesion to understand, if you want to study there you're in for some challenge.
+I hope Lisanti changes the slides next year, meanwhile i'll try my best to make these notes to study and most importantly understand this 60 cfu curse.
 ## 0 - Intro
 **Computer vision** -> deals with extraction of information from images (eg. pic of a bird -> "This is a bird!")
 ## 1 - Image Formation Process
@@ -71,8 +73,7 @@ $$\frac {1}{d_{s}}+\frac 1{d_{i}} = \frac 1{f_{L}}$$
 **Colour sensor** -> color filter arrays/optical filters are placed in front of the photo-detectors, each pixel is sensitive to a specific range of wavelengths to detect RGB channels (basically filters that recognize colour)
 ![[Pasted image 20250514172204.png]]
 ## 2 - Spacial Filtering
-We want to reduce "noise" in images trough the spatial domain (pixel neighborhood).
-**Spacial filtering** -> We're understanding how to cleanup images by looking at the surrounding space of each pixel 
+We want to reduce "noise" in images trough the spatial domain ( aka pixel neighborhood).
 
 ==Denoising==
 We can denoise an image by taking a mean across time (multiple images)
@@ -80,7 +81,9 @@ With a single image, we can compute a mean across neighbouring pixels (mean acro
 
 ==**Image Filters**== -> compute a new (RGB) value for each pixel based on its neighbors. Used for **denoising, sharpening and edge detection**
 
-**Linear and Translation-Equivariant (LTE)** -> filter subclass operators, used as feature extractors in CNNs (Convolutional Neural Networks) Implemented via **2D convolution** between the image and a **kernel** (impulse response).
+**filter kernel** -> a small matrix used for calculations
+
+**Linear and Translation-Equivariant (LTE)** -> filter type, used as feature extractors in CNNs (Convolutional Neural Networks) Implemented via **2D convolution** between the image and a **kernel** (impulse response).
 
 **Linear operator** $T\{\cdot\}:o(x,y)$ -> Given an input 2D signal $i(x,y)$ and a 2D linear operator 
 $$T\{i(x,y)\} \text{ is Linear} \iff T\{\alpha i_{1}(x,y) + \beta i_{2}(x,y)\} = \alpha o_{1}(x,y) + \beta o_{2}(x,y)$$
@@ -100,10 +103,7 @@ $$T\{i(x,y)\} \text{ is Translation-equivariant } \iff T\{i(x-x_{0}, y-y_{0})=o(
  - Convolution Commutes with Differentiation
 
 ==Correlation==
-![[Pasted image 20250305192216.png]]
-🐰? tbh i'm having trouble understanding what's all this for, and what this means
-
-if $h$ is an even function ($h(x,y) = h(-x,-y)$) -> $i*h=h*i=h\circ i$ (where * is convolution, $\circ$ is correlation) 
+if $h$ is an even function (symmetric) ($h(x,y) = h(-x,-y)$) -> $i*h=h*i=h\circ i$ (where * is convolution, $\circ$ is correlation), aka convolution and correlation yield the same result.
 
 **Discrete convolution** -> consists in summing the product of the two signals where one has been reflected about the origin and translated.
 ![[Pasted image 20250305194345.png]]
