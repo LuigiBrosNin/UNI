@@ -78,9 +78,9 @@ We want to reduce "noise" in images trough the spatial domain (pixel neighborhoo
 We can denoise an image by taking a mean across time (multiple images)
 With a single image, we can compute a mean across neighbouring pixels (mean across space)
 
-==**Image Filters**== -> Image processing operators that compute the new intensity (colour) of a pixel, $p$, based on the intensities (colours) of the support (neighbourhood) of $p$. They accomplish useful stuff such as denoising/sharpening.
-- **Linear and Translation-Equivariant (LTE)** filter subclass operators, used as feature extractors in CNNs (Convolutional Neural Networks)
-**Signal theory** -> their application in image processing consist in a <u>2D convolution</u> between the input image and the <u>impulse response function</u> (point spread function or kernel) of the LTE operator.
+==**Image Filters**== -> compute a new (RGB) value for each pixel based on its neighbors. Used for **denoising, sharpening and edge detection**
+
+**Linear and Translation-Equivariant (LTE)** -> filter subclass operators, used as feature extractors in CNNs (Convolutional Neural Networks) Implemented via **2D convolution** between the image and a **kernel** (impulse response).
 
 **Linear operator** $T\{\cdot\}:o(x,y)$ -> Given an input 2D signal $i(x,y)$ and a 2D linear operator 
 $$T\{i(x,y)\} \text{ is Linear} \iff T\{\alpha i_{1}(x,y) + \beta i_{2}(x,y)\} = \alpha o_{1}(x,y) + \beta o_{2}(x,y)$$
