@@ -208,6 +208,10 @@ robust edge detectors should include a smoothing step to filter out noise
 2. Apply Laplacian 
 3. Find zero-crossings
 4. Once a sign change is found, the actual edge may be localized at the pixel where the absolute value of the LOG is smaller (best choice) or either pixel towards the positive or negative side.
+
+**The Parameter $\sigma$ (sigma)** of the Gaussian controls ->
+- The **degree of smoothing** (larger σ for more noise).
+- The **scale** at which you detect features (larger σ for broader edges).
 ### Summary
 ![[Pasted image 20250519164759.png]]
 ## 4 - Local Features
@@ -622,21 +626,19 @@ Linear head analogy -> If the pre-trained model is like a **language**, the line
 
 ## **Edge Detection**
 
-- **How does the Canny Edge Detector use hysteresis thresholding to prevent noisy edges?  
-    **Hysteresis thresholding uses two thresholds, T1 (high) and T2 (low), to track edges. An edge is accepted if its gradient magnitude exceeds T1​ or if it exceeds T2 and is connected to a stronger edge. This approach prevents fragmented edge detection caused by noise.
+- **How does the Canny Edge Detector use hysteresis thresholding to prevent noisy edges?**
+    Hysteresis thresholding uses two thresholds, T1 (high) and T2 (low), to track edges. An edge is accepted if its gradient magnitude exceeds T1​ or if it exceeds T2 and is connected to a stronger edge. This approach prevents fragmented edge detection caused by noise.
     
-- **What is the Laplacian of Gaussian (LoG) kernel, and how is it used in edge detection?  
-    **The LoG kernel combines Gaussian smoothing with the Laplacian operator to detect edges. It smooths the image to reduce noise and then detects zero-crossings in the second derivative to identify edges.
+- **What is the Laplacian of Gaussian (LoG) kernel, and how is it used in edge detection?**
+	The LoG kernel combines Gaussian smoothing with the Laplacian operator to detect edges. It smooths the image to reduce noise and then detects zero-crossings in the second derivative to identify edges.
     
-- **What are the key steps in an edge detection pipeline, and why are they important?  
-    **The edge detection pipeline typically includes:  
+- **What are the key steps in an edge detection pipeline, and why are they important?**
+	The edge detection pipeline typically includes:  
     Noise Reduction: Smooth the image using a filter like the Gaussian filter to reduce noise, which otherwise could lead to false edge detection.  
     Gradient Computation: Compute the gradients of the image in the x and y directions to identify areas with rapid intensity changes.  
     Non-Maxima Suppression (NMS): Thin the detected edges by keeping only local maxima in the gradient magnitude along the direction perpendicular to the gradient vector.  
     Hysteresis Thresholding: Use two thresholds: a high threshold to confirm strong edges and a low threshold to extend weak edges connected to strong ones.  
     Edge Linking: Connect remaining edge points to form continuous edge contours.
-    
-
 ## **Local Features**
 
 - **Why are corners better features than edges for object matching in images?  
