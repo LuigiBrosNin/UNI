@@ -138,7 +138,11 @@ Deploying the separability property speeds up the filtering operation ( one 2D g
 
 ## 3 - Edge Detection
 (Everything is in grayscale)
-**Eges** -> seen as sharp changes of a 1D signal
+
+**Eges** (object boundaries) -> seen as sharp brightness changes of a 1D signal
+
+Detection of edges in important for **Segmentation**, **object recognition** and **measurement tools**.
+
 - We use **derivatives** to detect edges with thresholds for detection
 - We use **partial derivatives** to detect edges in 2d to detect the direction of the edge
 - We can approximate the gradient with difference 
@@ -597,16 +601,15 @@ Linear head analogy -> If the pre-trained model is like a **language**, the line
 
 ## **Spatial Filtering**
 
-- **What are the differences between convolution and correlation in image processing?  
-    **Convolution: The kernel is flipped before sliding it over the image, defined as: o(x, y) = ∑m,n i(m, n) * h(x−m, y−n)  
-    Correlation: The kernel is not flipped: o(x, y) = ∑m,n i(m, n) ° h(m−x, n−y)
+- **What are the differences between convolution and correlation in image processing?**
+    Convolution: The kernel is flipped before sliding it over the image, defined as: $o(x, y) = \sum_{m,n}^{i}(m, n) * h(x−m, y−n)$
+    Correlation: The kernel is not flipped: $o(x, y) = \sum_{m,n}^{i}(m, n) ° h(m−x, n−y)$
     
-- **Why is the Gaussian filter preferred over the mean filter for smoothing images?  
-    **The Gaussian filter assigns higher weights to pixels closer to the center, making it better for preserving image structures during smoothing. The mean filter assigns equal weights to all pixels in the neighborhood, which can lead to blurring and loss of image details.
+- **Why is the Gaussian filter preferred over the mean filter for smoothing images?**
+    The Gaussian filter assigns higher weights to pixels closer to the center, making it better for preserving image structures during smoothing. The mean filter assigns equal weights to all pixels in the neighborhood, which can lead to blurring and loss of image details.
     
 - **How does the bilateral filter help preserve edges while denoising an image?**  
     The bilateral filter preserves edges by considering both spatial and intensity differences. Pixels that are spatially close and have similar intensity values contribute more to the smoothing process, avoiding blurring at edges.
-    
 
 ## **Edge Detection**
 
