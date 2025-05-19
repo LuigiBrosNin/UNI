@@ -215,22 +215,22 @@ robust edge detectors should include a smoothing step to filter out noise
 ### Summary
 ![[Pasted image 20250519164759.png]]
 ## 4 - Local Features
-We want to find **Corresponding Points** between 2+ images of a scene
+We want to find **Corresponding Points** (Local invariant features) between 2+ images of a scene
 ![[Pasted image 20250320153021.png|500]]
 **Correspondences** -> image points which are the projection of the same 3D point in different views of the scene
 
 3 successive steps for defining correspondences:  
-- **Detection** of salient points (aka keypoints, interest points, feature points...)  
-- **Description** -> computation of a suitable descriptor based on pixels in the keypoint neighbourhood  
-- **Matching** descriptors between images  
+1. **Detection** of salient points (aka keypoints, interest points, feature points...)  
+2. **Description** -> computation of a suitable descriptor based on pixels in the keypoint neighbourhood  
+3. **Matching** descriptors between images  
 
 ==Detectors/Descriptors good properties==
 - Detector
 	- **Repeatability** -> find the same keypoints in different views  
-	- **Saliency** -> find keypoints surrounded by informative patterns 
-- Descriptor  
-	- **Distinctiveness vs. Robustness Trade-off** -> capture the salient information around a keypoint, disregard changes due to nuisances (e.g. light changes) and noise  
-	- **Compactness** -> description as concise as possible
+	- **Saliency** -> find keypoints surrounded by informative patterns
+- Descriptor
+	- **Distinctiveness vs. Robustness Trade-off** -> capture the salient information around a keypoint, disregard changes due to nuisances (e.g. light changes) and noise
+	- **Compactness** -> description as concise as possible for low memory and fast matching
 - Desirable **speed** for both
 
 ==Moravec Interest Point Detector==
