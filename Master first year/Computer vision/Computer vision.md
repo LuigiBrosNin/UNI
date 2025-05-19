@@ -210,8 +210,8 @@ robust edge detectors should include a smoothing step to filter out noise
 4. Once a sign change is found, the actual edge may be localized at the pixel where the absolute value of the LOG is smaller (best choice) or either pixel towards the positive or negative side.
 
 **The Parameter $\sigma$ (sigma)** of the Gaussian controls ->
-- The **degree of smoothing** (larger σ for more noise).
-- The **scale** at which you detect features (larger σ for broader edges).
+- The **degree of smoothing** (larger $\sigma$  for more noise).
+- The **scale** at which you detect features (larger $\sigma$  for broader edges).
 ### Summary
 ![[Pasted image 20250519164759.png]]
 ## 4 - Local Features
@@ -269,22 +269,29 @@ elementary level explanation:
 - We detect features in order to match their **descriptors**
 - To compute and match descriptors we need to smooth out the details that do not appear across the range of scales (more explained next)
 
-### Scale-Space and Multi-Scale Detection
-**Key finding** -> apply a <u>fixed-size detection</u> tool on increasingly <u>down-sampled</u> and <u>smoothed</u> versions of the input image (trough Laplacian of Gaussian or Difference of Gaussian) (LoG, DoG)
+### Scale-Space and Features
+==Scale-space==
+**Key finding** -> apply a <u>fixed-size detection</u> tool on increasingly <u>down-sampled</u> and <u>smoothed</u> versions of the input image (trough Laplacian of Gaussian or Difference of Gaussian, its approximation) (LoG, DoG)
 ![[Pasted image 20250306154726.png|400]]
+**Scale-space** -> group of the same image at different computed smoothed scales
+$$L(x,y,\sigma )=G(x,y,\sigma )∗I(x,y)$$
+Where:
+- G is the Gaussian kernel
+- $\sigma$ controls the scale (blur amount)
+- $*$ is convolution
 
-criterion to select their characteristic scale -> finding their **extrema**
 
-Scale-normalized Laplacian of Gaussian (LOG)
-![[Pasted image 20250306162610.png]]
+==Multi-Scale Feature Detection (Lindeberg)==
+Scale-space gives us images at various levels, but we don’t yet know **which features** to extract, or **at what scale**.
 
-==Multi-Scale Feature Detection==
-Features (Blob-like) and scales detected as extrema of the scale-normalized LOG
+Lindeberg method:
+- Use **scale-normalized derivatives** to detect features at their "natural" scale.
+- Normalize the filter responses (multiply by $\sigma$)
+- Search for **extrema** (maxima or minima) in **x, y, and σ** — i.e., in 3D.
+
 ![[Pasted image 20250306162700.png]]
 
-==Difference of Gaussian (DoG)== -> very close approximation of Lindeberg's scale-normalized LOG
-- Detect keypoints by seeking for the extrema of the DoG (Difference of Gaussian) function across the $(x,y,\sigma)$ domain (different adjacents in the scale)
-	![[Pasted image 20250306163056.png]]
+==Difference of Gaussian (DoG)== -> very close approximation of Lindeberg's scale-normalized LoG
 
 ==Keypoint Detection and Tuning==
 **Extrema detection** -> a point is detected as a keypoint $\iff$ its DoG is higher (lower) than that of the 26 neighbours (in 3D)
@@ -320,7 +327,7 @@ The SIFT (Scale Invariant Feature Transform) descriptor is computed as follows
 -  Each histogram has 8 bins (i.e. bin size 45°)  
 -  Each pixel in the region contributes to its designated bin according to  
 	-  Gradient magnitude  
-	-  Gaussian weighting function centred at the keypoint (with σ equal to half the grid size)
+	-  Gaussian weighting function centred at the keypoint (with $\sigma$  equal to half the grid size)
 🐰 I did not understand the point of this yet
 This is used to generate descriptors to match, and the Feature vector is the output
 
