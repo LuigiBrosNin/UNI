@@ -181,15 +181,22 @@ We should look for the maxima along the gradient direction in images (2D signals
 - After the NMS, we apply a **threshold** on the magnitude of the gradient to get rid of unwanted edges (noise as edges)
 ### ==The standard: Canny’s Edge Detector==
 Quantitative criteria to measure edge detection performance, and then apply the optimal filter for the best result
-- Good detection -> extract edges even in noisy images
-- Good localization -> minimize found edge and true edge distance
-- One response to one edge -> one single edge pixel detected at each true edge
-Canny shows that the optimal edge detection operation consists in finding local extrema of the convolution of the signal by a first order Gaussian derivative (i.e. G’(x))
-- Edge **streaking** may occur when magnitude varies along object contours
-- **hysteresis** thresholding -> approach relying on a higher $(T_h)$ and a lower $(T_l)$threshold.
+
+==Principled criteria:==
+1. Good detection -> extract edges even in noisy images
+2. Good localization -> minimize found edge and true edge distance
+3. One response to one edge -> one single edge pixel detected at each true edge
+
+Canny shows that the optimal edge detection operation consists in a pipeline of
+1. Gaussian smoothing
+2. Gradient computation
+3. Non-maxima suppression
+4. **Hysteresis** thresholding -> approach relying on a higher $(T_h)$ and a lower $(T_l)$threshold.
 	- Pixel taken as edge IF:
 	- gradient magnitude > $T_h$ <u>OR</u>
 	- gradient magnitude > $T_i$ <u>AND</u> pixel is a neighbor of an already detected edge
+### ==Second-Order Derivative Methods==
+
 
 ==Zero-crossing==
 ![[Pasted image 20250407234936.png|300]]
