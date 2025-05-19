@@ -218,7 +218,8 @@ robust edge detectors should include a smoothing step to filter out noise
 We want to find **Corresponding Points** (Local invariant features) between 2+ images of a scene
 ![[Pasted image 20250320153021.png|500]]
 **Correspondences** -> image points which are the projection of the same 3D point in different views of the scene
-
+**Invariance** -> a method continues to work **even when the image changes** in certain ways (rotation, scale, illumination)
+### Three-Stage Pipeline for Local Features
 3 successive steps for defining correspondences:  
 1. **Detection** of salient points (aka keypoints, interest points, feature points...)  
 2. **Description** -> computation of a suitable descriptor based on pixels in the keypoint neighbourhood  
@@ -233,17 +234,30 @@ We want to find **Corresponding Points** (Local invariant features) between 2+ i
 	- **Compactness** -> description as concise as possible for low memory and fast matching
 - Desirable **speed** for both
 
-==Moravec Interest Point Detector==
-Look at patches in the image and compute cornerness
-![[Pasted image 20250320154429.png|150]]
+### Classic corner detectors
+We use corners for identification, as they're easily identifiable (strong change in intensity in all directions)
 
-==**Harris Corner Detector**== -> to find corresponding points, we rely on a continuous formulation of the Moravec's error function, based on the weighted sum of derivatives around the point of interest (aka, i look at points around the interested one to figure out if it's somewhat the same one, eg:)
-![[Pasted image 20250306152512.png|400]]
-1. Compute C at each pixel
-2. Select all pixels where C is higher than a chosen positive threshold (T)
-3. Within the previous set, detect as corners only those pixels that are local maxima of C (NMS)
+==Moravec Interest Point Detector== -> Look at patches in the image and compute cornerness (8 neighboring patches, look for high variation)
+![[Pasted image 20250320154429.png|200]]
 
-==Invariance properties==
+==**Harris Corner Detector**==
+1. Compute image gradients (how intensity changes)
+2. Build the matrix $M$
+3. Compute the corner response C=det⁡(M)−k⋅trace(M)2C = \det(M) - k \cdot \text{trace}(M)^2C=det(M)−k⋅trace(M)2
+4. Threshold & NMS to pick the best corners
+---
+Expl
+1. compute image gradients -> based on <u>the weighted sum of derivatives around the point of interest</u> (aka, i look at points around the interested one to figure out if it's somewhat the same one)
+	![[Pasted image 20250306152512.png|400]]
+2. Form the structure tensor (matrix M for each pixel)
+3. Compute "Cornerness" $C$ score
+4. Select all pixels where $C$ is higher than a chosen positive threshold (T) given by a sensitivity constant $k$
+5. Within the previous set, detect as corners only those pixels that are local maxima of $C$ (NMS)
+
+### Invariance
+
+
+### ==Invariance properties==
 **Rotation invariance** -> eigenvalues of M (M encodes the local img structure around the considered pixel) are invariant to a rotation of the image axes, thus so is Harris cornerness function
 
 **No invariance to an affine intensity change** ->
