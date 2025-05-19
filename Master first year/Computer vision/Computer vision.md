@@ -137,13 +137,10 @@ Deploying the separability property speeds up the filtering operation ( one 2D g
 ![[Pasted image 20250516230626.png]]
 
 ## 3 - Edge Detection
-(Everything is in grayscale)
-
 **Eges** (object boundaries) -> seen as sharp brightness changes of a 1D signal
 
 Detection of edges in important for **Segmentation**, **object recognition** and **measurement tools**.
 ![[Pasted image 20250519152935.png]]
-
 
 ### ==1D step edge==
 - We use **the 1st derivative** to detect edges with thresholds for detection
@@ -165,28 +162,24 @@ We can approximate the gradient with:
 	- Correlation kernels -> $\begin{bmatrix}-1&0&1\end{bmatrix}\ \begin{bmatrix}-1\\0\\1\end{bmatrix}$
 ### ==Noise==
 **Noise** causes problems in edge detection, we incorporate the smoothing process of the image when detecting edges (take the average of a group of pixels compared to the average of another group)
-### ==Non-Maxima Suppression (NMS)==
 
-
-==Prewitt and Sobel==
+==Prewitt and Sobel== -> operators for calculating weights
 - **Prewitt operator** -> approximating partial derivatives by central differences
 	![[Pasted image 20250227171204.png]]
 - **Sobel operator** -> central pixel weight
 	![[Pasted image 20250227171301.png]]
+### ==Non-Maxima Suppression (NMS)==
 A good approach to detect edges consists in finding the **local maxima** of the absolute value of the derivative of the signal
 ![[Pasted image 20250407231227.png|300]]
 
-==Non-Maxima Suppresion (NMS)==
 We should look for the maxima along the gradient direction in images (2D signals)
 ![[Pasted image 20250407231818.png|600]]
 - We cannot know in advance, so we estimate it locally each time
 - The magnitude of the gradient has to be estimated at points outside the discrete pixel grid
-- We do it by linear interpolation from the closest points belonging to the grid (we base our magnitude by theoretical points that we calculate mathematically, eg. A,B in the example)
+- We do it by <u>linear interpolation</u> from the closest points belonging to the grid (we base our magnitude by theoretical points that we calculate mathematically, eg. A,B in the example)
 	![[Pasted image 20250407232325.png|300]]
-	
-- After the NMS, we apply a threshold on the magnitude of the gradient to get rid of unwanted edges
-
-==Canny’s Edge Detector==
+- After the NMS, we apply a **threshold** on the magnitude of the gradient to get rid of unwanted edges (noise as edges)
+### ==The standard: Canny’s Edge Detector==
 Quantitative criteria to measure edge detection performance, and then apply the optimal filter for the best result
 - Good detection -> extract edges even in noisy images
 - Good localization -> minimize found edge and true edge distance
