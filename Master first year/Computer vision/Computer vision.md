@@ -142,19 +142,32 @@ Deploying the separability property speeds up the filtering operation ( one 2D g
 **Eges** (object boundaries) -> seen as sharp brightness changes of a 1D signal
 
 Detection of edges in important for **Segmentation**, **object recognition** and **measurement tools**.
+![[Pasted image 20250519152935.png]]
 
-- We use **derivatives** to detect edges with thresholds for detection
-- We use **partial derivatives** to detect edges in 2d to detect the direction of the edge
-- We can approximate the gradient with difference 
-	- Backward differences -> $(i) - (i-1)$
+
+### ==1D step edge==
+- We use **the 1st derivative** to detect edges with thresholds for detection
+	![[Pasted image 20250407231227.png|300]]
+### ==2D Gradient==
+**Gradient** -> vector of **partial derivatives** (change rates) used to detect the direction of the edge in 2D
+$$\nabla I(x,y)=(\frac{\partial x}{\partial I}​,\frac{\partial y}{\partial I})$$
+- **Magnitude** of gradient -> strength of edge
+- **Direction** -> which way the intensity is increasing the most
+![[Pasted image 20250519153740.png|500]]
+### ==Discrete approximations==
+To compute the gradient we use approximations, estimating derivatives:
+We can approximate the gradient with:
+- Differences -> how much the pixel changes from:
 	- Forward Differences -> $(i+1)-(i)$
-	- Central differences -> $(i+1) - (i-1)$
+	- Backward differences -> $(i) - (i-1)$
+	- Central differences -> $(i+1) - (i-1) \over 2$
+- Kernels -> Convolution Masks
 	- Correlation kernels -> $\begin{bmatrix}-1&0&1\end{bmatrix}\ \begin{bmatrix}-1\\0\\1\end{bmatrix}$
-- We can estimate magnitude using different approximations, best one is the max of $|I_{x}|,|I_{y}|$
-	- $I$ -> Image, $\Delta I$ -> Gradient at every position
-	- $|\Delta I|_{\max} = \max(|I_{x}|,|I_{y}|)$
+### ==Noise==
+**Noise** causes problems in edge detection, we incorporate the smoothing process of the image when detecting edges (take the average of a group of pixels compared to the average of another group)
+### ==Non-Maxima Suppression (NMS)==
 
-**Noise** causes problems in image detection, we incorporate the smoothing process of the image when detecting edges (i take the average of a group of pixels compared to the average of another group)
+
 ==Prewitt and Sobel==
 - **Prewitt operator** -> approximating partial derivatives by central differences
 	![[Pasted image 20250227171204.png]]
