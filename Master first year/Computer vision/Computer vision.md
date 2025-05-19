@@ -196,24 +196,20 @@ Canny shows that the optimal edge detection operation consists in a pipeline of
 	- gradient magnitude > $T_h$ <u>OR</u>
 	- gradient magnitude > $T_i$ <u>AND</u> pixel is a neighbor of an already detected edge
 ### ==Second-Order Derivative Methods==
-
-
-==Zero-crossing==
+**Zero-crossing** -> Method where we look for the zero crossing point in the 2nd derivative (computationally significant) instead of looking for the maximum value in the derivative
 ![[Pasted image 20250407234936.png|300]]
-Look for the zero crossing point in the 2nd derivative (computationally significant)
+Use the **Laplacian** operator (sum of second-order derivatives) to approximate derivatives
+$$\nabla^2 I=\frac{\partial^2 I}{\partial x^{2}​}+\frac{\partial^2 I}{\partial y^{2}}​$$
 
-==Discrete Laplacian==
-We can use Laplacian as second order differential operator
-**Laplacian** -> using forward and backward differences to approximate derivatives
-
-==Laplacian of Gaussian (LOG)==
+### ==Laplacian of Gaussian (LOG)==
 robust edge detectors should include a smoothing step to filter out noise
 **LOG** conceptually:
-- Gaussian smoothing
-- Second order differentiation by the Laplacian  
-- Extraction of the zero-crossing
-- Once a sign change is found, the actual edge may be localized at the pixel where the absolute value of the LOG is smaller (best choice) or either pixel towards the positive or negative side.
-
+1. Gaussian smoothing
+2. Apply Laplacian 
+3. Find zero-crossings
+4. Once a sign change is found, the actual edge may be localized at the pixel where the absolute value of the LOG is smaller (best choice) or either pixel towards the positive or negative side.
+### Summary
+![[Pasted image 20250519164759.png]]
 ## 4 - Local Features
 We want to find **Corresponding Points** between 2+ images of a scene
 ![[Pasted image 20250320153021.png|500]]
