@@ -241,42 +241,37 @@ We use corners for identification, as they're easily identifiable (strong change
 ![[Pasted image 20250320154429.png|200]]
 
 ==**Harris Corner Detector**==
+kindergarten level explanation:
 1. Compute image gradients (how intensity changes)
 2. Build the matrix $M$
-3. Compute the corner response C=det⁡(M)−k⋅trace(M)2C = \det(M) - k \cdot \text{trace}(M)^2C=det(M)−k⋅trace(M)2
+3. Compute the corner response $C=\det⁡(M)−k\cdot \text{trace}(M)^2$
 4. Threshold & NMS to pick the best corners
 ---
-Expl
+elementary level explanation:
 1. compute image gradients -> based on <u>the weighted sum of derivatives around the point of interest</u> (aka, i look at points around the interested one to figure out if it's somewhat the same one)
 	![[Pasted image 20250306152512.png|400]]
-2. Form the structure tensor (matrix M for each pixel)
-3. Compute "Cornerness" $C$ score
+2. Form the structure tensor (matrix M for each pixel) using the squared gradients and their product
+3. Compute "Cornerness" score $C=\det⁡(M)−k\cdot \text{trace}(M)^2$
 4. Select all pixels where $C$ is higher than a chosen positive threshold (T) given by a sensitivity constant $k$
 5. Within the previous set, detect as corners only those pixels that are local maxima of $C$ (NMS)
+### Invariance properties of harry's detector
+✅**Rotation invariance** -> You’ll detect the same corners even if the image is rotated.
+- eigenvalues (aka, the values used to decide if an area is a corner) of $M$ are invariant to a rotation of the image axes, thus so is Harris cornerness function
 
-### Invariance
-
-
-### ==Invariance properties==
-**Rotation invariance** -> eigenvalues of M (M encodes the local img structure around the considered pixel) are invariant to a rotation of the image axes, thus so is Harris cornerness function
-
-**No invariance to an affine intensity change** ->
+🟨**Partial illumination invariance** -> Harris <u>works if brightness shifts uniformly</u>, but not if the image contrast changes.
 - Yes, for additive bias ($I' = I+b$) due to the use of derivatives
 - No, to multiplication by a gain factor ($I'=a\cdot I$) => derivatives gets multiplied by the same factor
+	![[Pasted image 20250519175948.png| 400]]
 
-**No scale invariance property** -> Harris is not scale invariant
+❌**Scale invariance property** -> Harris is not scale invariant
 - An image contains features at different scales -> Detecting all features requires to analyze the image across the range of scales “deemed as relevant”
 	![[Pasted image 20250306153923.png|400]]
 - We detect features in order to match their **descriptors**
-- To compute and match descriptors we need to smooth out the details that do not appear across the range of scales
+- To compute and match descriptors we need to smooth out the details that do not appear across the range of scales (more explained next)
 
-==Scale-space==
-**Key finding** -> apply a <u>fixed-size detection</u> tool on increasingly <u>down-sampled</u> and <u>smoothed</u> versions of the input image
+### Scale-Space and Multi-Scale Detection
+**Key finding** -> apply a <u>fixed-size detection</u> tool on increasingly <u>down-sampled</u> and <u>smoothed</u> versions of the input image (trough Laplacian of Gaussian or Difference of Gaussian) (LoG, DoG)
 ![[Pasted image 20250306154726.png|400]]
-
-==Gaussian Scale-Space==
-**Scale-Space** -> a one-parameter family of images created from the original one so that the structures at smaller scales are successively suppressed by smoothing operations.
-It must be realized by <u>Gaussian Smoothing</u>.
 
 criterion to select their characteristic scale -> finding their **extrema**
 
