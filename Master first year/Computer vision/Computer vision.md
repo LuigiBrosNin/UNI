@@ -329,13 +329,14 @@ The SIFT (Scale Invariant Feature Transform) descriptor is computed as follows
 	-  Gradient magnitude  
 	-  Gaussian weighting function centered at the keypoint (with $\sigma$  equal to half the grid size)
 This is used to generate descriptors to match, and the Feature vector is the output
-This vector is compact, robust 
-
-==Matching process==
-**Nearest Neighbour (NN) Search problem** -> Given a set $S$ of points, $p_i$, in a metric space $M$ and a query point $q \in M$, find the $p_i$ closest to $q$.
-
-==Validating Matches==
-Enforce criteria to judge matches found by the NN search process, usually a threshold
+This vector is compact, robust to lighting changes and distinctive for matching
+### Matching process
+**Nearest Neighbour (NN) Search problem** -> Match SIFT descriptors between images by comparing Euclidean distances.
+Using a **ratio test** we eliminate 90% of false matches
+$$\frac{d_1}{d_2} < 0.8$$
+- $d_1$ = distance to best match
+- $d_2$​ = second-best
+- If this ratio is small, it's a **confident match**
 
 ==Efficient NN-Search==
 indexing techniques are exploited to speed up the otherswise slow NN-search process
