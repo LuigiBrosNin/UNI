@@ -269,7 +269,7 @@ elementary level explanation:
 - We detect features in order to match their **descriptors**
 - To compute and match descriptors we need to smooth out the details that do not appear across the range of scales (more explained next)
 
-### Scale-Space and Features
+### Scale-Space, LoG, DoG
 ==Scale-space==
 **Key finding** -> apply a <u>fixed-size detection</u> tool on increasingly <u>down-sampled</u> and <u>smoothed</u> versions of the input image (trough Laplacian of Gaussian or Difference of Gaussian, its approximation) (LoG, DoG)
 ![[Pasted image 20250306154726.png|400]]
@@ -287,49 +287,49 @@ Scale-space gives us images at various levels, but we don’t yet know **which f
 Lindeberg method:
 - Use **scale-normalized derivatives** to detect features at their "natural" scale.
 - Normalize the filter responses (multiply by $\sigma$)
-- Search for **extrema** (maxima or minima) in **x, y, and σ** — i.e., in 3D.
+- Search for **extrema** (maxima or minima) in **x, y, and $\sigma$**  i.e., in 3D.
 
+LoG -> second order derivative that detects **blobs** (circular structures)
+$$F(x, y, \sigma) = \sigma^2 \cdot \nabla^2 L(x, y, \sigma)$$
 ![[Pasted image 20250306162700.png]]
 
-==Difference of Gaussian (DoG)== -> very close approximation of Lindeberg's scale-normalized LoG
-
-==Keypoint Detection and Tuning==
-**Extrema detection** -> a point is detected as a keypoint $\iff$ its DoG is higher (lower) than that of the 26 neighbours (in 3D)
-![[Pasted image 20250306164454.png]]
-We can prune weak responses to receive a better result, as DoG extrema is scarcely repeatable
-
-Trough this method we can find the best scale since we're defining the point to a specific scale (it's hard to understand, just know that DoG helps us find the optimal scale for each detail we want to "classify")
+==Difference of Gaussian (DoG)==
+very close approximation of Lindeberg's scale-normalized LoG:
+$$DoG=L(x,y,k\sigma)−L(x,y,\sigma)$$
+We build a pyramid of images blurred with different $\sigma$ and we compute the difference to find the extrema in 3D across (x,y, scale)
 ![[Pasted image 20250306165051.png]]
 
-==Scale and Rotation Invariance Description==
-Defining scale and rotation invariant description -> same $\sigma$ = same scale, but rotation descriptors are not invariant, so it's not trivial
+==Keypoint detection and Tuning==
+To tune the found extrema, we
+- Reject low contrast responses
+- Prune the keypoints on edges using the **hessian matrix**
+![[Pasted image 20250306164454.png]]
+DoG helps us find the optimal scale for each detail we want to "classify"
 
-==Exemplar DoG keypoints==
-We take pixel coordinates in the local reference frame to identify a direction inherent to the patch, called **canonical orientation**, and we define it as a **local reference frame**
+### Invariance properties of DoG
+ ✅ **Scale Invariance**
+- Use the image L(x,y,σ)L(x, y, \sigma)L(x,y,σ) at the **same scale** where the keypoint was detected.
+ ✅ **Rotation Invariance**
+- Compute gradients around the keypoint.
+- Build a **histogram of gradient orientations** (e.g., 36 bins)
+- Find the **dominant direction**  this becomes the **canonical orientation**
+- Rotate the descriptor patch accordingly.
 ![[Pasted image 20250306170348.png]]
-
-**Rotation invariance** -> a canonical (aka characteristic) patch orientation is computed, so that the descriptor can then be computed on a **canonically-oriented** patch
+🐰basically, when something rotates, the recognition process tries to match a different orientation for a point to see if they're the same
 
 ![[Pasted image 20250306170554.png|250]]
 
-==Canonical Orientation==
-Given the keypoint, the **magnitude** and **orientation** of the gradient are <u>computed at each pixel of the associated Gaussian-smoothed image</u>, L:
-![[Pasted image 20250306170924.png]]
-The characteristic orientation of the keypoint is given by <u>the highest peak of the orientation histogram</u>
-![[Pasted image 20250306171013.png]]
-
-==SIFT Descriptor==
+### SIFT Descriptor
 The SIFT (Scale Invariant Feature Transform) descriptor is computed as follows
 ![[Pasted image 20250306171107.png]]
--  A 16x16 <u>oriented</u> pixel grid around each keypoint is considered  
--  This is further divided into 4x4 regions (each of size 4x4 pixels)  
--  A gradient orientation histogram is created for each region  
--  Each histogram has 8 bins (i.e. bin size 45°)  
+1. Take  A 16x16 <u>oriented</u> pixel grid around a keypoint is considered  
+2. Divide into **4×4 subregions**
+3. In each, compute an **8-bin histogram** (45°) of gradient orientations.
 -  Each pixel in the region contributes to its designated bin according to  
 	-  Gradient magnitude  
-	-  Gaussian weighting function centred at the keypoint (with $\sigma$  equal to half the grid size)
-🐰 I did not understand the point of this yet
+	-  Gaussian weighting function centered at the keypoint (with $\sigma$  equal to half the grid size)
 This is used to generate descriptors to match, and the Feature vector is the output
+This vector is compact, robust 
 
 ==Matching process==
 **Nearest Neighbour (NN) Search problem** -> Given a set $S$ of points, $p_i$, in a metric space $M$ and a query point $q \in M$, find the $p_i$ closest to $q$.
