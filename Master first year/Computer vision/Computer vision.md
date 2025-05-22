@@ -498,15 +498,26 @@ In a **CNN**:
 ### Gradient descent
 **Gradient descend** (Optimizer) -> How the model learns, tells the model "which way" to minimize the loss function 
 
-- We want to minimize the cost function (aka loss function or error function)
-- Derivatives tell us how to change $x$ so we can improve $y$ trough $x$ .
-- We can find **local minima**, and it's possible that it is not globally optimal, we're gonna take this into account when optimizing
+We want to minimize the cost function $J(w,b)$ (aka loss function or error function)
+Where:
+- $w$ -> weights of the model
+- $b$ -> biases
+- $J$ -> loss value
 
-Formula for reaching the minimum
+Steps:
+1. compute the loss $J$
+2. Calculate the gradients (derivatives of the loss with respect to each parameter)
+3. update parameters using the following formula
 ![[Pasted image 20250403164629.png]]
+Where:
+- $\alpha$ -> learning rate
+- $\frac{\partial J}{\partial w}​,\frac{\partial J}{\partial b}$​ = gradient of the loss
+Repeat process while keeping on minimizing loss ("learning").
 
+loss functions are full of local minima, saddle points, flat regions
+![[Pasted image 20250522194656.png|500]]
 ==Stochastic Gradient Descent==
-- approximation of gradient descent using small set of samples
+approximation of gradient descent using small set of samples
 - **minibatch**-> small set of examples from 1 training set, we use 1 for stochastic method
 - faster as the cost function is divided by the dimension of the minibatch
 	![[Pasted image 20250403165333.png]]
