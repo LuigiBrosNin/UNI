@@ -551,7 +551,7 @@ Why we use **Padding** -> The convolution operator shrinks the output, so we add
 
 How **Stride** works -> controls how far the filter moves (eg. stride 2 skips every other pixel, reduces output size)
 ![[Pasted image 20250403171110.png|300]]
-### Deep CNNs, Pooling, Parameters
+### Deep CNNs, Pooling, Receptive fields
 Deep CNNs are made by stacking
 1. Convolution + ReLU
 2. Pooling (max)
@@ -565,6 +565,30 @@ Flatten -> fully connected layer(s) -> Output
 
 **Receptive field** of a neuron -> the **area of the input image** it “sees”.
 - Deeper layers have bigger receptive fields (from local details -> global patterns)
+- large context -> we need deeper networks or bigger filters.
+![[Pasted image 20250522225135.png]]
+### Batch normalization
+We need to stabilize networks: Activations change across laters and gradients vanish or explode
+**BatchNorm** normalizes layer outputs
+Given:
+- A mini-batch of activations $\{z^{(1)}, \dots, z^{(m)}\}$
+- $m$ is the batch size
+
+We do the following:
+1. Compute the **batch mean**:
+
+$$\mu = \frac{1}{m} \sum_{i=1}^m z^{(i)}$$
+2. Compute the **batch variance**:
+$$\sigma^2 = \frac{1}{m} \sum_{i=1}^m (z^{(i)} - \mu)^2$$
+3. **Normalize** each activation:
+$$\hat{z}^{(i)} = \frac{z^{(i)} - \mu}{\sqrt{\sigma^2 + \epsilon}}$$
+- $\epsilon$ is a small constant (e.g., $10^{-5}$) added to prevent division by zero
+2. **Scale and shift** (learnable parameters):
+$$z'^{(i)} = \gamma \cdot \hat{z}^{(i)} + \beta$$
+
+- \gamma: controls the **scale** (stretching/compressing the normalized values)
+    
+- β\betaβ: controls the **shift** (moving the normalized values up/down)
 
 ## 7 - Transformers
 ==Recurrent Neural Network (RNN)==
