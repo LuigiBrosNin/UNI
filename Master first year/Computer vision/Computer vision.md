@@ -587,9 +587,10 @@ We do the following:
 	- $\beta$: controls the **shift** (moving the normalized values up/down)
 ### Regularization
 Regularization is about **preventing overfitting**
-**Dropout** -> During training, randomly remove ("drop") some neurons so the network doesn't rely on any one path too much.
-**Early Stopping** ->Stop training **before** the model starts to overfit.
-
+- **Dropout** -> During training, randomly remove ("drop") some neurons so the network doesn't rely on any one path too much.
+- **Early Stopping** ->Stop training **before** the model starts to overfit.
+- **Cutout** (a kind of data dropout) -> Mask out parts of the image at random to force the model to **look beyond obvious features**.
+## 
 
 ## 7 - Transformers
 ==Recurrent Neural Network (RNN)==
