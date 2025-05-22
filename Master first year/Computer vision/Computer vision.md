@@ -344,7 +344,6 @@ indexing techniques are exploited to speed up the otherswise slow NN-search proc
 - Best Bin First (BBF)
 ## 5 - Camera Calibration
 **Camera calibration** -> the process of determining a camera's **internal parameters** (like focal length and lens distortion) and **external parameters** (like the position and orientation of the camera in space). This allows us to accurately measure 3D information from 2D images.
-
 ### Perspective projection
 **Perspective projection** model -> Given a point in the 3D space, $M=[x,y,z]^T$ , project it into a 2D image point $m=[u,v]^{T}$ .
 ![[Pasted image 20250320170447.png|250]]
@@ -358,6 +357,7 @@ $z$ -> depth (distance from the camera)
 This projection is **non-linear** (objects appear smaller with distance)
 ### Projective Space
 Euclidean 3D space can't handle some geometric operations (eg. parallel lines don't intersect, points at infinity can't be represented)
+![[Pasted image 20250522174414.png|400]]
 
 **Projective space** ($P^{3}$) -> 4th coordinate for each point in 3D, $[x,y,z,w]$ 
 -  $[x,y,z,w]\equiv [kx,ky,kz,kw]$ 
@@ -400,18 +400,35 @@ the **full PPM** becomes
 $$P=A⋅[R∣T]$$
 This gives us a powerful, complete model of how a 3D point becomes a 2D pixel.
 
-### Homography
-if the scene is flat, aka all 3d points lie on a plane, the projection simplifies to a **homography**
+### Homography $H$
+if the scene is flat, aka all 3D points lie on a plane, the projection simplifies to a **homography**
 $$\tilde m = H\cdot \tilde M$$
 Where:
-- $H$ -> 3x3 matrix representing the homography
-- $\tilde{M}$ -> 2D coordinates in the plane + 1
+- $H$ -> 3x3 matrix representing the **homography**
+- $\tilde{M}$ -> 2D coordinates in the plane + 1 in homogeneous coordinates
 
 **Homographies** let you map points between:
 - Two images of the same plane
 - One image to a planar object (like a billboard or chessboard)
 This simplifies calibration when using **planar targets**.
 ![[Pasted image 20250522172653.png|400]]
+Our goal is to use homographies from multiple images of a flat pattern to estimate the camera's internal matrix $A$, as the homographies contain indirect info about the intrinsic parameters of the camera.
+### Lens distortion
+Real lenses distort the image:
+- **Barrel distortion**: straight lines bow outward
+- **Pincushion distortion**: lines bend inward
+![[Pasted image 20250522173605.png]]
+These need to be modeled using **non-linear functions** to "correct" the image.
+### What is calibration
+Calibration estimates:
+- **Intrinsic parameters** $A$
+- **Extrinsic parameters** $R, T$
+- **Lens distortion coefficients**
+How?
+- Capture multiple images of a **known pattern** (e.g., chessboard)
+- Find **2D-3D correspondences** (image corner ↔ real-world corner)
+- Solve the projection equations to recover the unknowns
+### Zhang's method
 
 
 ## 
