@@ -590,7 +590,12 @@ Regularization is about **preventing overfitting**
 - **Dropout** -> During training, randomly remove ("drop") some neurons so the network doesn't rely on any one path too much.
 - **Early Stopping** ->Stop training **before** the model starts to overfit.
 - **Cutout** (a kind of data dropout) -> Mask out parts of the image at random to force the model to **look beyond obvious features**.
-## 
+### Data augmentation
+aka **artificially increasing your training dataset** by transforming the existing images
+- **Flip**, **rotate**, **resize**, **color jitter** → teaches the model that objects stay the same under these transformations.
+- **Cutout** → forces the network to learn **less obvious** features.
+- **Multi-scale training** → helps the model understand objects at **different sizes**.
+Data augmentation makes CNNs **more flexible and accurate on new data**
 
 ## 7 - Transformers
 ==Recurrent Neural Network (RNN)==
