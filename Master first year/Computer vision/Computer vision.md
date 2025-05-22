@@ -357,7 +357,23 @@ $f$ -> focal length
 $z$ -> depth (distance from the camera)
 This projection is **non-linear** (objects appear smaller with distance)
 ### Projective Space
+Euclidean 3D space can't handle some geometric operations (eg. parallel lines don't intersect, points at infinity can't be represented)
 
+**Projective space** ($P^{3}$) -> 4th coordinate for each point in 3D, $[x,y,z,w]$ 
+-  $[x,y,z,w]\equiv [kx,ky,kz,kw]$ 
+- $w =0$ -> point is at infinity
+- Express **perspective projection** linearly using **matrix multiplication**:
+$$\tilde m = P\cdot \tilde M$$
+- $\tilde{M}$: 3D point in homogeneous coordinates $[x, y, z, 1]$
+- $\tilde{m}$: projected 2D image point $[u, v, 1]$
+- $P$: **Perspective Projection Matrix (PPM)**
+Canonical PPM (assuming $f=1$)
+$$P = \begin{bmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ \end{bmatrix}$$
+### Image Digitization
+We need to adapt our calculations accounting for pixels instead of continuous measurements, pixel size, image origin.
+To do so, we:
+- Scale by pixel dimensions $\Delta u, \Delta v$
+- Shift the image center to pixel coordinates $(u_0,v_0)$
 
 
 
