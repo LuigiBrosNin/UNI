@@ -498,11 +498,7 @@ In a **CNN**:
 ### Gradient descent
 **Gradient descend** (Optimizer) -> How the model learns, tells the model "which way" to minimize the loss function 
 
-We want to minimize the cost function $J(w,b)$ (aka loss function or error function)
-Where:
-- $w$ -> weights of the model
-- $b$ -> biases
-- $J$ -> loss value
+We want to <u>minimize</u> the cost function $J(w,b)$ (weights, biases) (aka <u>loss function</u> or error function)
 
 Steps:
 1. compute the loss $J$
@@ -511,11 +507,12 @@ Steps:
 ![[Pasted image 20250403164629.png]]
 Where:
 - $\alpha$ -> learning rate
-- $\frac{\partial J}{\partial w}​,\frac{\partial J}{\partial b}$​ = gradient of the loss
+- $\frac{\partial J}{\partial w}​,\frac{\partial J}{\partial b}$​ -> gradient of the loss
 Repeat process while keeping on minimizing loss ("learning").
 
 loss functions are full of local minima, saddle points, flat regions
 ![[Pasted image 20250522194656.png|500]]
+
 ==Stochastic Gradient Descent==
 approximation of gradient descent using small set of samples
 - **minibatch**-> small set of examples from 1 training set, we use 1 for stochastic method
