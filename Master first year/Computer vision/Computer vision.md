@@ -375,7 +375,13 @@ To do so, we:
 - Scale by pixel dimensions $\Delta u, \Delta v$
 - Shift the image center to pixel coordinates $(u_0,v_0)$
 
-
+Intrinsic Parameter Matrix $A$
+$$A = \begin{bmatrix} f_x & s & u_0 \\ 0 & f_y & v_0 \\ 0 & 0 & 1 \end{bmatrix}$$
+Where:
+- $f_x = f \cdot k_u$ ->: focal length in horizontal pixels
+- $f_y = f \cdot k_v$ -> focal length in vertical pixels
+- $s$ -> skew (typically 0 for most modern cameras)
+- $(u_0, v_0)$ -> image center
 
 
 ## 
