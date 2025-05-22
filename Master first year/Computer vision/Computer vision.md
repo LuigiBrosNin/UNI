@@ -514,23 +514,25 @@ loss functions are full of local minima, saddle points, flat regions
 ![[Pasted image 20250522194656.png|500]]
 
 ==Stochastic Gradient Descent==
-approximation of gradient descent using small set of samples
+Gradient descent uses the entire dataset at each step, it's slow
+Solution: approximation of gradient descent using small set of samples (mini-batches)
 - **minibatch**-> small set of examples from 1 training set, we use 1 for stochastic method
 - faster as the cost function is divided by the dimension of the minibatch
 	![[Pasted image 20250403165333.png]]
-- One **hyperparameter** is a minibatch dimension, usually a power of 2, there are more hyperparameters
+- Introduces noise that prevents overfitting
 - One **epoch** -> whole training set observed one time
-
-==Momentum optimizer==
+- **Batch size** -> how many samples per update
+### Optimizers
+Neural networks improve using **smart optimizers** that go beyond basic gradient descent.
+#### ==Momentum==
 ![[Pasted image 20250403165930.png]]
-Accumulates an exponentially decaying moving average of past gradients and continues to move in their direction
+Accumulates a moving average of past gradients and continues to move in their direction
 - The size of the step depends on how large and how aligned a sequence of gradients are
 - The step size is largest when many successive gradients point in the same direction
-
-==RMSprop optimizer==
+#### ==RMSprop==
 Root Mean Square Propagation (RMSprop) uses an exponentially decaying average to discard history from the extreme past so that it can converge rapidly
 
-==Adam optimizer==
+#### ==Adam==
 The name “Adam” derives from “adaptive moments”, it's  combination of RMSprop and momentum
 
 ==Hyperparameters optimizer==
