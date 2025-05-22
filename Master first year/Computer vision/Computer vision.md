@@ -371,17 +371,47 @@ Canonical PPM (assuming $f=1$)
 $$P = \begin{bmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0 \\ 0 & 0 & 1 & 0 \\ \end{bmatrix}$$
 ### Image Digitization
 We need to adapt our calculations accounting for pixels instead of continuous measurements, pixel size, image origin.
+![[Pasted image 20250522171452.png]]
+(R and T matrices are explained a lil below)
+
 To do so, we:
 - Scale by pixel dimensions $\Delta u, \Delta v$
 - Shift the image center to pixel coordinates $(u_0,v_0)$
 
-Intrinsic Parameter Matrix $A$
+**Intrinsic Parameter Matrix** $A$ -> captures internal characteristics of the camera
 $$A = \begin{bmatrix} f_x & s & u_0 \\ 0 & f_y & v_0 \\ 0 & 0 & 1 \end{bmatrix}$$
 Where:
 - $f_x = f \cdot k_u$ ->: focal length in horizontal pixels
 - $f_y = f \cdot k_v$ -> focal length in vertical pixels
 - $s$ -> skew (typically 0 for most modern cameras)
 - $(u_0, v_0)$ -> image center
+
+The **relation** between <u>camera</u> and <u>world</u> is defined as
+$$M_{CRF}=R\cdot M_{WRF}+T$$
+Where:
+- $R$ -> rotation matrix 3x3, to rotate world coordinates into camera orientation
+- T -> Translation vector 3x1, to shift coords into camera position
+- CRF -> camera reference frame
+- WRF -> world reference frame
+
+in Homogeneous coordinates:
+$$M_{CRF} = \begin{bmatrix} R & T \\ 0 & 1 \end{bmatrix} M_{WRF}$$
+the **full PPM** becomes
+$$P=A⋅[R∣T]$$
+This gives us a powerful, complete model of how a 3D point becomes a 2D pixel.
+
+### Homography
+if the scene is flat, aka all 3d points lie on a plane, the projection simplifies to a **homography**
+$$\tilde m = H\cdot \tilde M$$
+Where:
+- $H$ -> 3x3 matrix representing the homography
+- $\tilde{M}$ -> 2D coordinates in the plane + 1
+
+**Homographies** let you map points between:
+- Two images of the same plane
+- One image to a planar object (like a billboard or chessboard)
+This simplifies calibration when using **planar targets**.
+![[Pasted image 20250522172653.png|400]]
 
 
 ## 
