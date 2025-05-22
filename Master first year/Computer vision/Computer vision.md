@@ -343,10 +343,12 @@ indexing techniques are exploited to speed up the otherswise slow NN-search proc
 - k-d tree
 - Best Bin First (BBF)
 ## 5 - Camera Calibration
-**Perspective projection** model -> Given a point in the 3D space, $M=[x,y,z]^T$ , with coordinates given in the Camera Reference Frame (CRF).
+**Camera calibration** -> the process of determining a camera's **internal parameters** (like focal length and lens distortion) and **external parameters** (like the position and orientation of the camera in space). This allows us to accurately measure 3D information from 2D images.
+
+**Perspective projection** model -> Given a point in the 3D space, $M=[x,y,z]^T$ , project it into a 2D image point $m=[u,v]^{T}$ .
 ![[Pasted image 20250320170447.png|250]]
 
-coordinates as a function of teh 3D coordinates in the CRF
+coordinates as a function of the 3D coordinates in the CRF
 $$
 \begin{cases}u=\frac{f}{z}x\\ v=\frac{f}{z}y \end{cases}
 $$
