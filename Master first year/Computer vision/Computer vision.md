@@ -457,12 +457,32 @@ We need at least 4.5 points per image to compute $H_{i}$, we use more for robust
 ---
 Part 2
 ## 6. CNN recap (Convolutional Neural Networks)
-- How neural networks learn (gradient descent, optimizers)
-- CNN architecture (convolutions, padding, stride, pooling)
-- Regularization and normalization
-- Efficient CNN variants
-![[Pasted image 20250403153929.png]]
-:LiArrowBigUp: good slide to make a theory summary check
+### Representation learning
+**Representation learning** -> using deep learning to learn automatically from raw data the designing features (edges, shapes etc) we saw in the 1st part
+
+In a **CNN**:
+- Input image → passes through layers → abstract features are learned.
+- The goal is to learn transformations that improve performance (classification, detection, etc.).
+
+### CNN components explained for dummies -> 🐰
+1. **Convolutional layers**
+	- They <u>extract features</u> (edges, textures, patterns) <u>from the input image</u> by sliding kernels across
+	- Each filter detects a specific type of feature, the result is a **feature map**
+	- This is <u>how CNNs "see" shapes and patterns</u> in images
+2. **Activation functions**
+	- functions that <u>introduce non-linearity into the network to learn complex functions</u>
+	- ReLU (Rectified Linear Unit), most common function, turns negative values to 0
+	- Matters because a model that is a linear equation is not able to capture complex patterns
+3. **Pooling layers**
+	- 
+4. **Fully connected layers**
+	- 
+5. **Loss functions**
+	- 
+6. **Optimizers**
+	- 
+7. **Normalization & Regularization**
+	- 
 
 ==Gradient descend== ->first-order iterative algorithm for minimizing a differentiable multivariate function (**differentiable** -> a function whose derivative always exists in its domain, **multivariate** -> more than one variable) 
 
