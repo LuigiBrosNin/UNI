@@ -474,17 +474,29 @@ In a **CNN**:
 	- ReLU (Rectified Linear Unit), most common function, turns negative values to 0
 	- Matters because a model that is a linear equation is not able to capture complex patterns
 3. **Pooling layers**
-	- 
+	- <u>Reduce the **spatial size** of the feature maps</u> while keeping the most important information
+	- Types: Max pooling, Average pooling (keep largest/average value in a region)
+	- Reduces computation
+	- Adds robustness to translations and distortions
 4. **Fully connected layers**
-	- 
+	- <u>Connect every neuron between current/prev layers</u>
+	- used for decision-making
+	- This is where **classification or regression** happens, based on the features extracted earlier
 5. **Loss functions**
-	- 
+	- <u>Measure how wrong the model's predictions are</u> compared to the actual labels.
+	- Cross-entropy and mean squared error are examples of loss functions
+	- Tells the network how to get better by minimizing "loss", aka being wrong
 6. **Optimizers**
-	- 
-7. **Normalization & Regularization**
-	- 
-
-==Gradient descend== ->first-order iterative algorithm for minimizing a differentiable multivariate function (**differentiable** -> a function whose derivative always exists in its domain, **multivariate** -> more than one variable) 
+	- <u>Update the network’s weights to minimize the loss function</u>, it's a guide on how to learn effectively
+	- Examples: SGD, Adam, RMSProp
+7. **Normalization**
+	- <u>Keeps the network stable</u> by standardizing the inputs to each layer
+	- Speeds up training and helps prevent exploding/vanishing gradients
+8. **Regularization**
+	- <u>Prevents overfitting</u>, aka when the model memorizes the training data but performs poorly on new data.
+	- Helps the model generalize better to unseen data.
+### Gradient descent
+**Gradient descend** (Optimizer) -> How the model learns, tells the model "which way" to minimize the loss function 
 
 - We want to minimize the cost function (aka loss function or error function)
 - Derivatives tell us how to change $x$ so we can improve $y$ trough $x$ .
