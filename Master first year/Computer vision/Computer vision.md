@@ -345,15 +345,21 @@ indexing techniques are exploited to speed up the otherswise slow NN-search proc
 ## 5 - Camera Calibration
 **Camera calibration** -> the process of determining a camera's **internal parameters** (like focal length and lens distortion) and **external parameters** (like the position and orientation of the camera in space). This allows us to accurately measure 3D information from 2D images.
 
+### Perspective projection
 **Perspective projection** model -> Given a point in the 3D space, $M=[x,y,z]^T$ , project it into a 2D image point $m=[u,v]^{T}$ .
 ![[Pasted image 20250320170447.png|250]]
-
-coordinates as a function of the 3D coordinates in the CRF
+coordinates as a function of the 3D coordinates in the CRF (Camera Reference Frame)
 $$
 \begin{cases}u=\frac{f}{z}x\\ v=\frac{f}{z}y \end{cases}
 $$
+where:
+$f$ -> focal length
+$z$ -> depth (distance from the camera)
+This projection is **non-linear** (objects appear smaller with distance)
+### Projective Space
 
-#TODO 4 -> 41
+
+
 
 
 ## 
