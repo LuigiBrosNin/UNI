@@ -429,8 +429,27 @@ How?
 - Find **2D-3D correspondences** (image corner ↔ real-world corner)
 - Solve the projection equations to recover the unknowns
 ### Zhang's method
-
-
+A Practical way to calibrate a real camera using images of a flat pattern
+1. use a flat target (all $z = 0$ )
+2. form $m \leftrightarrow M$ pairs, get homographies $H_{i}$
+3. Each homography relates image coordinates to pattern coordinates
+We need at least 4.5 points per image to compute $H_{i}$, we use more for robustness
+### Refine / summary
+#### Main Pipeline:
+1. **Acquire n images** of a planar pattern
+2. **Estimate homographies** $H_i$
+3. Use $H_i$​ to compute **intrinsic matrix $A$
+4. Use $A$ and $H_i$​ to compute $R_i, T_i$ for each image
+5. Estimate **lens distortion coefficients**
+6. Use **non-linear optimization** to refine all parameters by minimizing **reprojection error**
+#### Summary
+| Concept        | What It Represents                                                      |
+| -------------- | ----------------------------------------------------------------------- |
+| $A$            | Intrinsic matrix (focal lengths, image center, skew)                    |
+| $R,T$          | Camera pose (extrinsics)                                                |
+| Homography $H$ | 2D projective mapping for planar scenes                                 |
+| Distortion     | Lens imperfections modeled with parameters                              |
+| Zhang’s Method | Practical way to calibrate a real camera using images of a flat pattern |
 ## 
 ---
 Part 2
