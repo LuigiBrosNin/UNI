@@ -569,26 +569,27 @@ Flatten -> fully connected layer(s) -> Output
 ![[Pasted image 20250522225135.png]]
 ### Batch normalization
 We need to stabilize networks: Activations change across laters and gradients vanish or explode
-**BatchNorm** normalizes layer outputs
+**BatchNorm** normalizes layer outputs and it's the standard in modern CNNs
 Given:
 - A mini-batch of activations $\{z^{(1)}, \dots, z^{(m)}\}$
-- $m$ is the batch size
-
+- $m$ -> batch size
 We do the following:
-1. Compute the **batch mean**:
-
-$$\mu = \frac{1}{m} \sum_{i=1}^m z^{(i)}$$
-2. Compute the **batch variance**:
-$$\sigma^2 = \frac{1}{m} \sum_{i=1}^m (z^{(i)} - \mu)^2$$
+1. Compute the **batch mean** $\mu$:
+	$$\mu = \frac{1}{m} \sum_{i=1}^m z^{(i)}$$
+2. Compute the **batch variance** $\sigma$:
+	$$\sigma^2 = \frac{1}{m} \sum_{i=1}^m (z^{(i)} - \mu)^2$$
 3. **Normalize** each activation:
-$$\hat{z}^{(i)} = \frac{z^{(i)} - \mu}{\sqrt{\sigma^2 + \epsilon}}$$
-- $\epsilon$ is a small constant (e.g., $10^{-5}$) added to prevent division by zero
-2. **Scale and shift** (learnable parameters):
-$$z'^{(i)} = \gamma \cdot \hat{z}^{(i)} + \beta$$
+	$$\hat{z}^{(i)} = \frac{z^{(i)} - \mu}{\sqrt{\sigma^2 + \epsilon}}$$
+	 $\epsilon$ is a small constant (e.g., $10^{-5}$) added to prevent division by zero
+4. **Scale and shift** (learnable parameters):
+	$$z'^{(i)} = \gamma \cdot \hat{z}^{(i)} + \beta$$
+	- $\gamma$: controls the **scale** (stretching/compressing the normalized values)
+	- $\beta$: controls the **shift** (moving the normalized values up/down)
+### Regularization
+Regularization is about **preventing overfitting**
+**Dropout** -> During training, randomly remove ("drop") some neurons so the network doesn't rely on any one path too much.
+**Early Stopping** ->Stop training **before** the model starts to overfit.
 
-- \gamma: controls the **scale** (stretching/compressing the normalized values)
-    
-- β\betaβ: controls the **shift** (moving the normalized values up/down)
 
 ## 7 - Transformers
 ==Recurrent Neural Network (RNN)==
