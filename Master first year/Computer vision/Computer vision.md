@@ -474,7 +474,7 @@ In a **CNN**:
 	- ReLU (Rectified Linear Unit), most common function, turns negative values to 0
 	- Matters because a model that is a linear equation is not able to capture complex patterns
 3. **Pooling layers**
-	- <u>Reduce the **spatial size** of the feature maps</u> while keeping the most important information
+	- <u>Reduce the spatial size of the feature maps</u> while keeping the most important information
 	- Types: Max pooling, Average pooling (keep largest/average value in a region)
 	- Reduces computation
 	- Adds robustness to translations and distortions
@@ -530,27 +530,41 @@ Accumulates a moving average of past gradients and continues to move in their di
 - The size of the step depends on how large and how aligned a sequence of gradients are
 - The step size is largest when many successive gradients point in the same direction
 #### ==RMSprop==
-Root Mean Square Propagation (RMSprop) uses an exponentially decaying average to discard history from the extreme past so that it can converge rapidly
-
+Root Mean Square Propagation (RMSprop) uses Uses a **moving average of squared gradients**
 #### ==Adam==
 The name “Adam” derives from “adaptive moments”, it's  combination of RMSprop and momentum
 
-==Hyperparameters optimizer==
-tuning the learning rate hyperparameter
+#### Hyperparameters
+All optimizers require **hyperparameters** like learning rate, decay rates, etc.
 
-==Convolutions and filters==
+### Convolutional layers
+Basics
+Images -> 3D tensors (height, width, channels)
+Filters (kernels) -> slide over the image and extract patterns
+
 A convolutional filter has the same depth of the input volume
 ![[Pasted image 20250403170733.png]]
+Each filter creates an **activation map** (feature map).
 
-==Convolutional Layers==
-the convolution operator shrinks the output, so we add **padding** to the image to preserve the image size
+Why we use **Padding** -> The convolution operator shrinks the output, so we add **padding** to the image to preserve the image size
 ![[Pasted image 20250403170955.png|300]]
-we consider a slide of 1 (moving the convolutional filters one pixel on the right and one pixel towards the bottom)
+
+How **Stride** works -> controls how far the filter moves (eg. stride 2 skips every other pixel, reduces output size)
 ![[Pasted image 20250403171110.png|300]]
+### Deep CNNs, Pooling, Parameters
+Deep CNNs are made by stacking
+1. Convolution + ReLU
+2. Pooling (max)
+Repeated several times
+Flatten -> fully connected layer(s) -> Output
+![[Pasted image 20250522224917.png]]
 
+**Pooling** -> Reduces resolution, keeps dominant features.
+- **Max pooling** (most common): picks the max value in a patch.
+- **Average pooling**: averages values (less common in modern CNNs).
 
-#TODO 30 -> FINISH SLIDES
-
+**Receptive field** of a neuron -> the **area of the input image** it “sees”.
+- Deeper layers have bigger receptive fields (from local details -> global patterns)
 
 ## 7 - Transformers
 ==Recurrent Neural Network (RNN)==
