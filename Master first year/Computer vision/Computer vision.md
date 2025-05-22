@@ -22,9 +22,12 @@ Slides are terrible, what is important is mostly what the prof talks about, whic
 # Notes
 I can't make miracles, the slides are hard to follow and lack pedagogical cohesion to understand, if you want to study there you're in for some challenge.
 I hope Lisanti changes the slides next year, meanwhile i'll try my best to make these notes to study and most importantly understand this 60 cfu curse.
-## 0 - Intro
+##
+---
+Part 1
+## 0. Intro
 **Computer vision** -> deals with extraction of information from images (eg. pic of a bird -> "This is a bird!")
-## 1 - Image Formation Process
+## 1. Image Formation Process
 Getting a 3d scene into a 2d image: **Key Processes**:
 - **Geometric relationships** (scene point to image point)
 - **Radiometric relationships** (light to brightness)
@@ -72,7 +75,7 @@ $$\frac {1}{d_{s}}+\frac 1{d_{i}} = \frac 1{f_{L}}$$
     - Higher DR = better detail in both bright and dark regions.
 **Colour sensor** -> color filter arrays/optical filters are placed in front of the photo-detectors, each pixel is sensitive to a specific range of wavelengths to detect RGB channels (basically filters that recognize colour)
 ![[Pasted image 20250514172204.png]]
-## 2 - Spacial Filtering
+## 2. Spacial Filtering
 We want to reduce "noise" in images trough the spatial domain ( aka pixel neighborhood).
 
 ==Denoising==
@@ -136,7 +139,7 @@ Deploying the separability property speeds up the filtering operation ( one 2D g
 
 ![[Pasted image 20250516230626.png]]
 
-## 3 - Edge Detection
+## 3. Edge Detection
 **Eges** (object boundaries) -> seen as sharp brightness changes of a 1D signal
 
 Detection of edges in important for **Segmentation**, **object recognition** and **measurement tools**.
@@ -214,7 +217,7 @@ robust edge detectors should include a smoothing step to filter out noise
 - The **scale** at which you detect features (larger $\sigma$  for broader edges).
 ### Summary
 ![[Pasted image 20250519164759.png]]
-## 4 - Local Features
+## 4. Local Features
 We want to find **Corresponding Points** (Local invariant features) between 2+ images of a scene
 ![[Pasted image 20250320153021.png|500]]
 **Correspondences** -> image points which are the projection of the same 3D point in different views of the scene
@@ -342,7 +345,7 @@ $$\frac{d_1}{d_2} < 0.8$$
 indexing techniques are exploited to speed up the otherswise slow NN-search process
 - k-d tree
 - Best Bin First (BBF)
-## 5 - Camera Calibration
+## 5. Camera Calibration
 **Camera calibration** -> the process of determining a camera's **internal parameters** (like focal length and lens distortion) and **external parameters** (like the position and orientation of the camera in space). This allows us to accurately measure 3D information from 2D images.
 ### Perspective projection
 **Perspective projection** model -> Given a point in the 3D space, $M=[x,y,z]^T$ , project it into a 2D image point $m=[u,v]^{T}$ .
@@ -453,7 +456,11 @@ We need at least 4.5 points per image to compute $H_{i}$, we use more for robust
 ## 
 ---
 Part 2
-## 6 - CNN (recall) (Convolutional Neural Networks)
+## 6. CNN recap (Convolutional Neural Networks)
+- How neural networks learn (gradient descent, optimizers)
+- CNN architecture (convolutions, padding, stride, pooling)
+- Regularization and normalization
+- Efficient CNN variants
 ![[Pasted image 20250403153929.png]]
 :LiArrowBigUp: good slide to make a theory summary check
 
