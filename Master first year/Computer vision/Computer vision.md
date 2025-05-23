@@ -610,11 +610,36 @@ Challenges:
 - High-res processing needed
 ### Viola-Jones Detecting faces
 Real-time face detection using:
-- **Haar-like features**: Simple rectangular contrast patterns
-- **Integral images**: Speed up computation of features
-- **AdaBoost**: Combines weak learners into a strong classifier
-- **Cascade**: Early rejection of non-face regions for speed
+- **Haar-like features** -> Simple rectangular contrast patterns, 
+	- they detect changes in texture and brightness (e.g., dark eyes over light cheeks)
+	- each feature is applied to 24x24 patches of the image
+	![[Pasted image 20250523212110.png|400]]
+- **Integral images** -> Speed up computation of features
+- **AdaBoost algorythm** -> Combines weak learners into a strong classifier
+- **Cascade** -> Early rejection of non-face regions for speed
 This method shows how hand-crafted features and fast classifiers began solving detection before deep learning.
+### Sliding window + CNN, Naive extension
+Use a classification CNN as a **sliding window** detector:
+- Slide a fixed-size window across the image at multiple scales
+- Predict class and bounding box for each window
+Problems:
+- Too many windows → slow
+- Need a **background class**
+- Need to train for all positions/scales → computationally expensive
+How can we solve these problems?
+### Region proposals (R-CNN Series)
+**R-CNN (Region-CNN)**
+- Use **Selective Search** to generate ~2000 candidate object regions
+- Warp each region to a fixed size → classify and localize with CNN
+**Fast R-CNN**
+- Run CNN **once** over the whole image
+- Use **RoI Pooling** to extract features for each region
+- Faster than R-CNN by avoiding repeated CNN calls
+**Faster R-CNN** ->Introduces the **Region Proposal Network (RPN)**:
+- Learns to generate good candidate boxes directly
+- Uses **anchors** of various sizes/aspect ratios
+- Fully integrated: proposals + classification + localization
+
 
 ## 7 - Transformers
 ==Recurrent Neural Network (RNN)==
