@@ -597,6 +597,25 @@ aka **artificially increasing your training dataset** by transforming the existi
 - **Multi-scale training** → helps the model understand objects at **different sizes**.
 Data augmentation makes CNNs **more flexible and accurate on new data**
 
+
+## 7. Detection
+We want to detect (is object there?) and localize (where is object?) objects in images
+A detection provides:
+- A **category** label (eg "car", "dog")
+- A **bounding box**
+![[Pasted image 20250523210416.png]]
+Challenges:
+- Multiple objects -> variable-length outputs
+- Outputs with category and spatial information
+- High-res processing needed
+### Viola-Jones Detecting faces
+Real-time face detection using:
+- **Haar-like features**: Simple rectangular contrast patterns
+- **Integral images**: Speed up computation of features
+- **AdaBoost**: Combines weak learners into a strong classifier
+- **Cascade**: Early rejection of non-face regions for speed
+This method shows how hand-crafted features and fast classifiers began solving detection before deep learning.
+
 ## 7 - Transformers
 ==Recurrent Neural Network (RNN)==
 **RNN** -> family of neural networks for processing sequential data (sequence $x^{[t]}$ with timestep index $t$)
