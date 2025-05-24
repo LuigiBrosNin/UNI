@@ -668,6 +668,7 @@ Introduces the **Region Proposal Network (RPN)**:
 ![[Pasted image 20250524174225.png]]
 ### One-Stage Detectors
 While Faster R-CNN is accurate, it's still slow due to its two-stage nature.
+<u>One stage detectors are a tradeoff of small accuracy for huge gains in speed and simplicity</u>
 #### YOLO (You Only Look Once)
 1. The image is divided into an **S×S grid** -> A Backbone CNN processes the image into a feature map
 2. For each grid cell in the feature map -> Predicts presence, bounding boxes and class probabilities **directly** from the image grid
@@ -678,10 +679,26 @@ Fast, real-time performance
 3. Uses **default boxes** (anchors) at each scale/location
 SSD can predict **multiple objects at the same location**, solving YOLO’s early limitation.
 #### RetinaNet
+- **Backbone**: ResNet + FPN (multi-scale feature maps)
 - Tackles **class imbalance** with **Focal Loss**
-- Focuses learning on **hard examples**, not easy negatives
-
-
+$$FL(p_t​)=−(1−p_t​)^{\gamma} \log(p_t​)$$
+Where:
+- $p_t$​ -> model’s predicted probability for the true class
+- $\gamma$ -> focusing parameter (typically 2)
+Focal loss makes the model focus learning on **hard examples**, not easy negatives by making negatives less important
+### Anchor-Free Detectors – CenterNet
+Anchors have downsides in the form of 
+- manual design for ratios, 
+- heuristics, 
+- need for NMS to avoid duplicates, 
+- inefficient and non-differentiable post-processing.
+Let’s **<u>detect objects by their center points</u>** rather than anchor boxes.
+![[Pasted image 20250524181110.png]]
+The network outputs:
+1. A **heatmap** over the image with one channel per class. A bright spot indicates the **center of an object**.
+2. An **offset map** to correct for discretization (stride errors).
+3. A **size map** predicting (w, h) of the bounding box centered at that point.
+Detection is done by finding **local maxima** in the heatmap and reconstructing the bounding box
 ### Summary
 | Generation       | Approach                 | Key Features                     | Trade-off                  |
 | ---------------- | ------------------------ | -------------------------------- | -------------------------- |
@@ -690,6 +707,9 @@ SSD can predict **multiple objects at the same location**, solving YOLO’s earl
 | **YOLO/SSD**     | One-stage, grid-based    | Real-time, simple                | Lower accuracy             |
 | **RetinaNet**    | Focal loss for imbalance | One-stage with improved accuracy | Still uses anchors         |
 | **CenterNet**    | Anchor-free, point-based | Simpler, end-to-end              | Still evolving in accuracy |
+
+## 8. Segmentation
+
 
 ## 7 - Transformers
 ==Recurrent Neural Network (RNN)==
