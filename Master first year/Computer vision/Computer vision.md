@@ -728,7 +728,40 @@ We convert CNNs to FCNs (**Fully Convolutional Networks**)
 Since CNNs shrink the output image we need to <u>upsample</u> it to get our output 
 - **Bilinear/Nearest Neighbor Interpolation** (simple resizing).
 - **Transposed Convolutions** (learned upsampling).
-To preserve detail for the upsampling we "skip connection" from earlier layers to bring back details (aka, we retain the detail from earlier layers)
+To preserve detail for the upsampling we "skip connection" from earlier layers to bring back details (aka, we retain the detail from earlier layers and sum or concat them to the final output to get back details)
+
+### Transposed convolutions - Learnable upsampling
+Standard convolutions reduce size. **Transposed convolutions** go the other way.
+
+A **transposed convolution with stride 2** means:
+- Each input value is **expanded** using the kernel.
+- The kernel moves **2 pixels at a time** in the output.
+- When areas overlap, their contributions are **summed**.
+![[Pasted image 20250524222231.png]]
+![[Pasted image 20250524222132.png]]
+Each pixel **"spills over"** to its neighbors, and ultimately we recover a smooth, high-res image.
+
+- Visual Example with number in matrixes
+	![[Pasted image 20250524222457.png]]
+	![[Pasted image 20250524222510.png]]
+	![[Pasted image 20250524222523.png]]
+	![[Pasted image 20250524222532.png]]
+
+Basically works like a conventional operator (eg. bilinear interpolation), but the Kernel is tailor made by AI.
+### U-Net -> Encoder–Decoder for Segmentation
+U-Net is a specialized architecture for segmentation:
+- **Encoder:** Compresses the image (like any CNN).
+- **Decoder:** Reconstructs the mask.
+- **Skip connections:** Combine encoder and decoder features.
+### Dilated Convolutions (Atrous Convolutions)
+Instead of shrinking resolution to get larger receptive fields, **dilated convolutions** insert gaps between kernel elements.
+![[Pasted image 20250524223119.png]]
+$r$ -> dilation rate
+
+
+###
+
+
 
 
 ## 7 - Transformers
