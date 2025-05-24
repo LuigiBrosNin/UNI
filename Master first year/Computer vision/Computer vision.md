@@ -622,15 +622,17 @@ This method shows how hand-crafted features and fast classifiers began solving d
 Use a classification CNN as a **sliding window** detector:
 - Slide a fixed-size window (24x24,30x30, ...) across the image at multiple scales
 - Predict class and bounding box for each window
-	- **Non-Maximum Suppression** (NMS) Algorithm ->  
+	- **Non-Maximum Suppression** (NMS) Algorithm ->  pick the highest-scoring detection and discard all significant boxes overlap (Intersection over Union > threshold)
 Problems:
 - Too many windows → slow
 - Need a **background class**
 - Need to train for all positions/scales → computationally expensive
 How can we solve these problems?
 ### Region proposals (R-CNN Series)
+We want to find and focus on regions that likely contain objects and apply deep learning there.
+
 **R-CNN (Region-CNN)**
-- Use **Selective Search** to generate ~2000 candidate object regions
+- Use **Selective Search** to generate ~2000 candidate object regions using an algorithm (eg. selective search) based on low-level image features (texture, color, etc)
 - Warp each region to a fixed size → classify and localize with CNN
 **Fast R-CNN**
 - Run CNN **once** over the whole image
