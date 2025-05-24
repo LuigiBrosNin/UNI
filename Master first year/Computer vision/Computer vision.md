@@ -632,8 +632,12 @@ How can we solve these problems?
 We want to find and focus on regions that likely contain objects and apply deep learning there.
 
 **R-CNN (Region-CNN)**
-- Use **Selective Search** to generate ~2000 candidate object regions using an algorithm (eg. selective search) based on low-level image features (texture, color, etc)
+- Use **Selective Search** to generate ~2000 candidate object regions using an algorithm based on low-level image features (texture, color, etc)
 - Warp each region to a fixed size → classify and localize with CNN
+- Multi-task learning
+	- The CNN refines the bounding box found by the selective search
+	- The CNN makes the classification
+
 **Fast R-CNN**
 - Run CNN **once** over the whole image
 - Use **RoI Pooling** to extract features for each region
