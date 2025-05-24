@@ -623,6 +623,8 @@ Use a classification CNN as a **sliding window** detector:
 - Slide a fixed-size window (24x24,30x30, ...) across the image at multiple scales
 - Predict class and bounding box for each window
 	- **Non-Maximum Suppression** (NMS) Algorithm ->  pick the highest-scoring detection and discard all significant boxes overlap (Intersection over Union > threshold)
+	![[Pasted image 20250524172255.png|300]]
+	
 Problems:
 - Too many windows → slow
 - Need a **background class**
@@ -637,17 +639,25 @@ We want to find and focus on regions that likely contain objects and apply deep 
 - Multi-task learning
 	- The CNN refines the bounding box found by the selective search
 	- The CNN makes the classification
-Slow and not end-to-end trainable (features, SVM, bbox regression stages are trained separately)
+<u>Slow and not end-to-end trainable</u> (features, SVM, bbox regression stages are trained separately)
+
 ---
 **Fast R-CNN**
-- Run CNN **once** over the whole image
+- Run CNN **once** over the whole image -> Get feature map
 - Use **RoI Pooling** to extract features for each region
-- Faster than R-CNN by avoiding repeated CNN calls
+	- **Rol pooling** -> technique that maps arbitrary region proposals to a fixed-size output (by means of **snapping** and **max pooling**)
+- Predict trough <u>fully connected layers</u> class scores and bbox corrections
+Faster than R-CNN, end-to-end trainable
+<u>Selective search is still slow</u>
 
 ---
 **Faster R-CNN** ->Introduces the **Region Proposal Network (RPN)**:
+![[Pasted image 20250524173317.png]]
 - Learns to generate good candidate boxes directly
 - Uses **anchors** of various sizes/aspect ratios
+	- No selective search, we use anchor boxes (default boxes)
+	- $k$ anchors of different sizes and aspect ratios (E.g., with 3 scales and 3 aspect ratios → 9 anchors per location)
+	- RPN predicts adjustements
 - Fully integrated: proposals + classification + localization
 
 
