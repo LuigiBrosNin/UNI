@@ -754,12 +754,30 @@ U-Net is a specialized architecture for segmentation:
 - **Decoder:** Reconstructs the mask.
 - **Skip connections:** Combine encoder and decoder features.
 ### Dilated Convolutions (Atrous Convolutions)
-Instead of shrinking resolution to get larger receptive fields, **dilated convolutions** insert gaps between kernel elements.
+Instead of shrinking resolution to get larger receptive fields, **dilated convolutions** insert gaps between kernel elements, making them "see" larger regions of images.
 ![[Pasted image 20250524223119.png]]
 $r$ -> dilation rate
+Dilated convolutions let us **retain spatial resolution** while still seeing a **large part of the image**.
 
+In **DeepLab**:
+- backbone CNN (e.g., ResNet).
+- Normally, deeper layers would have very coarse features due to downsampling.
+- Instead, they **remove strides** in later layers and **add dilation** to the convolutions:
+    - So resolution is higher,
+    - And receptive field is still large.
+This makes segmentation masks **more accurate**, especially at boundaries.
+**ASPP module** -> Multiple 3×3 convolutions with different dilation rates → captures objects at **multiple scales**.
 
-###
+Downside: if we skip pixels, fine features might be ignored
+### Instance Segmentation = Detection + Segmentation
+We want to tell apart different instances of objects (eg. different people)
+
+**Mask R-CNN** -> Extension of Faster R-CNN
+- Adds a segmentation head
+- Predicts a binary mask per region. This mask:
+	- Is a **binary mask** (each pixel is 0 or 1),
+	- Has a **fixed resolution** (e.g., 28×28),
+	- Is **specific to one object proposal**.
 
 
 
