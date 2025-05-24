@@ -637,11 +637,14 @@ We want to find and focus on regions that likely contain objects and apply deep 
 - Multi-task learning
 	- The CNN refines the bounding box found by the selective search
 	- The CNN makes the classification
-
+Slow and not end-to-end trainable (features, SVM, bbox regression stages are trained separately)
+---
 **Fast R-CNN**
 - Run CNN **once** over the whole image
 - Use **RoI Pooling** to extract features for each region
 - Faster than R-CNN by avoiding repeated CNN calls
+
+---
 **Faster R-CNN** ->Introduces the **Region Proposal Network (RPN)**:
 - Learns to generate good candidate boxes directly
 - Uses **anchors** of various sizes/aspect ratios
