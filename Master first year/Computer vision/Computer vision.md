@@ -598,7 +598,7 @@ aka **artificially increasing your training dataset** by transforming the existi
 Data augmentation makes CNNs **more flexible and accurate on new data**
 
 
-## 7. Detection
+## 7. Object Detection
 We want to detect (is object there?) and localize (where is object?) objects in images
 A detection provides:
 - A **category** label (eg "car", "dog")
@@ -679,6 +679,9 @@ Fast, real-time performance
 3. Uses **default boxes** (anchors) at each scale/location
 SSD can predict **multiple objects at the same location**, solving YOLO’s early limitation.
 #### RetinaNet
+
+**FPN** **(Feature Pyramid Network)** ->neural network architecture that helps models work well with objects of different sizes by creating "pyramids" of high-res features at every level of resolution 
+
 - **Backbone**: ResNet + FPN (multi-scale feature maps)
 - Tackles **class imbalance** with **Focal Loss**
 $$FL(p_t​)=−(1−p_t​)^{\gamma} \log(p_t​)$$
@@ -779,8 +782,34 @@ We want to tell apart different instances of objects (eg. different people)
 	- Has a **fixed resolution** (e.g., 28×28),
 	- Is **specific to one object proposal**.
 
+The original Faster R-CNN used **RoI Pooling** to extract region-specific features. But it can now cause <u>misalignments</u> with bbox coordinates and the original object
 
+**Rol-Align** -> rol pooling improvements by:
+- **Not rounding coordinates** -> uses exact floating-point positions.
+- **Bilinear interpolation** -> samples feature map values precisely.
+- **Pooling** values more smoothly (via max or average).
 
+Once the RoI features are extracted:
+- They are fed into a **small Fully Convolutional Network (FCN)**.
+- This FCN outputs a **mask per class**, typically sized **28×28**.
+
+R-CNN's design is modular, and we can expand it
+- **Keypoint detection** -> predict a set of 2D heatmaps, one for each body joint (human poses)
+	![[Pasted image 20250524225921.png]]
+### Panoptic segmentation = The Sky and a Person 
+we can recognize uncountable, texture based stuff (eg. the sky) and countable objects (eg. people)
+
+Panoptic segmentation aims to **combine both worlds**:
+- Label each pixel with a **class label** (semantic),
+- For **thing categories**, also assign an **instance ID**.
+
+==Implementation==: Panoptic **Feature Pyramid Networks** (FPN)
+Based on **Mask R-CNN**, this model:
+1. Uses **FPN features** for both semantic and instance heads.
+2. Adds a **segmentation branch** for stuff categories.
+3. **Merges outputs**, resolving overlaps and inconsistencies.
+This enables **unified scene understanding** a full map of what’s in the image and where, with both individual objects and background materials.
+![[Pasted image 20250524230347.png]]
 
 ## 7 - Transformers
 ==Recurrent Neural Network (RNN)==
