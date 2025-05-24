@@ -632,26 +632,22 @@ Problems:
 How can we solve these problems?
 ### Region proposals (R-CNN Series)
 We want to find and focus on regions that likely contain objects and apply deep learning there.
-
-**R-CNN (Region-CNN)**
+#### R-CNN (Region-CNN)
 - Use **Selective Search** to generate ~2000 candidate object regions using an algorithm based on low-level image features (texture, color, etc)
 - Warp each region to a fixed size → classify and localize with CNN
 - Multi-task learning
 	- The CNN refines the bounding box found by the selective search
 	- The CNN makes the classification
 <u>Slow and not end-to-end trainable</u> (features, SVM, bbox regression stages are trained separately)
-
----
-**Fast R-CNN**
+#### Fast R-CNN
 - Run CNN **once** over the whole image -> Get feature map
 - Use **RoI Pooling** to extract features for each region
 	- **Rol pooling** -> technique that maps arbitrary region proposals to a fixed-size output (by means of **snapping** and **max pooling**)
 - Predict trough <u>fully connected layers</u> class scores and bbox corrections
 Faster than R-CNN, end-to-end trainable
 <u>Selective search is still slow</u>
-
----
-**Faster R-CNN** ->Introduces the **Region Proposal Network (RPN)**:
+#### Faster R-CNN
+Introduces the **Region Proposal Network (RPN)**:
 ![[Pasted image 20250524173317.png]]
 - Learns to generate good candidate boxes directly
 - Uses **anchors** of various sizes/aspect ratios
@@ -659,7 +655,41 @@ Faster than R-CNN, end-to-end trainable
 	- $k$ anchors of different sizes and aspect ratios (E.g., with 3 scales and 3 aspect ratios → 9 anchors per location)
 	- RPN predicts adjustements
 - Fully integrated: proposals + classification + localization
+**Positive samples**: anchors with IoU ≥ 0.7 with a ground truth box  
+**Negative samples**: anchors with IoU < 0.3 with all ground truth boxes
+(ground truth = solutions from the dataset)
+![[Pasted image 20250524174118.png|170]]
+- **Backbone CNN** extracts shared features
+- **RPN** proposes regions
+- **RoI Pooling** on proposed regions
+- **Fast R-CNN head** classifies and refines boxes
+#### Summary
 
+![[Pasted image 20250524174225.png]]
+### One-Stage Detectors
+While Faster R-CNN is accurate, it's still slow due to its two-stage nature.
+#### YOLO (You Only Look Once)
+1. The image is divided into an **S×S grid** -> A Backbone CNN processes the image into a feature map
+2. For each grid cell in the feature map -> Predicts presence, bounding boxes and class probabilities **directly** from the image grid
+Fast, real-time performance
+#### SSD (Single Shot Detector)
+1. Applies detectors at multiple feature map scales -> Backbone VGG extracts features
+2. Additional convolutional layers (extra feature layers) are added
+3. Uses **default boxes** (anchors) at each scale/location
+SSD can predict **multiple objects at the same location**, solving YOLO’s early limitation.
+#### RetinaNet
+- Tackles **class imbalance** with **Focal Loss**
+- Focuses learning on **hard examples**, not easy negatives
+
+
+### Summary
+| Generation       | Approach                 | Key Features                     | Trade-off                  |
+| ---------------- | ------------------------ | -------------------------------- | -------------------------- |
+| **Viola-Jones**  | Hand-crafted features    | Fast, real-time face detection   | Only for specific objects  |
+| **R-CNN series** | Two-stage, region-based  | High accuracy, flexible          | Slower                     |
+| **YOLO/SSD**     | One-stage, grid-based    | Real-time, simple                | Lower accuracy             |
+| **RetinaNet**    | Focal loss for imbalance | One-stage with improved accuracy | Still uses anchors         |
+| **CenterNet**    | Anchor-free, point-based | Simpler, end-to-end              | Still evolving in accuracy |
 
 ## 7 - Transformers
 ==Recurrent Neural Network (RNN)==
