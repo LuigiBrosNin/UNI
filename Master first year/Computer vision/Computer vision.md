@@ -721,8 +721,14 @@ To know if a model is doing well, we use:
 - **Frequency-Weighted IoU** -> Gives more weight to common classes.
 
 ### Segmentation masks prediction
-we convert CNNs to FCNs (**Fully Convolutional Networks**)
+We convert CNNs to FCNs (**Fully Convolutional Networks**)
+ 
+ **Fully Convolutional Networks** -> remove the final fully-connected layers from CNNs and **keep only convolutional ones**. This gives us **spatial maps** instead of just labels.
 
+Since CNNs shrink the output image we need to <u>upsample</u> it to get our output 
+- **Bilinear/Nearest Neighbor Interpolation** (simple resizing).
+- **Transposed Convolutions** (learned upsampling).
+To preserve detail for the upsampling we "skip connection" from earlier layers to bring back details (aka, we retain the detail from earlier layers)
 
 
 ## 7 - Transformers
