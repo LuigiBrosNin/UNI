@@ -709,6 +709,20 @@ Detection is done by finding **local maxima** in the heatmap and reconstructing 
 | **CenterNet**    | Anchor-free, point-based | Simpler, end-to-end              | Still evolving in accuracy |
 
 ## 8. Segmentation
+- Given an image, The goal is to <u>classify every pixel with a category</u> label (this is part of a road, cat, sky, etc.)
+- We want to identify specific parts of objects (eg. sides of a road)
+![[Pasted image 20250524195011.png]]
+### Evaluation Metrics
+To know if a model is doing well, we use:
+- **IoU (Intersection over Union)** -> How well do the predicted and real masks overlap?
+- **mIoU (mean IoU)** -> Average IoU across all classes. (most balanced, widely used)
+- **Pixel Accuracy** -> How many pixels were correctly labeled?
+- **Mean Accuracy** -> Per-class accuracy.
+- **Frequency-Weighted IoU** -> Gives more weight to common classes.
+
+### Segmentation masks prediction
+we convert CNNs to FCNs (**Fully Convolutional Networks**)
+
 
 
 ## 7 - Transformers
