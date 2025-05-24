@@ -614,14 +614,15 @@ Real-time face detection using:
 	- they detect changes in texture and brightness (e.g., dark eyes over light cheeks)
 	- each feature is applied to 24x24 patches of the image
 	![[Pasted image 20250523212110.png|400]]
-- **Integral images** -> Speed up computation of features
-- **AdaBoost algorythm** -> Combines weak learners into a strong classifier
+- **Integral images** -> Speed up computation of features by pre-processing pixel sums and computing the sum of any rectangle very fast
+- **AdaBoost algorythm**/Boosting -> Combines weak learners (simple rule) into a strong classifier
 - **Cascade** -> Early rejection of non-face regions for speed
 This method shows how hand-crafted features and fast classifiers began solving detection before deep learning.
 ### Sliding window + CNN, Naive extension
 Use a classification CNN as a **sliding window** detector:
-- Slide a fixed-size window across the image at multiple scales
+- Slide a fixed-size window (24x24,30x30, ...) across the image at multiple scales
 - Predict class and bounding box for each window
+	- **Non-Maximum Suppression** (NMS) Algorithm ->  
 Problems:
 - Too many windows → slow
 - Need a **background class**
