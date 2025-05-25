@@ -890,6 +890,7 @@ What if it could **dynamically attend** to **different parts** of the input sequ
 > Imagine reading a sentence in Italian and translating it word-by-word. Instead of trying to remember everything at once, you **glance back** at the Italian sentence to remind yourself which part maps to what you're saying next.
 
 ### Trasformers
+![[Pasted image 20250526002410.png|350]]
 RNNs are sequential, which <u>limits parallelization</u> during training and struggle with long sequences as a result, how can we solve this?
 
 ==Transformer== -> remove recurrence and rely entirely on self-attention  
@@ -912,17 +913,11 @@ Each of these sub-layers has:
 	- Normalizing across features of each token individually (unlike batch norm which depends on batch statistics)
 	- Allowing each neuron to have **its own bias and scale**
 
-
 ==Transformer Decoder==
-It always takes the last layer of the encoder, they have the same number of layers
-![[Pasted image 20250410163254.png]]
-each step it shows you only previously predicted tokens, while hiding future ones
-
-**Self-attention** -> learns representations of the input sequence, trough queries, keys and values $(Q, K, V)$ vectors, mappings of the same token
-$$Attention(Q,K,V)=softmax(\frac{QK^T}{\sqrt d_k})V$$
-$dmodel$ -> dimension of the heap
-$L$ -> length of the sequence
-dimensionality of the vectors -> $L \times dmodel$ 
+three sub-layers
+1. **Masked multi-head self-attention** -> look at previous output words without peeking ahead (masking)
+2. **Multi-Head Cross-Attention** -> "Which parts of the input sentence are relevant to generating the next word?" and waits for the encoder's "response"
+3. Feed-Forward neural network (FNN) -> two linear layers with a ReLU in between
 
 the output maintains this dimensionality
 ![[Pasted image 20250410165655.png]]
@@ -933,7 +928,9 @@ Multi-head attention allows the model to jointly attend to information from diff
 
 TODO: look for a video tutorial that explains self attention for transformers, slides are terrible 
 
-
+##
+![[Pasted image 20250526002835.png|400]]
+60 was underestimating it
 
 # Exam experiment
 ## Topic Ideas
