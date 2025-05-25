@@ -808,10 +808,12 @@ Based on **Mask R-CNN**, this model:
 1. Uses **FPN features** for both semantic and instance heads.
 2. Adds a **segmentation branch** for stuff categories.
 3. **Merges outputs**, resolving overlaps and inconsistencies.
-This enables **unified scene understanding** a full map of what’s in the image and where, with both individual objects and background materials.
+This enables **unified scene understanding**, a full map of what’s in the image and where, with both individual objects and background materials.
 ![[Pasted image 20250524230347.png]]
 
-## 7 - Transformers
+## 9. Metric Learning
+
+## ? - Transformers
 ==Recurrent Neural Network (RNN)==
 **RNN** -> family of neural networks for processing sequential data (sequence $x^{[t]}$ with timestep index $t$)
 The parameter sharing used in recurrent networks relies on the assumption that the same parameters can be used for different time steps…
