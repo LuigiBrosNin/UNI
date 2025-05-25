@@ -821,7 +821,9 @@ instead of classes, we structure a space so that
 ![[Pasted image 20250525205811.png]]
 ![[Pasted image 20250525205822.png]]
 
-**Contrasive loss** -> 
+**Contrasive loss** -> Minimizes distance if two images belong to the same class. 
+- Penalizes small distances between different-class pairs.
+- Often includes a **margin** to prevent over-pushing dissimilar pairs.
 
 
 ## ? - Transformers
