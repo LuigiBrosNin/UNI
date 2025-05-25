@@ -7,7 +7,6 @@
 	- **[[attachments]]**
 
 - **[[Computer vision]]**
-	- [[Appunti Giuseppe]]
 	- **[[attachments]]**
 
 	- [[Project notes]]
