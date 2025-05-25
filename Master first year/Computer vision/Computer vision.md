@@ -854,19 +854,36 @@ how can we make computers understand words?
 How can we handle sequences, aka phrases?
 
 **RNN** -> family of neural networks for processing sequential data by using a concept called a **hidden state** that **"remembers" previous inputs**.
-The parameter sharing used in recurrent networks relies on the assumption that the same parameters can be used for different time steps…
+```scss
+“The” → h(1)
+“The cat” → h(2)
+“The cat sat” → h(3)
+...
+```
+where $h(t)$ is the hidden state at step $t$
+- The same set of weights is used at each time step.
+- This allows RNNs to generalize to different sequence lengths using a fixed-size model.
+RNN is a "loop", and during training we unroll this loop in time, so that we can apply **backpropagation trough time** (BPTT)
+![[Pasted image 20250525234205.png]]
 
-Unfolding process or RNNs advantages:  
-- Same input size for each learned model
-- we can use the same transition function $f$ with the same parameters at every time step
+We compute loss at each step, <u>summing</u> each step for the current and total loss.
 
-The gradient computation involves performing a forward propagation pass moving left to right through the unrolled graph, followed by a backward propagation pass moving right to left through the graph
+it's hard to learn long-range dependencies because of vanishing (mostly) or exploding gradients...
+
+### Encoder-Decoder architectures
+We need to process input and output sequences of different lengths (useful for eg. machine translation)
+> “Il gatto è sul tavolo” → “The cat is on the table”
 
 ==Encoder-Decoder==
-- An **encoder** processes the input sequence. The encoder emits the context C, usually as a function of its final hidden state  
-- A **decoder** is conditioned on that fixed-length vector to generate the output sequence
+- An **encoder** processes the input sequence. The encoder emits the context $C$, as a function/vector of its final hidden state  
+- A **decoder** takes that context $C$ and generates the output step-by-step
 
-==Attention mechanism== -> dynamic weight adjustment function based on an attention function
+Bottleneck: encoder output is a single vector, long sequences are problematic
+
+---
+What if it could **dynamically attend** to **different parts** of the input sequence as needed? Attention provides a solution to the bottleneck problem
+
+**Attention mechanism** ->
 The function encodes a subset of the input vectors adaptively when decoding the translation
 ![[Pasted image 20250410153057.png]]
 **Attention scores** (purple dots) -> dot product between (in the image) each blue vector and green transposed vector (results in a number = a single purple dot), the purple score vector we get as a result is used to predict the output of the decoder.
