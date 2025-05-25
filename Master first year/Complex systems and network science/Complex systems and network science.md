@@ -1564,7 +1564,7 @@ example
 - **[[models]]**
 
 - [[Presentation notes]]
-- [[Project Notes]]
+- [[Home/UNI/Master first year/Complex systems and network science/Project Notes]]
 - [[Project paper notes]]
 - [[README]]
 

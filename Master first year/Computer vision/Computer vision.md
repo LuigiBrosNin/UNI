@@ -1019,6 +1019,11 @@ Linear head analogy -> If the pre-trained model is like a **language**, the line
 
 ---
 
+
+
+
+### Notes
+[[Home/UNI/Master first year/Computer vision/Project notes|Project notes]]
 ##
 
 # Theory questions

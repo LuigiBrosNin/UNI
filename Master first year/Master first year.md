@@ -10,6 +10,7 @@
 	- [[Appunti Giuseppe]]
 	- **[[attachments]]**
 
+	- [[Project notes]]
 - **[[Decision making with constraint programming]]**
 - **[[Digital Forensics]]**
 - [[Intelligenza artificiale]]
