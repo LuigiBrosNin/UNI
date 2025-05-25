@@ -883,23 +883,35 @@ Bottleneck: encoder output is a single vector, long sequences are problematic
 ---
 What if it could **dynamically attend** to **different parts** of the input sequence as needed? Attention provides a solution to the bottleneck problem
 
-**Attention mechanism** ->
-The function encodes a subset of the input vectors adaptively when decoding the translation
+**Attention mechanism** -> make the decoder <u>assign weights</u> to all encoder states, so it knows where to focus for each output word
 ![[Pasted image 20250410153057.png]]
 **Attention scores** (purple dots) -> dot product between (in the image) each blue vector and green transposed vector (results in a number = a single purple dot), the purple score vector we get as a result is used to predict the output of the decoder.
 
-Then we concatenate or sum the purple vector with the green one, used for the output layer computation (which is our prediction)
+> Imagine reading a sentence in Italian and translating it word-by-word. Instead of trying to remember everything at once, you **glance back** at the Italian sentence to remind yourself which part maps to what you're saying next.
 
-==Transformer== -> first model relying entirely on self-attention  
-(and cross-attention) to compute representations of its input and output without using RNNs or convolution
+### Trasformers
+RNNs are sequential, which <u>limits parallelization</u> during training and struggle with long sequences as a result, how can we solve this?
+
+==Transformer== -> remove recurrence and rely entirely on self-attention  
+(and cross-attention)
 At each step the model is auto-regressive, consuming the previously  
 generated symbols as additional input when generating the next
 
+we follow the same input and outputs of encoders-decoders in RNNs
+
 ==Transformer Encoder==
-It's composed of a stack of N identical layers
-each layer has:
-- a (multi)head self-attention mechanism
-- a feed-forward network
+1. get the dense vector of each word (token), vector size `d_model`
+2. Add positional encodings -> no sense of order, so we add positional information, same vector size `d_model` so we can sum it (creates enough space to be positionally distinguished)
+
+having **N layers** made by
+1. **Multi-Head Self-Attention**
+2. **Feed-Forward Neural Network (FFN)** 
+Each of these sub-layers has:
+- **Residual connections** (skip connections)
+- **Layer Normalization** (all vectors of size `d_model`) -> LayerNorm helps the model **train more stably** by:
+	- Normalizing across features of each token individually (unlike batch norm which depends on batch statistics)
+	- Allowing each neuron to have **its own bias and scale**
+
 
 ==Transformer Decoder==
 It always takes the last layer of the encoder, they have the same number of layers
