@@ -820,23 +820,31 @@ instead of classes, we structure a space so that
 **Siamese networks** -> two+ identical networks with shared weights, trained on pairs of inputs, they train based on similarity
 ![[Pasted image 20250525205811.png]]
 ![[Pasted image 20250525205822.png]]
+ **k-Nearest Neighbors** (**k-NN**)-> Algorithm used for classification and regression. When given a **new data point**, k-NN looks at the **k closest data points** (neighbors) from the training set based on a distance metric like **Euclidean distance** and decides.
 
 **Contrastive loss** -> Means to 
 - Minimizes distance if two images belong to the same class. 
 - Penalizes small distances between different-class pairs.
 - Often includes a **margin** to prevent over-pushing dissimilar pairs.
-
+### Triple loss
 **Triplet Loss**:
 ![[Pasted image 20250525213656.png]]
 - Works with triplets: anchor (A), positive (P), and negative (N).
 - Ensures:    
 $$\|f(A) - f(P)\|^2 + \text{margin} < \|f(A) - f(N)\|^2$$
-- We add margin to ensure to learn rank
+- We add margin $m$ to ensure to learn to rank
 - More direct than contrastive loss but can suffer from **collapse** if not trained carefully.
 
-
-
-## ? - Transformers
+How do we optimize it?
+using **semi-hard negatives** -> examples that are between the positives and the margin so they contribute non-zero loss
+ 
+### Applications
+Metric learning extends to:
+- **Image retrieval** (e.g., CUB200, Cars196, SOP datasets)
+- **Re-identification** in multi-camera tracking
+- **Few-shot learning**
+- **E-commerce**: Facebook’s **GrokNet** uses embeddings for item recognition across categories.
+## 10. Transformers
 ==Recurrent Neural Network (RNN)==
 **RNN** -> family of neural networks for processing sequential data (sequence $x^{[t]}$ with timestep index $t$)
 The parameter sharing used in recurrent networks relies on the assumption that the same parameters can be used for different time steps…
@@ -889,7 +897,7 @@ Multi-head attention allows the model to jointly attend to information from diff
 
 TODO: look for a video tutorial that explains self attention for transformers, slides are terrible 
 
-##
+
 
 # Exam experiment
 ## Topic Ideas
