@@ -812,6 +812,17 @@ This enables **unified scene understanding**, a full map of what’s in the imag
 ![[Pasted image 20250524230347.png]]
 
 ## 9. Metric Learning
+We move from **classification-based training** to ==embedding learning== because of the limitations of classification for face recognition (no scale for millions of identities, retrain to modify identities, no guaranteed closeness of similar faces in embedding space)
+instead of classes, we structure a space so that
+- **Intra-class distances** are minimized (same person = close vectors).
+- **Inter-class distances** are maximized (different persons = far vectors).
+### Siamese Networks and Loss Functions
+**Siamese networks** -> two+ identical networks with shared weights, trained on pairs of inputs, they train based on similarity
+![[Pasted image 20250525205811.png]]
+![[Pasted image 20250525205822.png]]
+
+**Contrasive loss** -> 
+
 
 ## ? - Transformers
 ==Recurrent Neural Network (RNN)==
