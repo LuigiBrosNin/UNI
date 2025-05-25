@@ -917,16 +917,42 @@ Each of these sub-layers has:
 three sub-layers
 1. **Masked multi-head self-attention** -> look at previous output words without peeking ahead (masking)
 2. **Multi-Head Cross-Attention** -> "Which parts of the input sentence are relevant to generating the next word?" and waits for the encoder's "response"
-3. Feed-Forward neural network (FNN) -> two linear layers with a ReLU in between
+3. **Feed-Forward neural network (FNN)** -> two linear layers with a ReLU in between
+Additionally has
+- **Residual connections** (shortcut connections)
+- **Layer Normalization** after each sub-layer
+### Self attention
+How the Model Understands Context
 
-the output maintains this dimensionality
-![[Pasted image 20250410165655.png]]
+Self-attention allows each word (or token) to **focus on other relevant words** in the same sequence, as we saw before
+For each input token (say, "cat"):
+- **Query (Q)**: What this token is looking for.
+- **Key (K)**: What each other token _has_ to offer.
+- **Value (V)**: What information each token carries.
 
-**Multi-Head Attention** -> linearly project the queries, keys and values h times with different, learned linear projections
-![[Pasted image 20250410170920.png]]
-Multi-head attention allows the model to jointly attend to information from different representation subspaces at different positions
+We:
+1. Multiply the input vector by 3 weight matrices (learned during training) to get Q, K, and V.
+2. Compute **similarity** between Q and every K (for all tokens).
+3. Use **softmax** to turn these similarities into <u>attention scores</u>.
+4. Use the scores to compute a **weighted sum of all V vectors**.
+![[Pasted image 20250526004218.png]]
+This gives a **contextual representation** of the token.
+$$\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V$$
+Where:
+- $QK^T$ -> Measures how similar each query is to every key (T stands for transpose).
+- $\sqrt{d_k}$​​ -> A scaling factor to prevent very large dot products (stabilizes gradients).
+- **Softmax**: Converts similarity scores into probabilities.
+- Multiply by $V$: Focuses on the right tokens.
+>🐰If Lisanti asks me this in the oral exam, i will seppuku
 
-TODO: look for a video tutorial that explains self attention for transformers, slides are terrible 
+**Multi-Head Attention** -> we do self-attention multiple times with different weight matrices to understand different things (eg. meaning, syntax)
+We concatenate the results and we apply a final linear layer
+
+Every transformer layer has:
+- **Multi-head attention** -> focus of different perspectives for more understanding
+- **Feed-forward network** -> how it processes what it focused on with attention (in: `d_model` vector, out: `d_model` vector)
+- **Residual connections** -> info preservation and improve gradient flow
+- **Layer normalization** -> stabilization and speed
 
 ##
 ![[Pasted image 20250526002835.png|400]]
