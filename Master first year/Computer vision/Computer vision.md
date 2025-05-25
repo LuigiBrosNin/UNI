@@ -849,12 +849,11 @@ Metric learning extends to:
 how can we make computers understand words?
 **One-Hot Encoding** -> word = long vector with a single 1 in it, each word having its 1 positioned differently, so unique vectors.
 
-**Word Embeddings** -> pass the one-hot vector trough a <u>fully connected layer,</u> outputting a dense smaller vector
+**Word Embeddings** -> pass the one-hot vector trough a <u>fully connected layer,</u> outputting a dense smaller vector. The output vector captures **semantic meaning**, similar meanings = similar vectors
+### Recurrent Neural Network (RNN)
+How can we handle sequences, aka phrases?
 
-
-
-==Recurrent Neural Network (RNN)==
-**RNN** -> family of neural networks for processing sequential data (sequence $x^{[t]}$ with timestep index $t$)
+**RNN** -> family of neural networks for processing sequential data by using a concept called a **hidden state** that **"remembers" previous inputs**.
 The parameter sharing used in recurrent networks relies on the assumption that the same parameters can be used for different time steps…
 
 Unfolding process or RNNs advantages:  
