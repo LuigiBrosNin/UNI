@@ -1,0 +1,1 @@
+Debian 12 doesn't have CUDA toolkit 11.8 so fuck it i'm using colab for my paper. Thanks for nothing, this exam is literally equating to giving birth

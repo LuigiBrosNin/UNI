@@ -22,9 +22,8 @@ Slides are terrible, what is important is mostly what the prof talks about, whic
 # Notes
 I can't make miracles, the slides are hard to follow and lack pedagogical cohesion to understand, if you want to study there you're in for some challenge.
 I hope Lisanti changes the slides next year, meanwhile i'll try my best to make these notes to study and most importantly understand this 60 cfu curse.
-##
+## Part 1
 ---
-Part 1
 ## 0. Intro
 **Computer vision** -> deals with extraction of information from images (eg. pic of a bird -> "This is a bird!")
 ## 1. Image Formation Process
@@ -453,9 +452,8 @@ We need at least 4.5 points per image to compute $H_{i}$, we use more for robust
 | Homography $H$ | 2D projective mapping for planar scenes                                 |
 | Distortion     | Lens imperfections modeled with parameters                              |
 | Zhang’s Method | Practical way to calibrate a real camera using images of a flat pattern |
-## 
+## Part 2 
 ---
-Part 2
 ## 6. CNN recap (Convolutional Neural Networks)
 ### Representation learning
 **Representation learning** -> using deep learning to learn automatically from raw data the designing features (edges, shapes etc) we saw in the 1st part
@@ -935,6 +933,7 @@ We:
 2. Compute **similarity** between Q and every K (for all tokens).
 3. Use **softmax** to turn these similarities into <u>attention scores</u>.
 4. Use the scores to compute a **weighted sum of all V vectors**.
+
 ![[Pasted image 20250526004218.png]]
 This gives a **contextual representation** of the token.
 $$\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right)V$$
@@ -953,7 +952,16 @@ Every transformer layer has:
 - **Feed-forward network** -> how it processes what it focused on with attention (in: `d_model` vector, out: `d_model` vector)
 - **Residual connections** -> info preservation and improve gradient flow
 - **Layer normalization** -> stabilization and speed
+### Vision Transformers (ViT)
+Use all this shit for images now, how?
+1. **Split image** into fixed-size patches (e.g., 16x16 pixels).
+2. **Flatten** each patch and pass it through a linear layer (just like word embeddings).
+3. Add **positional encodings** to retain spatial information.
+4. Feed the patch sequence into a standard **Transformer encoder**.
+we got a sequence of vector, like if the image was a sentence.
+![[Pasted image 20250526010218.png]]
 
+ViTs outperform CNNs on larger datasets, they require more data to perform well
 ##
 ![[Pasted image 20250526002835.png|400]]
 60 was underestimating it
@@ -1118,17 +1126,18 @@ Linear head analogy -> If the pre-trained model is like a **language**, the line
 
 # Theory questions
 ## **Image Formation Process**
-
 - **What is the role of the pinhole camera model in understanding the image formation process?**  
     The pinhole camera model provides a simplified mathematical framework to describe the projection of a 3D scene onto a 2D image plane. It models the camera as having an infinitesimal aperture (no lens) and relates 3D coordinates to 2D image coordinates through simple geometric relationships.
+
 - **How does the perspective projection model relate 3D scene points to their 2D image projections?**  
     This model relates the coordinates of a point in 3D space (x1, x2, x3) to its corresponding 2D image coordinates (y1, y2). This mapping results in a loss of depth information, making it challenging to infer the 3D structure from a single 2D image.
+
 - **What is the correspondence problem in stereo vision, and how is it solved?**  
     The correspondence problem involves finding matching points in two stereo images that correspond to the same 3D scene point. It is solved using techniques like disparity computation and triangulation, which estimate the depth of scene points based on the relative positions of corresponding points in the two images.
-    
+
 - **Explain the concept of epipolar geometry and its importance in stereo vision.**
     Epipolar geometry describes the geometric relationships between points observed in two images taken from different viewpoints. It constrains corresponding points to lie on corresponding epipolar lines. This constraint simplifies the search for point correspondences and is essential for stereo vision and 3D reconstruction.
-    
+
 
 ## **Spatial Filtering**
 
@@ -1242,9 +1251,9 @@ Linear head analogy -> If the pre-trained model is like a **language**, the line
 
 - **How do Vision Transformers (ViTs) work differently from CNNs?**  
     Unlike CNNs, which rely on convolutions for feature extraction, ViTs use a self-attention mechanism to model global relationships between patches in an image. Images are divided into patches, which are linearly embedded and processed through multiple attention layers.
-    
+
 - **What is the role of positional encoding in ViTs?**  
     Since transformers do not have inherent spatial awareness, positional encoding is added to the input embeddings to retain spatial information.
-    
+ 
 - **Why is multi-head self-attention important in transformers?**  
     Multi-head self-attention allows the model to learn different types of relationships between patches by projecting the input into different subspaces simultaneously.
