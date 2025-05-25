@@ -821,9 +821,19 @@ instead of classes, we structure a space so that
 ![[Pasted image 20250525205811.png]]
 ![[Pasted image 20250525205822.png]]
 
-**Contrasive loss** -> Minimizes distance if two images belong to the same class. 
+**Contrastive loss** -> Means to 
+- Minimizes distance if two images belong to the same class. 
 - Penalizes small distances between different-class pairs.
 - Often includes a **margin** to prevent over-pushing dissimilar pairs.
+
+**Triplet Loss**:
+![[Pasted image 20250525213656.png]]
+- Works with triplets: anchor (A), positive (P), and negative (N).
+- Ensures:    
+$$\|f(A) - f(P)\|^2 + \text{margin} < \|f(A) - f(N)\|^2$$
+- We add margin to ensure to learn rank
+- More direct than contrastive loss but can suffer from **collapse** if not trained carefully.
+
 
 
 ## ? - Transformers
