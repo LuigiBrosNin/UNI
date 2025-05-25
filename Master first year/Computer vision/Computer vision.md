@@ -845,6 +845,14 @@ Metric learning extends to:
 - **Few-shot learning**
 - **E-commerce**: Facebook’s **GrokNet** uses embeddings for item recognition across categories.
 ## 10. Transformers
+### Foundations
+how can we make computers understand words?
+**One-Hot Encoding** -> word = long vector with a single 1 in it, each word having its 1 positioned differently, so unique vectors.
+
+**Word Embeddings** -> pass the one-hot vector trough a <u>fully connected layer,</u> outputting a dense smaller vector
+
+
+
 ==Recurrent Neural Network (RNN)==
 **RNN** -> family of neural networks for processing sequential data (sequence $x^{[t]}$ with timestep index $t$)
 The parameter sharing used in recurrent networks relies on the assumption that the same parameters can be used for different time steps…
