@@ -16,9 +16,7 @@
 
 # Theory
 Slides are terrible, what is important is mostly what the prof talks about, which is not in the slides as he explains.
-
 ## 
-
 # Notes
 I can't make miracles, the slides are hard to follow and lack pedagogical cohesion to understand, if you want to study there you're in for some challenge.
 I hope Lisanti changes the slides next year, meanwhile i'll try my best to make these notes to study and most importantly understand this 60 cfu curse.
