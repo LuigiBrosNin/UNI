@@ -360,12 +360,6 @@ In Autopsy we can browse the Registry
 ##
 
 # Exam
-- exam dates AA 24/25
-	- 23th Jan deadline for papers
-	- 30th January
-	--- 
-	- 30th Jan deadline for papers
-	- 6th February
 
 - Relazione "attaccanti"
 	![[Relazione_attaccanti.pdf]]
