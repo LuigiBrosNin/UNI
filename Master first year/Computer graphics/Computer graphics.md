@@ -906,7 +906,28 @@ santo GPT che calcola le derivate
 ```
 - added `selected_complex_obj` int in `LAB_3D` and imported in `gestione_callback` to find the object we're looking for
 ```c++
+            // search in ScenaObj for the closest intersection
+            for (int i = 0; i < ScenaObj.size(); i++)
+            {
+                for (int j = 0; j < ScenaObj[i].size(); j++)
+                {
+                    float t_dist = 0.0f;
+                    if (ray_sphere(SetupTelecamera.position, ray_wor, ScenaObj[i][j].ancora_world, raggio_sfera, &t_dist))
+                    {
+                        if (selected_complex_obj == -1 || t_dist < closest_intersection)
+                        {
+                            selected_complex_obj = i;
+                            closest_intersection = t_dist;
+                        }
+                    }
+                }
+            }
 
+            // solve conflict between selected_obj and selected_complex_obj
+            if (selected_complex_obj > -1 && selected_obj > -1)
+            {
+                    selected_obj = -1; // deselect simple object
+            }
 ```
 - added UI handling for SceneObj selected in `my_interface`
 ```c++
