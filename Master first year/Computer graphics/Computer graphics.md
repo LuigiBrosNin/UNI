@@ -880,7 +880,7 @@ santo GPT che calcola le derivate
         gl_Position = Projection * View * Model * vec4(wavedPos, 1.0);
     }
 ```
-#### 4 - picking oggetti
+#### 4 - picking objects
 - added anchor to imported objects in `add_obj()`
 ```c++
 		// Add anchor point at the origin (or use the centroid if you prefer)
@@ -947,8 +947,57 @@ santo GPT che calcola le derivate
 ```
 
 
-####
+#### 5 -
 
+#### 6 - Toon shading (my favourite)
+in VertexShader
+```c++
+    else if (sceltaShader == 6) // TOON shading
+    {
+        gl_Position = Projection * View * Model * vec4(aPos, 1.0);
+
+        // Transform vertex position into VCS coordinates
+        vec4 vcsPosition = View * Model * vec4(aPos, 1.0);
+        // Transform Light  position into VCS coordinates
+        vec4 vcsLightPos = View * vec4(light.position, 1.0);
+
+        // Compute vectors N,V,L,R in VCS
+        vec3 N = normalize(transpose(inverse(mat3(View * Model))) * aNormal);
+        vec3 V = normalize(ViewPos - vcsPosition.xyz);
+        vec3 L = normalize((vcsLightPos - vcsPosition).xyz);
+        vec3 R = reflect(-L, N);  // Costruisce la direzione riflessa di L rispesso alla normale
+        // Ambient
+        vec3 ambient = strength * light.power * material.ambient;
+
+        // Specular
+        float spec = pow(max(dot(V, R), 0), material.shininess);
+        // Toon shading effect
+
+        // Toon banding for diffuse
+        float cos_angolo_theta = max(dot(L, N), 0.0);
+        float toonDiffuse;
+        if (cos_angolo_theta > 0.75)
+            toonDiffuse = 1.0;      // highlight
+        else if (cos_angolo_theta > 0.4)
+            toonDiffuse = 0.7;      // midtone
+        else if (cos_angolo_theta > 0.1)
+            toonDiffuse = 0.4;      // shadow
+        else
+            toonDiffuse = 0.15;     // deep shadow
+
+        vec3 diffuse = light.power * light.color * toonDiffuse * material.diffuse;
+
+        // quantize specular as well for a "toon highlight"
+        float toonSpec = step(0.5, spec) * 1.0; // Only show highlight if spec > 0.5
+        vec3 specular = light.power * light.color * toonSpec * material.specular;
+
+        // Combine colors
+        ourColor = vec4(ambient + diffuse + specular, 1.0);
+    }
+```
+
+
+#### 7 -
 ##
 #
 ##
