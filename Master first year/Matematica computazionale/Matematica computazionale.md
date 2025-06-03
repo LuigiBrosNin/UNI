@@ -349,7 +349,7 @@ Cases[exprNonLista, _Integer, 2]
 {5,6}
 ```
 ### 6.1.4 Ruolo degli Attributes
-#TODO 
+TODO 
 ### 6.1.5 Funzioni Built-in che usano Pattern
 ### 6.2.2 DownValues
 `DownValues[f]` or `? f` -> restituisce le regole corrispondenti alle definizioni fatte per il simbolo `f`
@@ -424,7 +424,7 @@ Ogni volta che Module è usata, viene creato un nuovo simbolo per rappresentare 
 
 
 ### 6.2.3 Definizioni multiple per uno stesso simbolo File
-#TODO 
+TODO 
 ### 6.2.5. Rimuovere selettivamente le definizioni File
 ### 6.2.6. Programmazione "puramente" basata su regole 
 ### 6.3.1. Pattern di vincolo 
@@ -453,7 +453,7 @@ identificano 1,2,3 patterns
 
 ## Packets
 ###
-#TODO
+TODO
 ###
 ## Dynamic
 `Dynamic[exp]` ->Built in che aggiorna l'output man mano che cambia (valuta nuovamente l'espressione)

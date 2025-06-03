@@ -808,10 +808,49 @@ unless you want the freaky camera it comes with.
 I do not like the controls of this program but i guess we'll have to work with that.
 ### The hell we need to do?
 #### 1 - Insert object
-i inserted a tree cuz i wanna keep the bunny and make a forest/nature kind of scene
+i inserted a tree :>
 i also added the grass material and used that one for the base plane.
 #### 2 - extend shaders to handle PHONG shaders
-#TODO
+ezpz
+```c++
+// VertexShader
+    else if (sceltaShader == 3) // PHONG_SHADING
+    {
+        // Pass the vertex position and normal to fragment shader
+        vcsPosition = (View * Model * vec4(aPos, 1.0)).xyz;
+        vcsN = normalize(transpose(inverse(mat3(View * Model))) * aNormal);
+        vcsLightPosition = (View * vec4(light.position, 1.0)).xyz;
+        
+        ourColor = aColor;
+        gl_Position = Projection * View * Model * vec4(aPos, 1.0);
+    }
+// FragmentShader
+    else if (sceltaShader == 3) // PHONG_SHADING
+    {
+        // Normalize all vectors
+        vec3 N = normalize(vcsN);
+        vec3 V = normalize(-vcsPosition);
+        vec3 L = normalize(vcsLightPosition - vcsPosition);
+        vec3 R = reflect(-L, N);
+
+        // Calculate lighting components with light power and color
+        vec3 ambient = strength * light.power * light.color * material.ambient;
+
+        float diff = max(dot(L, N), 0.0);
+        vec3 diffuse = light.power * light.color * diff * material.diffuse;
+
+        float spec = pow(max(dot(V, R), 0.0), material.shininess);
+        vec3 specular = light.power * light.color * spec * material.specular;
+
+        // Combine all components
+        vec3 result = ambient + diffuse + specular;
+        
+        // Final color
+        FragColor = vec4(result, 1.0);
+    }
+```
+
+#### 3 -
 ####
 
 ##
