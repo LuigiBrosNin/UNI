@@ -881,6 +881,17 @@ santo GPT che calcola le derivate
     }
 ```
 #### 4 - picking oggetti
+- added anchor to imported objects in `add_obj()`
+```c++
+		// Add anchor point at the origin (or use the centroid if you prefer)
+		Model3D[i].vertices.push_back(vec3(0.0f, 0.0f, 0.0f));
+		Model3D[i].colors.push_back(vec4(1.0f, 0.0f, 0.0f, 1.0f)); // Red anchor
+		Model3D[i].ancora_obj = vec4(0.0f, 0.0f, 0.0f, 1.0f);
+
+		// Optionally, add an index for the anchor (for visualization)
+		Model3D[i].indices.push_back(Model3D[i].vertices.size() - 1);
+```
+- added check in `draw_scene` to render anchors when the UI requests it
 
 
 ####
