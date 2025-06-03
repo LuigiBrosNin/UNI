@@ -850,8 +850,38 @@ ezpz
     }
 ```
 
-#### 3- 
+#### 3- extend shaders for Waves
+santo GPT che calcola le derivate
+```c++
+    else if (sceltaShader == 5) // WAVE
+    {
+        float a = 0.5;
+        float omega = 10.0;
+
+        // Wave displacement
+        float phaseX = omega * time + 10.0 * aPos.x;
+        float phaseZ = omega * time + 10.0 * aPos.z;
+        float vy = a * sin(phaseX) * sin(phaseZ);
+        vec3 wavedPos = vec3(aPos.x, aPos.y + vy, aPos.z);
+
+        // --- Compute normal from partial derivatives ---
+        // Partial derivatives of vy with respect to x and z
+        float dvy_dx = a * 10.0 * cos(phaseX) * sin(phaseZ);
+        float dvy_dz = a * 10.0 * sin(phaseX) * cos(phaseZ);
+
+        // The normal is the cross product of the tangent vectors
+        vec3 normal = normalize(vec3(-dvy_dx, 1.0, -dvy_dz));
+
+        vcsPosition = (View * Model * vec4(wavedPos, 1.0)).xyz;
+        vcsN = normalize(transpose(inverse(mat3(View * Model))) * normal);
+        vcsLightPosition = (View * vec4(light.position, 1.0)).xyz;
+
+        ourColor = aColor;
+        gl_Position = Projection * View * Model * vec4(wavedPos, 1.0);
+    }
+```
 #### 4 - picking oggetti
+
 
 ####
 
