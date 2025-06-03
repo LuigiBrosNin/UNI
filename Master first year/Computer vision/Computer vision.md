@@ -10,6 +10,7 @@
 	- If the code is not available, the student should try to re-implement the relative model and replicate one experiment 
 	- Prepare a 20-minute presentation that describes the technique proposed in the chosen article and the experiment you conducted.
 	- During or at the end of the presentation, I will ask you questions about the work you have done.
+	- Submit the project 1 week before the exam day (presentation & code)
 	- Second part
 	- you will answer general questions on the theory presented in the course.
 
