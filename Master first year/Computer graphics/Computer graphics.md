@@ -891,7 +891,39 @@ santo GPT che calcola le derivate
 		// Optionally, add an index for the anchor (for visualization)
 		Model3D[i].indices.push_back(Model3D[i].vertices.size() - 1);
 ```
-- added check in `draw_scene` to render anchors when the UI requests it
+- added check in `draw_scene()` to render anchors when the UI requests it
+```c++
+            // Aggiorno l'ancora dell'oggetto
+            update_ancora(&ScenaObj[i][k]);
+            updateBB(&ScenaObj[i][k]);
+            // --- Highlight anchor if flagAncora is set ---
+            if (flagAncora)
+            {
+                glPointSize(15.0);
+                int ind = ScenaObj[i][k].indices.size() - 1;
+                glDrawElements(GL_POINTS, 1, GL_UNSIGNED_INT, BUFFER_OFFSET(ind * sizeof(GLuint)));
+            }
+```
+- added `selected_complex_obj` int in `LAB_3D` and imported in `gestione_callback` to find the object we're looking for
+```c++
+
+```
+- added UI handling for SceneObj selected in `my_interface`
+```c++
+    else if (selected_complex_obj >= 0 && selected_complex_obj < ScenaObj.size()) {
+        ImGui::TextColored(ImVec4(1.0f, 0.0f, 0.0f, 1.0f), "Oggetto Selezionato:");
+        ImGui::SameLine();
+        ImGui::TextColored(ImVec4(1.0f, 0.0f, 0.0f, 1.0f), "%s", ScenaObj[selected_complex_obj][0].nome.c_str());
+        ImGui::TextColored(ImVec4(1.0f, 0.0f, 0.0f, 1.0f), "Operazione:");
+        ImGui::SameLine();
+        ImGui::TextColored(ImVec4(0.0f, 0.0f, 1.0f, 1.0f), "%s", Operazione.c_str());
+        ImGui::SameLine();
+        ImGui::TextColored(ImVec4(0.0f, 0.0f, 1.0f, 1.0f), "%s", stringa_asse.c_str());
+    }
+    else {
+        ImGui::Text("Nessun oggetto selezionato");
+    }
+```
 
 
 ####
