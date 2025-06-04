@@ -947,7 +947,32 @@ santo GPT che calcola le derivate
 ```
 
 
-#### 5 -
+#### 5 - complex obj movement
+made this for loop in `modifyModelMatrix`
+and that's about it lmao
+```c++
+    // Handle complex objects (ScenaObj)
+	// same operations but in a for loop
+    if (selected_complex_obj >= 0) {
+        for (int k = 0; k < ScenaObj[selected_complex_obj].size(); ++k) {
+            vec3 traslModel;
+            mat4 aa = ScenaObj[selected_complex_obj][k].Model;
+
+            traslModel = glm::vec3(aa[3][0], aa[3][1], aa[3][2]);
+            mat4 traslation = glm::translate(glm::mat4(1), translation_vector);
+
+            mat4 scala = glm::translate(glm::mat4(1), traslModel);
+            scala = scale(scala, glm::vec3(scale_factor, scale_factor, scale_factor));
+            scala = translate(scala, -traslModel);
+
+            mat4 rotation = glm::translate(glm::mat4(1), traslModel);
+            rotation = glm::rotate(rotation, angle, rotation_vector);
+            rotation = glm::translate(rotation, -traslModel);
+
+            ScenaObj[selected_complex_obj][k].Model = traslation * rotation * scala * ScenaObj[selected_complex_obj][k].Model;
+        }
+    }
+```
 
 #### 6 - Toon shading (my favourite)
 in VertexShader
@@ -995,9 +1020,37 @@ in VertexShader
         ourColor = vec4(ambient + diffuse + specular, 1.0);
     }
 ```
+i also added outlines using the Model scaling technique, faulty with torus and some complex objects.
+```c++
 
+        if (Scena[i].sceltaShader == 6) { // TOON shading
+            // 1. Draw outline
+            glEnable(GL_CULL_FACE);
+            glCullFace(GL_FRONT);
+            glEnable(GL_POLYGON_OFFSET_FILL);
+            glPolygonOffset(4.0f, 4.0f);
+            glUniform1i(uniform.loc_outlinePass, 1);
 
-#### 7 -
+            glm::mat4 outlineModel = glm::scale(Scena[i].Model, glm::vec3(1.05f));
+            glUniformMatrix4fv(uniform.MatModel, 1, GL_FALSE, glm::value_ptr(outlineModel));
+            glDrawElements(GL_TRIANGLES, Scena[i].indices.size(), GL_UNSIGNED_INT, 0);
+
+            glDisable(GL_POLYGON_OFFSET_FILL);
+            glDisable(GL_CULL_FACE);
+
+            // 2. Draw normal toon-shaded object
+            glUniform1i(uniform.loc_outlinePass, 0);
+            glUniformMatrix4fv(uniform.MatModel, 1, GL_FALSE, glm::value_ptr(Scena[i].Model));
+            glDrawElements(GL_TRIANGLES, Scena[i].indices.size(), GL_UNSIGNED_INT, 0);
+        } else {
+            glUniform1f(uniform.loc_outlineThickness, 0.0f);
+            glUniform1i(uniform.loc_outlinePass, 0);
+            glDrawElements(GL_TRIANGLES, (Scena[i].indices.size()), GL_UNSIGNED_INT, 0);
+        }
+```
+In addition to this snipped of code, add `loc_outlinePass` to the Uniform data structure as it's needed in the snippet.
+I did the same operation in the complex objects drawing loop
+#### 7 - 
 ##
 #
 ##
