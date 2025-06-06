@@ -1050,7 +1050,201 @@ i also added outlines using the Model scaling technique, faulty with torus and s
 ```
 In addition to this snipped of code, add `loc_outlinePass` to the Uniform data structure as it's needed in the snippet.
 I did the same operation in the complex objects drawing loop
-#### 7 - 
+#### 7 - Bezier curve
+this was painful
+pulsante in gestione callback
+```c++
+    case GLFW_KEY_B:
+        if (mods & GLFW_MOD_SHIFT) {
+            cameraPath.clear(); //Pulisce il percorso della telecamera
+            SetupTelecamera.position = vec3(0.0, 0.5, 30.0); //Reset della posizione della telecamera
+            SetupTelecamera.target = vec3(0.0, 0.5, 0.0); //Reset del target della telecamera
+
+        }
+        // make the camera move in a generated bezier curve direction
+        else if (cameraPath.empty()) {
+            genCameraBezier(); //Genera una curva di Bezier con 10 punti
+        }
+        break;
+```
+funzioni in gestione camera:
+```c++
+void genCameraBezier(int segments = 50){
+	// randomly generate a bezier curve with num_points points
+	
+	// generate 4 points in the plane
+	vector<vec3> control_points;
+	control_points.clear();
+	// push first point at the current camera position
+	control_points.push_back(SetupTelecamera.position);
+
+	srand(time(NULL));
+	for(int i = 0; i < 4; i++) {
+		float x = -10.0f + static_cast<float>(rand()) / (static_cast<float>(RAND_MAX / 20.0f));
+		float y = -10.0f + static_cast<float>(rand()) / (static_cast<float>(RAND_MAX / 20.0f));
+		float z = -10.0f + static_cast<float>(rand()) / (static_cast<float>(RAND_MAX / 20.0f));
+		control_points.push_back(vec3(x, y, z));
+	}
+
+	cout << "Control Points: " << endl;
+	 for (const auto& point : control_points) {
+  cout << "Point: (" << point.x << ", " << point.y << ", " << point.z << ")" << endl;
+ }
+
+	// generate the curve
+	vector<vec3> bezier_curve;
+ 	generateCurve(segments, control_points, bezier_curve);
+	// add the curve to the cameraPath
+	cameraPath.clear();
+	for (const auto& point : bezier_curve) {
+	cameraPath.push_back(point);
+	}
+	 // set the camera position to the first point of the curve
+	SetupTelecamera.position = cameraPath[0];
+	SetupTelecamera.target = cameraPath[1]; // set the target to the second point of the curve
+	SetupTelecamera.direction = SetupTelecamera.target - SetupTelecamera.position; // update the direction
+}
+
+void followCameraPath(float deltaTime) { // NOTA: ho implementato il deltatime nel LAB_3.cpp, dove chiamo questa funzione ogni frame se cameraPath non e' vuoto
+	// move the camera along the bezier curve
+	static size_t currentPointIndex = 0;
+	static float t = 0.0f; // interpolation parameter
+	float speed = 0.5f;
+
+	if (currentPointIndex < cameraPath.size() - 1) {
+		vec3 start = cameraPath[currentPointIndex];
+		vec3 end = cameraPath[currentPointIndex + 1];
+
+		t += deltaTime * speed;
+		if (t > 1.0f) {
+			t = 0.0f;
+			currentPointIndex++;
+		}
+
+		SetupTelecamera.position = mix(start, end, t);
+
+		// Look a bit ahead along the path for a smooth target
+		if (currentPointIndex < cameraPath.size() - 2) {
+			vec3 next = cameraPath[currentPointIndex + 1];
+			vec3 next2 = cameraPath[currentPointIndex + 2];
+			SetupTelecamera.target = mix(next, next2, t);
+		} else if (currentPointIndex < cameraPath.size() - 1) {
+			SetupTelecamera.target = end;
+		} else {
+			SetupTelecamera.target = start;
+		}
+
+		SetupTelecamera.direction = SetupTelecamera.target - SetupTelecamera.position;
+	}
+}
+```
+funzioni in utilities
+```c++
+vec3 bezierPoint(float t, const vector<vec3>& controlPoints)
+{
+	// De Casteljau's algorithm for Bezier curves
+	int n = controlPoints.size();
+	vector<vec3> points = controlPoints;
+
+	for (int r = 1; r < n; r++) {
+		for (int i = 0; i < n - r; i++) {
+			points[i] = (1 - t) * points[i] + t * points[i + 1];
+		}
+	}
+	return points[0]; // The first point is the result
+}
+
+// draw the bezier curve
+// with castejau algorithm
+void generateCurve(int segments, vector<vec3>& controlPoints, vector<vec3>& curvePoints)
+{
+	// there's no need for this to be global,
+	// but prof defined it this way so I'm keeping it
+	int NumPoints = 0;
+
+	// Calculate points for multiple t values
+	for (int i = 0; i < segments; i++) {
+		float t = static_cast<float>(i) / (segments - 1);
+		vec3 point = bezierPoint(t, controlPoints);
+		curvePoints.push_back(point);
+		NumPoints++;
+	}
+}
+vec3 bezierPoint(float t, const vector<vec3>& controlPoints)
+{
+	// De Casteljau's algorithm for Bezier curves
+	int n = controlPoints.size();
+	vector<vec3> points = controlPoints;
+
+	for (int r = 1; r < n; r++) {
+		for (int i = 0; i < n - r; i++) {
+			points[i] = (1 - t) * points[i] + t * points[i + 1];
+		}
+	}
+	return points[0]; // The first point is the result
+}
+
+// draw the bezier curve
+// with castejau algorithm
+void generateCurve(int segments, vector<vec3>& controlPoints, vector<vec3>& curvePoints)
+{
+	// there's no need for this to be global,
+	// but prof defined it this way so I'm keeping it
+	int NumPoints = 0;
+
+	// Calculate points for multiple t values
+	for (int i = 0; i < segments; i++) {
+		float t = static_cast<float>(i) / (segments - 1);
+		vec3 point = bezierPoint(t, controlPoints);
+		curvePoints.push_back(point);
+		NumPoints++;
+	}
+}
+```
+#### 8 - OPTIONAL - normali ai vertici per i modelli obj
+facile (ho usato gpt)
+```c++
+		//! --- Compute normals ---
+        mymesh[nm].normals.resize(mesh->mNumVertices, glm::vec3(0.0f));
+        bool hasNormals = mesh->HasNormals();
+        if (hasNormals) {
+            for (unsigned int i = 0; i < mesh->mNumVertices; i++) {
+                aiVector3D n = mesh->mNormals[i];
+                mymesh[nm].normals[i] = glm::vec3(n.x, n.y, n.z);
+            }
+        } else {
+            // Compute per-vertex normals by averaging face normals
+            std::vector<glm::vec3> normalSum(mesh->mNumVertices, glm::vec3(0.0f));
+            std::vector<int> normalCount(mesh->mNumVertices, 0);
+
+            for (unsigned int i = 0; i < mesh->mNumFaces; i++) {
+                const aiFace& face = mesh->mFaces[i];
+                unsigned int idx0 = face.mIndices[0];
+                unsigned int idx1 = face.mIndices[1];
+                unsigned int idx2 = face.mIndices[2];
+
+                glm::vec3 v0 = mymesh[nm].vertices[idx0];
+                glm::vec3 v1 = mymesh[nm].vertices[idx1];
+                glm::vec3 v2 = mymesh[nm].vertices[idx2];
+
+                glm::vec3 faceNormal = glm::normalize(glm::cross(v1 - v0, v2 - v0));
+                normalSum[idx0] += faceNormal;
+                normalSum[idx1] += faceNormal;
+                normalSum[idx2] += faceNormal;
+                normalCount[idx0]++;
+                normalCount[idx1]++;
+                normalCount[idx2]++;
+            }
+            for (unsigned int i = 0; i < mesh->mNumVertices; i++) {
+                if (normalCount[i] > 0)
+                    mymesh[nm].normals[i] = glm::normalize(normalSum[i] / float(normalCount[i]));
+                else
+                    mymesh[nm].normals[i] = glm::vec3(0.0f, 1.0f, 0.0f); // fallback
+            }
+        }
+	}
+```
+La parte migliore e' che cosi' puoi imparare bene e te lo puoi anche far spiegare :)
 ##
 #
 ##
