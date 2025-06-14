@@ -268,7 +268,7 @@ Algorithm
 ###
 ##
 # Labs
-per ogni lab prepara una piccola relazione (una pagina o meno) che descrive cos'hai fatto, poi sono da 
+per ogni lab prepara una piccola relazione (una pagina o meno) che descrive cos'hai fatto, da consegnare giorni prima dell'esame via mail alla professoressa.
 
 ## Install dependencies on Linux and make them work
 Ubuntu-based (uso `apt` :)
@@ -1245,6 +1245,18 @@ facile (ho usato gpt)
 	}
 ```
 La parte migliore e' che cosi' puoi imparare bene e te lo puoi anche far spiegare :)
-##
-#
-##
+## LAB_4
+Ho creato la scena del mercato fatta a lezione, e ci ho aggiunto qualcosa che avrei voluto fare dalle superiori:
+
+![[image.png]]
+LUIZOOOOOOOOOOOOOOOOOOOO
+
+![[image-1.png]]
+
+![[image-2.png]]
+
+![[image-3.png]]
+
+Ho usato questi due tutorial
+- [Tutorial: Blender Modelling for Absolute Beginners - Simple Human](https://youtu.be/9xAumJRKV6A?si=hGrUQUdxmsqw4UAa)
+- [Character Modeling for Beginners - Blender](https://youtu.be/O6HQhs-gk50?si=YkUY1O2fK3MCq3kp)
