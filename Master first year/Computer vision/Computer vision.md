@@ -1060,35 +1060,20 @@ Linear head analogy -> If the pre-trained model is like a **language**, the line
 ### **4. Experiments**
 
 - **4.1 Datasets**: Use ScanNet++ for training and various indoor/outdoor datasets for evaluation.
-    
 - **4.2 Implementation Details**:
-    
     - DINOv2 is fine-tuned for 1 epoch.
-        
     - Feature Gaussians trained using multi-view images.
-        
 - **4.3 Within-domain Evaluation**:
-    
     - Significant improvements in segmentation and depth tasks on ScanNet++, NYUv2, and ScanNet.
-        
 - **4.4 Out-of-domain Evaluation**:
-    
     - Gains are generalizable to ADE20K, Pascal VOC, and KITTI datasets.
-        
 - **4.5 Generalization to Other Vision Models**:
-    
     - Method improves other models like CLIP, MAE, DeiT-III, showing versatility.
-        
 - **4.6 Ablation Studies and Analysis**:
-    
     - **Feature dimension**: 64 is a sweet spot between performance and memory.
-        
     - **Assembly strategy**: Feature concatenation works best.
-        
     - **Epochs**: 1 epoch sufficient; more can reduce generalization.
-        
     - **Adapter vs. fine-tuning**: Fine-tuning is simpler and just as effective.
-        
 
 ---
 
