@@ -1080,11 +1080,8 @@ Linear head analogy -> If the pre-trained model is like a **language**, the line
 ### **5. Conclusion**
 
 - The proposed 3D-aware fine-tuning significantly improves the performance of 2D vision models.
-    
 - Demonstrates transferability and generalization.
-    
 - Future work could expand on more diverse 3D datasets.
-    
 
 ---
 
