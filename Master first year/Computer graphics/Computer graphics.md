@@ -21,7 +21,22 @@ NOTE IN ITALIANO ? devo decidere...
 # Summaries
 ## 1 - Intro
 ###  1.1 - Graphic Systems
-#TODO 
+Different kind of graphic systems:
+- Semi-immersive VR
+- Fully-immersive VR
+- Augmented reality (AR)
+- Head-mounted displays
+- Extended reality (XR)
+	![[Pasted image 20250617181242.png]]
+
+Graphic system = Hardware devices (resources) + graphics software (management of resources) to produce images
+
+DirectX, OpenGL, Wulkan, WebGL are graphics libraries (APIs)
+
+RASTER devices -> device with a rectangular matrix of samples or pixels (basically screens, printers, digital cameras)
+
+
+
 ## 2 - Modelling
 ### 2.1 - Geometry for CG
 ### 2.2 - Intro to Geometric Modeling
