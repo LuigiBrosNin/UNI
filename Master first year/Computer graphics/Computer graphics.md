@@ -102,6 +102,17 @@ We need to handle operations on objects (transform, scale, rotate etc.)
 
 <u>the Z axis is perpendicular to the screen</u>
 
+Scalar -> Magnitude (quantity/length)
+Point -> Location in space
+Vector -> magnitude and direction, no location
+
+In linear space, we have vectors and scalars, vector operations work as expected (eg. sum of vectors)
+We work in a 3 vector space, Euclidean vectors (1,0,0) (0,1,0) and (0,0,1) define a coordinate system.
+
+**2-norm or Euclidean norm** ->  notion of length preserved by rotations/translations/reflections of space. Basically the calculation that make a vector's "bigness" consistent across dimensions
+
+
+
 
 ### 2.2 - Intro to Geometric Modeling
 ### 2.3 - Bézier Curves
