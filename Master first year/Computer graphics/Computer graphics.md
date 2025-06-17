@@ -94,6 +94,13 @@ Basically what NVIDIA CUDA (Compute Unified Device Architecture) does.
 
 ## 2 - Modelling
 ### 2.1 - Geometry for CG
+Objects are represented with linear primitives
+- points
+- lines, segments
+- planes, polygons
+
+
+
 ### 2.2 - Intro to Geometric Modeling
 ### 2.3 - Bézier Curves
 **Interpolation** -> Curve must pass trough control points
