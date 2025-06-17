@@ -109,7 +109,19 @@ Vector -> magnitude and direction, no location
 In linear space, we have vectors and scalars, vector operations work as expected (eg. sum of vectors)
 We work in a 3 vector space, Euclidean vectors (1,0,0) (0,1,0) and (0,0,1) define a coordinate system.
 
-**2-norm or Euclidean norm** ->  notion of length preserved by rotations/translations/reflections of space. Basically the calculation that make a vector's "bigness" consistent across dimensions
+**2-norm or Euclidean norm** $||a||_{2}$ ->  notion of length preserved by rotations/translations/reflections of space. Basically the calculation that make a vector's "bigness" consistent across dimensions
+
+Magnitude (length) of a vector
+$$||a||_{2}= \sqrt{a_{x}^{2}+a_{y}^{2}+a_{z}^{2}}$$
+**Unit vector** -> Length 1.0 vector
+if we normalize a vector we can make it a unit vector (versor) $a \over {||a||_2}$
+
+![[Pasted image 20250617224122.png]]
+Dot products between vectors tells us info regarding vector relationship
+
+**Cross product $a\times b$**-> results in a vector perpendicular to both $a$ and $b$, with magnitude dot product
+![[Pasted image 20250617225208.png]]
+![[Pasted image 20250617225419.png]]
 
 
 
