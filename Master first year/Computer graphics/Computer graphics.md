@@ -68,8 +68,29 @@ Real-time graphics goal -> highest photorealism above a minimum rendering speed 
 ==Rendering pipeline==
 ![[Pasted image 20250617185901.png]]
 ![[Pasted image 20250617185940.png]]
-1. ModelView Transform -> GPU transforms all objects into a 
+1. ModelView Transform -> GPU transforms all objects into a common coordinate system
+2. Lighting -> compute colour based on lights
+3. Perspective transform -> each 3D triangle is projected onto the virtual view plane
+4. Fragment generation -> triangles visible on screens are mapped to pixels (Rasterization)
+	![[Pasted image 20250617190238.png]]
+5. Fragment processing -> apply computed colours to fragments, add geometry from textures for illusion of detail
+6. Z-Buffer visibility test -> depth buffer that stores the distance form each pixel to the viewer, as objects can obscure other objects
 
+Graphics cards evolved from hardwired implementation of the pipeline to a programmable substrate that can support it.
+![[Pasted image 20250617190957.png]]
+**Shading language** -> graphics programming language (GLSL for OpenGL)
+
+**General Purpose GPU (GPGPU)** -> GPUs can be used for things othe than graphics by abstracting their components
+- pixels and colours -> grid with 4-component vector at each cell
+- frames -> time-steps
+- rendering equations -> any computation we want
+Basically what NVIDIA CUDA (Compute Unified Device Architecture) does. 
+
+**Unified shaders** ->  freely allocate resources to vertex shader and pixel shader based on what is required from moment to moment
+
+5th gen GPUs have multi-core architecture, highly specialized cores, handling large amounts of parallel data
+
+**DLSS (Deep Learning Super Sampling)** -> take a low res render and upscale it with deep learning 
 
 ## 2 - Modelling
 ### 2.1 - Geometry for CG
