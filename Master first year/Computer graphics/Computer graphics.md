@@ -162,6 +162,29 @@ That i skipped cuz it's math we really don't need imo
 
 Implicit representation of planes in 3D -> (Ax+By+Cz+D=0), xyz point on the plane, ABC coordinates of a normal vector to the plane
 
+**Coordinate frame** (Sistemi di riferimento) -> quadruple $F=(P_{0},v_{1},v_{2},v_{3})$ where $P_0$ is an origin point and $v_{1..3}$ is a vector basis
+
+**Homogeneous coordinates** -> coord system which allows unique representation for points and vectors
+Vector $w= a_{1}v_{1}+ a_{2}v_{2}+a_{3}v_{3}$ 
+Point $P = P_{0} +a_{1}v_{1}+ a_{2}v_{2}+a_{3}v_{3}$
+defined by 4 coordinates: $[a_1,a_2,a_{3}, 0\ or \ 1]$ 0 -> vector, 1 -> point
+
+![[Pasted image 20250618000320.png]]
+#### Geometric Transformations
+Transfrom coords in order to modify position, orientation and size
+Modify geometry but not topology
+
+1. 2D Translation
+	$$x'=x+d_{x} \quad y' = y+d_{y}$$
+2. 2D Rotation
+	- use rotation matrix
+	$$ \begin{pmatrix}x' \\ y'\end{pmatrix}= \begin{pmatrix}\cos \theta &-\sin \theta \\ \sin \theta &\cos \theta\end{pmatrix} \begin{pmatrix}x \\ y\end{pmatrix}$$
+3. 2D Scale
+	$$ \begin{pmatrix}x' \\ y'\end{pmatrix}= \begin{pmatrix}sx &0 \\ 0 &sy\end{pmatrix} \begin{pmatrix}x \\ y\end{pmatrix}$$
+4. 2D Shear
+	$$ \begin{bmatrix}x' \\ y'\end{bmatrix}= \begin{bmatrix}1 &s \\ 0 &1\end{bmatrix} \begin{bmatrix}x \\ y\end{bmatrix} \text { horizontal}
+	\quad \begin{bmatrix}x' \\ y'\end{bmatrix}= \begin{bmatrix}1 &0 \\ s &1\end{bmatrix} \begin{bmatrix}x \\ y\end{bmatrix} \text { vertical}$$
+
 
 ### 2.2 - Intro to Geometric Modeling
 ### 2.3 - Bézier Curves
