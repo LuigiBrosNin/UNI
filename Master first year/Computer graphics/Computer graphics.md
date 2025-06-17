@@ -98,7 +98,9 @@ Objects are represented with linear primitives
 - points
 - lines, segments
 - planes, polygons
+We need to handle operations on objects (transform, scale, rotate etc.)
 
+<u>the Z axis is perpendicular to the screen</u>
 
 
 ### 2.2 - Intro to Geometric Modeling
