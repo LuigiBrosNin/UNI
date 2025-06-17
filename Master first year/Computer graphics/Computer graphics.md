@@ -106,6 +106,7 @@ Scalar -> Magnitude (quantity/length)
 Point -> Location in space
 Vector -> magnitude and direction, no location
 
+#### Linear space
 In linear space, we have vectors and scalars, vector operations work as expected (eg. sum of vectors)
 We work in a 3 vector space, Euclidean vectors (1,0,0) (0,1,0) and (0,0,1) define a coordinate system.
 
@@ -119,10 +120,20 @@ if we normalize a vector we can make it a unit vector (versor) $a \over {||a||_2
 ![[Pasted image 20250617224122.png]]
 Dot products between vectors tells us info regarding vector relationship
 
-**Cross product $a\times b$**-> results in a vector perpendicular to both $a$ and $b$, with magnitude dot product
+**Cross product $a\times b$** -> results in a vector perpendicular to both $a$ and $b$, with magnitude dot product
 ![[Pasted image 20250617225208.png]]
 ![[Pasted image 20250617225419.png]]
+#### Affine space
+Affine space -> extension of a linear space which includes the <u>point</u>
 
+New operations:
+- point+vector = new point
+- point-point = vector
+	![[Pasted image 20250617231120.png|200]]
+
+**Affine combination** of a point P -> linear combination of points with coefficients (called barycentric coordinates of P) that sum up to 1
+
+coefficients $\in [0,1]$ -> convex combinations
 
 
 
