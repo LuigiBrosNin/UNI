@@ -17,7 +17,6 @@
 	- **[[attachments]]**
 
 - [[Natural language processing]]
-- [[Simulazione di modelli]]
 - [[Social network analysis]]
 - **[[UUX]]**
 

@@ -1,6 +1,4 @@
 
-NOTE IN ITALIANO ? devo decidere...
-
 > Notes taken by Luizo ( [@LuigiBrosNin](https://t.me/LuigiBrosNin) on Telegram)
 
 
@@ -33,8 +31,35 @@ Graphic system = Hardware devices (resources) + graphics software (management of
 
 DirectX, OpenGL, Wulkan, WebGL are graphics libraries (APIs)
 
-RASTER devices -> device with a rectangular matrix of samples or pixels (basically screens, printers, digital cameras)
+**RASTER devices** -> device with a rectangular matrix of samples or pixels (basically screens, printers, digital cameras)
 
+**Colour model** -> math model describing how colour is represented as tuples of numbers (RGB, CMY)
+
+**Colour space** -> HSI (hue, saturation. intensity)
+
+**RASTER** img -> pixel grid based, bitmap file contains pixel values
+**VECTOR** img -> vector based, vec img file contains instructions on this data
+![[Pasted image 20250617182452.png|300]]
+
+**Scalable Vector Graphics (SVG)** -> Open standard in XML text file that defines vectors
+
+Display systems contain
+1. Graphics card (that contains GPU (yes, GPU refers to the chip inside the Graphics card and not the whole component))
+2. Display
+3. Device driver
+
+Graphics cards contain
+1. GPU
+2. video memory (frame buffer)
+3.  PCB
+4. Power connectors
+5. cooling fans
+6. may contain more stuff
+
+**Refresh rate or Vertical frequency** -> Hertz (Hz) measured, frames displayed per seconds
+**Frame rate** -> number of new video frames that the graphic card sent to a display each second
+
+**Frame buffer (FB)** -> RAM for storing images before visualizing them 
 
 
 ## 2 - Modelling
@@ -282,7 +307,8 @@ Algorithm
 ##
 ###
 ##
-# Labs
+# Labs 
+!!! Lingua inconsistente !!!
 per ogni lab prepara una piccola relazione (una pagina o meno) che descrive cos'hai fatto, da consegnare giorni prima dell'esame via mail alla professoressa.
 
 ## Install dependencies on Linux and make them work
@@ -326,7 +352,7 @@ potete avviare l'output con
 ```
 
 
-## OpenGL part I
+## OpenGL part I (ENG)
 Vertex Buffer Object (VBO) -> stores data regarding vertexes (generic attributes for the stuff we need)
 ![[Pasted image 20250308002001.png]]
 
