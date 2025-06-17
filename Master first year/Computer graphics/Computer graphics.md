@@ -135,6 +135,10 @@ New operations:
 
 coefficients $\in [0,1]$ -> convex combinations
 
+Convex object <=> for any two points in the object all points on the line segment between these points are also in the object
+![[Pasted image 20250617231744.png|300]]
+
+Convex hull -> set of all P points that can be represented as a convex combinations
 
 
 ### 2.2 - Intro to Geometric Modeling
