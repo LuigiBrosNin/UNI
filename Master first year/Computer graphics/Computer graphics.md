@@ -140,6 +140,28 @@ Convex object <=> for any two points in the object all points on the line segmen
 
 Convex hull -> set of all P points that can be represented as a convex combinations
 
+Barycentric coordinates -> define a point's position relative to 3 fixed points, with
+$$P=\alpha A+ \beta B+\gamma C$$
+$\alpha, \beta,\gamma$ are the barycentric coordinates of P with respect to A,B,C
+![[Pasted image 20250617234727.png|200]]
+P inside triangle -> $\alpha+\beta+\gamma = 1$
+![[Pasted image 20250617234837.png|300]]
+
+Used in warping
+![[Pasted image 20250617234940.png]]
+
+Slides go over 
+- Distance between 2 points
+- Parametric equation of a line
+- Implicit equation of a line in 2D (Ax+By+C=0)
+- Distance between point and line
+- Line-segment intersection
+That i skipped cuz it's math we really don't need imo
+
+**Plane in 3D space $\pi$** -> has a normal $n$ and a point in the plane $P_{0}$, a point belongs <=> $<Q-P_{0},n>=0$
+
+Implicit representation of planes in 3D -> (Ax+By+Cz+D=0), xyz point on the plane, ABC coordinates of a normal vector to the plane
+
 
 ### 2.2 - Intro to Geometric Modeling
 ### 2.3 - Bézier Curves
