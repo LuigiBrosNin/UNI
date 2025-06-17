@@ -60,6 +60,15 @@ Graphics cards contain
 **Frame rate** -> number of new video frames that the graphic card sent to a display each second
 
 **Frame buffer (FB)** -> RAM for storing images before visualizing them 
+- Different planes can be saved, more planes = more colours (N bits per pixel)
+- True color model has 32 bit per pixel (RGBA)
+
+Real-time graphics goal -> highest photorealism above a minimum rendering speed of 24 frames/sec
+
+==Rendering pipeline==
+![[Pasted image 20250617185901.png]]
+![[Pasted image 20250617185940.png]]
+1. ModelView Transform -> GPU transforms all objects into a 
 
 
 ## 2 - Modelling
