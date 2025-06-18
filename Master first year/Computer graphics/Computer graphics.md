@@ -226,7 +226,7 @@ You can calculate **tangent planes** and **normals** (used in lighting).
 - the faces are sequences of closed sides,  
 - a vertex is shared by at least two sides. 
 ![[Pasted image 20250618160454 1.png|200]]
-
+#TODO
 
 ### 2.3 - Bézier Curves
 **Interpolation** -> Curve must pass trough control points
@@ -302,6 +302,27 @@ $C^1$ -> The derived curve components are continuous
 $G^1$ -> Geometry Continuity: If the direction tangent to a parametric curve varies in a continuous manner (Its magnitude can also have discontinuous jumps)
 
 ![[Pasted image 20250311000536.png]]
+
+### Interpolation for curves
+**Interpolation** -> Curve must pass trough control points
+**Approximation** -> curve is influenced by control points
+
+==Polynomial Interpolation Theorem==
+![[Pasted image 20250618165650.png]]
+
+==Piecewise polynomial INTERPOLATION==
+Jumping ball keyframing
+![[Pasted image 20250618165937.png]]
+![[Pasted image 20250618170004.png]]
+We can control this curve with constraints (in the form of vectors)
+![[Pasted image 20250618170110.png]]
+
+==Interpolant C1 with piecewise Cubic Bézier curves==
+![[Pasted image 20250618170711.png]]
+Where
+- P are the keypoints
+- t are
+
 
 ## 3 - Rendering
 ### 3.1 Rendering Pipeline
