@@ -210,7 +210,7 @@ Implicit or explicit (parametric) representation
 **Explicit** -> $(\cos \theta , \sin \theta)$, curve $C(t) = (x(t),y(t))$
 **Discrete** -> Graphic representation
 
-### Curves and surfaces
+#### Curves and surfaces
 **Function form** of curves only works when each x has one y
 $$y=f(x)$$
 **Parametric Form** of curves works for more complex shapes (like circles).
@@ -218,15 +218,6 @@ $$x(t), y(t)$$
 **Implicit Surface**: $\phi(x, y, z) = 0$ defines the surface.
 **Parametric Surface**: $S(u, v) = (x(u,v), y(u,v), z(u,v))$
 You can calculate **tangent planes** and **normals** (used in lighting).
-
-## Mesh
-**Polygonal mesh** -> Set of edges, vertices and faces connected in such a way that:  
-- each edge is shared by at most two adjacent faces,  
-- one side connects two vertices,  
-- the faces are sequences of closed sides,  
-- a vertex is shared by at least two sides. 
-![[Pasted image 20250618160454 1.png|200]]
-#TODO
 
 ### 2.3 - Bézier Curves
 **Interpolation** -> Curve must pass trough control points
@@ -303,7 +294,7 @@ $G^1$ -> Geometry Continuity: If the direction tangent to a parametric curve var
 
 ![[Pasted image 20250311000536.png]]
 
-### Interpolation for curves
+### 2.4 - Interpolation for curves
 **Interpolation** -> Curve must pass trough control points
 
 ==Polynomial Interpolation Theorem==
@@ -347,9 +338,36 @@ introduces 3 new shape parameters
 With these, computes $L_i$ and $R_i$ (refined Catmull-Rom points) that shape the curve
 ![[Pasted image 20250618175344.png]]
 
+### 2.5 - Mesh
+**Polygonal mesh** -> Set of edges, vertices and faces connected in such a way that:  
+- each edge is shared by at most two adjacent faces,  
+- one side connects two vertices,  
+- the faces are sequences of closed sides,  
+- a vertex is shared by at least two sides. 
+![[Pasted image 20250618160454 1.png|200]]
+#TODO
+
+
 ## 3 - Rendering
 ### 3.1 Rendering Pipeline
-#TODO
+**Rendering** -> "engine" that creates images from 3D scenes and a virtual camera
+2 approaches
+- Pipeline based rendering -> for each pixel, if object affects pixel do something
+- Ray-tracing -> for each object, if object affects pixel do something
+#### Pipeline based rendering
+idea: Take a collection of 2D Polygonal Objects and draw them onto a framebuffer (GPU)
+Object is approximated by a number of simple primitives and **tessellation** is used to convert complex models into geometric primitives
+![[Pasted image 20250618182017.png]]
+
+![[Pasted image 20250618182054.png]]
+We've already seen this in the Graphic Systems slides
+
+**Geometry Stage** -> Geometric per vertex operations, stuff like move objects, camera, clipping, projection, mapping to window
+
+**Rasterizer Stage** -> Geometry output into visible pixels on frame buffer (the screen), stuff like scan conversion, interpolation, colour combining, visibility
+
+
+
 
 ### 3.2 Lighting and shading
 When we look at a point on an object, the color that we see is determined by multiple interactions between light sources and reflective surfaces.
