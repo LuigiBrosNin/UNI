@@ -430,10 +430,12 @@ I don't care to remember this shit. Just know we have matrixes for converting pr
 
 **Window transformation** -> We drop the z coord while mapping the rest to the 2D image
 
-Window-Viewport Transformation -> this
+Window-Viewport Transformation -> this:
 ![[Pasted image 20250618220739.png]]
 
-
+Last transformations in the slides (thankfully just mentions)
+![[Pasted image 20250618221237.png]]
+#### Rasterization stage
 
 
 ### 3.2 Lighting and shading
