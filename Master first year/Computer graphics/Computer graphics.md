@@ -184,9 +184,24 @@ Modify geometry but not topology
 4. 2D Shear
 	$$ \begin{bmatrix}x' \\ y'\end{bmatrix}= \begin{bmatrix}1 &s \\ 0 &1\end{bmatrix} \begin{bmatrix}x \\ y\end{bmatrix} \text { horizontal}
 	\quad \begin{bmatrix}x' \\ y'\end{bmatrix}= \begin{bmatrix}1 &0 \\ s &1\end{bmatrix} \begin{bmatrix}x \\ y\end{bmatrix} \text { vertical}$$
+Generalization, invertible linear transformation
+![[Pasted image 20250618001729.png]]
 
+Affine transformations have
+![[Pasted image 20250618001759.png|300]]
+![[Pasted image 20250618001916.png]]
 
+some transformations can be combined, but some are non commutative
+
+Trasformations using a pivot point that is not the origin
+![[Pasted image 20250618002140.png]]
+
+3D has the same operation with a 4x4 matrix
+![[Pasted image 20250618002249.png]]
 ### 2.2 - Intro to Geometric Modeling
+Implicit or explicit (parametric) representation
+
+
 ### 2.3 - Bézier Curves
 **Interpolation** -> Curve must pass trough control points
 **Approximation** -> curve is influenced by control points
