@@ -336,7 +336,16 @@ $$m_{i}=\frac {P_{i+1}-P_{i-1}}{2}$$
 And then define the unknown control points
 $$p_{i}^{+}=p_{i}+\frac{1}{3} m_{i}\quad p_{i}^{-}=p_{i}-\frac{1}{3} m_{i}$$
 #### TensionContinuityBias (TCB-spline)
+introduces 3 new shape parameters
+- $t$ ->Tension, curvature control
+	- ![[Pasted image 20250618175142.png]]
+- $c$ -> Continuity, continuity control
+	- ![[Pasted image 20250618175201.png]]
+- $b$ -> Bias, direction control path
+	- ![[Pasted image 20250618175215.png]]
 
+With these, computes $L_i$ and $R_i$ (refined Catmull-Rom points) that shape the curve
+![[Pasted image 20250618175344.png]]
 
 ## 3 - Rendering
 ### 3.1 Rendering Pipeline
