@@ -200,6 +200,10 @@ Trasformations using a pivot point that is not the origin
 ![[Pasted image 20250618002249.png]]
 ### 2.2 - Intro to Geometric Modeling
 Implicit or explicit (parametric) representation
+**Implicit** -> $x^{2}+y^{2} =1$
+**Explicit** -> $(\cos \theta , \sin \theta)$
+**Discrete** -> Graphic representation
+
 
 
 ### 2.3 - Bézier Curves
