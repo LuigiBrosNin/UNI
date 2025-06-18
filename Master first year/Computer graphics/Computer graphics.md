@@ -199,11 +199,25 @@ Trasformations using a pivot point that is not the origin
 3D has the same operation with a 4x4 matrix
 ![[Pasted image 20250618002249.png]]
 ### 2.2 - Intro to Geometric Modeling
+Dimensions $D$:
+0. Point
+1. Line/curve
+2. Mesh/Surface
+3. Volume 
+
 Implicit or explicit (parametric) representation
-**Implicit** -> $x^{2}+y^{2} =1$
-**Explicit** -> $(\cos \theta , \sin \theta)$
+**Implicit** -> a function, eg. $\phi = x^{2}+y^{2} =1$ (circle), the shape is where  $\phi = 0$
+**Explicit** -> $(\cos \theta , \sin \theta)$, curve $C(t) = (x(t),y(t))$
 **Discrete** -> Graphic representation
 
+### Curves and surfaces
+**Function form** of curves only works when each x has one y
+$$y=f(x)$$
+**Parametric Form** of curves works for more complex shapes (like circles).
+$$x(t), y(t)$$
+**Implicit Surface**: $\phi(x, y, z) = 0$ defines the surface.
+**Parametric Surface**: $S(u, v) = (x(u,v), y(u,v), z(u,v))$
+You can calculate **tangent planes** and **normals** (used in lighting).
 
 
 ### 2.3 - Bézier Curves
