@@ -371,6 +371,12 @@ Coordinate systems:
 - NDC - clip space/Normalized device coordinates
 - SCS - screen space (hardware attributes)
 ![[Pasted image 20250618183748.png]]
+To transform WCS into VCS, we need  a camera model that has
+![[Pasted image 20250618212846.png]]
+- C point -> wiewpoint
+- A point -> look vector (direction of view)
+- FOV -> Field of view
+- Depth of field
 
 
 
