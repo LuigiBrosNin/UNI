@@ -309,21 +309,21 @@ $G^1$ -> Geometry Continuity: If the direction tangent to a parametric curve var
 ==Polynomial Interpolation Theorem==
 ![[Pasted image 20250618165650.png]]
 
-==Piecewise polynomial INTERPOLATION==
+#### Piecewise polynomial INTERPOLATION
 Jumping ball keyframing
 ![[Pasted image 20250618165937.png]]
 ![[Pasted image 20250618170004.png]]
 We can control this curve with constraints (in the form of vectors)
 ![[Pasted image 20250618170110.png]]
 
-==Interpolant C1 with piecewise Cubic Bézier curves==
+#### Interpolant C1 with piecewise Cubic Bézier curves
 ![[Pasted image 20250618170711.png]]
 Where
 - P -> the keypoints
 - t -> parameter values
 - m -> slope vectors
 
-==Catmull-Rom spline==
+#### Catmull-Rom spline
 ![[Pasted image 20250618171120.png]]
 Where
 - P -> the keypoints
@@ -331,8 +331,11 @@ Where
 - m -> slope vectors
 basically defines 2 extra points for each P (P- and P+) and builds the curve from there, so that the curve always passes in the original points
 
-The points are found by approximating the derivative
+The points are found by approximating the derivative $m_i$
+$$m_{i}=\frac {P_{i+1}-P_{i-1}}{2}$$
+And then define the unknown control points
 $$p_{i}^{+}=p_{i}+\frac{1}{3} m_{i}\quad p_{i}^{-}=p_{i}-\frac{1}{3} m_{i}$$
+#### TensionContinuityBias (TCB-spline)
 
 
 ## 3 - Rendering
