@@ -219,6 +219,8 @@ $$x(t), y(t)$$
 **Parametric Surface**: $S(u, v) = (x(u,v), y(u,v), z(u,v))$
 You can calculate **tangent planes** and **normals** (used in lighting).
 
+
+
 ### 2.3 - Bézier Curves
 **Interpolation** -> Curve must pass trough control points
 **Approximation** -> curve is influenced by control points
