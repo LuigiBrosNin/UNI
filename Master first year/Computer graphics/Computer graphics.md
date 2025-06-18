@@ -371,16 +371,47 @@ Coordinate systems:
 - NDC - clip space/Normalized device coordinates
 - SCS - screen space (hardware attributes)
 ![[Pasted image 20250618183748.png]]
+
+==View transformation==
 To transform WCS into VCS, we need  a camera model that has
 ![[Pasted image 20250618212846.png]]
+**Camera "look at" model**:
 - C point -> wiewpoint
 - A point -> look vector (direction of view)
 - FOV -> Field of view
 - Depth of field
 
+View reference coordinates
+the camera frame in WCS is defined as $F(C,u,v,w)$
+- C -> camera location
+- w-axis -> view direction
+- VUP -> view up vector (orientation of the camera)
+![[Pasted image 20250618213442.png]]
 
+Given the WCS & VCS frames, we can compute the matrix transformations $T_v$ for the conversion
 
+==Projection transformation==
+goes from 3d vertices in VCS to 2D screen coordinates of visible vertices in screen space
 
+**Clipping**
+![[Pasted image 20250618214343.png]]
+This phase outputs only the volume of space between front and back 
+
+**Projection**
+Perspective basically (orthographic, perspective, etc.)
+
+**Projectors** -> lines that converge at Center Of Projection (COP)
+![[Pasted image 20250618214656.png]]
+Properties
+- **Diminution** -> further obj = smaller
+- **Foreshortening** -> equal distances are not projected equally in different spots
+- **Angles** are preserved only in parallel planes to the projection
+- **Realistic**
+
+Orthographic projection keeps parallel lines parallel
+![[Pasted image 20250618214909.png]]
+
+Project the view volume into the canonical view volume/clip space with **Normalization**
 
 
 **Rasterizer Stage** -> Geometry output into visible pixels on frame buffer (the screen), stuff like scan conversion, interpolation, colour combining, visibility
