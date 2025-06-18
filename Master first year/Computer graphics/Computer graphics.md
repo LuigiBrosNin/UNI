@@ -305,7 +305,6 @@ $G^1$ -> Geometry Continuity: If the direction tangent to a parametric curve var
 
 ### Interpolation for curves
 **Interpolation** -> Curve must pass trough control points
-**Approximation** -> curve is influenced by control points
 
 ==Polynomial Interpolation Theorem==
 ![[Pasted image 20250618165650.png]]
@@ -320,8 +319,20 @@ We can control this curve with constraints (in the form of vectors)
 ==Interpolant C1 with piecewise Cubic Bézier curves==
 ![[Pasted image 20250618170711.png]]
 Where
-- P are the keypoints
-- t are
+- P -> the keypoints
+- t -> parameter values
+- m -> slope vectors
+
+==Catmull-Rom spline==
+![[Pasted image 20250618171120.png]]
+Where
+- P -> the keypoints
+- t -> parameter values
+- m -> slope vectors
+basically defines 2 extra points for each P (P- and P+) and builds the curve from there, so that the curve always passes in the original points
+
+The points are found by approximating the derivative
+$$p_{i}^{+}=p_{i}+\frac{1}{3} m_{i}\quad p_{i}^{-}=p_{i}-\frac{1}{3} m_{i}$$
 
 
 ## 3 - Rendering
