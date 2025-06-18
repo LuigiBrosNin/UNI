@@ -363,6 +363,10 @@ Object is approximated by a number of simple primitives and **tessellation** is 
 We've already seen this in the Graphic Systems slides
 
 **Geometry Stage** -> Geometric per vertex operations, stuff like move objects, camera, clipping, projection, mapping to window
+
+**Rasterizer Stage** -> Geometry output into visible pixels on frame buffer (the screen), stuff like scan conversion, interpolation, colour combining, visibility
+#### Geometry Stage
+
 ![[Pasted image 20250618183034.png]]
 Coordinate systems:
 - OCS - object coords space (local to obj)
@@ -411,10 +415,23 @@ Properties
 Orthographic projection keeps parallel lines parallel
 ![[Pasted image 20250618214909.png]]
 
-Project the view volume into the canonical view volume/clip space with **Normalization**
+View volume has a shape, defined by projection (truncated pyramid for perspection, truncated cuboid orthographic)
+Project the view volume into the normalized device coordinates (NDC)
 
+**Canonical view volume/Clip Space**  -> 2 unit wide cube, centered at (0,0,0), and with corners that range from (-1,-1,-1) to (1,1,1) and the z coordinate represents the depth (1 being nearest and -1 being farthest)
+![[Pasted image 20250618220256.png]]
 
-**Rasterizer Stage** -> Geometry output into visible pixels on frame buffer (the screen), stuff like scan conversion, interpolation, colour combining, visibility
+![[zombiebros_does_math_by_luigibrosnin_deq3z0p.png]]
+Pictured: Io e le prossime slide
+
+Matrixes for Ortho and perspective view we got from some math wizardy
+![[Pasted image 20250618220347.png]]
+I don't care to remember this shit. Just know we have matrixes for converting projections
+
+**Window transformation** -> We drop the z coord while mapping the rest to the 2D image
+
+Window-Viewport Transformation -> this
+![[Pasted image 20250618220739.png]]
 
 
 
