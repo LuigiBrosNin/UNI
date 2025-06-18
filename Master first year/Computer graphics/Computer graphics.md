@@ -363,6 +363,19 @@ Object is approximated by a number of simple primitives and **tessellation** is 
 We've already seen this in the Graphic Systems slides
 
 **Geometry Stage** -> Geometric per vertex operations, stuff like move objects, camera, clipping, projection, mapping to window
+![[Pasted image 20250618183034.png]]
+Coordinate systems:
+- OCS - object coords space (local to obj)
+- WCS - world coords space (common to all objs)
+- VCS - eye/camera space (derived from view)
+- NDC - clip space/Normalized device coordinates
+- SCS - screen space (hardware attributes)
+![[Pasted image 20250618183748.png]]
+
+
+
+
+
 
 **Rasterizer Stage** -> Geometry output into visible pixels on frame buffer (the screen), stuff like scan conversion, interpolation, colour combining, visibility
 
