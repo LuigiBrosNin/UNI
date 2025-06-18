@@ -219,6 +219,14 @@ $$x(t), y(t)$$
 **Parametric Surface**: $S(u, v) = (x(u,v), y(u,v), z(u,v))$
 You can calculate **tangent planes** and **normals** (used in lighting).
 
+## Mesh
+**Polygonal mesh** -> Set of edges, vertices and faces connected in such a way that:  
+- each edge is shared by at most two adjacent faces,  
+- one side connects two vertices,  
+- the faces are sequences of closed sides,  
+- a vertex is shared by at least two sides. 
+![[Pasted image 20250618160454 1.png|200]]
+
 
 ### 2.3 - Bézier Curves
 **Interpolation** -> Curve must pass trough control points
