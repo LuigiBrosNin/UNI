@@ -705,13 +705,29 @@ There's a bunch of basic physical stuff in the slides i'm glossing over
 	![[Pasted image 20250621215502.png]]
 Doing this makes it easy to control speed
 
-**speed control function $d(t)$** -> determines where the object must be found at each $t$
+**Speed control function $d(t)$** -> determines where the object must be found at each $t$
 ![[Pasted image 20250621215933.png]]
 
-Orientation control
+**Orientation control** -> **FRENET Frame along a path**: orientation is defined based on the path
+- Local right coordinate frame $(u,v,w,P(s))$
+	- w -> direction
+	- v -> up-vector (where up is)
+	- u -> points left
+	- P(s) -> path
+Normalize these vectors
+Values are calculated with derivatives
+![[Pasted image 20250621220403.png]]
+when $P''(s)$ is 0, interpolate Frenet frames at the extrema of the segment
 
+Alternatively we can keep a **center of interest (COI)**
+- $w=COI-POS$ (POS = observer position)
+- $u=w\times y-axis$
+- $v=u \times w$
+We can define multiple center of interests, creating a 2nd path defining where the camera should look at
+![[Pasted image 20250621221145.png]]
 
-
+We can look ahead on the same path
+![[Pasted image 20250621221258.png]]
 
 ##
 ###
