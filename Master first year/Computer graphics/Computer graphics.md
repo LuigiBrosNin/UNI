@@ -480,7 +480,7 @@ In polygon clipping, we may need to add points (as cutting a triangle can result
 ![[Pasted image 20250621182911.png]]
 We clip lines and polygons so that they're aligned within the FOV
 #### Rasterization stage
-##### Fragment generation
+##### Fragment generation / Rasterization
 produce a set of fragments with info (colour, texture)
 ![[Pasted image 20250621191745.png|250]]
 convert continuous primitives into discrete screen
@@ -505,11 +505,27 @@ Only convex polygons
 
 Concave polygons use **Tesselator** -> convert everything into triangles then scan convert the triangles
 
+##### Fragment Processing
 We get a point's colour with barycentric interpolation
 ![[Pasted image 20250621194400.png]]
 
+##### Z-Buffer / Visibility
+**Culling** -> hide what you don't see within the same object (covered or opposite camera side)
+![[Pasted image 20250621194655.png]]
+the backface is defined as side where vertices are arranged counterclockwise (convention), backface culling is done first as it's easy: cosine of normal positive (-90 to 90 degrees)
 
+**Hidden surface Removal (HSR)** -> hide parts of polygons not visible because of other objects occluding
+![[Pasted image 20250621194810.png]]
+Two approaches depending on coords systems:
+Object space (VCS) -> for each triangle, for each pixel 
+Image space (SCS) -> for each pixel, for each object
 
+**Painter's algorithm** -> draw from back to front, overwrite on frame buffer
+- Depth sort -> we can't sort items by depth as some cases are unresolvable, but it's still something we can do
+**Ray casting** -> ray from the eye, check for first intersection and store pixel object
+**Z-Buffer Algorithm** -> it's like "painting over" a pixel if something closer comes up (it's easy to implement and lightweight, the standard)
+- ![[Pasted image 20250621200018.png]]
+- ![[Pasted image 20250621195951.png]]
 
 ### 3.2 Lighting and shading
 When we look at a point on an object, the color that we see is determined by multiple interactions between light sources and reflective surfaces.
