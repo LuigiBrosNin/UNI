@@ -458,9 +458,29 @@ Window-Viewport Transformation -> this:
 
 Last transformations in the slides (thankfully just mentions)
 ![[Pasted image 20250618221237.png]]
+##### Clipping
+We Clip polygons that do not show in the screen to fit the screen exactly
+![[Pasted image 20250621192025.png]]
+
+To understand how we clip things, we look into line clipping
+
+==Cohen-Sutherland Line Clipping in 2D==
+![[Pasted image 20250621192151.png]]
+define 9 regions and look where points could need clipping (blu-green, opposite reds) to decide what to reject or clip
+![[Pasted image 20250621192317.png]]
+3D decisions are made with a 6bit outcode instead of 4
+
+Clipping is made by inserting the explicit equasi
+
+
 #### Geometry Recap
 ![[Pasted image 20250621182911.png]]
 #### Rasterization stage
+##### Fragment generation
+produce a set of fragments with info (colour, texture)
+![[Pasted image 20250621191745.png|250]]
+
+
 
 
 ### 3.2 Lighting and shading
