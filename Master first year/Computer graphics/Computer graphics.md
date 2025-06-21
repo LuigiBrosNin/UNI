@@ -690,8 +690,29 @@ We want to move an entity along a path
 
 Path = Place key frame + interpolation of inbetween frames
 
-Path description models
-**Physical** -> particle moving in time u
+Describing a path:
+**Physical model** -> particle moving in time $u$
+we have
+- positions based on u $x(u), y(u)$
+- velocity vector $V(u)$
+- speed, the magnitude of velocity vector $||V(u)||_{2}$
+
+There's a bunch of basic physical stuff in the slides i'm glossing over
+
+**Arc-length parameterization** -> distance traveled defined by a definite integral (0 to time $u_T$)
+
+**Chord-length** -> discretized $u \in [0,1]$, approximates the curve with a polygonal line, approximates arc length
+	![[Pasted image 20250621215502.png]]
+Doing this makes it easy to control speed
+
+**speed control function $d(t)$** -> determines where the object must be found at each $t$
+![[Pasted image 20250621215933.png]]
+
+Orientation control
+
+
+
+
 ##
 ###
 ##
