@@ -217,7 +217,28 @@ $$y=f(x)$$
 $$x(t), y(t)$$
 **Implicit Surface**: $\phi(x, y, z) = 0$ defines the surface.
 **Parametric Surface**: $S(u, v) = (x(u,v), y(u,v), z(u,v))$
-You can calculate **tangent planes** and **normals** (used in lighting).
+You can calculate **tangent planes** and **normals** (used in lighting, understand what is the outer face of the surface).
+![[Pasted image 20250621175153.png]]
+
+#### Continuity
+$C^0$ -> curves and surfaces without holes but segmented
+$C^1$ -> with continuous derivatives, smooth
+$C^2$ -> with continuous second derivatives
+
+$G^0=C^0$ -> Position continuity
+$G^1$ -> Tangent continuity
+$G^2$ -> Curvature continuity
+Illustration helps understand, just look at the stripes motion
+![[Pasted image 20250621175449.png]]
+
+Comparison
+
+|                                                          | Explicit form       | Implicit form        |
+| -------------------------------------------------------- | ------------------- | -------------------- |
+| Evaluation                                               | Explicit evaluation | Grid                 |
+| Classification (eg. check if point is inside the sphere) | Not easy            | Check sign of $\phi$ |
+| Boolean Operation                                        | Not easy            | Easy                 |
+
 
 
 
