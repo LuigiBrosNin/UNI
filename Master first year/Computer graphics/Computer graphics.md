@@ -470,15 +470,43 @@ define 9 regions and look where points could need clipping (blu-green, opposite 
 ![[Pasted image 20250621192317.png]]
 3D decisions are made with a 6bit outcode instead of 4
 
-Clipping is made by inserting the explicit equasi
+Clipping is made by inserting the explicit equation of line into the plane equation
+![[Pasted image 20250621192610.png]]
 
+In polygon clipping, we may need to add points (as cutting a triangle can result in a pentagon)
+![[Pasted image 20250621192736.png]]
 
 #### Geometry Recap
 ![[Pasted image 20250621182911.png]]
+We clip lines and polygons so that they're aligned within the FOV
 #### Rasterization stage
 ##### Fragment generation
 produce a set of fragments with info (colour, texture)
 ![[Pasted image 20250621191745.png|250]]
+convert continuous primitives into discrete screen
+
+Rasterize a line to understand rasterization 
+![[Pasted image 20250621193005.png]]
+- **Digital Differential Analyzer** -> for each x plot pixel at closest y, if line is steep, step for y instead
+	- ![[Pasted image 20250621193209.png]]
+- Midpoint Algorithm -> take closest pixel to line segment
+	- ![[Pasted image 20250621193239.png]]
+- Bresenham's Algorithm -> midpoint of edge
+	- ![[Pasted image 20250621193324.png]]
+	- ![[Pasted image 20250621193411.png]]
+	- We calculate the midpoint by looking at the sign of the line compared to M $d=F(M)=F(x_{p}+1,y_{p}+0.5)$
+	- Update $M$ and $d$ for next decision
+	- other line angles have their swaps in calculations 
+
+We rasterize triangles as line segments + understanding the inside of the triangle
+![[Pasted image 20250621194139.png]]
+A point is inside if it's on the left side of every boundary line (as they're ordered counter-clockwise)
+Only convex polygons
+
+Concave polygons use **Tesselator** -> convert everything into triangles then scan convert the triangles
+
+We get a point's colour with barycentric interpolation
+![[Pasted image 20250621194400.png]]
 
 
 
