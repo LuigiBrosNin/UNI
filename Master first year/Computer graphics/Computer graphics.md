@@ -16,7 +16,7 @@
 	- Final Exam: 50% –> oral
 	- participation 5%
 
-# Summaries
+# Notes
 ## 1 - Intro
 ###  1.1 - Graphic Systems
 Different kind of graphic systems:
@@ -231,7 +231,7 @@ $G^2$ -> Curvature continuity
 Illustration helps understand, just look at the stripes motion
 ![[Pasted image 20250621175449.png]]
 
-Comparison
+#### Comparison
 
 |                                                          | Explicit form       | Implicit form        |
 | -------------------------------------------------------- | ------------------- | -------------------- |
@@ -458,6 +458,8 @@ Window-Viewport Transformation -> this:
 
 Last transformations in the slides (thankfully just mentions)
 ![[Pasted image 20250618221237.png]]
+#### Geometry Recap
+![[Pasted image 20250621182911.png]]
 #### Rasterization stage
 
 
