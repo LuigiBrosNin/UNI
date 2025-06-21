@@ -17,8 +17,7 @@
 	- participation 5%
 
 # Notes
-## 1 - Intro
-###  1.1 - Graphic Systems
+## 0 - Graphic Systems
 Different kind of graphic systems:
 - Semi-immersive VR
 - Fully-immersive VR
@@ -92,8 +91,8 @@ Basically what NVIDIA CUDA (Compute Unified Device Architecture) does.
 
 **DLSS (Deep Learning Super Sampling)** -> take a low res render and upscale it with deep learning 
 
-## 2 - Modelling
-### 2.1 - Geometry for CG
+## 1 - Modelling
+### 1.1 - Geometry for CG
 Objects are represented with linear primitives
 - points
 - lines, segments
@@ -198,7 +197,7 @@ Trasformations using a pivot point that is not the origin
 
 3D has the same operation with a 4x4 matrix
 ![[Pasted image 20250618002249.png]]
-### 2.2 - Intro to Geometric Modeling
+### 1.2 - Intro to Geometric Modeling
 Dimensions $D$:
 0. Point
 1. Line/curve
@@ -242,7 +241,7 @@ Illustration helps understand, just look at the stripes motion
 
 
 
-### 2.3 - Bézier Curves
+### 1.3 - Bézier Curves
 **Interpolation** -> Curve must pass trough control points
 **Approximation** -> curve is influenced by control points
 
@@ -317,7 +316,7 @@ $G^1$ -> Geometry Continuity: If the direction tangent to a parametric curve var
 
 ![[Pasted image 20250311000536.png]]
 
-### 2.4 - Interpolation for curves
+### 1.4 - Interpolation for curves
 **Interpolation** -> Curve must pass trough control points
 
 ==Polynomial Interpolation Theorem==
@@ -361,7 +360,7 @@ introduces 3 new shape parameters
 With these, computes $L_i$ and $R_i$ (refined Catmull-Rom points) that shape the curve
 ![[Pasted image 20250618175344.png]]
 
-### 2.5 - Mesh
+### 1.5 - Mesh
 **Polygonal mesh** -> Set of edges, vertices and faces connected in such a way that:  
 - each edge is shared by at most two adjacent faces,  
 - one side connects two vertices,  
@@ -371,8 +370,8 @@ With these, computes $L_i$ and $R_i$ (refined Catmull-Rom points) that shape the
 #TODO
 
 
-## 3 - Rendering
-### 3.1 Rendering Pipeline
+## 2 - Rendering
+### 2.1 Rendering Pipeline
 **Rendering** -> "engine" that creates images from 3D scenes and a virtual camera
 2 approaches
 - Pipeline based rendering -> for each pixel, if object affects pixel do something
@@ -527,7 +526,7 @@ Image space (SCS) -> for each pixel, for each object
 - ![[Pasted image 20250621200018.png]]
 - ![[Pasted image 20250621195951.png]]
 
-### 3.2 Lighting and shading
+### 2.2 Lighting and shading
 When we look at a point on an object, the color that we see is determined by multiple interactions between light sources and reflective surfaces.
 ==Real light==
 ![[Pasted image 20250411183344.png]]
@@ -629,7 +628,7 @@ Recap
 ![[Pasted image 20250418175820.png]]
 
 
-### 3.3 Shadows & Transparency
+### 2.3 Shadows & Transparency
 ==Soft and hard shadow==
 ![[Pasted image 20250418180944.png]]
 To simulate penumbra we blur shadows in image space (cheap but inaccurate)
@@ -685,8 +684,14 @@ Algorithm
 ###
 
 ###
-##
-###
+## 4 - Animation
+### 4.1 Object/Camera path
+We want to move an entity along a path
+
+Path = Place key frame + interpolation of inbetween frames
+
+Path description models
+**Physical** -> particle moving in time u
 ##
 ###
 ##
