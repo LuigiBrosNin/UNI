@@ -361,13 +361,18 @@ With these, computes $L_i$ and $R_i$ (refined Catmull-Rom points) that shape the
 ![[Pasted image 20250618175344.png]]
 
 ### 1.5 - Mesh TODO
+#### Polygonal meshes
 **Polygonal mesh** -> Set of edges, vertices and faces connected in such a way that:  
 - each edge is shared by at most two adjacent faces,  
 - one side connects two vertices,  
 - the faces are sequences of closed sides,  
 - a vertex is shared by at least two sides. 
 ![[Pasted image 20250618160454 1.png|200]]
-#TODO
+
+**Height field** -> file that stores elevation of a grid, usually an image
+![[Pasted image 20250622162334.png]]
+
+
 
 
 ## 2 - Rendering
