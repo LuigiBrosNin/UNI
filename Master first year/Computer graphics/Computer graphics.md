@@ -360,7 +360,7 @@ introduces 3 new shape parameters
 With these, computes $L_i$ and $R_i$ (refined Catmull-Rom points) that shape the curve
 ![[Pasted image 20250618175344.png]]
 
-### 1.5 - Mesh TODO
+### 1.5 - Mesh
 #### Polygonal meshes
 **Polygonal mesh** -> Set of edges, vertices and faces connected in such a way that:  
 - each edge is shared by at most two adjacent faces,  
