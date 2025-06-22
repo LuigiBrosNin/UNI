@@ -404,6 +404,18 @@ Additional info is referenced with a support file (eg. colour visual information
 Mesh **face orientation** is given by the order of the vertices in a face (polygons have counterclockwise order)
 
 #### Manifold
+**n-Manifolds** -> topological space that has $n$ " complete holes" (eg. torus = 1-manifold or 1D-manifolds). Definition mentions neighbourhood of points, idk
+![[Pasted image 20250622164530.png]]
+![[Pasted image 20250622164900.png]]
+
+Mesh is a 2-manifold mesh if
+- Neighbourhood of each interior vertex is homeomorphic to a disk (is not cut and forms a circle)
+- Neighbourhood of each boundary vertex is homeomorphic to a half-disk
+![[Pasted image 20250622165600.png]]
+
+**Discrete Laplacian $L$ (matrix)** -> connectivity graph representation for a mesh
+- Normalized Discrete Laplacian $\bar L$ -> normalized weights
+
 
 ## 2 - Rendering
 ### 2.1 Rendering Pipeline
