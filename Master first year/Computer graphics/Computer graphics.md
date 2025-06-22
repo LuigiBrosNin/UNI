@@ -416,6 +416,15 @@ Mesh is a 2-manifold mesh if
 **Discrete Laplacian $L$ (matrix)** -> connectivity graph representation for a mesh
 - Normalized Discrete Laplacian $\bar L$ -> normalized weights
 
+**Continuous/discrete Laplace-Beltrami operator** -> measures the difference between a vertex and average of neighbours
+- Seems to smooth out meshes from what i understood
+![[Pasted image 20250622171534.png]]
+
+Idk what the hell this curvature stuff means
+![[Pasted image 20250622172256.png]]
+
+
+
 
 ## 2 - Rendering
 ### 2.1 Rendering Pipeline
