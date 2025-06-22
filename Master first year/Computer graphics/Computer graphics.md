@@ -422,7 +422,17 @@ Mesh is a 2-manifold mesh if
 
 Idk what the hell this curvature stuff means
 ![[Pasted image 20250622172256.png]]
+![[Pasted image 20250622172446.png]]
+![[Pasted image 20250622172637.png]]
 
+**Surface Genus** -> biggest number of simple close curves that can be drawn on the surface without splitting it into two non connected parts
+![[Pasted image 20250622172905.png]]
+For orientable surfaces, the genus counts the number of “handles or holes” of an object
+
+Euler’s formula for a closed mesh -> provides a relationship between faces, edges, vertices numbers in a unstructured, closed and connected mesh
+- Without boundaries -> $X=|V|-|E|+|T| = 2(1-g)$ (g=Genus)
+- With boundaries -> formula accounts for boundaries $B$ too $X=|V|-|E|+|T|+|B| = 2(1-g)$
+#### Geometry Mesh Processing
 
 
 
