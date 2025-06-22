@@ -360,7 +360,7 @@ introduces 3 new shape parameters
 With these, computes $L_i$ and $R_i$ (refined Catmull-Rom points) that shape the curve
 ![[Pasted image 20250618175344.png]]
 
-### 1.5 - Mesh
+### 1.5 - Mesh TODO
 **Polygonal mesh** -> Set of edges, vertices and faces connected in such a way that:  
 - each edge is shared by at most two adjacent faces,  
 - one side connects two vertices,  
@@ -681,11 +681,11 @@ Algorithm
 	- each pixel in fragment shader sorts associated linked list.  
 	- blending fragments in sorted order with background.  
 	- output final fragments.
-###
+### 2.4 Texture Mapping TODO
 
-###
-## 4 - Animation
-### 4.1 Object/Camera path
+### 2.5 Ray Tracing TODO
+## 3 - Animation
+### 3.1 Object/Camera path
 We want to move an entity along a path
 
 Path = Place key frame + interpolation of inbetween frames
@@ -729,8 +729,7 @@ We can define multiple center of interests, creating a 2nd path defining where t
 We can look ahead on the same path
 ![[Pasted image 20250621221258.png]]
 
-##
-###
+### 3.2 Animation TODO
 ##
 # Labs 
 !!! Lingua inconsistente !!!
