@@ -439,12 +439,23 @@ From Point cloud to mesh
 	- Optimize mesh by approximating with fewer triangles
 	- Vertex clustering decimation -> decrease vertexes
 	- Incremental mesh decimation -> decrease based of how important a vertex is based on quadrics (error approximation)
-	- ![[Pasted image 20250622184404.png]]
-	- 
+		- ![[Pasted image 20250622184404.png]]
+	- Important for LOD (Level Of Detail) approximation, progressive transmission, mesh compression, selective refinement
 3. Parameterization
+	- ![[Pasted image 20250622184709.png]]
+	- UV mapping/parameterization -> process of mapping a 3d surface to a 2D plane, relevant for texture mapping, remeshing
+	- Theorema Egregium (C. F. Gauß) -> “A general surface cannot be parameterized without distortion.”
+	- Textur mapping suffers from stretching (can be minimized)
+	- Texture Atlas Generation -> split model into patches (atlas)
+		- ![[Pasted image 20250622190057.png]]
+	- 
 4. Remeshing
 	- Distribute points on surface
 5. Smoothing/Fairing
+	- Fairness -> low variation in a curve
+		- ![[Pasted image 20250622190242.png]]
+	- smoothing surface basically
+	- works like in image denoising bit with
 6. Deformation/Editing
 7. Text-to-3D
 	- generate a 3D model from your words
