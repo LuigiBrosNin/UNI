@@ -433,6 +433,26 @@ Euler’s formula for a closed mesh -> provides a relationship between faces, ed
 - Without boundaries -> $X=|V|-|E|+|T| = 2(1-g)$ (g=Genus)
 - With boundaries -> formula accounts for boundaries $B$ too $X=|V|-|E|+|T|+|B| = 2(1-g)$
 #### Geometry Mesh Processing
+From Point cloud to mesh
+1. Reconstruction
+2. Simplification
+	- Optimize mesh by approximating with fewer triangles
+	- Vertex clustering decimation -> decrease vertexes
+	- Incremental mesh decimation -> decrease based of how important a vertex is based on quadrics (error approximation)
+	- ![[Pasted image 20250622184404.png]]
+	- 
+3. Parameterization
+4. Remeshing
+	- Distribute points on surface
+5. Smoothing/Fairing
+6. Deformation/Editing
+7. Text-to-3D
+	- generate a 3D model from your words
+8. Shape Analysis
+	- Understand important semantic features
+	- symmetry detection, correspondence, segmentation
+
+
 
 
 
