@@ -372,8 +372,38 @@ With these, computes $L_i$ and $R_i$ (refined Catmull-Rom points) that shape the
 **Height field** -> file that stores elevation of a grid, usually an image
 ![[Pasted image 20250622162334.png]]
 
+Mesh generation
+**Triangulation or tetraedralization** -> mesh from points
+**Tessellation** -> mesh from surfaces
+**Polygonalization** -> mesh from data volumes
 
+Triangle meshes have
+- Geometric component -> represented by defining coordinates of vertices
+- Topological component, represented as a graph structured with (V,E,F)
+	- Vertices
+	- Edges
+	- Faces
+![[Pasted image 20250622163506.png]]
 
+We calculate face normals and vertex normals (with max-nelson's method)
+
+Mesh composition can be
+- Structured (regular)
+- Semi regular
+- Irregular
+![[Pasted image 20250622163651.png]]
+
+`.obj` is a mesh format file storing
+- Ordered vertices
+- List of polygons
+- Vertex normals
+- Texture coordinates
+- Faces
+Additional info is referenced with a support file (eg. colour visual information)
+
+Mesh **face orientation** is given by the order of the vertices in a face (polygons have counterclockwise order)
+
+#### Manifold
 
 ## 2 - Rendering
 ### 2.1 Rendering Pipeline
