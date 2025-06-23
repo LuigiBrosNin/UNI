@@ -45,7 +45,19 @@ Operazioni nuove:
 - point-point = vector
 	![[Pasted image 20250617231120.png|200]]
 
-**Affine combination** of a point P -> linear combination of points with coefficients (called barycentric coordinates of P) that sum up to 1
+**Affine combination** of a point P -> combinazione lineare di punti che sommano ad 1 con i coefficienti (barycentric coordinates of P)
+- Se i coefficienti $\in [0,1]$ si chiamano convex combinations
+- Convex hull -> set di punti che possono essere rappresentati come convex combinations
+
+Un oggetto e' **convesso** sse puoi tracciare una linea tra 2 punti dentro l'oggetto che passa fuori l'oggetto
+![[Pasted image 20250617231744.png|300]]
+
+Barycentric coordinates -> un punto definito relativamente a 3 punti definiti
+$$P=\alpha A+ \beta B+\gamma C$$
+$\alpha, \beta,\gamma$  sono le barycentric coordinates di P rispetto a A,B,C. Questo e' importante nel warping
+
+#### Piano in spazio 3D
+piano $\pi$ ha una normale $n$, un punto appartiene sse 
 
 ###
 ##
