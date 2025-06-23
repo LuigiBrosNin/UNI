@@ -413,11 +413,12 @@ Mesh is a 2-manifold mesh if
 - Neighbourhood of each boundary vertex is homeomorphic to a half-disk
 ![[Pasted image 20250622165600.png]]
 
-**Discrete Laplacian $L$ (matrix)** -> connectivity graph representation for a mesh
+**Discrete Laplacian $L$ (matrix)** -> connectivity graph representation for a mesh, holds the weights of arcs
 - Normalized Discrete Laplacian $\bar L$ -> normalized weights
+- The normalized matrix holds the difference between a vertex and their neighbors, used for edit operations
 
 **Continuous/discrete Laplace-Beltrami operator** -> measures the difference between a vertex and average of neighbours
-- Seems to smooth out meshes from what i understood
+- Seems to smooth out meshes from what i understood, "approximates" vertices while maintaining topology
 ![[Pasted image 20250622171534.png]]
 
 Idk what the hell this curvature stuff means
