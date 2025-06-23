@@ -22,15 +22,30 @@ Rendering pipeline
 ### 1.1 - Geometry for CG
 Tutto e' basato su primitive: punti, linee, segmenti, piani, poligoni
 
-Scalar -> Magnitude (quantita'/lunghezza)
+Scalar -> Magnitude (grandezza/lunghezza)
 Point -> Location nello spazio
 Vector -> Magnitude e direzione
 
-### Linear space
+#### Linear space
 Abbiamo vettori e scalari, le operazioni tra vettori funzionano come di norma
 
-**2-norm/Euclidean norm** $||a||_{2}$ 
+**2-norm/Euclidean norm** $||a||_{2}$ -> come ricaviamo la lunghezza del vettore (basically 3D teorema di Pitagora)
 
+**Unit vector** -> vettore di lunghezza 1.0, un vettore puo' essere normalizzato e diventare unit vector (o <u>versore</u>)
+
+**Dot product** $a\cdot b=||a||||b||\cos \theta$ -> ci da' info sulla relazione dei 2 vettori (angolo tra i due)
+
+**Cross product** -> risulta un vettore perpendicolare ai due nell'operazione, magnitude = risultato dot product
+
+#### Affine space
+Spazio lineare esteso per includere i punti (e quindi coordinate)
+
+Operazioni nuove:
+- point+vector = new point
+- point-point = vector
+	![[Pasted image 20250617231120.png|200]]
+
+**Affine combination** of a point P -> linear combination of points with coefficients (called barycentric coordinates of P) that sum up to 1
 
 ###
 ##
