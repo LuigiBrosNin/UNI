@@ -26,6 +26,10 @@ Scalar -> Magnitude (quantita'/lunghezza)
 Point -> Location nello spazio
 Vector -> Magnitude e direzione
 
+### Linear space
+Abbiamo vettori e scalari, le operazioni tra vettori funzionano come di norma
+
+**2-norm/Euclidean norm** $||a||_{2}$ 
 
 
 ###
