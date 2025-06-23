@@ -6,6 +6,7 @@
 - **[[Computer graphics]]**
 	- **[[attachments]]**
 
+	- [[Sunti (ITA)]]
 - **[[Computer vision]]**
 	- **[[attachments]]**
 

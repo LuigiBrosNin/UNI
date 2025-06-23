@@ -780,7 +780,6 @@ Algorithm
 	- blending fragments in sorted order with background.  
 	- output final fragments.
 ### 2.4 Texture Mapping TODO
-
 ### 2.5 Ray Tracing TODO
 ## 3 - Animation
 ### 3.1 Object/Camera path
