@@ -71,6 +71,25 @@ vogliamo trasformare le coordinate per modificare la geometria ma non la topolog
 - Size
 - Shear
 Un sacco di matrici. operazioni 3D sono in matrici 4x4 invece che 3x3
-### 1.2 - Intro to Geometric Modeling TODO
+### 1.2 - Intro to Geometric Modeling
+Un oggetto puo' essere rappresentato
+- Implicitamente (come funzione)
+	- facile rappresentare cose semplici
+	- si gestisce facilmente matematicamente
+- Esplicitamente (con un parametro) (x,y)
+	- per cose piu' complesse
+- Discreto (rappresentazione grafica)
+#### Curves and surfaces
+**Implicit Surface**: $\phi(x, y, z) = 0$ definisce la superficie
+- **Function form** of curves only works when each x has one y
+**Parametric Surface**: $S(u, v) = (x(u,v), y(u,v), z(u,v))$
+- **Parametric Form** of curves works for more complex shapes (like circles).
+
+Calcoliamo le tangenti e poi normali in un punto del piano per sapere qual e' la parte esterna dei piani (usata nel lighting)
+
+#### Continuity
+
+
+
 ##
 ###

@@ -208,7 +208,6 @@ Implicit or explicit (parametric) representation
 **Implicit** -> a function, eg. $\phi = x^{2}+y^{2} =1$ (circle), the shape is where  $\phi = 0$
 **Explicit** -> $(\cos \theta , \sin \theta)$, curve $C(t) = (x(t),y(t))$
 **Discrete** -> Graphic representation
-
 #### Curves and surfaces
 **Function form** of curves only works when each x has one y
 $$y=f(x)$$
@@ -218,7 +217,6 @@ $$x(t), y(t)$$
 **Parametric Surface**: $S(u, v) = (x(u,v), y(u,v), z(u,v))$
 You can calculate **tangent planes** and **normals** (used in lighting, understand what is the outer face of the surface).
 ![[Pasted image 20250621175153.png]]
-
 #### Continuity
 $C^0$ -> curves and surfaces without holes but segmented
 $C^1$ -> with continuous derivatives, smooth
