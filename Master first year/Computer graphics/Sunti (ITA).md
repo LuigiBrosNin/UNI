@@ -106,11 +106,12 @@ La curva di Bézier e' una curva che interpola dei punti di controllo (insieme p
 ![[Pasted image 20250310194326.png]]
 il grado (degree) della curva e' uguale ai punti+1
 
+#### Representing the curve
 3 modi per rappresentare la curva
 - Con la Bernstein Polynomial basis
 - Con una polynomial in Matrix Form (sempre basato sul Bernstein basis)
 	- ![[Pasted image 20250624214521.png]]
-- De Casteljau Algorithm (linear interpolation)
+- De Casteljau Algorithm (usa linear interpolation, Lerp)
 
 Proprieta' curva di Bézier
 1. Muovere i punti di controllo **modifica** la curva
@@ -122,7 +123,18 @@ Proprieta' curva di Bézier
 7. La curva e' contenuta nel **convex hull** del punto di controllo (il poligono piu' piccolo formato dai punti di controllo)
 8. **Precisione lineare** -> quando tutti i control point formano una linea, la curva di Bézier e' la linea di segmento che interpola tutti i punti
 
+==Linear Interpolation (Lerp)== -> computa un valore inbetween su base $t$
+![[Pasted image 20250310233613.png|250]]
+L'algoritmo De Casteljau interpola $N$ volte i punti cosi' da arrivare ad una curva
 
+Disegnare la curva
+- Metodo uniforme -> discretizza l'intervallo parametrico in $N$ punti equidistanti e unisci i punti trovati
+- Metodo Suddivisione Adattuva -> rompi la curva continua trovata in sottocurve abbastanza piccole e renderizza
+
+#### Continuity
+$C^0$ -> continua e segmentata liberamente
+$C^1$ -> la derivata di ogni punto e' continua
+$G^1$ -> Geometry Continuity: 
 
 
 ##
