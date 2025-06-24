@@ -139,6 +139,26 @@ $G^1$ -> Geometry Continuity, le tangenti hanno la stessa direzione
 $G^2$ -> tangenti hanno stessa direzione e curvatura
 - ![[Pasted image 20250624223442.png]]
 
-### 1.4 Interpolazione TODO
+### 1.4 Interpolazione
+Interpolazione -> curva che deve passare nei punti di controllo
+
+**Teorema di interpolazione dei polinomi** -> esiste sempre ed e' unico un polinomio di grado n che passa per n+1 punti (soddisfa la condizione di interpolazione)
+
+Piecewise polynomial INTERPOLATION -> controllare la continuita' della curva per manipolare l'output finale (per fare cose come la palla che rimbalza)
+
+**Catmull-Rom spline** -> curva di bezier costruita espandendo ogni punto con due punti aggiuntivi (+ e - per far in modo che la curva passi per il punto)
+- I punti vengono calcolati approssimando la derivata di ogni punto in base al punto successivo e precedente
+$$m_{i}=\frac {P_{i+1}-P_{i-1}}{2}$$
+- 1/3 di $m$ viene aggiunta/sottartta al punto per ricavare i punti
+![[Pasted image 20250618171120.png]]
+TensionContinuityBias (TCB-spline) ->Introduce altri parametri per la forma della curva
+- tensione
+- continuita'
+- bias
+Con questi parametri computa i punti Catmull-Rom ridefiniti che danno definizione alla curva
+
+### 1.5 Mesh TODO
+
+
 ##
 ###
