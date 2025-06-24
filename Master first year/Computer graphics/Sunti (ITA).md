@@ -55,10 +55,22 @@ Un oggetto e' **convesso** sse puoi tracciare una linea tra 2 punti dentro l'ogg
 Barycentric coordinates -> un punto definito relativamente a 3 punti definiti
 $$P=\alpha A+ \beta B+\gamma C$$
 $\alpha, \beta,\gamma$  sono le barycentric coordinates di P rispetto a A,B,C. Questo e' importante nel warping
-
 #### Piano in spazio 3D
-piano $\pi$ ha una normale $n$, un punto appartiene sse 
+piano $\pi$ ha una normale $n$ ed un punto d'origine, un punto appartiene sse la normale e' perpendicolare al punto meno il punto d'origine
 
-###
+**Coordinate frame** (Sistemi di riferimento) -> quadrupla $F=(P_{0},v_{1},v_{2},v_{3})$ dove $P_0$ e' un punto d'origine e $v_{1..3}$ e' una base vettoriale
+
+**Homogeneous coordinates** -> sistema di coordinate che rappresenta unicamente punti e vettori
+Vector $w= a_{1}v_{1}+ a_{2}v_{2}+a_{3}v_{3}$ 
+Point $P = P_{0} +a_{1}v_{1}+ a_{2}v_{2}+a_{3}v_{3}$
+defined by 4 coordinates: $[a_1,a_2,a_{3}, 0\ or \ 1]$ 0 -> vector, 1 -> point
+#### Geometric Transformations
+vogliamo trasformare le coordinate per modificare la geometria ma non la topologia
+- Position
+- Orientation
+- Size
+- Shear
+Un sacco di matrici. operazioni 3D sono in matrici 4x4 invece che 3x3
+### 1.2 - Intro to Geometric Modeling TODO
 ##
 ###
