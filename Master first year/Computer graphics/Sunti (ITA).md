@@ -113,10 +113,15 @@ il grado (degree) della curva e' uguale ai punti+1
 - De Casteljau Algorithm (linear interpolation)
 
 Proprieta' curva di Bézier
-1. Muovere i punti di controllo modifica la curva
-2. La curva interpola solo il primo ed ultimo punto di controllo
-3. ha non piu' intersezioni con una linea che con il poligono di controllo
-4. non varia sotto le **affine transformation** (translation, rotation, scaling, shear)
+1. Muovere i punti di controllo **modifica** la curva
+2. La curva **interpola** solo il primo ed ultimo punto di controllo
+3. Ha **non piu' intersezioni** con una linea che con il poligono di controllo
+4. E' invariante sotto le **affine transformation** (translation, rotation, scaling, shear)
+5. La curva e' **smooth** con derivate smooth
+6. La curva e' **tangente** al primo ed all'ultimo punto di controllo ed ai primi ed ultimi segmenti
+7. La curva e' contenuta nel **convex hull** del punto di controllo (il poligono piu' piccolo formato dai punti di controllo)
+8. **Precisione lineare** -> quando tutti i control point formano una linea, la curva di Bézier e' la linea di segmento che interpola tutti i punti
+
 
 
 
