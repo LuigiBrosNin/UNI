@@ -132,10 +132,13 @@ Disegnare la curva
 - Metodo Suddivisione Adattuva -> rompi la curva continua trovata in sottocurve abbastanza piccole e renderizza
 
 #### Continuity
-$C^0$ -> continua e segmentata liberamente
+$C^0=G^0$ -> continua, un joint puo' essere sharp
+- ![[Pasted image 20250624223331.png]]
 $C^1$ -> la derivata di ogni punto e' continua
-$G^1$ -> Geometry Continuity: 
+$G^1$ -> Geometry Continuity, le tangenti hanno la stessa direzione
+$G^2$ -> tangenti hanno stessa direzione e curvatura
+- ![[Pasted image 20250624223442.png]]
 
-
+### 1.4 Interpolazione TODO
 ##
 ###
