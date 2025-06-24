@@ -65,7 +65,7 @@ Vector $w= a_{1}v_{1}+ a_{2}v_{2}+a_{3}v_{3}$
 Point $P = P_{0} +a_{1}v_{1}+ a_{2}v_{2}+a_{3}v_{3}$
 defined by 4 coordinates: $[a_1,a_2,a_{3}, 0\ or \ 1]$ 0 -> vector, 1 -> point
 #### Geometric Transformations
-vogliamo trasformare le coordinate per modificare la geometria ma non la topologia
+**Affine transformations** -> vogliamo trasformare le coordinate per modificare la geometria ma non la topologia
 - Position
 - Orientation
 - Size
@@ -88,6 +88,35 @@ Un oggetto puo' essere rappresentato
 Calcoliamo le tangenti e poi normali in un punto del piano per sapere qual e' la parte esterna dei piani (usata nel lighting)
 
 #### Continuity
+$C^0$ -> curve e superfici senza buchi, segmentate
+$C^1$ -> con derivate continue, superfici lisce
+$C^2$ -> derivate seconde continue
+
+$G^0=C^0$ -> Position continuity
+$G^1$ -> Tangent continuity
+$G^2$ -> Curvature continuity
+![[Pasted image 20250621175449.png]]
+
+
+### 1.3 - Bézier Curves
+Interpolazione -> curva che deve passare nei punti di controllo
+Approssimazione -> curva influenzata dai punti di controllo
+
+La curva di Bézier e' una curva che interpola dei punti di controllo (insieme punti di controllo = poligono di controllo)
+![[Pasted image 20250310194326.png]]
+il grado (degree) della curva e' uguale ai punti+1
+
+3 modi per rappresentare la curva
+- Con la Bernstein Polynomial basis
+- Con una polynomial in Matrix Form (sempre basato sul Bernstein basis)
+	- ![[Pasted image 20250624214521.png]]
+- De Casteljau Algorithm (linear interpolation)
+
+Proprieta' curva di Bézier
+1. Muovere i punti di controllo modifica la curva
+2. La curva interpola solo il primo ed ultimo punto di controllo
+3. ha non piu' intersezioni con una linea che con il poligono di controllo
+4. non varia sotto le **affine transformation** (translation, rotation, scaling, shear)
 
 
 
