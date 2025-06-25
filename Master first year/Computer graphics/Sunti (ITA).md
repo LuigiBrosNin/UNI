@@ -216,11 +216,45 @@ $X$ -> euler characteristic, il numero ci da' informazioni (eg. $X=2$, la figura
 
 
 #### Geometry Mesh Processing
-Pipeline per passare da un point cloud ad una mesh
+Operazioni per creare una mesh
 
 1. Reconstruction
 2. Simplification
-	- Ottimizziamo la mesh tramite decimazione vertex per alleggerire e gestire
+	- Ottimizziamo la mesh tramite decimazione vertex e decimazione incrementale per alleggerire la mesh (basandoci sull'approssimazione dell'errore)
+3. Parametization / UV MApping
+	- mappare la superficie ad un dominio di parametri
+	- Teorema Egregium (C. F. Gauß) -> “Una superficie non puo' essere parametrizzata senza distorsione.”
+	- Lo stretch che il texture mapping soffre puo' essere minimizzato
+	- Atlas Texture generation -> dividiamo il modello in pezzi per texturizzarlo
+4. Remeshing
+	- Distribuire i punti sulla superficie
+5. Smoothing/Fairing (diminuire la variazione in una curva)
+	- l'equivalente di image deniosing ma per le mesh
+	- Approssimazione/smoothness
+6. Deformation/Editing
+7. Text-to-3D
+	- Genera un modello 3D da parole
+8. Shape analysis
+	- Detection di simmetria, corrispondenza, segmentazione etc. (features)
+## 2 - Rendering
+### 2.1 Rendering Pipeline
+Rendering -> processo che crea immagini da scene 3D
+- Pipeline-based -> per ogni pixel, per ogni oggetto
+- Ray-tracing -> per ogni oggetto, per ogni pixel
+
+**Geometry Stage** -> operazioni geometriche per ogni vertex, cose come muovere oggetti, camera, clipping, proiezione, mapping a finestra
+
+**Rasterizer Stage** -> output geometrico diventa pixel visibili sul frame buffer (lo schermo), cose come scan conversion, interpolation, colour combining, visibility
+#### Geometry Stage
+Diversi sistemi di coordinate
+- <u>OCS</u> - Coordinate locali di un oggetto
+- <u>WCS</u> - World coordinates
+- <u>VCS</u> - Coordinate telecamera
+- NDC - Coordinate normalizzate per il dispositivo
+- SCS - Screen space
+
+
+####
 
 ##
 ###

@@ -445,7 +445,7 @@ From Point cloud to mesh
 	- ![[Pasted image 20250622184709.png]]
 	- UV mapping/parameterization -> process of mapping a 3d surface to a 2D plane, relevant for texture mapping, remeshing
 	- Theorema Egregium (C. F. Gauß) -> “A general surface cannot be parameterized without distortion.”
-	- Textur mapping suffers from stretching (can be minimized)
+	- Texture mapping suffers from stretching (can be minimized)
 	- Texture Atlas Generation -> split model into patches (atlas)
 		- ![[Pasted image 20250622190057.png]]
 	- 
@@ -455,18 +455,13 @@ From Point cloud to mesh
 	- Fairness -> low variation in a curve
 		- ![[Pasted image 20250622190242.png]]
 	- smoothing surface basically
-	- works like in image denoising bit with
+	- works like in image denoising but with meshes
 6. Deformation/Editing
 7. Text-to-3D
 	- generate a 3D model from your words
 8. Shape Analysis
 	- Understand important semantic features
 	- symmetry detection, correspondence, segmentation
-
-
-
-
-
 ## 2 - Rendering
 ### 2.1 Rendering Pipeline
 **Rendering** -> "engine" that creates images from 3D scenes and a virtual camera
