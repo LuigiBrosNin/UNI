@@ -311,11 +311,12 @@ Object space (VCS) -> for each triangle, for each pixel
 Image space (SCS) -> for each pixel, for each object
 
 **Painter's algorithm** -> disegna partendo da dietro, override dove capita
-- Depth sort -> non funziona per alcuni casi
-**Ray casting** -> ray from the eye, check for first intersection and store pixel object
+- Depth sort -> non funziona per alcuni casi particolari
+**Ray casting** -> raggio che guarda la prima intersezione e si ricorda l'oggetto per quel pixel
 **Z-Buffer Algorithm** -> it's like "painting over" a pixel if something closer comes up (it's easy to implement and lightweight, the standard)
 
 
 
+### 2.2 Lighting and shading TODO
 ##
 ###
