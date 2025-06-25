@@ -195,7 +195,32 @@ L'orientazione delle facce e' dato dall'ordine dei vertici (ordine antiorario)
 
 una mesh e' 2-manifold se i vertex interni sono homoeomorfici ad un disco e i vertex al limite homoeomorfici a mezzo disco
 
-**Discrete Laplacian $L$ (matrix)** -> connectivity graph representation for a mesh, holds the weights of arcs
+**Discrete Laplacian $L$ (matrix)** -> grafo di connettivita' delle mesh, rappresenta una mesh e contiene i pesi degli archi
+Normalized discrete Laplacian -> normalizza i pesi
+
+**Continuous/discrete Laplace-Beltrami operator** -> misura la differenza tra un vertice e l'average dei vicini
+L'operatore e' usato per approssimare le mesh mantenendo la topologia
+
+Curvature -> 
+Attraverso le tangenti in un punto P di una superficie e una direzione $e_{\theta}$ dal punto P (intorno) possiamo capire la curvatura della superficie
+- Possiamo calcolarci la curvatura media intorno ad un punto
+- Possiamo calcolarci la curvatura gaussiana che ci dice se la curvatura e' concava o convessa
+
+**Surface Genus** -> numero di curve semplici chiuse che possono essere disegnate da una superficie senza dividerle in due diverse parti connesse, aka "buchi" in una superficie orientata
+
+**Euler’s formula per una mesh chiusa** -> mette in relazione il numero di faces, edges e vertices in una mesh non strutturata, chiusa e connessa
+- Senza boundaries ->  $X=|V|-|E|+|T| = 2(1-g)$ (g=Genus)
+- Con boundaries -> boundaries $B$  $X=|V|-|E|+|T|+|B| = 2(1-g)$
+$X$ -> euler characteristic, il numero ci da' informazioni (eg. $X=2$, la figura e' un cubo (???))
+
+
+
+#### Geometry Mesh Processing
+Pipeline per passare da un point cloud ad una mesh
+
+1. Reconstruction
+2. Simplification
+	- Ottimizziamo la mesh tramite decimazione vertex per alleggerire e gestire
 
 ##
 ###
