@@ -177,8 +177,21 @@ le mesh triangolari hanno una componente geometrica (coordinate vertici) e topol
 Le normali delle facce e dei vertici le calcoliamo con il metodo max-nelson
 
 Una mesh puo' essere
-- Strutturata (regolare) -> poligoni equivalenti
-- Semi-regolare -> 
-- Irregolare ->
+- Strutturata (regolare) -> numero elementi intorno ai vertici costante
+- Semi-regolare -> regolare tranne poche eccezioni
+- Irregolare
+
+i file `.obj` racchiudono mesh, sono formati che possono contenere
+- lista vertici ordinati
+- lista poligoni
+- normali dei vertici
+- coordinate texture
+- facce
+L'orientazione delle facce e' dato dall'ordine dei vertici (ordine antiorario)
+
+
+#### Manifold
+**n-Manifolds** -> superficie liscia che i mesh approssimano, ogni punto ha una neighbourhood che puo' creare un disco
+
 ##
 ###
