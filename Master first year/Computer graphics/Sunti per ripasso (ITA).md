@@ -402,5 +402,33 @@ Algoritmo idea nelle slide
 ###
 ## 3 - Animation
 ### 3.1 Object/Camera path
+Muovere un'entita' attraverso un percorso (path)
+
+Path = keyframe di un posto + interpolazione tra keyframes
+
+**Modello fisico per descrivere un path** -> particella che si muove in tempo $u$, che definisce
+- Posizione in base ad u
+- Vettore velocita' $V$ in base ad u
+- Speed (magnitude vettore velocita'), norma 2 di $V$
+
+**Arc-length parameterization** -> distanza percorsa in un tempo determinato $u$ dal punto di partenza (si trova con un integrale)
+**Chord-length** -> approssimazione discretizzata dell'arc length con una linea poligonale, $u$ visto tra 0 ed 1, e' facile controllare la velocita' dalla chord-length
+
+**Speed control function $d(t)$** -> definisce il punto dove l'entita' si trova ad ogni $t$, diversi andamenti (regolare, stazionario etc., plot distanza e tempo)
+
+##### Orientation control
+**FRENET Frame along a path**, vuol dire che definiamo l'orientazione dell'entita' come proprieta' nel percorso
+Le proprieta' sono le stesse che troviamo nella camera nella rendering pipeline
+- Local right coordinate frame $(u,v,w,P(s))$
+	- w -> direction
+	- v -> up-vector (where up is)
+	- u -> points left
+	- P(s) -> path
+
+**center of interest (COI)** -> rimani a fissare un punto preciso
+- $w=COI-POS$ (POS = observer position)
+- $u=w\times y-axis$
+- $v=u \times w$
+
 
 ###
