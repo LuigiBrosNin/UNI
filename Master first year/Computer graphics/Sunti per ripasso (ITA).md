@@ -375,6 +375,7 @@ Dal flat shading, possiamo
 - Colore pixel = appliga phong light ad ogni pixel della faccia usando il vettore normale interpolato
 - una lighting evaluation per pixel
 - Computationally expensive
-### 2.3 Shadows & Transparency TODO
+### 2.3 Shadows & Transparency
+
 ##
 ###
