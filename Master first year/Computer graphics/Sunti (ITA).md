@@ -157,8 +157,23 @@ TensionContinuityBias (TCB-spline) ->Introduce altri parametri per la forma dell
 - bias
 Con questi parametri computa i punti Catmull-Rom ridefiniti che danno definizione alla curva
 
-### 1.5 Mesh TODO
+### 1.5 Mesh
+#### Mesh poligonale
+**Mesh poligonare** -> set di edge, vertici e facce connesse in modo che
+- ogni edge e' condiviso al massimo da due facce adiacenti
+- una parte connette due vertici
+- le facce sono sequenze di parti chiuse
+- un vertex e' condiviso da almeno due parti
 
+**Height field** -> file che detiene l'elevazione di un piano, di solito in un'immagine monocromatica
 
+3 modi per generare mesh
+**Triangulation or tetraedralization** -> mesh dai punti
+**Tessellation** -> mesh dalle superfici
+**Polygonalization** -> mesh da volumi di dati
+
+le mesh triangolari hanno una componente geometrica (coordinate vertici) e topologica (grafo vertices, edges, faces)
+
+Le normali delle facce e dei vertici le calcoliamo con il metodo max-nelson
 ##
 ###
