@@ -191,7 +191,11 @@ L'orientazione delle facce e' dato dall'ordine dei vertici (ordine antiorario)
 
 
 #### Manifold
-**n-Manifolds** -> superficie liscia che i mesh approssimano, ogni punto ha una neighbourhood che puo' creare un disco
+**n-Manifolds** -> superficie liscia che i mesh approssimano, ogni punto ha una neighbourhood che puo' creare un disco (per un 2D manifold) 
+
+una mesh e' 2-manifold se i vertex interni sono homoeomorfici ad un disco e i vertex al limite homoeomorfici a mezzo disco
+
+**Discrete Laplacian $L$ (matrix)** -> connectivity graph representation for a mesh, holds the weights of arcs
 
 ##
 ###
