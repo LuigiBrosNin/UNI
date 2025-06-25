@@ -399,7 +399,7 @@ Algoritmo idea nelle slide
 - Keep a list of colors for each pixel, 
 - sort them by depth, 
 - blend them together in the fragment shader.
-###
+### 2.4 Texture Mapping TODO
 ## 3 - Animation
 ### 3.1 Object/Camera path
 Muovere un'entita' attraverso un percorso (path)
@@ -429,6 +429,6 @@ Le proprieta' sono le stesse che troviamo nella camera nella rendering pipeline
 - $w=COI-POS$ (POS = observer position)
 - $u=w\times y-axis$
 - $v=u \times w$
-
-
+Possiamo creare diversi punti di interesse che formano un secondo path che definisce dove guarderemo
+**"Look ahead"** ->Possiamo guardare avanti nello stesso path (stratagemma per seguire oggetti)
 ###
