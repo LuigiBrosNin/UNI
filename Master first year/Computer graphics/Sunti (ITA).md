@@ -175,5 +175,10 @@ Con questi parametri computa i punti Catmull-Rom ridefiniti che danno definizion
 le mesh triangolari hanno una componente geometrica (coordinate vertici) e topologica (grafo vertices, edges, faces)
 
 Le normali delle facce e dei vertici le calcoliamo con il metodo max-nelson
+
+Una mesh puo' essere
+- Strutturata (regolare) -> poligoni equivalenti
+- Semi-regolare -> 
+- Irregolare ->
 ##
 ###
