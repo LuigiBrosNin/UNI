@@ -697,7 +697,7 @@ We approximate shading
 
 Improvements for flat shading
 - Evaluate phong at each pixel of the polygon
-- Vertex normals at each vertex to approximate better the real surface they represent, vertex normals can be provided by different methods 
+- Vertex normals at each vertex to approximate better the real surface they represent, vertex normals can be provided by different methods
 
 ==Gouraud Shading==
 ![[Pasted image 20250418174505.png]]

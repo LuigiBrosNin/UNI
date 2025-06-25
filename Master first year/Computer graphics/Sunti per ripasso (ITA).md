@@ -357,6 +357,24 @@ In sostanza, moltiplica le proprieta' del materiale alle intensita' corrispettiv
 
 **Attenuation term** -> la luce si attenua dopo una certa distanza, lo prendiamo in considerazione
 
+**Blinn-Phong Lighting Model** -> usiamo un halfway vector $h$ invece del dot product che usiamo nel modello Phong
 
+**Shading** per frammenti-> assegnare il colore al pixel
+Dal flat shading, possiamo
+- Calcolare Phong ad ogni pixel
+- Calcolare normali di ogni vertice per approssimare la superficie che rappresentano
+
+**Gouraud Shading**
+- Normale computata ai vertici, colore deciso in base alla normale e phong
+- intesita' colore = barycentric interpolation delle intensita' ai vertici
+- una lighting evaluation per vertex
+- manca highlight/spotlight e il banding effect (discontinuita' nel modello causa bug nella colorazione)
+
+**Phong shading**
+- Normale computata ad ogni vertice, poi interpolati sulla faccia
+- Colore pixel = appliga phong light ad ogni pixel della faccia usando il vettore normale interpolato
+- una lighting evaluation per pixel
+- Computationally expensive
+### 2.3 Shadows & Transparency TODO
 ##
 ###
