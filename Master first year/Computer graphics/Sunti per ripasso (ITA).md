@@ -376,6 +376,31 @@ Dal flat shading, possiamo
 - una lighting evaluation per pixel
 - Computationally expensive
 ### 2.3 Shadows & Transparency
+Dobbiamo simulare ombra e penombra
+Per la penombra blurriamo l'ombra nello spazio immagine, non accurato ma cheap
 
-##
+Ombre generate
+1. **Ombra su superfici piane** -> cast la forma dell'oggetto sul piano
+2. **Shadow map algorithm** -> stesso metodo del nascondere superfici nascoste ma applicato alle fonti di luce ed usa lo z-buffer per ricavare i punti in ombra
+	- **Shadow Depth Maps** -> la computazione viene salvata in una texture chiamata shadow map  ed usata successivamente
+	- **Light maps** -> Crea shadow maps dalle silhouette degli oggetti dalla fonte di luce e poi la proietta
+3. **Shadow volumes** -> rappresento un volume di spazio delle zone in ombra e traccio una line dal POV, se intercetto un volume il punto e' in ombra
+	- ![[Pasted image 20250425223848.png|200]]
+
+**Ambient Occlusion** -> simulazione ombre dagli oggetti che bloccano la luce ambientale (anche nello stesso oggetto)
+1.  **Ray casting** -> lancio raggi in ogni direzione da un punto di un oggetto, raggio non bloccato = aggiunge luce
+2. **Screen Space Ambient Occlusion (SSAO)** -> Il fragment shader computa i depth values intorno al pixel e cerca di capire quanto e' oscurato il pixel
+
+**Renderizzare trasparenza** -> Alpha channel definisce l'opacita' dell'oggetto
+- Le superfici opache vanno renderizzate prima delle trasparenti (altrimenti il colore finale del pixel sara' sbagliato)
+
+**Order-Independent Transparency OIT** -> sort dei pixel fatto nel fragment shader che rispetti quanto scritto sopra
+Algoritmo idea nelle slide
+- Keep a list of colors for each pixel, 
+- sort them by depth, 
+- blend them together in the fragment shader.
+###
+## 3 - Animation
+### 3.1 Object/Camera path
+
 ###
