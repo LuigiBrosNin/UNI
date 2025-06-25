@@ -287,6 +287,34 @@ la camera adatta/taglia gli oggetti che sono parzialmente fuori dal range di vis
 
 **Cohen-Sutherland Line Clipping in 2D** -> metodo per capire se c'e' possibilmente bisogno di clippare un oggetto (9 regioni con al centro lo schermo, vedi le regioni di ogni punto e clippa usando l'intersezione)
 
+E' possibile dover aumentare i punti in un poligono clippato
+#### Rasterization stage
+##### Fragment generation / Rasterization
+Genera frammenti (oggetti discreti a schermo) con informazioni (colore, teture)
+
+Diversi modi per rasterizzare, abbiamo visto come rasterizzare una linea con
+- **Digital Differential Analyzer** -> per ogni x plotta una y, inverso se la linea e' steep
+- Midpoint Algorithm -> prendi il pixel piu' vicino al punto della linea
+- Bresenham's Algorithm -> decidi il pixel in base al punto medio dell'edge del pixel attraversato
+
+Rasterizziamo triangoli come segmenti di linee + identificando l'interno del triangolo (parte sinistra di ogni boundary line, dato che ordiniamo in antiorario, solo per poligoni convessi).
+I poligoni concavi usano un **tessellator**
+##### Fragment Processing
+Processa il colore come affine combination del valore dei tre triangoli
+##### Z-Buffer / Visibility
+**Culling** -> nascondi quel che non vedi di un oggetto coperto dallo stesso oggetto
+Calcoliamo la backface culling con il coseno della normale (se positivo)
+
+**Hidden surface Removal (HSR)** -> nascondo parti di poligoni nascoste da altri oggetti
+2 approcci per questo in base al sistema coordinate
+Object space (VCS) -> for each triangle, for each pixel 
+Image space (SCS) -> for each pixel, for each object
+
+**Painter's algorithm** -> disegna partendo da dietro, override dove capita
+- Depth sort -> non funziona per alcuni casi
+**Ray casting** -> ray from the eye, check for first intersection and store pixel object
+**Z-Buffer Algorithm** -> it's like "painting over" a pixel if something closer comes up (it's easy to implement and lightweight, the standard)
+
 
 
 ##
