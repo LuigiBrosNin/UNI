@@ -6,7 +6,7 @@
 - **[[Computer graphics]]**
 	- **[[attachments]]**
 
-	- [[Sunti (ITA)]]
+	- [[Sunti per ripasso (ITA)]]
 - **[[Computer vision]]**
 	- **[[attachments]]**
 

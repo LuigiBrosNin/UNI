@@ -250,11 +250,44 @@ Diversi sistemi di coordinate
 - <u>OCS</u> - Coordinate locali di un oggetto
 - <u>WCS</u> - World coordinates
 - <u>VCS</u> - Coordinate telecamera
-- NDC - Coordinate normalizzate per il dispositivo
+- NDC - Coordinate normalizzate per il dispositivo (Clip space)
 - SCS - Screen space
 
+##### View transformation
+modello "look at" (Camera)
+- C point -> viewpoint
+- A point -> direzione della visione
+- FOV
+- Depth of field
+Camera in WCS = $F(C,u,v,w)$
+- C -> posizione
+- w-axis -> direzione vista
+- VUP -> up vector (punta in alto per la camera)
+##### Projection transformation
+Da vertici 3D in VCS a coordinate 2D, vertici visibili nello schermo
+Questa fase definisce la prospettiva
+- Projection
+	- Le linee convergono al centro della proiezione
+	- Oggetti lontani appaiono piu' piccoli
+	- effetto forshortening
+	- Angoli preservati solo in piani paralleli
+	- realistico
+	- Forma del volume di visione: piramide troncata
+- Orthographic
+	- Centro di proiezione locato ad infinito
+	- Forma del volume di visione: cuboide troncato
 
-####
+**Canonical view volume/Clip Space**  -> coordinate 3D rispetto alla camera normalizzate da -1 a +1 per tutti e 3 gli assi
+(Vengono definite matrici per convertire le proiezioni)
+
+**Window transformation** -> lasciamo stare la coordinata z mentre mappiamo il resto all'immagine 2D
+
+##### Clipping
+la camera adatta/taglia gli oggetti che sono parzialmente fuori dal range di visione
+
+**Cohen-Sutherland Line Clipping in 2D** -> metodo per capire se c'e' possibilmente bisogno di clippare un oggetto (9 regioni con al centro lo schermo, vedi le regioni di ogni punto e clippa usando l'intersezione)
+
+
 
 ##
 ###
