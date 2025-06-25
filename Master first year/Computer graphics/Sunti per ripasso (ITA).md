@@ -317,6 +317,46 @@ Image space (SCS) -> for each pixel, for each object
 
 
 
-### 2.2 Lighting and shading TODO
+### 2.2 Lighting and shading
+Gli oggetti che riflettono la luce sono
+Opachi -> la luce incidente e' riflessa o assorbita
+Traslucido -> trasmissione della luce significante
+
+I modelli di luce possono essere
+- Basati su fisica (rendering equation)
+- Empirici -> approssimazione, seguiamo i raggi di luce che arrivano all'osservatore direttamente e tramite riflessi
+
+Il colore in un punto e' definito attraverso le fonti di luce, le proprieta' riflettenti del materiale e il modello d'illuminazione
+
+- Modello locale -> semplice, importa solo la luce diretta dalla fonte
+- Modello globale -> conta anche la luce indiretta
+
+Il materiale puo' riflettere la luce in 3 modi, gestiti singolarmente
+![[Pasted image 20250418103404.png]]
+Un materiale ha queste proprieta'
+$$K_{a,d,s,e}\in [0,1]$$
+- $k_a$ -> ambient
+- $k_d$ -> diffuse reflection coefficient
+- $k_S$ -> specular reflection coefficient
+- $k_e$ -> emissive (self emission of light)
+$n_s$ -> specular reflection exponent
+Il modo in cui un materiale riflette la luce e' riferito come **Reflection model**
+
+La luce puo' essere generata in 4 modi
+![[Pasted image 20250418122111.png]]
+
+**Phong's local illumination model**
+![[Pasted image 20250418125606.png]]
+$$I_{\lambda}=k_{e}+I_{a}k_{a}+I_{d}k_{d}+I_{S}k_{S}$$
+- $I_a$ -> ambient intensity
+- $I_d$ -> diffusion intensity, $I_{l} \max(0,l*n)$ where $I_l=$Source light intensity, $l$ and $n$ from Lambert's cosine law
+- $I_S$ -> reflection intensity
+In sostanza, moltiplica le proprieta' del materiale alle intensita' corrispettive per poi sommarle
+
+**Lambert’s cosine law** -> la luce in ogni unita' e' proporzionale all'angolo tra la fonte di luce e l'orientazione della superficie
+
+**Attenuation term** -> la luce si attenua dopo una certa distanza, lo prendiamo in considerazione
+
+
 ##
 ###
