@@ -773,7 +773,33 @@ Algorithm
 	- each pixel in fragment shader sorts associated linked list.  
 	- blending fragments in sorted order with background.  
 	- output final fragments.
-### 2.4 Texture Mapping TODO
+### 2.4 Texture Mapping
+**Texturing** -> apply images to geometric objects
+- 2D mapping -> surface affected
+- 3D mapping -> texture is sculpted in the object
+
+Properties modified by texture mapping
+- Colour
+- Reflected colour
+- Surface normal
+- Transparency
+**Texel** ->A pixel in a texture
+
+**Texture space** $(s,t)$ ->Textures' own Texture coords system
+**Parameterization** -> bijective mapping between surface and parameter domain
+![[Pasted image 20250626111619.png]]
+maps a 3D surface to a parameter domain in 2D trough a function $f$
+
+We can define texture coords **for each vertex**, interior points are taken via barycentric interpolation
+
+mesh's genus > 0 => subdivide the mesh in chart (patches), parameterize each
+![[Pasted image 20250626112106.png|400]]
+
+In **rasterization** we have a backward mapping for vertices, while pixels inside triangles are computed via interpolation
+
+
+
+
 ### 2.5 Ray Tracing TODO
 ## 3 - Animation
 ### 3.1 Object/Camera path
