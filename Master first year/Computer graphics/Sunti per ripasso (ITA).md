@@ -209,9 +209,6 @@ Attraverso le tangenti in un punto P di una superficie e una direzione $e_{\thet
 - Senza boundaries ->  $X=|V|-|E|+|T| = 2(1-g)$ (g=Genus)
 - Con boundaries -> boundaries $B$  $X=|V|-|E|+|T|+|B| = 2(1-g)$
 $X$ -> euler characteristic, il numero ci da' informazioni (eg. $X=2$, la figura e' un cubo (???))
-
-
-
 #### Geometry Mesh Processing
 Operazioni per creare una mesh
 
@@ -249,7 +246,6 @@ Diversi sistemi di coordinate
 - <u>VCS</u> - Coordinate telecamera
 - NDC - Coordinate normalizzate per il dispositivo (Clip space)
 - SCS - Screen space
-
 ##### View transformation
 modello "look at" (Camera)
 - C point -> viewpoint
@@ -287,7 +283,7 @@ la camera adatta/taglia gli oggetti che sono parzialmente fuori dal range di vis
 E' possibile dover aumentare i punti in un poligono clippato
 #### Rasterization stage
 ##### Fragment generation / Rasterization
-Genera frammenti (oggetti discreti a schermo) con informazioni (colore, teture)
+Genera frammenti (oggetti discreti a schermo) con informazioni (colore, texture)
 
 Diversi modi per rasterizzare, abbiamo visto come rasterizzare una linea con
 - **Digital Differential Analyzer** -> per ogni x plotta una y, inverso se la linea e' steep
@@ -311,9 +307,6 @@ Image space (SCS) -> for each pixel, for each object
 - Depth sort -> non funziona per alcuni casi particolari
 **Ray casting** -> raggio che guarda la prima intersezione e si ricorda l'oggetto per quel pixel
 **Z-Buffer Algorithm** -> it's like "painting over" a pixel if something closer comes up (it's easy to implement and lightweight, the standard)
-
-
-
 ### 2.2 Lighting and shading
 Gli oggetti che riflettono la luce sono
 Opachi -> la luce incidente e' riflessa o assorbita
