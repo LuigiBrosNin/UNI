@@ -817,8 +817,8 @@ A normal map can be built two ways:
 1. Compute the normals of a 3D high tessellated model and store them into a texture file (from high res 3D model)
 2. From a height map
 
-**Apply Normal-maps in Tangent space** -> define Texture/Tangent space TBN, compute normal, tangent and bi-tangenr for each vertex and interpolate inner points
-**Displacement mapping** ->Like bumps but phisically displace the mesh
+**Apply Normal-maps in Tangent space** -> define Texture/Tangent space TBN, compute normal, tangent and bi-tangent for each vertex and interpolate inner points
+**Displacement mapping** -> Like bumps but physically displace the mesh
 #### Procedural texturing
 3D texturing basically, letting the 3D texture handle itself on the object
 

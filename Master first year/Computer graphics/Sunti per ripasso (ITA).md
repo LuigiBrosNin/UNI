@@ -400,6 +400,30 @@ Algoritmo idea nelle slide
 - sort them by depth, 
 - blend them together in the fragment shader.
 ### 2.4 Texture Mapping
+Texturing -> applica immagini/pattern a oggetti geometrici
+- 2D mapping -> Come vernice sull'oggetto
+- 3D mapping -> Come pattern intrinseco nell'oggetto (eg. legno, quarzo)
+**Texel** ->  pixel in una texture
+**Parameterization** -> mappare su un piano 2D una superficie 3D, si puo' fare anche in patches per oggetti complessi
+
+in rasterization i vertici hanno mapping, l'interno viene interpolato
+
+2 step nel mapping
+- S mapping -> superfice intermediaria semplice
+- O mapping -> wrap della S map sull'oggetto
+
+**Bump map** -> height map che definisce un displacement non geometrico sull'oggetto, salvo in grayscale, seguo la normale del punto nell'oggetto
+**Normal map** -> Modifico le normali, salvo in RGB per indicare coordinate XYZ del vettore direzione
+
+**Displacement mapping** -> displacement geometrici sulla mesh, la complica
+
+**Procedural texturing** -> 3D textures generate con Noise visto a computer vision (eg. Perilin), genera pattern interessanti che danno coerenza spaziale alla texture
+
+**Environment mapping** -> gestisce i riflessi tipo gli specchi negli oggetti
+
+creiamo una **Env-map** dell'area circostante e la mettiamo come texture all'oggetto
+
+
 
 ## 3 - Animation
 ### 3.1 Object/Camera path
