@@ -797,6 +797,30 @@ mesh's genus > 0 => subdivide the mesh in chart (patches), parameterize each
 
 In **rasterization** we have a backward mapping for vertices, while pixels inside triangles are computed via interpolation
 
+Distorsion happens because of perspective/projection
+![[Pasted image 20250626112747.png]]
+![[Pasted image 20250626112536.png|400]]
+
+Two step mapping has
+- S mapping -> intermediate (simple) surface
+- O mapping -> intermediate to actual object
+
+#### Displacement mapping/Bump/Normal
+Geometric texture to physically displace the surface geometry (only affect lighting)
+![[Pasted image 20250626112952.png]]
+![[Pasted image 20250626113005.png|300]]
+
+**Bump map** -> single channel height map, texels are scalar distance expressed in grayscale, follows normal direction of mesh.
+
+**Normal map** -> Encode details by modifying normals, as light in computed using the object's normals, RGB image, Texel RGB = XYZ values of a direction vector
+![[Pasted image 20250626113638.png]]
+A normal map can be built two ways:  
+1. Compute the normals of a 3D high tessellated model and store them into a texture file (from high res 3D model)
+2. From a height map
+
+Apply Normal-maps in Tangent space (TBN) -> 
+
+
 
 
 
