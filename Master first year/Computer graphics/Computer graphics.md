@@ -869,7 +869,20 @@ rasterized image
 #### Other maps
 Refraction Map -> bending light as it passes trough a solid, distorted reflection (eg. water)
 Emissive Map -> self illumination, makes objects appear to irradiate
-### 2.5 Ray Tracing TODO
+### 2.5 Ray Tracing
+Physically Based Rendering PBR -> seeks to render the flow of light by simulating how materials absorb and reflect light (global model).
+1. Conservation of enerfy
+2. Positivity
+3. Law of reflection
+4. Fresnel equations
+5. Helmholtz reciprocity
+Handled in one of the following
+- Ray tracing global illumination
+- Radiosity, photon mapping
+- Precomputed global illumination
+
+
+
 ## 3 - Animation
 ### 3.1 Object/Camera path
 We want to move an entity along a path
