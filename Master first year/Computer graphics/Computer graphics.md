@@ -777,7 +777,7 @@ Algorithm
 **Texturing** -> apply images to geometric objects
 - 2D mapping -> surface affected
 - 3D mapping -> texture is sculpted in the object
-
+#### Applying textures
 Properties modified by texture mapping
 - Colour
 - Reflected colour
@@ -804,7 +804,6 @@ Distorsion happens because of perspective/projection
 Two step mapping has
 - S mapping -> intermediate (simple) surface
 - O mapping -> intermediate to actual object
-
 #### Bump/Normal/Displacement
 Geometric texture to physically displace the surface geometry (only affect lighting)
 ![[Pasted image 20250626112952.png]]
@@ -833,11 +832,43 @@ Solid 3D textures don't bend as they should, Noise "solves" this problem as it g
 **Env-map** -> render scene from object center (Preprocessing)
 ![[Pasted image 20250626120255.png]]
 Use the env-map in rendering indexed by reflection vector
+Object won't reflect itself (in ray-tracing, it will)
+#### Sampling, Texture Filtering
+![[Pasted image 20250626120542.png]]
+- **Magnification** -> if Texel is bigger than pixel
+	- We interpolate (nearest neighbor/bi-trilinear interpolation)
+- **Minification** -> if Texel is smaller than pixel
+	- We use Mipmaps, preprocessing scaled copies of texture
+	- ![[Pasted image 20250626121026.png]]
+	- Select mipmap level trough a scalar factor (texels/pixel)
+#### Aliasing
+**aliasing effect** -> appearance of jagged edges or “jaggies” in a  
+rasterized image
+![[Pasted image 20250626121120.png]]
+
+**Anti-aliasing** -> technique that reduce the appearence of jagged edges
+- **SuperSampling AA** -> render at higher res, blur, resample at lower res
+- **Multisample Anti-Aliasing (MSAA)** -> render multiple samples per pixel on edges and average the results
+- **Prefilter texture map**
+- **Fast Approximate Anti-Aliasing (FXAA)** -> post-processing technique that Blurs entire image slightly (low cost in shader)
+
+**Physical Based Rendering PBR materials** -> realistic material that uses several maps
+- Albedo  
+- Normal  
+- Gloss (or Roughness)  
+- Metalness/Specular  
+- Displacement/Height  
+- Ambient Occlusion  
+- Refraction  
+- Emissive/Glow
 
 
 
 
 
+#### Other maps
+Refraction Map -> bending light as it passes trough a solid, distorted reflection (eg. water)
+Emissive Map -> self illumination, makes objects appear to irradiate
 ### 2.5 Ray Tracing TODO
 ## 3 - Animation
 ### 3.1 Object/Camera path
