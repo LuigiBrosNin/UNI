@@ -431,4 +431,15 @@ Le proprieta' sono le stesse che troviamo nella camera nella rendering pipeline
 - $v=u \times w$
 Possiamo creare diversi punti di interesse che formano un secondo path che definisce dove guarderemo
 **"Look ahead"** ->Possiamo guardare avanti nello stesso path (stratagemma per seguire oggetti)
-###
+### 3.2 Animation
+Articulated figure -> parti rigide chiamate **Bones** connesse da **Joints**, rappresentato da un tree, ogni nodo e' un osso, gli archi sono i joints
+
+**Rigging** -> costruire i controlli del modello 3D (scheletro, joints)
+
+3 tipi di animazioni
+- Basati su fisica/procedurali
+	- particelle (sistemi di particelle), cose complesse simulabili (vestiti, pelo)
+	- Focus sulle forze che agiscono sulle simulazioni (interne ed esterne)
+- Data driven, aka Motion capture
+	- 
+

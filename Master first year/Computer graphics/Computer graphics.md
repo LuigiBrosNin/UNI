@@ -957,8 +957,8 @@ We can define multiple center of interests, creating a 2nd path defining where t
 We can look ahead on the same path
 ![[Pasted image 20250621221258.png]]
 
-### 3.2 Animation
-**Ariculated figure** -> made of rigid parts called **bones** connected by **joints**
+### 3.2 Digital Animation
+**Articulated figure** -> made of rigid parts called **bones** connected by **joints**
 ![[Pasted image 20250626123512.png]]
 A model can be represented as a tree
 ![[Pasted image 20250626123911.png]]
