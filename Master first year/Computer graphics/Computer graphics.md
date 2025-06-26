@@ -842,11 +842,10 @@ Object won't reflect itself (in ray-tracing, it will)
 	- ![[Pasted image 20250626121026.png]]
 	- Select mipmap level trough a scalar factor (texels/pixel)
 #### Aliasing
-**aliasing effect** -> appearance of jagged edges or “jaggies” in a  
-rasterized image
+**aliasing effect** -> appearance of jagged edges or “jaggies” in a rasterized image
 ![[Pasted image 20250626121120.png]]
 
-**Anti-aliasing** -> technique that reduce the appearence of jagged edges
+**Anti-aliasing** -> technique that reduce the appearance of jagged edges
 - **SuperSampling AA** -> render at higher res, blur, resample at lower res
 - **Multisample Anti-Aliasing (MSAA)** -> render multiple samples per pixel on edges and average the results
 - **Prefilter texture map**
@@ -861,17 +860,12 @@ rasterized image
 - Ambient Occlusion  
 - Refraction  
 - Emissive/Glow
-
-
-
-
-
 #### Other maps
 Refraction Map -> bending light as it passes trough a solid, distorted reflection (eg. water)
 Emissive Map -> self illumination, makes objects appear to irradiate
 ### 2.5 Ray Tracing
 Physically Based Rendering PBR -> seeks to render the flow of light by simulating how materials absorb and reflect light (global model).
-1. Conservation of enerfy
+1. Conservation of energy
 2. Positivity
 3. Law of reflection
 4. Fresnel equations

@@ -419,9 +419,62 @@ in rasterization i vertici hanno mapping, l'interno viene interpolato
 
 **Procedural texturing** -> 3D textures generate con Noise visto a computer vision (eg. Perilin), genera pattern interessanti che danno coerenza spaziale alla texture
 
-**Environment mapping** -> gestisce i riflessi tipo gli specchi negli oggetti
+**Environment mapping** -> gestisce i riflessi tipo gli specchi negli oggetti.
+Creiamo una **Env-map** dell'area circostante e la mettiamo come texture all'oggetto
 
-creiamo una **Env-map** dell'area circostante e la mettiamo come texture all'oggetto
+Sampling, Texture Filtering
+Texture e grandezza di un pixel a schermo variano, come gestiamo i diversi casi?
+- **Magnification** -> il Texel e' piu' grande del pixel
+	- Interpoliamo (nearest neighbor/ bi or tri -linear interpolation)
+- **Minification** -> il Texel e' piu' piccolo del pixel
+	- Mipmaps, copie scalate delle texture preprocessate
+	- Usiamo un fettore scalare dato dal rapporto texel/pixel
+
+**Aliasing effect** -> “jaggies”, quando un oggetto sembra pixellato brutto
+==Tecniche anti-aliasing==
+- **SuperSampling AA** -> render at higher res, blur, resample at lower res
+- **Multisample Anti-Aliasing (MSAA)** -> render multiple samples per pixel on edges and average the results
+- **Prefilter texture map**
+- **Fast Approximate Anti-Aliasing (FXAA)** -> post-processing technique that Blurs entire image slightly (low cost in shader)
+
+**Physical Based Rendering PBR materials** -> Materiale realistico, utilizza molte mappe sovrapposte
+- Albedo  
+- Normal  
+- Gloss (or Roughness)  
+- Metalness/Specular  
+- Displacement/Height  
+- Ambient Occlusion  
+- Refraction  
+- Emissive/Glow
+
+Refraction Map -> mappa per rifrazione della luce come passa attraverso un oggetto
+Emissive Map -> Illuminazione dell'oggetto stesso
+
+### 2.5 Ray tracing
+Diversi modi per gestire il ray tracing, di base si calcola come
+Output Luce = Luce emessa + Luce riflessa
+
+**Bidirectional Reflectance Distribution Function (BRDF)** -> gestisce quanto e come una luce e' riflessa, seguendo
+- **Specular** term (effetto specchio)
+- **Diffuse** term (effetto "scattered")
+
+L'algoritmo base funziona in backmap: casta un numero di raggi dallo spettatore verso l'oggetto fino alla fonte di luce
+1. genera raggio primario
+2. trova oggetto piu' vicino che appartiene al raggio
+3. ray casting (simula illuminazione dal punto trovato)
+
+Pipeline
+- Shadow/Direct Illumination (Ray Casting)
+	- **Shadow ray** -> ray from surface to all light sources, if it intersects another object do not count the light source
+- Reflection  
+	- **Reflection ray** -> start from point of intersection (eye ray to reflective point) and send a ray toward specular reflection, keep bouncing until light source or out of frame
+- Refraction
+	- **Transmission ray** -> ray passes trough transparent object, changes direction of ray
+	- The amount of refraction is calculated using the index of refractions.
+- Recursive Ray Tracing
+	- Da un raggio generato, ricorsivamente genera raggi di reflection e transmission fino ad una depth definita
+
+La RTX aggiunge soft shadows facendo partire piu' raggi da un singolo bounce
 
 
 
