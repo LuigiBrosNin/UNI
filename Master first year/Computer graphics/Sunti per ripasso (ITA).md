@@ -50,14 +50,14 @@ Operazioni nuove:
 - Se i coefficienti $\in [0,1]$ si chiamano convex combinations
 - Convex hull -> set di punti che possono essere rappresentati come convex combinations
 
-Un oggetto e' **convesso** sse puoi tracciare una linea tra 2 punti dentro l'oggetto che passa fuori l'oggetto
+Un oggetto e' **convesso** sse non puoi tracciare una linea tra 2 punti dentro l'oggetto che passa fuori l'oggetto
 ![[Pasted image 20250617231744.png|300]]
 
 Barycentric coordinates -> un punto definito relativamente a 3 punti definiti
 $$P=\alpha A+ \beta B+\gamma C$$
 $\alpha, \beta,\gamma$  sono le barycentric coordinates di P rispetto a A,B,C. Questo e' importante nel warping
 #### Piano in spazio 3D
-piano $\pi$ ha una normale $n$ ed un punto d'origine, un punto appartiene sse la normale e' perpendicolare al punto meno il punto d'origine
+piano $\pi$ ha una normale $n$ ed un punto d'origine, un punto appartiene sse la normale e' perpendicolare al vettore risultato del punto meno il punto d'origine (che da' un vettore come visto prima)
 
 **Coordinate frame** (Sistemi di riferimento) -> quadrupla $F=(P_{0},v_{1},v_{2},v_{3})$ dove $P_0$ e' un punto d'origine e $v_{1..3}$ e' una base vettoriale
 

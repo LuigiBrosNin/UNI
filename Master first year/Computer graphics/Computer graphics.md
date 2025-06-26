@@ -157,7 +157,7 @@ Slides go over
 - Line-segment intersection
 That i skipped cuz it's math we really don't need imo
 
-**Plane in 3D space $\pi$** -> has a normal $n$ and a point in the plane $P_{0}$, a point belongs <=> $<Q-P_{0},n>=0$
+**Plane in 3D space $\pi$** -> has a normal $n$ and a point in the plane $P_{0}$, a point $Q$ belongs <=> $<Q-P_{0},n>=0$
 
 Implicit representation of planes in 3D -> (Ax+By+Cz+D=0), xyz point on the plane, ABC coordinates of a normal vector to the plane
 
