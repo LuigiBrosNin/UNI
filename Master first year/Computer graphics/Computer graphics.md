@@ -882,7 +882,31 @@ Handled in one of the following
 - Precomputed global illumination
 Reference equation -> outgoing light = emitted light + reflected light
 **Bidirectional Reflectance Distribution Function (BRDF)** -> how much light energy is reflected from an incoming direction, handles
+- **Specular** term (mirror effect)
+- **Diffuse** term (scattered effect)
 
+#### Basic Ray tracing Algorithm
+Backmap finite number of rays from viewer trough each sample to object to light source
+1. Generate primary ray
+2. Find closest object along ray path
+3. Ray casting (simulate illumination from point found)
+#### Ray tracing
+- Shadow/Direct Illumination (Ray Casting)
+	- **Shadow ray** -> ray from surface to all light sources, if it intersects another object do not count the light source
+- Reflection  
+	- **Reflection ray** -> start from point of intersection (eye ray to reflective point) and send a ray toward specular reflection, keep bouncing until light source or out of frame
+	- ![[Pasted image 20250626183719.png]]
+- Refraction
+	- **Transmission ray** -> ray passes trough transparent object, changes direction of ray
+	- The amount of refraction is calculated using the index of refractions.
+- Recursive Ray Tracing
+#### Ray tracer on GPU: RTX
+Everything from the classic pipeline + additions
+- Shadow/Direct Illumination (Ray Casting)
+	- **Soft Shadows** -> Multiple shadow rays to reproduce an area light source
+- Recursive Ray Tracing
+	- Spawns a reflection ray $r$ and a transmission ray $t$ as appropriate, Calls itself recursively with $r$ and $t$
+	- Depth: how much is allowed to bounce, basically
 
 
 
