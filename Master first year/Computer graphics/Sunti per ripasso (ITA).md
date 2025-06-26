@@ -1,3 +1,4 @@
+Muoio :)
 ## 0 - Graphic Systems
 **Graphic system** = Device Hardware (risorse) + software grafico (management delle risorse) per produrre immagini
 
@@ -476,8 +477,9 @@ Pipeline
 
 La RTX aggiunge soft shadows facendo partire piu' raggi da un singolo bounce
 
+Capire l'intersezione su una superficie e' computazionalmente costoso
 
-
+**Path Tracing** -> algoritmo di approssimazione ray tracing, casta un raggio casuale ad un bounce e approssima i colori con i risultati adiacenti
 ## 3 - Animation
 ### 3.1 Object/Camera path
 Muovere un'entita' attraverso un percorso (path)
