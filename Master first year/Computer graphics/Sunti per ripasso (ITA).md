@@ -399,7 +399,8 @@ Algoritmo idea nelle slide
 - Keep a list of colors for each pixel, 
 - sort them by depth, 
 - blend them together in the fragment shader.
-### 2.4 Texture Mapping TODO
+### 2.4 Texture Mapping
+
 ## 3 - Animation
 ### 3.1 Object/Camera path
 Muovere un'entita' attraverso un percorso (path)
@@ -441,5 +442,16 @@ Articulated figure -> parti rigide chiamate **Bones** connesse da **Joints**, ra
 	- particelle (sistemi di particelle), cose complesse simulabili (vestiti, pelo)
 	- Focus sulle forze che agiscono sulle simulazioni (interne ed esterne)
 - Data driven, aka Motion capture
-	- 
+	- Pipeline
+		- Calibration
+		- Capture
+		- 3D reconstruction
+		- Fitting to the skeleton
+		- Post-Processing
+- Keyframing
+	- Definibile con direct ed inverse kinematics
+		- ![[Pasted image 20250626131229.png]]
+	- Interpolazione della rotazione tricky, vengono usati i quaternioni con Slerping, mentre la rappresentazione delle rotazioni all'utente con gli angoli di Eulero (si converte ogni volta che bisogna interpolare tra quaternioni e angoli di Eulero)
+**Skinning** -> relaziona scheletro rigged e poligoni della mesh
 
+Linear blend skinning -> tecnica che assegna ad ogni vertex piu' ossa, per gestire bene la mesh intorno
