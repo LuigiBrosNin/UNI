@@ -880,6 +880,9 @@ Handled in one of the following
 - Ray tracing global illumination
 - Radiosity, photon mapping
 - Precomputed global illumination
+Reference equation -> outgoing light = emitted light + reflected light
+**Bidirectional Reflectance Distribution Function (BRDF)** -> how much light energy is reflected from an incoming direction, handles
+
 
 
 
