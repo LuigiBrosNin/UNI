@@ -943,13 +943,22 @@ A model can be represented as a tree
 		- **Direct Kinematics (FK)** -> complete control over the entire chain but must assign (turn) manually each joint.  
 		- **Inverse Kinematics (IK)** -> The animator controls only the last term of the chain (**end-effector**) and delegates to the software responsible for  placing the remaining joints to reach the final pose.
 	- Rotation interpolation
-		- Fixed angle -> rotate each singularly by tot degrees), causes **Gimbal Lock** (rotation axes line up with each other)
-		- Euler Angles
+		- **Fixed angle** -> rotate each singularly by tot degrees, causes **Gimbal Lock** (rotation axes line up with each other)
+		- **Euler Angles** -> like fixed but we rotate axis with object (local), causes Gimbal lock too
+		- **Quaternion** -> 4-tuple of real numbers representing an orientation
+		- Interpolating between quaternions can be done with
+			- Lerping -> intermediate points are not uniformly spaced when projected onto a circle
+			- **Slerping** -> Spherical linear interpolation (slerp): interpolate the circular arcs.
+				![[Pasted image 20250626130801.png]]
 
+Inverse Kinematics get messy with more complex structures, multiple equation solutions as we have more joints unknowns
+![[Pasted image 20250626131229.png]]
 
+**Skinning** -> post Skeleton rig operation "paint" of likes between vertices and bones
+**Skinned mesh** -> mesh animated by a bone system
 
-
-
+Linear blend Skinning -> technique for assigning each vertex to multiple bones, world coord computed as convex combination
+![[Pasted image 20250626131550.png]]
 ##
 # Labs 
 !!! Lingua inconsistente !!!
