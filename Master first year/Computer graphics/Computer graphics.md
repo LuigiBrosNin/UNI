@@ -805,7 +805,7 @@ Two step mapping has
 - S mapping -> intermediate (simple) surface
 - O mapping -> intermediate to actual object
 
-#### Displacement mapping/Bump/Normal
+#### Bump/Normal/Displacement
 Geometric texture to physically displace the surface geometry (only affect lighting)
 ![[Pasted image 20250626112952.png]]
 ![[Pasted image 20250626113005.png|300]]
@@ -818,7 +818,21 @@ A normal map can be built two ways:
 1. Compute the normals of a 3D high tessellated model and store them into a texture file (from high res 3D model)
 2. From a height map
 
-Apply Normal-maps in Tangent space (TBN) -> 
+**Apply Normal-maps in Tangent space** -> define Texture/Tangent space TBN, compute normal, tangent and bi-tangenr for each vertex and interpolate inner points
+**Displacement mapping** ->Like bumps but phisically displace the mesh
+#### Procedural texturing
+3D texturing basically, letting the 3D texture handle itself on the object
+
+Noise (eg. Perlin noise) is used to generate interesting 3D texture patterns
+
+Solid 3D textures don't bend as they should, Noise "solves" this problem as it gives spatial coherency
+![[Pasted image 20250626115753.png|200]]
+#### Environment mapping
+**Environment mapping** produces reflections on shiny objects
+
+**Env-map** -> render scene from object center (Preprocessing)
+![[Pasted image 20250626120255.png]]
+Use the env-map in rendering indexed by reflection vector
 
 
 
