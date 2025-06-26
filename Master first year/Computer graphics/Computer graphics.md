@@ -925,9 +925,26 @@ A model can be represented as a tree
 
 3 types of animations
 - Physically-based/procedural
-	- Kinematics -> study of motion without considering the forces that have caused 
-- Data driven (motion capture)
+	- **Kinematics** -> study of motion without considering the forces that have caused
+	- **Particle system** -> collection of simple point-like things
+	- External forces -> forces that depend on the single particle
+	- Internal forces -> forces that originate from deformations (stretch, shear, bending)
+- Data driven (motion capture, MOCAP)
+	- Pipeline
+		- Calibration
+		- Capture
+		- 3D reconstruction
+		- Fitting to the skeleton
+		- Post-Processing
+	- Optical or Infra Red LEDs technology for capture
 - Keyframing
+	- Specify important events only, let the computer fill via interpolation/approximation (position, orientation, material properties, brightness, shape)
+	- 2 ways of defining keyframes
+		- **Direct Kinematics (FK)** -> complete control over the entire chain but must assign (turn) manually each joint.  
+		- **Inverse Kinematics (IK)** -> The animator controls only the last term of the chain (**end-effector**) and delegates to the software responsible for  placing the remaining joints to reach the final pose.
+	- Rotation interpolation
+		- Fixed angle -> rotate each singularly by tot degrees), causes **Gimbal Lock** (rotation axes line up with each other)
+		- Euler Angles
 
 
 
