@@ -908,7 +908,9 @@ Everything from the classic pipeline + additions
 	- Spawns a reflection ray $r$ and a transmission ray $t$ as appropriate, Calls itself recursively with $r$ and $t$
 	- Depth: how much is allowed to bounce, basically
 
-
+Intersection on surface is computationally expensive
+#### Ray Tracing Acceleration Techniques
+**Path Tracing** -> algorithm to approximate ray tracing, estimates colour by sampling a random direction
 
 ## 3 - Animation
 ### 3.1 Object/Camera path
