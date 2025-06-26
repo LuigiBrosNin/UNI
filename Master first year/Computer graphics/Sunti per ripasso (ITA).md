@@ -57,7 +57,7 @@ Barycentric coordinates -> un punto definito relativamente a 3 punti definiti
 $$P=\alpha A+ \beta B+\gamma C$$
 $\alpha, \beta,\gamma$  sono le barycentric coordinates di P rispetto a A,B,C. Questo e' importante nel warping
 #### Piano in spazio 3D
-piano $\pi$ ha una normale $n$ ed un punto d'origine, un punto appartiene sse la normale e' perpendicolare al vettore risultato del punto meno il punto d'origine (che da' un vettore come visto prima)
+piano $\pi$ ha una normale $n$ ed un punto d'origine, un punto appartiene sse il dot product tra il punto meno il punto d'origine ed $n$ e' 0
 
 **Coordinate frame** (Sistemi di riferimento) -> quadrupla $F=(P_{0},v_{1},v_{2},v_{3})$ dove $P_0$ e' un punto d'origine e $v_{1..3}$ e' una base vettoriale
 
@@ -87,7 +87,6 @@ Un oggetto puo' essere rappresentato
 - **Parametric Form** of curves works for more complex shapes (like circles).
 
 Calcoliamo le tangenti e poi normali in un punto del piano per sapere qual e' la parte esterna dei piani (usata nel lighting)
-
 #### Continuity
 $C^0$ -> curve e superfici senza buchi, segmentate
 $C^1$ -> con derivate continue, superfici lisce
@@ -106,7 +105,6 @@ Approssimazione -> curva influenzata dai punti di controllo
 La curva di Bézier e' una curva che interpola dei punti di controllo (insieme punti di controllo = poligono di controllo)
 ![[Pasted image 20250310194326.png]]
 il grado (degree) della curva e' uguale ai punti+1
-
 #### Representing the curve
 3 modi per rappresentare la curva
 - Con la Bernstein Polynomial basis
@@ -189,8 +187,6 @@ i file `.obj` racchiudono mesh, sono formati che possono contenere
 - coordinate texture
 - facce
 L'orientazione delle facce e' dato dall'ordine dei vertici (ordine antiorario)
-
-
 #### Manifold
 **n-Manifolds** -> superficie liscia che i mesh approssimano, ogni punto ha una neighbourhood che puo' creare un disco (per un 2D manifold) 
 
