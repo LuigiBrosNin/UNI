@@ -8,7 +8,7 @@
 	- You'll get the slides in google slides through mail after compiling the form
 	- Presentation in 30m time
 	- "expand the scopes of the paper"
-- # Theory
+# Theory
   
   [Appunti Francesco Corigliano](https://dynamik.vercel.app/complementi-di-basi-di-dati/appunti/appunti-2022-francesco-corigliano.pdf?from=informatica-magistrale)
   i studied here anyway (Italian notes)
@@ -26,7 +26,7 @@
 - [[#4.1 Data analytics|4.1 Data analytics]]
 - [[#4.2 Data Warehouse|4.2 Data Warehouse]]
 - [[#4.3 Data Mining|4.3 Data Mining]]
-- ## 1 Intro Models
+## 1 Intro Models
   
   Relational → structured (basically)
   
@@ -49,7 +49,7 @@
 - list-based
 - XML is the primary format
 - many query can’t be written in SQL without compromises (recursion, slowness)
-- ## 2 Intro XML
+## 2 Intro XML
   
   ==eXtensible Markup Language==, comes from ==SGML== (Standard Generalized Markup Language)
   
@@ -65,7 +65,7 @@
 	- values of attributes must be contained in `‘’` or `“”`
 	- attributes can’t have the same attribute more than once
 	- data must be within the enclosed tag
-- ## 2.2 SQL/XML - Relational Data and XML
+## 2.2 SQL/XML - Relational Data and XML
   collapsed:: true
   
   XML is used to exchange data between apps and represent structured data.
@@ -101,7 +101,7 @@
 	    
 	  ![[Pasted image 20240918183242.png]]        
 	    The result gets calculated considering the SQL, making a SELECT * and then building the requested attributes 1 by 1.
-- ## 2.3 XQuery - XQuery language
+## 2.3 XQuery - XQuery language
   
   XQuery <u>can be used to access XML</u> expressed data and has XSLT functions (e**X**tensible **S**tylesheet **L**anguage **T**ransformations).
   
@@ -262,7 +262,7 @@
   Aggregated functions
   
   ![[Pasted image 20240918185029.png]]
-- ## 2.4 XQuery in DBMS - XQuery on DB2, Oracle and SQL Server
+## 2.4 XQuery in DBMS - XQuery on DB2, Oracle and SQL Server
   
   ==DB2==
   
@@ -402,7 +402,7 @@
   retrieving documents in a container can be done trough XQuery queries
   
   ![[Pasted image 20240918185725.png]]
-- ## 2.5 NoSQL
+## 2.5 NoSQL
   
   means a non relational database, there are 225+ systems that are NoSQL
   
@@ -461,7 +461,7 @@
 - vertical scaling
 - transaction
 - ACID
-- ## 3.1 IR - Information Retrieval
+## 3.1 IR - Information Retrieval
   
   Means finding non structured material that satisfies an information need, usually about web search, social media, local laptop usage.
   
@@ -523,7 +523,7 @@
 - Stemming → different forms of a root to match (authorize, authorization)
 - Stop words → omit very common words (the, a, to, of)
 - Dictionary → lexical indexes, used for autocorrection too
-- ## 3.2 Ranking
+## 3.2 Ranking
   
   ==Ranking recovery== → the system returns a ranking “on top” while going for a query
   
@@ -636,7 +636,7 @@
   ==Non-secure ranking== → docs near K could be enough
 - index elimination → consider only rare terms (high IDF), consider only documents that contain a lot of query terms
 - champion lists → pre-compute scores of top relevant documents
-- ## 3.3 Web Information Retrieval
+## 3.3 Web Information Retrieval
   
   ==Web crawling== → process of gathering pages from the web
   
@@ -692,7 +692,7 @@
 - Authority page → pointed by good hub pages
   
   ==Semantic search== → graph search over structured knowledge rather than text speech
-- ## 3.4 IR Evaluation
+## 3.4 IR Evaluation
   
   measuring relevance
   
@@ -724,7 +724,7 @@
   ==Precision 0== → if a relevant doc never gets retrieved
   
   ==non-binary notion of relevance== → spectrum of relevancy, measure is ==DCG== (Discounted Cumulative Gain) or ==NDCG== (Normalized Discounted Cumulative Gain)
-- ## 3.5 IR Advanced methods
+## 3.5 IR Advanced methods
   
   ==Synonymy== → using different words to refer to the same thing, it’s a problem that impacts the majority of IR tools’ recall.
   
@@ -790,7 +790,7 @@
   our goal is to build a **classifier** for relevant and non-relevant docs.
   
   “luckily”, lots of training data is available.
-- ## 4.1 Data analytics
+## 4.1 Data analytics
   
   ==DIKW Pyramid== → how information is defined along with knowledge and wisdom
   
@@ -861,7 +861,7 @@
 	  ==Dispersion and regression graph==
 	  ![[Pasted image 20241001104949.png]]
 	  Useful to visualize the values, see if there's an association
-- ##  4.2 Data Warehouse
+##  4.2 Data Warehouse
   **Data Warehouses** -> operative database, supports software apps and has big repos that consolidate data from different sources.
 - Is updated offline
 - Follows the multidimensional data model
@@ -983,7 +983,7 @@
   ![[Pasted image 20241008232533.png|450]]
   **Dice** -> selecting more than 1 slice, literally an AND/OR in the WHERE
   ![[Pasted image 20241008232726.png|450]]
-- ## 4.3 Data Mining
+## 4.3 Data Mining
   **Data mining** -> computing process of discovering patterns in large data sets involving methods at the intersection of machine learning, statistics and db systems 
   ![[Pasted image 20241008233225.png|400]]
   **Patterns** -> regularities, patterns (eg. house prices are roughly 2500€ per $m^2$, buying cereals and buying milk)
@@ -1067,7 +1067,7 @@
   **Hot codification** -> same as BOW, but every variable is a category, and only 1 can be true
   
   **Resizing (Normalization)** -> better performance and precision in ML, usually obtained trough linear resizing.
-- # Exam
+# Exam
   [[Domande esame con risposta]]
   
   

@@ -361,10 +361,10 @@ In Autopsy we can browse the Registry
 
 # Exam
 
-- Relazione "attaccanti"
+- Relazione Attori
 	![[Relazione_attaccanti.pdf]]
 
-- Controrelazione "attaccanti"
+- Controrelazione Attori
 	![[Controrelazione_attaccanti.pdf]]
 
 

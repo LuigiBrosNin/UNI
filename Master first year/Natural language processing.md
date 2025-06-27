@@ -5,7 +5,7 @@ Credentials to access slides:
 
 > Notes taken by Luizo ( [@LuigiBrosNin](https://t.me/LuigiBrosNin) on Telegram)
 
-Won't be taking lessons this year, might do something if i take the exam B)
+Won't be taking lessons this year, might do something if i take the exam B) (i didn't)
 ## 1.1 Intro
 Summarization of  the general paradigm of Computational Linguistics
 ![[Pasted image 20240916144501.png]]

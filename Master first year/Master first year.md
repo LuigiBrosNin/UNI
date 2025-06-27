@@ -40,7 +40,7 @@ POSSIBLE ONES 3/4
 - [ ] **81678 - LABORATORIO DI MAKING** (chiedere com’e’) (interessante ma ho paura, sembra difficile, davoli + montori, software che si interfaccia con dispositivi)
 - [ ] COMPLEMENTI DI LINGUAGGI (interessante, ma ESAME+PROGETTO, e insegna Laneve)
 - [ ] ==**91269**== **- MULTIMEDIA DATA MANAGEMENT** (sembra interessante ed all purpose, ci daro’ un’occhiata piu’ avanti)
-- [x] UUX
+- [ ] UUX
 
   
 
