@@ -17,6 +17,8 @@
 	- participation 5%
 
 # Notes
+Computer science students can omit up to 2 arguments out of the slides, i personally studied everything
+
 ## 0 - Graphic Systems
 Different kind of graphic systems:
 - Semi-immersive VR
@@ -996,9 +998,12 @@ Inverse Kinematics get messy with more complex structures, multiple equation sol
 Linear blend Skinning -> technique for assigning each vertex to multiple bones, world coord computed as convex combination
 ![[Pasted image 20250626131550.png]]
 ##
-# Labs 
+# Labs
+
+> Vi consiglio di fare il lab 1, 4, 5, 6 oppure 1, 2, 4, 5. Sono i piu' leggeri e semplici da fare, mentre il 2 e 3 sono i piu' lunghi ma insegnano di piu'
+
 !!! Lingua inconsistente !!!
-per ogni lab prepara una piccola relazione (una pagina o meno) che descrive cos'hai fatto, da consegnare giorni prima dell'esame via mail alla professoressa.
+per ogni lab prepara una piccola relazione (ben scritta) che descrive cos'hai fatto, da consegnare giorni prima dell'esame via mail alla professoressa.
 
 ## Install dependencies on Linux and make them work
 Ubuntu-based (uso `apt` :)

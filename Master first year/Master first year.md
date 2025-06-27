@@ -6,6 +6,7 @@
 - **[[Computer graphics]]**
 	- **[[attachments]]**
 
+	- [[Make the project work on Linux]]
 	- [[Sunti per ripasso (ITA)]]
 - **[[Computer vision]]**
 	- **[[attachments]]**
