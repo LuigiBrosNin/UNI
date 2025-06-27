@@ -1049,8 +1049,6 @@ potete avviare l'output con
 ## OpenGL part I (ENG)
 Vertex Buffer Object (VBO) -> stores data regarding vertexes (generic attributes for the stuff we need)
 ![[Pasted image 20250308002001.png]]
-
-#TODO this section would absolutely benefit for a summary of those 93 or so slides
 ## LAB_0
 ### Make the project work in Linux
 My new makefile for generic CP projects
