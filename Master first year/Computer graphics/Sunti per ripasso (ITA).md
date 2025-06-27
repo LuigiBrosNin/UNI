@@ -310,7 +310,7 @@ Image space (SCS) -> for each pixel, for each object
 ### 2.2 Lighting and shading
 Gli oggetti che riflettono la luce sono
 Opachi -> la luce incidente e' riflessa o assorbita
-Traslucido -> trasmissione della luce significante
+Traslucidi -> trasmissione della luce significante (specchi)
 
 I modelli di luce possono essere
 - Basati su fisica (rendering equation)
@@ -358,7 +358,7 @@ Dal flat shading, possiamo
 - Normale computata ai vertici, colore deciso in base alla normale e phong
 - intesita' colore = barycentric interpolation delle intensita' ai vertici
 - una lighting evaluation per vertex
-- manca highlight/spotlight e il banding effect (discontinuita' nel modello causa bug nella colorazione)
+- manca highlight/spotlight e soffre il banding effect (discontinuità nel modello causa bug nella colorazione)
 
 **Phong shading**
 - Normale computata ad ogni vertice, poi interpolati sulla faccia
@@ -439,7 +439,6 @@ Texture e grandezza di un pixel a schermo variano, come gestiamo i diversi casi?
 
 Refraction Map -> mappa per rifrazione della luce come passa attraverso un oggetto
 Emissive Map -> Illuminazione dell'oggetto stesso
-
 ### 2.5 Ray tracing
 Diversi modi per gestire il ray tracing, di base si calcola come
 Output Luce = Luce emessa + Luce riflessa
