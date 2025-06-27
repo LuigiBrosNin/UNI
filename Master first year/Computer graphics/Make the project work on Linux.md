@@ -40,8 +40,23 @@ potete avviare l'output con
 ```
 ## LAB_0
 ### Make the project work in Linux
-My new makefile for generic CP projects
-```Makefile syntax
+
+Per 2h ho avuto l'errore al caricamento delle shader
+```
+ERROR::SHADER::VERTEX::COMPILATION_FAILED
+
+ERROR::SHADER::FRAGMENT::COMPILATION_FAILED
+
+```
+mi sono impazzito per cercare di fixare il problema, credendo fosse qualche dipendenza oscura di OpenGL o simili, invece e' solo che su `LAB_0_2D.cpp ` vengono chiamati i file con il nome sbagliato (case sensitive su Linux, quindi su Windows non c'e' problema)
+```c++
+char* vertexShader = (char*)"vertexShaderC.glsl";
+char* fragmentShader = (char*)"fragmentShaderC.glsl";
+```
+per compilare, basta il comando `make`
+per runnare, chiama l'eseguibile generato dal make
+### Makefile
+```c
 # Compiler and Flags
 CXX = g++
 CXXFLAGS = -std=c++11 -Wall -g -pthread
@@ -68,21 +83,7 @@ clean:
 # Add phony target for "clean" to avoid conflicts with file names
 .PHONY: all clean
 ```
-
-Inoltre, per 2h ho avuto l'errore al caricamento delle shader
-```
-ERROR::SHADER::VERTEX::COMPILATION_FAILED
-
-ERROR::SHADER::FRAGMENT::COMPILATION_FAILED
-
-```
-mi sono impazzito per cercare di fixare il problema, credendo fosse qualche dipendenza oscura di OpenGL o simili, invece e' solo che su `LAB_0_2D.cpp ` vengono chiamati i file con il nome sbagliato (case sensitive su Linux, quindi su Windows non c'e' problema)
-```c++
-char* vertexShader = (char*)"vertexShaderC.glsl";
-char* fragmentShader = (char*)"fragmentShaderC.glsl";
-```
-per compilare, basta il comando `make`
-per runnare, chiama l'eseguibile generato dal make
+per cambiare lab da runnare, cambia la linea 8
 ## LAB_1
 ### Makefile
 ```c
@@ -142,9 +143,7 @@ clean:
 
 # Add phony target for "clean" to avoid conflicts with file names
 .PHONY: all clean
-```
-###
-###
+``
 ## LAB_3
 ### Make it work on Linux
 (i have an ubuntu-based OS)
@@ -177,9 +176,54 @@ as a bonus, in the gestione_callback.cpp, you want to change this (line 45)
 //ypos = height - ypos;
 ```
 to fix the freaky camera it comes with.
+## LAB_3
+### Makefile
+```c
+# Compiler and Flags
+CXX = g++
+CXXFLAGS = -std=c++11 -Wall -g -pthread \
+           -I/home/[USER!!!]/dependencies_GL_GLFW/ImGui \
+           -I/usr/include
+# Add library paths and link flags
+LDFLAGS = -lglfw -lGLU -lGL -lXrandr -lXxf86vm -lXi -lXinerama -lX11 -lrt -ldl -lassimp
 
-I do not like the controls of this program but i guess we'll have to work with that.
+
+# Source files
+IMGUI_DIR = /home/luizo/dependencies_GL_GLFW/ImGui
+IMGUI_SOURCES = $(IMGUI_DIR)/imgui.cpp \
+                $(IMGUI_DIR)/imgui_demo.cpp \
+                $(IMGUI_DIR)/imgui_draw.cpp \
+                $(IMGUI_DIR)/imgui_tables.cpp \
+                $(IMGUI_DIR)/imgui_widgets.cpp \
+                $(IMGUI_DIR)/imgui_impl_glfw.cpp \
+                $(IMGUI_DIR)/imgui_impl_opengl3.cpp
+
+LOCAL_SOURCES = $(wildcard *.cpp)
+SOURCES = $(LOCAL_SOURCES) glad.c $(IMGUI_SOURCES)
+OBJECTS = $(LOCAL_SOURCES:.cpp=.o) glad.o $(IMGUI_SOURCES:.cpp=.o)
+EXEC = LAB_3
+
+# Default target (build the project)
+all: $(EXEC)
+
+# Linking object files to create the final executable
+$(EXEC): $(OBJECTS)
+	$(CXX) $(OBJECTS) -o $(EXEC) $(LDFLAGS)
+
+# Compiling source files into object files
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $@
+
+# Clean up build artifacts
+clean:
+	rm -f $(OBJECTS) $(EXEC)
+
+# Add phony target for "clean" to avoid conflicts with file names
+.PHONY: all clean
+```
 ## LAB_4
+Blender is FOSS and on linux :)))
+
 Ho usato questi due tutorial in piu' alle slide fornite su virtuale
 - [Tutorial: Blender Modelling for Absolute Beginners - Simple Human](https://youtu.be/9xAumJRKV6A?si=hGrUQUdxmsqw4UAa)
 - [Character Modeling for Beginners - Blender](https://youtu.be/O6HQhs-gk50?si=YkUY1O2fK3MCq3kp)
