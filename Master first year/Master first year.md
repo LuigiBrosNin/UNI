@@ -12,6 +12,7 @@
 - **[[Computer vision]]**
 	- **[[attachments]]**
 
+	- [[CV Summaries]]
 	- [[Project notes]]
 - **[[Decision making with constraint programming]]**
 - **[[Digital Forensics]]**
