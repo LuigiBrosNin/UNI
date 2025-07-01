@@ -382,5 +382,28 @@ estimate regions to check and apply deep learning there
 - We give in input boxes anchors for each region that the RPN uses to compute objectness score
 -  **Positive samples**: anchors with IoU ≥ 0.7 with a ground truth box  
 - **Negative samples**: anchors with IoU < 0.3 with all ground truth boxes
-we use positive samples to get the minibatch we use for training
+we use positive samples to get the mini-batch we use for training
+### One-Stage Detectors
+small accuracy, very fast and simple
+1. **YOLO**
+	- SxS grid, backbone CNN gets the feature map
+	- for each grid cell in feature map, get presence, bounding box and class % directly into the grid
+2. **SSD**
+	- Backbone extracts feature maps from detectors at multiple scales
+	- extra feature layers are added
+	- use anchors
+	- can predict multiple objects in the same location
+3. **RetinaNet**
+	- **FPN** **(Feature Pyramid Network)** -> creates "pyramids" of high-res features at every level of resolution, helps with different sizes of objects 
+	- Tackles **class imbalance** with **Focal Loss** using a focus parameter, making the model learn on hard examples
+### Anchor-Free Detectors – CenterNet
+Anchors have downsides in the form of 
+- manual design for ratios, 
+- heuristics, 
+- need for NMS to avoid duplicates, 
+- inefficient and non-differentiable post-processing.
+
+Use **central points** of objects
+- Output heatmap, 1 channel 
+
 ##
