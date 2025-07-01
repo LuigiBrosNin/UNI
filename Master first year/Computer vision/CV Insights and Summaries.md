@@ -308,8 +308,22 @@ loss functions are full of local minima, saddle points, flat regions
 - One **epoch** -> whole training set observed one time
 - **Batch size** -> how many samples per update
 ### Optimizers
-1. Momentum
-	- 
-2. RMSprop
-3. Adam
-4. Hyperparameters
+1. **Momentum**
+	- moving average of past gradients, move in that direction
+2. **RMSprop** Root Mean Square Propagation
+	- moving average of squared gradients
+3. **Adam** Adaptive moments
+	- combination of Momentum and RMSprop
+
+**Hyperparameters** -> every optimizer has them, stuff like learning rate, decay rates
+### Convolutional layers
+Basics
+Images -> 3D tensors (height, width, channels)
+Filters (kernels) -> slide over the image and extract patterns
+Outputs an **activation map** (feature map)
+
+Filter depth = image depth
+
+**Padding** -> convolution operator shrinks the output, we add padding to the image to preserve size
+**Stride** -> movement of the filder, stride 1 = slide 1 pixel
+
