@@ -610,7 +610,7 @@ Real-time face detection using:
 	- each feature is applied to 24x24 patches of the image
 	![[Pasted image 20250523212110.png|400]]
 - **Integral images** -> Speed up computation of features by pre-processing pixel sums and computing the sum of any rectangle very fast
-- **AdaBoost algorythm**/Boosting -> Combines weak learners (simple rule) into a strong classifier (weighted sum of the weak classifier)
+- **AdaBoost algorithm**/Boosting -> Combines weak learners (simple rule) into a strong classifier (weighted sum of the weak classifier)
 - **Cascade** -> Early rejection of non-face regions for speed
 This method shows how hand-crafted features and fast classifiers began solving detection before deep learning.
 ### Sliding window + CNN, Naive extension

@@ -359,3 +359,17 @@ We do
 - flip, rotate, resize, color jitter -> same object under difference transformations
 - cutout -> learn less obvious features
 - multi-scale training -> different sizes flexibility
+## 7. Object Detection
+A detection provides:
+- A **category** label (eg "car", "dog")
+- A **bounding box**
+### Viola-Jones Detecting faces
+**Haar-like features** -> Simple rectangular contrast patterns, 24x24 patches of the image
+Those are optimized with
+- **Integral images** -> pre-processing pixel sums for rectangles computation
+- **AdaBoost algorithm** -> weak learners into a strong classifier
+- **Cascade** -> early rejection
+### Sliding window + CNN, Naive extension
+
+
+##
