@@ -47,7 +47,18 @@ reduce noise (Denoising) in images using pixel neighbours info
 
 **Filter kernel** -> small matrix that "slides" trough the image, used for calculating the output
 
+**Linear and Translation-Equivariant (LTE) operators** -> filter type, used as feature extractors in CNNs (Convolutional Neural Networks) Implemented via **2D convolution** between the image and a **kernel** (impulse response).
 
+**Translation-equivariant operator** -> If you shift the input, the output shifts the same way.
+
+Convolution properties
++ Associative
++ Commutative
++ Distributive
++ Convolution Commutes with Differentiation
+The properties make convolutions easily applicable in pipelines in any order
+
+Correlation is the same as convolution without flipping the kernel
 
 ## 3. Edge Detection
 **Edges** seen as <u>sharp brightness changes</u>

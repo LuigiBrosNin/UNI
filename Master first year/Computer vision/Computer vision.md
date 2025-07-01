@@ -88,9 +88,9 @@ With a single image, we can compute a mean across neighbouring pixels (mean acro
 
 **Translation-equivariant operator** -> If you shift the input, the output shifts the same way.
 
- if we have an LTE operator -> sliding the kernel over every pixel, flipping it (that's the convolution), and taking a weighted sum of the neighborhood.
+ if we have an LTE operator -> output given by sliding the kernel over every pixel, flipping it (that's the convolution), and taking a weighted sum of the neighborhood.
  
- ==Convolution proprieties==
+ ==Convolution proprerties==
  - Associative property
  - Commutative property
  - Distributive property with the sum
