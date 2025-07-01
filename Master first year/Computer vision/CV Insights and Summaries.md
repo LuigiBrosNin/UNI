@@ -267,7 +267,17 @@ A Practical way to calibrate a real camera using images of a flat pattern
 **Representation learning** -> do the tasks described in classic vision with deep learning
 ### CNN Components
 - Input image → passes through layers → abstract features are learned
-1. **Convolutional layers** -> extract features (patterns) from input, slides kernels across
-2. **Activation functions** -> learn more complex patterns but introduces non-linearity (ReLU function, negative values to 0)
-3. 
+1. **Convolutional layers**
+	- extract features (patterns) from input, slides kernels across
+	- creates **feature maps**
+2. **Activation functions**
+	- learn more complex patterns but introduces non-linearity (ReLU function, negative values to 0)
+3. **Pooling layers** 
+	- reduce spatial size of feature maps (max pooling, avg pooling)
+4. **Fully connected layers**
+	- neuron connected to prev, helps with decision making
+	- makes classification/regression happen
+5. **Loss functions**
+	- measure "correctness"
+	- 
 
