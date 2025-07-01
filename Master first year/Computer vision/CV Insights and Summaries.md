@@ -287,7 +287,7 @@ A Practical way to calibrate a real camera using images of a flat pattern
 8. **Regularization**
 	- prevents overfitting
 	- helps the model to generalize
-## Gradient descent optimizer
+### Gradient descent optimizer
 **Gradient descend** -> how the model learns, tells the model "which way" to minimize the loss function 
 
 Steps:
@@ -303,7 +303,7 @@ Repeat process while keeping on minimizing loss ("learning").
 
 loss functions are full of local minima, saddle points, flat regions
 
-**Stochastic Gradient Descent** -> approx of gradient descent, use mini-batches (small portions of whole dataset)
+**Stochastic Gradient Descent** -> approx of gradient descent, use mini-batches (small random portions of whole dataset)
 - Introduces noise that prevents overfitting
 - One **epoch** -> whole training set observed one time
 - **Batch size** -> how many samples per update
@@ -378,5 +378,9 @@ estimate regions to check and apply deep learning there
 
 **R-CNN (Region-CNN)** -> selective search to generate candidate object regions, using low level features
 **Fast R-CNN** -> run CNN once over image, get feature map and use **Rol Pooling** to extract region features, Predict trough <u>fully connected layers</u> class scores and bbox corrections
-**Faster R-CNN** -> 
+**Faster R-CNN** -> Introduces the **Region Proposal Network (RPN)**
+- We give in input boxes anchors for each region that the RPN uses to compute objectness score
+-  **Positive samples**: anchors with IoU ≥ 0.7 with a ground truth box  
+- **Negative samples**: anchors with IoU < 0.3 with all ground truth boxes
+we use positive samples to get the minibatch we use for training
 ##
