@@ -278,6 +278,14 @@ A Practical way to calibrate a real camera using images of a flat pattern
 	- neuron connected to prev, helps with decision making
 	- makes classification/regression happen
 5. **Loss functions**
-	- measure "correctness"
-	- 
-
+	- measure "correctness" and tries to improve the network
+	- Cross-entropy, mean squared error are loss functions
+6. **Optimizers**
+	- Changes network's weights to minimize loss functions
+7. **Normalization**
+	- Standardizes layer outputs, stability of network
+8. **Regularization**
+	- prevents overfitting
+	- helps the model to generalize
+## Gradient descent optimizer
+**Gradient descend** -> ow the model learns, tells the model "which way" to minimize the loss function 
