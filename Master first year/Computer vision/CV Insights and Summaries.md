@@ -60,6 +60,23 @@ The properties make convolutions easily applicable in pipelines in any order
 
 Correlation is the same as convolution without flipping the kernel
 
+**Discrete convolution**
+![[Pasted image 20250305194345.png]]
+
+Border issue solved with
+- Cropping the image
+- Padding the image (duplicate/reflect)
+
+Linear filters
+- **Mean Filter** -> replace pixel intensity with the average intensity of neighbourhood, Fastest way to denoise an image
+- **Gaussian Filter** -> LTE operator whose impulse response is a 2D Gaussian function
+$\sigma$ standard deviation param -> amount of smoothing by the filter (higher -> more blur), defines the size of the kernel filter
+
+Non-linear filters
+- **Median Filter** -> each pixel intensity is replaced by the median over a given neighbourhood, the median being the middle value in the sorted neighbourhood.
+- **Bilateral Filter** -> Advanced non-linear filter to accomplish denoising of Gaussian-like noise without creating the blurry effect on edges.
+- **Non-local Means Filter** -> non-linear edge preserving smoothing filter. Finds patches across the image **that look similar** and averages their center pixels
+
 ## 3. Edge Detection
 **Edges** seen as <u>sharp brightness changes</u>
 

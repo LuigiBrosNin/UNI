@@ -102,7 +102,7 @@ These properties mean we can rearrange operations, simplify pipelines, and apply
 - **Correlation does not**.
 In image processing, this matters **only if your kernel isn’t symmetric**.
 
-**Discrete convolution** -> consists in summing the product of the two signals where one has been reflected about the origin and translated. We're simplifying the  
+**Discrete convolution** -> consists in summing the product of the two signals where one has been reflected about the origin and translated.
 ![[Pasted image 20250305194345.png]]
 In a practical implementation, we cycle trough the kernel from $-k$ to $+k$ instead of the infinities (duh)
 
