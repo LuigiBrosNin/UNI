@@ -50,8 +50,8 @@ reduce noise (Denoising) in images using pixel neighbours info
 **Linear and Translation-Equivariant (LTE) operators** -> filter type, used as feature extractors in CNNs (Convolutional Neural Networks) Implemented via **2D convolution** between the image and a **kernel** (impulse response).
 
 **Translation-equivariant operator** -> If you shift the input, the output shifts the same way.
-
-Convolution properties
+### Convolution
+==properties==
 + Associative
 + Commutative
 + Distributive
@@ -67,15 +67,16 @@ Border issue solved with
 - Cropping the image
 - Padding the image (duplicate/reflect)
 
-Linear filters
+### Linear filters
 - **Mean Filter** -> replace pixel intensity with the average intensity of neighbourhood, Fastest way to denoise an image
 - **Gaussian Filter** -> LTE operator whose impulse response is a 2D Gaussian function
 $\sigma$ standard deviation param -> amount of smoothing by the filter (higher -> more blur), defines the size of the kernel filter
-
-Non-linear filters
+### Non-linear filters
 - **Median Filter** -> each pixel intensity is replaced by the median over a given neighbourhood, the median being the middle value in the sorted neighbourhood.
 - **Bilateral Filter** -> Advanced non-linear filter to accomplish denoising of Gaussian-like noise without creating the blurry effect on edges.
 - **Non-local Means Filter** -> non-linear edge preserving smoothing filter. Finds patches across the image **that look similar** and averages their center pixels
+### Summary/Characteristics
+![[Pasted image 20250516230626.png]]
 
 ## 3. Edge Detection
 **Edges** seen as <u>sharp brightness changes</u>
@@ -262,4 +263,11 @@ A Practical way to calibrate a real camera using images of a flat pattern
 
 ## Part 2, Modern vision
 ---
-## 6. CNN recap (Convolutional Neural Networks) TODO
+## 6. CNN recap (Convolutional Neural Networks)
+**Representation learning** -> do the tasks described in classic vision with deep learning
+### CNN Components
+- Input image → passes through layers → abstract features are learned
+1. **Convolutional layers** -> extract features (patterns) from input, slides kernels across
+2. **Activation functions** -> learn more complex patterns but introduces non-linearity (ReLU function, negative values to 0)
+3. 
+
