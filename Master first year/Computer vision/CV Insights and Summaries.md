@@ -325,5 +325,17 @@ Outputs an **activation map** (feature map)
 Filter depth = image depth
 
 **Padding** -> convolution operator shrinks the output, we add padding to the image to preserve size
-**Stride** -> movement of the filder, stride 1 = slide 1 pixel
+**Stride** -> movement of the filter, stride 1 = slide 1 pixel
+### Deep CNNs, Pooling, Receptive fields
+Deep CNNs are made by stacking
+1. Convolution + ReLU
+2. Pooling (max)
+Called **feature extractor**
 
+**Pooling** -> Reduces resolution, keeps dominant features.
+- **Max pooling** (most common): picks the max value in a patch.
+- **Average pooling**: averages values (less common in modern CNNs).
+
+**Receptive field** of a neuron -> neuron's POV in an image
+deep layers = bigger receptive fields
+### Batch normalization
