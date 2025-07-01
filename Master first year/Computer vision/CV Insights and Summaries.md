@@ -416,4 +416,23 @@ Use **central points** of objects
 | **RetinaNet**    | Focal loss for imbalance | One-stage with improved accuracy | Still uses anchors         |
 | **CenterNet**    | Anchor-free, point-based | Simpler, end-to-end              | Still evolving in accuracy |
 
-## 8. Segmentation TODO
+## 8. Segmentation
+classify every pixel with a category label
+### Evaluation Metrics
+- **IoU (Intersection over Union)** -> How well do the predicted and real masks overlap?
+
+- **mIoU (mean IoU)** -> Average IoU across all classes. (most balanced, widely used)
+- **Pixel Accuracy** -> How many pixels were correctly labeled?
+- **Mean Accuracy** -> Per-class accuracy.
+- **Frequency-Weighted IoU** -> Gives more weight to common classes.
+### Segmentation masks prediction
+**Fully Convolutional Networks** -> CNNs where we have only convolutional layers, so we have spatial maps instead of labels
+
+We **upsample** the output with Interpolation (simple) or Transposed convolutions (learned)
+We **keep details** by "skip connection" from earlier layers to retain the detail to sum/concat into the output
+### Transposed convolutions - Learnable upsampling
+convolutions reduce size, transposed convolutions go the other way
+
+We use the kernel to expand the input value, contribution summed on overlap.
+Works like a conventional operator (eg. bilinear interpolation), but the Kernel is tailor made by AI.
+

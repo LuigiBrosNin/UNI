@@ -717,7 +717,6 @@ To know if a model is doing well, we use:
 - **Pixel Accuracy** -> How many pixels were correctly labeled?
 - **Mean Accuracy** -> Per-class accuracy.
 - **Frequency-Weighted IoU** -> Gives more weight to common classes.
-
 ### Segmentation masks prediction
 We convert CNNs to FCNs (**Fully Convolutional Networks**)
  
@@ -727,7 +726,6 @@ Since CNNs shrink the output image we need to <u>upsample</u> it to get our outp
 - **Bilinear/Nearest Neighbor Interpolation** (simple resizing).
 - **Transposed Convolutions** (learned upsampling).
 To preserve detail for the upsampling we "skip connection" from earlier layers to bring back details (aka, we retain the detail from earlier layers and sum or concat them to the final output to get back details)
-
 ### Transposed convolutions - Learnable upsampling
 Standard convolutions reduce size. **Transposed convolutions** go the other way.
 
