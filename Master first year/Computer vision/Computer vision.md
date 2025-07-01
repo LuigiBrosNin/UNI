@@ -164,10 +164,10 @@ We can approximate the gradient with:
 ### ==Noise==
 **Noise** causes problems in edge detection, we incorporate the smoothing process of the image when detecting edges (take the average of a group of pixels compared to the average of another group)
 
-==Prewitt and Sobel== -> operators for calculating weights
-- **Prewitt operator** -> approximating partial derivatives by central differences
+==Prewitt and Sobel== -> operators to look around the pixel to reduce noise impact, decide based on avg surrounding brightness difference
+- **Prewitt operator** -> approximates with central differences
 	![[Pasted image 20250227171204.png]]
-- **Sobel operator** -> central pixel weight
+- **Sobel operator** -> Like prewitt, but central pixel weight doubles
 	![[Pasted image 20250227171301.png]]
 ### ==Non-Maxima Suppression (NMS)==
 A good approach to detect edges consists in finding the **local maxima** of the absolute value of the derivative of the signal
@@ -292,6 +292,7 @@ Lindeberg method:
 
 LoG -> second order derivative that detects **blobs** (circular structures)
 $$F(x, y, \sigma) = \sigma^2 \cdot \nabla^2 L(x, y, \sigma)$$
+(We multiply/normalize by sigma to compensate for weaker derivatives at higher filters)
 ![[Pasted image 20250306162700.png]]
 
 ==Difference of Gaussian (DoG)==
@@ -309,7 +310,7 @@ DoG helps us find the optimal scale for each detail we want to "classify"
 
 ### Invariance properties of DoG
  ✅ **Scale Invariance**
-- Use the image L(x,y,σ)L(x, y, \sigma)L(x,y,σ) at the **same scale** where the keypoint was detected.
+- Use the image $L(x, y, \sigma)$ at the **same scale** where the keypoint was detected.
  ✅ **Rotation Invariance**
 - Compute gradients around the keypoint.
 - Build a **histogram of gradient orientations** (e.g., 36 bins)
@@ -400,7 +401,6 @@ $$M_{CRF} = \begin{bmatrix} R & T \\ 0 & 1 \end{bmatrix} M_{WRF}$$
 the **full PPM** becomes
 $$P=A⋅[R∣T]$$
 This gives us a powerful, complete model of how a 3D point becomes a 2D pixel.
-
 ### Homography $H$
 if the scene is flat, aka all 3D points lie on a plane, the projection simplifies to a **homography**
 $$\tilde m = H\cdot \tilde M$$
@@ -593,8 +593,6 @@ aka **artificially increasing your training dataset** by transforming the existi
 - **Cutout** → forces the network to learn **less obvious** features.
 - **Multi-scale training** → helps the model understand objects at **different sizes**.
 Data augmentation makes CNNs **more flexible and accurate on new data**
-
-
 ## 7. Object Detection
 We want to detect (is object there?) and localize (where is object?) objects in images
 A detection provides:
@@ -612,7 +610,7 @@ Real-time face detection using:
 	- each feature is applied to 24x24 patches of the image
 	![[Pasted image 20250523212110.png|400]]
 - **Integral images** -> Speed up computation of features by pre-processing pixel sums and computing the sum of any rectangle very fast
-- **AdaBoost algorythm**/Boosting -> Combines weak learners (simple rule) into a strong classifier
+- **AdaBoost algorythm**/Boosting -> Combines weak learners (simple rule) into a strong classifier (weighted sum of the weak classifier)
 - **Cascade** -> Early rejection of non-face regions for speed
 This method shows how hand-crafted features and fast classifiers began solving detection before deep learning.
 ### Sliding window + CNN, Naive extension
@@ -1029,8 +1027,8 @@ ViTs outperform CNNs on larger datasets, they require more data to perform well
 
 ## **Convolutional Neural Networks (CNNs)**
 
-- **What are the key layers in a CNN, and what roles do they play?  
-    **Convolutional layers: Extract features by applying filters to the input image.  
+- **What are the key layers in a CNN, and what roles do they play?**
+    Convolutional layers: Extract features by applying filters to the input image.  
     Pooling layers: Downsample feature maps to reduce computational complexity.  
     Normalization layers: Stabilize and speed up the learning process.
     

@@ -14,6 +14,7 @@
 
 	- [[CV Insights and Summaries]]
 	- [[Project notes]]
+	- [[temp summaries to not cause conflicts in the repo (delete later)]]
 - **[[Decision making with constraint programming]]**
 - **[[Digital Forensics]]**
 - [[Intelligenza artificiale]]
