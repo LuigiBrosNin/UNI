@@ -404,6 +404,16 @@ Anchors have downsides in the form of
 - inefficient and non-differentiable post-processing.
 
 Use **central points** of objects
-- Output heatmap, 1 channel 
+- Output heatmap, 1 channel per class, brightens center of object
+- Offset map corrects stride errors (discretization)
+- Size map predicts $w,h$ bbox on centered object, found by local maxima on heatmap
+### Summary
+| Generation       | Approach                 | Key Features                     | Trade-off                  |
+| ---------------- | ------------------------ | -------------------------------- | -------------------------- |
+| **Viola-Jones**  | Hand-crafted features    | Fast, real-time face detection   | Only for specific objects  |
+| **R-CNN series** | Two-stage, region-based  | High accuracy, flexible          | Slower                     |
+| **YOLO/SSD**     | One-stage, grid-based    | Real-time, simple                | Lower accuracy             |
+| **RetinaNet**    | Focal loss for imbalance | One-stage with improved accuracy | Still uses anchors         |
+| **CenterNet**    | Anchor-free, point-based | Simpler, end-to-end              | Still evolving in accuracy |
 
-##
+## 8. Segmentation TODO
