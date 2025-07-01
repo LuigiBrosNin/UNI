@@ -33,4 +33,9 @@ Key processes:
 - **Quantization** -> light discretization in brightness
 
 Sensor characteristics
-- Signal-to-noise ratio
+- Signal-to-noise ratio, measures noise in signals
+- Dynamic range -> range of detectable light levels
+Colour sensor -> optical filters placed in front of photo detectors, capture specific colour channels (R,G,B)
+
+## 2. Spacial Filtering TODO
+reduce noise (Denoising) in images using pixel neighbours info
