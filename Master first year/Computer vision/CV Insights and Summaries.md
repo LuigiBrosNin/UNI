@@ -370,6 +370,13 @@ Those are optimized with
 - **AdaBoost algorithm** -> weak learners into a strong classifier
 - **Cascade** -> early rejection
 ### Sliding window + CNN, Naive extension
+use CNN as a **sliding window** detector, predict class and bounding box for each window
+ **Non-Maximum Suppression** (NMS) Algorithm ->  pick the highest-scoring detection and discard all significant boxes overlap (Intersection over Union > threshold)
+ too many windows, slow and expensive
+### Region proposals (R-CNN Series)
+estimate regions to check and apply deep learning there
 
-
+**R-CNN (Region-CNN)** -> selective search to generate candidate object regions, using low level features
+**Fast R-CNN** -> run CNN once over image, get feature map and use **Rol Pooling** to extract region features, Predict trough <u>fully connected layers</u> class scores and bbox corrections
+**Faster R-CNN** -> 
 ##
