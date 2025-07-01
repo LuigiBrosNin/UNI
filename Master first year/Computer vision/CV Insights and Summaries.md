@@ -339,3 +339,23 @@ Called **feature extractor**
 **Receptive field** of a neuron -> neuron's POV in an image
 deep layers = bigger receptive fields
 ### Batch normalization
+network stabilization to avoid gradient vanish/explode
+**BatchNorm** normalizes layer outputs and it's the standard in modern CNNs
+Given:
+- A mini-batch of activations $\{z^{(1)}, \dots, z^{(m)}\}$
+- $m$ -> batch size
+We do
+1. Compute the **batch mean** $\mu$
+2. Compute the **batch variance** $\sigma$:
+3. **Normalize** each activation
+4. **Scale and shift** (learnable parameters)
+### Regularization
+**preventing overfitting**, 3 methods
+- **Dropout** -> During training, randomly remove ("drop") some neurons so the network doesn't rely on any one path too much.
+- **Early Stopping** -> Stop training **before** the model starts to overfit.
+- **Cutout** (a kind of data dropout) -> Mask out parts of the image at random to force the model to **look beyond obvious features**.
+### Data augmentation
+**artificially increasing your training dataset** from existing imgs
+- flip, rotate, resize, color jitter -> same object under difference transformations
+- cutout -> learn less obvious features
+- multi-scale training -> different sizes flexibility

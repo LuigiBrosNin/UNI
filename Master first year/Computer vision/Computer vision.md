@@ -565,7 +565,7 @@ Flatten -> fully connected layer(s) -> Output
 - large context -> we need deeper networks or bigger filters.
 ![[Pasted image 20250522225135.png]]
 ### Batch normalization
-We need to stabilize networks: Activations change across laters and gradients vanish or explode
+We need to stabilize networks: Activations change across layers and gradients vanish or explode
 **BatchNorm** normalizes layer outputs and it's the standard in modern CNNs
 Given:
 - A mini-batch of activations $\{z^{(1)}, \dots, z^{(m)}\}$
