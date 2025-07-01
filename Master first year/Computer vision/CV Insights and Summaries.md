@@ -288,4 +288,28 @@ A Practical way to calibrate a real camera using images of a flat pattern
 	- prevents overfitting
 	- helps the model to generalize
 ## Gradient descent optimizer
-**Gradient descend** -> ow the model learns, tells the model "which way" to minimize the loss function 
+**Gradient descend** -> how the model learns, tells the model "which way" to minimize the loss function 
+
+Steps:
+1. compute the loss $J$
+2. Calculate the gradients (derivatives of the loss with respect to each parameter)
+3. update parameters using the following formula
+![[Pasted image 20250403164629.png]]
+Where:
+- $\alpha$ -> learning rate
+- $w,b$ -> weights, biases
+- $\frac{\partial J}{\partial w}​,\frac{\partial J}{\partial b}$​ -> gradient of the loss
+Repeat process while keeping on minimizing loss ("learning").
+
+loss functions are full of local minima, saddle points, flat regions
+
+**Stochastic Gradient Descent** -> approx of gradient descent, use mini-batches (small portions of whole dataset)
+- Introduces noise that prevents overfitting
+- One **epoch** -> whole training set observed one time
+- **Batch size** -> how many samples per update
+### Optimizers
+1. Momentum
+	- 
+2. RMSprop
+3. Adam
+4. Hyperparameters
