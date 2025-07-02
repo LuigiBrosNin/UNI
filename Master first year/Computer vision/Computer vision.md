@@ -289,7 +289,7 @@ Lindeberg method:
 - Normalize the filter responses (multiply by $\sigma$)
 - Search for **extrema** (maxima or minima) in **x, y, and $\sigma$**  i.e., in 3D.
 
-LoG -> second order derivative that detects **blobs** (circular structures)
+Scale-normalized LoG -> filter (second order derivative) that detects **blobs** (circular structures)
 $$F(x, y, \sigma) = \sigma^2 \cdot \nabla^2 L(x, y, \sigma)$$
 (We multiply/normalize by sigma to compensate for weaker derivatives at higher filters)
 ![[Pasted image 20250306162700.png]]
@@ -315,7 +315,7 @@ DoG helps us find the optimal scale for each detail we want to "classify"
 - Find the **dominant direction**  this becomes the **canonical orientation**
 - Rotate the descriptor patch accordingly.
 ![[Pasted image 20250306170348.png]]
-🐰basically, when something rotates, the recognition process tries to match a different orientation for a point to see if they're the same
+🐰basically, when something rotates, the recognition process tries to match the orientation in local terms, not globally
 
 ![[Pasted image 20250306170554.png|250]]
 
