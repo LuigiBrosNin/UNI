@@ -592,6 +592,14 @@ aka **artificially increasing your training dataset** by transforming the existi
 - **Cutout** → forces the network to learn **less obvious** features.
 - **Multi-scale training** → helps the model understand objects at **different sizes**.
 Data augmentation makes CNNs **more flexible and accurate on new data**
+### Residual Networks (ResNet)
+A way to optimize deep networks, common backbone today
+
+We introduce **skip connections** to <u>solve vanishing gradients and degradation</u>
+**Skip connection** -> we add to the output of a layer the original input
+This way the network learns only the difference of input and desired output
+
+We build the network with **Residual blocks**, which adds back the og input
 ## 7. Object Detection
 We want to detect (is object there?) and localize (where is object?) objects in images
 A detection provides:

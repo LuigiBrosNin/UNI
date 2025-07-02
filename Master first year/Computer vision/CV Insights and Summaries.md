@@ -545,5 +545,3 @@ Encoder for images
 4. Feed the patch sequence into a standard **Transformer encoder**.
 We adapt the input to treat it so it was a sentence
 ## 
-ResNet TODO
-L1 -> difference for each pixel output-groud truth in abs value

@@ -1,0 +1,1 @@
+🐰 i cannot fathom to remember anything about theory, i can't explain theoretical concepts no matter how much i try to understand them
