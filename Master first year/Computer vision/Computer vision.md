@@ -877,7 +877,6 @@ What if it could **dynamically attend** to **different parts** of the input sequ
 **Attention scores** (purple dots) -> dot product between (in the image) each blue vector and green transposed vector (results in a number = a single purple dot), the purple score vector we get as a result is used to predict the output of the decoder.
 
 > Imagine reading a sentence in Italian and translating it word-by-word. Instead of trying to remember everything at once, you **glance back** at the Italian sentence to remind yourself which part maps to what you're saying next.
-
 ### Trasformers
 ![[Pasted image 20250526002410.png|350]]
 RNNs are sequential, which <u>limits parallelization</u> during training and struggle with long sequences as a result, how can we solve this?

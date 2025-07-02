@@ -503,9 +503,34 @@ it's hard to learn long-range dependencies because of vanishing (mostly) or expl
 - A **Decoder** takes that context $C$ and generates the output sequence in a sequential way
 Bottleneck = encoder output (single vector)
 
-Solution: focus on specific parts of output to avoid losing 
-**Attention mechanism** -> make the decoder <u>assign weights</u> to all encoder states, so it knows where to focus for each output word
+Solution: focus on specific parts of the context vector, 
+**Attention mechanism** -> make the decoder <u>assign weights</u> (trough attention scores) to all encoder states, so it knows where to focus for each output word
+### Transformers
+Uses **only self-attention** (and cross-attention), removes RNNs sequentiality
+- At each step the model is auto-regressive, consuming the previously generated symbols as additional input when generating the next
+- Input-outputs are the same as encoders-decoders in RNNs
 
+==Transformer Encoder==
+1. get the dense vector of each word (token), vector size `d_model`
+2. Add positional encodings -> no sense of order, so we add positional information, same vector size `d_model` so we can sum it (creates enough space to be positionally distinguished)
+
+having **N layers** made by
+1. **Multi-Head Self-Attention**
+2. **Feed-Forward Neural Network (FFN)** 
+Each of these sub-layers has:
+- **Residual connections** (skip connections)
+- **Layer Normalization** (all vectors of size `d_model`) -> LayerNorm helps the model **train more stably** by:
+	- Normalizing across features of each token individually (unlike batch norm which depends on batch statistics)
+	- Allowing each neuron to have **its own bias and scale**
+
+==Transformer Decoder==
+three sub-layers
+1. **Masked multi-head self-attention** -> look at previous output words without peeking ahead (masking)
+2. **Multi-Head Cross-Attention** -> "Which parts of the input sentence are relevant to generating the next word?" and waits for the encoder's "response"
+3. **Feed-Forward neural network (FNN)** -> two linear layers with a ReLU in between
+Additionally has
+- **Residual connections** (shortcut connections)
+- **Layer Normalization** after each sub-layer
 
 
 ## 
