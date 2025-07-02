@@ -21,3 +21,13 @@ Reduce noise in images
 		1. Median filter -> middle value
 		2. Bilateral filter -> further or different pixels are less important
 		3. Non-local Means filter -> find similar patches
+## 3. Edge Detection
+1. 1D step edge -> 1st derivative
+2. 2D Gradient -> compute partial derivatives to get direction and strength
+3. Discrete approximation -> differences in pixels
+4. Noise
+	1. Prewitt and Sobel operators -> decide weights of current pixel based on brightness difference of surroundings
+5. Non-Maxima Suppression (NMS)
+	- find local maxima along gradient
+	- estimate direction locally (with Lerp from closest pixels)
+	- Thresholds
