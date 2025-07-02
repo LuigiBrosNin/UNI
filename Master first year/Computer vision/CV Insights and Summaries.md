@@ -525,8 +525,25 @@ Each of these sub-layers has:
 in CV, decoders are made ad-hoc so we don't care about them
 ### Self Attention
 How the model understands context:
-we look at each token focusing on other relevant tokens in the same sequence
+we look at each token focusing on other relevant tokens in the same sequence.
 
+How to calculate attention:
+1. from the input vector in the encoder, we multiply it by 3 weight matrices learned during training, resulting in
+	- **Query (Q)**: What this token is looking for.
+	- **Key (K)**: What each other token _has_ to offer.
+	- **Value (V)**: What information each token carries.
+2. Get how similar every Key is with the Query with **Similarity**
+3. Use **Softmax** on similarities to get <u>attention scores</u>
+4. Use scores to compute a **weighted sum of all Value vectors**
+
+**Multi-Head Attention** -> self-attention multiple times with different weights to understand different aspects we're looking for
+### Vision Transformers (ViT)
+Encoder for images
+1. We split images into fixed size patches (DINOv2 is 14x14)
+2. Patches are our tokens
+3. We add positional encodings to retain spatial information
+4. Feed the patch sequence into a standard **Transformer encoder**.
+We adapt the input to treat it so it was a sentence
 ## 
 ResNet TODO
 L1 -> difference for each pixel output-groud truth in abs value
