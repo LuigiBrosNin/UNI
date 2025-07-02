@@ -475,5 +475,21 @@ Based on **Mask R-CNN**, this model:
 
  **k-Nearest Neighbors** (**k-NN**)-> Algorithm used for classification and regression. When given a **new data point**, k-NN looks at the **k closest data points** (neighbors) from the training set based on a distance metric like **Euclidean distance** and decides.
 
-##
+**Contrastive loss** -> minimize distance between same class imgs, penalize close different classes, include a margin to prevent over-pushing dissimilar pairs
+### Triple Loss
+**Triplet Loss** -> (Positive, Anchor, Negative) triplet
+ensures closeness of positive to anchor in relation to the negative distance
+more direct than contrastive loss, can collapse.
+
+**semi-hard negatives** optimization -> examples that are between the positives and the margin so they contribute non-zero loss
+### Applications
+- Img retrival
+- Re-identification
+- Few-shot learning
+- E-commerce (item recognition)
+## 10. Transformers
+same as word2vec base idea
+### Recurrent Neural Network (RNN)
+
+## 
 ResNet TODO

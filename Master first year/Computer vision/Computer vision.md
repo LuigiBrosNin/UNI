@@ -828,7 +828,6 @@ $$\|f(A) - f(P)\|^2 + \text{margin} < \|f(A) - f(N)\|^2$$
 
 How do we optimize it?
 using **semi-hard negatives** -> examples that are between the positives and the margin so they contribute non-zero loss
- 
 ### Applications
 Metric learning extends to:
 - **Image retrieval** (e.g., CUB200, Cars196, SOP datasets)
