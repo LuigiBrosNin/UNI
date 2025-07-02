@@ -512,7 +512,7 @@ Uses **only self-attention** (and cross-attention), removes RNNs sequentiality
 
 ==Transformer Encoder==
 1. get the dense vector of each word (token), vector size `d_model`
-2. Add positional encodings -> no sense of order, so we add positional information, same vector size `d_model` so we can sum it (creates enough space to be positionally distinguished)
+2. Add positional encodings to give a sense of order (vector of size `d_model`)
 
 having **N layers** made by
 1. **Multi-Head Self-Attention**
