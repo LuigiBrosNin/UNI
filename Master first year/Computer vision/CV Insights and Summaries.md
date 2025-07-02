@@ -522,8 +522,10 @@ Each of these sub-layers has:
 - **Layer Normalization** (all vectors of size `d_model`) -> stabilizes the model in train
 
 ==Transformer Decoder==
-in CV, decoders are made ad-hoc
-###
+in CV, decoders are made ad-hoc so we don't care about them
+### Self Attention
+How the model understands context:
+we look at each token focusing on other relevant tokens in the same sequence
 
 ## 
 ResNet TODO
