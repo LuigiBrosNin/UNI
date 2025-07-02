@@ -535,3 +535,4 @@ Additionally has
 
 ## 
 ResNet TODO
+L1 -> difference for each pixel output-groud truth in abs value
