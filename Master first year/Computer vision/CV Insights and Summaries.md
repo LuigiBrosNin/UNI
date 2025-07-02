@@ -468,7 +468,12 @@ Based on **Mask R-CNN**, this model:
 1. Uses **FPN features** for both semantic and instance heads.
 2. Adds a **segmentation branch** for stuff categories.
 3. **Merges outputs**, resolving overlaps and inconsistencies.
-## 9. Metric Learning TODO
+## 9. Metric Learning
+**Embedding learning** -> no classes, structured space where intra-class distances are minimized
+### Siamese Networks and Loss Functions
+**Siamese networks** -> two+ identical networks with shared weights, trained on pairs of inputs, they train based on similarity
+
+ **k-Nearest Neighbors** (**k-NN**)-> Algorithm used for classification and regression. When given a **new data point**, k-NN looks at the **k closest data points** (neighbors) from the training set based on a distance metric like **Euclidean distance** and decides.
 
 ##
 ResNet TODO
