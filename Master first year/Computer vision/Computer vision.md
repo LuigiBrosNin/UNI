@@ -281,7 +281,6 @@ Where:
 - $\sigma$ controls the scale (blur amount)
 - $*$ is convolution
 
-
 ==Multi-Scale Feature Detection (Lindeberg)==
 Scale-space gives us images at various levels, but we don’t yet know **which features** to extract, or **at what scale**.
 
