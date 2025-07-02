@@ -803,7 +803,6 @@ Based on **Mask R-CNN**, this model:
 3. **Merges outputs**, resolving overlaps and inconsistencies.
 This enables **unified scene understanding**, a full map of what’s in the image and where, with both individual objects and background materials.
 ![[Pasted image 20250524230347.png]]
-
 ## 9. Metric Learning
 We move from **classification-based training** to ==embedding learning== because of the limitations of classification for face recognition (no scale for millions of identities, retrain to modify identities, no guaranteed closeness of similar faces in embedding space)
 instead of classes, we structure a space so that

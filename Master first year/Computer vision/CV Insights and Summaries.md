@@ -435,4 +435,39 @@ convolutions reduce size, transposed convolutions go the other way
 
 We use the kernel to expand the input value, contribution summed on overlap.
 Works like a conventional operator (eg. bilinear interpolation), but the Kernel is tailor made by AI.
+### U-Net -> Encoder–Decoder for Segmentation
+U-Net -> specialized architecture for segmentation:
+- **Encoder:** Compresses the image (like any CNN).
+- **Decoder:** Reconstructs the mask.
+- **Skip connections:** Combine encoder and decoder features.
+### Dilated Convolutions (Atrous Convolutions)
+insert gaps between kernel elements, making them "see" larger regions of images.
+$r$ -> dilation rate parameter
+Dilated convolutions let us **retain spatial resolution** while still seeing a **large part of the image**. "zoom out" effect, possible to lose fine features
+### Instance Segmentation = Detection + Segmentation
+difference **instances** of objects
+**Mask R-CNN** -> Extension of Faster R-CNN
+- Adds a segmentation head
+- Predicts a binary mask per region. This mask:
+	- Has a **fixed resolution** (e.g., 28×28),
+	- Is **specific to one object proposal**.
 
+**Rol-Align** -> rol pooling improvements by exploiting misalignments with bbox and segmentation:
+- **Not rounding coordinates** -> uses exact floating-point positions.
+- **Bilinear interpolation** -> samples feature map values precisely.
+- **Pooling** values more smoothly (via max or average).
+Once the RoI features are extracted:
+- They are fed into a **small Fully Convolutional Network (FCN)**.
+- This FCN outputs a **mask per class**, typically sized **28×28**.
+
+Modular design, expandable (eg. **Keypoint detection**)
+### Panoptic segmentation = The Sky and a Person 
+everything we segment has an ID
+==Implementation==: Panoptic **Feature Pyramid Networks** (FPN)
+Based on **Mask R-CNN**, this model:
+1. Uses **FPN features** for both semantic and instance heads.
+2. Adds a **segmentation branch** for stuff categories.
+3. **Merges outputs**, resolving overlaps and inconsistencies.
+## 9. Metric Learning TODO
+
+##
