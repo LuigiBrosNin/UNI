@@ -307,7 +307,6 @@ To tune the found extrema, we
 - Prune the keypoints on edges using the **hessian matrix**
 ![[Pasted image 20250306164454.png]]
 DoG helps us find the optimal scale for each detail we want to "classify"
-
 ### Invariance properties of DoG
  ✅ **Scale Invariance**
 - Use the image $L(x, y, \sigma)$ at the **same scale** where the keypoint was detected.
@@ -436,7 +435,7 @@ A Practical way to calibrate a real camera using images of a flat pattern
 3. Each homography relates image coordinates to pattern coordinates
 We need at least 4.5 points per image to compute $H_{i}$, we use more for robustness
 ### Refine / summary
-#### Main Pipeline:
+#### Main Pipeline (Zhang's method):
 1. **Acquire n images** of a planar pattern
 2. **Estimate homographies** $H_i$
 3. Use $H_i$​ to compute **intrinsic matrix $A$
