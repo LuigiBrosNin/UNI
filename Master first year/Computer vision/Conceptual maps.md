@@ -92,7 +92,7 @@ find **Local invariant features** (corresponding points) in images
 	1. Nearest neighbour search, doing it efficiently
 		1. k-d tree
 		2. Best Bin First
-## Camera Calibration
+## 5. Camera Calibration
 determining a camera's internal/external parameters to measure 3D info from 2D images
 1. Perspective projection
 	- WRF to CRF with Focal length and depth calculations
@@ -109,5 +109,12 @@ determining a camera's internal/external parameters to measure 3D info from 2D i
 	- **Intrinsic parameters** $A$
 	- **Extrinsic parameters** $R, T$
 	- **Lens distortion coefficients**
-6. Zhang's method -> computes 
+6. Zhang's method -> computes homography
+7. Main Pipeline (Zhang's method):
+	1. Acquire images of flat pattern
+	2. **Estimate homographies** $H_i$
+	3. Use $H_i$​ to compute **intrinsic matrix** $A$
+	4. Use $A$ and $H_i$​ to compute $R_i, T_i$ for each image
+	5. Estimate **lens distortion coefficients**
+	6. Use **non-linear optimization** to refine all parameters by minimizing **reprojection error**
 ##
