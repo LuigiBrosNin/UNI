@@ -516,22 +516,14 @@ Uses **only self-attention** (and cross-attention), removes RNNs sequentiality
 
 having **N layers** made by
 1. **Multi-Head Self-Attention**
-2. **Feed-Forward Neural Network (FFN)** 
+2. **Feed-Forward Neural Network (FFN)**
 Each of these sub-layers has:
 - **Residual connections** (skip connections)
-- **Layer Normalization** (all vectors of size `d_model`) -> LayerNorm helps the model **train more stably** by:
-	- Normalizing across features of each token individually (unlike batch norm which depends on batch statistics)
-	- Allowing each neuron to have **its own bias and scale**
+- **Layer Normalization** (all vectors of size `d_model`) -> stabilizes the model in train
 
 ==Transformer Decoder==
-three sub-layers
-1. **Masked multi-head self-attention** -> look at previous output words without peeking ahead (masking)
-2. **Multi-Head Cross-Attention** -> "Which parts of the input sentence are relevant to generating the next word?" and waits for the encoder's "response"
-3. **Feed-Forward neural network (FNN)** -> two linear layers with a ReLU in between
-Additionally has
-- **Residual connections** (shortcut connections)
-- **Layer Normalization** after each sub-layer
-
+in CV, decoders are made ad-hoc
+###
 
 ## 
 ResNet TODO

@@ -943,6 +943,7 @@ Every transformer layer has:
 - **Residual connections** -> info preservation and improve gradient flow
 - **Layer normalization** -> stabilization and speed
 ### Vision Transformers (ViT)
+Transformer Encoder
 Use all this shit for images now, how?
 1. **Split image** into fixed-size patches (e.g., 16x16 pixels).
 2. **Flatten** each patch and pass it through a linear layer (just like word embeddings).
