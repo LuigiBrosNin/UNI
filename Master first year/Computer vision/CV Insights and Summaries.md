@@ -490,6 +490,23 @@ more direct than contrastive loss, can collapse.
 ## 10. Transformers
 same as word2vec base idea
 ### Recurrent Neural Network (RNN)
+network that processes sequential data using a **hidden state** that "remembers" previous inputs
+$h(t)$ -> hidden state at step $t$, same set of weights used every step, generalizes with different sequence of lengths
+
+RNN is a "loop", unrolling in training so we can apply **backpropagation trough time**
+
+We compute loss at each step, <u>summing</u> each step for the current and total loss.
+
+it's hard to learn long-range dependencies because of vanishing (mostly) or exploding gradients...
+### Encoder-Decoder architectures
+- An **Encoder** processes the input sequence. The encoder emits the context $C$, as a function/vector of its final hidden state  
+- A **Decoder** takes that context $C$ and generates the output sequence in a sequential way
+Bottleneck = encoder output (single vector)
+
+Solution: focus on specific parts of output to avoid losing 
+**Attention mechanism** -> make the decoder <u>assign weights</u> to all encoder states, so it knows where to focus for each output word
+
+
 
 ## 
 ResNet TODO

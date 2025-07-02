@@ -859,14 +859,13 @@ RNN is a "loop", and during training we unroll this loop in time, so that we can
 We compute loss at each step, <u>summing</u> each step for the current and total loss.
 
 it's hard to learn long-range dependencies because of vanishing (mostly) or exploding gradients...
-
 ### Encoder-Decoder architectures
 We need to process input and output sequences of different lengths (useful for eg. machine translation)
 > “Il gatto è sul tavolo” → “The cat is on the table”
 
 ==Encoder-Decoder==
 - An **encoder** processes the input sequence. The encoder emits the context $C$, as a function/vector of its final hidden state  
-- A **decoder** takes that context $C$ and generates the output step-by-step
+- A **decoder** takes that context $C$ and generates the output sequence step-by-step
 
 Bottleneck: encoder output is a single vector, long sequences are problematic
 
