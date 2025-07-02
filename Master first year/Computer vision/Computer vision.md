@@ -1053,8 +1053,8 @@ ViTs outperform CNNs on larger datasets, they require more data to perform well
 - **What is a backbone in object detection networks?**  
     A backbone is a feature extractor (usually a pre-trained CNN) used in object detection architectures to compute meaningful representations of the input image. Examples: ResNet, VGG, and EfficientNet.
     
-- **Why is ResNet a popular backbone in computer vision tasks?  
-    **ResNet uses skip connections (residual learning) to solve the vanishing gradient problem, enabling the training of very deep networks. It balances computational efficiency and accuracy, making it a go-to backbone for many object detection frameworks.
+- **Why is ResNet a popular backbone in computer vision tasks?**
+    ResNet uses skip connections (residual learning) to solve the vanishing gradient problem, enabling the training of very deep networks. It balances computational efficiency and accuracy, making it a go-to backbone for many object detection frameworks.
     
 - **What are Feature Pyramid Networks (FPNs), and why are they useful?**  
     FPNs enhance object detection by leveraging features at multiple scales (pyramidal structure). They combine low-resolution, high-semantic features with high-resolution, low-semantic features, improving small object detection.
