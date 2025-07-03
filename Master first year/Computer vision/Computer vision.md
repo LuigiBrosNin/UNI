@@ -1012,7 +1012,7 @@ ViTs outperform CNNs on larger datasets, they require more data to perform well
 	- Corners provide distinctive features that are repeatable across different images, whereas edges are locally ambiguous and hard to match reliably. Corners exhibit significant variation in intensity in all directions, making them robust keypoints.
     
 - **How does the Harris corner detector improve upon the Moravec corner detector?**
-	The Harris corner detector uses a continuous formulation and a Gaussian weighting function, making it more robust to rotation and illumination changes compared to the Moravec detector.
+	- The Harris corner detector uses a continuous formulation and a Gaussian weighting function, making it more robust to rotation and illumination changes compared to the Moravec detector.
     
 - **What are the main invariance properties desirable for feature detection?**  
     Good feature detectors should be invariant to transformations such as rotation, scale changes, and illumination variations. This ensures reliable feature matching across different views of the same scene.
