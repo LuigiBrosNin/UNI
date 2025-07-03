@@ -117,4 +117,29 @@ determining a camera's internal/external parameters to measure 3D info from 2D i
 	4. Use $A$ and $H_i$​ to compute $R_i, T_i$ for each image
 	5. Estimate **lens distortion coefficients**
 	6. Use **non-linear optimization** to refine all parameters by minimizing **reprojection error**
-##
+## 6. CNNs
+1. CNN
+	- input image
+	- layers
+	- feature map output
+2. Gradient descent -> how the model learns
+3. Optimizers
+	1. Momentum
+	2. RMSprop
+	3. 
+## 8. Segmentation
+Classify area of objects
+1. Evaluation metrix
+	1. Intersection over union
+2. Segmentation masks predictions -> uses fully convolutional networks for spatial maps
+3. Transposed convolutions (upsampling)
+4. U-Net -> specialized encoder-decoder for segmentation, implements skip connections
+5. Dilated convolutions
+	- dilatate kernel to observe larger region, lose finer details
+	- DeepLab
+		- backbone CNN like ResNet
+		- Remove strides and add dilation in later layers
+6. Insance segmentation -> classify different instances of class
+	- Mask R-CNN
+	- Rol-Align - Bilinear interpolation for coords
+7. Panoptic segmentation -> get instances and general labels

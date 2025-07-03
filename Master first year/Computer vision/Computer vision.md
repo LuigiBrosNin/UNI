@@ -456,7 +456,6 @@ We need at least 4.5 points per image to compute $H_{i}$, we use more for robust
 In a **CNN**:
 - Input image → passes through layers → abstract features are learned.
 - The goal is to learn transformations that improve performance (classification, detection, etc.).
-
 ### CNN components explained for dummies -> 🐰
 1. **Convolutional layers**
 	- They <u>extract features</u> (edges, textures, patterns) <u>from the input image</u> by sliding kernels across
