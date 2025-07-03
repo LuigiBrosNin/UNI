@@ -222,11 +222,11 @@ We want to find **Corresponding Points** (Local invariant features) between 2+ i
 3 successive steps for defining correspondences:  
 1. **Detection** of salient points (aka keypoints, interest points, feature points...)  
 2. **Description** -> computation of a suitable descriptor based on pixels in the keypoint neighbourhood  
-3. **Matching** descriptors between images  
+3. **Matching** descriptors between images
 
 ==Detectors/Descriptors good properties==
 - Detector
-	- **Repeatability** -> find the same keypoints in different views  
+	- **Repeatability** -> find the same keypoints in different views
 	- **Saliency** -> find keypoints surrounded by informative patterns
 - Descriptor
 	- **Distinctiveness vs. Robustness Trade-off** -> capture the salient information around a keypoint, disregard changes due to nuisances (e.g. light changes) and noise
@@ -242,7 +242,7 @@ We use corners for identification, as they're easily identifiable (strong change
 ==**Harris Corner Detector**==
 kindergarten level explanation:
 1. Compute image gradients (how intensity changes)
-2. Build the matrix $M$
+2. Build the matrix $M$ with squared gradients for each pixel
 3. Compute the corner response $C=\det⁡(M)−k\cdot \text{trace}(M)^2$
 4. Threshold & NMS to pick the best corners
 ---
