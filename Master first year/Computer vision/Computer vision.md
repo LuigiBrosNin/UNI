@@ -1008,21 +1008,20 @@ ViTs outperform CNNs on larger datasets, they require more data to perform well
     Edge Linking: Connect remaining edge points to form continuous edge contours.
 ## **Local Features**
 
-- **Why are corners better features than edges for object matching in images?  
-    **Corners provide distinctive features that are repeatable across different images, whereas edges are locally ambiguous and hard to match reliably. Corners exhibit significant variation in intensity in all directions, making them robust keypoints.
+- **Why are corners better features than edges for object matching in images?**
+	- Corners provide distinctive features that are repeatable across different images, whereas edges are locally ambiguous and hard to match reliably. Corners exhibit significant variation in intensity in all directions, making them robust keypoints.
     
-- **How does the Harris corner detector improve upon the Moravec corner detector?  
-    **The Harris corner detector uses a continuous formulation and a Gaussian weighting function, making it more robust to rotation and illumination changes compared to the Moravec detector.
+- **How does the Harris corner detector improve upon the Moravec corner detector?**
+	The Harris corner detector uses a continuous formulation and a Gaussian weighting function, making it more robust to rotation and illumination changes compared to the Moravec detector.
     
 - **What are the main invariance properties desirable for feature detection?**  
     Good feature detectors should be invariant to transformations such as rotation, scale changes, and illumination variations. This ensures reliable feature matching across different views of the same scene.
     
-- **What is blob detection and how does it differ from edge detection?  
-    **Blob detection identifies regions in an image that differ in properties such as intensity or color compared to surrounding areas. While edge detection focuses on finding boundaries between regions, blob detection finds entire regions (blobs) that are brighter or darker than their surroundings. Blob detection is often used in applications like object tracking, feature detection, and keypoint localization.  
+- **What is blob detection and how does it differ from edge detection?**
+	- Blob detection identifies regions in an image that differ in properties such as intensity or color compared to surrounding areas. While edge detection focuses on finding boundaries between regions, blob detection finds entire regions (blobs) that are brighter or darker than their surroundings. Blob detection is often used in applications like object tracking, feature detection, and keypoint localization.  
     Common Blob Detection Techniques:  
     - Laplacian of Gaussian (LoG): Identifies blobs as zero-crossings of the Laplacian of the image after Gaussian smoothing.  
     - Difference of Gaussians (DoG): Approximates LoG by subtracting two Gaussian-blurred versions of the image.
-    
 
 ## **Convolutional Neural Networks (CNNs)**
 
