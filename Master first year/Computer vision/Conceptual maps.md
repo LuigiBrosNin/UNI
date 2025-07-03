@@ -97,8 +97,8 @@ determining a camera's internal/external parameters to measure 3D info from 2D i
 1. Perspective projection
 	- WRF to CRF with Focal length and depth calculations
 	- 4th coordinate for linear perspective projection
-2. DIgitization
-	1. Intrinsic parameter matrix A, focal length xy, skew, cenral points
+2. Digitization
+	1. Intrinsic parameter matrix A, focal length xy, skew, central points
 	2. Rotation matrix, Translation vector -> relation CRF = R cdot WRF + T
 3. Homography
 	1. simplified projection
