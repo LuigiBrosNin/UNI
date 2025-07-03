@@ -545,7 +545,7 @@ How **Stride** works -> controls how far the filter moves (eg. stride 2 skips ev
 ![[Pasted image 20250403171110.png|300]]
 ### Deep CNNs, Pooling, Receptive fields
 Deep CNNs are made by stacking
-1. Convolution + ReLU
+1. Convolution + ReLU (output to 0 if negative)
 2. Pooling (max)
 Repeated several times
 Flatten -> fully connected layer(s) -> Output

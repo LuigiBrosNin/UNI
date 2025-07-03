@@ -126,20 +126,40 @@ determining a camera's internal/external parameters to measure 3D info from 2D i
 3. Optimizers
 	1. Momentum
 	2. RMSprop
-	3. 
+	3. Adam (momentum + RMSprop)
+4. Convolutional layers
+	1. Padding to keep output size
+	2. Stride
+5. Deep CNNs
+	1. Convolution + ReLU + Pooling
+6. Batch normalization
+	1. Avoid vanish/explode gradients
+	2. compute mini-batch mean and variance, adjust learnable parameters by normalization
+7. Regularization - prevent overfitting
+	1. Dropout
+	2. Early stopping
+	3. Cutout
+8. Data augmentation
+	1. modify dataset to expand it
+	2. flip, rotate, resize, jitter
+	3. cutout
+	4. multi-scale training
+9. ResNet
+## 7. Object Detection
+Faster R-CNN -> introduce Region Proposal Network, use anchors and samples
 ## 8. Segmentation
 Classify area of objects
-1. Evaluation metrix
+9. Evaluation metrix
 	1. Intersection over union
-2. Segmentation masks predictions -> uses fully convolutional networks for spatial maps
-3. Transposed convolutions (upsampling)
-4. U-Net -> specialized encoder-decoder for segmentation, implements skip connections
-5. Dilated convolutions
+10. Segmentation masks predictions -> uses fully convolutional networks for spatial maps
+11. Transposed convolutions (upsampling)
+12. U-Net -> specialized encoder-decoder for segmentation, implements skip connections
+13. Dilated convolutions
 	- dilatate kernel to observe larger region, lose finer details
 	- DeepLab
 		- backbone CNN like ResNet
 		- Remove strides and add dilation in later layers
-6. Insance segmentation -> classify different instances of class
-	- Mask R-CNN
+14. Insance segmentation -> classify different instances of class
+	- Mask R-CNN, based on Faster R-CNN
 	- Rol-Align - Bilinear interpolation for coords
-7. Panoptic segmentation -> get instances and general labels
+15. Panoptic segmentation -> get instances and general labels
