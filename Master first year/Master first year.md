@@ -10,10 +10,16 @@
 	- [[Make the project work on Linux]]
 	- [[Sunti per ripasso (ITA)]]
 - **[[Computer vision]]**
+	- [[appuntiClassicVision]]
+	- [[appuntiModernVision]]
 	- **[[attachments]]**
 
 	- [[Conceptual maps]]
 	- [[CV Insights and Summaries]]
+	- **[[imagesClassicVision]]**
+
+	- **[[imagesModernVision]]**
+
 	- [[Project notes]]
 - **[[Decision making with constraint programming]]**
 - **[[Digital Forensics]]**
