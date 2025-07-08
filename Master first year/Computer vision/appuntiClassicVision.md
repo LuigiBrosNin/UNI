@@ -1,5 +1,9 @@
 #### APPUNTI DI GIUSEPPE SPATHIS
 
+
+[Mio Github](https://github.com/GiuseppeSpathis)
+
+
 ## PINHOLE CAMERA MODEL
 per rappresentare un'immagine si una un image device che raccoglie la luce riflessa da oggetti in 3d e la usa per creare l'immagine in 2d
 
